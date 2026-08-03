@@ -1,0 +1,21 @@
+CREATE TABLE `question_revisions` (
+	`id` text PRIMARY KEY NOT NULL,
+	`source_row` integer DEFAULT 0 NOT NULL,
+	`school` text NOT NULL,
+	`year` integer NOT NULL,
+	`number` integer NOT NULL,
+	`subjects` text DEFAULT '[]' NOT NULL,
+	`answer` text DEFAULT '' NOT NULL,
+	`answer_type` text DEFAULT 'ABCDE' NOT NULL,
+	`difficulty` text DEFAULT '' NOT NULL,
+	`content` text NOT NULL,
+	`preview` text DEFAULT '' NOT NULL,
+	`source_document` text DEFAULT 'Cadastro manual' NOT NULL,
+	`source_bookmark` text DEFAULT '' NOT NULL,
+	`has_table` integer DEFAULT false NOT NULL,
+	`has_media` integer DEFAULT false NOT NULL,
+	`has_math` integer DEFAULT false NOT NULL,
+	`status` text DEFAULT 'review' NOT NULL,
+	`is_custom` integer DEFAULT false NOT NULL,
+	`updated_at` text DEFAULT CURRENT_TIMESTAMP NOT NULL
+);

@@ -1,0 +1,48 @@
+{
+  "catalogRows": 2470,
+  "linkedQuestions": 1217,
+  "withContent": 1217,
+  "ready": 543,
+  "review": 674,
+  "schools": 9,
+  "yearMin": 2003,
+  "yearMax": 2024,
+  "bySchool": [
+    [
+      "CMB",
+      474
+    ],
+    [
+      "CMBH",
+      339
+    ],
+    [
+      "CMC",
+      160
+    ],
+    [
+      "CMBel",
+      99
+    ],
+    [
+      "CMT",
+      60
+    ],
+    [
+      "CMDPII",
+      45
+    ],
+    [
+      "CMCG",
+      35
+    ],
+    [
+      "OBRL",
+      3
+    ],
+    [
+      "CMPA",
+      2
+    ]
+  ]
+}
