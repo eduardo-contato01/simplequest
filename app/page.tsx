@@ -1,40 +1,28 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { loadQuestionCatalog, type ChoiceMode, type Question } from "./question-model";
-
-const CHOICE_OPTIONS: Record<ChoiceMode, string[]> = {
-  ABCDE: ["A", "B", "C", "D", "E"],
-  ABCD: ["A", "B", "C", "D"],
-  CE: ["C", "E"],
-};
+import { useEffect, useMemo, useRef, useState } from "react";
+import { ANSWER_OPTIONS, defaultAlternativeText, loadQuestionCatalog, structureQuestion, type Question } from "./question-model";
+import { QuestionBlocks } from "./components/QuestionBlocks";
+import { searchRelevance } from "./search-utils";
 
 const PAGE_SIZE = 10;
+const QUESTIONS_VIEW_KEY = "simplequest:questions-view:v1";
 
-function normalize(value: string) {
-  return value
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase();
-}
-
-function splitQuestionContent(content: string, mode: ChoiceMode) {
-  const lines = content.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
-
-  if (mode === "CE") {
-    return { stem: lines.join("\n"), alternatives: ["Certo", "Errado"] };
-  }
-
-  const optionCount = CHOICE_OPTIONS[mode].length;
-  if (lines.length <= optionCount) {
-    return { stem: lines.join("\n"), alternatives: CHOICE_OPTIONS[mode].map((option) => `Alternativa ${option}`) };
-  }
-
-  return {
-    stem: lines.slice(0, -optionCount).join("\n"),
-    alternatives: lines.slice(-optionCount).map((line) => line.replace(/^[A-E]\s*[).:\-–—]\s*/i, "")),
-  };
-}
+type QuestionsViewState = {
+  query?: string;
+  school?: string;
+  year?: string;
+  subject?: string;
+  status?: string;
+  sort?: string;
+  page?: number;
+  expanded?: string | null;
+  selectedIds?: string[];
+  revealed?: string[];
+  responses?: Record<string, string>;
+  simulationTitle?: string;
+  scrollY?: number;
+};
 
 export default function Home() {
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -50,14 +38,65 @@ export default function Home() {
   const [expanded, setExpanded] = useState<string | null>(null);
   const [revealed, setRevealed] = useState<Set<string>>(new Set());
   const [responses, setResponses] = useState<Record<string, string>>({});
-  const [choiceModes, setChoiceModes] = useState<Record<string, ChoiceMode>>({});
   const [simulationTitle, setSimulationTitle] = useState("Simulado de Matemática — 6º ano");
+  const [viewStateReady, setViewStateReady] = useState(false);
+  const restoredScrollRef = useRef(0);
 
   useEffect(() => {
+    try {
+      const cached = JSON.parse(localStorage.getItem(QUESTIONS_VIEW_KEY) || "{}") as QuestionsViewState;
+      queueMicrotask(() => {
+        setQuery(cached.query || "");
+        setSchool(cached.school || "");
+        setYear(cached.year || "");
+        setSubject(cached.subject || "");
+        setStatus(cached.status || "");
+        setSort(cached.sort || "recent");
+        setPage(Math.max(1, Number(cached.page) || 1));
+        setExpanded(cached.expanded || null);
+        setSelectedIds(new Set(cached.selectedIds || []));
+        setRevealed(new Set(cached.revealed || []));
+        setResponses(cached.responses || {});
+        setSimulationTitle(cached.simulationTitle || "Simulado de Matemática — 6º ano");
+      });
+      restoredScrollRef.current = Math.max(0, Number(cached.scrollY) || 0);
+    } catch {
+      localStorage.removeItem(QUESTIONS_VIEW_KEY);
+    }
     loadQuestionCatalog()
       .then(setQuestions)
-      .finally(() => setLoading(false));
+      .finally(() => {
+        setLoading(false);
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          window.scrollTo({ top: restoredScrollRef.current });
+          setViewStateReady(true);
+        }));
+      });
   }, []);
+
+  useEffect(() => {
+    if (!viewStateReady) return;
+    const persist = () => localStorage.setItem(QUESTIONS_VIEW_KEY, JSON.stringify({
+      query, school, year, subject, status, sort, page, expanded,
+      selectedIds: [...selectedIds],
+      revealed: [...revealed],
+      responses,
+      simulationTitle,
+      scrollY: window.scrollY,
+    } satisfies QuestionsViewState));
+    let frame = 0;
+    const schedulePersist = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(persist);
+    };
+    persist();
+    window.addEventListener("scroll", schedulePersist, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", schedulePersist);
+      cancelAnimationFrame(frame);
+      persist();
+    };
+  }, [viewStateReady, query, school, year, subject, status, sort, page, expanded, selectedIds, revealed, responses, simulationTitle]);
 
   const schools = useMemo(
     () => [...new Set(questions.map((question) => question.school))].sort(),
@@ -73,30 +112,34 @@ export default function Home() {
   );
 
   const filtered = useMemo(() => {
-    const needle = normalize(query.trim());
-    const result = questions.filter((question) => {
-      const searchable = normalize(
-        `${question.school} ${question.year} ${question.number} ${question.subjects.join(" ")} ${question.content}`,
+    const result = questions.flatMap((question) => {
+      if (
+        (school && question.school !== school)
+        || (year && question.year !== Number(year))
+        || (subject && !question.subjects.includes(subject))
+        || (status && (status === "authenticated" ? !question.isLocked || !question.authenticatedAt : question.status !== status))
+      ) return [];
+
+      const relevance = searchRelevance(
+        query,
+        `${question.school} ${question.year} ${question.number} ${question.subjects.join(" ")} ${question.content} ${question.stem || ""} ${(question.alternatives || []).join(" ")}`,
       );
-      return (
-        (!needle || searchable.includes(needle)) &&
-        (!school || question.school === school) &&
-        (!year || question.year === Number(year)) &&
-        (!subject || question.subjects.includes(subject)) &&
-        (!status || question.status === status)
-      );
+      return relevance === null ? [] : [{ question, relevance }];
     });
-    return result.sort((a, b) => {
+
+    return result.sort((left, right) => {
+      if (left.relevance !== right.relevance) return left.relevance - right.relevance;
+      const a = left.question;
+      const b = right.question;
       if (sort === "oldest") return a.year - b.year || a.number - b.number;
       if (sort === "school") return a.school.localeCompare(b.school) || b.year - a.year || a.number - b.number;
       return b.year - a.year || a.school.localeCompare(b.school) || a.number - b.number;
-    });
+    }).map(({ question }) => question);
   }, [questions, query, school, year, subject, status, sort]);
 
-  useEffect(() => setPage(1), [query, school, year, subject, status, sort]);
-
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
-  const visible = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+  const currentPage = Math.min(page, pageCount);
+  const visible = filtered.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
   const selected = questions.filter((question) => selectedIds.has(question.id));
 
   function toggleSelected(id: string) {
@@ -124,17 +167,13 @@ export default function Home() {
     }));
   }
 
-  function changeChoiceMode(id: string, mode: ChoiceMode) {
-    setChoiceModes((current) => ({ ...current, [id]: mode }));
-    setResponses((current) => ({ ...current, [id]: "" }));
-  }
-
   function clearFilters() {
     setQuery("");
     setSchool("");
     setYear("");
     setSubject("");
     setStatus("");
+    setPage(1);
   }
 
   return (
@@ -177,7 +216,7 @@ export default function Home() {
                   <span aria-hidden="true">⌕</span>
                   <input
                     value={query}
-                    onChange={(event) => setQuery(event.target.value)}
+                    onChange={(event) => { setQuery(event.target.value); setPage(1); }}
                     placeholder="Busque por palavra, assunto ou número da questão"
                     aria-label="Pesquisar questões"
                   />
@@ -186,10 +225,10 @@ export default function Home() {
                 <button className="primary-button" onClick={() => setPage(1)}>Pesquisar</button>
               </div>
               <div className="filters" aria-label="Filtros da pesquisa">
-                <label><span>Prova</span><select value={school} onChange={(e) => setSchool(e.target.value)}><option value="">Todas</option>{schools.map((item) => <option key={item}>{item}</option>)}</select></label>
-                <label><span>Ano</span><select value={year} onChange={(e) => setYear(e.target.value)}><option value="">Todos</option>{years.map((item) => <option key={item}>{item}</option>)}</select></label>
-                <label className="subject-filter"><span>Assunto</span><select value={subject} onChange={(e) => setSubject(e.target.value)}><option value="">Todos os assuntos</option>{subjects.map((item) => <option key={item}>{item}</option>)}</select></label>
-                <label><span>Conteúdo</span><select value={status} onChange={(e) => setStatus(e.target.value)}><option value="">Todos</option><option value="ready">Texto simples</option><option value="review">Com mídia/fórmula</option></select></label>
+                <label><span>Prova</span><select value={school} onChange={(e) => { setSchool(e.target.value); setPage(1); }}><option value="">Todas</option>{schools.map((item) => <option key={item}>{item}</option>)}</select></label>
+                <label><span>Ano</span><select value={year} onChange={(e) => { setYear(e.target.value); setPage(1); }}><option value="">Todos</option>{years.map((item) => <option key={item}>{item}</option>)}</select></label>
+                <label className="subject-filter"><span>Assunto</span><select value={subject} onChange={(e) => { setSubject(e.target.value); setPage(1); }}><option value="">Todos os assuntos</option>{subjects.map((item) => <option key={item}>{item}</option>)}</select></label>
+                <label><span>Conteúdo</span><select value={status} onChange={(e) => { setStatus(e.target.value); setPage(1); }}><option value="">Todos</option><option value="authenticated">Autenticadas</option><option value="ready">Texto importado</option><option value="review">Em revisão</option></select></label>
                 <button className="clear-button" onClick={clearFilters}>Limpar filtros</button>
               </div>
             </div>
@@ -198,16 +237,18 @@ export default function Home() {
               <section className="results" aria-live="polite">
                 <div className="results-heading">
                   <div><span className="section-kicker">BANCO DE QUESTÕES</span><h2>{loading ? "Carregando acervo…" : `${filtered.length.toLocaleString("pt-BR")} questões encontradas`}</h2></div>
-                  <label className="sort-control">Ordenar por <select value={sort} onChange={(e) => setSort(e.target.value)}><option value="recent">Mais recentes</option><option value="oldest">Mais antigas</option><option value="school">Prova</option></select></label>
+                  <label className="sort-control">Ordenar por <select value={sort} onChange={(e) => { setSort(e.target.value); setPage(1); }}><option value="recent">Mais recentes</option><option value="oldest">Mais antigas</option><option value="school">Prova</option></select></label>
                 </div>
 
                 <div className="question-list">
                   {visible.map((question) => {
                     const isSelected = selectedIds.has(question.id);
                     const isExpanded = expanded === question.id;
-                    const choiceMode = choiceModes[question.id] || question.answerType || "ABCDE";
+                    const choiceMode = question.answerType || "ABCDE";
                     const response = responses[question.id] || "";
-                    const questionParts = splitQuestionContent(question.content, choiceMode);
+                    const questionParts = structureQuestion(question);
+                    const officialAnswer = question.answer.trim().toUpperCase();
+                    const isAuthenticated = Boolean(question.isLocked && question.authenticatedAt);
                     return (
                       <article className={`question-card ${isSelected ? "selected" : ""}`} key={question.id}>
                         <div className="card-topline">
@@ -219,44 +260,40 @@ export default function Home() {
                           <div className="metadata">
                             <strong>{question.school}</strong><span>{question.year}</span><span>Questão {question.number}</span>
                           </div>
-                          <span className={`quality ${question.status}`}>{question.status === "ready" ? "Texto importado" : "Mídia em revisão"}</span>
+                          <span className={`quality ${isAuthenticated ? "authenticated" : question.status}`}>{isAuthenticated ? "Autenticada · Admin 🔒" : question.status === "ready" ? "Texto importado" : "Mídia em revisão"}</span>
                         </div>
                         <div className="topic-row">
                           {question.subjects.length ? question.subjects.map((item) => <span key={item}>{item}</span>) : <span>Sem classificação</span>}
                         </div>
                         {isExpanded ? (
                           <div className="question-content expanded">
-                            <div className="question-stem">{questionParts.stem || "Conteúdo pendente de conferência."}</div>
-                            <div className="alternatives-heading">
-                              <span>Selecione uma alternativa</span>
-                              <label>
-                                Formato
-                                <select
-                                  value={choiceMode}
-                                  onChange={(event) => changeChoiceMode(question.id, event.target.value as ChoiceMode)}
-                                  aria-label={`Formato das alternativas da questão ${question.number}`}
-                                >
-                                  <option value="ABCDE">A–E</option>
-                                  <option value="ABCD">A–D</option>
-                                  <option value="CE">Certo / Errado</option>
-                                </select>
-                              </label>
+                            <div className="question-blocks">
+                              <QuestionBlocks question={question} />
+                              <section className="question-section alternatives-section">
+                                <div className="alternatives-heading"><span>Selecione uma alternativa</span></div>
+                                <div className="alternatives-list" role="radiogroup" aria-label={`Alternativas da questão ${question.number}`}>
+                                  {ANSWER_OPTIONS[choiceMode].map((option, optionIndex) => {
+                                    const stateClass = response ? (option === officialAnswer ? "correct" : option === response ? "incorrect" : "") : "";
+                                    const selectAlternative = () => markResponse(question.id, option);
+                                    return <div
+                                      key={option}
+                                      className={`alternative-option ${stateClass}`.trim()}
+                                      role="radio"
+                                      aria-checked={response === option}
+                                      tabIndex={0}
+                                      onClick={selectAlternative}
+                                      onKeyDown={(event) => {
+                                        if ((event.key === "Enter" || event.key === " ") && event.target === event.currentTarget) {
+                                          event.preventDefault();
+                                          selectAlternative();
+                                        }
+                                      }}
+                                    ><strong>{option}</strong><div className="alternative-content">{question.alternativeBlocks?.[optionIndex]?.length ? <QuestionBlocks question={question} blocks={question.alternativeBlocks[optionIndex]} compact /> : questionParts.alternatives[optionIndex] || defaultAlternativeText(choiceMode, option)}</div></div>;
+                                  })}
+                                </div>
+                                {response && <span className={`answer-feedback ${response === officialAnswer ? "correct" : "incorrect"}`}>{response === officialAnswer ? "Resposta correta." : `Resposta incorreta. Gabarito: ${officialAnswer || "—"}.`}</span>}
+                              </section>
                             </div>
-                            <div className="alternatives-list" role="group" aria-label={`Alternativas da questão ${question.number}`}>
-                              {CHOICE_OPTIONS[choiceMode].map((option, optionIndex) => (
-                                <button
-                                  type="button"
-                                  key={option}
-                                  className={response === option ? "marked" : ""}
-                                  aria-pressed={response === option}
-                                  onClick={() => markResponse(question.id, option)}
-                                >
-                                  <strong>{option}</strong>
-                                  <span>{questionParts.alternatives[optionIndex] || `Alternativa ${option}`}</span>
-                                </button>
-                              ))}
-                            </div>
-                            {response && <span className="answer-feedback">Resposta marcada: <strong>{choiceMode === "CE" ? (response === "C" ? "Certo" : "Errado") : response}</strong></span>}
                           </div>
                         ) : (
                           <div className="question-content">{question.preview || "Conteúdo pendente de conferência."}</div>
@@ -266,7 +303,7 @@ export default function Home() {
                             question.hasMedia && "imagem",
                             question.hasTable && "tabela",
                             question.hasMath && "fórmula",
-                          ].filter(Boolean).join(", ")}. O texto já foi recuperado; os elementos visuais serão convertidos na próxima etapa.</p>
+                          ].filter(Boolean).join(", ")}. Confira a ordem e a fidelidade desses elementos no painel de Revisão.</p>
                         )}
                         <footer className="card-footer">
                           <button onClick={() => setExpanded(isExpanded ? null : question.id)}>{isExpanded ? "Recolher" : "Ver questão completa"}</button>
@@ -281,9 +318,9 @@ export default function Home() {
 
                 {filtered.length > PAGE_SIZE && (
                   <nav className="pagination" aria-label="Paginação das questões">
-                    <button disabled={page === 1} onClick={() => setPage((value) => value - 1)}>Anterior</button>
-                    <span>Página <strong>{page}</strong> de {pageCount}</span>
-                    <button disabled={page === pageCount} onClick={() => setPage((value) => value + 1)}>Próxima</button>
+                    <button disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)}>Anterior</button>
+                    <span>Página <strong>{currentPage}</strong> de {pageCount}</span>
+                    <button disabled={currentPage === pageCount} onClick={() => setPage(currentPage + 1)}>Próxima</button>
                   </nav>
                 )}
               </section>
@@ -319,9 +356,19 @@ export default function Home() {
 
       <section className="print-sheet" aria-hidden="true">
         <header><h1>{simulationTitle}</h1><p>Nome: _______________________________________________ &nbsp; Data: ____/____/______</p></header>
-        {selected.map((question, index) => (
-          <article key={question.id}><h2>{index + 1}. <small>{question.school} · {question.year}</small></h2><div>{question.content}</div></article>
-        ))}
+        {selected.map((question, index) => {
+          const parts = structureQuestion(question);
+          const mode = question.answerType || "ABCDE";
+          return (
+            <article key={question.id}>
+              <h2>{index + 1}. <small>{question.school} · {question.year}</small></h2>
+              <div className="print-question-blocks">
+                <QuestionBlocks question={question} print />
+                <ol type="A">{ANSWER_OPTIONS[mode].map((option, alternativeIndex) => <li key={option}>{question.alternativeBlocks?.[alternativeIndex]?.length ? <QuestionBlocks question={question} blocks={question.alternativeBlocks[alternativeIndex]} print compact /> : parts.alternatives[alternativeIndex] || defaultAlternativeText(mode, option)}</li>)}</ol>
+              </div>
+            </article>
+          );
+        })}
         <div className="answer-key"><h1>Gabarito</h1>{selected.map((question, index) => <span key={question.id}>{index + 1}. <strong>{question.answer || "—"}</strong></span>)}</div>
       </section>
     </>

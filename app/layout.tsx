@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
+import "katex/dist/katex.min.css";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
