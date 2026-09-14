@@ -9,7 +9,10 @@
     "dev": "vinext dev",
     "build": "vinext build",
     "start": "vinext start",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs",
+    "test": "npm run build && npm run test:contracts",
+    "test:contracts": "node --experimental-strip-types --test tests/search.test.mjs tests/rendered-html.test.mjs tests/catalog-contracts.test.mjs tests/workspace-components.test.mjs",
+    "typecheck": "tsc --noEmit --incremental false",
+    "types:generate": "wrangler types types/cloudflare-runtime.d.ts -c dist/server/wrangler.json --include-env=false",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
   },

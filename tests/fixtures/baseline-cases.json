@@ -1,0 +1,31 @@
+{
+  "cases": {
+    "text": "cmb-2003-2-3",
+    "inlineMath": "cmb-2003-4-5",
+    "blockFormula": "cmb-2003-1-2",
+    "table": "cmb-2008-13-159",
+    "image": "cmb-2003-11-12",
+    "alternativeImage": "cmb-2014-15-291",
+    "locked": "cmb-2003-2-3"
+  },
+  "simulation": {
+    "title": "SimpleQuest — referência 1A",
+    "selectedIds": [
+      "cmb-2014-15-291",
+      "cmb-2008-13-159",
+      "cmb-2003-11-12",
+      "cmb-2003-4-5",
+      "cmb-2003-2-3",
+      "cmb-2003-1-2"
+    ],
+    "expectedOrder": [
+      "cmb-2003-1-2",
+      "cmb-2003-2-3",
+      "cmb-2003-4-5",
+      "cmb-2003-11-12",
+      "cmb-2008-13-159",
+      "cmb-2014-15-291"
+    ],
+    "expectedAnswers": ["E", "A", "E", "C", "D", "B"]
+  }
+}

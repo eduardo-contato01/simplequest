@@ -247,15 +247,32 @@ export function mergeQuestionCatalog(base: Question[], revisions: Question[]) {
   return [...byId.values()].map(normalizeQuestionContent);
 }
 
-export async function loadQuestionCatalog() {
+export function questionAnswerFeedback(question: Question, response: string) {
+  const officialAnswer = question.answer.trim().toUpperCase();
+  return { choiceMode: question.answerType || "ABCDE", officialAnswer, isCorrect: Boolean(response && response === officialAnswer) };
+}
+
+export type QuestionCatalogResult = {
+  questions: Question[];
+  status: "available" | "revisions-unavailable";
+};
+
+export async function loadQuestionCatalogWithStatus(): Promise<QuestionCatalogResult> {
   const baseResponse = await fetch("/data/questions.json");
+  if (!baseResponse.ok) throw new Error(`Falha ao carregar a base (${baseResponse.status}).`);
   const base = (await baseResponse.json()) as Question[];
+  if (!Array.isArray(base)) throw new Error("Formato inválido do catálogo base.");
   try {
     const revisionResponse = await fetch("/api/questions/revisions");
-    if (!revisionResponse.ok) return base.map(normalizeQuestionContent);
+    if (!revisionResponse.ok) return { questions: base.map(normalizeQuestionContent), status: "revisions-unavailable" };
     const payload = (await revisionResponse.json()) as { questions: Question[] };
-    return mergeQuestionCatalog(base, payload.questions || []);
+    return { questions: mergeQuestionCatalog(base, payload.questions || []), status: "available" };
   } catch {
-    return base.map(normalizeQuestionContent);
+    return { questions: base.map(normalizeQuestionContent), status: "revisions-unavailable" };
   }
+}
+
+// Preserve the array-returning contract used by the editorial page.
+export async function loadQuestionCatalog() {
+  return (await loadQuestionCatalogWithStatus()).questions;
 }

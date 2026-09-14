@@ -1,0 +1,90 @@
+{
+  "capturedAt": "2026-09-11T18:20:00.807Z",
+  "browser": "152.0.4191.66",
+  "source": "Home e componentes reais, CSS do build; catálogo base com revisões vazias interceptadas, sem acesso ao D1",
+  "catalogSha256": "ed602ca11d3a454edb279822079ff068f8efae085cd93f385b8faca98c1007eb",
+  "htmlSha256": "c2005487d67ca8b82640431399571a8a4ad6e03ff5d62e66d6d10b6cc70e8ca9",
+  "records": [
+    {
+      "id": "cmb-2003-1-2",
+      "sha256": "783eed84c1da949eefed020cd867583dd3f5d272c345267a11009b1843ce089e"
+    },
+    {
+      "id": "cmb-2003-2-3",
+      "sha256": "45072364db865324e730d58b4be6233d3fcdf74cd1ec026a8606018acdf02642"
+    },
+    {
+      "id": "cmb-2003-4-5",
+      "sha256": "fea32ace9e77e1bed99684f247496346c07092bd454822e9387e7c77826533ab"
+    },
+    {
+      "id": "cmb-2003-11-12",
+      "sha256": "26c86fcbd4bda1847bdae206e5c7f0ba070db186508cb2e3c7138a05d42ffaf2"
+    },
+    {
+      "id": "cmb-2008-13-159",
+      "sha256": "44bfb6c2fa87af4aa2ede3b133edd656cd7fa77b97e104cfcbc7919d67aaf1a9"
+    },
+    {
+      "id": "cmb-2014-15-291",
+      "sha256": "9efb35204661192f9c7a350f9be041022548477cfd8ea9458a72c3735594329c"
+    }
+  ],
+  "simulation": {
+    "title": "SimpleQuest — referência 1A",
+    "selectedIds": [
+      "cmb-2014-15-291",
+      "cmb-2008-13-159",
+      "cmb-2003-11-12",
+      "cmb-2003-4-5",
+      "cmb-2003-2-3",
+      "cmb-2003-1-2"
+    ],
+    "expectedOrder": [
+      "cmb-2003-1-2",
+      "cmb-2003-2-3",
+      "cmb-2003-4-5",
+      "cmb-2003-11-12",
+      "cmb-2008-13-159",
+      "cmb-2014-15-291"
+    ],
+    "expectedAnswers": [
+      "E",
+      "A",
+      "E",
+      "C",
+      "D",
+      "B"
+    ]
+  },
+  "actualOrder": [
+    "CMB · 2003 · Q1",
+    "CMB · 2003 · Q2",
+    "CMB · 2003 · Q4",
+    "CMB · 2003 · Q11",
+    "CMB · 2008 · Q13",
+    "CMB · 2014 · Q15"
+  ],
+  "answers": [
+    "E",
+    "A",
+    "E",
+    "C",
+    "D",
+    "B"
+  ],
+  "articles": 6,
+  "alternativesPerArticle": 5,
+  "images": 8,
+  "tables": 1,
+  "listStyleType": "none",
+  "standaloneMatchesOriginal": true,
+  "apiRequests": [
+    {
+      "method": "GET",
+      "path": "/api/questions/revisions"
+    }
+  ],
+  "pageErrors": [],
+  "note": "HTML preserva mídia screen/print original: fica oculto na tela normal; abrir a impressão para visualizar. PNG usa mídia print sem paginação física."
+}

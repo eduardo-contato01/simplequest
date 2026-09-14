@@ -627,12 +627,12 @@ export default function ReviewPage() {
     </div>
   );
 }
-  function prepareForEditing(question: Question) {
+  function prepareForEditing(question: Question): Question {
     const normalized = normalizeQuestionContent(question);
     const structured = structureQuestion(normalized);
     const mode = normalized.answerType || "ABCDE";
     const alternatives = ANSWER_OPTIONS[mode].map((option, index) => normalized.alternatives?.[index] || (mode === "CE" ? defaultAlternativeText(mode, option) : ""));
-    const alternativeBlocks = ANSWER_OPTIONS[mode].map((_, index) => {
+    const alternativeBlocks = ANSWER_OPTIONS[mode].map<QuestionContentBlock[]>((_, index) => {
       const existing = normalized.alternativeBlocks?.[index] || [];
       return existing.length ? [...existing] : [{ id: `alternative-${index + 1}-text`, type: "text", text: alternatives[index] }];
     });

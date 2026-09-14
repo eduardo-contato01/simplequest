@@ -9,8 +9,8 @@ const root = fileURLToPath(new URL("../", import.meta.url));
 
 test("implements ordered question blocks and mathematical editing", async () => {
   const mathFormula = await readFile(path.join(root, "app/components/MathFormula.tsx"), "utf8");
-  const [page, review, blocks, media, inlineEditor, contentEditor, model, search, layout, css, migration, extractor] = await Promise.all([
-    readFile(path.join(root, "app/page.tsx"), "utf8"),
+  const [view, review, blocks, media, inlineEditor, contentEditor, model, search, layout, css, migration, extractor] = await Promise.all([
+    readFile(path.join(root, "app/hooks/useQuestionsWorkspace.ts"), "utf8"),
     readFile(path.join(root, "app/revisao/page.tsx"), "utf8"),
     readFile(path.join(root, "app/components/QuestionBlocks.tsx"), "utf8"),
     readFile(path.join(root, "app/components/QuestionMedia.tsx"), "utf8"),
@@ -51,15 +51,11 @@ test("implements ordered question blocks and mathematical editing", async () => 
   assert.match(model, /display: continuesSentence \? "inline" : "block"/);
   assert.match(model, /blocks\.slice\(-optionCount\)/);
   assert.match(model, /\.map\(normalizeQuestionContent\)/);
-  assert.match(page, /className="question-blocks"/);
-  assert.match(page, /<QuestionBlocks question=\{question\}/);
-  assert.match(page, /defaultAlternativeText\(choiceMode, option\)/);
-  assert.match(page, /simplequest:questions-view:v1/);
-  assert.match(page, /searchRelevance/);
-  assert.match(page, /localStorage\.setItem\(QUESTIONS_VIEW_KEY/);
-  assert.match(page, /restoredScrollRef/);
-  assert.doesNotMatch(page, /Formato<select/);
-  assert.match(page, /const stateClass = response \? \(option === officialAnswer \? "correct"/);
+  // UI assertions moved to workspace-components.test.mjs (real rendered HTML).
+  assert.match(view, /simplequest:questions-view:v1/);
+  assert.match(view, /searchRelevance/);
+  assert.match(view, /localStorage\.setItem\(QUESTIONS_VIEW_KEY/);
+  assert.match(view, /restoredScrollRef/);
   assert.match(blocks, /<InlineMath/);
   assert.match(mathFormula, /`\\\\displaystyle \$\{latex\}`/);
   assert.match(blocks, /<MathFormula/);
@@ -228,9 +224,6 @@ test("implements ordered question blocks and mathematical editing", async () => 
   assert.match(inlineEditor, /function insertLineBreakAtSelection/);
   assert.match(inlineEditor, /event\.key === "Enter"/);
   assert.match(inlineEditor, /caret = Math\.min\(offsets\.start, offsets\.end\) \+ 1/);
-  assert.match(page, /blocks=\{question\.alternativeBlocks\[optionIndex\]\} compact/);
-  assert.match(page, /className=\{`alternative-option/);
-  assert.match(page, /role="radiogroup"/);
   assert.match(review, /addAlternativeBlock\(index, "image"\)/);
   assert.match(review, /addAlternativeBlock\(index, "table"\)/);
   assert.match(review, /imagePlaceholder=\{alternativeImagePlaceholder/);
@@ -331,8 +324,7 @@ test("keeps the extracted media catalog internally consistent", async () => {
 });
 
 test("implements administrative authentication and locking", async () => {
-  const [page, review, model, api, schema, migration, css] = await Promise.all([
-    readFile(path.join(root, "app/page.tsx"), "utf8"),
+  const [review, model, api, schema, migration, css] = await Promise.all([
     readFile(path.join(root, "app/revisao/page.tsx"), "utf8"),
     readFile(path.join(root, "app/question-model.ts"), "utf8"),
     readFile(path.join(root, "app/api/questions/revisions/route.ts"), "utf8"),
@@ -348,7 +340,6 @@ test("implements administrative authentication and locking", async () => {
   assert.match(review, /Autenticar e travar/);
   assert.match(review, /Motivo do desbloqueio/);
   assert.match(review, /Histórico de confiança/);
-  assert.match(page, /Autenticada · Admin/);
   assert.match(api, /status: 423/);
   assert.match(api, /changedProtectedContent/);
   assert.match(api, /pelo menos 5 caracteres/);
