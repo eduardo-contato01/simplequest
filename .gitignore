@@ -43,3 +43,5 @@ __pycache__/
 /.wrangler/
 /outputs/
 /work/
+.simplequest-audit.local.json
+/brain/.obsidian/
