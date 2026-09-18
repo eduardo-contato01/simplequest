@@ -1,0 +1,51 @@
+{
+  "protocolVersion": "holdout-v2",
+  "artifactType": "manifest-provenance-sidecar",
+
+  "selectionGitCommit": "8d41bfbe6c2d4fc304653f8ddc3f5f2e00b6d651",
+  "selectionSeed": 20260918,
+  "selectionCodeState": "clean",
+
+  "manifestFileSha256": "1853f77f5231e2830e6f29f83b48b7a10db579f220b6591012407feaebcd1283",
+  "manifestCanonicalJsonSha256": "c1bc294e60affb6d2d9396e7a69f7b1cea82b6bd3ca71c0151e1de973a42e8f9",
+
+  "protocolSha256": "50d1302f8025d21a422f0ca0cf0b2348ae1337774c4f2aa5d7b1a8a25fe63f21",
+  "inventorySha256": "9c6a365adb0da7036ac965437ebec590fc01c72641b21f0297a20e02b72014c8",
+  "selectorSha256": "a13f6cc0f53228c6464caf5fab8b8abcf9481f95d5c87b3844a8415164733e27",
+
+  "candidatePoolHash": "75e92fd09eb7589ca63f59381121eb0c58d442a29bf42afc6d81558f8690aef5",
+  "candidatePoolPathHash": "91962457cc36d14b55b6e40486eb8ea214928b5f910299cf0c71840892d9c373",
+  "reservedPoolHash": "577c1eed100a3ca3822e783222470209268b324882ec22cd017bdcf21424d789",
+  "reservedCount": 535,
+
+  "SELECTION_DETERMINISTIC": true,
+
+  "guards": {
+    "v1Overlap": 0,
+    "developmentOverlap": 0,
+    "answerKeySelected": 0,
+    "duplicateSelectedFingerprints": 0,
+    "uniqueSelectedFingerprints": 48,
+    "selectedDocuments": 48,
+    "selectedQuestionsTotal": 0
+  },
+
+  "excludedByReason": {
+    "answer_key_directory": 519,
+    "answer_key_filename": 20,
+    "development_fingerprint": 6,
+    "v1_revealed_fingerprint": 25,
+    "invalid_metadata": 1,
+    "duplicate_content": 0
+  },
+
+  "manifestCompletenessNote": "manifest-v2.json did not persist selectorSha256 (selector materialization gap; the V1 driver added it manually). The correct value is recorded here. No re-selection or manifest rewrite was performed.",
+
+  "evidence": [
+    "gate before selection: poolSize=583; bySource text_native=386 raster=187 text_low_quality=2 hybrid=8; 25 families; 22 years; eras 42/126/228/187",
+    "candidatePoolHash and candidatePoolPathHash matched the frozen preflight exactly",
+    "v1 fingerprints blocked 48/48; V1 overlap in pool = 0; development overlap = 0; answer-key eligible = 0; duplicate content = 0",
+    "selection executed once with seed 20260918; deterministic re-run produced same 48 fingerprints in the same order",
+    "selected/quotas: text_native=28 raster=14 text_low_quality=2 hybrid=4; 19 families (max 4/family); 19 years; 4 eras present"
+  ]
+}
