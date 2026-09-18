@@ -13,9 +13,9 @@ from PIL import Image
 from ocr_pdf_layer import DEFAULT_TESSERACT, DEFAULT_TESSDATA, group_words_into_lines, tesseract_page
 
 ROOT = Path(__file__).resolve().parents[1]
-MANIFEST_PATH = ROOT / "audit" / "holdout" / "manifest-v1.json"
-PROTOCOL_PATH = ROOT / "audit" / "holdout" / "protocol-v1.json"
-INDEX_PATH = ROOT / "audit" / "holdout" / "question-index-v1.json"
+MANIFEST_PATH = ROOT / "audit" / "holdout" / "manifest-v2.json"
+PROTOCOL_PATH = ROOT / "audit" / "holdout" / "protocol-v2.json"
+INDEX_PATH = ROOT / "audit" / "holdout" / "question-index-v2.json"
 OCR_CACHE_DIR = ROOT / "outputs" / "audit" / "holdout" / "ocr"
 
 INDEX_METHOD_VERSION = "neutral-question-index-v1"
@@ -253,11 +253,19 @@ def main() -> None:
   if args.only:
     return
 
+  manifest_path = Path(args.manifest)
+  try:
+    created_from = manifest_path.resolve().relative_to(ROOT).as_posix()
+  except ValueError:
+    created_from = manifest_path.as_posix()
   index = {
     "protocolVersion": manifest["protocolVersion"],
     "indexMethodVersion": INDEX_METHOD_VERSION,
-    "createdFromManifest": "audit/holdout/manifest-v1.json",
-    "manifestFileSha256": hashlib.sha256(Path(args.manifest).read_bytes()).hexdigest(),
+    "createdFromManifest": created_from,
+    "manifestFileSha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest(),
+    "manifestCanonicalJsonSha256": hashlib.sha256(
+      json.dumps(manifest, ensure_ascii=False, sort_keys=True).encode("utf-8")
+    ).hexdigest(),
     "ocrConfig": FROZEN_OCR,
     "documents": [
       {
