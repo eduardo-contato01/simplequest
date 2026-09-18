@@ -71,10 +71,8 @@ def build_candidate_pool(inventory: dict[str, Any], protocol: dict[str, Any],
   excluded_inaccessible = 0
   duplicates = 0
   excluded_reasons: Counter[str] = Counter()
-  for index, entry in enumerate(pdfs):
-    try:
-      schema.validate_candidate_entry(entry, index)
-    except schema.HoldoutValidationError:
+  for entry in pdfs:
+    if schema.candidate_metadata_reason(entry) is not None:
       excluded_invalid += 1
       excluded_reasons["invalid_metadata"] += 1
       continue

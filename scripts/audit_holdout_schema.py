@@ -208,6 +208,37 @@ def validate_protocol(protocol: dict[str, Any]) -> None:
   _require(isinstance(protocol.get("challengeSet"), dict), "protocol: challengeSet missing")
 
 
+def candidate_metadata_reason(entry: dict[str, Any]) -> str | None:
+  # Returns None when the entry has usable metadata for sampling-frame
+  # eligibility, or a machine-readable reason when it must be excluded as
+  # invalid_metadata (checked before any downstream conversion/constraint).
+  for field in ("path", "relativePath", "institution", "year", "pageCount", "classification"):
+    if field not in entry:
+      return f"missing_field:{field}"
+  if entry.get("classification") not in SOURCE_CLASSES:
+    return "bad_classification"
+  year = entry.get("year")
+  if year is None:
+    return "invalid_year"
+  if isinstance(year, bool):
+    return "invalid_year"
+  if isinstance(year, str):
+    if not year.strip():
+      return "invalid_year"
+    try:
+      int(year)
+    except ValueError:
+      return "invalid_year"
+  elif not isinstance(year, (int, float)):
+    return "invalid_year"
+  try:
+    if int(entry.get("pageCount")) < 0:
+      return "bad_pageCount"
+  except (TypeError, ValueError):
+    return "bad_pageCount"
+  return None
+
+
 def validate_candidate_entry(entry: dict[str, Any], index: int) -> None:
   for field in ("path", "relativePath", "institution", "year", "pageCount", "classification"):
     _require(field in entry, f"candidate[{index}]: missing {field}")

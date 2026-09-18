@@ -413,6 +413,30 @@ def test_v2_quota_abort_hybrid() -> None:
   check("quota.hybrid_abort", result["status"] == "selection_constraints_unsatisfied" and any(u["constraint"] == "sourceQuota" and u["sourceType"] == "hybrid" for u in result["unsatisfied"]), result["unsatisfied"])
 
 
+def test_invalid_metadata_null_year() -> None:
+  proto = protocol()
+  base = entry("VALID - 6ANO - 2010.pdf", "CMF", 2010, "text_native")
+  null_year = dict(entry("NULLYEAR - 6ANO - 2010.pdf", "CMF", 2010, "raster"))
+  null_year["year"] = None
+  missing = dict(entry("MISSING - 6ANO - 2010.pdf", "CMF", 2010, "raster"))
+  del missing["year"]
+  empty = dict(entry("EMPTY - 6ANO - 2010.pdf", "CMF", 2010, "raster"))
+  empty["year"] = ""
+  nonnumeric = dict(entry("NONNUM - 6ANO - 2010.pdf", "CMF", 2010, "raster"))
+  nonnumeric["year"] = "abc"
+  inv = {"pdfs": [base, null_year, missing, empty, nonnumeric]}
+  mapping = {"cmf/valid - 6ano - 2010.pdf": schema.sha256_text("c:valid")}
+  try:
+    built = selector.build_candidate_pool(inv, proto, content_hashes=mapping)
+    check("invalidyear.no_crash", True)
+    check("invalidyear.pool", built["stats"]["poolSize"] == 1, built["stats"])
+    check("invalidyear.count", built["stats"]["excludedByReason"].get("invalid_metadata") == 4, built["stats"])
+  except Exception as exc:
+    check("invalidyear.no_crash", False, str(exc))
+    check("invalidyear.pool", False, "exception")
+    check("invalidyear.count", False, "exception")
+
+
 def test_provenance_not_recomputed() -> None:
   proto = protocol()
   prov = provenance()
@@ -466,6 +490,7 @@ def main() -> None:
   test_answer_key_role_exclusion()
   test_v2_quota_abort_low()
   test_v2_quota_abort_hybrid()
+  test_invalid_metadata_null_year()
   test_provenance_not_recomputed()
   test_selector_version_v2()
   test_deterministic_v2()
