@@ -350,6 +350,94 @@ def test_development_config_coherence() -> None:
   check("devconfig.families", prefixes == {"CMBH17", "CMC11", "CMBH18", "CMBel17", "CMT22", "PAS19"}, prefixes)
 
 
+def test_metadata_eligibility() -> None:
+  cases = [
+    ({"relativePath": "CMF/6o Ano/GABARITO/foo.pdf"}, False, "answer_key_directory"),
+    ({"relativePath": "CMF/6o Ano/GABARITOS/foo.pdf"}, False, "answer_key_directory"),
+    ({"relativePath": "CMF/6o Ano/gab_prova.pdf"}, False, "answer_key_filename"),
+    ({"relativePath": "CMF/6o Ano/VEST UnB 2010 GABARITO.pdf"}, False, "answer_key_filename"),
+    ({"relativePath": "CMF/6o Ano/Gabriel.pdf"}, True, None),
+    ({"relativePath": "CMF/6o Ano/prova_respostas_comentadas.pdf"}, True, None),
+    ({"relativePath": "CMF/6o Ano/cartao_geometria.pdf"}, True, None),
+    ({"relativePath": "CMF/6o Ano/CMF - 6ANO - 2012_2013 (mat).pdf"}, True, None),
+    ({"relativePath": "CMF/6o Ano/GABARITO.pdf"}, False, "answer_key_filename"),
+    ({"relativePath": "CMF/6o Ano/Subpasta/GABARITOS/2022-2023 CMRJ.pdf"}, False, "answer_key_directory"),
+  ]
+  for metadata, expected_eligible, expected_reason in cases:
+    eligible, reason = schema.is_eligible_question_document(metadata)
+    check(f"meta.{metadata['relativePath']}", eligible == expected_eligible and reason == expected_reason, (eligible, reason))
+
+
+def test_v1_fingerprint_exclusion() -> None:
+  proto = protocol()
+  mapping = content_map()
+  victim_path = "cmf/b - 6ano - 2008 (mat).pdf"
+  victim_fp = mapping[victim_path]
+  pool = selector.build_candidate_pool(inventory(), proto, content_hashes=mapping, v1_fingerprints={victim_fp})["pool"]
+  check("v1excl.not_in_pool", all(document["contentFingerprint"] != victim_fp for document in pool), pool)
+  built = selector.build_candidate_pool(inventory(), proto, content_hashes=mapping, v1_fingerprints={victim_fp})
+  check("v1excl.reason", built["stats"]["excludedByReason"].get("v1_revealed_fingerprint") == 1, built["stats"])
+
+
+def test_answer_key_role_exclusion() -> None:
+  proto = protocol()
+  inv = {"pdfs": [
+    entry("CMF/GABARITO/foo.pdf", "CMF", 2010, "text_native"),
+    entry("gab_prova.pdf", "CMF", 2011, "raster"),
+    entry("normal.pdf", "CMF", 2012, "text_native"),
+  ]}
+  mapping = {s: schema.sha256_text("c:" + s) for s in ["cmf/cmf/gabarito/foo.pdf", "cmf/gab_prova.pdf", "cmf/normal.pdf"]}
+  built = selector.build_candidate_pool(inv, proto, content_hashes=mapping)
+  check("role.pool", built["stats"]["poolSize"] == 1, built["stats"])
+  check("role.dir", built["stats"]["excludedByReason"].get("answer_key_directory") == 1, built["stats"])
+  check("role.file", built["stats"]["excludedByReason"].get("answer_key_filename") == 1, built["stats"])
+
+
+def test_v2_quota_abort_low() -> None:
+  proto = protocol(target=8)
+  proto["randomHoldout"]["sourceQuota"] = {"text_native": 3, "text_low_quality": 2}
+  inv = {"pdfs": [entry(f"{c} - 6ANO - 2010.pdf", f"CM{c}", 2010, "text_native") for c in "ABCD"] + [entry("LOW - 6ANO - 2011.pdf", "CMZ", 2011, "text_low_quality")]}
+  mapping = {s["relativePath"].lower(): schema.sha256_text("c:" + s["relativePath"]) for s in inv["pdfs"]}
+  pool = selector.build_candidate_pool(inv, proto, content_hashes=mapping)["pool"]
+  result = selector.select_documents(pool, proto["randomHoldout"], 1234)
+  check("quota.low_abort", result["status"] == "selection_constraints_unsatisfied" and any(u["constraint"] == "sourceQuota" and u["sourceType"] == "text_low_quality" for u in result["unsatisfied"]), result["unsatisfied"])
+
+
+def test_v2_quota_abort_hybrid() -> None:
+  proto = protocol(target=8)
+  proto["randomHoldout"]["sourceQuota"] = {"text_native": 3, "hybrid": 4}
+  inv = {"pdfs": [entry(f"{c} - 6ANO - 2010.pdf", f"CM{c}", 2010, "text_native") for c in "ABCD"] + [entry(f"H{i} - 6ANO - 201{i}.pdf", f"HY{i}", 2015 + i, "hybrid") for i in range(3)]}
+  mapping = {s["relativePath"].lower(): schema.sha256_text("c:" + s["relativePath"]) for s in inv["pdfs"]}
+  pool = selector.build_candidate_pool(inv, proto, content_hashes=mapping)["pool"]
+  result = selector.select_documents(pool, proto["randomHoldout"], 1234)
+  check("quota.hybrid_abort", result["status"] == "selection_constraints_unsatisfied" and any(u["constraint"] == "sourceQuota" and u["sourceType"] == "hybrid" for u in result["unsatisfied"]), result["unsatisfied"])
+
+
+def test_provenance_not_recomputed() -> None:
+  proto = protocol()
+  prov = provenance()
+  prov["selectionCodeState"] = "clean"
+  pool = selector.build_candidate_pool(inventory(), proto, content_hashes=content_map())["pool"]
+  selection = selector.select_documents(pool, proto["randomHoldout"], 1234)
+  manifest = selector.build_manifest(proto, prov, selection, None, 1234)
+  check("prov.clean_preserved", manifest["selectionCodeState"] == "clean", manifest["selectionCodeState"])
+  check("prov.selector_v2", schema.selector_version_for(proto["protocolVersion"]) == "holdout-v1")
+
+
+def test_selector_version_v2() -> None:
+  check("selector.v2", schema.selector_version_for("holdout-v2") == "holdout-v2")
+  check("selector.v1", schema.selector_version_for("holdout-v1") == "holdout-v1")
+
+
+def test_deterministic_v2() -> None:
+  proto = protocol()
+  proto["protocolVersion"] = "holdout-v2"
+  pool = selector.build_candidate_pool(inventory(), proto, content_hashes=content_map())["pool"]
+  first = selector.select_documents(pool, proto["randomHoldout"], 20260918)
+  second = selector.select_documents(pool, proto["randomHoldout"], 20260918)
+  check("v2.deterministic", [d["documentId"] for d in first["documents"]] == [d["documentId"] for d in second["documents"]])
+
+
 def main() -> None:
   test_deterministic_and_quotas()
   test_pool_filters()
@@ -373,6 +461,14 @@ def main() -> None:
   test_slice_and_labels()
   test_validators()
   test_development_config_coherence()
+  test_metadata_eligibility()
+  test_v1_fingerprint_exclusion()
+  test_answer_key_role_exclusion()
+  test_v2_quota_abort_low()
+  test_v2_quota_abort_hybrid()
+  test_provenance_not_recomputed()
+  test_selector_version_v2()
+  test_deterministic_v2()
   if FAILURES:
     print(f"\n{len(FAILURES)} checks falharam: {FAILURES}")
     raise SystemExit(1)

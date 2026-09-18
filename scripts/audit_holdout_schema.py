@@ -1,15 +1,22 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 from typing import Any
 
 
 PROTOCOL_VERSION = "holdout-v1"
+SUPPORTED_PROTOCOL_VERSIONS = ("holdout-v1", "holdout-v2")
 SELECTOR_VERSION = "holdout-v1"
+SELECTOR_VERSION_BY_PROTOCOL = {"holdout-v1": "holdout-v1", "holdout-v2": "holdout-v2"}
 FINGERPRINT_CACHE_VERSION = 1
+
+ANSWER_KEY_DIRECTORY_SEGMENTS = ("gabarito", "gabaritos")
+ANSWER_KEY_FILENAME_TOKENS = ("gabarito", "gabaritos")
+ANSWER_KEY_FILENAME_PREFIX = "gab_"
 
 SOURCE_CLASSES = ("text_native", "raster", "text_low_quality", "hybrid")
 SPLITS = ("random", "challenge", "reserved")
@@ -141,8 +148,52 @@ def _require(condition: bool, message: str) -> None:
     raise HoldoutValidationError(message)
 
 
+def selector_version_for(protocol_version: str) -> str:
+  return SELECTOR_VERSION_BY_PROTOCOL.get(protocol_version, SELECTOR_VERSION)
+
+
+def normalize_metadata_text(value: str) -> str:
+  import unicodedata
+  text = unicodedata.normalize("NFKD", str(value or ""))
+  text = "".join(char for char in text if not unicodedata.combining(char))
+  text = text.casefold()
+  text = re.sub(r"[_\-\.\\/]+", " ", text)
+  text = re.sub(r"\s+", " ", text).strip()
+  return text
+
+
+def normalize_metadata_path(value: str) -> str:
+  import unicodedata
+  text = unicodedata.normalize("NFKD", str(value or "").replace("\\", "/"))
+  text = "".join(char for char in text if not unicodedata.combining(char))
+  text = text.casefold()
+  return text
+
+
+def is_eligible_question_document(metadata: dict[str, Any]) -> tuple[bool, str | None]:
+  # Metadata-only sampling-frame filter. Only clearly non-question document
+  # roles (answer keys) are excluded; ambiguous names remain eligible.
+  relative = str(metadata.get("relativePath") or metadata.get("path") or "")
+  normalized_path = normalize_metadata_path(relative)
+  segments = [normalize_metadata_text(segment) for segment in normalized_path.split("/") if segment]
+  for segment in segments:
+    if segment in ANSWER_KEY_DIRECTORY_SEGMENTS:
+      return False, "answer_key_directory"
+  import os
+  basename = os.path.basename(normalized_path)
+  stem = basename.rsplit(".", 1)[0] if "." in basename else basename
+  stem_tokens = stem.split()
+  if stem.startswith(ANSWER_KEY_FILENAME_PREFIX):
+    return False, "answer_key_filename"
+  if stem_tokens and stem_tokens[0] == "gab" and len(stem_tokens) > 1:
+    return False, "answer_key_filename"
+  if any(token in ANSWER_KEY_FILENAME_TOKENS for token in stem_tokens):
+    return False, "answer_key_filename"
+  return True, None
+
+
 def validate_protocol(protocol: dict[str, Any]) -> None:
-  _require(protocol.get("protocolVersion") == PROTOCOL_VERSION, "protocol: protocolVersion must be holdout-v1")
+  _require(protocol.get("protocolVersion") in SUPPORTED_PROTOCOL_VERSIONS, "protocol: protocolVersion must be holdout-v1")
   random_cfg = protocol.get("randomHoldout")
   _require(isinstance(random_cfg, dict), "protocol: randomHoldout missing")
   _require(int(random_cfg.get("targetDocuments", 0)) > 0, "protocol: targetDocuments must be > 0")
@@ -165,7 +216,7 @@ def validate_candidate_entry(entry: dict[str, Any], index: int) -> None:
 
 
 def validate_manifest(manifest: dict[str, Any]) -> None:
-  _require(manifest.get("protocolVersion") == PROTOCOL_VERSION, "manifest: bad protocolVersion")
+  _require(manifest.get("protocolVersion") in SUPPORTED_PROTOCOL_VERSIONS, "manifest: bad protocolVersion")
   _require(isinstance(manifest.get("selectionSeed"), int), "manifest: selectionSeed missing/not int")
   _require(isinstance(manifest.get("selectionConfig"), dict), "manifest: selectionConfig missing")
   _require(isinstance(manifest.get("documents"), list) and manifest["documents"], "manifest: documents missing")
@@ -184,7 +235,7 @@ def validate_manifest(manifest: dict[str, Any]) -> None:
 
 
 def validate_question_index(index: dict[str, Any]) -> None:
-  _require(index.get("protocolVersion") == PROTOCOL_VERSION, "questionIndex: bad protocolVersion")
+  _require(index.get("protocolVersion") in SUPPORTED_PROTOCOL_VERSIONS, "questionIndex: bad protocolVersion")
   _require(isinstance(index.get("documents"), list), "questionIndex: documents missing")
   for dindex, document in enumerate(index["documents"]):
     for field in ("documentId", "contentFingerprint", "questions"):
@@ -196,7 +247,7 @@ def validate_question_index(index: dict[str, Any]) -> None:
 
 
 def validate_ground_truth(gt: dict[str, Any]) -> None:
-  _require(gt.get("protocolVersion") == PROTOCOL_VERSION, "groundTruth: bad protocolVersion")
+  _require(gt.get("protocolVersion") in SUPPORTED_PROTOCOL_VERSIONS, "groundTruth: bad protocolVersion")
   _require(isinstance(gt.get("questions"), list) and gt["questions"], "groundTruth: questions missing")
   for index, item in enumerate(gt["questions"]):
     for field in ("documentId", "questionId", "responseMode", "layout", "markerStyle", "contentKind"):
@@ -213,7 +264,7 @@ def validate_ground_truth(gt: dict[str, Any]) -> None:
 
 
 def validate_challenge(challenge: dict[str, Any]) -> None:
-  _require(challenge.get("protocolVersion") == PROTOCOL_VERSION, "challenge: bad protocolVersion")
+  _require(challenge.get("protocolVersion") in SUPPORTED_PROTOCOL_VERSIONS, "challenge: bad protocolVersion")
   _require(isinstance(challenge.get("documents"), list), "challenge: documents missing")
   for index, document in enumerate(challenge["documents"]):
     for field in ("documentId", "family", "year", "sourceType", "pathologies"):
@@ -236,3 +287,4 @@ def write_json(path: str | Path, obj: Any) -> None:
   target = Path(path)
   target.parent.mkdir(parents=True, exist_ok=True)
   target.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+

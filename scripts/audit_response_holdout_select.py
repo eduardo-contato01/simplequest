@@ -10,6 +10,8 @@ from typing import Any
 
 import audit_holdout_schema as schema
 
+ROOT = Path(__file__).resolve().parents[1]
+
 
 def era_of(year: int) -> str:
   if year <= 2009:
@@ -56,7 +58,9 @@ def _resolve_content_fingerprint(entry: dict[str, Any], content_hashes: dict[str
 def build_candidate_pool(inventory: dict[str, Any], protocol: dict[str, Any],
                          content_hashes: dict[str, str] | None = None,
                          dev_fingerprints: set[str] | None = None,
-                         fingerprint_cache: dict[str, Any] | None = None) -> dict[str, Any]:
+                         v1_fingerprints: set[str] | None = None,
+                         fingerprint_cache: dict[str, Any] | None = None,
+                         apply_document_role: bool = True) -> dict[str, Any]:
   pdfs = inventory.get("pdfs")
   if not isinstance(pdfs, list):
     raise schema.HoldoutValidationError("inventory: pdfs missing")
@@ -66,21 +70,34 @@ def build_candidate_pool(inventory: dict[str, Any], protocol: dict[str, Any],
   excluded_invalid = 0
   excluded_inaccessible = 0
   duplicates = 0
+  excluded_reasons: Counter[str] = Counter()
   for index, entry in enumerate(pdfs):
     try:
       schema.validate_candidate_entry(entry, index)
     except schema.HoldoutValidationError:
       excluded_invalid += 1
+      excluded_reasons["invalid_metadata"] += 1
       continue
+    if apply_document_role:
+      eligible, reason = schema.is_eligible_question_document(entry)
+      if not eligible:
+        excluded_reasons[reason or "answer_key_filename"] += 1
+        continue
     if _is_development_path(entry, development):
       excluded_development += 1
+      excluded_reasons["development_fingerprint"] += 1
       continue
     content_fingerprint = _resolve_content_fingerprint(entry, content_hashes, fingerprint_cache)
     if not content_fingerprint:
       excluded_inaccessible += 1
+      excluded_reasons["invalid_metadata"] += 1
       continue
     if dev_fingerprints and content_fingerprint in dev_fingerprints:
       excluded_development += 1
+      excluded_reasons["development_fingerprint"] += 1
+      continue
+    if v1_fingerprints and content_fingerprint in v1_fingerprints:
+      excluded_reasons["v1_revealed_fingerprint"] += 1
       continue
     relative = str(entry.get("relativePath") or "")
     canonical_path = str(entry.get("path") or relative)
@@ -106,6 +123,7 @@ def build_candidate_pool(inventory: dict[str, Any], protocol: dict[str, Any],
       continue
     # same content: keep the lexicographically smallest normalizedRelativePath as canonical
     duplicates += 1
+    excluded_reasons["duplicate_content"] += 1
     existing["duplicatePaths"].append(relative)
     existing["duplicateCount"] = existing.get("duplicateCount", 0) + 1
     if candidate["normalizedRelativePath"] < existing["normalizedRelativePath"]:
@@ -122,6 +140,7 @@ def build_candidate_pool(inventory: dict[str, Any], protocol: dict[str, Any],
       "excludedDuplicateFingerprint": duplicates,
       "excludedInvalid": excluded_invalid,
       "excludedInaccessible": excluded_inaccessible,
+      "excludedByReason": dict(excluded_reasons),
       "bySource": dict(Counter(document["sourceType"] for document in pool)),
       "byFamily": dict(Counter(document["family"] for document in pool)),
     },
@@ -283,7 +302,7 @@ def build_manifest(protocol: dict[str, Any], provenance: dict[str, Any], selecti
     documents.append(entry)
   return {
     "protocolVersion": protocol["protocolVersion"],
-    "selectorVersion": schema.SELECTOR_VERSION,
+    "selectorVersion": provenance.get("selectorVersion") or schema.selector_version_for(protocol["protocolVersion"]),
     "selectionSeed": effective_seed,
     "protocolSha256": provenance.get("protocolSha256"),
     "inventorySha256": provenance.get("inventorySha256"),
@@ -293,6 +312,8 @@ def build_manifest(protocol: dict[str, Any], provenance: dict[str, Any], selecti
     "selectionCodeState": provenance.get("selectionCodeState"),
     "selectorSha256": provenance.get("selectorSha256"),
     "selectionConfig": protocol["randomHoldout"],
+    "excludedByReason": provenance.get("excludedByReason") or {},
+    "v1ExcludedFingerprints": provenance.get("v1ExcludedFingerprints") or [],
     "reservedPoolHash": selection.get("reservedPoolHash"),
     "reservedCount": selection.get("reservedCount"),
     "documents": documents,
@@ -314,6 +335,10 @@ def main() -> None:
                       help="JSON mapping normalizedRelativePath -> contentFingerprint (tests/preflight).")
   parser.add_argument("--fingerprint-cache", default=None,
                       help="JSON cache path; computes SHA-256 of candidate PDFs when no mapping is given.")
+  parser.add_argument("--v1-manifest", default=str(ROOT / "audit" / "holdout" / "manifest-v1.json"),
+                      help="Historical V1 manifest whose fingerprints are excluded in V2.")
+  parser.add_argument("--v1-provenance", default=str(ROOT / "audit" / "holdout" / "manifest-v1.provenance.json"),
+                      help="Historical V1 provenance sidecar (development fingerprints).")
   parser.add_argument("--out", required=True)
   args = parser.parse_args()
 
@@ -322,9 +347,26 @@ def main() -> None:
   inventory = _load(args.inventory)
   seed = args.seed if args.seed is not None else int(protocol["selectionSeed"])
 
+  # Capture code identity BEFORE any output produced by this pipeline (regression
+  # guard for the V1 provenance timing bug).
+  identity = code_identity()
+
+  v1_fingerprints: set[str] = set()
+  dev_fingerprints: set[str] = set()
+  if args.v1_manifest and Path(args.v1_manifest).exists():
+    v1_manifest = _load(args.v1_manifest)
+    v1_fingerprints = {document["contentFingerprint"] for document in v1_manifest.get("documents", [])}
+  if args.v1_provenance and Path(args.v1_provenance).exists():
+    v1_provenance = _load(args.v1_provenance)
+    dev_fingerprints = set((v1_provenance.get("developmentContentFingerprints") or {}).values())
+
   content_hashes = _load(args.content_fingerprints) if args.content_fingerprints else None
   fingerprint_cache = schema.load_fingerprint_cache(args.fingerprint_cache) if args.fingerprint_cache else None
-  candidate = build_candidate_pool(inventory, protocol, content_hashes=content_hashes, fingerprint_cache=fingerprint_cache)
+  candidate = build_candidate_pool(
+    inventory, protocol, content_hashes=content_hashes,
+    dev_fingerprints=dev_fingerprints, v1_fingerprints=v1_fingerprints,
+    fingerprint_cache=fingerprint_cache,
+  )
   selection = select_documents(candidate["pool"], protocol["randomHoldout"], seed)
 
   if selection["status"] != "ok":
@@ -336,7 +378,10 @@ def main() -> None:
     "inventorySha256": schema.sha256_file(args.inventory),
     "candidatePoolHash": schema.canonical_content_pool_hash(candidate["pool"]),
     "candidatePoolPathHash": schema.sha256_json(sorted(document["normalizedRelativePath"] for document in candidate["pool"])),
-    **code_identity(),
+    "selectorVersion": schema.selector_version_for(protocol["protocolVersion"]),
+    "excludedByReason": candidate["stats"].get("excludedByReason") or {},
+    "v1ExcludedFingerprints": sorted(v1_fingerprints),
+    **identity,
   }
   question_index = _load(args.question_index) if args.question_index else None
   if question_index:

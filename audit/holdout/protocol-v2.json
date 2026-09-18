@@ -1,0 +1,100 @@
+{
+  "protocolVersion": "holdout-v2",
+  "description": "Structural Random Holdout V2 with corrected sampling frame (answer keys excluded) and full V1 fingerprint exclusion.",
+  "selectionSeed": 20260918,
+  "randomHoldout": {
+    "targetDocuments": 48,
+    "questionsPerDocument": 3,
+    "maxDocumentsPerFamily": 4,
+    "minFamilies": 10,
+    "minDistinctYears": 10,
+    "eras": ["2004-2009", "2010-2014", "2015-2019", "2020-2025"],
+    "sourceQuota": {
+      "text_native": 28,
+      "raster": 14,
+      "text_low_quality": 2,
+      "hybrid": 4
+    }
+  },
+  "documentEligibilityRules": {
+    "normalization": "NFKD-remove-combining-casefold-normalize-separators",
+    "answerKeyDirectorySegments": ["gabarito", "gabaritos"],
+    "answerKeyFilenamePrefix": "gab_",
+    "answerKeyFilenameTokens": ["gabarito", "gabaritos"],
+    "note": "Metadata-only document-role filter. Ambiguous tokens (resposta, resultado, solucao, chave, correcao, espelho, cartao, folha, rascunho, instrucoes, answer) are NOT auto-excluded."
+  },
+  "v1ExclusionPolicy": {
+    "excludeAllV1Fingerprints": true,
+    "unit": "contentFingerprint",
+    "source": "audit/holdout/manifest-v1.json"
+  },
+  "developmentExclusionPolicy": {
+    "unit": "contentFingerprint",
+    "source": "audit/holdout/manifest-v1.provenance.json",
+    "field": "developmentContentFingerprints"
+  },
+  "sourceQuotaRationale": {
+    "cleanFrameV2": {
+      "text_native": 386,
+      "raster": 187,
+      "text_low_quality": 2,
+      "hybrid": 8,
+      "total": 583
+    },
+    "cleanFramePercent": {
+      "text_native": 66.2,
+      "raster": 32.1,
+      "text_low_quality": 0.34,
+      "hybrid": 1.37
+    },
+    "notes": [
+      "Preserves raster weight better than a purely proportional split; hybrid deliberately oversampled.",
+      "text_low_quality=2 consumes 100% of the known eligible stratum; no automatic relaxation allowed.",
+      "hybrid=4 uses 4 of 8 currently eligible contents; revalidate >=4 unique before selection."
+    ]
+  },
+  "constraintPolicy": {
+    "abortOnConstraintFailure": true,
+    "noSilentRelaxation": true,
+    "textLowQualityMinimumUnique": 2,
+    "hybridMinimumUnique": 4
+  },
+  "challengeSet": {
+    "targetDocuments": 16
+  },
+  "developmentDocuments": [
+    "CMBH - 6ANO - 2017_2018 (mat).pdf",
+    "CMC - 6ANO - 2011_2012 (mat).pdf",
+    "CMBH - 6ANO - 2018_2019 (mat).pdf",
+    "CMBel - 6ANO - 2017_2018 (mat).pdf",
+    "CMT - 6ANO - 2022_2023.pdf",
+    "PAS 2 - 2019.pdf"
+  ],
+  "exclusionReasons": [
+    "answer_key_directory",
+    "answer_key_filename",
+    "development_fingerprint",
+    "v1_revealed_fingerprint",
+    "duplicate_content",
+    "invalid_metadata"
+  ],
+  "ocrPolicy": {
+    "allowedInExecutionPhase": true,
+    "frozenConfiguration": true,
+    "noRetuneFromHoldoutResults": true,
+    "failuresObservedAsNotExecutable": true
+  },
+  "antiContamination": {
+    "developmentExcluded": true,
+    "v1RevealedExcluded": true,
+    "duplicateFingerprintsIncompatibleAcrossSplits": true,
+    "runnerNeverEditsManifestOrGroundTruth": true
+  },
+  "historicalArtifacts": {
+    "v1Protocol": "audit/holdout/protocol-v1.json",
+    "v1Manifest": "audit/holdout/manifest-v1.json",
+    "v1ManifestProvenance": "audit/holdout/manifest-v1.provenance.json",
+    "v1QuestionIndex": "audit/holdout/question-index-v1.json",
+    "v1Status": "invalid_for_random_evaluation_due_to_sampling_frame"
+  }
+}

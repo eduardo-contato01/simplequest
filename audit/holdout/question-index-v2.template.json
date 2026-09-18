@@ -1,0 +1,18 @@
+{
+  "_template": "question-index-v2.template.json — neutral per-document question list (no structural attributes).",
+  "protocolVersion": "holdout-v2",
+  "documents": [
+    {
+      "documentId": "doc-000000000000",
+      "contentFingerprint": "0000000000000000000000000000000000000000000000000000000000000000",
+      "questions": [
+        {
+          "questionId": "doc-000000000000-q1",
+          "questionNumber": 1,
+          "pageStart": 1,
+          "pageEnd": 1
+        }
+      ]
+    }
+  ]
+}
