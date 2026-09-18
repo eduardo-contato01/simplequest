@@ -1,0 +1,68 @@
+{
+  "protocolVersion": "holdout-v1",
+  "artifactType": "manifest-provenance-sidecar",
+  "correctionType": "provenance_only",
+
+  "selectionGitCommit": "7200285be6d6320d984180e67b549f7190430672",
+  "selectionSeed": 20260918,
+
+  "selectionCodeStateRecorded": "dirty",
+  "selectionCodeStateCorrected": "clean",
+  "correctionReason": "code_identity was measured while an untracked manifest produced by a previous pipeline attempt was already present; tracked selection code/config remained unchanged",
+
+  "manifestFileSha256": "72a04e811c6cabd3f282d3c38be8e06389af772610a2b37117805412b56811fc",
+  "manifestCanonicalJsonSha256": "61a02b81a9ddb1457a2f0e07f11e661ae9ea09711ffa0ca4110c336dcb7a462b",
+
+  "protocolSha256": "4fbdff47d98e715517faadb829a0e56b6e3a99d179f86633387e78b92372e752",
+  "inventorySha256": "9c6a365adb0da7036ac965437ebec590fc01c72641b21f0297a20e02b72014c8",
+  "selectorSha256": "025b5c4cec8741689693ca4734c56a4de98e2f7dd3ace0b436cce0a6f5bbe417",
+
+  "candidatePoolHash": "4248d164837efc6b7ae550c843a80df25357f58f90dc58bd26a2e74e534160ea",
+  "candidatePoolPathHash": "b7af7de583bcbada637173077a5d11ded50880816727e5aab054f455d698e058",
+  "reservedPoolHash": "76509cf4cf814c0b5de36f78c4f503f00049e2ad022fd48c76695f65133cb875",
+  "reservedCount": 1083,
+
+  "developmentContentFingerprints": {
+    "CMBel - 6ANO - 2017_2018 (mat).pdf": "d24e3bf5f636c5a8b069d0ec6e0d80f6f1586470a4fc18942d229b513df5d63f",
+    "CMBH - 6ANO - 2017_2018 (mat).pdf": "711b3af4f70827416cd922cae6341dce4138063aa0f93c20cf57516c040c9f7d",
+    "CMBH - 6ANO - 2018_2019 (mat).pdf": "ba6586b35bc27b2e1f9beb225d822e887a6d534d969fef71b9ed24811aa3bfef",
+    "CMC - 6ANO - 2011_2012 (mat).pdf": "270d3af0b1701d1ebb95cd8fb2d5ec9df104cd246e67d84ef46fde8f5860b4a6",
+    "CMT - 6ANO - 2022_2023.pdf": "2911e5348c962f9a5f882efa60459aaaa1d2479fa742f2ccf99f9018d95457dd",
+    "PAS 2 - 2019.pdf": "76903eef85577b82ce4b1e30a912c2a194ef5f4103e46e2edc4114c1f68792c2"
+  },
+
+  "selectionIntegrity": {
+    "selectedDocuments": 48,
+    "uniqueContentFingerprints": 48,
+    "selectedQuestions": 0,
+    "deterministic": true,
+    "sourceQuota": {
+      "text_native": 20,
+      "raster": 12,
+      "text_low_quality": 12,
+      "hybrid": 4
+    },
+    "distinctFamilies": 20,
+    "distinctYears": 18,
+    "minYear": 2006,
+    "maxYear": 2025,
+    "developmentOverlap": 0
+  },
+
+  "evidence": [
+    "git rev-parse HEAD = 7200285be6d6320d984180e67b549f7190430672",
+    "protocol-v1.json, corpus-inventory.json and audit_response_holdout_select.py current SHA-256 match the values recorded in the manifest",
+    "git status after materialization showed only: ?? audit/holdout/manifest-v1.json",
+    "no tracked file was modified",
+    "outputs/audit/holdout/content-fingerprints.json is git-ignored via .gitignore:44 (/outputs/)",
+    "investigated run cache stats: hashed.total=1154, hashed.hashed=0, hashed.missing=[] (full cache already existed before that pass)",
+    "code_identity() runs before the manifest write of that pass, but an untracked manifest from a previous pipeline attempt was already present",
+    "SELECTION_DETERMINISTIC = true"
+  ],
+
+  "metadataNotes": [
+    "developmentContentFingerprints was not persisted in manifest-v1.json although development exclusion occurred internally; it is recorded here.",
+    "invalidNullYear = 1 (one inventory entry with null year was excluded from the candidate pool).",
+    "neither gap changes the 48 selected documents nor the candidate/reserved pool hashes."
+  ]
+}
