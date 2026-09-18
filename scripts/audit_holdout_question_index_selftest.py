@@ -103,6 +103,63 @@ def test_numeric_fallback_and_ocr_like() -> None:
   check("ocr.sequence", indexer.looks_like_question_sequence(indexer.detect_markers(ocr_like)) is True)
 
 
+def test_keyword_item_marker() -> None:
+  lines = [line("ITEM 01. Primeira afirmacao", 1, 100), line("ITEM 02. Segunda afirmacao", 1, 200)]
+  markers = indexer.detect_markers(lines)
+  check("item.markers", [m["number"] for m in markers] == [1, 2], markers)
+  check("item.kind", all(m["kind"] == "keyword" for m in markers), markers)
+
+
+def test_item_heading_lowercase() -> None:
+  markers = indexer.detect_markers([line("item 27 Considere a situacao", 1, 100)])
+  check("itemheading.one", len(markers) == 1 and markers[0]["number"] == 27, markers)
+
+
+def test_internal_reference_not_start() -> None:
+  lines = [line("responda ao item 27 conforme indicado", 1, 100), line("nos itens 21 e 22 discute-se o tema", 1, 130)]
+  check("reference.none", indexer.detect_markers(lines) == [], indexer.detect_markers(lines))
+
+
+def test_bare_numeric_sequence() -> None:
+  lines = [line("1 Texto da unidade um", 1, 100), line("2 Texto da unidade dois", 1, 200), line("3 Texto da unidade tres", 1, 300)]
+  markers = indexer.detect_markers(lines)
+  check("bare.three", [m["number"] for m in markers] == [1, 2, 3], markers)
+
+
+def test_year_and_decimal_not_markers() -> None:
+  check("year.none", indexer.detect_markers([line("2024 foi um ano importante", 1, 100)]) == [])
+  check("decimal.none", indexer.detect_markers([line("9.6 million trees in the same area", 1, 100)]) == [])
+
+
+def test_footer_repetition_suppressed() -> None:
+  lines = [
+    line("1.o Vestibular de 2009 2.o DIA - 1", 1, 900),
+    line("1.o Vestibular de 2009 2.o DIA - 2", 2, 900),
+    line("1.o Vestibular de 2009 2.o DIA - 3", 3, 900),
+    line("5 Texto de item real", 3, 200),
+  ]
+  markers = indexer.detect_markers(lines)
+  check("footer.suppressed", [m["number"] for m in markers] == [5], markers)
+
+
+def test_dotted_ocr_and_item_ocr() -> None:
+  dotted = indexer.detect_markers([line("01. Primeira", 1, 100), line("02. Segunda", 1, 200), line("03. Terceira", 1, 300)])
+  check("dotted.three", [m["number"] for m in dotted] == [1, 2, 3], dotted)
+  item = indexer.detect_markers([line("ITEM 03. Terceira afirmacao", 1, 100)])
+  check("itemocr.one", len(item) == 1 and item[0]["number"] == 3, item)
+
+
+def test_uppercase_item_anywhere() -> None:
+  markers = indexer.detect_markers([line("fortemente ITEM 16. O finalidade texto", 1, 100)])
+  check("itemupper.one", len(markers) == 1 and markers[0]["number"] == 16, markers)
+
+
+def test_mixed_keyword_numeric_prefers_sequence() -> None:
+  lines = [line("QUESTAO 1 Texto", 1, 50)] + [line(f"{n} Texto da unidade", 2, 100 + i * 50) for i, n in enumerate(range(10, 15))]
+  markers = indexer.detect_markers(lines)
+  check("mixed.numeric", [m["number"] for m in markers] == [10, 11, 12, 13, 14], markers)
+
+
 def main() -> None:
   test_distinct_pages()
   test_two_same_page()
@@ -115,6 +172,15 @@ def main() -> None:
   test_page_bounds()
   test_fingerprint_mismatch_blocks()
   test_numeric_fallback_and_ocr_like()
+  test_keyword_item_marker()
+  test_item_heading_lowercase()
+  test_internal_reference_not_start()
+  test_bare_numeric_sequence()
+  test_year_and_decimal_not_markers()
+  test_footer_repetition_suppressed()
+  test_dotted_ocr_and_item_ocr()
+  test_uppercase_item_anywhere()
+  test_mixed_keyword_numeric_prefers_sequence()
   if FAILURES:
     print(f"\n{len(FAILURES)} checks falharam: {FAILURES}")
     raise SystemExit(1)

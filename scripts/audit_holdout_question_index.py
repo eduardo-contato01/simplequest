@@ -25,7 +25,43 @@ QUESTAO_RE = re.compile(r"^\s*QUEST[ÃA]O\s*0*(\d{1,3})\b", re.IGNORECASE)
 ITEM_RE = re.compile(r"^\s*ITEM\s*0*(\d{1,3})\b", re.IGNORECASE)
 PARENT_CHILD_RE = re.compile(r"^\s*\d{1,3}\s*[-–—]\s*[A-Ea-e]\b")
 NUMERIC_RE = re.compile(r"^\s*0*(\d{1,3})\s*[.)\-–—]\s*(?!\s*[A-Ea-e]\b)")
+BARE_NUMERIC_RE = re.compile(r"^\s*0*(\d{1,3})\s+(?=\S)")
+ITEM_UPPERCASE_RE = re.compile(r"\bITEM\s*0*(\d{1,3})\b")
 ROMAN_RE = re.compile(r"^\s*\(?\s*(I{1,3}|IV|V)\s*[).\-–—]?\s+\S")
+MAX_QUESTION_NUMBER = 150
+REPEATED_PAGE_THRESHOLD = 3
+MIN_KEYWORD_MARKERS = 3
+
+
+def _line_key(text: str) -> str:
+  # Collapse digits so repeated headers/footers that only differ by page number
+  # map to the same key.
+  import unicodedata
+  value = unicodedata.normalize("NFKD", str(text or ""))
+  value = "".join(char for char in value if not unicodedata.combining(char)).casefold()
+  return re.sub(r"\d+", "#", value).strip()
+
+
+def _repeated_line_keys(lines: list[dict[str, Any]]) -> set[str]:
+  pages_by_key: dict[str, set[int]] = {}
+  for line in lines:
+    key = _line_key(line.get("text"))
+    if not key:
+      continue
+    pages_by_key.setdefault(key, set()).add(int(line.get("page") or 0))
+  return {key for key, pages in pages_by_key.items() if len(pages) >= REPEATED_PAGE_THRESHOLD}
+
+
+def _candidate(line: dict[str, Any], number: int, kind: str) -> dict[str, Any]:
+  bbox = line.get("bbox") or [0, 0, 0, 0]
+  return {
+    "number": number,
+    "page": int(line["page"]),
+    "top": float(bbox[1]),
+    "x0": float(bbox[0]),
+    "kind": kind,
+    "text": str(line.get("text") or "").strip(),
+  }
 
 
 def detect_markers(lines: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -35,19 +71,46 @@ def detect_markers(lines: list[dict[str, Any]]) -> list[dict[str, Any]]:
     text = str(line.get("text") or "").strip()
     if not text:
       continue
-    bbox = line.get("bbox") or [0, 0, 0, 0]
     match = QUESTAO_RE.match(text) or ITEM_RE.match(text)
     if match:
-      keyword.append({"number": int(match.group(1)), "page": int(line["page"]), "top": float(bbox[1]), "kind": "keyword"})
+      keyword.append(_candidate(line, int(match.group(1)), "keyword"))
+      continue
+    uppercase_item = ITEM_UPPERCASE_RE.search(text)
+    if uppercase_item:
+      keyword.append(_candidate(line, int(uppercase_item.group(1)), "keyword"))
       continue
     if PARENT_CHILD_RE.match(text) or ROMAN_RE.match(text):
       continue
-    number = NUMERIC_RE.match(text)
-    if number and int(number.group(1)) <= 150:
-      numeric.append({"number": int(number.group(1)), "page": int(line["page"]), "top": float(bbox[1]), "kind": "numeric"})
-  # Prefer explicit question/item keywords. Numeric line markers are a fallback
-  # and may include list items, so they are used only when no keyword exists.
-  return keyword if keyword else numeric
+    numeric_match = NUMERIC_RE.match(text)
+    if numeric_match:
+      number = int(numeric_match.group(1))
+      rest = text[numeric_match.end(1):]
+      # Reject decimal continuations like "9.6 million".
+      if rest[:1] == "." and rest[1:2].isdigit():
+        continue
+      if 1 <= number <= MAX_QUESTION_NUMBER:
+        numeric.append(_candidate(line, number, "numeric"))
+      continue
+    bare_match = BARE_NUMERIC_RE.match(text)
+    if bare_match:
+      number = int(bare_match.group(1))
+      if 1 <= number <= MAX_QUESTION_NUMBER:
+        numeric.append(_candidate(line, number, "numeric"))
+  repeated = _repeated_line_keys(lines)
+  # Suppress repeated numeric headers/footers (page numbers differ, so digits
+  # are collapsed for the repetition key). Explicit keyword markers are kept.
+  numeric = [marker for marker in numeric if _line_key(marker["text"]) not in repeated]
+  keyword_numbers = {marker["number"] for marker in keyword}
+  # Choose the grammar that actually forms the main-question sequence. A handful
+  # of keyword hits must not mask a large numeric-item sequence, and numeric list
+  # noise must not override a real keyword grammar.
+  if len(keyword_numbers) >= MIN_KEYWORD_MARKERS:
+    return keyword
+  if looks_like_question_sequence(numeric):
+    return numeric
+  if keyword:
+    return keyword
+  return numeric
 
 
 def build_sequence(markers: list[dict[str, Any]], page_count: int, page_heights: dict[int, float]) -> dict[str, Any]:
