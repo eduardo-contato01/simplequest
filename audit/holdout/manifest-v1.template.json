@@ -1,0 +1,29 @@
+{
+  "_template": "manifest-v1.template.json — replace with a frozen manifest produced by audit_response_holdout_select.py. Not a real selection.",
+  "protocolVersion": "holdout-v1",
+  "selectorVersion": "holdout-v1",
+  "selectionSeed": 0,
+  "protocolSha256": null,
+  "inventorySha256": null,
+  "candidatePoolHash": null,
+  "candidatePoolPathHash": null,
+  "gitCommit": null,
+  "selectionCodeState": null,
+  "selectorSha256": null,
+  "selectionConfig": {},
+  "reservedPoolHash": null,
+  "reservedCount": 0,
+  "documents": [
+    {
+      "documentId": "doc-000000000000",
+      "canonicalPath": "institution/file.pdf",
+      "contentFingerprint": "0000000000000000000000000000000000000000000000000000000000000000",
+      "duplicatePaths": [],
+      "family": "CMF",
+      "year": 2010,
+      "series": "6o Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": []
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "_template": "ground-truth-v1.template.json — structural ground truth, human-authored without seeing Auditor output.",
+  "protocolVersion": "holdout-v1",
+  "manifestSha256": null,
+  "documentFingerprints": {
+    "doc-000000000000": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "questions": [
+    {
+      "documentId": "doc-000000000000",
+      "questionId": "doc-000000000000-q1",
+      "pages": [1],
+      "responseMode": "unknown",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "unknown",
+      "markerStyle": "unknown",
+      "contentKind": "unknown",
+      "notes": null
+    }
+  ]
+}

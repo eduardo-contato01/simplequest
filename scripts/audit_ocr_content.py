@@ -9,6 +9,10 @@ from statistics import median
 from typing import Any
 
 import audit_pdf_mvp as audit
+import audit_response_fusion as response_fusion
+import audit_response_regions as response_regions
+import audit_response_structure as response_structure
+import audit_visual_marker_evidence as visual_evidence
 import ocr_raster_pilot as pilot
 
 
@@ -117,6 +121,15 @@ def build_pilot_context(payload: dict[str, Any], expected_numbers: list[int]) ->
     key=lambda item: (int(item["page"]), float(item.get("top") or 0)),
   )
   pages, _ = pilot.pages_with_reconstructed_lines(payload)
+  page_geometry = {
+    int(page["page"]): {
+      "imageWidth": page.get("width"),
+      "imageHeight": page.get("height"),
+      "pdfWidth": page.get("pdfWidth"),
+      "pdfHeight": page.get("pdfHeight"),
+    }
+    for page in payload.get("pages") or []
+  }
   return {
     "pages": {int(page["page"]): page for page in pages},
     "markers": markers,
@@ -124,6 +137,8 @@ def build_pilot_context(payload: dict[str, Any], expected_numbers: list[int]) ->
     "scope": scope,
     "scope_roles": scope_roles,
     "marker_preflight": marker_preflight,
+    "dpi": float(payload.get("dpi") or 0),
+    "page_geometry": page_geometry,
   }
 
 
@@ -166,6 +181,7 @@ def collect_region(
   in_scope_pages = context["in_scope_pages"]
   text_parts: list[str] = []
   words: list[OcrAuditWord] = []
+  line_records: list[dict[str, Any]] = []
   line_confidences: list[float] = []
   in_alternatives = False
   stem_end_delimited = False
@@ -194,6 +210,18 @@ def collect_region(
       if line.get("confidence") is not None:
         line_confidences.append(float(line["confidence"]))
       role = "alternative" if in_alternatives else "stem"
+      line_records.append({
+        "text": text,
+        "page": page_number,
+        "top": top,
+        "bottom": float(shape["bottom"]),
+        "x0": float(shape["x0"]),
+        "x1": float(shape["x1"]),
+        "confidence": float(line["confidence"]) if line.get("confidence") is not None else None,
+        "isReconstructed": bool(line.get("isReconstructed")),
+        "lineIndex": len(line_records),
+        "role": role,
+      })
       for word in pilot.line_words(page, line):
         confidence = word.get("confidence")
         words.append(OcrAuditWord(
@@ -209,6 +237,7 @@ def collect_region(
   return {
     "text": "\n".join(text_parts).strip(),
     "words": words,
+    "lines": line_records,
     "lineConfidences": line_confidences,
     "stemEndDelimited": stem_end_delimited,
   }
@@ -577,6 +606,137 @@ def collect_context_text(context: dict[str, Any], start_page: int, start_top: fl
   return "\n".join(lines)
 
 
+def rendered_page_image(slug: str | None, page: int) -> str | None:
+  if not slug:
+    return None
+  path = CACHE_DIR / slug / "tesseract" / "rendered" / f"page-{page:02d}.png"
+  return str(path) if path.exists() else None
+
+
+def discover_response_structure_shadow(
+  region: dict[str, Any],
+  image_path: str | None = None,
+) -> dict[str, Any]:
+  observed = [
+    response_structure.ObservedLine(
+      text=str(record.get("text") or ""),
+      page=int(record.get("page") or 0),
+      top=float(record.get("top") or 0),
+      bottom=float(record.get("bottom") or 0),
+      x0=float(record.get("x0") or 0),
+      x1=float(record.get("x1") or 0),
+      confidence=record.get("confidence"),
+      is_reconstructed=bool(record.get("isReconstructed")),
+      line_index=int(record.get("lineIndex") or 0),
+      role=str(record.get("role") or "stem"),
+    )
+    for record in region.get("lines") or []
+  ]
+  return response_structure.discover_response_structure(observed, image_path=image_path)
+
+
+def region_lines_in_pixels(lines: list[dict[str, Any]], page_geometry: dict[int, dict[str, Any]]) -> list[dict[str, Any]]:
+  # collect_region line coordinates are PDF points (pilot.line_to_audit_shape);
+  # the rendered PNG is in pixels. Convert so visual geometry matches the raster.
+  converted: list[dict[str, Any]] = []
+  for line in lines:
+    geometry = page_geometry.get(int(line.get("page") or 0)) or {}
+    image_width = geometry.get("imageWidth")
+    image_height = geometry.get("imageHeight")
+    pdf_width = geometry.get("pdfWidth")
+    pdf_height = geometry.get("pdfHeight")
+    scale_x = (image_width / pdf_width) if image_width and pdf_width else 1.0
+    scale_y = (image_height / pdf_height) if image_height and pdf_height else 1.0
+    converted.append({
+      **line,
+      "x0": float(line.get("x0") or 0) * scale_x,
+      "x1": float(line.get("x1") or 0) * scale_x,
+      "top": float(line.get("top") or 0) * scale_y,
+      "bottom": float(line.get("bottom") or 0) * scale_y,
+    })
+  return converted
+
+
+def visual_evidence_shadow(
+  region: dict[str, Any],
+  context: dict[str, Any],
+  start_page: int,
+  end_page: int,
+) -> dict[str, Any]:
+  slug = context.get("slug")
+  page_geometry = context.get("page_geometry") or {}
+  image_paths = {
+    page: path
+    for page in range(start_page, end_page + 1)
+    if (path := rendered_page_image(slug, page))
+  }
+  try:
+    return visual_evidence.analyze_question_region(
+      region_lines_in_pixels(region.get("lines") or [], page_geometry),
+      image_paths,
+      page_geometry,
+      float(context.get("dpi") or 0),
+    )
+  except Exception as exc:  # shadow must never break the audit
+    return {
+      "visualAlternativeEvidence": [],
+      "visualResponseSetHypotheses": [],
+      "visualResponseSetAmbiguous": False,
+      "visualPageGeometry": [],
+      "visualError": str(exc),
+    }
+
+
+def marker_bbox_in_pixels(marker: dict[str, Any], page_geometry: dict[int, dict[str, Any]]) -> list[float]:
+  geometry = page_geometry.get(int(marker.get("page") or 0)) or {}
+  image_width = geometry.get("imageWidth")
+  image_height = geometry.get("imageHeight")
+  pdf_width = geometry.get("pdfWidth")
+  pdf_height = geometry.get("pdfHeight")
+  scale_x = (image_width / pdf_width) if image_width and pdf_width else 1.0
+  scale_y = (image_height / pdf_height) if image_height and pdf_height else 1.0
+  bbox = [float(value) for value in marker.get("bbox") or (0, 0, 0, 0)]
+  return [bbox[0] * scale_x, bbox[1] * scale_y, bbox[2] * scale_x, bbox[3] * scale_y]
+
+
+def response_regions_shadow(
+  region: dict[str, Any],
+  structure_shadow: dict[str, Any],
+  visual_shadow: dict[str, Any],
+  context: dict[str, Any],
+  boundary_reliable: bool,
+  pages: list[int],
+) -> dict[str, Any]:
+  page_geometry = context.get("page_geometry") or {}
+  lines = region_lines_in_pixels(region.get("lines") or [], page_geometry)
+  words = [
+    {"page": word.page, "text": word.text, "bbox": [float(value) for value in word.bbox]}
+    for word in region.get("words") or []
+  ]
+  strong_markers = []
+  for marker in structure_shadow.get("alternativeMarkerCandidates") or []:
+    converted = dict(marker)
+    converted["bbox"] = marker_bbox_in_pixels(marker, page_geometry)
+    strong_markers.append(converted)
+  try:
+    return response_regions.discover_response_regions(
+      boundary={"reliable": boundary_reliable, "pages": pages},
+      lines=lines,
+      words=words,
+      strong_markers=strong_markers,
+      visual_markers=visual_shadow.get("visualAlternativeEvidence") or [],
+      raster_components=visual_shadow.get("visualRawComponents") or [],
+    )
+  except Exception as exc:  # shadow must never break the audit
+    return {
+      "observedResponseRegions": [],
+      "responseSlotHypotheses": [],
+      "questionResponsePattern": {"pattern": "unknown", "slotIds": [], "confidence": "low", "evidence": [f"error:{exc}"]},
+      "weakRegionAnchors": [],
+      "blockers": ["response_region_error"],
+    }
+
+
 def audit_question(
   catalog: list[dict[str, Any]],
   school: str,
@@ -632,9 +792,43 @@ def audit_question(
   result = compare_question_ocr(
     catalog_question, ocr_question, context["marker_preflight"], eligible, metrics, words, context_text, boundary_ok
   )
+  structure_shadow = discover_response_structure_shadow(
+    region, rendered_page_image(context.get("slug"), start_page)
+  )
+  visual_shadow = visual_evidence_shadow(region, context, start_page, end_page)
+  regions_shadow = response_regions_shadow(
+    region, structure_shadow, visual_shadow, context, boundary_reliable, pages_used
+  )
+  try:
+    fusion_shadow = response_fusion.fuse_response_evidence(
+      {"reliable": boundary_reliable, "pages": pages_used},
+      structure_shadow,
+      visual_shadow,
+      regions_shadow,
+    )
+  except Exception as exc:  # shadow must never break the audit
+    fusion_shadow = {"agreement": "insufficient", "sources": [], "slots": [], "optionCountHypothesis": None,
+                     "optionLabelsHypothesis": None, "observationConfidence": "low", "interpretationConfidence": "low",
+                     "evidence": [f"error:{exc}"], "blockers": ["fusion_error"]}
   return {
     "number": number,
     "eligible": eligible,
+    "observedResponseRegions": regions_shadow["observedResponseRegions"],
+    "responseSlotHypotheses": regions_shadow["responseSlotHypotheses"],
+    "questionResponsePattern": regions_shadow["questionResponsePattern"],
+    "weakRegionAnchors": regions_shadow["weakRegionAnchors"],
+    "responseEvidenceFusion": fusion_shadow,
+    "inferredResponseStructure": structure_shadow["inferredResponseStructure"],
+    "inferredAlternativeProfile": structure_shadow["inferredAlternativeProfile"],
+    "responseSetCandidates": structure_shadow["responseSetCandidates"],
+    "internalEnumerationCandidates": structure_shadow["internalEnumerationCandidates"],
+    "recoveredAlternativeMarkerCandidates": structure_shadow["recoveredAlternativeMarkerCandidates"],
+    "alternativeMarkerCandidates": structure_shadow["alternativeMarkerCandidates"],
+    "responseStructureDiscovery": structure_shadow,
+    "visualAlternativeEvidence": visual_shadow["visualAlternativeEvidence"],
+    "visualResponseSetHypotheses": visual_shadow["visualResponseSetHypotheses"],
+    "visualResponseSetAmbiguous": visual_shadow["visualResponseSetAmbiguous"],
+    "visualPageGeometry": visual_shadow["visualPageGeometry"],
     "boundary": {
       "startPage": start_page, "startTop": start.get("top"),
       "endPage": end_page, "endNumber": end_number, "endTop": (end or {}).get("top"),
@@ -669,16 +863,23 @@ def run_pilot(output_dir: Path) -> dict[str, Any]:
       if question.get("school") == case["school"] and int(question.get("year", 0)) == case["year"]
     ]
     context = build_pilot_context(payload, expected)
+    context["slug"] = case["slug"]
     audited = [
       audit_question(catalog, case["school"], case["year"], context, number, True)
       for number in case["questions"]
     ]
+    document_profile, _ = response_structure.build_document_profiles(
+      [item.get("inferredAlternativeProfile") for item in audited if item.get("inferredAlternativeProfile")]
+    )
+    section_profile = document_profile
     proofs.append({
       "school": case["school"],
       "year": case["year"],
       "slug": case["slug"],
       "proofStatus": context["marker_preflight"]["status"],
       "segmentationConfidence": context["marker_preflight"]["segmentationConfidence"],
+      "documentAlternativeProfile": document_profile,
+      "sectionAlternativeProfile": section_profile,
       "questions": audited,
     })
 
@@ -688,14 +889,25 @@ def run_pilot(output_dir: Path) -> dict[str, Any]:
     if question.get("school") == NON_ELIGIBLE_CONTROL["school"] and int(question.get("year", 0)) == NON_ELIGIBLE_CONTROL["year"]
   ]
   control_context = build_pilot_context(control_payload, control_expected)
+  control_context["slug"] = NON_ELIGIBLE_CONTROL["slug"]
   control = audit_question(
     catalog, NON_ELIGIBLE_CONTROL["school"], NON_ELIGIBLE_CONTROL["year"], control_context,
     NON_ELIGIBLE_CONTROL["question"], False,
   )
+  global_profiles = [
+    item.get("inferredAlternativeProfile")
+    for proof in proofs
+    for item in proof["questions"]
+    if item.get("inferredAlternativeProfile")
+  ]
+  document_profile, _ = response_structure.build_document_profiles(global_profiles)
+  section_profile = document_profile
   summary = {
     "mode": "read-only",
     "engine": "tesseract",
     "capabilities": OCR_CAPABILITIES,
+    "documentAlternativeProfile": document_profile,
+    "sectionAlternativeProfile": section_profile,
     "pilot": proofs,
     "nonEligibleControl": {"school": NON_ELIGIBLE_CONTROL["school"], "year": NON_ELIGIBLE_CONTROL["year"], "question": control},
   }
@@ -717,6 +929,16 @@ def render_markdown(summary: dict[str, Any]) -> str:
     "Experimento somente leitura. Nenhum `difference` e emitido pela camada OCR; componentes nao observaveis ficam `unverified`.",
     "",
   ]
+  document_profile = summary.get("documentAlternativeProfile")
+  if document_profile:
+    dominant = document_profile.get("dominantStyle") or {}
+    lines.append(
+      f"Perfil modal observacional (shadow): support={document_profile.get('support')} "
+      f"purity={document_profile.get('purity')} confidence={document_profile.get('confidence')} "
+      f"shape={dominant.get('markerShape')} sep={dominant.get('separator')} case={dominant.get('labelCase')} "
+      f"options={document_profile.get('dominantOptionLabels')}"
+    )
+    lines.append("")
   for proof in summary["pilot"]:
     lines.append(f"## {proof['school']} {proof['year']} (status={proof['proofStatus']}, segmentacao={proof['segmentationConfidence']})")
     lines.append("")
@@ -758,6 +980,59 @@ def render_markdown(summary: dict[str, Any]) -> str:
         f"- ocrComponentStatus: stem={ocr_status.get('stem')} alternatives={ocr_status.get('alternatives')} "
         f"punctuation={ocr_status.get('punctuation')} capitalization={ocr_status.get('capitalization')}"
       )
+      structure = item.get("inferredResponseStructure") or {}
+      profile = item.get("inferredAlternativeProfile") or {}
+      lines.append(
+        f"- shadowResponseStructure: mode={structure.get('mode')} ({structure.get('modeConfidence')}) "
+        f"options={structure.get('optionLabels')} ({structure.get('optionLabelsConfidence')}) "
+        f"optionCount={structure.get('expectedOptionCount')} ({structure.get('optionCountConfidence')}) "
+        f"subitems={structure.get('subitems')}"
+      )
+      lines.append(
+        f"- shadowAlternativeProfile: shape={profile.get('markerShape')} sep={profile.get('separator')} "
+        f"case={profile.get('labelCase')} layout={profile.get('layout')} field={profile.get('responseField')} "
+        f"confidence={profile.get('confidence')}"
+      )
+      recovered = item.get("recoveredAlternativeMarkerCandidates") or []
+      if recovered:
+        lines.append(f"- shadowRecoveredMarkers: {[entry.get('expectedLabel') for entry in recovered]}")
+      visual = item.get("visualAlternativeEvidence") or []
+      hypotheses = item.get("visualResponseSetHypotheses") or []
+      if visual:
+        fills = ", ".join(str(entry.get("fill")) for entry in visual)
+        lines.append(
+          f"- shadowVisualMarkers: count={len(visual)} fills=[{fills}] "
+          f"hypotheses={len(hypotheses)} ambiguous={item.get('visualResponseSetAmbiguous')}"
+        )
+      for hypothesis in hypotheses:
+        lines.append(
+          f"  - visualResponseSet: support={hypothesis.get('support')} "
+          f"pages={hypothesis.get('pages')} fill={hypothesis.get('dominantFill')} "
+          f"confidence={hypothesis.get('confidence')} align={hypothesis.get('alignmentScore')} "
+          f"size={hypothesis.get('sizeConsistency')} spacing={hypothesis.get('spacingConsistency')}"
+        )
+      regions = item.get("observedResponseRegions") or []
+      slots = item.get("responseSlotHypotheses") or []
+      pattern = item.get("questionResponsePattern") or {}
+      if regions or slots:
+        roles: dict[str, int] = {}
+        for slot in slots:
+          roles[slot.get("role")] = roles.get(slot.get("role"), 0) + 1
+        kinds: dict[str, int] = {}
+        for region in regions:
+          kinds[region.get("kind")] = kinds.get(region.get("kind"), 0) + 1
+        lines.append(
+          f"- shadowResponseRegions: regions={len(regions)} kinds={kinds} slots={len(slots)} roles={roles} "
+          f"pattern={pattern.get('pattern')} ({pattern.get('confidence')}) weakAnchors={len(item.get('weakRegionAnchors') or [])}"
+        )
+        fusion = item.get("responseEvidenceFusion") or {}
+        if fusion:
+          lines.append(
+            f"- shadowResponseFusion: agreement={fusion.get('agreement')} sources={fusion.get('sources')} "
+            f"optionCount={fusion.get('optionCountHypothesis')} optionLabels={fusion.get('optionLabelsHypothesis')} "
+            f"obsConf={fusion.get('observationConfidence')} interpConf={fusion.get('interpretationConfidence')} "
+            f"blockers={fusion.get('blockers')}"
+          )
       if result.get("ocrDifferenceEvidence"):
         lines.append(f"- ocrDifferenceEvidence: {result['ocrDifferenceEvidence']}")
       lines.append("")

@@ -1,0 +1,12 @@
+{
+  "_template": "challenge-v1.template.json — adversarial challenge set, curated manually (metrics separate from random holdout).",
+  "protocolVersion": "holdout-v1",
+  "targetDocuments": 16,
+  "pathologyTaxonomy": [
+    "circles_in_figures", "graphs_or_points", "internal_a_b_c", "roman_I_II_III",
+    "parent_child_ce", "grid", "image_options", "math_2d", "mixed_modes",
+    "two_questions_one_page", "stem_figure_near_options", "circled_numbers",
+    "answer_sheet", "lost_markers"
+  ],
+  "documents": []
+}

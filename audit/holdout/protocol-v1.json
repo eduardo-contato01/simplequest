@@ -1,0 +1,53 @@
+{
+  "protocolVersion": "holdout-v1",
+  "description": "Structural holdout protocol for Auditor V1. Humans own manifest/question-index/ground-truth; runner is read-only.",
+  "selectionSeed": 20260918,
+  "randomHoldout": {
+    "targetDocuments": 48,
+    "questionsPerDocument": 3,
+    "maxDocumentsPerFamily": 4,
+    "minFamilies": 10,
+    "minDistinctYears": 10,
+    "eras": ["2004-2009", "2010-2014", "2015-2019", "2020-2025"],
+    "sourceQuota": {
+      "text_native": 20,
+      "raster": 12,
+      "text_low_quality": 12,
+      "hybrid": 4
+    }
+  },
+  "challengeSet": {
+    "targetDocuments": 16
+  },
+  "developmentDocuments": [
+    "CMBH - 6ANO - 2017_2018 (mat).pdf",
+    "CMC - 6ANO - 2011_2012 (mat).pdf",
+    "CMBH - 6ANO - 2018_2019 (mat).pdf",
+    "CMBel - 6ANO - 2017_2018 (mat).pdf",
+    "CMT - 6ANO - 2022_2023.pdf",
+    "PAS 2 - 2019.pdf"
+  ],
+  "developmentCases": [
+    "CMBH17-Q2", "CMBH17-Q5", "CMBH17-Q19",
+    "CMC11-Q14",
+    "CMBH18-Q2",
+    "CMBel17-Q7",
+    "CMT22-Q15", "CMT22-Q30",
+    "PAS19-24", "PAS19-75", "PAS19-87", "PAS19-90"
+  ],
+  "selectionConfig": {
+    "fingerprintMode": "normalizedRelativePath",
+    "requireQuestionMarkerPatterns": false,
+    "oversampleNote": "hybrid is deliberately oversampled relative to corpus proportion; main metrics reported on the selected set and by sourceClass, not corpus-weighted.",
+    "randomSelectionMustNotUse": [
+      "responseMode", "optionCount", "optionLabels", "markerStyle", "layout",
+      "contentKind", "grid", "fraction", "circles", "questionMarkerPatterns"
+    ]
+  },
+  "ocrPolicy": {
+    "allowedInExecutionPhase": true,
+    "frozenConfiguration": true,
+    "noRetuneFromHoldoutResults": true,
+    "failuresObservedAsNotExecutable": true
+  }
+}

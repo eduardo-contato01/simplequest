@@ -34,4 +34,12 @@
 - `npm run test` passou apos o ultimo commit publicado.
 - `npm run lint` terminou com codigo 0, mas reportou avisos em arquivos gerados/declarações (`outputs/component-contracts.mjs`, `types/cloudflare-runtime.d.ts`).
 
-Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]].
+## Auditor — estagio atual (freeze V1)
+
+- Auditor V1 entrou em fase de **freeze arquitetural / preparacao para holdout**.
+- Camadas atuais: (1) admission/preflight; (2) marker/profile/page scope; (3) OCR content; (4) response structure; (5) visual marker evidence; (6) response regions/slots; (7) response evidence fusion; (8) observation adapter OCR/native.
+- Tudo continua shadow/read-only onde aplicavel; a V1 de OCR ainda **nao** produz `difference`.
+- Nenhuma hipotese de estrutura e promovida ao catalogo.
+- Proximo marco: holdout independente e medicao de precision/coverage/abstention por layout/familia.
+
+Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_PROVAS]].
