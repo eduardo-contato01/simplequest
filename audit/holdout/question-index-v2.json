@@ -91,36 +91,12 @@
           "questionId": "doc-001d3fd671db:q14",
           "questionNumber": 14,
           "pageStart": 1,
-          "pageEnd": 1
-        },
-        {
-          "questionId": "doc-001d3fd671db:q20",
-          "questionNumber": 20,
-          "pageStart": 1,
           "pageEnd": 12
         },
         {
           "questionId": "doc-001d3fd671db:q4",
           "questionNumber": 4,
           "pageStart": 12,
-          "pageEnd": 13
-        },
-        {
-          "questionId": "doc-001d3fd671db:q15",
-          "questionNumber": 15,
-          "pageStart": 13,
-          "pageEnd": 13
-        },
-        {
-          "questionId": "doc-001d3fd671db:q25",
-          "questionNumber": 25,
-          "pageStart": 13,
-          "pageEnd": 13
-        },
-        {
-          "questionId": "doc-001d3fd671db:q30",
-          "questionNumber": 30,
-          "pageStart": 13,
           "pageEnd": 13
         }
       ]
@@ -337,12 +313,6 @@
           "questionId": "doc-018fde8484ec:q20",
           "questionNumber": 20,
           "pageStart": 13,
-          "pageEnd": 13
-        },
-        {
-          "questionId": "doc-018fde8484ec:q12",
-          "questionNumber": 12,
-          "pageStart": 13,
           "pageEnd": 14
         },
         {
@@ -481,12 +451,6 @@
           "questionId": "doc-05a2dbd5dc88:q3",
           "questionNumber": 3,
           "pageStart": 3,
-          "pageEnd": 4
-        },
-        {
-          "questionId": "doc-05a2dbd5dc88:q50",
-          "questionNumber": 50,
-          "pageStart": 5,
           "pageEnd": 5
         },
         {
@@ -874,12 +838,6 @@
           "pageEnd": 4
         },
         {
-          "questionId": "doc-09ca54b4d723:q140",
-          "questionNumber": 140,
-          "pageStart": 4,
-          "pageEnd": 4
-        },
-        {
           "questionId": "doc-09ca54b4d723:q12",
           "questionNumber": 12,
           "pageStart": 5,
@@ -1078,38 +1036,8 @@
       "contentFingerprint": "0e45d0a32d5d0496aefde88df52b1cc9d73dcdf6aef7417816562c1729db76da",
       "questions": [
         {
-          "questionId": "doc-0e45d0a32d5d:q1",
-          "questionNumber": 1,
-          "pageStart": 2,
-          "pageEnd": 2
-        },
-        {
           "questionId": "doc-0e45d0a32d5d:q2",
           "questionNumber": 2,
-          "pageStart": 2,
-          "pageEnd": 2
-        },
-        {
-          "questionId": "doc-0e45d0a32d5d:q3",
-          "questionNumber": 3,
-          "pageStart": 2,
-          "pageEnd": 3
-        },
-        {
-          "questionId": "doc-0e45d0a32d5d:q4",
-          "questionNumber": 4,
-          "pageStart": 3,
-          "pageEnd": 3
-        },
-        {
-          "questionId": "doc-0e45d0a32d5d:q6",
-          "questionNumber": 6,
-          "pageStart": 4,
-          "pageEnd": 5
-        },
-        {
-          "questionId": "doc-0e45d0a32d5d:q12",
-          "questionNumber": 12,
           "pageStart": 5,
           "pageEnd": 5
         },
@@ -1118,12 +1046,6 @@
           "questionNumber": 5,
           "pageStart": 6,
           "pageEnd": 6
-        },
-        {
-          "questionId": "doc-0e45d0a32d5d:q14",
-          "questionNumber": 14,
-          "pageStart": 7,
-          "pageEnd": 7
         },
         {
           "questionId": "doc-0e45d0a32d5d:q8",
@@ -1138,9 +1060,21 @@
           "pageEnd": 8
         },
         {
+          "questionId": "doc-0e45d0a32d5d:q12",
+          "questionNumber": 12,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
           "questionId": "doc-0e45d0a32d5d:q13",
           "questionNumber": 13,
           "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-0e45d0a32d5d:q14",
+          "questionNumber": 14,
+          "pageStart": 9,
           "pageEnd": 11
         }
       ]
@@ -1606,12 +1540,6 @@
           "pageEnd": 1
         },
         {
-          "questionId": "doc-15804641564a:q8",
-          "questionNumber": 8,
-          "pageStart": 1,
-          "pageEnd": 1
-        },
-        {
           "questionId": "doc-15804641564a:q9",
           "questionNumber": 9,
           "pageStart": 1,
@@ -1627,6 +1555,12 @@
           "questionId": "doc-15804641564a:q13",
           "questionNumber": 13,
           "pageStart": 1,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-15804641564a:q8",
+          "questionNumber": 8,
+          "pageStart": 9,
           "pageEnd": 10
         },
         {
@@ -1645,30 +1579,6 @@
           "questionId": "doc-15804641564a:q15",
           "questionNumber": 15,
           "pageStart": 16,
-          "pageEnd": 17
-        },
-        {
-          "questionId": "doc-15804641564a:q20",
-          "questionNumber": 20,
-          "pageStart": 17,
-          "pageEnd": 17
-        },
-        {
-          "questionId": "doc-15804641564a:q25",
-          "questionNumber": 25,
-          "pageStart": 17,
-          "pageEnd": 17
-        },
-        {
-          "questionId": "doc-15804641564a:q35",
-          "questionNumber": 35,
-          "pageStart": 17,
-          "pageEnd": 17
-        },
-        {
-          "questionId": "doc-15804641564a:q40",
-          "questionNumber": 40,
-          "pageStart": 18,
           "pageEnd": 18
         },
         {
@@ -1693,53 +1603,11 @@
           "questionId": "doc-15804641564a:q19",
           "questionNumber": 19,
           "pageStart": 19,
-          "pageEnd": 19
-        },
-        {
-          "questionId": "doc-15804641564a:q30",
-          "questionNumber": 30,
-          "pageStart": 19,
           "pageEnd": 20
         },
         {
-          "questionId": "doc-15804641564a:q45",
-          "questionNumber": 45,
-          "pageStart": 20,
-          "pageEnd": 20
-        },
-        {
-          "questionId": "doc-15804641564a:q50",
-          "questionNumber": 50,
-          "pageStart": 20,
-          "pageEnd": 20
-        },
-        {
-          "questionId": "doc-15804641564a:q55",
-          "questionNumber": 55,
-          "pageStart": 20,
-          "pageEnd": 20
-        },
-        {
-          "questionId": "doc-15804641564a:q60",
-          "questionNumber": 60,
-          "pageStart": 20,
-          "pageEnd": 20
-        },
-        {
-          "questionId": "doc-15804641564a:q65",
-          "questionNumber": 65,
-          "pageStart": 20,
-          "pageEnd": 20
-        },
-        {
-          "questionId": "doc-15804641564a:q75",
-          "questionNumber": 75,
-          "pageStart": 20,
-          "pageEnd": 20
-        },
-        {
-          "questionId": "doc-15804641564a:q85",
-          "questionNumber": 85,
+          "questionId": "doc-15804641564a:q20",
+          "questionNumber": 20,
           "pageStart": 21,
           "pageEnd": 21
         },
@@ -1758,6 +1626,12 @@
         {
           "questionId": "doc-15804641564a:q24",
           "questionNumber": 24,
+          "pageStart": 22,
+          "pageEnd": 22
+        },
+        {
+          "questionId": "doc-15804641564a:q25",
+          "questionNumber": 25,
           "pageStart": 22,
           "pageEnd": 22
         },
@@ -1782,6 +1656,12 @@
         {
           "questionId": "doc-15804641564a:q29",
           "questionNumber": 29,
+          "pageStart": 24,
+          "pageEnd": 24
+        },
+        {
+          "questionId": "doc-15804641564a:q30",
+          "questionNumber": 30,
           "pageStart": 24,
           "pageEnd": 25
         }
@@ -2173,41 +2053,11 @@
           "questionId": "doc-2db0fa23d7c8:q10",
           "questionNumber": 10,
           "pageStart": 3,
-          "pageEnd": 3
-        },
-        {
-          "questionId": "doc-2db0fa23d7c8:q4",
-          "questionNumber": 4,
-          "pageStart": 4,
-          "pageEnd": 4
-        },
-        {
-          "questionId": "doc-2db0fa23d7c8:q12",
-          "questionNumber": 12,
-          "pageStart": 4,
-          "pageEnd": 4
-        },
-        {
-          "questionId": "doc-2db0fa23d7c8:q2",
-          "questionNumber": 2,
-          "pageStart": 4,
-          "pageEnd": 4
-        },
-        {
-          "questionId": "doc-2db0fa23d7c8:q3",
-          "questionNumber": 3,
-          "pageStart": 4,
           "pageEnd": 4
         },
         {
           "questionId": "doc-2db0fa23d7c8:q13",
           "questionNumber": 13,
-          "pageStart": 5,
-          "pageEnd": 5
-        },
-        {
-          "questionId": "doc-2db0fa23d7c8:q14",
-          "questionNumber": 14,
           "pageStart": 5,
           "pageEnd": 5
         },
@@ -2238,6 +2088,24 @@
         {
           "questionId": "doc-2db0fa23d7c8:q20",
           "questionNumber": 20,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-2db0fa23d7c8:q2",
+          "questionNumber": 2,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-2db0fa23d7c8:q3",
+          "questionNumber": 3,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-2db0fa23d7c8:q4",
+          "questionNumber": 4,
           "pageStart": 7,
           "pageEnd": 7
         }
@@ -2278,26 +2146,8 @@
           "pageEnd": 4
         },
         {
-          "questionId": "doc-381cca4d6df1:q80",
-          "questionNumber": 80,
-          "pageStart": 4,
-          "pageEnd": 4
-        },
-        {
-          "questionId": "doc-381cca4d6df1:q60",
-          "questionNumber": 60,
-          "pageStart": 4,
-          "pageEnd": 4
-        },
-        {
           "questionId": "doc-381cca4d6df1:q5",
           "questionNumber": 5,
-          "pageStart": 5,
-          "pageEnd": 5
-        },
-        {
-          "questionId": "doc-381cca4d6df1:q32",
-          "questionNumber": 32,
           "pageStart": 5,
           "pageEnd": 5
         },
@@ -2383,12 +2233,6 @@
           "questionId": "doc-381cca4d6df1:q20",
           "questionNumber": 20,
           "pageStart": 20,
-          "pageEnd": 21
-        },
-        {
-          "questionId": "doc-381cca4d6df1:q10",
-          "questionNumber": 10,
-          "pageStart": 21,
           "pageEnd": 22
         },
         {
@@ -2449,6 +2293,12 @@
           "questionId": "doc-381cca4d6df1:q31",
           "questionNumber": 31,
           "pageStart": 28,
+          "pageEnd": 29
+        },
+        {
+          "questionId": "doc-381cca4d6df1:q32",
+          "questionNumber": 32,
+          "pageStart": 30,
           "pageEnd": 30
         },
         {
@@ -2518,12 +2368,6 @@
           "pageEnd": 1
         },
         {
-          "questionId": "doc-3abeaa820030:q6",
-          "questionNumber": 6,
-          "pageStart": 1,
-          "pageEnd": 1
-        },
-        {
           "questionId": "doc-3abeaa820030:q3",
           "questionNumber": 3,
           "pageStart": 2,
@@ -2539,6 +2383,12 @@
           "questionId": "doc-3abeaa820030:q5",
           "questionNumber": 5,
           "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-3abeaa820030:q6",
+          "questionNumber": 6,
+          "pageStart": 4,
           "pageEnd": 4
         },
         {
@@ -2602,18 +2452,6 @@
           "pageEnd": 12
         },
         {
-          "questionId": "doc-3abeaa820030:q25",
-          "questionNumber": 25,
-          "pageStart": 12,
-          "pageEnd": 12
-        },
-        {
-          "questionId": "doc-3abeaa820030:q30",
-          "questionNumber": 30,
-          "pageStart": 12,
-          "pageEnd": 12
-        },
-        {
           "questionId": "doc-3abeaa820030:q21",
           "questionNumber": 21,
           "pageStart": 13,
@@ -2638,6 +2476,12 @@
           "pageEnd": 14
         },
         {
+          "questionId": "doc-3abeaa820030:q25",
+          "questionNumber": 25,
+          "pageStart": 14,
+          "pageEnd": 14
+        },
+        {
           "questionId": "doc-3abeaa820030:q26",
           "questionNumber": 26,
           "pageStart": 14,
@@ -2658,6 +2502,12 @@
         {
           "questionId": "doc-3abeaa820030:q29",
           "questionNumber": 29,
+          "pageStart": 16,
+          "pageEnd": 16
+        },
+        {
+          "questionId": "doc-3abeaa820030:q30",
+          "questionNumber": 30,
           "pageStart": 16,
           "pageEnd": 16
         },
@@ -2803,12 +2653,6 @@
           "questionId": "doc-416026f09a09:q14",
           "questionNumber": 14,
           "pageStart": 15,
-          "pageEnd": 15
-        },
-        {
-          "questionId": "doc-416026f09a09:q28",
-          "questionNumber": 28,
-          "pageStart": 15,
           "pageEnd": 16
         },
         {
@@ -2821,12 +2665,6 @@
           "questionId": "doc-416026f09a09:q18",
           "questionNumber": 18,
           "pageStart": 19,
-          "pageEnd": 19
-        },
-        {
-          "questionId": "doc-416026f09a09:q30",
-          "questionNumber": 30,
-          "pageStart": 20,
           "pageEnd": 20
         },
         {
@@ -2848,80 +2686,8 @@
       "contentFingerprint": "4a0cbad99f17f4834a2592af6acf30fcbc4eec6f24b9d51b901cf75ad15979f8",
       "questions": [
         {
-          "questionId": "doc-4a0cbad99f17:q22",
-          "questionNumber": 22,
-          "pageStart": 1,
-          "pageEnd": 1
-        },
-        {
-          "questionId": "doc-4a0cbad99f17:q1",
-          "questionNumber": 1,
-          "pageStart": 1,
-          "pageEnd": 1
-        },
-        {
-          "questionId": "doc-4a0cbad99f17:q2",
-          "questionNumber": 2,
-          "pageStart": 1,
-          "pageEnd": 1
-        },
-        {
-          "questionId": "doc-4a0cbad99f17:q3",
-          "questionNumber": 3,
-          "pageStart": 1,
-          "pageEnd": 1
-        },
-        {
-          "questionId": "doc-4a0cbad99f17:q4",
-          "questionNumber": 4,
-          "pageStart": 1,
-          "pageEnd": 1
-        },
-        {
-          "questionId": "doc-4a0cbad99f17:q5",
-          "questionNumber": 5,
-          "pageStart": 1,
-          "pageEnd": 1
-        },
-        {
-          "questionId": "doc-4a0cbad99f17:q6",
-          "questionNumber": 6,
-          "pageStart": 1,
-          "pageEnd": 1
-        },
-        {
-          "questionId": "doc-4a0cbad99f17:q8",
-          "questionNumber": 8,
-          "pageStart": 1,
-          "pageEnd": 1
-        },
-        {
-          "questionId": "doc-4a0cbad99f17:q9",
-          "questionNumber": 9,
-          "pageStart": 1,
-          "pageEnd": 1
-        },
-        {
           "questionId": "doc-4a0cbad99f17:q10",
           "questionNumber": 10,
-          "pageStart": 1,
-          "pageEnd": 1
-        },
-        {
-          "questionId": "doc-4a0cbad99f17:q11",
-          "questionNumber": 11,
-          "pageStart": 1,
-          "pageEnd": 1
-        },
-        {
-          "questionId": "doc-4a0cbad99f17:q12",
-          "questionNumber": 12,
-          "pageStart": 1,
-          "pageEnd": 2
-        },
-        {
-          "questionId": "doc-4a0cbad99f17:q15",
-          "questionNumber": 15,
           "pageStart": 2,
           "pageEnd": 2
         },
@@ -2932,33 +2698,45 @@
           "pageEnd": 2
         },
         {
-          "questionId": "doc-4a0cbad99f17:q25",
-          "questionNumber": 25,
-          "pageStart": 2,
-          "pageEnd": 2
-        },
-        {
           "questionId": "doc-4a0cbad99f17:q30",
           "questionNumber": 30,
           "pageStart": 2,
-          "pageEnd": 2
+          "pageEnd": 3
         },
         {
-          "questionId": "doc-4a0cbad99f17:q35",
-          "questionNumber": 35,
-          "pageStart": 2,
-          "pageEnd": 2
+          "questionId": "doc-4a0cbad99f17:q4",
+          "questionNumber": 4,
+          "pageStart": 4,
+          "pageEnd": 4
         },
         {
-          "questionId": "doc-4a0cbad99f17:q45",
-          "questionNumber": 45,
-          "pageStart": 3,
+          "questionId": "doc-4a0cbad99f17:q5",
+          "questionNumber": 5,
+          "pageStart": 4,
           "pageEnd": 6
         },
         {
-          "questionId": "doc-4a0cbad99f17:q7",
-          "questionNumber": 7,
+          "questionId": "doc-4a0cbad99f17:q8",
+          "questionNumber": 8,
           "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-4a0cbad99f17:q9",
+          "questionNumber": 9,
+          "pageStart": 6,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-4a0cbad99f17:q11",
+          "questionNumber": 11,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-4a0cbad99f17:q12",
+          "questionNumber": 12,
+          "pageStart": 8,
           "pageEnd": 9
         },
         {
@@ -2968,8 +2746,8 @@
           "pageEnd": 10
         },
         {
-          "questionId": "doc-4a0cbad99f17:q60",
-          "questionNumber": 60,
+          "questionId": "doc-4a0cbad99f17:q15",
+          "questionNumber": 15,
           "pageStart": 10,
           "pageEnd": 10
         },
@@ -3400,14 +3178,14 @@
           "pageEnd": 2
         },
         {
-          "questionId": "doc-6b61dd9acf63:q10",
-          "questionNumber": 10,
+          "questionId": "doc-6b61dd9acf63:q28",
+          "questionNumber": 28,
           "pageStart": 2,
           "pageEnd": 2
         },
         {
-          "questionId": "doc-6b61dd9acf63:q28",
-          "questionNumber": 28,
+          "questionId": "doc-6b61dd9acf63:q10",
+          "questionNumber": 10,
           "pageStart": 2,
           "pageEnd": 2
         },
@@ -3439,12 +3217,6 @@
           "questionId": "doc-6b61dd9acf63:q35",
           "questionNumber": 35,
           "pageStart": 3,
-          "pageEnd": 4
-        },
-        {
-          "questionId": "doc-6b61dd9acf63:q3",
-          "questionNumber": 3,
-          "pageStart": 5,
           "pageEnd": 5
         },
         {
@@ -3487,12 +3259,6 @@
           "questionId": "doc-6b61dd9acf63:q11",
           "questionNumber": 11,
           "pageStart": 6,
-          "pageEnd": 6
-        },
-        {
-          "questionId": "doc-6b61dd9acf63:q13",
-          "questionNumber": 13,
-          "pageStart": 7,
           "pageEnd": 7
         },
         {
@@ -3504,7 +3270,7 @@
         {
           "questionId": "doc-6b61dd9acf63:q2",
           "questionNumber": 2,
-          "pageStart": 7,
+          "pageStart": 8,
           "pageEnd": 9
         }
       ]
@@ -4102,30 +3868,6 @@
       "contentFingerprint": "7a801b1ddbd21bbeec1f585c22a6e9f0486a8a586ec710fb7e4aa8944eb167b2",
       "questions": [
         {
-          "questionId": "doc-7a801b1ddbd2:q25",
-          "questionNumber": 25,
-          "pageStart": 2,
-          "pageEnd": 2
-        },
-        {
-          "questionId": "doc-7a801b1ddbd2:q30",
-          "questionNumber": 30,
-          "pageStart": 2,
-          "pageEnd": 2
-        },
-        {
-          "questionId": "doc-7a801b1ddbd2:q35",
-          "questionNumber": 35,
-          "pageStart": 2,
-          "pageEnd": 2
-        },
-        {
-          "questionId": "doc-7a801b1ddbd2:q50",
-          "questionNumber": 50,
-          "pageStart": 3,
-          "pageEnd": 3
-        },
-        {
           "questionId": "doc-7a801b1ddbd2:q5",
           "questionNumber": 5,
           "pageStart": 4,
@@ -4168,18 +3910,6 @@
           "pageEnd": 5
         },
         {
-          "questionId": "doc-7a801b1ddbd2:q3",
-          "questionNumber": 3,
-          "pageStart": 5,
-          "pageEnd": 5
-        },
-        {
-          "questionId": "doc-7a801b1ddbd2:q4",
-          "questionNumber": 4,
-          "pageStart": 5,
-          "pageEnd": 5
-        },
-        {
           "questionId": "doc-7a801b1ddbd2:q13",
           "questionNumber": 13,
           "pageStart": 5,
@@ -4207,42 +3937,6 @@
           "questionId": "doc-7a801b1ddbd2:q21",
           "questionNumber": 21,
           "pageStart": 6,
-          "pageEnd": 8
-        },
-        {
-          "questionId": "doc-7a801b1ddbd2:q47",
-          "questionNumber": 47,
-          "pageStart": 8,
-          "pageEnd": 8
-        },
-        {
-          "questionId": "doc-7a801b1ddbd2:q40",
-          "questionNumber": 40,
-          "pageStart": 8,
-          "pageEnd": 8
-        },
-        {
-          "questionId": "doc-7a801b1ddbd2:q11",
-          "questionNumber": 11,
-          "pageStart": 8,
-          "pageEnd": 8
-        },
-        {
-          "questionId": "doc-7a801b1ddbd2:q43",
-          "questionNumber": 43,
-          "pageStart": 8,
-          "pageEnd": 8
-        },
-        {
-          "questionId": "doc-7a801b1ddbd2:q14",
-          "questionNumber": 14,
-          "pageStart": 8,
-          "pageEnd": 8
-        },
-        {
-          "questionId": "doc-7a801b1ddbd2:q45",
-          "questionNumber": 45,
-          "pageStart": 8,
           "pageEnd": 8
         }
       ]
@@ -5152,36 +4846,6 @@
       "contentFingerprint": "875b5be9bc6028ae80ef50a5d3db1298e09301846742299252c642b9c2828d71",
       "questions": [
         {
-          "questionId": "doc-875b5be9bc60:q4",
-          "questionNumber": 4,
-          "pageStart": 1,
-          "pageEnd": 2
-        },
-        {
-          "questionId": "doc-875b5be9bc60:q25",
-          "questionNumber": 25,
-          "pageStart": 2,
-          "pageEnd": 2
-        },
-        {
-          "questionId": "doc-875b5be9bc60:q35",
-          "questionNumber": 35,
-          "pageStart": 3,
-          "pageEnd": 3
-        },
-        {
-          "questionId": "doc-875b5be9bc60:q40",
-          "questionNumber": 40,
-          "pageStart": 3,
-          "pageEnd": 3
-        },
-        {
-          "questionId": "doc-875b5be9bc60:q45",
-          "questionNumber": 45,
-          "pageStart": 3,
-          "pageEnd": 5
-        },
-        {
           "questionId": "doc-875b5be9bc60:q1",
           "questionNumber": 1,
           "pageStart": 6,
@@ -5196,6 +4860,12 @@
         {
           "questionId": "doc-875b5be9bc60:q3",
           "questionNumber": 3,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-875b5be9bc60:q4",
+          "questionNumber": 4,
           "pageStart": 6,
           "pageEnd": 6
         },
@@ -5449,12 +5119,6 @@
           "questionId": "doc-8d679e7b8193:q55",
           "questionNumber": 55,
           "pageStart": 8,
-          "pageEnd": 10
-        },
-        {
-          "questionId": "doc-8d679e7b8193:q3",
-          "questionNumber": 3,
-          "pageStart": 10,
           "pageEnd": 11
         },
         {
@@ -5917,18 +5581,6 @@
           "questionId": "doc-9e5d2df289e0:q4",
           "questionNumber": 4,
           "pageStart": 1,
-          "pageEnd": 2
-        },
-        {
-          "questionId": "doc-9e5d2df289e0:q10",
-          "questionNumber": 10,
-          "pageStart": 2,
-          "pageEnd": 5
-        },
-        {
-          "questionId": "doc-9e5d2df289e0:q5",
-          "questionNumber": 5,
-          "pageStart": 5,
           "pageEnd": 5
         },
         {
@@ -5946,6 +5598,12 @@
         {
           "questionId": "doc-9e5d2df289e0:q9",
           "questionNumber": 9,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-9e5d2df289e0:q10",
+          "questionNumber": 10,
           "pageStart": 7,
           "pageEnd": 8
         },
@@ -6007,18 +5665,12 @@
           "questionId": "doc-a03246583c05:q3",
           "questionNumber": 3,
           "pageStart": 4,
-          "pageEnd": 4
-        },
-        {
-          "questionId": "doc-a03246583c05:q70",
-          "questionNumber": 70,
-          "pageStart": 4,
-          "pageEnd": 4
+          "pageEnd": 5
         },
         {
           "questionId": "doc-a03246583c05:q5",
           "questionNumber": 5,
-          "pageStart": 4,
+          "pageStart": 6,
           "pageEnd": 9
         },
         {
@@ -6658,50 +6310,8 @@
           "pageEnd": 3
         },
         {
-          "questionId": "doc-bd94ca1b4e47:q10",
-          "questionNumber": 10,
-          "pageStart": 3,
-          "pageEnd": 3
-        },
-        {
-          "questionId": "doc-bd94ca1b4e47:q12",
-          "questionNumber": 12,
-          "pageStart": 3,
-          "pageEnd": 3
-        },
-        {
-          "questionId": "doc-bd94ca1b4e47:q13",
-          "questionNumber": 13,
-          "pageStart": 3,
-          "pageEnd": 3
-        },
-        {
-          "questionId": "doc-bd94ca1b4e47:q14",
-          "questionNumber": 14,
-          "pageStart": 3,
-          "pageEnd": 3
-        },
-        {
-          "questionId": "doc-bd94ca1b4e47:q15",
-          "questionNumber": 15,
-          "pageStart": 3,
-          "pageEnd": 3
-        },
-        {
-          "questionId": "doc-bd94ca1b4e47:q16",
-          "questionNumber": 16,
-          "pageStart": 3,
-          "pageEnd": 3
-        },
-        {
           "questionId": "doc-bd94ca1b4e47:q17",
           "questionNumber": 17,
-          "pageStart": 3,
-          "pageEnd": 3
-        },
-        {
-          "questionId": "doc-bd94ca1b4e47:q18",
-          "questionNumber": 18,
           "pageStart": 3,
           "pageEnd": 3
         },
@@ -6718,50 +6328,8 @@
           "pageEnd": 3
         },
         {
-          "questionId": "doc-bd94ca1b4e47:q2",
-          "questionNumber": 2,
-          "pageStart": 3,
-          "pageEnd": 3
-        },
-        {
-          "questionId": "doc-bd94ca1b4e47:q24",
-          "questionNumber": 24,
-          "pageStart": 3,
-          "pageEnd": 3
-        },
-        {
-          "questionId": "doc-bd94ca1b4e47:q25",
-          "questionNumber": 25,
-          "pageStart": 3,
-          "pageEnd": 3
-        },
-        {
-          "questionId": "doc-bd94ca1b4e47:q26",
-          "questionNumber": 26,
-          "pageStart": 4,
-          "pageEnd": 4
-        },
-        {
-          "questionId": "doc-bd94ca1b4e47:q28",
-          "questionNumber": 28,
-          "pageStart": 4,
-          "pageEnd": 4
-        },
-        {
-          "questionId": "doc-bd94ca1b4e47:q29",
-          "questionNumber": 29,
-          "pageStart": 4,
-          "pageEnd": 4
-        },
-        {
           "questionId": "doc-bd94ca1b4e47:q30",
           "questionNumber": 30,
-          "pageStart": 4,
-          "pageEnd": 4
-        },
-        {
-          "questionId": "doc-bd94ca1b4e47:q43",
-          "questionNumber": 43,
           "pageStart": 4,
           "pageEnd": 5
         },
@@ -6781,24 +6349,42 @@
           "questionId": "doc-bd94ca1b4e47:q7",
           "questionNumber": 7,
           "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-bd94ca1b4e47:q10",
+          "questionNumber": 10,
+          "pageStart": 8,
           "pageEnd": 9
         },
         {
-          "questionId": "doc-bd94ca1b4e47:q11",
-          "questionNumber": 11,
-          "pageStart": 9,
-          "pageEnd": 9
+          "questionId": "doc-bd94ca1b4e47:q13",
+          "questionNumber": 13,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-bd94ca1b4e47:q14",
+          "questionNumber": 14,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-bd94ca1b4e47:q16",
+          "questionNumber": 16,
+          "pageStart": 11,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-bd94ca1b4e47:q18",
+          "questionNumber": 18,
+          "pageStart": 12,
+          "pageEnd": 13
         },
         {
           "questionId": "doc-bd94ca1b4e47:q20",
           "questionNumber": 20,
-          "pageStart": 9,
-          "pageEnd": 9
-        },
-        {
-          "questionId": "doc-bd94ca1b4e47:q21",
-          "questionNumber": 21,
-          "pageStart": 9,
+          "pageStart": 13,
           "pageEnd": 14
         }
       ]
@@ -6900,12 +6486,6 @@
         {
           "questionId": "doc-c494569a6fe7:q17",
           "questionNumber": 17,
-          "pageStart": 8,
-          "pageEnd": 8
-        },
-        {
-          "questionId": "doc-c494569a6fe7:q20",
-          "questionNumber": 20,
           "pageStart": 8,
           "pageEnd": 8
         },
@@ -8283,9 +7863,8 @@
   "indexingAnomalies": [
     {
       "documentId": "doc-001d3fd671db",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 1
+      "type": "requires_neutral_verification",
+      "note": "SEP and BARE both plausible; primary selected by neutral score"
     },
     {
       "documentId": "doc-001d3fd671db",
@@ -8307,93 +7886,9 @@
     },
     {
       "documentId": "doc-001d3fd671db",
-      "type": "duplicate_question_number",
-      "number": 5,
-      "page": 13
-    },
-    {
-      "documentId": "doc-001d3fd671db",
-      "type": "duplicate_question_number",
-      "number": 10,
-      "page": 13
-    },
-    {
-      "documentId": "doc-001d3fd671db",
-      "type": "duplicate_question_number",
-      "number": 20,
-      "page": 13
-    },
-    {
-      "documentId": "doc-001d3fd671db",
       "type": "non_monotonic_numbering",
-      "from": 20,
+      "from": 14,
       "to": 4
-    },
-    {
-      "documentId": "doc-001d3fd671db",
-      "type": "missing_question_number",
-      "number": 16
-    },
-    {
-      "documentId": "doc-001d3fd671db",
-      "type": "missing_question_number",
-      "number": 17
-    },
-    {
-      "documentId": "doc-001d3fd671db",
-      "type": "missing_question_number",
-      "number": 18
-    },
-    {
-      "documentId": "doc-001d3fd671db",
-      "type": "missing_question_number",
-      "number": 19
-    },
-    {
-      "documentId": "doc-001d3fd671db",
-      "type": "missing_question_number",
-      "number": 21
-    },
-    {
-      "documentId": "doc-001d3fd671db",
-      "type": "missing_question_number",
-      "number": 22
-    },
-    {
-      "documentId": "doc-001d3fd671db",
-      "type": "missing_question_number",
-      "number": 23
-    },
-    {
-      "documentId": "doc-001d3fd671db",
-      "type": "missing_question_number",
-      "number": 24
-    },
-    {
-      "documentId": "doc-001d3fd671db",
-      "type": "missing_question_number",
-      "number": 26
-    },
-    {
-      "documentId": "doc-001d3fd671db",
-      "type": "missing_question_number",
-      "number": 27
-    },
-    {
-      "documentId": "doc-001d3fd671db",
-      "type": "missing_question_number",
-      "number": 28
-    },
-    {
-      "documentId": "doc-001d3fd671db",
-      "type": "missing_question_number",
-      "number": 29
-    },
-    {
-      "documentId": "doc-00dc74ed4789",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 2
     },
     {
       "documentId": "doc-00dc74ed4789",
@@ -8424,26 +7919,19 @@
     },
     {
       "documentId": "doc-018fde8484ec",
-      "type": "duplicate_question_number",
-      "number": 2,
-      "page": 9
-    },
-    {
-      "documentId": "doc-018fde8484ec",
       "type": "non_monotonic_numbering",
       "from": 10,
       "to": 2
     },
     {
       "documentId": "doc-018fde8484ec",
-      "type": "non_monotonic_numbering",
-      "from": 20,
-      "to": 12
+      "type": "missing_question_number",
+      "number": 7
     },
     {
       "documentId": "doc-018fde8484ec",
       "type": "missing_question_number",
-      "number": 7
+      "number": 12
     },
     {
       "documentId": "doc-018fde8484ec",
@@ -8455,12 +7943,6 @@
       "type": "duplicate_question_number",
       "number": 1,
       "page": 11
-    },
-    {
-      "documentId": "doc-05a2dbd5dc88",
-      "type": "non_monotonic_numbering",
-      "from": 50,
-      "to": 7
     },
     {
       "documentId": "doc-05a2dbd5dc88",
@@ -8499,23 +7981,6 @@
       "number": 35
     },
     {
-      "documentId": "doc-09ca54b4d723",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 2
-    },
-    {
-      "documentId": "doc-09ca54b4d723",
-      "type": "non_monotonic_numbering",
-      "from": 140,
-      "to": 12
-    },
-    {
-      "documentId": "doc-09ca54b4d723",
-      "type": "requires_neutral_verification",
-      "note": "numeric-only sequence not clearly sequential"
-    },
-    {
       "documentId": "doc-0ccd40b73099",
       "type": "missing_question_number",
       "number": 7
@@ -8527,63 +7992,29 @@
     },
     {
       "documentId": "doc-0e45d0a32d5d",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 3
-    },
-    {
-      "documentId": "doc-0e45d0a32d5d",
-      "type": "duplicate_question_number",
-      "number": 2,
-      "page": 3
-    },
-    {
-      "documentId": "doc-0e45d0a32d5d",
-      "type": "duplicate_question_number",
-      "number": 3,
-      "page": 3
-    },
-    {
-      "documentId": "doc-0e45d0a32d5d",
-      "type": "duplicate_question_number",
-      "number": 2,
-      "page": 5
-    },
-    {
-      "documentId": "doc-0e45d0a32d5d",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 8
-    },
-    {
-      "documentId": "doc-0e45d0a32d5d",
-      "type": "duplicate_question_number",
-      "number": 12,
-      "page": 8
-    },
-    {
-      "documentId": "doc-0e45d0a32d5d",
-      "type": "duplicate_question_number",
-      "number": 14,
-      "page": 9
-    },
-    {
-      "documentId": "doc-0e45d0a32d5d",
-      "type": "non_monotonic_numbering",
-      "from": 12,
-      "to": 5
-    },
-    {
-      "documentId": "doc-0e45d0a32d5d",
-      "type": "non_monotonic_numbering",
-      "from": 14,
-      "to": 8
+      "type": "unresolved_question_start",
+      "note": "no reliable question numbering sequence"
     },
     {
       "documentId": "doc-0e45d0a32d5d",
       "type": "non_monotonic_numbering",
       "from": 41,
-      "to": 13
+      "to": 12
+    },
+    {
+      "documentId": "doc-0e45d0a32d5d",
+      "type": "missing_question_number",
+      "number": 3
+    },
+    {
+      "documentId": "doc-0e45d0a32d5d",
+      "type": "missing_question_number",
+      "number": 4
+    },
+    {
+      "documentId": "doc-0e45d0a32d5d",
+      "type": "missing_question_number",
+      "number": 6
     },
     {
       "documentId": "doc-0e45d0a32d5d",
@@ -8604,6 +8035,12 @@
       "documentId": "doc-0e45d0a32d5d",
       "type": "missing_question_number",
       "number": 11
+    },
+    {
+      "documentId": "doc-0e45d0a32d5d",
+      "type": "missing_question_number",
+      "number": 1,
+      "note": "sequence does not start at 1"
     },
     {
       "documentId": "doc-0e45d0a32d5d",
@@ -9057,9 +8494,8 @@
     },
     {
       "documentId": "doc-15804641564a",
-      "type": "duplicate_question_number",
-      "number": 6,
-      "page": 1
+      "type": "requires_neutral_verification",
+      "note": "SEP and BARE both plausible; primary selected by neutral score"
     },
     {
       "documentId": "doc-15804641564a",
@@ -9088,12 +8524,6 @@
     {
       "documentId": "doc-15804641564a",
       "type": "duplicate_question_number",
-      "number": 8,
-      "page": 9
-    },
-    {
-      "documentId": "doc-15804641564a",
-      "type": "duplicate_question_number",
       "number": 11,
       "page": 12
     },
@@ -9111,69 +8541,9 @@
     },
     {
       "documentId": "doc-15804641564a",
-      "type": "duplicate_question_number",
-      "number": 15,
-      "page": 17
-    },
-    {
-      "documentId": "doc-15804641564a",
-      "type": "duplicate_question_number",
-      "number": 5,
-      "page": 19
-    },
-    {
-      "documentId": "doc-15804641564a",
-      "type": "duplicate_question_number",
-      "number": 15,
-      "page": 19
-    },
-    {
-      "documentId": "doc-15804641564a",
-      "type": "duplicate_question_number",
-      "number": 20,
-      "page": 19
-    },
-    {
-      "documentId": "doc-15804641564a",
-      "type": "duplicate_question_number",
-      "number": 40,
-      "page": 20
-    },
-    {
-      "documentId": "doc-15804641564a",
-      "type": "duplicate_question_number",
-      "number": 20,
-      "page": 21
-    },
-    {
-      "documentId": "doc-15804641564a",
-      "type": "duplicate_question_number",
-      "number": 25,
-      "page": 22
-    },
-    {
-      "documentId": "doc-15804641564a",
-      "type": "duplicate_question_number",
-      "number": 30,
-      "page": 24
-    },
-    {
-      "documentId": "doc-15804641564a",
       "type": "non_monotonic_numbering",
       "from": 13,
-      "to": 10
-    },
-    {
-      "documentId": "doc-15804641564a",
-      "type": "non_monotonic_numbering",
-      "from": 40,
-      "to": 16
-    },
-    {
-      "documentId": "doc-15804641564a",
-      "type": "non_monotonic_numbering",
-      "from": 85,
-      "to": 21
+      "to": 8
     },
     {
       "documentId": "doc-15804641564a",
@@ -9184,11 +8554,6 @@
       "documentId": "doc-15804641564a",
       "type": "missing_question_number",
       "number": 23
-    },
-    {
-      "documentId": "doc-15804641564a",
-      "type": "requires_neutral_verification",
-      "note": "numeric-only sequence not clearly sequential"
     },
     {
       "documentId": "doc-1cc59e302f33",
@@ -9914,207 +9279,29 @@
       "documentId": "doc-2db0fa23d7c8",
       "type": "duplicate_question_number",
       "number": 1,
-      "page": 4
-    },
-    {
-      "documentId": "doc-2db0fa23d7c8",
-      "type": "duplicate_question_number",
-      "number": 5,
-      "page": 6
-    },
-    {
-      "documentId": "doc-2db0fa23d7c8",
-      "type": "duplicate_question_number",
-      "number": 3,
-      "page": 6
-    },
-    {
-      "documentId": "doc-2db0fa23d7c8",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 7
-    },
-    {
-      "documentId": "doc-2db0fa23d7c8",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 7
-    },
-    {
-      "documentId": "doc-2db0fa23d7c8",
-      "type": "duplicate_question_number",
-      "number": 2,
-      "page": 7
-    },
-    {
-      "documentId": "doc-2db0fa23d7c8",
-      "type": "duplicate_question_number",
-      "number": 3,
-      "page": 7
-    },
-    {
-      "documentId": "doc-2db0fa23d7c8",
-      "type": "duplicate_question_number",
-      "number": 4,
       "page": 7
     },
     {
       "documentId": "doc-2db0fa23d7c8",
       "type": "non_monotonic_numbering",
-      "from": 10,
-      "to": 4
-    },
-    {
-      "documentId": "doc-2db0fa23d7c8",
-      "type": "non_monotonic_numbering",
-      "from": 12,
+      "from": 20,
       "to": 2
     },
     {
       "documentId": "doc-2db0fa23d7c8",
-      "type": "missing_question_number",
-      "number": 6
-    },
-    {
-      "documentId": "doc-2db0fa23d7c8",
-      "type": "missing_question_number",
-      "number": 7
-    },
-    {
-      "documentId": "doc-2db0fa23d7c8",
-      "type": "missing_question_number",
-      "number": 11
-    },
-    {
-      "documentId": "doc-2db0fa23d7c8",
-      "type": "missing_question_number",
-      "number": 19
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "duplicate_question_number",
-      "number": 3,
-      "page": 4
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 4
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 21
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "duplicate_question_number",
-      "number": 15,
-      "page": 21
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "duplicate_question_number",
-      "number": 20,
-      "page": 21
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "duplicate_question_number",
-      "number": 5,
-      "page": 22
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "duplicate_question_number",
-      "number": 10,
-      "page": 22
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "duplicate_question_number",
-      "number": 15,
-      "page": 22
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "duplicate_question_number",
-      "number": 20,
-      "page": 22
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 26
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "duplicate_question_number",
-      "number": 5,
-      "page": 26
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "duplicate_question_number",
-      "number": 10,
-      "page": 26
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "duplicate_question_number",
-      "number": 3,
-      "page": 29
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "duplicate_question_number",
-      "number": 5,
-      "page": 29
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "duplicate_question_number",
-      "number": 10,
-      "page": 29
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "duplicate_question_number",
-      "number": 32,
-      "page": 30
+      "type": "requires_neutral_verification",
+      "note": "numeric-only sequence not clearly sequential"
     },
     {
       "documentId": "doc-381cca4d6df1",
       "type": "non_monotonic_numbering",
       "from": 90,
-      "to": 80
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "non_monotonic_numbering",
-      "from": 80,
-      "to": 60
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "non_monotonic_numbering",
-      "from": 60,
       "to": 5
     },
     {
       "documentId": "doc-381cca4d6df1",
-      "type": "non_monotonic_numbering",
-      "from": 32,
-      "to": 6
-    },
-    {
-      "documentId": "doc-381cca4d6df1",
-      "type": "non_monotonic_numbering",
-      "from": 20,
-      "to": 10
+      "type": "missing_question_number",
+      "number": 10
     },
     {
       "documentId": "doc-381cca4d6df1",
@@ -10130,139 +9317,7 @@
       "documentId": "doc-3abeaa820030",
       "type": "duplicate_question_number",
       "number": 1,
-      "page": 2
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 4
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 6,
-      "page": 4
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 5
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 6
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 8
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 3,
-      "page": 8
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 8
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 2,
-      "page": 8
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 9
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 10
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 5,
-      "page": 12
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 15,
-      "page": 12
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 20,
-      "page": 12
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 14
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 25,
-      "page": 14
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 1,
       "page": 16
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 30,
-      "page": 16
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 5,
-      "page": 16
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 5,
-      "page": 19
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 20
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "non_monotonic_numbering",
-      "from": 6,
-      "to": 3
-    },
-    {
-      "documentId": "doc-3abeaa820030",
-      "type": "non_monotonic_numbering",
-      "from": 30,
-      "to": 21
     },
     {
       "documentId": "doc-3abeaa820030",
@@ -10286,36 +9341,6 @@
     },
     {
       "documentId": "doc-416026f09a09",
-      "type": "duplicate_question_number",
-      "number": 14,
-      "page": 15
-    },
-    {
-      "documentId": "doc-416026f09a09",
-      "type": "duplicate_question_number",
-      "number": 14,
-      "page": 15
-    },
-    {
-      "documentId": "doc-416026f09a09",
-      "type": "duplicate_question_number",
-      "number": 14,
-      "page": 15
-    },
-    {
-      "documentId": "doc-416026f09a09",
-      "type": "non_monotonic_numbering",
-      "from": 28,
-      "to": 16
-    },
-    {
-      "documentId": "doc-416026f09a09",
-      "type": "non_monotonic_numbering",
-      "from": 30,
-      "to": 19
-    },
-    {
-      "documentId": "doc-416026f09a09",
       "type": "missing_question_number",
       "number": 13
     },
@@ -10330,63 +9355,9 @@
       "number": 17
     },
     {
-      "documentId": "doc-416026f09a09",
+      "documentId": "doc-4a0cbad99f17",
       "type": "requires_neutral_verification",
-      "note": "numeric-only sequence not clearly sequential"
-    },
-    {
-      "documentId": "doc-4a0cbad99f17",
-      "type": "duplicate_question_number",
-      "number": 10,
-      "page": 2
-    },
-    {
-      "documentId": "doc-4a0cbad99f17",
-      "type": "duplicate_question_number",
-      "number": 4,
-      "page": 4
-    },
-    {
-      "documentId": "doc-4a0cbad99f17",
-      "type": "duplicate_question_number",
-      "number": 5,
-      "page": 4
-    },
-    {
-      "documentId": "doc-4a0cbad99f17",
-      "type": "duplicate_question_number",
-      "number": 2,
-      "page": 5
-    },
-    {
-      "documentId": "doc-4a0cbad99f17",
-      "type": "duplicate_question_number",
-      "number": 3,
-      "page": 5
-    },
-    {
-      "documentId": "doc-4a0cbad99f17",
-      "type": "duplicate_question_number",
-      "number": 4,
-      "page": 5
-    },
-    {
-      "documentId": "doc-4a0cbad99f17",
-      "type": "duplicate_question_number",
-      "number": 15,
-      "page": 5
-    },
-    {
-      "documentId": "doc-4a0cbad99f17",
-      "type": "duplicate_question_number",
-      "number": 8,
-      "page": 6
-    },
-    {
-      "documentId": "doc-4a0cbad99f17",
-      "type": "duplicate_question_number",
-      "number": 9,
-      "page": 6
+      "note": "SEP and BARE both plausible; primary selected by neutral score"
     },
     {
       "documentId": "doc-4a0cbad99f17",
@@ -10396,45 +9367,19 @@
     },
     {
       "documentId": "doc-4a0cbad99f17",
-      "type": "duplicate_question_number",
-      "number": 11,
-      "page": 7
-    },
-    {
-      "documentId": "doc-4a0cbad99f17",
-      "type": "duplicate_question_number",
-      "number": 12,
-      "page": 8
-    },
-    {
-      "documentId": "doc-4a0cbad99f17",
-      "type": "duplicate_question_number",
-      "number": 15,
-      "page": 10
-    },
-    {
-      "documentId": "doc-4a0cbad99f17",
-      "type": "duplicate_question_number",
-      "number": 10,
-      "page": 14
-    },
-    {
-      "documentId": "doc-4a0cbad99f17",
       "type": "non_monotonic_numbering",
-      "from": 22,
-      "to": 1
+      "from": 30,
+      "to": 4
     },
     {
       "documentId": "doc-4a0cbad99f17",
-      "type": "non_monotonic_numbering",
-      "from": 45,
-      "to": 7
+      "type": "missing_question_number",
+      "number": 14
     },
     {
       "documentId": "doc-4a0cbad99f17",
-      "type": "non_monotonic_numbering",
-      "from": 60,
-      "to": 16
+      "type": "missing_question_number",
+      "number": 18
     },
     {
       "documentId": "doc-4a0cbad99f17",
@@ -10517,12 +9462,6 @@
       "documentId": "doc-6b61dd9acf63",
       "type": "duplicate_question_number",
       "number": 10,
-      "page": 2
-    },
-    {
-      "documentId": "doc-6b61dd9acf63",
-      "type": "duplicate_question_number",
-      "number": 10,
       "page": 3
     },
     {
@@ -10545,30 +9484,6 @@
     },
     {
       "documentId": "doc-6b61dd9acf63",
-      "type": "duplicate_question_number",
-      "number": 2,
-      "page": 7
-    },
-    {
-      "documentId": "doc-6b61dd9acf63",
-      "type": "duplicate_question_number",
-      "number": 2,
-      "page": 7
-    },
-    {
-      "documentId": "doc-6b61dd9acf63",
-      "type": "duplicate_question_number",
-      "number": 2,
-      "page": 7
-    },
-    {
-      "documentId": "doc-6b61dd9acf63",
-      "type": "duplicate_question_number",
-      "number": 2,
-      "page": 8
-    },
-    {
-      "documentId": "doc-6b61dd9acf63",
       "type": "non_monotonic_numbering",
       "from": 24,
       "to": 1
@@ -10577,13 +9492,13 @@
       "documentId": "doc-6b61dd9acf63",
       "type": "non_monotonic_numbering",
       "from": 28,
-      "to": 15
+      "to": 10
     },
     {
       "documentId": "doc-6b61dd9acf63",
       "type": "non_monotonic_numbering",
       "from": 35,
-      "to": 3
+      "to": 4
     },
     {
       "documentId": "doc-6b61dd9acf63",
@@ -10612,12 +9527,6 @@
       "documentId": "doc-6cb109cd9276",
       "type": "duplicate_question_number",
       "number": 2,
-      "page": 3
-    },
-    {
-      "documentId": "doc-6cb109cd9276",
-      "type": "duplicate_question_number",
-      "number": 11,
       "page": 3
     },
     {
@@ -10666,12 +9575,6 @@
       "documentId": "doc-6cb109cd9276",
       "type": "duplicate_question_number",
       "number": 8,
-      "page": 9
-    },
-    {
-      "documentId": "doc-6cb109cd9276",
-      "type": "duplicate_question_number",
-      "number": 16,
       "page": 9
     },
     {
@@ -10727,12 +9630,6 @@
       "type": "duplicate_question_number",
       "number": 19,
       "page": 18
-    },
-    {
-      "documentId": "doc-6cb109cd9276",
-      "type": "duplicate_question_number",
-      "number": 7,
-      "page": 20
     },
     {
       "documentId": "doc-7765d0b79b38",
@@ -10858,32 +9755,13 @@
     },
     {
       "documentId": "doc-7a801b1ddbd2",
+      "type": "requires_neutral_verification",
+      "note": "SEP and BARE both plausible; primary selected by neutral score"
+    },
+    {
+      "documentId": "doc-7a801b1ddbd2",
       "type": "unresolved_question_start",
       "note": "no reliable question numbering sequence"
-    },
-    {
-      "documentId": "doc-7a801b1ddbd2",
-      "type": "duplicate_question_number",
-      "number": 1,
-      "page": 5
-    },
-    {
-      "documentId": "doc-7a801b1ddbd2",
-      "type": "duplicate_question_number",
-      "number": 21,
-      "page": 8
-    },
-    {
-      "documentId": "doc-7a801b1ddbd2",
-      "type": "duplicate_question_number",
-      "number": 12,
-      "page": 8
-    },
-    {
-      "documentId": "doc-7a801b1ddbd2",
-      "type": "non_monotonic_numbering",
-      "from": 50,
-      "to": 5
     },
     {
       "documentId": "doc-7a801b1ddbd2",
@@ -10899,96 +9777,38 @@
     },
     {
       "documentId": "doc-7a801b1ddbd2",
-      "type": "non_monotonic_numbering",
-      "from": 47,
-      "to": 40
-    },
-    {
-      "documentId": "doc-7a801b1ddbd2",
-      "type": "non_monotonic_numbering",
-      "from": 40,
-      "to": 11
-    },
-    {
-      "documentId": "doc-7a801b1ddbd2",
-      "type": "non_monotonic_numbering",
-      "from": 43,
-      "to": 14
+      "type": "missing_question_number",
+      "number": 6
     },
     {
       "documentId": "doc-7a801b1ddbd2",
       "type": "missing_question_number",
-      "number": 26
+      "number": 9
     },
     {
       "documentId": "doc-7a801b1ddbd2",
       "type": "missing_question_number",
-      "number": 27
+      "number": 11
     },
     {
       "documentId": "doc-7a801b1ddbd2",
       "type": "missing_question_number",
-      "number": 28
+      "number": 14
     },
     {
       "documentId": "doc-7a801b1ddbd2",
       "type": "missing_question_number",
-      "number": 29
+      "number": 15
     },
     {
       "documentId": "doc-7a801b1ddbd2",
       "type": "missing_question_number",
-      "number": 31
+      "number": 16
     },
     {
       "documentId": "doc-7a801b1ddbd2",
       "type": "missing_question_number",
-      "number": 32
-    },
-    {
-      "documentId": "doc-7a801b1ddbd2",
-      "type": "missing_question_number",
-      "number": 33
-    },
-    {
-      "documentId": "doc-7a801b1ddbd2",
-      "type": "missing_question_number",
-      "number": 34
-    },
-    {
-      "documentId": "doc-7a801b1ddbd2",
-      "type": "missing_question_number",
-      "number": 36
-    },
-    {
-      "documentId": "doc-7a801b1ddbd2",
-      "type": "missing_question_number",
-      "number": 37
-    },
-    {
-      "documentId": "doc-7a801b1ddbd2",
-      "type": "missing_question_number",
-      "number": 38
-    },
-    {
-      "documentId": "doc-7a801b1ddbd2",
-      "type": "missing_question_number",
-      "number": 39
-    },
-    {
-      "documentId": "doc-7a801b1ddbd2",
-      "type": "missing_question_number",
-      "number": 41
-    },
-    {
-      "documentId": "doc-7a801b1ddbd2",
-      "type": "missing_question_number",
-      "number": 42
-    },
-    {
-      "documentId": "doc-7a801b1ddbd2",
-      "type": "missing_question_number",
-      "number": 44
+      "number": 18
     },
     {
       "documentId": "doc-7a801b1ddbd2",
@@ -11370,12 +10190,6 @@
     },
     {
       "documentId": "doc-8084259f61f8",
-      "type": "duplicate_question_number",
-      "number": 4,
-      "page": 7
-    },
-    {
-      "documentId": "doc-8084259f61f8",
       "type": "missing_question_number",
       "number": 7
     },
@@ -11386,27 +10200,8 @@
     },
     {
       "documentId": "doc-875b5be9bc60",
-      "type": "duplicate_question_number",
-      "number": 45,
-      "page": 4
-    },
-    {
-      "documentId": "doc-875b5be9bc60",
-      "type": "duplicate_question_number",
-      "number": 40,
-      "page": 5
-    },
-    {
-      "documentId": "doc-875b5be9bc60",
-      "type": "duplicate_question_number",
-      "number": 4,
-      "page": 6
-    },
-    {
-      "documentId": "doc-875b5be9bc60",
-      "type": "non_monotonic_numbering",
-      "from": 45,
-      "to": 1
+      "type": "requires_neutral_verification",
+      "note": "SEP and BARE both plausible; primary selected by neutral score"
     },
     {
       "documentId": "doc-875b5be9bc60",
@@ -11419,12 +10214,6 @@
       "type": "non_monotonic_numbering",
       "from": 47,
       "to": 12
-    },
-    {
-      "documentId": "doc-875b5be9bc60",
-      "type": "missing_question_number",
-      "number": 1,
-      "note": "sequence does not start at 1"
     },
     {
       "documentId": "doc-875b5be9bc60",
@@ -11448,12 +10237,6 @@
       "type": "non_monotonic_numbering",
       "from": 100,
       "to": 1
-    },
-    {
-      "documentId": "doc-8d679e7b8193",
-      "type": "non_monotonic_numbering",
-      "from": 55,
-      "to": 3
     },
     {
       "documentId": "doc-8d679e7b8193",
@@ -11725,21 +10508,8 @@
     },
     {
       "documentId": "doc-9e5d2df289e0",
-      "type": "duplicate_question_number",
-      "number": 10,
-      "page": 7
-    },
-    {
-      "documentId": "doc-9e5d2df289e0",
-      "type": "duplicate_question_number",
-      "number": 2,
-      "page": 11
-    },
-    {
-      "documentId": "doc-9e5d2df289e0",
-      "type": "non_monotonic_numbering",
-      "from": 10,
-      "to": 5
+      "type": "missing_question_number",
+      "number": 5
     },
     {
       "documentId": "doc-9e5d2df289e0",
@@ -11752,27 +10522,14 @@
       "number": 17
     },
     {
+      "documentId": "doc-9e5d2df289e0",
+      "type": "requires_neutral_verification",
+      "note": "numeric-only sequence not clearly sequential"
+    },
+    {
       "documentId": "doc-a03246583c05",
       "type": "unresolved_question_start",
       "note": "no reliable question numbering sequence"
-    },
-    {
-      "documentId": "doc-a03246583c05",
-      "type": "duplicate_question_number",
-      "number": 5,
-      "page": 6
-    },
-    {
-      "documentId": "doc-a03246583c05",
-      "type": "duplicate_question_number",
-      "number": 10,
-      "page": 18
-    },
-    {
-      "documentId": "doc-a03246583c05",
-      "type": "non_monotonic_numbering",
-      "from": 70,
-      "to": 5
     },
     {
       "documentId": "doc-a03246583c05",
@@ -12275,87 +11032,13 @@
     },
     {
       "documentId": "doc-bd94ca1b4e47",
-      "type": "duplicate_question_number",
-      "number": 10,
-      "page": 8
+      "type": "requires_neutral_verification",
+      "note": "SEP and BARE both plausible; primary selected by neutral score"
     },
     {
       "documentId": "doc-bd94ca1b4e47",
-      "type": "duplicate_question_number",
-      "number": 12,
-      "page": 8
-    },
-    {
-      "documentId": "doc-bd94ca1b4e47",
-      "type": "duplicate_question_number",
-      "number": 10,
-      "page": 9
-    },
-    {
-      "documentId": "doc-bd94ca1b4e47",
-      "type": "duplicate_question_number",
-      "number": 12,
-      "page": 9
-    },
-    {
-      "documentId": "doc-bd94ca1b4e47",
-      "type": "duplicate_question_number",
-      "number": 13,
-      "page": 9
-    },
-    {
-      "documentId": "doc-bd94ca1b4e47",
-      "type": "duplicate_question_number",
-      "number": 14,
-      "page": 9
-    },
-    {
-      "documentId": "doc-bd94ca1b4e47",
-      "type": "duplicate_question_number",
-      "number": 15,
-      "page": 9
-    },
-    {
-      "documentId": "doc-bd94ca1b4e47",
-      "type": "duplicate_question_number",
-      "number": 16,
-      "page": 9
-    },
-    {
-      "documentId": "doc-bd94ca1b4e47",
-      "type": "duplicate_question_number",
-      "number": 17,
-      "page": 9
-    },
-    {
-      "documentId": "doc-bd94ca1b4e47",
-      "type": "duplicate_question_number",
-      "number": 18,
-      "page": 9
-    },
-    {
-      "documentId": "doc-bd94ca1b4e47",
-      "type": "duplicate_question_number",
-      "number": 19,
-      "page": 9
-    },
-    {
-      "documentId": "doc-bd94ca1b4e47",
-      "type": "duplicate_question_number",
-      "number": 13,
-      "page": 10
-    },
-    {
-      "documentId": "doc-bd94ca1b4e47",
-      "type": "duplicate_question_number",
-      "number": 14,
-      "page": 10
-    },
-    {
-      "documentId": "doc-bd94ca1b4e47",
-      "type": "duplicate_question_number",
-      "number": 15,
-      "page": 10
+      "type": "unresolved_question_start",
+      "note": "no reliable question numbering sequence"
     },
     {
       "documentId": "doc-bd94ca1b4e47",
@@ -12372,38 +11055,19 @@
     {
       "documentId": "doc-bd94ca1b4e47",
       "type": "duplicate_question_number",
-      "number": 16,
-      "page": 11
-    },
-    {
-      "documentId": "doc-bd94ca1b4e47",
-      "type": "duplicate_question_number",
       "number": 17,
       "page": 11
     },
     {
       "documentId": "doc-bd94ca1b4e47",
-      "type": "duplicate_question_number",
-      "number": 18,
-      "page": 12
-    },
-    {
-      "documentId": "doc-bd94ca1b4e47",
-      "type": "duplicate_question_number",
-      "number": 20,
-      "page": 13
-    },
-    {
-      "documentId": "doc-bd94ca1b4e47",
       "type": "non_monotonic_numbering",
-      "from": 22,
-      "to": 2
-    },
-    {
-      "documentId": "doc-bd94ca1b4e47",
-      "type": "non_monotonic_numbering",
-      "from": 43,
+      "from": 30,
       "to": 4
+    },
+    {
+      "documentId": "doc-bd94ca1b4e47",
+      "type": "missing_question_number",
+      "number": 2
     },
     {
       "documentId": "doc-bd94ca1b4e47",
@@ -12427,20 +11091,23 @@
     },
     {
       "documentId": "doc-bd94ca1b4e47",
+      "type": "missing_question_number",
+      "number": 11
+    },
+    {
+      "documentId": "doc-bd94ca1b4e47",
+      "type": "missing_question_number",
+      "number": 12
+    },
+    {
+      "documentId": "doc-bd94ca1b4e47",
+      "type": "missing_question_number",
+      "number": 15
+    },
+    {
+      "documentId": "doc-bd94ca1b4e47",
       "type": "requires_neutral_verification",
       "note": "numeric-only sequence not clearly sequential"
-    },
-    {
-      "documentId": "doc-c494569a6fe7",
-      "type": "duplicate_question_number",
-      "number": 5,
-      "page": 3
-    },
-    {
-      "documentId": "doc-c494569a6fe7",
-      "type": "non_monotonic_numbering",
-      "from": 20,
-      "to": 18
     },
     {
       "documentId": "doc-c494569a6fe7",

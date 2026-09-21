@@ -31,6 +31,9 @@ ROMAN_RE = re.compile(r"^\s*\(?\s*(I{1,3}|IV|V)\s*[).\-–—]?\s+\S")
 MAX_QUESTION_NUMBER = 150
 REPEATED_PAGE_THRESHOLD = 3
 MIN_KEYWORD_MARKERS = 3
+MIN_GRAMMAR_CANDIDATES = 3
+MIN_MONOTONIC_RATIO = 0.6
+MAX_DUPLICATE_RATIO = 0.34
 
 
 def _line_key(text: str) -> str:
@@ -64,9 +67,11 @@ def _candidate(line: dict[str, Any], number: int, kind: str) -> dict[str, Any]:
   }
 
 
-def detect_markers(lines: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def _extract_families(lines: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
   keyword: list[dict[str, Any]] = []
-  numeric: list[dict[str, Any]] = []
+  separator: list[dict[str, Any]] = []
+  bare: list[dict[str, Any]] = []
+  repeated = _repeated_line_keys(lines)
   for line in lines:
     text = str(line.get("text") or "").strip()
     if not text:
@@ -88,29 +93,69 @@ def detect_markers(lines: list[dict[str, Any]]) -> list[dict[str, Any]]:
       # Reject decimal continuations like "9.6 million".
       if rest[:1] == "." and rest[1:2].isdigit():
         continue
-      if 1 <= number <= MAX_QUESTION_NUMBER:
-        numeric.append(_candidate(line, number, "numeric"))
+      if 1 <= number <= MAX_QUESTION_NUMBER and _line_key(text) not in repeated:
+        separator.append(_candidate(line, number, "numeric"))
       continue
     bare_match = BARE_NUMERIC_RE.match(text)
     if bare_match:
       number = int(bare_match.group(1))
-      if 1 <= number <= MAX_QUESTION_NUMBER:
-        numeric.append(_candidate(line, number, "numeric"))
-  repeated = _repeated_line_keys(lines)
-  # Suppress repeated numeric headers/footers (page numbers differ, so digits
-  # are collapsed for the repetition key). Explicit keyword markers are kept.
-  numeric = [marker for marker in numeric if _line_key(marker["text"]) not in repeated]
+      if 1 <= number <= MAX_QUESTION_NUMBER and _line_key(text) not in repeated:
+        bare.append(_candidate(line, number, "numeric"))
+  return keyword, separator, bare
+
+
+def evaluate_numbering_grammar(candidates: list[dict[str, Any]]) -> dict[str, Any]:
+  if not candidates:
+    return {"count": 0, "unique": 0, "monotonicRatio": None, "duplicateRatio": None, "plausible": False, "score": 0.0}
+  ordered = sorted(candidates, key=lambda item: (item["page"], item["top"]))
+  numbers = [marker["number"] for marker in ordered]
+  unique = len(set(numbers))
+  pairs = len(numbers) - 1
+  increasing = sum(1 for index in range(pairs) if numbers[index] < numbers[index + 1])
+  monotonic_ratio = (increasing / pairs) if pairs > 0 else 1.0
+  duplicate_ratio = 1 - unique / len(numbers)
+  plausible = (
+    len(numbers) >= MIN_GRAMMAR_CANDIDATES
+    and monotonic_ratio >= MIN_MONOTONIC_RATIO
+    and duplicate_ratio <= MAX_DUPLICATE_RATIO
+  )
+  score = unique + monotonic_ratio * 10 - duplicate_ratio * 5
+  return {
+    "count": len(numbers),
+    "unique": unique,
+    "monotonicRatio": round(monotonic_ratio, 4),
+    "duplicateRatio": round(duplicate_ratio, 4),
+    "plausible": plausible,
+    "score": round(score, 4),
+  }
+
+
+def select_primary_markers(lines: list[dict[str, Any]]) -> dict[str, Any]:
+  keyword, separator, bare = _extract_families(lines)
   keyword_numbers = {marker["number"] for marker in keyword}
-  # Choose the grammar that actually forms the main-question sequence. A handful
-  # of keyword hits must not mask a large numeric-item sequence, and numeric list
-  # noise must not override a real keyword grammar.
   if len(keyword_numbers) >= MIN_KEYWORD_MARKERS:
-    return keyword
-  if looks_like_question_sequence(numeric):
-    return numeric
+    return {"markers": keyword, "primary": "KEYWORD", "ambiguous": False}
+  sep_eval = evaluate_numbering_grammar(separator)
+  bare_eval = evaluate_numbering_grammar(bare)
+  if sep_eval["plausible"] and not bare_eval["plausible"]:
+    return {"markers": separator, "primary": "SEP", "ambiguous": False}
+  if bare_eval["plausible"] and not sep_eval["plausible"]:
+    return {"markers": bare, "primary": "BARE", "ambiguous": False}
+  if sep_eval["plausible"] and bare_eval["plausible"]:
+    # Case C: both families form a plausible sequence. Following the neutral
+    # hierarchy (SEP before BARE), keep the separator family and record the
+    # overlap for later review instead of merging both (merging is what produced
+    # the false starts) or forcing a score-based winner.
+    return {"markers": separator, "primary": "MIXED", "ambiguous": True}
+  if separator or bare:
+    return {"markers": separator + bare, "primary": "FALLBACK", "ambiguous": False}
   if keyword:
-    return keyword
-  return numeric
+    return {"markers": keyword, "primary": "KEYWORD", "ambiguous": False}
+  return {"markers": [], "primary": "NONE", "ambiguous": False}
+
+
+def detect_markers(lines: list[dict[str, Any]]) -> list[dict[str, Any]]:
+  return select_primary_markers(lines)["markers"]
 
 
 def build_sequence(markers: list[dict[str, Any]], page_count: int, page_heights: dict[int, float]) -> dict[str, Any]:
@@ -255,7 +300,8 @@ def index_document(document: dict[str, Any], allow_ocr: bool = True) -> dict[str
   method = "native"
   pages, heights, page_count = _native_pages(path)
   all_lines = [line for page_lines in pages.values() for line in page_lines]
-  markers = detect_markers(all_lines)
+  selection = select_primary_markers(all_lines)
+  markers = selection["markers"]
   anomalies: list[dict[str, Any]] = []
   lowered = path.lower()
   if "gabarito" in lowered or "\\gab_" in lowered or "/gab_" in lowered:
@@ -265,7 +311,10 @@ def index_document(document: dict[str, Any], allow_ocr: bool = True) -> dict[str
       method = "ocr"
       pages, heights, page_count = _ocr_pages(path, document_id)
       all_lines = [line for page_lines in pages.values() for line in page_lines]
-      markers = detect_markers(all_lines)
+      selection = select_primary_markers(all_lines)
+      markers = selection["markers"]
+  if selection["ambiguous"]:
+    anomalies.append({"type": "requires_neutral_verification", "note": "SEP and BARE both plausible; primary selected by neutral score"})
   if not looks_like_question_sequence(markers):
     anomalies.append({"type": "unresolved_question_start", "note": "no reliable question numbering sequence"})
   sequence = build_sequence(markers, page_count, heights)

@@ -160,6 +160,61 @@ def test_mixed_keyword_numeric_prefers_sequence() -> None:
   check("mixed.numeric", [m["number"] for m in markers] == [10, 11, 12, 13, 14], markers)
 
 
+def test_sep_wins_noisy_bare() -> None:
+  lines = [
+    line("01. Primeira questao", 1, 100), line("25 pessoas participaram do evento", 1, 120),
+    line("02. Segunda questao", 1, 200), line("70 alunos foram aprovados", 1, 220),
+    line("03. Terceira questao", 1, 300), line("04. Quarta questao", 1, 400),
+  ]
+  selection = indexer.select_primary_markers(lines)
+  check("sepbare.primary", selection["primary"] == "SEP", selection)
+  check("sepbare.numbers", [m["number"] for m in selection["markers"]] == [1, 2, 3, 4], selection)
+
+
+def test_bare_high_numbers_kept() -> None:
+  lines = [line("98 Texto", 1, 100), line("99 Texto", 1, 200), line("100 Texto", 1, 300), line("101 Texto", 1, 400)]
+  selection = indexer.select_primary_markers(lines)
+  check("barehigh.numbers", [m["number"] for m in selection["markers"]] == [98, 99, 100, 101], selection)
+
+
+def test_sep_gaps_plausible() -> None:
+  lines = [line("01. Primeira", 1, 100), line("03. Terceira", 1, 200), line("05. Quinta", 1, 300), line("06. Sexta", 1, 400)]
+  selection = indexer.select_primary_markers(lines)
+  check("sepgap.primary", selection["primary"] == "SEP", selection)
+  check("sepgap.numbers", [m["number"] for m in selection["markers"]] == [1, 3, 5, 6], selection)
+
+
+def test_mixed_ambiguous_review() -> None:
+  lines = [
+    line("01. Primeira questao", 1, 100), line("50 texto interno", 1, 110),
+    line("02. Segunda questao", 1, 200), line("51 texto interno", 1, 210),
+    line("03. Terceira questao", 1, 300), line("52 texto interno", 1, 310),
+  ]
+  selection = indexer.select_primary_markers(lines)
+  check("ambiguous.flag", selection["ambiguous"] is True, selection)
+  check("ambiguous.primary", selection["primary"] == "MIXED", selection)
+  check("ambiguous.numbers", [m["number"] for m in selection["markers"]] == [1, 2, 3], selection)
+
+
+def test_multi_grammar_no_extra_unit() -> None:
+  lines = [
+    line("01. Primeira", 1, 100), line("02. Segunda", 1, 200), line("03. Terceira", 1, 300), line("04. Quarta", 1, 400),
+    line("3 texto duplicado", 1, 310), line("4 texto duplicado", 1, 410), line("5 texto extra", 1, 500),
+  ]
+  selection = indexer.select_primary_markers(lines)
+  numbers = [m["number"] for m in selection["markers"]]
+  check("multigrammar.one_family", numbers == [1, 2, 3, 4], selection)
+
+
+def test_internal_bare_after_sep_excluded() -> None:
+  lines = [
+    line("01. Primeira", 1, 100), line("02. Segunda", 1, 200), line("03. Terceira", 1, 300),
+    line("140 alunos participaram da avaliacao", 1, 350),
+  ]
+  selection = indexer.select_primary_markers(lines)
+  check("internalbare.numbers", [m["number"] for m in selection["markers"]] == [1, 2, 3], selection)
+
+
 def main() -> None:
   test_distinct_pages()
   test_two_same_page()
@@ -181,6 +236,12 @@ def main() -> None:
   test_dotted_ocr_and_item_ocr()
   test_uppercase_item_anywhere()
   test_mixed_keyword_numeric_prefers_sequence()
+  test_sep_wins_noisy_bare()
+  test_bare_high_numbers_kept()
+  test_sep_gaps_plausible()
+  test_mixed_ambiguous_review()
+  test_multi_grammar_no_extra_unit()
+  test_internal_bare_after_sep_excluded()
   if FAILURES:
     print(f"\n{len(FAILURES)} checks falharam: {FAILURES}")
     raise SystemExit(1)
