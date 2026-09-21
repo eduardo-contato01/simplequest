@@ -1,0 +1,19 @@
+{
+  "artifactType": "holdout-v2-question-selection-provenance",
+  "protocolVersion": "holdout-v2",
+  "sourceManifest": "audit/holdout/manifest-v2.json",
+  "sourceManifestFileSha256": "1853f77f5231e2830e6f29f83b48b7a10db579f220b6591012407feaebcd1283",
+  "questionIndex": "audit/holdout/question-index-v2.json",
+  "questionIndexFileSha256": "0aafa72592c73597d087b8b57150be11f0c8a866ff133a03b6deeea01171afb7",
+  "questionSelectionGitCommit": "17ab1c3d4d37dad3cec911b4c883ee37a4d27b53",
+  "selectionSeed": 20260918,
+  "questionsPerDocument": 3,
+  "documents": 48,
+  "selectedQuestionsTotal": 144,
+  "selectionMethod": "one random question per document-order tertile",
+  "questionSelectionHash": "9b4dea5f4954bd1e8241b4424669e4aef9e2f8dbe36df7e52b2579fddf99ab5e",
+  "selectionCodeSha256": "a13f6cc0f53228c6464caf5fab8b8abcf9481f95d5c87b3844a8415164733e27",
+  "outputManifest": "audit/holdout/manifest-v2-b2.json",
+  "outputManifestFileSha256": "f1b7d5b24d68b57bc4d954ef92d62c93c18bd59dbdc07ce48a1270a8d4ab2275",
+  "deterministic": true
+}
