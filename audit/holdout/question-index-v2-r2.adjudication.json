@@ -1,0 +1,2447 @@
+{
+  "artifactType": "holdout-v2-neutral-boundary-adjudication",
+  "adjudicationVersion": "neutral-human-r2",
+  "protocolVersion": "holdout-v2",
+  "basis": "question number, document order, start page and sequence runs only",
+  "responseStructureObserved": false,
+  "reviewArtifacts": {
+    "r2NeutralReview": {
+      "path": "outputs/audit/holdout/r2-neutral-review.json",
+      "sha256": "087ffc7dfbabd2e1c382d8769e86c9d7ad288f30e7449f48b883a3b8a4f5a30e"
+    },
+    "r2VestNeutralReview": {
+      "path": "outputs/audit/holdout/r2-vest-neutral-review.json",
+      "sha256": "141ec2e03c72ea51afaf2dbda66e62b3e7b732f04b20766d00637e9a90576a1f"
+    }
+  },
+  "documents": [
+    {
+      "documentId": "doc-00dc74ed4789",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMRJ\\6º Ano\\CMRJ - 6ANO - 2015_2016 (mat).pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                4,
+                5,
+                6
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                7,
+                8
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                9,
+                10,
+                11
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                12,
+                13,
+                14
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                15,
+                16,
+                17,
+                18
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                19,
+                20
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-018fde8484ec",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMR\\6º Ano\\CMR - 6ANO - 2024_2025.pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                1
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                2,
+                3
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                4,
+                5,
+                6
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                7
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                8,
+                9
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                10
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                11
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                12,
+                13
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                14
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                15
+              ]
+            },
+            {
+              "pageStart": 12,
+              "questionNumbers": [
+                16,
+                17,
+                18
+              ]
+            },
+            {
+              "pageStart": 13,
+              "questionNumbers": [
+                19,
+                20
+              ]
+            },
+            {
+              "pageStart": 15,
+              "questionNumbers": [
+                21,
+                22,
+                23,
+                24,
+                25,
+                26
+              ]
+            },
+            {
+              "pageStart": 16,
+              "questionNumbers": [
+                27,
+                28,
+                29
+              ]
+            },
+            {
+              "pageStart": 17,
+              "questionNumbers": [
+                30,
+                31,
+                32
+              ]
+            },
+            {
+              "pageStart": 18,
+              "questionNumbers": [
+                33,
+                34
+              ]
+            },
+            {
+              "pageStart": 19,
+              "questionNumbers": [
+                35,
+                36
+              ]
+            },
+            {
+              "pageStart": 20,
+              "questionNumbers": [
+                37,
+                38,
+                39,
+                40
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-05a2dbd5dc88",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMR\\6º Ano\\CMR - 6ANO - 2025_2026.pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                1
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                5
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                6,
+                7
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                8,
+                9
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                10,
+                11
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                12,
+                13
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                14,
+                15
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                16,
+                17
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                18,
+                19
+              ]
+            },
+            {
+              "pageStart": 12,
+              "questionNumbers": [
+                20
+              ]
+            },
+            {
+              "pageStart": 14,
+              "questionNumbers": [
+                21,
+                22,
+                23,
+                24
+              ]
+            },
+            {
+              "pageStart": 15,
+              "questionNumbers": [
+                25,
+                26,
+                27
+              ]
+            },
+            {
+              "pageStart": 16,
+              "questionNumbers": [
+                28,
+                29,
+                30,
+                31
+              ]
+            },
+            {
+              "pageStart": 18,
+              "questionNumbers": [
+                32,
+                33,
+                34,
+                35
+              ]
+            },
+            {
+              "pageStart": 19,
+              "questionNumbers": [
+                36
+              ]
+            },
+            {
+              "pageStart": 20,
+              "questionNumbers": [
+                37,
+                38,
+                39,
+                40
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0ccd40b73099",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMB\\6º Ano\\CMB - 6ANO - 2018_2019 (port).pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                4,
+                5
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                6
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                7
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                8,
+                9
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                10,
+                11,
+                12
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                13,
+                14,
+                15,
+                16
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                17
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                18
+              ]
+            },
+            {
+              "pageStart": 12,
+              "questionNumbers": [
+                19,
+                20
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3abeaa820030",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMF\\6º Ano\\CMF - 6ANO - 2023_2024.pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 1,
+              "questionNumbers": [
+                1,
+                2
+              ]
+            },
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                3
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                4,
+                5
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                6,
+                7
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                8
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                9
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                10,
+                11
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                12,
+                13
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                14,
+                15,
+                16
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                17,
+                18,
+                19
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                20
+              ]
+            },
+            {
+              "pageStart": 13,
+              "questionNumbers": [
+                21,
+                22,
+                23
+              ]
+            },
+            {
+              "pageStart": 14,
+              "questionNumbers": [
+                24,
+                25,
+                26
+              ]
+            },
+            {
+              "pageStart": 15,
+              "questionNumbers": [
+                27,
+                28
+              ]
+            },
+            {
+              "pageStart": 16,
+              "questionNumbers": [
+                29,
+                30
+              ]
+            },
+            {
+              "pageStart": 17,
+              "questionNumbers": [
+                31,
+                32,
+                33
+              ]
+            },
+            {
+              "pageStart": 18,
+              "questionNumbers": [
+                34,
+                35,
+                36
+              ]
+            },
+            {
+              "pageStart": 19,
+              "questionNumbers": [
+                37,
+                38
+              ]
+            },
+            {
+              "pageStart": 20,
+              "questionNumbers": [
+                39,
+                40
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-416026f09a09",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMS\\6º Ano\\CMS - 6ANO - 2018_2019 (mat).pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                1
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                2
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                3
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                4
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                5
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                6
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                7
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                8
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                9
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                10
+              ]
+            },
+            {
+              "pageStart": 12,
+              "questionNumbers": [
+                11
+              ]
+            },
+            {
+              "pageStart": 13,
+              "questionNumbers": [
+                12
+              ]
+            },
+            {
+              "pageStart": 14,
+              "questionNumbers": [
+                13
+              ]
+            },
+            {
+              "pageStart": 15,
+              "questionNumbers": [
+                14
+              ]
+            },
+            {
+              "pageStart": 16,
+              "questionNumbers": [
+                15
+              ]
+            },
+            {
+              "pageStart": 17,
+              "questionNumbers": [
+                16
+              ]
+            },
+            {
+              "pageStart": 18,
+              "questionNumbers": [
+                17
+              ]
+            },
+            {
+              "pageStart": 19,
+              "questionNumbers": [
+                18
+              ]
+            },
+            {
+              "pageStart": 20,
+              "questionNumbers": [
+                19
+              ]
+            },
+            {
+              "pageStart": 21,
+              "questionNumbers": [
+                20
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-530c1f0284e3",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\COLÉGIO SÓLIDO\\9º Ano\\SÓLIDO - 9ANO - 2021_2022 - PROVA DE BOLSAS.pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                10,
+                11
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                12,
+                13
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                14
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                15,
+                16,
+                17
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                18
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                19,
+                20
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                21,
+                22
+              ]
+            },
+            {
+              "pageStart": 12,
+              "questionNumbers": [
+                23,
+                24,
+                25
+              ]
+            },
+            {
+              "pageStart": 13,
+              "questionNumbers": [
+                26
+              ]
+            },
+            {
+              "pageStart": 14,
+              "questionNumbers": [
+                27,
+                28
+              ]
+            },
+            {
+              "pageStart": 15,
+              "questionNumbers": [
+                29,
+                30
+              ]
+            },
+            {
+              "pageStart": 16,
+              "questionNumbers": [
+                31,
+                32,
+                33,
+                34,
+                35
+              ]
+            },
+            {
+              "pageStart": 17,
+              "questionNumbers": [
+                36,
+                37
+              ]
+            },
+            {
+              "pageStart": 18,
+              "questionNumbers": [
+                38,
+                39,
+                40
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5b13e6839c6f",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMR\\6º Ano\\CMR - 6ANO - 2017_2018 (port).pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                1,
+                2
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                3,
+                4
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                5,
+                6,
+                7
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                8,
+                9,
+                10
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                11,
+                12,
+                13
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                14
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                15
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                16,
+                17,
+                18
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                19,
+                20
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7bc527197266",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\VESTIBULAR_UNB\\2008_1º - VESTIBULAR_2_DIA_CADERNO_AQUARIUS.pdf",
+      "source": "r2-vest-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                32,
+                33,
+                34,
+                35,
+                36
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102
+              ]
+            },
+            {
+              "pageStart": 12,
+              "questionNumbers": [
+                103,
+                104,
+                105,
+                106
+              ]
+            },
+            {
+              "pageStart": 13,
+              "questionNumbers": [
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114
+              ]
+            },
+            {
+              "pageStart": 14,
+              "questionNumbers": [
+                115,
+                116,
+                117,
+                118,
+                119,
+                120
+              ]
+            },
+            {
+              "pageStart": 15,
+              "questionNumbers": [
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128
+              ]
+            },
+            {
+              "pageStart": 16,
+              "questionNumbers": [
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135
+              ]
+            },
+            {
+              "pageStart": 17,
+              "questionNumbers": [
+                136,
+                137,
+                138,
+                139,
+                140,
+                141
+              ]
+            },
+            {
+              "pageStart": 18,
+              "questionNumbers": [
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7edc53bcc309",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMR\\6º Ano\\CMR - 6ANO - 2018_2019 (mat).pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 1,
+              "questionNumbers": [
+                1,
+                2
+              ]
+            },
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                3,
+                4
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                5,
+                6,
+                7
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                8,
+                9,
+                10
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                11,
+                12
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                13,
+                14
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                15,
+                16
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                17,
+                18
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                19,
+                20
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8084259f61f8",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSM\\6º Ano\\CMSM - 6ANO - 2006_2007 (mat).pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 1,
+              "questionNumbers": [
+                1,
+                2
+              ]
+            },
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                3,
+                4
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                5,
+                6
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                7,
+                8
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                9,
+                10
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                11,
+                12
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                13,
+                14
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                15,
+                16
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                17,
+                18
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                19,
+                20
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8d679e7b8193",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\VESTIBULAR_UNB\\VEST UnB 2009.pdf",
+      "source": "r2-vest-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                21,
+                22
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81
+              ]
+            },
+            {
+              "pageStart": 12,
+              "questionNumbers": [
+                82,
+                83,
+                84,
+                85,
+                86
+              ]
+            },
+            {
+              "pageStart": 13,
+              "questionNumbers": [
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94
+              ]
+            },
+            {
+              "pageStart": 14,
+              "questionNumbers": [
+                95,
+                96,
+                97,
+                98,
+                99,
+                100
+              ]
+            },
+            {
+              "pageStart": 15,
+              "questionNumbers": [
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111
+              ]
+            },
+            {
+              "pageStart": 16,
+              "questionNumbers": [
+                112,
+                113,
+                114,
+                115,
+                116,
+                117,
+                118,
+                119,
+                120
+              ]
+            },
+            {
+              "pageStart": 17,
+              "questionNumbers": [
+                121,
+                122,
+                123,
+                124,
+                125,
+                126,
+                127,
+                128
+              ]
+            },
+            {
+              "pageStart": 18,
+              "questionNumbers": [
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139
+              ]
+            },
+            {
+              "pageStart": 19,
+              "questionNumbers": [
+                140,
+                141,
+                142,
+                143,
+                144,
+                145,
+                146,
+                147,
+                148,
+                149,
+                150
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-98decdcd5e66",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSM\\6º Ano\\CMSM - 6ANO - 2006_2007 (port).pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                9,
+                10,
+                11
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                12,
+                13,
+                14,
+                15
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                16,
+                17,
+                18
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                19,
+                20
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9a32009f9e63",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMS\\6º Ano\\CMS - 6ANO - 2021_2022.pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                1
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                2
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                3
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                4
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                5
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                6
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                7
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                8
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                9
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                10
+              ]
+            },
+            {
+              "pageStart": 12,
+              "questionNumbers": [
+                11
+              ]
+            },
+            {
+              "pageStart": 13,
+              "questionNumbers": [
+                12
+              ]
+            },
+            {
+              "pageStart": 15,
+              "questionNumbers": [
+                13
+              ]
+            },
+            {
+              "pageStart": 16,
+              "questionNumbers": [
+                14,
+                15,
+                16
+              ]
+            },
+            {
+              "pageStart": 18,
+              "questionNumbers": [
+                17,
+                18
+              ]
+            },
+            {
+              "pageStart": 19,
+              "questionNumbers": [
+                19
+              ]
+            },
+            {
+              "pageStart": 20,
+              "questionNumbers": [
+                20
+              ]
+            },
+            {
+              "pageStart": 21,
+              "questionNumbers": [
+                21
+              ]
+            },
+            {
+              "pageStart": 22,
+              "questionNumbers": [
+                22,
+                23
+              ]
+            },
+            {
+              "pageStart": 23,
+              "questionNumbers": [
+                24
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c494569a6fe7",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMJF\\1º Ano\\CMJF - 1ANO - 2015_2016 (mat) (Prova 1).pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                1,
+                2
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                3,
+                4,
+                5
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                6,
+                7,
+                8
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                9,
+                10
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                11,
+                12
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                13,
+                14
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                15,
+                16,
+                17
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                18,
+                19
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                20
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-dbb0fb93b539",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMRJ\\1º Ano\\CMRJ - 1ANO - 2019_2020 (mat).pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                1,
+                2
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                3,
+                4
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                5,
+                6,
+                7
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                8
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                9,
+                10
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                11,
+                12,
+                13
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                14,
+                15
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                16,
+                17
+              ]
+            },
+            {
+              "pageStart": 12,
+              "questionNumbers": [
+                18,
+                19
+              ]
+            },
+            {
+              "pageStart": 13,
+              "questionNumbers": [
+                20
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e57019a7359b",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMB\\6º Ano\\Outros\\CMB 6º ANO 2023-2024 DIGITALIZADA.pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                1
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                2,
+                3
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                4,
+                5,
+                6
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                7,
+                8
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                9
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                10,
+                11
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                12,
+                13
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                14,
+                15
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                16,
+                17
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                18,
+                19
+              ]
+            },
+            {
+              "pageStart": 12,
+              "questionNumbers": [
+                20
+              ]
+            },
+            {
+              "pageStart": 15,
+              "questionNumbers": [
+                21,
+                22,
+                23
+              ]
+            },
+            {
+              "pageStart": 16,
+              "questionNumbers": [
+                24,
+                25
+              ]
+            },
+            {
+              "pageStart": 17,
+              "questionNumbers": [
+                26,
+                27
+              ]
+            },
+            {
+              "pageStart": 18,
+              "questionNumbers": [
+                28,
+                29
+              ]
+            },
+            {
+              "pageStart": 19,
+              "questionNumbers": [
+                30
+              ]
+            },
+            {
+              "pageStart": 20,
+              "questionNumbers": [
+                31,
+                32
+              ]
+            },
+            {
+              "pageStart": 21,
+              "questionNumbers": [
+                33,
+                34
+              ]
+            },
+            {
+              "pageStart": 22,
+              "questionNumbers": [
+                35
+              ]
+            },
+            {
+              "pageStart": 23,
+              "questionNumbers": [
+                36,
+                37
+              ]
+            },
+            {
+              "pageStart": 24,
+              "questionNumbers": [
+                38
+              ]
+            },
+            {
+              "pageStart": 25,
+              "questionNumbers": [
+                39,
+                40
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f24160c86424",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMDPII\\6º Ano\\CMDPII - 6ANO - 2024_2025.pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                4,
+                5,
+                6
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                7,
+                8,
+                9
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                10,
+                11,
+                12
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                13,
+                14,
+                15
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                16,
+                17
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                18,
+                19,
+                20
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                21,
+                22,
+                23
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                24,
+                25
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                26,
+                27,
+                28
+              ]
+            },
+            {
+              "pageStart": 12,
+              "questionNumbers": [
+                29
+              ]
+            },
+            {
+              "pageStart": 13,
+              "questionNumbers": [
+                30
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fb15983ac5ea",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMC\\1º Ano\\CMC - 1ANO - 2022_2023.pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                4,
+                5
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                6
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                7
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                8,
+                9
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                10,
+                11
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                12,
+                13
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                14
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                15
+              ]
+            },
+            {
+              "pageStart": 13,
+              "questionNumbers": [
+                16,
+                17
+              ]
+            },
+            {
+              "pageStart": 14,
+              "questionNumbers": [
+                18,
+                19,
+                20
+              ]
+            },
+            {
+              "pageStart": 16,
+              "questionNumbers": [
+                21,
+                22,
+                23
+              ]
+            },
+            {
+              "pageStart": 17,
+              "questionNumbers": [
+                24,
+                25
+              ]
+            },
+            {
+              "pageStart": 18,
+              "questionNumbers": [
+                26,
+                27,
+                28
+              ]
+            },
+            {
+              "pageStart": 19,
+              "questionNumbers": [
+                29,
+                30
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fc9052837176",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBel\\1º Ano\\CMBel - 1ANO - 2021_2022.pdf",
+      "source": "r2-neutral-review",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                1,
+                2
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                3,
+                4
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                5,
+                6
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                7
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                8
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                9
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                10
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                11
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                12
+              ]
+            },
+            {
+              "pageStart": 13,
+              "questionNumbers": [
+                13
+              ]
+            },
+            {
+              "pageStart": 14,
+              "questionNumbers": [
+                14,
+                15
+              ]
+            },
+            {
+              "pageStart": 15,
+              "questionNumbers": [
+                16,
+                17
+              ]
+            },
+            {
+              "pageStart": 16,
+              "questionNumbers": [
+                18,
+                19
+              ]
+            },
+            {
+              "pageStart": 18,
+              "questionNumbers": [
+                20
+              ]
+            },
+            {
+              "pageStart": 19,
+              "questionNumbers": [
+                21,
+                22
+              ]
+            },
+            {
+              "pageStart": 21,
+              "questionNumbers": [
+                23,
+                24
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

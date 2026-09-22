@@ -115,4 +115,13 @@ Verificar fidelidade entre provas originais e o cátalogo renderizado no SimpleQ
 - O redesenho genérico do indexador (ordem de leitura → colunas por geometria → runs sequenciais → evidência de continuação → resets legítimos → ambiguidade ⇒ revisão humana neutra) fica para **depois** do holdout; a análise futura deve usar a ordem documental e nunca `sorted(set(questionNumbers))`.
 - **Acervo:** o corpus operacional passou a ter **1156 PDFs** (adicionados CMT 2026 6º ano e CMT 2026 1ª série, ambos post-freeze). O Holdout V2 continua congelado sobre o snapshot anterior de **1154**; os dois PDFs novos só entram em uma futura atualização de inventário/experimento posterior. O inventário, protocolo e candidate pool do V2 **não** foram regenerados.
 
+## Holdout V2 — revisão R2 (sampling frame final)
+
+- A R2 fecha o sampling frame de questões do Holdout V2 depois de uma auditoria neutra que revisou 20 documentos suspeitos (jitter de leitura, colunas, lacunas e números falsos). A Phase A (documentos) permanece congelada: os mesmos 48 `documentId`/`contentFingerprint` da R1.
+- Composição: 8 documentos preservados da adjudicação R1; 20 documentos não suspeitos preservados sem alteração; 18 documentos corrigidos pela revisão neutra R2; 2 VESTIBULAR_UNB (2008, 2009) corrigidos por reconstrução geométrica de duas colunas (ambos `Q1-Q150`).
+- A adjudicação consolidada versionada é `audit/holdout/question-index-v2-r2.adjudication.json` (20 documentos; sem conteúdo de resposta/alternativa/estrutura). Os reviews neutros ficam fora do Git em `outputs/audit/holdout/r2-neutral-review.json` e `r2-vest-neutral-review.json`.
+- Artefatos R2 versionados: `question-index-v2-r2.json` (+ provenance) e `manifest-v2-b2-r2.json` (+ provenance). A seleção continua usando a função congelada `select_questions()` com a seed `20260918`. Scaffold de Ground Truth R2 e relatório de migração ficam em `outputs/audit/holdout/`.
+- Casos notáveis confirmados na adjudicação: `doc-98decdcd5e66` (CMSM 2006 Português) é `Q1-Q20` e **não** possui Q38 (o 38 era número de linha do texto); `doc-9a32009f9e63` (CMS 2021) é `Q1-Q24` contínuo com Q3 na p.4, Q13 na p.15 e Q18 na p.18.
+- Migração do Ground Truth preserva as correções humanas de `pages` (ex.: Q9 CMF 2023, Q24 Sólido 2021, Q16 CMR 2017, Q12/Q18 CMPA 2020) e nunca depende apenas do `questionNumber` quando há ambiguidade de ocorrência. O Lote 09 **não** foi incorporado.
+
 Ver tambem: [[IMPORTADOR]], [[ROADMAP]], [[ESTRUTURAS_DE_RESPOSTA]].
