@@ -1,0 +1,1428 @@
+{
+  "artifactType": "holdout-v2-neutral-boundary-adjudication",
+  "adjudicationVersion": "neutral-human-r1",
+  "protocolVersion": "holdout-v2",
+  "basis": "question number, document order, start page and sequence runs only",
+  "responseStructureObserved": false,
+  "documents": [
+    {
+      "documentId": "doc-2db0fa23d7c8",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 1,
+              "questionNumbers": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                5,
+                6,
+                7
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                8,
+                9,
+                10
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                11,
+                12
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                13,
+                14,
+                15
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                16,
+                17,
+                18,
+                19
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                20
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-145e6ae80517",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 1,
+              "questionNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            },
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                80,
+                81,
+                82,
+                83,
+                84
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97
+              ]
+            },
+            {
+              "pageStart": 12,
+              "questionNumbers": [
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104
+              ]
+            },
+            {
+              "pageStart": 13,
+              "questionNumbers": [
+                105,
+                106,
+                107,
+                108,
+                109,
+                110,
+                111,
+                112,
+                113,
+                114
+              ]
+            },
+            {
+              "pageStart": 14,
+              "questionNumbers": [
+                115,
+                116,
+                117,
+                118,
+                119,
+                120,
+                121
+              ]
+            },
+            {
+              "pageStart": 15,
+              "questionNumbers": [
+                122,
+                123,
+                124,
+                125,
+                126
+              ]
+            },
+            {
+              "pageStart": 16,
+              "questionNumbers": [
+                127,
+                128,
+                129,
+                130,
+                131,
+                132
+              ]
+            },
+            {
+              "pageStart": 17,
+              "questionNumbers": [
+                133,
+                134,
+                135,
+                136,
+                137,
+                138,
+                139,
+                140,
+                141,
+                142,
+                143,
+                144,
+                145
+              ]
+            },
+            {
+              "pageStart": 18,
+              "questionNumbers": [
+                146,
+                147,
+                148,
+                149,
+                150
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1cc59e302f33",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "runOrdinal": 2,
+          "spans": [
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "runOrdinal": 3,
+          "spans": [
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "runOrdinal": 4,
+          "spans": [
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                21,
+                22,
+                23
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                34,
+                35,
+                36,
+                37,
+                38
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                47,
+                48,
+                49,
+                50,
+                51
+              ]
+            },
+            {
+              "pageStart": 12,
+              "questionNumbers": [
+                52,
+                53,
+                54,
+                55,
+                56
+              ]
+            },
+            {
+              "pageStart": 13,
+              "questionNumbers": [
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63
+              ]
+            },
+            {
+              "pageStart": 14,
+              "questionNumbers": [
+                64,
+                65,
+                66,
+                67
+              ]
+            },
+            {
+              "pageStart": 15,
+              "questionNumbers": [
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76
+              ]
+            },
+            {
+              "pageStart": 16,
+              "questionNumbers": [
+                77,
+                78,
+                79,
+                80,
+                81,
+                82
+              ]
+            },
+            {
+              "pageStart": 17,
+              "questionNumbers": [
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89
+              ]
+            },
+            {
+              "pageStart": 18,
+              "questionNumbers": [
+                90,
+                91,
+                92
+              ]
+            },
+            {
+              "pageStart": 19,
+              "questionNumbers": [
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101
+              ]
+            },
+            {
+              "pageStart": 20,
+              "questionNumbers": [
+                102,
+                103,
+                104,
+                105,
+                106
+              ]
+            },
+            {
+              "pageStart": 21,
+              "questionNumbers": [
+                107,
+                108,
+                109,
+                110,
+                111
+              ]
+            },
+            {
+              "pageStart": 22,
+              "questionNumbers": [
+                112,
+                113,
+                114,
+                115
+              ]
+            },
+            {
+              "pageStart": 23,
+              "questionNumbers": [
+                116,
+                117,
+                118
+              ]
+            },
+            {
+              "pageStart": 24,
+              "questionNumbers": [
+                119,
+                120
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-381cca4d6df1",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 1,
+              "questionNumbers": [
+                1
+              ]
+            },
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                2
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                3
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                4
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                5
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                6
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                7
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                8
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                9
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                10
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                11
+              ]
+            },
+            {
+              "pageStart": 12,
+              "questionNumbers": [
+                12
+              ]
+            },
+            {
+              "pageStart": 13,
+              "questionNumbers": [
+                13
+              ]
+            },
+            {
+              "pageStart": 14,
+              "questionNumbers": [
+                14
+              ]
+            },
+            {
+              "pageStart": 15,
+              "questionNumbers": [
+                15
+              ]
+            },
+            {
+              "pageStart": 16,
+              "questionNumbers": [
+                16
+              ]
+            },
+            {
+              "pageStart": 17,
+              "questionNumbers": [
+                17
+              ]
+            },
+            {
+              "pageStart": 18,
+              "questionNumbers": [
+                18
+              ]
+            },
+            {
+              "pageStart": 19,
+              "questionNumbers": [
+                19
+              ]
+            },
+            {
+              "pageStart": 20,
+              "questionNumbers": [
+                20
+              ]
+            },
+            {
+              "pageStart": 23,
+              "questionNumbers": [
+                21,
+                22
+              ]
+            },
+            {
+              "pageStart": 24,
+              "questionNumbers": [
+                23,
+                24
+              ]
+            },
+            {
+              "pageStart": 25,
+              "questionNumbers": [
+                25,
+                26
+              ]
+            },
+            {
+              "pageStart": 26,
+              "questionNumbers": [
+                27
+              ]
+            },
+            {
+              "pageStart": 27,
+              "questionNumbers": [
+                28,
+                29
+              ]
+            },
+            {
+              "pageStart": 28,
+              "questionNumbers": [
+                30,
+                31
+              ]
+            },
+            {
+              "pageStart": 30,
+              "questionNumbers": [
+                32
+              ]
+            },
+            {
+              "pageStart": 31,
+              "questionNumbers": [
+                33,
+                34
+              ]
+            },
+            {
+              "pageStart": 32,
+              "questionNumbers": [
+                35,
+                36
+              ]
+            },
+            {
+              "pageStart": 33,
+              "questionNumbers": [
+                37
+              ]
+            },
+            {
+              "pageStart": 34,
+              "questionNumbers": [
+                38
+              ]
+            },
+            {
+              "pageStart": 35,
+              "questionNumbers": [
+                39
+              ]
+            },
+            {
+              "pageStart": 36,
+              "questionNumbers": [
+                40
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6b61dd9acf63",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                1,
+                2
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                8,
+                9,
+                10,
+                11,
+                12
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                13,
+                14
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7765d0b79b38",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 1,
+              "questionNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                9,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "runOrdinal": 2,
+          "spans": [
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "runOrdinal": 3,
+          "spans": [
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "runOrdinal": 4,
+          "spans": [
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                48,
+                49,
+                50
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                63,
+                64,
+                65,
+                66,
+                67,
+                68
+              ]
+            },
+            {
+              "pageStart": 12,
+              "questionNumbers": [
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87
+              ]
+            },
+            {
+              "pageStart": 13,
+              "questionNumbers": [
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96
+              ]
+            },
+            {
+              "pageStart": 14,
+              "questionNumbers": [
+                97,
+                98,
+                99,
+                100,
+                101,
+                102
+              ]
+            },
+            {
+              "pageStart": 15,
+              "questionNumbers": [
+                103,
+                104,
+                105,
+                106,
+                107
+              ]
+            },
+            {
+              "pageStart": 16,
+              "questionNumbers": [
+                108,
+                109,
+                110
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9e5d2df289e0",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 2,
+              "questionNumbers": [
+                1
+              ]
+            },
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                2,
+                3
+              ]
+            },
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                4
+              ]
+            },
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                5,
+                6
+              ]
+            },
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                7,
+                8
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                9,
+                10
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                11,
+                12
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                13,
+                14
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                15,
+                16
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                17,
+                18
+              ]
+            },
+            {
+              "pageStart": 12,
+              "questionNumbers": [
+                19,
+                20
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a32f45208796",
+      "runs": [
+        {
+          "runOrdinal": 1,
+          "spans": [
+            {
+              "pageStart": 3,
+              "questionNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "runOrdinal": 2,
+          "spans": [
+            {
+              "pageStart": 4,
+              "questionNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "runOrdinal": 3,
+          "spans": [
+            {
+              "pageStart": 5,
+              "questionNumbers": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "runOrdinal": 4,
+          "spans": [
+            {
+              "pageStart": 6,
+              "questionNumbers": [
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20
+              ]
+            },
+            {
+              "pageStart": 7,
+              "questionNumbers": [
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30
+              ]
+            },
+            {
+              "pageStart": 8,
+              "questionNumbers": [
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38
+              ]
+            },
+            {
+              "pageStart": 9,
+              "questionNumbers": [
+                39,
+                40,
+                41
+              ]
+            },
+            {
+              "pageStart": 10,
+              "questionNumbers": [
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49
+              ]
+            },
+            {
+              "pageStart": 11,
+              "questionNumbers": [
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59
+              ]
+            },
+            {
+              "pageStart": 12,
+              "questionNumbers": [
+                60,
+                61,
+                62,
+                63,
+                64
+              ]
+            },
+            {
+              "pageStart": 13,
+              "questionNumbers": [
+                65,
+                66,
+                67,
+                68
+              ]
+            },
+            {
+              "pageStart": 14,
+              "questionNumbers": [
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75
+              ]
+            },
+            {
+              "pageStart": 15,
+              "questionNumbers": [
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83
+              ]
+            },
+            {
+              "pageStart": 16,
+              "questionNumbers": [
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91
+              ]
+            },
+            {
+              "pageStart": 17,
+              "questionNumbers": [
+                92,
+                93,
+                94,
+                95,
+                96,
+                97
+              ]
+            },
+            {
+              "pageStart": 18,
+              "questionNumbers": [
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105
+              ]
+            },
+            {
+              "pageStart": 19,
+              "questionNumbers": [
+                106
+              ]
+            },
+            {
+              "pageStart": 20,
+              "questionNumbers": [
+                107,
+                108,
+                109,
+                110
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
