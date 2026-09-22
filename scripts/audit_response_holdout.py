@@ -10,6 +10,7 @@ from typing import Any
 
 import audit_holdout_schema as schema
 import audit_observations as observations
+import audit_question_boundary as question_boundary
 import audit_response_fusion as fusion
 import audit_response_regions as regions
 import audit_response_structure as response_structure
@@ -240,12 +241,15 @@ def _not_executable_classification() -> dict[str, Any]:
 
 
 def evaluate_manifest(manifest: dict[str, Any], ground_truth: dict[str, Any], protocol: dict[str, Any],
-                      base_dir: str | Path | None = None, fingerprint_fn: Any = None) -> dict[str, Any]:
+                      base_dir: str | Path | None = None, fingerprint_fn: Any = None,
+                      question_index: dict[str, Any] | None = None) -> dict[str, Any]:
   base = Path(base_dir) if base_dir else ROOT
+  index_by_document = question_boundary.index_document_by_id(question_index)
   gt_by_key = {(item["documentId"], item["questionId"]): item for item in ground_truth["questions"]}
   records: list[dict[str, Any]] = []
   for document in manifest["documents"]:
     document_error = verify_document_fingerprint(document, fingerprint_fn)
+    index_document = index_by_document.get(document["documentId"])
     for question in document.get("selectedQuestions", []):
       key = (document["documentId"], question["questionId"])
       gt = gt_by_key.get(key)
@@ -260,7 +264,7 @@ def evaluate_manifest(manifest: dict[str, Any], ground_truth: dict[str, Any], pr
                                gt_meta={}, executable=False, observation_error="missing_ground_truth"))
         continue
       try:
-        fusion_result = _run_question(document, question, gt, protocol, base)
+        fusion_result = _run_question(document, question, gt, protocol, base, index_document)
         executable = fusion_result is not None
         observation_error = None if executable else "observation_unavailable"
       except Exception:
@@ -272,7 +276,7 @@ def evaluate_manifest(manifest: dict[str, Any], ground_truth: dict[str, Any], pr
   metrics = compute_metrics(records)
   documents = document_summary(records)
   slices = compute_slices(records)
-  hashes = schema.manifest_hashes(manifest, None, ground_truth)
+  hashes = schema.manifest_hashes(manifest, question_index, ground_truth)
   report = {
     "protocolVersion": protocol["protocolVersion"],
     "generatedAt": _dt.datetime.now(_dt.timezone.utc).isoformat(),
@@ -319,20 +323,34 @@ def _record(document: dict[str, Any], question: dict[str, Any], gt: dict[str, An
   }
 
 
+def resolve_index_entries(index_document: dict[str, Any] | None, question_id: str) -> tuple[dict[str, Any] | None, dict[str, Any] | None]:
+  questions = question_boundary.index_questions(index_document)
+  current = question_boundary.find_question(questions, question_id)
+  if current is None:
+    return None, None
+  return current, question_boundary.next_question_in_order(questions, question_id)
+
+
 def _run_question(document: dict[str, Any], question: dict[str, Any], gt: dict[str, Any], protocol: dict[str, Any],
-                  base: Path) -> dict[str, Any] | None:
-  pages = gt.get("pages") or list(range(int(question["pageStart"]), int(question["pageEnd"]) + 1))
+                  base: Path, index_document: dict[str, Any] | None = None) -> dict[str, Any] | None:
+  index_current, index_next = resolve_index_entries(index_document, question["questionId"])
+  # The frozen question index is authoritative for document order and pages.
+  # Ground-truth pages are only a fallback when the index entry is unavailable.
+  if index_current is not None:
+    pages = question_boundary.expected_pages(index_current)
+  else:
+    pages = gt.get("pages") or list(range(int(question["pageStart"]), int(question["pageEnd"]) + 1))
   source = document["sourceType"]
   canonical = document["canonicalPath"]
   if source == "text_native" or (canonical and Path(canonical).exists() and source != "raster"):
     bundle = observations.from_native_pdf(canonical, pages)
-    if not bundle.words:
-      return _run_ocr(document, question, pages, base)
-    return _run_from_bundle(bundle, pages, None)
-  return _run_ocr(document, question, pages, base)
+    if bundle.words:
+      return _run_with_boundary(bundle, question, index_current, index_next, pages, None)
+  return _run_ocr(document, question, index_current, index_next, pages, base)
 
 
-def _run_ocr(document: dict[str, Any], question: dict[str, Any], pages: list[int], base: Path) -> dict[str, Any] | None:
+def _run_ocr(document: dict[str, Any], question: dict[str, Any], index_current: dict[str, Any] | None,
+             index_next: dict[str, Any] | None, pages: list[int], base: Path) -> dict[str, Any] | None:
   payload_path = base / "outputs" / "audit" / "ocr" / document["documentId"] / "tesseract" / "ocr.json"
   if not payload_path.exists():
     return None
@@ -340,10 +358,23 @@ def _run_ocr(document: dict[str, Any], question: dict[str, Any], pages: list[int
   bundle = observations.from_ocr_payload(payload, pages)
   if not bundle.lines:
     return None
-  return _run_from_bundle(bundle, pages, payload_path.parent / "rendered")
+  return _run_with_boundary(bundle, question, index_current, index_next, pages, payload_path.parent / "rendered")
 
 
-def _run_from_bundle(bundle: observations.ObservationBundle, pages: list[int], rendered_dir: Path | None) -> dict[str, Any]:
+def _run_with_boundary(bundle: observations.ObservationBundle, question: dict[str, Any],
+                       index_current: dict[str, Any] | None, index_next: dict[str, Any] | None,
+                       pages: list[int], rendered_dir: Path | None) -> dict[str, Any]:
+  effective = index_current or question
+  boundary = question_boundary.compute_question_boundary(bundle, effective, index_next, pages)
+  if index_current is None:
+    # Without a frozen index entry the question order is unknown; be conservative.
+    boundary = {**boundary, "reliable": False, "reason": "question_not_in_index"}
+  filtered = question_boundary.filter_bundle(bundle, boundary)
+  return _run_from_bundle(filtered, boundary, rendered_dir, pages)
+
+
+def _run_from_bundle(bundle: observations.ObservationBundle, boundary: dict[str, Any], rendered_dir: Path | None,
+                     pages: list[int]) -> dict[str, Any]:
   lines = bundle.lines_as_region_input()
   words = bundle.words_as_region_input()
   markers = observations.extract_text_markers(lines)
@@ -360,7 +391,9 @@ def _run_from_bundle(bundle: observations.ObservationBundle, pages: list[int], r
         page_result = visual_evidence.analyze_image(image, 160.0, page)
       visual_markers.extend(page_result["evidence"])
       raster.extend(page_result["rawComponents"])
-  boundary = {"reliable": True, "pages": pages}
+  # Visual evidence must respect the same question boundary as text.
+  visual_markers = question_boundary.filter_visual_items(visual_markers, boundary)
+  raster = question_boundary.filter_visual_items(raster, boundary)
   discovered = regions.discover_response_regions(
     boundary=boundary, lines=lines, words=words, strong_markers=markers,
     visual_markers=visual_markers, raster_components=raster,
@@ -420,6 +453,8 @@ def main() -> None:
   parser.add_argument("--protocol", required=True)
   parser.add_argument("--manifest", required=True)
   parser.add_argument("--ground-truth", required=True)
+  parser.add_argument("--question-index", required=True,
+                      help="Frozen neutral question index used for intra-page question boundaries.")
   parser.add_argument("--out-dir", default=str(REPORT_DIR))
   args = parser.parse_args()
 
@@ -429,9 +464,15 @@ def main() -> None:
   schema.validate_protocol(protocol)
   schema.validate_manifest(manifest)
   schema.validate_ground_truth(ground_truth)
-  schema.validate_bindings(manifest, ground_truth=ground_truth)
+  question_index = None
+  if args.question_index:
+    question_index = schema.load_json(args.question_index)
+    schema.validate_question_index(question_index)
+    schema.validate_bindings(manifest, question_index=question_index, ground_truth=ground_truth)
+  else:
+    schema.validate_bindings(manifest, ground_truth=ground_truth)
 
-  report = evaluate_manifest(manifest, ground_truth, protocol)
+  report = evaluate_manifest(manifest, ground_truth, protocol, question_index=question_index)
   out_dir = Path(args.out_dir)
   out_dir.mkdir(parents=True, exist_ok=True)
   stamp = _dt.datetime.now(_dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")

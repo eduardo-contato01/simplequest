@@ -208,6 +208,26 @@ def test_bindings_index_and_gt() -> None:
   schema.validate_bindings(manifest, ground_truth=good_gt)
 
 
+def test_runner_question_index_hash() -> None:
+  manifest = {"protocolVersion": "holdout-v1", "selectionSeed": 1, "selectionConfig": {}, "documents": [
+    {"documentId": "d1", "canonicalPath": "G:/nope.pdf", "contentFingerprint": "fp", "family": "CMF",
+     "year": 2010, "sourceType": "text_native",
+     "selectedQuestions": [{"questionId": "d1:q1", "questionNumber": 1, "pageStart": 1, "pageEnd": 1}]}]}
+  ground_truth = {"protocolVersion": "holdout-v1", "manifestSha256": schema.sha256_json(manifest),
+                  "documentFingerprints": {"d1": "fp"},
+                  "questions": [gt_question(doc="d1", qid="d1:q1")]}
+  index = {"protocolVersion": "holdout-v1", "documents": [
+    {"documentId": "d1", "contentFingerprint": "fp",
+     "questions": [{"questionId": "d1:q1", "questionNumber": 1, "pageStart": 1, "pageEnd": 1}]}]}
+  report = runner.evaluate_manifest(manifest, ground_truth, {"protocolVersion": "holdout-v1"},
+                                    fingerprint_fn=lambda path: "fp", question_index=index)
+  check("runner.index_hash_nonnull", report["hashes"].get("questionIndexSha256") is not None, report["hashes"])
+  check("runner.index_hash_matches", report["hashes"].get("questionIndexSha256") == schema.sha256_json(index), report["hashes"])
+  without = runner.evaluate_manifest(manifest, ground_truth, {"protocolVersion": "holdout-v1"},
+                                     fingerprint_fn=lambda path: "fp")
+  check("runner.index_hash_absent", without["hashes"].get("questionIndexSha256") is None, without["hashes"])
+
+
 def test_fingerprint_mismatch_runner() -> None:
   document = {"documentId": "d", "canonicalPath": "G:/x.pdf", "contentFingerprint": "expected"}
   check("mismatch.detect", runner.verify_document_fingerprint(document, fingerprint_fn=lambda path: "other") == "source_fingerprint_mismatch")
@@ -472,6 +492,7 @@ def main() -> None:
   test_reserved_unique_and_order_independent()
   test_candidate_pool_hash_order_independent()
   test_bindings_index_and_gt()
+  test_runner_question_index_hash()
   test_fingerprint_mismatch_runner()
   test_fingerprint_cache_invalidation()
   test_protocol_hash_stable()
