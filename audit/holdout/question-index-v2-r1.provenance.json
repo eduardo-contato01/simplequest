@@ -1,0 +1,29 @@
+{
+  "artifactType": "holdout-v2-r1-question-index-provenance",
+  "protocolVersion": "holdout-v2",
+  "parentQuestionIndex": "audit/holdout/question-index-v2.json",
+  "parentQuestionIndexFileSha256": "0aafa72592c73597d087b8b57150be11f0c8a866ff133a03b6deeea01171afb7",
+  "adjudication": "audit/holdout/question-index-v2-r1.adjudication.json",
+  "adjudicationFileSha256": "8b8ab5d18115c843394d2138b8cbc07d4cdd7017e085630516ccb83983148dad",
+  "materializer": "scripts/audit_holdout_v2_r1.py",
+  "materializerSha256": "22f2914716c7d1b54c02a6f12303f8cebd449a41df42b3565164dd0e558caef2",
+  "materializationGitCommit": "7fc76937824aeb27577af054299027485cd40e66",
+  "materializerCodeState": "clean",
+  "adjudicatedDocuments": [
+    "doc-145e6ae80517",
+    "doc-1cc59e302f33",
+    "doc-2db0fa23d7c8",
+    "doc-381cca4d6df1",
+    "doc-6b61dd9acf63",
+    "doc-7765d0b79b38",
+    "doc-9e5d2df289e0",
+    "doc-a32f45208796"
+  ],
+  "preservedDocuments": 40,
+  "idPolicy": "legacy docId:qN when N appears once; docId:qN:oK (K = 1-based document order occurrence) when N appears more than once in the same document",
+  "pageEndPolicy": "conservative forward extension: pageEnd is the pageStart of the next adjudicated question in document order (its own pageStart for the final question); may overestimate but never truncates before the next unit",
+  "responseStructureObserved": false,
+  "outputQuestionIndex": "audit/holdout/question-index-v2-r1.json",
+  "outputQuestionIndexFileSha256": "e9f9d8a3c1a7d7f617d76f8fb92d9facdaccecdbbab2600ec8bff69807c39686",
+  "deterministic": true
+}

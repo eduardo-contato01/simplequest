@@ -1,0 +1,1556 @@
+{
+  "protocolVersion": "holdout-v2",
+  "selectorVersion": "holdout-v2",
+  "selectionSeed": 20260918,
+  "protocolSha256": "50d1302f8025d21a422f0ca0cf0b2348ae1337774c4f2aa5d7b1a8a25fe63f21",
+  "inventorySha256": "9c6a365adb0da7036ac965437ebec590fc01c72641b21f0297a20e02b72014c8",
+  "candidatePoolHash": "75e92fd09eb7589ca63f59381121eb0c58d442a29bf42afc6d81558f8690aef5",
+  "candidatePoolPathHash": "91962457cc36d14b55b6e40486eb8ea214928b5f910299cf0c71840892d9c373",
+  "gitCommit": "8d41bfbe6c2d4fc304653f8ddc3f5f2e00b6d651",
+  "selectionCodeState": "clean",
+  "selectorSha256": null,
+  "selectionConfig": {
+    "targetDocuments": 48,
+    "questionsPerDocument": 3,
+    "maxDocumentsPerFamily": 4,
+    "minFamilies": 10,
+    "minDistinctYears": 10,
+    "eras": [
+      "2004-2009",
+      "2010-2014",
+      "2015-2019",
+      "2020-2025"
+    ],
+    "sourceQuota": {
+      "text_native": 28,
+      "raster": 14,
+      "text_low_quality": 2,
+      "hybrid": 4
+    }
+  },
+  "excludedByReason": {
+    "v1_revealed_fingerprint": 25,
+    "answer_key_directory": 519,
+    "invalid_metadata": 1,
+    "development_fingerprint": 6,
+    "answer_key_filename": 20
+  },
+  "v1ExcludedFingerprints": [
+    "0483f412fc1521c019d28773554513579d81035aebea7726c9ab80c6d12707d1",
+    "0852c9dcb05e63840e9fc168e5d7a0026860592f090b08c7d7bcbef04bde8241",
+    "0b3eba514fb3655a8867fac1aff4e2984d26de19cbb7dd3d7acb61879610981e",
+    "0c1b0b2b7f41626ad9bcb04a1d419a42b61f2e1c325c6578a8ac61fc0170da47",
+    "0fd5ef7a550c304c0a547667cff418b3f31a2341e1bc03999164056ba8eb5b33",
+    "23cc3c9e22d919fe30ec5c47053fbd5797cf28160bb7fc1424823f4974b573b9",
+    "2c5036d085346b27a7aed690f685b2647f45504c4b520b327c60cff4e638ff2e",
+    "3bd0cd910dd4690d7528107e95e182d25164fa61a7465792e0f911c0cc77aa9c",
+    "3fa6e3dba64cbb45a22e5ac86d21910e79c019ba088d2102a16e2de842f968de",
+    "4a4512d7f3c2d5ce5e4576d97f200bb7883294a1a98eb5745728e63b051eb889",
+    "4a6adbee0573ce2add65014b97b0842fac2bc84012061eeefb1c9f2a4d2429cc",
+    "5039a9af1ac3eb8f1a19259d45be6d55829f4d12cd1f7f5546357cf80a9b9e77",
+    "50af75296b8c486b91d49929f25b604f494801b9e25b9a85b72bf4fb251ce9ad",
+    "5219dd3764fd5d2ec62d7f05c7bf8c25eaab706ae2938958b52c45bd744548d5",
+    "5248787cbd83d01d7b745f19f7f0d5bb95daab255bdf61e06fea9c6e3a2fe0d1",
+    "591a954c3196c12b11f387727e32fa8a0311593430d21e85c130a78c6683e18a",
+    "63219ee3db8a43672406cfa72e58f5f8b1cddbd9f5921308c0478b8ff7f4d5d2",
+    "6502d4ab01bd226614885aac9865abd02af5543749ecd895bbb076a354f047f8",
+    "66d2de0c7e6e2868967273926f4743fb2a84f336fe09cdd76b2e8c83053a831d",
+    "6a5b9d9fa52e9cc403dc66e1c126b1fe244084438b53a409ccd10bd94ac3a613",
+    "6b51c50675642238b0125f974c57417657f7c7efafe989357fd438170bb5a26e",
+    "71eb6ebe133ac7dc12f6876fa12a6b558d0f3b6171aa8a0709cc03726b991997",
+    "71f57acdf98c32a8917dc80d27fa1b1cb910573064af48d4e8e66c6992fdeff3",
+    "734f0dc83021639cea71ddf0e7e51abbd237918f653a70626b54f77095587cc2",
+    "777be3cde2d7584533315fc85c540cd6af1f2f58d284f777333ce6fd45d22c6a",
+    "7a7bf8f61f9cbe76e1e795dc93ace2d9f4742ac1187e491cb69307608a15f5a2",
+    "7f81ede9830934b4c35f4a423bb4e9f27966fd2e7d441dd5db159465746b9cae",
+    "8d72d03154a6a2aaae05d955af08d5d099e8ffaa7725d041f0d9eb59a9edb654",
+    "910ec5c0586550c01e80aeb60b4b0b5f0c265642396c5406547403f036c7b78c",
+    "915e7418d7c1fce938486db39445e6f1612ac09bb9749bb2743bcad398cc8c9b",
+    "978687999c1ba37f1e404aa0c0a7098500f69e1a238de2ffd235bb8b55129680",
+    "9ba95ff94809a180a49e8105bbb12625ca915629fdfaa40cf1d140e1fdf83c5f",
+    "bae013fd6320dfd6239f558d32021cc4e8a67b59d57900e3879215cdcfb5b36b",
+    "baf8e7eb95bb52ddd07eb9447ff7e26dda11507f57a876237bb4df9fb9a183f8",
+    "d06d5ba7bb8d691705335fa4e79322098d7b385627227783a912d77b004d91f1",
+    "d3f1faf18cced7d709cf78982b439d686d1a090d4a164274a891f0292b5aa5a8",
+    "d64482e70eae958999301355c9496f39a157a0caa2030277a201a1c25f17457d",
+    "d76d2933f96327bbf7fb6b6dfb3f65469fbde8990e8bfbe55caf95c264e82ab0",
+    "df06a451fb60feda74e6d38e9fa337258c6af248ed6f67b282adecf6220bca49",
+    "df9edb180cb3ec704c7e01632f71c93d6ad1b4d74ff3adaff388362aabb017cb",
+    "dfb78caf74babfbfd35b8b2c742c537fe9c551b7cd6a42d7b86cd16e61f77223",
+    "e40d248176be1569a61517b910933b01de808432d246eb3d3e53f4e23cb4cb54",
+    "ecd771e271883d1d5e3e9ece71f6717121690978adbb7234b8ad5660e47f25a6",
+    "f18b4e5dc1935d7c9b8707addd63f9472d91bebe04cf067db61ff0031be734e5",
+    "f4fec1ad1ba2ff4ed66b8b330ff2b53919e9cf8cdc9453f619f97e5926cdb46d",
+    "f64ab9b16528c639d06c525b2b1e0af36d67d692992ef90838b373beb45c7c05",
+    "fa89f582e02f2a8f3e83fe8feb94751700c79a06856380d93453a98aa45c0088",
+    "fea5957ad43c5660d3e0475d84faa321bab91afc5d5d72278024b8ec89d57f2d"
+  ],
+  "reservedPoolHash": "577c1eed100a3ca3822e783222470209268b324882ec22cd017bdcf21424d789",
+  "reservedCount": 535,
+  "documents": [
+    {
+      "documentId": "doc-001d3fd671db",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMM\\1º Ano\\CMM - 1ANO - 2018_2019 (port).pdf",
+      "contentFingerprint": "001d3fd671db9d12377ba7f45462db120556e7042c96149c561b9e746386f454",
+      "duplicatePaths": [],
+      "family": "CMM",
+      "year": 2018,
+      "series": "1º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-001d3fd671db:q3",
+          "questionNumber": 3,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-001d3fd671db:q14",
+          "questionNumber": 14,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-001d3fd671db:q18",
+          "questionNumber": 18,
+          "pageStart": 9,
+          "pageEnd": 9
+        }
+      ]
+    },
+    {
+      "documentId": "doc-00dc74ed4789",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMRJ\\6º Ano\\CMRJ - 6ANO - 2015_2016 (mat).pdf",
+      "contentFingerprint": "00dc74ed47894fb542f0a6e3ead48fc7e61c72832d099f37382e79ccf68756c3",
+      "duplicatePaths": [],
+      "family": "CMRJ",
+      "year": 2015,
+      "series": "6º Ano",
+      "sourceType": "hybrid",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-00dc74ed4789:q3",
+          "questionNumber": 3,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-00dc74ed4789:q10",
+          "questionNumber": 10,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-00dc74ed4789:q18",
+          "questionNumber": 18,
+          "pageStart": 7,
+          "pageEnd": 7
+        }
+      ]
+    },
+    {
+      "documentId": "doc-018fde8484ec",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMR\\6º Ano\\CMR - 6ANO - 2024_2025.pdf",
+      "contentFingerprint": "018fde8484ecea5947316f986262119999f51e3906a190ff3fd9372a88d2db17",
+      "duplicatePaths": [],
+      "family": "CMR",
+      "year": 2024,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-018fde8484ec:q5",
+          "questionNumber": 5,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-018fde8484ec:q20",
+          "questionNumber": 20,
+          "pageStart": 13,
+          "pageEnd": 14
+        },
+        {
+          "questionId": "doc-018fde8484ec:q33",
+          "questionNumber": 33,
+          "pageStart": 18,
+          "pageEnd": 18
+        }
+      ]
+    },
+    {
+      "documentId": "doc-05a2dbd5dc88",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMR\\6º Ano\\CMR - 6ANO - 2025_2026.pdf",
+      "contentFingerprint": "05a2dbd5dc88c21e7ced5974eba0d368880f4a6166f8fc369f96911328846d91",
+      "duplicatePaths": [],
+      "family": "CMR",
+      "year": 2025,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-05a2dbd5dc88:q3",
+          "questionNumber": 3,
+          "pageStart": 3,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-05a2dbd5dc88:q27",
+          "questionNumber": 27,
+          "pageStart": 15,
+          "pageEnd": 15
+        },
+        {
+          "questionId": "doc-05a2dbd5dc88:q39",
+          "questionNumber": 39,
+          "pageStart": 20,
+          "pageEnd": 20
+        }
+      ]
+    },
+    {
+      "documentId": "doc-07539ed3ce50",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMPA\\6° Ano\\CMPA - 6ANO - 2018_2019 (mat) (Prova 1).pdf",
+      "contentFingerprint": "07539ed3ce505a31373bdc1fe9a37865090de51a11a701a4407e7f4ec9f5ee00",
+      "duplicatePaths": [],
+      "family": "CMPA",
+      "year": 2018,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-07539ed3ce50:q4",
+          "questionNumber": 4,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-07539ed3ce50:q10",
+          "questionNumber": 10,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-07539ed3ce50:q15",
+          "questionNumber": 15,
+          "pageStart": 19,
+          "pageEnd": 19
+        }
+      ]
+    },
+    {
+      "documentId": "doc-09ca54b4d723",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMPA\\6° Ano\\CMPA - 6ANO - 2012_2013 (mat) (Prova 1).pdf",
+      "contentFingerprint": "09ca54b4d723c2695d819fbc193069cdd3b58bc232f4980b963225a57b42a311",
+      "duplicatePaths": [],
+      "family": "CMPA",
+      "year": 2012,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-09ca54b4d723:q4",
+          "questionNumber": 4,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-09ca54b4d723:q11",
+          "questionNumber": 11,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-09ca54b4d723:q21",
+          "questionNumber": 21,
+          "pageStart": 8,
+          "pageEnd": 8
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0ccd40b73099",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMB\\6º Ano\\CMB - 6ANO - 2018_2019 (port).pdf",
+      "contentFingerprint": "0ccd40b7309907d6d2b5d5b709e2b2d4fa5f31c1c70853d79a8d5ebf04e416c5",
+      "duplicatePaths": [],
+      "family": "CMB",
+      "year": 2018,
+      "series": "6º Ano",
+      "sourceType": "raster",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-0ccd40b73099:q4",
+          "questionNumber": 4,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-0ccd40b73099:q11",
+          "questionNumber": 11,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-0ccd40b73099:q14",
+          "questionNumber": 14,
+          "pageStart": 9,
+          "pageEnd": 9
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0e45d0a32d5d",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMJF\\1º Ano\\CMJF - 1ANO - 2014_2015 (port) (Prova 1).pdf",
+      "contentFingerprint": "0e45d0a32d5d0496aefde88df52b1cc9d73dcdf6aef7417816562c1729db76da",
+      "duplicatePaths": [],
+      "family": "CMJF",
+      "year": 2014,
+      "series": "1º Ano",
+      "sourceType": "raster",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-0e45d0a32d5d:q2",
+          "questionNumber": 2,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-0e45d0a32d5d:q5",
+          "questionNumber": 5,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-0e45d0a32d5d:q14",
+          "questionNumber": 14,
+          "pageStart": 9,
+          "pageEnd": 11
+        }
+      ]
+    },
+    {
+      "documentId": "doc-145e6ae80517",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\VESTIBULAR_UNB\\VEST UnB 2024.pdf",
+      "contentFingerprint": "145e6ae80517852e1a4ad36c924a0d1f0ab7c147a654c9702c2d08a157f8c585",
+      "duplicatePaths": [],
+      "family": "VESTIBULAR_UNB",
+      "year": 2024,
+      "series": null,
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-145e6ae80517:q31",
+          "questionNumber": 31,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-145e6ae80517:q83",
+          "questionNumber": 83,
+          "pageStart": 10,
+          "pageEnd": 10,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-145e6ae80517:q113",
+          "questionNumber": 113,
+          "pageStart": 13,
+          "pageEnd": 13,
+          "sequenceRun": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-15804641564a",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMRJ\\1º Ano\\CMRJ - 1ANO - 2022_2023.pdf",
+      "contentFingerprint": "15804641564abe312319ee8a0e61b51efd237efb113ed9102c54a40244a3b1b6",
+      "duplicatePaths": [],
+      "family": "CMRJ",
+      "year": 2022,
+      "series": "1º Ano",
+      "sourceType": "hybrid",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-15804641564a:q1",
+          "questionNumber": 1,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-15804641564a:q18",
+          "questionNumber": 18,
+          "pageStart": 18,
+          "pageEnd": 18
+        },
+        {
+          "questionId": "doc-15804641564a:q30",
+          "questionNumber": 30,
+          "pageStart": 24,
+          "pageEnd": 25
+        }
+      ]
+    },
+    {
+      "documentId": "doc-19ff74561345",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBH\\6º Ano\\CMBH - 6ANO - 2013_2014 (mat).pdf",
+      "contentFingerprint": "19ff7456134502ced8df4db0a5ca75723ca4d09513e979374913de2c15ee8f3f",
+      "duplicatePaths": [],
+      "family": "CMBH",
+      "year": 2013,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-19ff74561345:q3",
+          "questionNumber": 3,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-19ff74561345:q9",
+          "questionNumber": 9,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-19ff74561345:q14",
+          "questionNumber": 14,
+          "pageStart": 15,
+          "pageEnd": 15
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1cc59e302f33",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 3\\PAS 3 - 2012.pdf",
+      "contentFingerprint": "1cc59e302f338c3e8a54dc9a8fd0426b6471e3297b5e557aab881268d646828c",
+      "duplicatePaths": [],
+      "family": "PAS 3",
+      "year": 2012,
+      "series": null,
+      "sourceType": "hybrid",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-1cc59e302f33:q24",
+          "questionNumber": 24,
+          "pageStart": 8,
+          "pageEnd": 8,
+          "sequenceRun": 4
+        },
+        {
+          "questionId": "doc-1cc59e302f33:q60",
+          "questionNumber": 60,
+          "pageStart": 13,
+          "pageEnd": 13,
+          "sequenceRun": 4
+        },
+        {
+          "questionId": "doc-1cc59e302f33:q111",
+          "questionNumber": 111,
+          "pageStart": 21,
+          "pageEnd": 22,
+          "sequenceRun": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2db0fa23d7c8",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMF\\6º Ano\\CMF - 6ANO - 2012_2013 (mat).pdf",
+      "contentFingerprint": "2db0fa23d7c8af69d4acf0b20012d16f02f173ac6042b55fa31180c69fa5a664",
+      "duplicatePaths": [],
+      "family": "CMF",
+      "year": 2012,
+      "series": "6º Ano",
+      "sourceType": "text_low_quality",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-2db0fa23d7c8:q5",
+          "questionNumber": 5,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-2db0fa23d7c8:q11",
+          "questionNumber": 11,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-2db0fa23d7c8:q20",
+          "questionNumber": 20,
+          "pageStart": 7,
+          "pageEnd": 7,
+          "sequenceRun": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-381cca4d6df1",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMCG\\6º Ano\\CMCG - 6ANO - 2025_2026.pdf",
+      "contentFingerprint": "381cca4d6df1e9375d481e683f3356acc5fee3a4288b584f48559b939dd42c44",
+      "duplicatePaths": [],
+      "family": "CMCG",
+      "year": 2025,
+      "series": "6º Ano",
+      "sourceType": "raster",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-381cca4d6df1:q11",
+          "questionNumber": 11,
+          "pageStart": 11,
+          "pageEnd": 12,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-381cca4d6df1:q14",
+          "questionNumber": 14,
+          "pageStart": 14,
+          "pageEnd": 15,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-381cca4d6df1:q38",
+          "questionNumber": 38,
+          "pageStart": 34,
+          "pageEnd": 35,
+          "sequenceRun": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3abeaa820030",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMF\\6º Ano\\CMF - 6ANO - 2023_2024.pdf",
+      "contentFingerprint": "3abeaa8200303dfe898ad1b33bccf19a62dd60501b6c952b9468fe2cab2bb29b",
+      "duplicatePaths": [],
+      "family": "CMF",
+      "year": 2023,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-3abeaa820030:q9",
+          "questionNumber": 9,
+          "pageStart": 6,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-3abeaa820030:q22",
+          "questionNumber": 22,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-3abeaa820030:q35",
+          "questionNumber": 35,
+          "pageStart": 18,
+          "pageEnd": 18
+        }
+      ]
+    },
+    {
+      "documentId": "doc-416026f09a09",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMS\\6º Ano\\CMS - 6ANO - 2018_2019 (mat).pdf",
+      "contentFingerprint": "416026f09a096c7908fb2f76eb8dc3d5dcec433f844d2a87114913c5f8cd2604",
+      "duplicatePaths": [],
+      "family": "CMS",
+      "year": 2018,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-416026f09a09:q3",
+          "questionNumber": 3,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-416026f09a09:q10",
+          "questionNumber": 10,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-416026f09a09:q18",
+          "questionNumber": 18,
+          "pageStart": 19,
+          "pageEnd": 20
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4a0cbad99f17",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMRJ\\6º Ano\\CMRJ - 6ANO - 2017_2018 (port).pdf",
+      "contentFingerprint": "4a0cbad99f17f4834a2592af6acf30fcbc4eec6f24b9d51b901cf75ad15979f8",
+      "duplicatePaths": [],
+      "family": "CMRJ",
+      "year": 2017,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-4a0cbad99f17:q6",
+          "questionNumber": 6,
+          "pageStart": 4,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-4a0cbad99f17:q7",
+          "questionNumber": 7,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-4a0cbad99f17:q19",
+          "questionNumber": 19,
+          "pageStart": 12,
+          "pageEnd": 12
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5303244d2ed3",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBH\\1º Ano\\CMBH - 1ANO - 2015_2016 (port).pdf",
+      "contentFingerprint": "5303244d2ed3d4eadf0734b6e2b41e5484172079ebee6a8b3219d027f489d66a",
+      "duplicatePaths": [],
+      "family": "CMBH",
+      "year": 2015,
+      "series": "1º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-5303244d2ed3:q3",
+          "questionNumber": 3,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-5303244d2ed3:q10",
+          "questionNumber": 10,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-5303244d2ed3:q14",
+          "questionNumber": 14,
+          "pageStart": 11,
+          "pageEnd": 11
+        }
+      ]
+    },
+    {
+      "documentId": "doc-530c1f0284e3",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\COLÉGIO SÓLIDO\\9º Ano\\SÓLIDO - 9ANO - 2021_2022 - PROVA DE BOLSAS.pdf",
+      "contentFingerprint": "530c1f0284e31e818549db207020b078af266b990acd708415e1f09472519ec1",
+      "duplicatePaths": [],
+      "family": "COLÉGIO SÓLIDO",
+      "year": 2021,
+      "series": "9º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-530c1f0284e3:q10",
+          "questionNumber": 10,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-530c1f0284e3:q24",
+          "questionNumber": 24,
+          "pageStart": 12,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-530c1f0284e3:q32",
+          "questionNumber": 32,
+          "pageStart": 16,
+          "pageEnd": 16
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5b13e6839c6f",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMR\\6º Ano\\CMR - 6ANO - 2017_2018 (port).pdf",
+      "contentFingerprint": "5b13e6839c6f6c5a9d255edb4e26e891b309feca91c9e56647d9d319596e6eb7",
+      "duplicatePaths": [],
+      "family": "CMR",
+      "year": 2017,
+      "series": "6º Ano",
+      "sourceType": "raster",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-5b13e6839c6f:q3",
+          "questionNumber": 3,
+          "pageStart": 3,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-5b13e6839c6f:q15",
+          "questionNumber": 15,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-5b13e6839c6f:q16",
+          "questionNumber": 16,
+          "pageStart": 9,
+          "pageEnd": 11
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6b61dd9acf63",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMJF\\6º Ano\\CMJF - 6ANO - 2017_2018 (port) (Prova 1).pdf",
+      "contentFingerprint": "6b61dd9acf635cb325bc090afc316662697c9dbc8121bd3ed0f479b8c3b1311e",
+      "duplicatePaths": [],
+      "family": "CMJF",
+      "year": 2017,
+      "series": "6º Ano",
+      "sourceType": "raster",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-6b61dd9acf63:q4",
+          "questionNumber": 4,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-6b61dd9acf63:q9",
+          "questionNumber": 9,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-6b61dd9acf63:q13",
+          "questionNumber": 13,
+          "pageStart": 7,
+          "pageEnd": 7,
+          "sequenceRun": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6cb109cd9276",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMC\\6º Ano\\CMC - 6ANO - 2024_2025.pdf",
+      "contentFingerprint": "6cb109cd9276a08d524b80b9a52174ec33a52493da45d397322cc5d252b239d0",
+      "duplicatePaths": [],
+      "family": "CMC",
+      "year": 2024,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-6cb109cd9276:q8",
+          "questionNumber": 8,
+          "pageStart": 1,
+          "pageEnd": 1
+        },
+        {
+          "questionId": "doc-6cb109cd9276:q21",
+          "questionNumber": 21,
+          "pageStart": 20,
+          "pageEnd": 20
+        },
+        {
+          "questionId": "doc-6cb109cd9276:q38",
+          "questionNumber": 38,
+          "pageStart": 25,
+          "pageEnd": 25
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7765d0b79b38",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 2\\PAS 2 - 2023.pdf",
+      "contentFingerprint": "7765d0b79b38f41aac8891493c30ccf7a247adea8102676d076ceb4134e50145",
+      "duplicatePaths": [],
+      "family": "PAS 2",
+      "year": 2023,
+      "series": null,
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-7765d0b79b38:q1:o2",
+          "questionNumber": 1,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "sequenceRun": 2
+        },
+        {
+          "questionId": "doc-7765d0b79b38:q28",
+          "questionNumber": 28,
+          "pageStart": 7,
+          "pageEnd": 7,
+          "sequenceRun": 4
+        },
+        {
+          "questionId": "doc-7765d0b79b38:q95",
+          "questionNumber": 95,
+          "pageStart": 13,
+          "pageEnd": 13,
+          "sequenceRun": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-79dd62d008f6",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMB\\1º Ano\\CMB - 1ANO - 2019_2020 (port).pdf",
+      "contentFingerprint": "79dd62d008f6761f59a837c220109052ae65108c44b0cd12a38bd52a35bf9332",
+      "duplicatePaths": [],
+      "family": "CMB",
+      "year": 2019,
+      "series": "1º Ano",
+      "sourceType": "raster",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-79dd62d008f6:q4",
+          "questionNumber": 4,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-79dd62d008f6:q13",
+          "questionNumber": 13,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-79dd62d008f6:q18",
+          "questionNumber": 18,
+          "pageStart": 12,
+          "pageEnd": 12
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7a801b1ddbd2",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMC\\6º Ano\\CMC - 6ANO - 2010_2011 (port).pdf",
+      "contentFingerprint": "7a801b1ddbd21bbeec1f585c22a6e9f0486a8a586ec710fb7e4aa8944eb167b2",
+      "duplicatePaths": [],
+      "family": "CMC",
+      "year": 2010,
+      "series": "6º Ano",
+      "sourceType": "raster",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-7a801b1ddbd2:q5",
+          "questionNumber": 5,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-7a801b1ddbd2:q11",
+          "questionNumber": 11,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-7a801b1ddbd2:q20",
+          "questionNumber": 20,
+          "pageStart": 6,
+          "pageEnd": 6
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7bc527197266",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\VESTIBULAR_UNB\\2008_1º - VESTIBULAR_2_DIA_CADERNO_AQUARIUS.pdf",
+      "contentFingerprint": "7bc52719726604c35e209f2434525075c088f5c0748271a8df4b1870ccd7d809",
+      "duplicatePaths": [],
+      "family": "VESTIBULAR_UNB",
+      "year": 2008,
+      "series": null,
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-7bc527197266:q6",
+          "questionNumber": 6,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-7bc527197266:q110",
+          "questionNumber": 110,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-7bc527197266:q118",
+          "questionNumber": 118,
+          "pageStart": 14,
+          "pageEnd": 14
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7edc53bcc309",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMR\\6º Ano\\CMR - 6ANO - 2018_2019 (mat).pdf",
+      "contentFingerprint": "7edc53bcc309a038c87d4d547431b6d37dc024e9b168712103ea8b67ecc30f64",
+      "duplicatePaths": [],
+      "family": "CMR",
+      "year": 2018,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-7edc53bcc309:q5",
+          "questionNumber": 5,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-7edc53bcc309:q8",
+          "questionNumber": 8,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-7edc53bcc309:q18",
+          "questionNumber": 18,
+          "pageStart": 8,
+          "pageEnd": 8
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8084259f61f8",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSM\\6º Ano\\CMSM - 6ANO - 2006_2007 (mat).pdf",
+      "contentFingerprint": "8084259f61f871f2eb872429a93a9e83a8fb929baffe5423cf0ad4d945c6e0f7",
+      "duplicatePaths": [],
+      "family": "CMSM",
+      "year": 2006,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-8084259f61f8:q4",
+          "questionNumber": 4,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-8084259f61f8:q12",
+          "questionNumber": 12,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-8084259f61f8:q19",
+          "questionNumber": 19,
+          "pageStart": 10,
+          "pageEnd": 10
+        }
+      ]
+    },
+    {
+      "documentId": "doc-83a6bd21c3df",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMPA\\6° Ano\\CMPA - 6ANO - 2020_2021.pdf",
+      "contentFingerprint": "83a6bd21c3df255ee6d740dbf972c4bd962285047f7177565131ef6f6e4c3dd1",
+      "duplicatePaths": [],
+      "family": "CMPA",
+      "year": 2020,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-83a6bd21c3df:q7",
+          "questionNumber": 7,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-83a6bd21c3df:q12",
+          "questionNumber": 12,
+          "pageStart": 15,
+          "pageEnd": 18
+        },
+        {
+          "questionId": "doc-83a6bd21c3df:q18",
+          "questionNumber": 18,
+          "pageStart": 21,
+          "pageEnd": 22
+        }
+      ]
+    },
+    {
+      "documentId": "doc-875b5be9bc60",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMJF\\1º Ano\\CMJF - 1ANO - 2017_2018 (port) (Prova 1).pdf",
+      "contentFingerprint": "875b5be9bc6028ae80ef50a5d3db1298e09301846742299252c642b9c2828d71",
+      "duplicatePaths": [],
+      "family": "CMJF",
+      "year": 2017,
+      "series": "1º Ano",
+      "sourceType": "raster",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-875b5be9bc60:q2",
+          "questionNumber": 2,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-875b5be9bc60:q8",
+          "questionNumber": 8,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-875b5be9bc60:q11",
+          "questionNumber": 11,
+          "pageStart": 8,
+          "pageEnd": 8
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8d679e7b8193",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\VESTIBULAR_UNB\\VEST UnB 2009.pdf",
+      "contentFingerprint": "8d679e7b8193e823fa8640a0ea42c1742319b6ad050459780b9db95c4b447beb",
+      "duplicatePaths": [],
+      "family": "VESTIBULAR_UNB",
+      "year": 2009,
+      "series": null,
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-8d679e7b8193:q41",
+          "questionNumber": 41,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-8d679e7b8193:q45",
+          "questionNumber": 45,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-8d679e7b8193:q90",
+          "questionNumber": 90,
+          "pageStart": 13,
+          "pageEnd": 13
+        }
+      ]
+    },
+    {
+      "documentId": "doc-98decdcd5e66",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSM\\6º Ano\\CMSM - 6ANO - 2006_2007 (port).pdf",
+      "contentFingerprint": "98decdcd5e66b8ba820269d25503d234b9b759062abbe0c2c166badb8548d70f",
+      "duplicatePaths": [],
+      "family": "CMSM",
+      "year": 2006,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-98decdcd5e66:q38",
+          "questionNumber": 38,
+          "pageStart": 1,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-98decdcd5e66:q2",
+          "questionNumber": 2,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-98decdcd5e66:q18",
+          "questionNumber": 18,
+          "pageStart": 6,
+          "pageEnd": 7
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9a32009f9e63",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMS\\6º Ano\\CMS - 6ANO - 2021_2022.pdf",
+      "contentFingerprint": "9a32009f9e63aa9bb0c3251b5d0fc5a374eb13421a2d7840341fc18aaf9c9f75",
+      "duplicatePaths": [],
+      "family": "CMS",
+      "year": 2021,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-9a32009f9e63:q3",
+          "questionNumber": 3,
+          "pageStart": 1,
+          "pageEnd": 1
+        },
+        {
+          "questionId": "doc-9a32009f9e63:q13",
+          "questionNumber": 13,
+          "pageStart": 1,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-9a32009f9e63:q18",
+          "questionNumber": 18,
+          "pageStart": 18,
+          "pageEnd": 19
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9e5d2df289e0",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSM\\1º Ano\\CMSM - 1ANO - 2011_2012 (mat).pdf",
+      "contentFingerprint": "9e5d2df289e0ab3d0ba8e1b1b0a5f9604011e44894cdadfa4bb137ac87ad9cfd",
+      "duplicatePaths": [],
+      "family": "CMSM",
+      "year": 2011,
+      "series": "1º Ano",
+      "sourceType": "raster",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-9e5d2df289e0:q5",
+          "questionNumber": 5,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-9e5d2df289e0:q12",
+          "questionNumber": 12,
+          "pageStart": 8,
+          "pageEnd": 9,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-9e5d2df289e0:q16",
+          "questionNumber": 16,
+          "pageStart": 10,
+          "pageEnd": 11,
+          "sequenceRun": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a03246583c05",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSM\\1º Ano\\CMSM - 1ANO - 2020_2021.pdf",
+      "contentFingerprint": "a03246583c05741eee5471bb48b51ab9c655548aaa8b7f3e87c5f1d351ae16f0",
+      "duplicatePaths": [],
+      "family": "CMSM",
+      "year": 2020,
+      "series": "1º Ano",
+      "sourceType": "raster",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-a03246583c05:q2",
+          "questionNumber": 2,
+          "pageStart": 3,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-a03246583c05:q9",
+          "questionNumber": 9,
+          "pageStart": 10,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-a03246583c05:q21",
+          "questionNumber": 21,
+          "pageStart": 24,
+          "pageEnd": 25
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a32f45208796",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 2\\PAS 2 - 2012.pdf",
+      "contentFingerprint": "a32f45208796acfaaea4182bddb273cd794273716f11608bc011c584b47eb7e8",
+      "duplicatePaths": [],
+      "family": "PAS 2",
+      "year": 2012,
+      "series": null,
+      "sourceType": "hybrid",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-a32f45208796:q23",
+          "questionNumber": 23,
+          "pageStart": 7,
+          "pageEnd": 7,
+          "sequenceRun": 4
+        },
+        {
+          "questionId": "doc-a32f45208796:q44",
+          "questionNumber": 44,
+          "pageStart": 10,
+          "pageEnd": 10,
+          "sequenceRun": 4
+        },
+        {
+          "questionId": "doc-a32f45208796:q97",
+          "questionNumber": 97,
+          "pageStart": 17,
+          "pageEnd": 18,
+          "sequenceRun": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b0190dc9aeef",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\COLÉGIO SÓLIDO\\7º Ano\\SÓLIDO - 7ANO - 2017_2018 - PROVA DE BOLSAS.pdf",
+      "contentFingerprint": "b0190dc9aeef78743af4bf3f68f0b40b4dbc4edd87db8ed38afd065bccd4b006",
+      "duplicatePaths": [],
+      "family": "COLÉGIO SÓLIDO",
+      "year": 2017,
+      "series": "7º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-b0190dc9aeef:q11",
+          "questionNumber": 11,
+          "pageStart": 4,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-b0190dc9aeef:q25",
+          "questionNumber": 25,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-b0190dc9aeef:q37",
+          "questionNumber": 37,
+          "pageStart": 16,
+          "pageEnd": 16
+        }
+      ]
+    },
+    {
+      "documentId": "doc-bd94ca1b4e47",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMS\\6º Ano\\CMS - 6ANO - 2016_2017 (port).pdf",
+      "contentFingerprint": "bd94ca1b4e4787c8c25cb4569ded85d9b751e6585e1bf6defb6aee6c39525666",
+      "duplicatePaths": [],
+      "family": "CMS",
+      "year": 2016,
+      "series": "6º Ano",
+      "sourceType": "raster",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-bd94ca1b4e47:q4",
+          "questionNumber": 4,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-bd94ca1b4e47:q10",
+          "questionNumber": 10,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-bd94ca1b4e47:q14",
+          "questionNumber": 14,
+          "pageStart": 10,
+          "pageEnd": 10
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c494569a6fe7",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMJF\\1º Ano\\CMJF - 1ANO - 2015_2016 (mat) (Prova 1).pdf",
+      "contentFingerprint": "c494569a6fe709b6649917e9ffdd99be532ba324ccff7a1d89659f99fcd56261",
+      "duplicatePaths": [],
+      "family": "CMJF",
+      "year": 2015,
+      "series": "1º Ano",
+      "sourceType": "raster",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-c494569a6fe7:q2",
+          "questionNumber": 2,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-c494569a6fe7:q7",
+          "questionNumber": 7,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-c494569a6fe7:q18",
+          "questionNumber": 18,
+          "pageStart": 9,
+          "pageEnd": 9
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c7ae7c1e6646",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBH\\6º Ano\\CMBH - 6ANO - 2019_2020 (mat).pdf",
+      "contentFingerprint": "c7ae7c1e6646dd6cff02e856a5faaa42cf583ebf204463453c436f2b24c7d1da",
+      "duplicatePaths": [],
+      "family": "CMBH",
+      "year": 2019,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-c7ae7c1e6646:q5",
+          "questionNumber": 5,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-c7ae7c1e6646:q12",
+          "questionNumber": 12,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-c7ae7c1e6646:q14",
+          "questionNumber": 14,
+          "pageStart": 10,
+          "pageEnd": 10
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d07b1e894500",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSP\\6º Ano\\CMSP - 6ANO - 2023_2024.pdf",
+      "contentFingerprint": "d07b1e8945000086b2ca0f832cda4187505e496422f4eff69e90271f6d8908a0",
+      "duplicatePaths": [],
+      "family": "CMSP",
+      "year": 2023,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-d07b1e894500:q4",
+          "questionNumber": 4,
+          "pageStart": 4,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-d07b1e894500:q20",
+          "questionNumber": 20,
+          "pageStart": 14,
+          "pageEnd": 16
+        },
+        {
+          "questionId": "doc-d07b1e894500:q37",
+          "questionNumber": 37,
+          "pageStart": 24,
+          "pageEnd": 25
+        }
+      ]
+    },
+    {
+      "documentId": "doc-da77cb58fe91",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSP\\6º Ano\\CMSP - 6ANO - 2024_2025.pdf",
+      "contentFingerprint": "da77cb58fe91c525cf71212752de5e7d2dda1fa753ce92a95ea49467995f7aab",
+      "duplicatePaths": [],
+      "family": "CMSP",
+      "year": 2024,
+      "series": "6º Ano",
+      "sourceType": "text_low_quality",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-da77cb58fe91:q7",
+          "questionNumber": 7,
+          "pageStart": 5,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-da77cb58fe91:q16",
+          "questionNumber": 16,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-da77cb58fe91:q28",
+          "questionNumber": 28,
+          "pageStart": 19,
+          "pageEnd": 19
+        }
+      ]
+    },
+    {
+      "documentId": "doc-dbb0fb93b539",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMRJ\\1º Ano\\CMRJ - 1ANO - 2019_2020 (mat).pdf",
+      "contentFingerprint": "dbb0fb93b539230b669fbc53d48e6b5f1d1aa8e7d092640dc95e6a544c0dcb95",
+      "duplicatePaths": [],
+      "family": "CMRJ",
+      "year": 2019,
+      "series": "1º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-dbb0fb93b539:q4",
+          "questionNumber": 4,
+          "pageStart": 1,
+          "pageEnd": 1
+        },
+        {
+          "questionId": "doc-dbb0fb93b539:q11",
+          "questionNumber": 11,
+          "pageStart": 1,
+          "pageEnd": 1
+        },
+        {
+          "questionId": "doc-dbb0fb93b539:q19",
+          "questionNumber": 19,
+          "pageStart": 12,
+          "pageEnd": 14
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e240c4d24d4a",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBH\\1º Ano\\CMBH - 1ANO - 2014_2015 (port).pdf",
+      "contentFingerprint": "e240c4d24d4a0e2f8293241bd5c88b3d3e7dac1d120a54a96d42b7d2dfdca1b6",
+      "duplicatePaths": [],
+      "family": "CMBH",
+      "year": 2014,
+      "series": "1º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-e240c4d24d4a:q4",
+          "questionNumber": 4,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-e240c4d24d4a:q9",
+          "questionNumber": 9,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-e240c4d24d4a:q16",
+          "questionNumber": 16,
+          "pageStart": 11,
+          "pageEnd": 11
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e57019a7359b",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMB\\6º Ano\\Outros\\CMB 6º ANO 2023-2024 DIGITALIZADA.pdf",
+      "contentFingerprint": "e57019a7359bc982f7ddf64d1e1251070963bff085f32107d3bb94a00ac5a2ce",
+      "duplicatePaths": [],
+      "family": "CMB",
+      "year": 2023,
+      "series": "6º Ano",
+      "sourceType": "raster",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-e57019a7359b:q20",
+          "questionNumber": 20,
+          "pageStart": 12,
+          "pageEnd": 15
+        },
+        {
+          "questionId": "doc-e57019a7359b:q26",
+          "questionNumber": 26,
+          "pageStart": 17,
+          "pageEnd": 17
+        },
+        {
+          "questionId": "doc-e57019a7359b:q36",
+          "questionNumber": 36,
+          "pageStart": 23,
+          "pageEnd": 23
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f24160c86424",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMDPII\\6º Ano\\CMDPII - 6ANO - 2024_2025.pdf",
+      "contentFingerprint": "f24160c86424772296f74d3f39dcea0980f781dbd336a849501d7dc70fadcfb1",
+      "duplicatePaths": [],
+      "family": "CMDPII",
+      "year": 2024,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-f24160c86424:q16",
+          "questionNumber": 16,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-f24160c86424:q24",
+          "questionNumber": 24,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-f24160c86424:q30",
+          "questionNumber": 30,
+          "pageStart": 13,
+          "pageEnd": 14
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fb15983ac5ea",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMC\\1º Ano\\CMC - 1ANO - 2022_2023.pdf",
+      "contentFingerprint": "fb15983ac5ea9324a6dc099f13662e973908f56b5e37bc4f0d3e219ac22e2c46",
+      "duplicatePaths": [],
+      "family": "CMC",
+      "year": 2022,
+      "series": "1º Ano",
+      "sourceType": "text_native",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-fb15983ac5ea:q8",
+          "questionNumber": 8,
+          "pageStart": 1,
+          "pageEnd": 1
+        },
+        {
+          "questionId": "doc-fb15983ac5ea:q18",
+          "questionNumber": 18,
+          "pageStart": 1,
+          "pageEnd": 14
+        },
+        {
+          "questionId": "doc-fb15983ac5ea:q23",
+          "questionNumber": 23,
+          "pageStart": 16,
+          "pageEnd": 16
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fc9052837176",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBel\\1º Ano\\CMBel - 1ANO - 2021_2022.pdf",
+      "contentFingerprint": "fc9052837176dd8db29cad6f199c9c963c25ef3c04bc4fb9e1959e2fc6c8649a",
+      "duplicatePaths": [],
+      "family": "CMBel",
+      "year": 2021,
+      "series": "1º Ano",
+      "sourceType": "raster",
+      "selectedQuestions": [
+        {
+          "questionId": "doc-fc9052837176:q4",
+          "questionNumber": 4,
+          "pageStart": 3,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-fc9052837176:q15",
+          "questionNumber": 15,
+          "pageStart": 14,
+          "pageEnd": 14
+        },
+        {
+          "questionId": "doc-fc9052837176:q24",
+          "questionNumber": 24,
+          "pageStart": 21,
+          "pageEnd": 23
+        }
+      ]
+    }
+  ]
+}
