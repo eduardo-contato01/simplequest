@@ -1,0 +1,63 @@
+{
+  "artifactType": "auditor-v1-holdout-v2-r2-first-official-run",
+  "protocolVersion": "holdout-v2",
+  "auditorVersion": "V1",
+  "runStamp": "20260922T200018Z",
+  "gitCommit": "bde7d961ee982bd50dc1c0a79b6519356556f57d",
+  "groundTruth": "audit/holdout/ground-truth-v2-r2.json",
+  "groundTruthFileSha256": "c0d672429dbe3b883bce2897a40eb4a147c1ce738cd50d047d4311f64bd065ed",
+  "groundTruthCanonicalJsonSha256": "8c1b61c7fbbb5a8a6031b8056c1f265f97622c2d8dac1a0ae27f6eef66cbfee6",
+  "manifest": "audit/holdout/manifest-v2-b2-r2.json",
+  "manifestFileSha256": "882ef8b49773c2a1c1ea969b2e21f65b7e2a277aa08d7bb2fd20dba8aecdcf68",
+  "manifestCanonicalJsonSha256": "738bb8398aa6e168223116bd69547d47f9df03ba6bc6523ac073118dee733e60",
+  "questionIndex": "audit/holdout/question-index-v2-r2.json",
+  "questionIndexFileSha256": "65d7a237e468e45953d62fc2e9e7cdf97a28091bfad91af76513baeeb4baea77",
+  "rawReportSource": "outputs/audit/holdout/r2-official-first-run/run-20260922T200018Z.json",
+  "rawReport": "audit/holdout/results/auditor-v1-holdout-v2-r2-first-run.json",
+  "rawReportFileSha256": "ccc30fe1605662110b97fef58ae2846abf7f849e94739fa6c2b7754c72acf23d",
+  "markdownReport": "audit/holdout/results/auditor-v1-holdout-v2-r2-first-run.md",
+  "markdownReportFileSha256": "87177dac9608798f5c992019e103d1676ae3c90f26692a837d38de9381d67cfb",
+  "questions": 144,
+  "executable": 138,
+  "metricsSnapshot": {
+    "questions": 144,
+    "executable": 138,
+    "classes": {
+      "correct": 21,
+      "partial": 12,
+      "safe_abstention": 33,
+      "unsafe_error": 59,
+      "not_applicable": 13,
+      "not_executable": 6
+    },
+    "coverage": 0.8913,
+    "abstention": 0.2391,
+    "questionLevelEmittedPrecision": 0.3708,
+    "optionCount": {
+      "applicable": 122,
+      "emitted": 80,
+      "correct": 24,
+      "precision": 0.3,
+      "coverage": 0.6557,
+      "abstention": 0.3443,
+      "undercount": 5,
+      "overcount": 54
+    },
+    "optionLabels": {
+      "applicable": 122,
+      "emitted": 82,
+      "correct": 81,
+      "precision": 0.9878,
+      "coverage": 0.6721
+    },
+    "unsafeError": 59,
+    "unsafeErrorLowConfidence": 0,
+    "unsafeErrorMediumHighConfidence": 59,
+    "falseConflictRate": 1.0,
+    "conflicts": 15
+  },
+  "groundTruthFrozenBeforeRun": true,
+  "runUsedFrozenGroundTruth": true,
+  "resultFrozenBeforeFailureAnalysis": true,
+  "thresholdTuningBeforeRun": false
+}
