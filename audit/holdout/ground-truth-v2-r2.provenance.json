@@ -1,0 +1,20 @@
+{
+  "artifactType": "holdout-v2-r2-ground-truth-provenance",
+  "protocolVersion": "holdout-v2",
+  "sourceScaffold": "outputs/audit/holdout/ground-truth-v2-r2-scaffold.json",
+  "sourceScaffoldFileSha256": "c0d672429dbe3b883bce2897a40eb4a147c1ce738cd50d047d4311f64bd065ed",
+  "groundTruth": "audit/holdout/ground-truth-v2-r2.json",
+  "groundTruthFileSha256": "c0d672429dbe3b883bce2897a40eb4a147c1ce738cd50d047d4311f64bd065ed",
+  "groundTruthCanonicalJsonSha256": "8c1b61c7fbbb5a8a6031b8056c1f265f97622c2d8dac1a0ae27f6eef66cbfee6",
+  "sourceManifest": "audit/holdout/manifest-v2-b2-r2.json",
+  "sourceManifestFileSha256": "882ef8b49773c2a1c1ea969b2e21f65b7e2a277aa08d7bb2fd20dba8aecdcf68",
+  "questionIndex": "audit/holdout/question-index-v2-r2.json",
+  "questionIndexFileSha256": "65d7a237e468e45953d62fc2e9e7cdf97a28091bfad91af76513baeeb4baea77",
+  "sourceGitCommit": "f98e71db37025602ef7271567b36a36e3bdf875c",
+  "documents": 48,
+  "questions": 144,
+  "annotatedQuestions": 144,
+  "unknownQuestions": 0,
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false
+}

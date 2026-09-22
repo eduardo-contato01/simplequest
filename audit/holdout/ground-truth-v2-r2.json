@@ -1,0 +1,3114 @@
+{
+  "_workingCopy": "Blind structural GT scaffold (R2). Do not run Auditor until annotation is complete.",
+  "protocolVersion": "holdout-v2",
+  "manifestSha256": "738bb8398aa6e168223116bd69547d47f9df03ba6bc6523ac073118dee733e60",
+  "sourceManifestFileSha256": "882ef8b49773c2a1c1ea969b2e21f65b7e2a277aa08d7bb2fd20dba8aecdcf68",
+  "questionIndexFileSha256": "65d7a237e468e45953d62fc2e9e7cdf97a28091bfad91af76513baeeb4baea77",
+  "documentFingerprints": {
+    "doc-001d3fd671db": "001d3fd671db9d12377ba7f45462db120556e7042c96149c561b9e746386f454",
+    "doc-00dc74ed4789": "00dc74ed47894fb542f0a6e3ead48fc7e61c72832d099f37382e79ccf68756c3",
+    "doc-018fde8484ec": "018fde8484ecea5947316f986262119999f51e3906a190ff3fd9372a88d2db17",
+    "doc-05a2dbd5dc88": "05a2dbd5dc88c21e7ced5974eba0d368880f4a6166f8fc369f96911328846d91",
+    "doc-07539ed3ce50": "07539ed3ce505a31373bdc1fe9a37865090de51a11a701a4407e7f4ec9f5ee00",
+    "doc-09ca54b4d723": "09ca54b4d723c2695d819fbc193069cdd3b58bc232f4980b963225a57b42a311",
+    "doc-0ccd40b73099": "0ccd40b7309907d6d2b5d5b709e2b2d4fa5f31c1c70853d79a8d5ebf04e416c5",
+    "doc-0e45d0a32d5d": "0e45d0a32d5d0496aefde88df52b1cc9d73dcdf6aef7417816562c1729db76da",
+    "doc-145e6ae80517": "145e6ae80517852e1a4ad36c924a0d1f0ab7c147a654c9702c2d08a157f8c585",
+    "doc-15804641564a": "15804641564abe312319ee8a0e61b51efd237efb113ed9102c54a40244a3b1b6",
+    "doc-19ff74561345": "19ff7456134502ced8df4db0a5ca75723ca4d09513e979374913de2c15ee8f3f",
+    "doc-1cc59e302f33": "1cc59e302f338c3e8a54dc9a8fd0426b6471e3297b5e557aab881268d646828c",
+    "doc-2db0fa23d7c8": "2db0fa23d7c8af69d4acf0b20012d16f02f173ac6042b55fa31180c69fa5a664",
+    "doc-381cca4d6df1": "381cca4d6df1e9375d481e683f3356acc5fee3a4288b584f48559b939dd42c44",
+    "doc-3abeaa820030": "3abeaa8200303dfe898ad1b33bccf19a62dd60501b6c952b9468fe2cab2bb29b",
+    "doc-416026f09a09": "416026f09a096c7908fb2f76eb8dc3d5dcec433f844d2a87114913c5f8cd2604",
+    "doc-4a0cbad99f17": "4a0cbad99f17f4834a2592af6acf30fcbc4eec6f24b9d51b901cf75ad15979f8",
+    "doc-5303244d2ed3": "5303244d2ed3d4eadf0734b6e2b41e5484172079ebee6a8b3219d027f489d66a",
+    "doc-530c1f0284e3": "530c1f0284e31e818549db207020b078af266b990acd708415e1f09472519ec1",
+    "doc-5b13e6839c6f": "5b13e6839c6f6c5a9d255edb4e26e891b309feca91c9e56647d9d319596e6eb7",
+    "doc-6b61dd9acf63": "6b61dd9acf635cb325bc090afc316662697c9dbc8121bd3ed0f479b8c3b1311e",
+    "doc-6cb109cd9276": "6cb109cd9276a08d524b80b9a52174ec33a52493da45d397322cc5d252b239d0",
+    "doc-7765d0b79b38": "7765d0b79b38f41aac8891493c30ccf7a247adea8102676d076ceb4134e50145",
+    "doc-79dd62d008f6": "79dd62d008f6761f59a837c220109052ae65108c44b0cd12a38bd52a35bf9332",
+    "doc-7a801b1ddbd2": "7a801b1ddbd21bbeec1f585c22a6e9f0486a8a586ec710fb7e4aa8944eb167b2",
+    "doc-7bc527197266": "7bc52719726604c35e209f2434525075c088f5c0748271a8df4b1870ccd7d809",
+    "doc-7edc53bcc309": "7edc53bcc309a038c87d4d547431b6d37dc024e9b168712103ea8b67ecc30f64",
+    "doc-8084259f61f8": "8084259f61f871f2eb872429a93a9e83a8fb929baffe5423cf0ad4d945c6e0f7",
+    "doc-83a6bd21c3df": "83a6bd21c3df255ee6d740dbf972c4bd962285047f7177565131ef6f6e4c3dd1",
+    "doc-875b5be9bc60": "875b5be9bc6028ae80ef50a5d3db1298e09301846742299252c642b9c2828d71",
+    "doc-8d679e7b8193": "8d679e7b8193e823fa8640a0ea42c1742319b6ad050459780b9db95c4b447beb",
+    "doc-98decdcd5e66": "98decdcd5e66b8ba820269d25503d234b9b759062abbe0c2c166badb8548d70f",
+    "doc-9a32009f9e63": "9a32009f9e63aa9bb0c3251b5d0fc5a374eb13421a2d7840341fc18aaf9c9f75",
+    "doc-9e5d2df289e0": "9e5d2df289e0ab3d0ba8e1b1b0a5f9604011e44894cdadfa4bb137ac87ad9cfd",
+    "doc-a03246583c05": "a03246583c05741eee5471bb48b51ab9c655548aaa8b7f3e87c5f1d351ae16f0",
+    "doc-a32f45208796": "a32f45208796acfaaea4182bddb273cd794273716f11608bc011c584b47eb7e8",
+    "doc-b0190dc9aeef": "b0190dc9aeef78743af4bf3f68f0b40b4dbc4edd87db8ed38afd065bccd4b006",
+    "doc-bd94ca1b4e47": "bd94ca1b4e4787c8c25cb4569ded85d9b751e6585e1bf6defb6aee6c39525666",
+    "doc-c494569a6fe7": "c494569a6fe709b6649917e9ffdd99be532ba324ccff7a1d89659f99fcd56261",
+    "doc-c7ae7c1e6646": "c7ae7c1e6646dd6cff02e856a5faaa42cf583ebf204463453c436f2b24c7d1da",
+    "doc-d07b1e894500": "d07b1e8945000086b2ca0f832cda4187505e496422f4eff69e90271f6d8908a0",
+    "doc-da77cb58fe91": "da77cb58fe91c525cf71212752de5e7d2dda1fa753ce92a95ea49467995f7aab",
+    "doc-dbb0fb93b539": "dbb0fb93b539230b669fbc53d48e6b5f1d1aa8e7d092640dc95e6a544c0dcb95",
+    "doc-e240c4d24d4a": "e240c4d24d4a0e2f8293241bd5c88b3d3e7dac1d120a54a96d42b7d2dfdca1b6",
+    "doc-e57019a7359b": "e57019a7359bc982f7ddf64d1e1251070963bff085f32107d3bb94a00ac5a2ce",
+    "doc-f24160c86424": "f24160c86424772296f74d3f39dcea0980f781dbd336a849501d7dc70fadcfb1",
+    "doc-fb15983ac5ea": "fb15983ac5ea9324a6dc099f13662e973908f56b5e37bc4f0d3e219ac22e2c46",
+    "doc-fc9052837176": "fc9052837176dd8db29cad6f199c9c963c25ef3c04bc4fb9e1959e2fc6c8649a"
+  },
+  "questions": [
+    {
+      "documentId": "doc-001d3fd671db",
+      "questionId": "doc-001d3fd671db:q3",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-001d3fd671db",
+      "questionId": "doc-001d3fd671db:q14",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-001d3fd671db",
+      "questionId": "doc-001d3fd671db:q18",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Tirinha usada como estímulo visual da questão."
+    },
+    {
+      "documentId": "doc-00dc74ed4789",
+      "questionId": "doc-00dc74ed4789:q3",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-00dc74ed4789",
+      "questionId": "doc-00dc74ed4789:q13",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questão matemática contextualizada com ilustração de caminhão betoneira; cinco alternativas."
+    },
+    {
+      "documentId": "doc-00dc74ed4789",
+      "questionId": "doc-00dc74ed4789:q18",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": "A folha impressa mostra página 6; página canônica do PDF é 7."
+    },
+    {
+      "documentId": "doc-018fde8484ec",
+      "questionId": "doc-018fde8484ec:q3",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "mixed",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questão matemática com tabela de votação."
+    },
+    {
+      "documentId": "doc-018fde8484ec",
+      "questionId": "doc-018fde8484ec:q19",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-018fde8484ec",
+      "questionId": "doc-018fde8484ec:q32",
+      "pages": [
+        17
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-05a2dbd5dc88",
+      "questionId": "doc-05a2dbd5dc88:q3",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questão restrita à página canônica 3 e usa tabela; a questão 4 começa logo em seguida."
+    },
+    {
+      "documentId": "doc-05a2dbd5dc88",
+      "questionId": "doc-05a2dbd5dc88:q24",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-05a2dbd5dc88",
+      "questionId": "doc-05a2dbd5dc88:q37",
+      "pages": [
+        20
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-07539ed3ce50",
+      "questionId": "doc-07539ed3ce50:q4",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-07539ed3ce50",
+      "questionId": "doc-07539ed3ce50:q10",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 3,
+      "responseControls": null,
+      "layout": "mixed",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Gráfico de setores seguido de três afirmações internas I, II e III e alternativas finais A-E."
+    },
+    {
+      "documentId": "doc-07539ed3ce50",
+      "questionId": "doc-07539ed3ce50:q15",
+      "pages": [
+        19
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questão matemática com figura geométrica."
+    },
+    {
+      "documentId": "doc-09ca54b4d723",
+      "questionId": "doc-09ca54b4d723:q4",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-09ca54b4d723",
+      "questionId": "doc-09ca54b4d723:q11",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-09ca54b4d723",
+      "questionId": "doc-09ca54b4d723:q21",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questão matemática com figura esquemática do cercado."
+    },
+    {
+      "documentId": "doc-0ccd40b73099",
+      "questionId": "doc-0ccd40b73099:q4",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Alternativas no padrão A.( ), cada uma com controle vazio explícito."
+    },
+    {
+      "documentId": "doc-0ccd40b73099",
+      "questionId": "doc-0ccd40b73099:q10",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Cinco alternativas A-E com controles vazios explícitos."
+    },
+    {
+      "documentId": "doc-0ccd40b73099",
+      "questionId": "doc-0ccd40b73099:q14",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Alternativas no padrão A.( ), cada uma com controle vazio explícito."
+    },
+    {
+      "documentId": "doc-0e45d0a32d5d",
+      "questionId": "doc-0e45d0a32d5d:q2",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": 8,
+      "responseControls": 4,
+      "layout": "mixed",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Estrutura interna de correspondência entre oito parágrafos e oito descrições; resposta final escolhida entre quatro sequências A-D no padrão A-( )."
+    },
+    {
+      "documentId": "doc-0e45d0a32d5d",
+      "questionId": "doc-0e45d0a32d5d:q5",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Quatro alternativas A-D no padrão A-( )."
+    },
+    {
+      "documentId": "doc-0e45d0a32d5d",
+      "questionId": "doc-0e45d0a32d5d:q14",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Questão presente apenas na página canônica 9; as páginas 10 e 11 pertencem à produção textual. Quatro alternativas A-D no padrão A-( )."
+    },
+    {
+      "documentId": "doc-145e6ae80517",
+      "questionId": "doc-145e6ae80517:q31",
+      "pages": [
+        4
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento ligado ao texto e às equações químicas precedentes; sem alternativas locais."
+    },
+    {
+      "documentId": "doc-145e6ae80517",
+      "questionId": "doc-145e6ae80517:q83",
+      "pages": [
+        10
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "math",
+      "notes": "Item de julgamento ligado ao contexto matemático precedente; não há alternativas ou controles C/E locais."
+    },
+    {
+      "documentId": "doc-145e6ae80517",
+      "questionId": "doc-145e6ae80517:q113",
+      "pages": [
+        13
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento ligado ao texto, fórmulas e figura precedentes; sem alternativas locais."
+    },
+    {
+      "documentId": "doc-15804641564a",
+      "questionId": "doc-15804641564a:q1",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-15804641564a",
+      "questionId": "doc-15804641564a:q18",
+      "pages": [
+        18
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-15804641564a",
+      "questionId": "doc-15804641564a:q30",
+      "pages": [
+        24
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Questão presente somente na página canônica 24; a página 25 é apenas rascunho."
+    },
+    {
+      "documentId": "doc-19ff74561345",
+      "questionId": "doc-19ff74561345:q3",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "circled_outline",
+      "contentKind": "mixed",
+      "notes": "Questão matemática com figura/grade e alternativas A-E circuladas."
+    },
+    {
+      "documentId": "doc-19ff74561345",
+      "questionId": "doc-19ff74561345:q9",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "circled_outline",
+      "contentKind": "mixed",
+      "notes": "Questão matemática com figura da ampulheta e alternativas A-E circuladas."
+    },
+    {
+      "documentId": "doc-19ff74561345",
+      "questionId": "doc-19ff74561345:q14",
+      "pages": [
+        15
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "circled_outline",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-1cc59e302f33",
+      "questionId": "doc-1cc59e302f33:q24",
+      "pages": [
+        8
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item de julgamento pertencente ao bloco de itens 24 a 26."
+    },
+    {
+      "documentId": "doc-1cc59e302f33",
+      "questionId": "doc-1cc59e302f33:q60",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "circled_filled",
+      "contentKind": "mixed",
+      "notes": "Item do tipo C com quatro alternativas A-D em marcadores circulares preenchidos."
+    },
+    {
+      "documentId": "doc-1cc59e302f33",
+      "questionId": "doc-1cc59e302f33:q111",
+      "pages": [
+        21
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item de julgamento pertencente ao bloco iniciado pelo texto precedente."
+    },
+    {
+      "documentId": "doc-2db0fa23d7c8",
+      "questionId": "doc-2db0fa23d7c8:q5",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-2db0fa23d7c8",
+      "questionId": "doc-2db0fa23d7c8:q11",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questão matemática com gráfico de barras."
+    },
+    {
+      "documentId": "doc-2db0fa23d7c8",
+      "questionId": "doc-2db0fa23d7c8:q20",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questão matemática com regras enumeradas e diagramas de tabuleiro."
+    },
+    {
+      "documentId": "doc-381cca4d6df1",
+      "questionId": "doc-381cca4d6df1:q11",
+      "pages": [
+        11
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-381cca4d6df1",
+      "questionId": "doc-381cca4d6df1:q14",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 5,
+      "responseControls": null,
+      "layout": "mixed",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Cinco afirmações internas I-V antecedem as alternativas finais A-E."
+    },
+    {
+      "documentId": "doc-381cca4d6df1",
+      "questionId": "doc-381cca4d6df1:q38",
+      "pages": [
+        34
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-3abeaa820030",
+      "questionId": "doc-3abeaa820030:q9",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questão com infográfico da Copa do Mundo Feminina. Está somente na página canônica 6; a página 7 já inicia a questão 10."
+    },
+    {
+      "documentId": "doc-3abeaa820030",
+      "questionId": "doc-3abeaa820030:q19",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-3abeaa820030",
+      "questionId": "doc-3abeaa820030:q33",
+      "pages": [
+        17
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-416026f09a09",
+      "questionId": "doc-416026f09a09:q3",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-416026f09a09",
+      "questionId": "doc-416026f09a09:q11",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "mixed",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Cinco alternativas visuais A-E representadas por sólidos."
+    },
+    {
+      "documentId": "doc-416026f09a09",
+      "questionId": "doc-416026f09a09:q17",
+      "pages": [
+        18
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questão baseada no Texto 5 apresentado na própria página."
+    },
+    {
+      "documentId": "doc-4a0cbad99f17",
+      "questionId": "doc-4a0cbad99f17:q6",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questão presente somente na página canônica 4. O texto seguinte ocupa as páginas 5 e 6 e antecede as questões posteriores."
+    },
+    {
+      "documentId": "doc-4a0cbad99f17",
+      "questionId": "doc-4a0cbad99f17:q7",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questão ligada ao texto de receita culinária precedente."
+    },
+    {
+      "documentId": "doc-4a0cbad99f17",
+      "questionId": "doc-4a0cbad99f17:q19",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questão ligada a tira/elemento visual usado como estímulo."
+    },
+    {
+      "documentId": "doc-5303244d2ed3",
+      "questionId": "doc-5303244d2ed3:q3",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 4,
+      "responseControls": null,
+      "layout": "mixed",
+      "markerStyle": "circled_outline",
+      "contentKind": "text",
+      "notes": "Quatro manchetes internas I-IV antecedem as alternativas finais A-E."
+    },
+    {
+      "documentId": "doc-5303244d2ed3",
+      "questionId": "doc-5303244d2ed3:q10",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 3,
+      "responseControls": null,
+      "layout": "mixed",
+      "markerStyle": "circled_outline",
+      "contentKind": "text",
+      "notes": "Três considerações internas I-III antecedem as alternativas finais A-E."
+    },
+    {
+      "documentId": "doc-5303244d2ed3",
+      "questionId": "doc-5303244d2ed3:q14",
+      "pages": [
+        11
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "circled_outline",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-530c1f0284e3",
+      "questionId": "doc-530c1f0284e3:q10",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "Questão baseada em tirinha de três quadrinhos; quatro alternativas finais A-D."
+    },
+    {
+      "documentId": "doc-530c1f0284e3",
+      "questionId": "doc-530c1f0284e3:q24",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": "Questão presente somente na página canônica 12; quatro alternativas finais A-D."
+    },
+    {
+      "documentId": "doc-530c1f0284e3",
+      "questionId": "doc-530c1f0284e3:q31",
+      "pages": [
+        16
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": "Quatro alternativas finais A-D."
+    },
+    {
+      "documentId": "doc-5b13e6839c6f",
+      "questionId": "doc-5b13e6839c6f:q5",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 5,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Cinco afirmações internas numeradas de 1 a 5, seguidas de cinco alternativas finais A-E."
+    },
+    {
+      "documentId": "doc-5b13e6839c6f",
+      "questionId": "doc-5b13e6839c6f:q10",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-5b13e6839c6f",
+      "questionId": "doc-5b13e6839c6f:q16",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Questão presente somente na página canônica 9. O texto precedente termina antes dela e a questão 17 começa posteriormente."
+    },
+    {
+      "documentId": "doc-6b61dd9acf63",
+      "questionId": "doc-6b61dd9acf63:q4",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Quatro alternativas A-D no padrão A-( )."
+    },
+    {
+      "documentId": "doc-6b61dd9acf63",
+      "questionId": "doc-6b61dd9acf63:q9",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Quatro alternativas A-D no padrão A-( )."
+    },
+    {
+      "documentId": "doc-6b61dd9acf63",
+      "questionId": "doc-6b61dd9acf63:q13",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Quatro alternativas A-D no padrão A-( )."
+    },
+    {
+      "documentId": "doc-6cb109cd9276",
+      "questionId": "doc-6cb109cd9276:q8",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questão matemática com elementos gráficos. O question-index R1 registra pageStart=1, mas a verificação humana confirma página canônica 9."
+    },
+    {
+      "documentId": "doc-6cb109cd9276",
+      "questionId": "doc-6cb109cd9276:q21",
+      "pages": [
+        20
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6cb109cd9276",
+      "questionId": "doc-6cb109cd9276:q38",
+      "pages": [
+        25
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-7765d0b79b38",
+      "questionId": "doc-7765d0b79b38:q1:o2",
+      "pages": [
+        2
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item 1 da segunda sequência Q1-Q10 do documento, correspondente ao bloco de língua inglesa. Item de julgamento baseado no texto e imagem precedentes."
+    },
+    {
+      "documentId": "doc-7765d0b79b38",
+      "questionId": "doc-7765d0b79b38:q28",
+      "pages": [
+        7
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item de julgamento ligado ao texto precedente sobre teatro e dramaturgia."
+    },
+    {
+      "documentId": "doc-7765d0b79b38",
+      "questionId": "doc-7765d0b79b38:q95",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "circled_filled",
+      "contentKind": "text",
+      "notes": "Item do tipo C com quatro alternativas A-D em marcadores circulares preenchidos."
+    },
+    {
+      "documentId": "doc-79dd62d008f6",
+      "questionId": "doc-79dd62d008f6:q4",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Cinco alternativas A-E com controle vazio explícito."
+    },
+    {
+      "documentId": "doc-79dd62d008f6",
+      "questionId": "doc-79dd62d008f6:q13",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Cinco alternativas A-E com controle vazio explícito."
+    },
+    {
+      "documentId": "doc-79dd62d008f6",
+      "questionId": "doc-79dd62d008f6:q18",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Cinco alternativas A-E com controle vazio explícito. O Texto 5 mostrado abaixo pertence ao conteúdo seguinte."
+    },
+    {
+      "documentId": "doc-7a801b1ddbd2",
+      "questionId": "doc-7a801b1ddbd2:q5",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-7a801b1ddbd2",
+      "questionId": "doc-7a801b1ddbd2:q11",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-7a801b1ddbd2",
+      "questionId": "doc-7a801b1ddbd2:q20",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-7bc527197266",
+      "questionId": "doc-7bc527197266:q12",
+      "pages": [
+        3
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento pertencente ao bloco sobre modelos atômicos."
+    },
+    {
+      "documentId": "doc-7bc527197266",
+      "questionId": "doc-7bc527197266:q99",
+      "pages": [
+        11
+      ],
+      "responseMode": "numeric",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "none",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item explicitamente identificado na prova como tipo B. Exige transcrição de resultado numérico para a folha de respostas; não possui alternativas."
+    },
+    {
+      "documentId": "doc-7bc527197266",
+      "questionId": "doc-7bc527197266:q110",
+      "pages": [
+        13
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento contendo expressão matemática e gráfico como parte do próprio item."
+    },
+    {
+      "documentId": "doc-7edc53bcc309",
+      "questionId": "doc-7edc53bcc309:q5",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Cinco alternativas A-E com controles vazios explícitos."
+    },
+    {
+      "documentId": "doc-7edc53bcc309",
+      "questionId": "doc-7edc53bcc309:q13",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "mixed",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Questão matemática contextualizada com ilustrações; cinco alternativas A-E com controles vazios explícitos."
+    },
+    {
+      "documentId": "doc-7edc53bcc309",
+      "questionId": "doc-7edc53bcc309:q18",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Questão matemática contextualizada com imagem da Parker Solar Probe e cinco alternativas A-E."
+    },
+    {
+      "documentId": "doc-8084259f61f8",
+      "questionId": "doc-8084259f61f8:q4",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-8084259f61f8",
+      "questionId": "doc-8084259f61f8:q11",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-8084259f61f8",
+      "questionId": "doc-8084259f61f8:q18",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-83a6bd21c3df",
+      "questionId": "doc-83a6bd21c3df:q7",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-83a6bd21c3df",
+      "questionId": "doc-83a6bd21c3df:q12",
+      "pages": [
+        15,
+        16
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "mixed",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questão MASTERcódigo ocupa somente as páginas canônicas 15 e 16. As páginas posteriores não pertencem à questão."
+    },
+    {
+      "documentId": "doc-83a6bd21c3df",
+      "questionId": "doc-83a6bd21c3df:q18",
+      "pages": [
+        21
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 4,
+      "responseControls": 4,
+      "layout": "mixed",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Quatro afirmações internas são julgadas como V/F, mas a resposta final é uma sequência selecionada entre cinco alternativas A-E. A questão está somente na página canônica 21; o texto da página 22 não pertence a ela."
+    },
+    {
+      "documentId": "doc-875b5be9bc60",
+      "questionId": "doc-875b5be9bc60:q2",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Quatro alternativas A-D no padrão A-( )."
+    },
+    {
+      "documentId": "doc-875b5be9bc60",
+      "questionId": "doc-875b5be9bc60:q8",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Quatro alternativas A-D no padrão A-( )."
+    },
+    {
+      "documentId": "doc-875b5be9bc60",
+      "questionId": "doc-875b5be9bc60:q11",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Quatro alternativas A-D no padrão A-( )."
+    },
+    {
+      "documentId": "doc-8d679e7b8193",
+      "questionId": "doc-8d679e7b8193:q26",
+      "pages": [
+        5
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento pertencente ao bloco do experimento de Urey-Miller."
+    },
+    {
+      "documentId": "doc-8d679e7b8193",
+      "questionId": "doc-8d679e7b8193:q95",
+      "pages": [
+        14
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento pertencente ao bloco de movimento em sistema cartesiano."
+    },
+    {
+      "documentId": "doc-8d679e7b8193",
+      "questionId": "doc-8d679e7b8193:q146",
+      "pages": [
+        19
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item de julgamento pertencente ao bloco sobre filosofia, arte e temporalidade."
+    },
+    {
+      "documentId": "doc-98decdcd5e66",
+      "questionId": "doc-98decdcd5e66:q4",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-98decdcd5e66",
+      "questionId": "doc-98decdcd5e66:q7",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-98decdcd5e66",
+      "questionId": "doc-98decdcd5e66:q17",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-9a32009f9e63",
+      "questionId": "doc-9a32009f9e63:q3",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-9a32009f9e63",
+      "questionId": "doc-9a32009f9e63:q9",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-9a32009f9e63",
+      "questionId": "doc-9a32009f9e63:q18",
+      "pages": [
+        18
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 5,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questão de associação com cinco trechos internos, seguida de cinco alternativas finais A-E contendo sequências numéricas."
+    },
+    {
+      "documentId": "doc-9e5d2df289e0",
+      "questionId": "doc-9e5d2df289e0:q5",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "mixed",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questão matemática com figura de pentágono."
+    },
+    {
+      "documentId": "doc-9e5d2df289e0",
+      "questionId": "doc-9e5d2df289e0:q12",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-9e5d2df289e0",
+      "questionId": "doc-9e5d2df289e0:q16",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-a03246583c05",
+      "questionId": "doc-a03246583c05:q2",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-a03246583c05",
+      "questionId": "doc-a03246583c05:q9",
+      "pages": [
+        10,
+        11
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "mixed",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questão começa na página 10 e continua na página 11, onde aparecem a conclusão do enunciado e as alternativas. Usa fotografia e expressões matemáticas."
+    },
+    {
+      "documentId": "doc-a03246583c05",
+      "questionId": "doc-a03246583c05:q21",
+      "pages": [
+        24
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-a32f45208796",
+      "questionId": "doc-a32f45208796:q23",
+      "pages": [
+        7
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item de julgamento pertencente a bloco textual."
+    },
+    {
+      "documentId": "doc-a32f45208796",
+      "questionId": "doc-a32f45208796:q44",
+      "pages": [
+        10
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento relacionado à tirinha apresentada imediatamente acima."
+    },
+    {
+      "documentId": "doc-a32f45208796",
+      "questionId": "doc-a32f45208796:q97",
+      "pages": [
+        17
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "math",
+      "notes": "Item de julgamento pertencente ao bloco sobre velocidade do vento modelada por função trigonométrica."
+    },
+    {
+      "documentId": "doc-b0190dc9aeef",
+      "questionId": "doc-b0190dc9aeef:q11",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": 3,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Três afirmações internas I-III e quatro alternativas finais A-D."
+    },
+    {
+      "documentId": "doc-b0190dc9aeef",
+      "questionId": "doc-b0190dc9aeef:q25",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "mixed",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "Questão baseada em gráfico de faixas etárias; quatro alternativas A-D."
+    },
+    {
+      "documentId": "doc-b0190dc9aeef",
+      "questionId": "doc-b0190dc9aeef:q37",
+      "pages": [
+        16
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "mixed",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": "Questão de decomposição numérica com imagem auxiliar; quatro alternativas A-D."
+    },
+    {
+      "documentId": "doc-bd94ca1b4e47",
+      "questionId": "doc-bd94ca1b4e47:q4",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-bd94ca1b4e47",
+      "questionId": "doc-bd94ca1b4e47:q10",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 6,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Seis acontecimentos internos a ordenar; cinco alternativas finais A-E representam sequências."
+    },
+    {
+      "documentId": "doc-bd94ca1b4e47",
+      "questionId": "doc-bd94ca1b4e47:q14",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-c494569a6fe7",
+      "questionId": "doc-c494569a6fe7:q2",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Quatro alternativas A-D com controles vazios explícitos."
+    },
+    {
+      "documentId": "doc-c494569a6fe7",
+      "questionId": "doc-c494569a6fe7:q7",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Quatro alternativas A-D com controles vazios explícitos."
+    },
+    {
+      "documentId": "doc-c494569a6fe7",
+      "questionId": "doc-c494569a6fe7:q18",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Quatro alternativas A-D com controles vazios explícitos."
+    },
+    {
+      "documentId": "doc-c7ae7c1e6646",
+      "questionId": "doc-c7ae7c1e6646:q5",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "mixed",
+      "markerStyle": "circled_outline",
+      "contentKind": "math",
+      "notes": "Cinco alternativas A-E marcadas por letras em círculos; questão utiliza tabela de preços."
+    },
+    {
+      "documentId": "doc-c7ae7c1e6646",
+      "questionId": "doc-c7ae7c1e6646:q12",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "mixed",
+      "markerStyle": "circled_outline",
+      "contentKind": "mixed",
+      "notes": "Cinco alternativas A-E marcadas por letras em círculos; questão depende de duas representações de relógios."
+    },
+    {
+      "documentId": "doc-c7ae7c1e6646",
+      "questionId": "doc-c7ae7c1e6646:q14",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "circled_outline",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-d07b1e894500",
+      "questionId": "doc-d07b1e894500:q4",
+      "pages": [
+        4,
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "Questão atravessa quebra de página: gráfico e enunciado na página 4; alternativas continuam na página 5."
+    },
+    {
+      "documentId": "doc-d07b1e894500",
+      "questionId": "doc-d07b1e894500:q20",
+      "pages": [
+        14,
+        15
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": "Enunciado começa na página 14 e as alternativas continuam na página 15."
+    },
+    {
+      "documentId": "doc-d07b1e894500",
+      "questionId": "doc-d07b1e894500:q37",
+      "pages": [
+        24,
+        25
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Enunciado começa na página 24 e as alternativas continuam na página 25."
+    },
+    {
+      "documentId": "doc-da77cb58fe91",
+      "questionId": "doc-da77cb58fe91:q7",
+      "pages": [
+        5,
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "Questão atravessa quebra de página. Enunciado começa na página 5; figura, continuação e alternativas estão na página 6."
+    },
+    {
+      "documentId": "doc-da77cb58fe91",
+      "questionId": "doc-da77cb58fe91:q16",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-da77cb58fe91",
+      "questionId": "doc-da77cb58fe91:q28",
+      "pages": [
+        19
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 3,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Três trechos numerados internamente antes das cinco alternativas finais."
+    },
+    {
+      "documentId": "doc-dbb0fb93b539",
+      "questionId": "doc-dbb0fb93b539:q5",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Estrutura de resposta conferida em cópia pública correspondente da mesma prova; página mantida conforme índice canônico R2."
+    },
+    {
+      "documentId": "doc-dbb0fb93b539",
+      "questionId": "doc-dbb0fb93b539:q13",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questão matemática dependente de representação gráfica da logomarca em plano cartesiano."
+    },
+    {
+      "documentId": "doc-dbb0fb93b539",
+      "questionId": "doc-dbb0fb93b539:q20",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-e240c4d24d4a",
+      "questionId": "doc-e240c4d24d4a:q4",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "circled_outline",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-e240c4d24d4a",
+      "questionId": "doc-e240c4d24d4a:q9",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "circled_outline",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-e240c4d24d4a",
+      "questionId": "doc-e240c4d24d4a:q16",
+      "pages": [
+        11
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "circled_outline",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-e57019a7359b",
+      "questionId": "doc-e57019a7359b:q13",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "PDF canônico é a versão digitalizada/fotografada com marcações do candidato; ignorar marcações manuscritas ao descrever a estrutura impressa."
+    },
+    {
+      "documentId": "doc-e57019a7359b",
+      "questionId": "doc-e57019a7359b:q22",
+      "pages": [
+        15
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "PDF canônico é a versão digitalizada/fotografada com marcações do candidato; ignorar marcações manuscritas ao descrever a estrutura impressa."
+    },
+    {
+      "documentId": "doc-e57019a7359b",
+      "questionId": "doc-e57019a7359b:q35",
+      "pages": [
+        22
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "PDF canônico é a versão digitalizada/fotografada com marcações do candidato; ignorar marcações manuscritas ao descrever a estrutura impressa."
+    },
+    {
+      "documentId": "doc-f24160c86424",
+      "questionId": "doc-f24160c86424:q7",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-f24160c86424",
+      "questionId": "doc-f24160c86424:q16",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-f24160c86424",
+      "questionId": "doc-f24160c86424:q29",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": null
+    },
+    {
+      "documentId": "doc-fb15983ac5ea",
+      "questionId": "doc-fb15983ac5ea:q9",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-fb15983ac5ea",
+      "questionId": "doc-fb15983ac5ea:q20",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-fb15983ac5ea",
+      "questionId": "doc-fb15983ac5ea:q25",
+      "pages": [
+        17
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-fc9052837176",
+      "questionId": "doc-fc9052837176:q5",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": null
+    },
+    {
+      "documentId": "doc-fc9052837176",
+      "questionId": "doc-fc9052837176:q9",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": null
+    },
+    {
+      "documentId": "doc-fc9052837176",
+      "questionId": "doc-fc9052837176:q17",
+      "pages": [
+        15
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    }
+  ]
+}
