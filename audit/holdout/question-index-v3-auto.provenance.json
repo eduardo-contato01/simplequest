@@ -1,0 +1,24 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "automatic-neutral-question-index-provenance",
+  "status": "requires_neutral_review",
+  "indexMethodVersion": "neutral-question-index-v1",
+  "sourceManifest": "audit/holdout/manifest-v3-a.json",
+  "sourceManifestFileSha256": "fbcf43201c1984e6b84d70960f10945a249c5b3805bea9492e6f431ed0d4c20a",
+  "rawIndexFile": "audit/holdout/question-index-v3-auto.json",
+  "rawIndexFileSha256": "aabbf4ba4c14f160bc94e1ac6ee73efb7f7ef90c1618dafba0c2bf4d2b60c5a6",
+  "rawIndexCanonicalJsonSha256": "6b73e4c26ce20b84fd3900574af8869b71b3130eabe642bc364ab0e477662e6a",
+  "documents": 48,
+  "detectedQuestions": 1138,
+  "documentsRequiringReview": 38,
+  "documentsWithoutReportedAnomalies": 10,
+  "anomaliesTotal": 670,
+  "anomaliesByType": {
+    "non_monotonic_numbering": 40,
+    "missing_question_number": 391,
+    "unresolved_question_start": 3,
+    "duplicate_question_number": 218,
+    "requires_neutral_verification": 18
+  },
+  "reviewPolicy": "Neutral review may correct question numbering and page boundaries only. Response mode, option count, labels, controls and answer structure are out of scope."
+}

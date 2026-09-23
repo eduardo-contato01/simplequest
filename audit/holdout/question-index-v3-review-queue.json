@@ -1,0 +1,1226 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "neutral-question-index-review-queue",
+  "sourceIndex": "audit/holdout/question-index-v3-auto.json",
+  "sourceIndexFileSha256": "aabbf4ba4c14f160bc94e1ac6ee73efb7f7ef90c1618dafba0c2bf4d2b60c5a6",
+  "documentsRequiringReview": 38,
+  "documents": [
+    {
+      "documentId": "doc-188b8757dfd5",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 1\\PAS 1 - 2011.pdf",
+      "family": "PAS 1",
+      "year": 2011,
+      "sourceType": "text_native",
+      "severity": "critical",
+      "detectedQuestionCount": 22,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 2,
+      "anomalyCount": 9,
+      "anomalyTypes": {
+        "unresolved_question_start": 1,
+        "duplicate_question_number": 1,
+        "non_monotonic_numbering": 6,
+        "requires_neutral_verification": 1
+      },
+      "missingQuestionRanges": [],
+      "duplicateQuestionNumbers": [
+        13
+      ],
+      "nonMonotonicTransitions": [
+        {
+          "from": 57,
+          "to": 54
+        },
+        {
+          "from": 54,
+          "to": 9
+        },
+        {
+          "from": 68,
+          "to": 59
+        },
+        {
+          "from": 85,
+          "to": 10
+        },
+        {
+          "from": 22,
+          "to": 4
+        },
+        {
+          "from": 4,
+          "to": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5ab1bb813119",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMJF\\6º Ano\\CMJF - 6ANO - 2016_2017 (port) (Prova 1).pdf",
+      "family": "CMJF",
+      "year": 2016,
+      "sourceType": "raster",
+      "severity": "critical",
+      "detectedQuestionCount": 7,
+      "detectedFirstQuestion": 4,
+      "detectedLastQuestion": 14,
+      "anomalyCount": 9,
+      "anomalyTypes": {
+        "unresolved_question_start": 1,
+        "non_monotonic_numbering": 1,
+        "missing_question_number": 6,
+        "requires_neutral_verification": 1
+      },
+      "missingQuestionRanges": [
+        "1",
+        "5-7",
+        "11",
+        "13"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": [
+        {
+          "from": 10,
+          "to": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-403fa98cb83a",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMC\\6º Ano\\CMC - 6ANO - 2009_2010 (port).pdf",
+      "family": "CMC",
+      "year": 2009,
+      "sourceType": "raster",
+      "severity": "critical",
+      "detectedQuestionCount": 5,
+      "detectedFirstQuestion": 30,
+      "detectedLastQuestion": 12,
+      "anomalyCount": 6,
+      "anomalyTypes": {
+        "unresolved_question_start": 1,
+        "duplicate_question_number": 2,
+        "non_monotonic_numbering": 1,
+        "missing_question_number": 1,
+        "requires_neutral_verification": 1
+      },
+      "missingQuestionRanges": [
+        "1"
+      ],
+      "duplicateQuestionNumbers": [
+        1
+      ],
+      "nonMonotonicTransitions": [
+        {
+          "from": 30,
+          "to": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9b9057e500c7",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\VESTIBULAR_UNB\\VEST UnB 2013.pdf",
+      "family": "VESTIBULAR_UNB",
+      "year": 2013,
+      "sourceType": "text_native",
+      "severity": "high",
+      "detectedQuestionCount": 56,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 150,
+      "anomalyCount": 99,
+      "anomalyTypes": {
+        "duplicate_question_number": 2,
+        "non_monotonic_numbering": 2,
+        "missing_question_number": 94,
+        "requires_neutral_verification": 1
+      },
+      "missingQuestionRanges": [
+        "5-16",
+        "22",
+        "24-36",
+        "41-47",
+        "49-65",
+        "72-73",
+        "78-83",
+        "91",
+        "98-120",
+        "124-131",
+        "134-136",
+        "144"
+      ],
+      "duplicateQuestionNumbers": [
+        1,
+        121
+      ],
+      "nonMonotonicTransitions": [
+        {
+          "from": 23,
+          "to": 17
+        },
+        {
+          "from": 143,
+          "to": 137
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1967252ced29",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 1\\PAS 1 - 2019.pdf",
+      "family": "PAS 1",
+      "year": 2019,
+      "sourceType": "text_native",
+      "severity": "high",
+      "detectedQuestionCount": 24,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 98,
+      "anomalyCount": 81,
+      "anomalyTypes": {
+        "duplicate_question_number": 4,
+        "non_monotonic_numbering": 2,
+        "missing_question_number": 74,
+        "requires_neutral_verification": 1
+      },
+      "missingQuestionRanges": [
+        "9",
+        "11-12",
+        "14-44",
+        "47-48",
+        "56",
+        "59-76",
+        "78-87",
+        "89-97"
+      ],
+      "duplicateQuestionNumbers": [
+        1,
+        7,
+        10,
+        77
+      ],
+      "nonMonotonicTransitions": [
+        {
+          "from": 10,
+          "to": 4
+        },
+        {
+          "from": 54,
+          "to": 49
+        }
+      ]
+    },
+    {
+      "documentId": "doc-45025ec5b48c",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 3\\PAS 3 - 2023.pdf",
+      "family": "PAS 3",
+      "year": 2023,
+      "sourceType": "text_native",
+      "severity": "high",
+      "detectedQuestionCount": 26,
+      "detectedFirstQuestion": 27,
+      "detectedLastQuestion": 114,
+      "anomalyCount": 68,
+      "anomalyTypes": {
+        "non_monotonic_numbering": 3,
+        "missing_question_number": 64,
+        "requires_neutral_verification": 1
+      },
+      "missingQuestionRanges": [
+        "1",
+        "32-40",
+        "46-81",
+        "89-103",
+        "109-111"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": [
+        {
+          "from": 44,
+          "to": 41
+        },
+        {
+          "from": 45,
+          "to": 2
+        },
+        {
+          "from": 113,
+          "to": 107
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1f0fe9f00a73",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\VESTIBULAR_UNB\\VEST UnB 2015.pdf",
+      "family": "VESTIBULAR_UNB",
+      "year": 2015,
+      "sourceType": "hybrid",
+      "severity": "high",
+      "detectedQuestionCount": 91,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 142,
+      "anomalyCount": 66,
+      "anomalyTypes": {
+        "duplicate_question_number": 9,
+        "non_monotonic_numbering": 6,
+        "missing_question_number": 51
+      },
+      "missingQuestionRanges": [
+        "8-11",
+        "19-43",
+        "52-55",
+        "61-62",
+        "88-99",
+        "104-106",
+        "135"
+      ],
+      "duplicateQuestionNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        12
+      ],
+      "nonMonotonicTransitions": [
+        {
+          "from": 7,
+          "to": 3
+        },
+        {
+          "from": 18,
+          "to": 12
+        },
+        {
+          "from": 51,
+          "to": 44
+        },
+        {
+          "from": 74,
+          "to": 68
+        },
+        {
+          "from": 111,
+          "to": 107
+        },
+        {
+          "from": 134,
+          "to": 128
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e3dd87b27a53",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\TODAS CM'S JUNTAS POR ANO\\CM's 2025-2026 (Português) - 6º ANO.pdf",
+      "family": "TODAS CM'S JUNTAS POR ANO",
+      "year": 2025,
+      "sourceType": "hybrid",
+      "severity": "high",
+      "detectedQuestionCount": 23,
+      "detectedFirstQuestion": 21,
+      "detectedLastQuestion": 14,
+      "anomalyCount": 62,
+      "anomalyTypes": {
+        "duplicate_question_number": 60,
+        "non_monotonic_numbering": 1,
+        "missing_question_number": 1
+      },
+      "missingQuestionRanges": [
+        "1"
+      ],
+      "duplicateQuestionNumbers": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "nonMonotonicTransitions": [
+        {
+          "from": 40,
+          "to": 3
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8fd0e13b7394",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMRJ\\1º Ano\\CMRJ - 1ANO - 2017_2018 (port).pdf",
+      "family": "CMRJ",
+      "year": 2017,
+      "sourceType": "text_native",
+      "severity": "high",
+      "detectedQuestionCount": 29,
+      "detectedFirstQuestion": 22,
+      "detectedLastQuestion": 19,
+      "anomalyCount": 53,
+      "anomalyTypes": {
+        "duplicate_question_number": 48,
+        "non_monotonic_numbering": 3,
+        "missing_question_number": 1,
+        "requires_neutral_verification": 1
+      },
+      "missingQuestionRanges": [
+        "1"
+      ],
+      "duplicateQuestionNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40
+      ],
+      "nonMonotonicTransitions": [
+        {
+          "from": 22,
+          "to": 1
+        },
+        {
+          "from": 40,
+          "to": 2
+        },
+        {
+          "from": 60,
+          "to": 12
+        }
+      ]
+    },
+    {
+      "documentId": "doc-382419106b57",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMC\\6º Ano\\CMC - 6ANO - 2019_2020 (port).pdf",
+      "family": "CMC",
+      "year": 2019,
+      "sourceType": "text_native",
+      "severity": "high",
+      "detectedQuestionCount": 25,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 26,
+      "anomalyCount": 30,
+      "anomalyTypes": {
+        "duplicate_question_number": 25,
+        "non_monotonic_numbering": 2,
+        "missing_question_number": 3
+      },
+      "missingQuestionRanges": [
+        "8",
+        "22-23"
+      ],
+      "duplicateQuestionNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        20,
+        25,
+        30,
+        35
+      ],
+      "nonMonotonicTransitions": [
+        {
+          "from": 35,
+          "to": 24
+        },
+        {
+          "from": 24,
+          "to": 16
+        }
+      ]
+    },
+    {
+      "documentId": "doc-bb2d8abd32d4",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMC\\6º Ano\\CMC - 6ANO - 2013_2014 (mat).pdf",
+      "family": "CMC",
+      "year": 2013,
+      "sourceType": "text_native",
+      "severity": "high",
+      "detectedQuestionCount": 28,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 30,
+      "anomalyCount": 15,
+      "anomalyTypes": {
+        "requires_neutral_verification": 1,
+        "duplicate_question_number": 12,
+        "missing_question_number": 2
+      },
+      "missingQuestionRanges": [
+        "14",
+        "21"
+      ],
+      "duplicateQuestionNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-bc9b2cef859e",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMS\\6º Ano\\CMS - 6ANO - 2024_2025.pdf",
+      "family": "CMS",
+      "year": 2024,
+      "sourceType": "text_native",
+      "severity": "high",
+      "detectedQuestionCount": 39,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 40,
+      "anomalyCount": 13,
+      "anomalyTypes": {
+        "duplicate_question_number": 9,
+        "non_monotonic_numbering": 2,
+        "missing_question_number": 2
+      },
+      "missingQuestionRanges": [
+        "33",
+        "36"
+      ],
+      "duplicateQuestionNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        10,
+        12,
+        13
+      ],
+      "nonMonotonicTransitions": [
+        {
+          "from": 13,
+          "to": 6
+        },
+        {
+          "from": 44,
+          "to": 21
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f707c87d4d0e",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMCG\\6º Ano\\CMCG - 6ANO - 2024_2025.pdf",
+      "family": "CMCG",
+      "year": 2024,
+      "sourceType": "text_native",
+      "severity": "high",
+      "detectedQuestionCount": 36,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 40,
+      "anomalyCount": 13,
+      "anomalyTypes": {
+        "duplicate_question_number": 8,
+        "non_monotonic_numbering": 1,
+        "missing_question_number": 4
+      },
+      "missingQuestionRanges": [
+        "16",
+        "27",
+        "31",
+        "34"
+      ],
+      "duplicateQuestionNumbers": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        9,
+        10
+      ],
+      "nonMonotonicTransitions": [
+        {
+          "from": 10,
+          "to": 5
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f0b208eead34",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMT\\6º Ano\\CMT - 6ANO - 2018_2019.pdf",
+      "family": "CMT",
+      "year": 2018,
+      "sourceType": "text_native",
+      "severity": "high",
+      "detectedQuestionCount": 15,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 16,
+      "anomalyCount": 12,
+      "anomalyTypes": {
+        "duplicate_question_number": 10,
+        "non_monotonic_numbering": 1,
+        "missing_question_number": 1
+      },
+      "missingQuestionRanges": [
+        "7"
+      ],
+      "duplicateQuestionNumbers": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        9,
+        11,
+        12,
+        14,
+        15
+      ],
+      "nonMonotonicTransitions": [
+        {
+          "from": 15,
+          "to": 10
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e623f0284632",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMB\\6º Ano\\CMB - 6ANO - 2023_2024.pdf",
+      "family": "CMB",
+      "year": 2023,
+      "sourceType": "raster",
+      "severity": "high",
+      "detectedQuestionCount": 30,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 39,
+      "anomalyCount": 10,
+      "anomalyTypes": {
+        "duplicate_question_number": 1,
+        "missing_question_number": 9
+      },
+      "missingQuestionRanges": [
+        "3",
+        "12",
+        "15",
+        "24",
+        "32-33",
+        "36-38"
+      ],
+      "duplicateQuestionNumbers": [
+        8
+      ],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-21b1367493fe",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMCG\\6º Ano\\CMCG - 6ANO - 2018_2019 (mat).pdf",
+      "family": "CMCG",
+      "year": 2018,
+      "sourceType": "raster",
+      "severity": "high",
+      "detectedQuestionCount": 13,
+      "detectedFirstQuestion": 2,
+      "detectedLastQuestion": 20,
+      "anomalyCount": 9,
+      "anomalyTypes": {
+        "requires_neutral_verification": 2,
+        "missing_question_number": 7
+      },
+      "missingQuestionRanges": [
+        "1",
+        "3",
+        "7-8",
+        "11-12",
+        "15"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-e981c0dce132",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSM\\1º Ano\\CMSM - 1ANO - 2017_2018 (port).pdf",
+      "family": "CMSM",
+      "year": 2017,
+      "sourceType": "raster",
+      "severity": "high",
+      "detectedQuestionCount": 16,
+      "detectedFirstQuestion": 2,
+      "detectedLastQuestion": 20,
+      "anomalyCount": 9,
+      "anomalyTypes": {
+        "duplicate_question_number": 4,
+        "non_monotonic_numbering": 1,
+        "missing_question_number": 4
+      },
+      "missingQuestionRanges": [
+        "1",
+        "7",
+        "15",
+        "19"
+      ],
+      "duplicateQuestionNumbers": [
+        9,
+        12,
+        13,
+        14
+      ],
+      "nonMonotonicTransitions": [
+        {
+          "from": 14,
+          "to": 5
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3c4434b96a50",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSM\\1º Ano\\CMSM - 1ANO - 2021_2022.pdf",
+      "family": "CMSM",
+      "year": 2021,
+      "sourceType": "raster",
+      "severity": "high",
+      "detectedQuestionCount": 18,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 24,
+      "anomalyCount": 8,
+      "anomalyTypes": {
+        "requires_neutral_verification": 2,
+        "missing_question_number": 6
+      },
+      "missingQuestionRanges": [
+        "2",
+        "7",
+        "10-11",
+        "18",
+        "22"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-75e67e4e308f",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMRJ\\6º Ano\\CMRJ - 6ANO - 2014_2015 (mat).pdf",
+      "family": "CMRJ",
+      "year": 2014,
+      "sourceType": "text_native",
+      "severity": "high",
+      "detectedQuestionCount": 20,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 20,
+      "anomalyCount": 8,
+      "anomalyTypes": {
+        "requires_neutral_verification": 1,
+        "duplicate_question_number": 7
+      },
+      "missingQuestionRanges": [],
+      "duplicateQuestionNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-7e21d913377b",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMJF\\1º Ano\\CMJF - 1ANO - 2012_2013 (mat) (Prova 1).pdf",
+      "family": "CMJF",
+      "year": 2012,
+      "sourceType": "raster",
+      "severity": "high",
+      "detectedQuestionCount": 14,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 20,
+      "anomalyCount": 8,
+      "anomalyTypes": {
+        "requires_neutral_verification": 2,
+        "missing_question_number": 6
+      },
+      "missingQuestionRanges": [
+        "2",
+        "7",
+        "12",
+        "16-17",
+        "19"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-a218bd48a3eb",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMF\\1º Ano\\CMF - 1ANO - 2019_2020 (mat).pdf",
+      "family": "CMF",
+      "year": 2019,
+      "sourceType": "text_native",
+      "severity": "high",
+      "detectedQuestionCount": 12,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 19,
+      "anomalyCount": 8,
+      "anomalyTypes": {
+        "missing_question_number": 7,
+        "requires_neutral_verification": 1
+      },
+      "missingQuestionRanges": [
+        "3-4",
+        "11-12",
+        "14-16"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-6fc18179cbc1",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMRJ\\1º Ano\\CMRJ - 1ANO - 2013_2014 (port).pdf",
+      "family": "CMRJ",
+      "year": 2013,
+      "sourceType": "text_native",
+      "severity": "high",
+      "detectedQuestionCount": 17,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 20,
+      "anomalyCount": 7,
+      "anomalyTypes": {
+        "duplicate_question_number": 3,
+        "non_monotonic_numbering": 1,
+        "missing_question_number": 3
+      },
+      "missingQuestionRanges": [
+        "12-14"
+      ],
+      "duplicateQuestionNumbers": [
+        2,
+        5,
+        10
+      ],
+      "nonMonotonicTransitions": [
+        {
+          "from": 10,
+          "to": 9
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c7f2f02d07ca",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMC\\1º Ano\\CMC - 1ANO - 2019_2020 (port).pdf",
+      "family": "CMC",
+      "year": 2019,
+      "sourceType": "text_native",
+      "severity": "high",
+      "detectedQuestionCount": 21,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 21,
+      "anomalyCount": 7,
+      "anomalyTypes": {
+        "requires_neutral_verification": 1,
+        "duplicate_question_number": 5,
+        "non_monotonic_numbering": 1
+      },
+      "missingQuestionRanges": [],
+      "duplicateQuestionNumbers": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "nonMonotonicTransitions": [
+        {
+          "from": 9,
+          "to": 8
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d452c3def3e5",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 2\\PAS 2 - 2017.pdf",
+      "family": "PAS 2",
+      "year": 2017,
+      "sourceType": "text_native",
+      "severity": "high",
+      "detectedQuestionCount": 25,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 3,
+      "anomalyCount": 7,
+      "anomalyTypes": {
+        "duplicate_question_number": 3,
+        "non_monotonic_numbering": 3,
+        "requires_neutral_verification": 1
+      },
+      "missingQuestionRanges": [],
+      "duplicateQuestionNumbers": [
+        1,
+        45
+      ],
+      "nonMonotonicTransitions": [
+        {
+          "from": 49,
+          "to": 10
+        },
+        {
+          "from": 13,
+          "to": 5
+        },
+        {
+          "from": 98,
+          "to": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6d3454d4a7b8",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMT\\6º Ano\\CMT - 6ANO - 2024_2025.pdf",
+      "family": "CMT",
+      "year": 2024,
+      "sourceType": "text_native",
+      "severity": "high",
+      "detectedQuestionCount": 15,
+      "detectedFirstQuestion": 5,
+      "detectedLastQuestion": 14,
+      "anomalyCount": 6,
+      "anomalyTypes": {
+        "duplicate_question_number": 3,
+        "non_monotonic_numbering": 2,
+        "missing_question_number": 1
+      },
+      "missingQuestionRanges": [
+        "1"
+      ],
+      "duplicateQuestionNumbers": [
+        4,
+        5,
+        8
+      ],
+      "nonMonotonicTransitions": [
+        {
+          "from": 5,
+          "to": 4
+        },
+        {
+          "from": 29,
+          "to": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-537ca397c1da",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMR\\6º Ano\\CMR - 6ANO - 2012_2013 (port).pdf",
+      "family": "CMR",
+      "year": 2012,
+      "sourceType": "text_native",
+      "severity": "high",
+      "detectedQuestionCount": 19,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 20,
+      "anomalyCount": 3,
+      "anomalyTypes": {
+        "duplicate_question_number": 2,
+        "missing_question_number": 1
+      },
+      "missingQuestionRanges": [
+        "18"
+      ],
+      "duplicateQuestionNumbers": [
+        1,
+        15
+      ],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-017f1b3fd833",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMT\\1º Ano\\CMT - 1ANO - 2023_2024.pdf",
+      "family": "CMT",
+      "year": 2023,
+      "sourceType": "text_native",
+      "severity": "high",
+      "detectedQuestionCount": 15,
+      "detectedFirstQuestion": 17,
+      "detectedLastQuestion": 14,
+      "anomalyCount": 2,
+      "anomalyTypes": {
+        "non_monotonic_numbering": 1,
+        "missing_question_number": 1
+      },
+      "missingQuestionRanges": [
+        "1"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": [
+        {
+          "from": 17,
+          "to": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8f045d628a3b",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBH\\6º Ano\\CMBH - 6ANO - 2024_2025.pdf",
+      "family": "CMBH",
+      "year": 2024,
+      "sourceType": "raster",
+      "severity": "medium",
+      "detectedQuestionCount": 29,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 37,
+      "anomalyCount": 8,
+      "anomalyTypes": {
+        "missing_question_number": 8
+      },
+      "missingQuestionRanges": [
+        "21-24",
+        "29-30",
+        "32-33"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-a69802d8aa53",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMPA\\1º Ano\\CMPA - 1ANO - 2019_2020 (port).pdf",
+      "family": "CMPA",
+      "year": 2019,
+      "sourceType": "raster",
+      "severity": "medium",
+      "detectedQuestionCount": 14,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 20,
+      "anomalyCount": 6,
+      "anomalyTypes": {
+        "missing_question_number": 6
+      },
+      "missingQuestionRanges": [
+        "5",
+        "7-8",
+        "11",
+        "15-16"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-ce6f77f83acf",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMB\\1º Ano\\CMB - 1ANO - 2020_2021.pdf",
+      "family": "CMB",
+      "year": 2020,
+      "sourceType": "raster",
+      "severity": "medium",
+      "detectedQuestionCount": 13,
+      "detectedFirstQuestion": 4,
+      "detectedLastQuestion": 21,
+      "anomalyCount": 6,
+      "anomalyTypes": {
+        "missing_question_number": 6
+      },
+      "missingQuestionRanges": [
+        "1",
+        "15-17",
+        "19-20"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-2f4df1da2128",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBel\\6º Ano\\CMBel - 6ANO - 2017_2018 (port).pdf",
+      "family": "CMBel",
+      "year": 2017,
+      "sourceType": "raster",
+      "severity": "medium",
+      "detectedQuestionCount": 13,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 18,
+      "anomalyCount": 5,
+      "anomalyTypes": {
+        "missing_question_number": 5
+      },
+      "missingQuestionRanges": [
+        "5-6",
+        "9",
+        "12-13"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-77742da9fa12",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBel\\1º Ano\\CMBel - 1ANO - 2019_2020 (mat).pdf",
+      "family": "CMBel",
+      "year": 2019,
+      "sourceType": "raster",
+      "severity": "medium",
+      "detectedQuestionCount": 16,
+      "detectedFirstQuestion": 2,
+      "detectedLastQuestion": 20,
+      "anomalyCount": 4,
+      "anomalyTypes": {
+        "missing_question_number": 4
+      },
+      "missingQuestionRanges": [
+        "1",
+        "4-5",
+        "14"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-106d9cb7c4ac",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSM\\6º Ano\\CMSM - 6ANO - 2007_2008 (mat).pdf",
+      "family": "CMSM",
+      "year": 2007,
+      "sourceType": "text_native",
+      "severity": "medium",
+      "detectedQuestionCount": 17,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 20,
+      "anomalyCount": 3,
+      "anomalyTypes": {
+        "missing_question_number": 3
+      },
+      "missingQuestionRanges": [
+        "4",
+        "13",
+        "18"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-273eb386d3ec",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBel\\6º Ano\\CMBel - 6ANO - 2020_2021.pdf",
+      "family": "CMBel",
+      "year": 2020,
+      "sourceType": "raster",
+      "severity": "medium",
+      "detectedQuestionCount": 20,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 23,
+      "anomalyCount": 3,
+      "anomalyTypes": {
+        "missing_question_number": 3
+      },
+      "missingQuestionRanges": [
+        "2",
+        "11",
+        "16"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-186673c8476d",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMB\\1º Ano\\CMB - 1ANO - 2018_2019 (mat).pdf",
+      "family": "CMB",
+      "year": 2018,
+      "sourceType": "raster",
+      "severity": "medium",
+      "detectedQuestionCount": 18,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 20,
+      "anomalyCount": 2,
+      "anomalyTypes": {
+        "missing_question_number": 2
+      },
+      "missingQuestionRanges": [
+        "10",
+        "15"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-80a2d526fe20",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMJF\\1º Ano\\CMJF - 1ANO - 2017_2018 (mat) (Prova 1).pdf",
+      "family": "CMJF",
+      "year": 2017,
+      "sourceType": "raster",
+      "severity": "medium",
+      "detectedQuestionCount": 18,
+      "detectedFirstQuestion": 2,
+      "detectedLastQuestion": 20,
+      "anomalyCount": 2,
+      "anomalyTypes": {
+        "missing_question_number": 2
+      },
+      "missingQuestionRanges": [
+        "1",
+        "11"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-c46447811fd3",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMF\\1º Ano\\CMF - 1ANO - 2022_2023.pdf",
+      "family": "CMF",
+      "year": 2022,
+      "sourceType": "text_native",
+      "severity": "medium",
+      "detectedQuestionCount": 28,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 30,
+      "anomalyCount": 2,
+      "anomalyTypes": {
+        "missing_question_number": 2
+      },
+      "missingQuestionRanges": [
+        "21",
+        "25"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": []
+    },
+    {
+      "documentId": "doc-3402d1263b7e",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSP\\6º Ano\\CMSP - 6ANO - 2020_2021.pdf",
+      "family": "CMSP",
+      "year": 2020,
+      "sourceType": "text_native",
+      "severity": "medium",
+      "detectedQuestionCount": 23,
+      "detectedFirstQuestion": 1,
+      "detectedLastQuestion": 24,
+      "anomalyCount": 1,
+      "anomalyTypes": {
+        "missing_question_number": 1
+      },
+      "missingQuestionRanges": [
+        "3"
+      ],
+      "duplicateQuestionNumbers": [],
+      "nonMonotonicTransitions": []
+    }
+  ]
+}
