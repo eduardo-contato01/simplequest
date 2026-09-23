@@ -1,0 +1,875 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "neutral-question-index-adjudication",
+  "adjudicationVersion": 1,
+  "scope": "question_numbering_and_page_boundaries_only",
+  "sourceIndex": "audit/holdout/question-index-v3-auto.json",
+  "sourceIndexFileSha256": "aabbf4ba4c14f160bc94e1ac6ee73efb7f7ef90c1618dafba0c2bf4d2b60c5a6",
+  "sourceReviewQueue": "audit/holdout/question-index-v3-review-queue.json",
+  "sourceReviewQueueFileSha256": "6ffb027dcd178f4ee4cb5c499a86120c20918a8d80f3f8bc45611fb87e54e9d0",
+  "resolvedSeverity": "critical",
+  "resolvedDocuments": 3,
+  "decisions": [
+    {
+      "documentId": "doc-403fa98cb83a",
+      "status": "resolved",
+      "basis": "manual_visual_review_of_canonical_pdf",
+      "notes": [
+        "Questions 1-21 are the objective question sequence.",
+        "Page 2 is shared source text and is not assigned as the start of a single question.",
+        "Page 7 contains the writing proposal and a numbered answer draft; those numbers are not question starts."
+      ],
+      "questions": [
+        {
+          "questionId": "doc-403fa98cb83a:q1",
+          "questionNumber": 1,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q2",
+          "questionNumber": 2,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q3",
+          "questionNumber": 3,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q4",
+          "questionNumber": 4,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q5",
+          "questionNumber": 5,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q6",
+          "questionNumber": 6,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q7",
+          "questionNumber": 7,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q8",
+          "questionNumber": 8,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q9",
+          "questionNumber": 9,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q10",
+          "questionNumber": 10,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q11",
+          "questionNumber": 11,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q12",
+          "questionNumber": 12,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q13",
+          "questionNumber": 13,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q14",
+          "questionNumber": 14,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q15",
+          "questionNumber": 15,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q16",
+          "questionNumber": 16,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q17",
+          "questionNumber": 17,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q18",
+          "questionNumber": 18,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q19",
+          "questionNumber": 19,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q20",
+          "questionNumber": 20,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-403fa98cb83a:q21",
+          "questionNumber": 21,
+          "pageStart": 6,
+          "pageEnd": 6
+        }
+      ],
+      "contentFingerprint": "403fa98cb83a510c0b9d94403b2e1017b1415cd9d735cc17d27b0b20507eac4f"
+    },
+    {
+      "documentId": "doc-5ab1bb813119",
+      "status": "resolved",
+      "basis": "manual_visual_review_of_canonical_pdf",
+      "notes": [
+        "Questions 1-14 are the objective question sequence.",
+        "Pages 2-4 contain shared source texts before the numbered questions.",
+        "Page 8 is the writing task and page 9 is a numbered writing draft; neither creates objective questions."
+      ],
+      "questions": [
+        {
+          "questionId": "doc-5ab1bb813119:q1",
+          "questionNumber": 1,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-5ab1bb813119:q2",
+          "questionNumber": 2,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-5ab1bb813119:q3",
+          "questionNumber": 3,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-5ab1bb813119:q4",
+          "questionNumber": 4,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-5ab1bb813119:q5",
+          "questionNumber": 5,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-5ab1bb813119:q6",
+          "questionNumber": 6,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-5ab1bb813119:q7",
+          "questionNumber": 7,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-5ab1bb813119:q8",
+          "questionNumber": 8,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-5ab1bb813119:q9",
+          "questionNumber": 9,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-5ab1bb813119:q10",
+          "questionNumber": 10,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-5ab1bb813119:q11",
+          "questionNumber": 11,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-5ab1bb813119:q12",
+          "questionNumber": 12,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-5ab1bb813119:q13",
+          "questionNumber": 13,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-5ab1bb813119:q14",
+          "questionNumber": 14,
+          "pageStart": 7,
+          "pageEnd": 7
+        }
+      ],
+      "contentFingerprint": "5ab1bb813119938507bdbe00b707d4a62af36cd1dbc567bcb04843c928a1270c"
+    },
+    {
+      "documentId": "doc-188b8757dfd5",
+      "status": "resolved",
+      "basis": "manual_visual_review_of_canonical_pdf",
+      "canonicalOccurrencePolicy": "For duplicated foreign-language versions of questions 1-10, the first physical sequence in the PDF is used as the canonical occurrence.",
+      "notes": [
+        "Questions 1-10 appear in Spanish, French and English versions.",
+        "The first physical occurrence on page 2 is retained as the canonical question sequence.",
+        "Pages 3 and 4 repeat questions 1-10 in alternate languages and do not create additional question IDs.",
+        "Page 18 is the writing task, page 19 is writing draft space, and page 20 is reference material."
+      ],
+      "questions": [
+        {
+          "questionId": "doc-188b8757dfd5:q1",
+          "questionNumber": 1,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q2",
+          "questionNumber": 2,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q3",
+          "questionNumber": 3,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q4",
+          "questionNumber": 4,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q5",
+          "questionNumber": 5,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q6",
+          "questionNumber": 6,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q7",
+          "questionNumber": 7,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q8",
+          "questionNumber": 8,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q9",
+          "questionNumber": 9,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q10",
+          "questionNumber": 10,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q11",
+          "questionNumber": 11,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q12",
+          "questionNumber": 12,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q13",
+          "questionNumber": 13,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q14",
+          "questionNumber": 14,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q15",
+          "questionNumber": 15,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q16",
+          "questionNumber": 16,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q17",
+          "questionNumber": 17,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q18",
+          "questionNumber": 18,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q19",
+          "questionNumber": 19,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q20",
+          "questionNumber": 20,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q21",
+          "questionNumber": 21,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q22",
+          "questionNumber": 22,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q23",
+          "questionNumber": 23,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q24",
+          "questionNumber": 24,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q25",
+          "questionNumber": 25,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q26",
+          "questionNumber": 26,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q27",
+          "questionNumber": 27,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q28",
+          "questionNumber": 28,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q29",
+          "questionNumber": 29,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q30",
+          "questionNumber": 30,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q31",
+          "questionNumber": 31,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q32",
+          "questionNumber": 32,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q33",
+          "questionNumber": 33,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q34",
+          "questionNumber": 34,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q35",
+          "questionNumber": 35,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q36",
+          "questionNumber": 36,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q37",
+          "questionNumber": 37,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q38",
+          "questionNumber": 38,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q39",
+          "questionNumber": 39,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q40",
+          "questionNumber": 40,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q41",
+          "questionNumber": 41,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q42",
+          "questionNumber": 42,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q43",
+          "questionNumber": 43,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q44",
+          "questionNumber": 44,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q45",
+          "questionNumber": 45,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q46",
+          "questionNumber": 46,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q47",
+          "questionNumber": 47,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q48",
+          "questionNumber": 48,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q49",
+          "questionNumber": 49,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q50",
+          "questionNumber": 50,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q51",
+          "questionNumber": 51,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q52",
+          "questionNumber": 52,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q53",
+          "questionNumber": 53,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q54",
+          "questionNumber": 54,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q55",
+          "questionNumber": 55,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q56",
+          "questionNumber": 56,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q57",
+          "questionNumber": 57,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q58",
+          "questionNumber": 58,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q59",
+          "questionNumber": 59,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q60",
+          "questionNumber": 60,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q61",
+          "questionNumber": 61,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q62",
+          "questionNumber": 62,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q63",
+          "questionNumber": 63,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q64",
+          "questionNumber": 64,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q65",
+          "questionNumber": 65,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q66",
+          "questionNumber": 66,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q67",
+          "questionNumber": 67,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q68",
+          "questionNumber": 68,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q69",
+          "questionNumber": 69,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q70",
+          "questionNumber": 70,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q71",
+          "questionNumber": 71,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q72",
+          "questionNumber": 72,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q73",
+          "questionNumber": 73,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q74",
+          "questionNumber": 74,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q75",
+          "questionNumber": 75,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q76",
+          "questionNumber": 76,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q77",
+          "questionNumber": 77,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q78",
+          "questionNumber": 78,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q79",
+          "questionNumber": 79,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q80",
+          "questionNumber": 80,
+          "pageStart": 14,
+          "pageEnd": 14
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q81",
+          "questionNumber": 81,
+          "pageStart": 14,
+          "pageEnd": 14
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q82",
+          "questionNumber": 82,
+          "pageStart": 14,
+          "pageEnd": 14
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q83",
+          "questionNumber": 83,
+          "pageStart": 14,
+          "pageEnd": 14
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q84",
+          "questionNumber": 84,
+          "pageStart": 14,
+          "pageEnd": 14
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q85",
+          "questionNumber": 85,
+          "pageStart": 15,
+          "pageEnd": 15
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q86",
+          "questionNumber": 86,
+          "pageStart": 15,
+          "pageEnd": 15
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q87",
+          "questionNumber": 87,
+          "pageStart": 15,
+          "pageEnd": 15
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q88",
+          "questionNumber": 88,
+          "pageStart": 15,
+          "pageEnd": 15
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q89",
+          "questionNumber": 89,
+          "pageStart": 15,
+          "pageEnd": 15
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q90",
+          "questionNumber": 90,
+          "pageStart": 15,
+          "pageEnd": 15
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q91",
+          "questionNumber": 91,
+          "pageStart": 15,
+          "pageEnd": 15
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q92",
+          "questionNumber": 92,
+          "pageStart": 16,
+          "pageEnd": 16
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q93",
+          "questionNumber": 93,
+          "pageStart": 16,
+          "pageEnd": 16
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q94",
+          "questionNumber": 94,
+          "pageStart": 16,
+          "pageEnd": 16
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q95",
+          "questionNumber": 95,
+          "pageStart": 16,
+          "pageEnd": 16
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q96",
+          "questionNumber": 96,
+          "pageStart": 16,
+          "pageEnd": 16
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q97",
+          "questionNumber": 97,
+          "pageStart": 16,
+          "pageEnd": 16
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q98",
+          "questionNumber": 98,
+          "pageStart": 17,
+          "pageEnd": 17
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q99",
+          "questionNumber": 99,
+          "pageStart": 17,
+          "pageEnd": 17
+        },
+        {
+          "questionId": "doc-188b8757dfd5:q100",
+          "questionNumber": 100,
+          "pageStart": 17,
+          "pageEnd": 17
+        }
+      ],
+      "contentFingerprint": "188b8757dfd5f7ccafc37a711138715ad98d2684371e2cea9320da6b20bef681"
+    }
+  ]
+}
