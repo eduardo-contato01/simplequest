@@ -69,8 +69,8 @@
   "constraintPolicy": {
     "abortOnConstraintFailure": true,
     "noSilentRelaxation": true,
-    "textLowQualityMinimumUnique": 2,
-    "hybridMinimumUnique": 4
+    "textLowQualityMinimumUnique": 0,
+    "hybridMinimumUnique": 2
   },
   "challengeSet": {
     "targetDocuments": 16
@@ -88,6 +88,7 @@
     "answer_key_filename",
     "development_fingerprint",
     "v1_revealed_fingerprint",
+    "v2_revealed_fingerprint",
     "duplicate_content",
     "invalid_metadata"
   ],

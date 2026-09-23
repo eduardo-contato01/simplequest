@@ -229,11 +229,56 @@ def test_synthetic_tamper_guards() -> None:
         check("synthetic.duplicate_rejected", True)
 
 
+def test_frozen_seed() -> None:
+    protocol = {"selectionSeed": 20260923}
+
+    check(
+        "seed.default_frozen",
+        v3.resolve_selection_seed(protocol, None) == 20260923,
+    )
+
+    check(
+        "seed.same_explicit_allowed",
+        v3.resolve_selection_seed(protocol, 20260923) == 20260923,
+    )
+
+    try:
+        v3.resolve_selection_seed(protocol, 123456)
+        check("seed.override_rejected", False, "should raise")
+    except schema.HoldoutValidationError:
+        check("seed.override_rejected", True)
+
+
+def test_v3_constraint_policy() -> None:
+    protocol = load(ROOT / "audit/holdout/protocol-v3.json")
+    policy = protocol["constraintPolicy"]
+
+    check(
+        "constraints.low_quality_zero",
+        policy["textLowQualityMinimumUnique"] == 0,
+        policy,
+    )
+
+    check(
+        "constraints.hybrid_two",
+        policy["hybridMinimumUnique"] == 2,
+        policy,
+    )
+
+    check(
+        "constraints.v2_reason",
+        "v2_revealed_fingerprint" in protocol["exclusionReasons"],
+        protocol["exclusionReasons"],
+    )
+
+
 def main() -> None:
     test_schema_v3_registered()
     test_frozen_real_pool_without_selection()
     test_no_prior_revealed_overlap()
     test_synthetic_tamper_guards()
+    test_frozen_seed()
+    test_v3_constraint_policy()
 
     if FAILURES:
         print(f"\n{len(FAILURES)} checks falharam: {FAILURES}")

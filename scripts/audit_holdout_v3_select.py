@@ -105,6 +105,20 @@ def validate_frozen_candidate_pool(
     return documents
 
 
+def resolve_selection_seed(
+    protocol: dict[str, Any],
+    override: int | None,
+) -> int:
+    frozen_seed = int(protocol["selectionSeed"])
+
+    if override is not None and override != frozen_seed:
+        raise schema.HoldoutValidationError(
+            "V3 selector does not allow overriding the frozen selectionSeed"
+        )
+
+    return frozen_seed
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Holdout V3 selection from frozen V2 reserved pool."
@@ -151,11 +165,7 @@ def main() -> None:
 
     pool = validate_frozen_candidate_pool(protocol, artifact)
 
-    seed = (
-        args.seed
-        if args.seed is not None
-        else int(protocol["selectionSeed"])
-    )
+    seed = resolve_selection_seed(protocol, args.seed)
 
     selection = selector.select_documents(
         pool,
