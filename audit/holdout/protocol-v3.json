@@ -1,0 +1,140 @@
+{
+  "protocolVersion": "holdout-v3",
+  "description": "Structural Random Holdout V3 drawn exclusively from the frozen V2 reserved pool, for clean evaluation of Auditor V1.2 after the neutral intra-page boundary fix.",
+  "selectionSeed": 20260923,
+  "randomHoldout": {
+    "targetDocuments": 48,
+    "questionsPerDocument": 3,
+    "maxDocumentsPerFamily": 4,
+    "minFamilies": 10,
+    "minDistinctYears": 10,
+    "eras": [
+      "2004-2009",
+      "2010-2014",
+      "2015-2019",
+      "2020-2025"
+    ],
+    "sourceQuota": {
+      "text_native": 31,
+      "raster": 15,
+      "text_low_quality": 0,
+      "hybrid": 2
+    }
+  },
+  "documentEligibilityRules": {
+    "normalization": "NFKD-remove-combining-casefold-normalize-separators",
+    "answerKeyDirectorySegments": [
+      "gabarito",
+      "gabaritos"
+    ],
+    "answerKeyFilenamePrefix": "gab_",
+    "answerKeyFilenameTokens": [
+      "gabarito",
+      "gabaritos"
+    ],
+    "note": "Metadata-only document-role filter. Ambiguous tokens (resposta, resultado, solucao, chave, correcao, espelho, cartao, folha, rascunho, instrucoes, answer) are NOT auto-excluded."
+  },
+  "v1ExclusionPolicy": {
+    "excludeAllV1Fingerprints": true,
+    "unit": "contentFingerprint",
+    "source": "audit/holdout/manifest-v1.json"
+  },
+  "developmentExclusionPolicy": {
+    "unit": "contentFingerprint",
+    "source": "audit/holdout/manifest-v1.provenance.json",
+    "field": "developmentContentFingerprints"
+  },
+  "sourceQuotaRationale": {
+    "reservedPoolV3": {
+      "text_native": 358,
+      "raster": 173,
+      "text_low_quality": 0,
+      "hybrid": 4,
+      "total": 535
+    },
+    "selectedQuota": {
+      "text_native": 31,
+      "raster": 15,
+      "text_low_quality": 0,
+      "hybrid": 2,
+      "total": 48
+    },
+    "notes": [
+      "31 native and 15 raster preserve the native:raster ratio closely after reserving two hybrid slots.",
+      "Hybrid is deliberately oversampled at 2 documents while preserving 2 unrevealed hybrid documents for possible future evaluation.",
+      "No text_low_quality documents remain in the frozen V2 reserved pool.",
+      "No automatic quota relaxation is allowed."
+    ]
+  },
+  "constraintPolicy": {
+    "abortOnConstraintFailure": true,
+    "noSilentRelaxation": true,
+    "textLowQualityMinimumUnique": 2,
+    "hybridMinimumUnique": 4
+  },
+  "challengeSet": {
+    "targetDocuments": 16
+  },
+  "developmentDocuments": [
+    "CMBH - 6ANO - 2017_2018 (mat).pdf",
+    "CMC - 6ANO - 2011_2012 (mat).pdf",
+    "CMBH - 6ANO - 2018_2019 (mat).pdf",
+    "CMBel - 6ANO - 2017_2018 (mat).pdf",
+    "CMT - 6ANO - 2022_2023.pdf",
+    "PAS 2 - 2019.pdf"
+  ],
+  "exclusionReasons": [
+    "answer_key_directory",
+    "answer_key_filename",
+    "development_fingerprint",
+    "v1_revealed_fingerprint",
+    "duplicate_content",
+    "invalid_metadata"
+  ],
+  "ocrPolicy": {
+    "allowedInExecutionPhase": true,
+    "frozenConfiguration": true,
+    "noRetuneFromHoldoutResults": true,
+    "failuresObservedAsNotExecutable": true
+  },
+  "antiContamination": {
+    "developmentExcluded": true,
+    "v1RevealedExcluded": true,
+    "v2RevealedExcluded": true,
+    "duplicateFingerprintsIncompatibleAcrossSplits": true,
+    "runnerNeverEditsManifestOrGroundTruth": true,
+    "v2HoldoutResultsNotUsedForV3Selection": true,
+    "auditorV12NotRunBeforeGroundTruthFreeze": true
+  },
+  "historicalArtifacts": {
+    "v1Protocol": "audit/holdout/protocol-v1.json",
+    "v1Manifest": "audit/holdout/manifest-v1.json",
+    "v1ManifestProvenance": "audit/holdout/manifest-v1.provenance.json",
+    "v1QuestionIndex": "audit/holdout/question-index-v1.json",
+    "v1Status": "invalid_for_random_evaluation_due_to_sampling_frame",
+    "v2Protocol": "audit/holdout/protocol-v2.json",
+    "v2Manifest": "audit/holdout/manifest-v2.json",
+    "v2Status": "revealed_after_first_official_run"
+  },
+  "samplingFrameV3": {
+    "inventoryPdfs": 1154,
+    "inventorySha256": "9c6a365adb0da7036ac965437ebec590fc01c72641b21f0297a20e02b72014c8",
+    "v2EligibleCandidatePoolSize": 583,
+    "v2SelectedFingerprintsExcluded": 48,
+    "expectedV3CandidatePoolSize": 535,
+    "expectedV3CandidatePoolHash": "577c1eed100a3ca3822e783222470209268b324882ec22cd017bdcf21424d789",
+    "basis": "frozen V2 reserved pool",
+    "candidatePoolArtifact": "audit/holdout/candidate-pool-v3.json",
+    "candidatePoolArtifactSha256": "417e9e6be23d273fc8882a20c6b6eaf9f4b5267162e8838218f02f9d0b73bbf2",
+    "candidatePoolCanonicalJsonSha256": "45ced09c7facbf272159f00a093cfb11a64b7f3be3a834248cd72554c256f7a1"
+  },
+  "priorRevealedExclusionPolicy": {
+    "unit": "contentFingerprint",
+    "excludeV1": true,
+    "excludeV2": true,
+    "v1Manifest": "audit/holdout/manifest-v1.json",
+    "v2Manifest": "audit/holdout/manifest-v2.json",
+    "developmentSource": "audit/holdout/manifest-v1.provenance.json",
+    "developmentField": "developmentContentFingerprints"
+  }
+}

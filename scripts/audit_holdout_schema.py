@@ -9,9 +9,9 @@ from typing import Any
 
 
 PROTOCOL_VERSION = "holdout-v1"
-SUPPORTED_PROTOCOL_VERSIONS = ("holdout-v1", "holdout-v2")
+SUPPORTED_PROTOCOL_VERSIONS = ("holdout-v1", "holdout-v2", "holdout-v3")
 SELECTOR_VERSION = "holdout-v1"
-SELECTOR_VERSION_BY_PROTOCOL = {"holdout-v1": "holdout-v1", "holdout-v2": "holdout-v2"}
+SELECTOR_VERSION_BY_PROTOCOL = {"holdout-v1": "holdout-v1", "holdout-v2": "holdout-v2", "holdout-v3": "holdout-v3"}
 FINGERPRINT_CACHE_VERSION = 1
 
 ANSWER_KEY_DIRECTORY_SEGMENTS = ("gabarito", "gabaritos")
@@ -193,7 +193,7 @@ def is_eligible_question_document(metadata: dict[str, Any]) -> tuple[bool, str |
 
 
 def validate_protocol(protocol: dict[str, Any]) -> None:
-  _require(protocol.get("protocolVersion") in SUPPORTED_PROTOCOL_VERSIONS, "protocol: protocolVersion must be holdout-v1")
+  _require(protocol.get("protocolVersion") in SUPPORTED_PROTOCOL_VERSIONS, "protocol: unsupported protocolVersion")
   random_cfg = protocol.get("randomHoldout")
   _require(isinstance(random_cfg, dict), "protocol: randomHoldout missing")
   _require(int(random_cfg.get("targetDocuments", 0)) > 0, "protocol: targetDocuments must be > 0")
