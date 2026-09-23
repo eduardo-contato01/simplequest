@@ -1,0 +1,455 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "neutral-question-index-adjudication",
+  "adjudicationVersion": 1,
+  "batchId": "high-03",
+  "scope": "question_numbering_and_page_boundaries_only",
+  "sourceIndex": "audit/holdout/question-index-v3-auto.json",
+  "sourceIndexFileSha256": "aabbf4ba4c14f160bc94e1ac6ee73efb7f7ef90c1618dafba0c2bf4d2b60c5a6",
+  "sourceReviewQueue": "audit/holdout/question-index-v3-review-queue.json",
+  "sourceReviewQueueFileSha256": "6ffb027dcd178f4ee4cb5c499a86120c20918a8d80f3f8bc45611fb87e54e9d0",
+  "priorAdjudication": "audit/holdout/question-index-v3-adjudication-high-batch-02.json",
+  "priorAdjudicationFileSha256": "1eebef3979bb46d54dddaa71564af34b0792f0e22637f776e90487279694ee82",
+  "resolvedSeverity": "high",
+  "resolvedDocuments": 3,
+  "decisions": [
+    {
+      "documentId": "doc-a218bd48a3eb",
+      "contentFingerprint": "a218bd48a3eb3a352214006f6b17729ef32748a9431dc0526e76bddad5d4fd8b",
+      "status": "resolved",
+      "basis": "manual_visual_review_of_exact_frozen_pdf",
+      "reviewEvidence": {
+        "reviewedPdfSha256": "a218bd48a3eb3a352214006f6b17729ef32748a9431dc0526e76bddad5d4fd8b",
+        "sha256MatchesFrozenContentFingerprint": true
+      },
+      "notes": [
+        "The Mathematics examination contains a continuous sequence of 20 questions.",
+        "Questions 1 through 20 occupy all eight PDF pages.",
+        "Numbers embedded in mathematical expressions, tables and figures do not create additional question starts."
+      ],
+      "questions": [
+        {
+          "questionId": "doc-a218bd48a3eb:q1",
+          "questionNumber": 1,
+          "pageStart": 1,
+          "pageEnd": 1
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q2",
+          "questionNumber": 2,
+          "pageStart": 1,
+          "pageEnd": 1
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q3",
+          "questionNumber": 3,
+          "pageStart": 1,
+          "pageEnd": 1
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q4",
+          "questionNumber": 4,
+          "pageStart": 1,
+          "pageEnd": 1
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q5",
+          "questionNumber": 5,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q6",
+          "questionNumber": 6,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q7",
+          "questionNumber": 7,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q8",
+          "questionNumber": 8,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q9",
+          "questionNumber": 9,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q10",
+          "questionNumber": 10,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q11",
+          "questionNumber": 11,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q12",
+          "questionNumber": 12,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q13",
+          "questionNumber": 13,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q14",
+          "questionNumber": 14,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q15",
+          "questionNumber": 15,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q16",
+          "questionNumber": 16,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q17",
+          "questionNumber": 17,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q18",
+          "questionNumber": 18,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q19",
+          "questionNumber": 19,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-a218bd48a3eb:q20",
+          "questionNumber": 20,
+          "pageStart": 8,
+          "pageEnd": 8
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7e21d913377b",
+      "contentFingerprint": "7e21d913377b16296b0a0538987340a75c75d3a207cb468a78b84e0d4e37fcff",
+      "status": "resolved",
+      "basis": "manual_visual_review_of_exact_frozen_pdf",
+      "reviewEvidence": {
+        "reviewedPdfSha256": "7e21d913377b16296b0a0538987340a75c75d3a207cb468a78b84e0d4e37fcff",
+        "sha256MatchesFrozenContentFingerprint": true
+      },
+      "notes": [
+        "The cover explicitly states that the examination contains 20 questions.",
+        "PDF page 1 is the cover and instructions.",
+        "Questions 1 through 20 occupy PDF pages 2 through 15.",
+        "The raster layout contains mathematical numerals and internal enumerations that are not question starts."
+      ],
+      "questions": [
+        {
+          "questionId": "doc-7e21d913377b:q1",
+          "questionNumber": 1,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-7e21d913377b:q2",
+          "questionNumber": 2,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-7e21d913377b:q3",
+          "questionNumber": 3,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-7e21d913377b:q4",
+          "questionNumber": 4,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-7e21d913377b:q5",
+          "questionNumber": 5,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-7e21d913377b:q6",
+          "questionNumber": 6,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-7e21d913377b:q7",
+          "questionNumber": 7,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-7e21d913377b:q8",
+          "questionNumber": 8,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-7e21d913377b:q9",
+          "questionNumber": 9,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-7e21d913377b:q10",
+          "questionNumber": 10,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-7e21d913377b:q11",
+          "questionNumber": 11,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-7e21d913377b:q12",
+          "questionNumber": 12,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-7e21d913377b:q13",
+          "questionNumber": 13,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-7e21d913377b:q14",
+          "questionNumber": 14,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-7e21d913377b:q15",
+          "questionNumber": 15,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-7e21d913377b:q16",
+          "questionNumber": 16,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-7e21d913377b:q17",
+          "questionNumber": 17,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-7e21d913377b:q18",
+          "questionNumber": 18,
+          "pageStart": 14,
+          "pageEnd": 14
+        },
+        {
+          "questionId": "doc-7e21d913377b:q19",
+          "questionNumber": 19,
+          "pageStart": 14,
+          "pageEnd": 14
+        },
+        {
+          "questionId": "doc-7e21d913377b:q20",
+          "questionNumber": 20,
+          "pageStart": 15,
+          "pageEnd": 15
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3c4434b96a50",
+      "contentFingerprint": "3c4434b96a50fa5f777c8c046ec3fbd4c07c0a8686f4b39946506dd742d14fa6",
+      "status": "resolved",
+      "basis": "manual_visual_review_of_exact_frozen_pdf",
+      "reviewEvidence": {
+        "reviewedPdfSha256": "3c4434b96a50fa5f777c8c046ec3fbd4c07c0a8686f4b39946506dd742d14fa6",
+        "sha256MatchesFrozenContentFingerprint": true
+      },
+      "notes": [
+        "The cover defines two objective parts: 12 Mathematics items and 12 Portuguese items, for 24 objective questions total.",
+        "Mathematics questions 1 through 12 occupy PDF pages 3 through 14.",
+        "PDF pages 15 and 16 contain shared Portuguese source text before question 13.",
+        "PDF page 21 contains shared source text for questions 22 through 24 and does not itself start a numbered question.",
+        "PDF pages 24 through 26 contain the writing task and do not create objective question IDs."
+      ],
+      "questions": [
+        {
+          "questionId": "doc-3c4434b96a50:q1",
+          "questionNumber": 1,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q2",
+          "questionNumber": 2,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q3",
+          "questionNumber": 3,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q4",
+          "questionNumber": 4,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q5",
+          "questionNumber": 5,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q6",
+          "questionNumber": 6,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q7",
+          "questionNumber": 7,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q8",
+          "questionNumber": 8,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q9",
+          "questionNumber": 9,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q10",
+          "questionNumber": 10,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q11",
+          "questionNumber": 11,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q12",
+          "questionNumber": 12,
+          "pageStart": 14,
+          "pageEnd": 14
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q13",
+          "questionNumber": 13,
+          "pageStart": 17,
+          "pageEnd": 17
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q14",
+          "questionNumber": 14,
+          "pageStart": 17,
+          "pageEnd": 17
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q15",
+          "questionNumber": 15,
+          "pageStart": 17,
+          "pageEnd": 17
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q16",
+          "questionNumber": 16,
+          "pageStart": 18,
+          "pageEnd": 18
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q17",
+          "questionNumber": 17,
+          "pageStart": 18,
+          "pageEnd": 18
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q18",
+          "questionNumber": 18,
+          "pageStart": 19,
+          "pageEnd": 19
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q19",
+          "questionNumber": 19,
+          "pageStart": 20,
+          "pageEnd": 20
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q20",
+          "questionNumber": 20,
+          "pageStart": 20,
+          "pageEnd": 20
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q21",
+          "questionNumber": 21,
+          "pageStart": 20,
+          "pageEnd": 20
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q22",
+          "questionNumber": 22,
+          "pageStart": 22,
+          "pageEnd": 22
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q23",
+          "questionNumber": 23,
+          "pageStart": 22,
+          "pageEnd": 22
+        },
+        {
+          "questionId": "doc-3c4434b96a50:q24",
+          "questionNumber": 24,
+          "pageStart": 23,
+          "pageEnd": 23
+        }
+      ]
+    }
+  ]
+}
