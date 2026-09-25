@@ -1,0 +1,131 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "final-neutral-question-index-provenance",
+  "questionIndex": "audit/holdout/question-index-v3.json",
+  "questionIndexFileSha256": "3fdcc5e0a05d6301c2bd24febcdc0420e7ea90d88cf9df37afcb17bca84aa087",
+  "questionIndexCanonicalJsonSha256": "39f66f1a08b6f505c2d98fc1148f0023da72817c7c42396cd659ed76b4e85448",
+  "createdFromManifest": "audit/holdout/manifest-v3-a.json",
+  "manifestFileSha256": "fbcf43201c1984e6b84d70960f10945a249c5b3805bea9492e6f431ed0d4c20a",
+  "manifestCanonicalJsonSha256": "a9590b880d41594b136e2023cd658808ed56b8ef441df00b41977741c2759334",
+  "automaticIndex": {
+    "path": "audit/holdout/question-index-v3-auto.json",
+    "fileSha256": "aabbf4ba4c14f160bc94e1ac6ee73efb7f7ef90c1618dafba0c2bf4d2b60c5a6",
+    "methodVersion": "neutral-question-index-v1",
+    "acceptedCleanDocuments": 10,
+    "acceptedCleanQuestions": 268
+  },
+  "reviewQueue": {
+    "path": "audit/holdout/question-index-v3-review-queue.json",
+    "fileSha256": "6ffb027dcd178f4ee4cb5c499a86120c20918a8d80f3f8bc45611fb87e54e9d0",
+    "documents": 38
+  },
+  "manualAdjudication": {
+    "documents": 38,
+    "questions": 1823,
+    "bySeverity": {
+      "critical": 3,
+      "high": 24,
+      "medium": 11
+    },
+    "artifacts": [
+      {
+        "path": "audit/holdout/question-index-v3-adjudication-critical.json",
+        "fileSha256": "027d52945795776ccd27a924f86fb5cb021a569094a7cb6bff7e714d7b2b48b2",
+        "batchId": null,
+        "resolvedSeverity": "critical",
+        "resolvedDocuments": 3
+      },
+      {
+        "path": "audit/holdout/question-index-v3-adjudication-high-batch-01.json",
+        "fileSha256": "8a2b2f61b3747dcc8ea5a8191ca93265b66659834d683d9fe2fe639213e0a6c5",
+        "batchId": "high-01",
+        "resolvedSeverity": "high",
+        "resolvedDocuments": 3
+      },
+      {
+        "path": "audit/holdout/question-index-v3-adjudication-high-batch-02.json",
+        "fileSha256": "1eebef3979bb46d54dddaa71564af34b0792f0e22637f776e90487279694ee82",
+        "batchId": "high-02",
+        "resolvedSeverity": "high",
+        "resolvedDocuments": 3
+      },
+      {
+        "path": "audit/holdout/question-index-v3-adjudication-high-batch-03.json",
+        "fileSha256": "481aa99eba06f7ab1f7e510bacb8ae5b3cf087df896e689b64ba78e7adda0234",
+        "batchId": "high-03",
+        "resolvedSeverity": "high",
+        "resolvedDocuments": 3
+      },
+      {
+        "path": "audit/holdout/question-index-v3-adjudication-high-batch-04.json",
+        "fileSha256": "1f2fdcbfdd5fab3b2f8f5e490390c448264e85c145c7abab635ae49755e2efb8",
+        "batchId": "high-04",
+        "resolvedSeverity": "high",
+        "resolvedDocuments": 3
+      },
+      {
+        "path": "audit/holdout/question-index-v3-adjudication-high-batch-05.json",
+        "fileSha256": "40b06c605f265ea1aa5e71816113ece348ead3d0b187eb492bb66adcdd757149",
+        "batchId": "high-05",
+        "resolvedSeverity": "high",
+        "resolvedDocuments": 3
+      },
+      {
+        "path": "audit/holdout/question-index-v3-adjudication-high-batch-06.json",
+        "fileSha256": "d45b44f1baa0f09f97635875ba7ce3ad5b2aad644b7dffafa7d98ae1ed855dbd",
+        "batchId": "high-06",
+        "resolvedSeverity": "high",
+        "resolvedDocuments": 3
+      },
+      {
+        "path": "audit/holdout/question-index-v3-adjudication-high-batch-07.json",
+        "fileSha256": "41f6ffc09f39cac13afc1dd471343d292214d1fbeab868d6ee78af573ad4ae73",
+        "batchId": "high-07",
+        "resolvedSeverity": "high",
+        "resolvedDocuments": 3
+      },
+      {
+        "path": "audit/holdout/question-index-v3-adjudication-high-batch-08.json",
+        "fileSha256": "8681067279c8d4017f8303f2cc47505c1981c1469896484842e0a263a95a80bc",
+        "batchId": "high-08",
+        "resolvedSeverity": "high",
+        "resolvedDocuments": 3
+      },
+      {
+        "path": "audit/holdout/question-index-v3-adjudication-medium-batch-01.json",
+        "fileSha256": "5dba1f5e73de8f34255a15d16f1e784f326bdb73da01c06d8fd2ac48edbb2311",
+        "batchId": "medium-01",
+        "resolvedSeverity": "medium",
+        "resolvedDocuments": 3
+      },
+      {
+        "path": "audit/holdout/question-index-v3-adjudication-medium-batch-02.json",
+        "fileSha256": "c7934bd22049b52de65a61e5b914b1f128e966e708cbe097d1cab687df880df6",
+        "batchId": "medium-02",
+        "resolvedSeverity": "medium",
+        "resolvedDocuments": 3
+      },
+      {
+        "path": "audit/holdout/question-index-v3-adjudication-medium-batch-03.json",
+        "fileSha256": "ea546dc1982d335600668a187c3705b4ebab63fc9c5908e71eff396cf4b4ef21",
+        "batchId": "medium-03",
+        "resolvedSeverity": "medium",
+        "resolvedDocuments": 3
+      },
+      {
+        "path": "audit/holdout/question-index-v3-adjudication-medium-batch-04.json",
+        "fileSha256": "303b32f6d1026fcd4e615755753bf6640aadd222a56f104b6cfe53da470d6b70",
+        "batchId": "medium-04",
+        "resolvedSeverity": "medium",
+        "resolvedDocuments": 2
+      }
+    ]
+  },
+  "finalIndex": {
+    "documents": 48,
+    "questions": 2091,
+    "uniqueQuestionIds": 2091,
+    "duplicateQuestionIds": 0
+  },
+  "freezeStatus": "ready_for_question_selection"
+}
