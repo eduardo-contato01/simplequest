@@ -1,0 +1,62 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "manifest-provenance-sidecar",
+  "selectionStage": "documents_and_questions",
+  "questionSelectionStatus": "frozen",
+  "selectionGitCommit": "f9cb497e0fa673bc4d7cf44e636721ad9c466dd4",
+  "selectionSeed": 20260923,
+  "selectionCodeState": "clean",
+  "selectorSha256": "1b3d63c77cbe0806c40d4e28267f22a30a514622b5d5ef0a01cf896d7e3c13a4",
+  "manifestPhaseA": {
+    "path": "audit/holdout/manifest-v3-a.json",
+    "fileSha256": "fbcf43201c1984e6b84d70960f10945a249c5b3805bea9492e6f431ed0d4c20a",
+    "canonicalJsonSha256": "a9590b880d41594b136e2023cd658808ed56b8ef441df00b41977741c2759334"
+  },
+  "questionIndex": {
+    "path": "audit/holdout/question-index-v3.json",
+    "fileSha256": "3fdcc5e0a05d6301c2bd24febcdc0420e7ea90d88cf9df37afcb17bca84aa087",
+    "canonicalJsonSha256": "39f66f1a08b6f505c2d98fc1148f0023da72817c7c42396cd659ed76b4e85448",
+    "provenancePath": "audit/holdout/question-index-v3.provenance.json",
+    "provenanceFileSha256": "9f3344bbcc064b76081136ba070ee07a3f77711efc9c5d777c8e22a2769aae5e",
+    "documents": 48,
+    "questions": 2091
+  },
+  "manifestPhaseB": {
+    "path": "audit/holdout/manifest-v3-b.json",
+    "fileSha256": "acc27986617cd9f560a37e4f937b99a93a5bdff70393d090c29d81caf4db3b41",
+    "canonicalJsonSha256": "7656af3550225bed16d19762084846a735cd66a93762a795a38a7caaaba2b4a5"
+  },
+  "selection": {
+    "documents": 48,
+    "questionsPerDocument": 3,
+    "selectedQuestionsTotal": 144,
+    "uniqueSelectedQuestionIds": 144,
+    "selectedBySource": {
+      "text_native": 31,
+      "raster": 15,
+      "hybrid": 2
+    },
+    "selectedFamilies": 21,
+    "selectedDistinctYears": 18,
+    "coveredEras": [
+      "2004-2009",
+      "2010-2014",
+      "2015-2019",
+      "2020-2025"
+    ]
+  },
+  "samplingFrame": {
+    "candidatePoolCount": 535,
+    "candidatePoolFingerprintSetSha256": "577c1eed100a3ca3822e783222470209268b324882ec22cd017bdcf21424d789",
+    "remainingReservedCount": 487,
+    "remainingReservedPoolHash": "82cc19852f61ca76111680d8f56fbc08bbde563a7b845b5168c34aa513977d63"
+  },
+  "guards": {
+    "documentSelectionChangedFromPhaseA": false,
+    "questionIndexChangedAfterFreeze": false,
+    "duplicateSelectedQuestionIds": 0,
+    "allSelectedQuestionsBoundToFrozenIndex": true,
+    "deterministicSelectionValidated": true
+  },
+  "freezeStatus": "ready_for_ground_truth_annotation"
+}
