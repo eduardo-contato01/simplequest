@@ -1,0 +1,213 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-01",
+  "sourceManifest": "audit/holdout/manifest-v3-b.json",
+  "sourceManifestFileSha256": "acc27986617cd9f560a37e4f937b99a93a5bdff70393d090c29d81caf4db3b41",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3.json",
+  "sourceQuestionIndexFileSha256": "3fdcc5e0a05d6301c2bd24febcdc0420e7ea90d88cf9df37afcb17bca84aa087",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-017f1b3fd833": "017f1b3fd833b8feef1e5d185fb0f55cc2b3a2dc5a2f552a666ff448efe2c04b",
+    "doc-106d9cb7c4ac": "106d9cb7c4ace2c320b177c90c2aabeb2eb6c3d7ca2c9ab6c91db9dc945f7afd",
+    "doc-186673c8476d": "186673c8476dfeb5806ae7b4e424e8c31bcf335ee49e0a2b4ac49a2c69cc6221"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-017f1b3fd833",
+      "questionId": "doc-017f1b3fd833:q6",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Cinco alternativas A-E com controles vazios explícitos no padrão A ( )."
+    },
+    {
+      "documentId": "doc-017f1b3fd833",
+      "questionId": "doc-017f1b3fd833:q16",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 3,
+      "responseControls": 5,
+      "layout": "mixed",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Três afirmações internas I-III antecedem cinco alternativas finais A-E com controles vazios explícitos."
+    },
+    {
+      "documentId": "doc-017f1b3fd833",
+      "questionId": "doc-017f1b3fd833:q30",
+      "pages": [
+        22
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": 5,
+      "responseControls": 10,
+      "layout": "parent_child",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Cinco subitens 30-A a 30-E; cada subitem é julgado como C ou E por dois controles explícitos. A questão inclui figura geométrica/trigonométrica."
+    },
+    {
+      "documentId": "doc-106d9cb7c4ac",
+      "questionId": "doc-106d9cb7c4ac:q2",
+      "pages": [
+        1
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-106d9cb7c4ac",
+      "questionId": "doc-106d9cb7c4ac:q11",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-106d9cb7c4ac",
+      "questionId": "doc-106d9cb7c4ac:q15",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-186673c8476d",
+      "questionId": "doc-186673c8476d:q2",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Cinco alternativas A-E com controles vazios explícitos."
+    },
+    {
+      "documentId": "doc-186673c8476d",
+      "questionId": "doc-186673c8476d:q11",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "mixed",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Questão matemática estruturada com tabela e cinco alternativas A-E com controles vazios explícitos."
+    },
+    {
+      "documentId": "doc-186673c8476d",
+      "questionId": "doc-186673c8476d:q17",
+      "pages": [
+        15
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Questão matemática ligada ao contexto geométrico das embalagens apresentado anteriormente."
+    }
+  ]
+}
