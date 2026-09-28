@@ -1,0 +1,219 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-08",
+  "sourceManifest": "audit/holdout/manifest-v3-b-r1.json",
+  "sourceManifestFileSha256": "9c852af4fe99a3af67ef9bd9d56df22e99cd5ce2abf8439603a8447cb1e66b01",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r3.json",
+  "sourceQuestionIndexFileSha256": "07dfd9e143dbdb5db87dd8244ebb70953a17a13932372a028790538154416328",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-75e67e4e308f": "75e67e4e308f96259d05f96179ec36f25c5f3b48a14066f47360a16ccf1a1fe9",
+    "doc-77742da9fa12": "77742da9fa12eeeef5455ade226e0a120f6b10b84a5d83260476b043af477764",
+    "doc-79712ca8f567": "79712ca8f5675f3b58f1516b7ab52531c2d3d0115eced477485834ad84c8213c"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-75e67e4e308f",
+      "questionId": "doc-75e67e4e308f:q3",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende do grafico de despesas apresentado na propria questao."
+    },
+    {
+      "documentId": "doc-75e67e4e308f",
+      "questionId": "doc-75e67e4e308f:q11",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende da figura do boneco e da malha triangular apresentada na questao."
+    },
+    {
+      "documentId": "doc-75e67e4e308f",
+      "questionId": "doc-75e67e4e308f:q14",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "A questao compartilha as tabelas de ingredientes, equivalencias e receita apresentadas para as questoes 13 a 15."
+    },
+    {
+      "documentId": "doc-77742da9fa12",
+      "questionId": "doc-77742da9fa12:q6",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A resolucao utiliza o grafico de depreciacao apresentado na pagina."
+    },
+    {
+      "documentId": "doc-77742da9fa12",
+      "questionId": "doc-77742da9fa12:q11",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende da representacao geometrica dos cabos do portico."
+    },
+    {
+      "documentId": "doc-77742da9fa12",
+      "questionId": "doc-77742da9fa12:q19",
+      "pages": [
+        20
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Os valores a comparar aparecem nas placas A, B, C e D da figura da questao."
+    },
+    {
+      "documentId": "doc-79712ca8f567",
+      "questionId": "doc-79712ca8f567:q4",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-79712ca8f567",
+      "questionId": "doc-79712ca8f567:q12",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A comparacao de areas depende das figuras A, B e C apresentadas na malha quadriculada."
+    },
+    {
+      "documentId": "doc-79712ca8f567",
+      "questionId": "doc-79712ca8f567:q15",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende das balancas e dos cartazes de preco apresentados na figura."
+    }
+  ]
+}
