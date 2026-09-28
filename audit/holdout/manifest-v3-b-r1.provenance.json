@@ -1,0 +1,37 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "deterministic-question-selection-revision-provenance",
+  "revision": "manifest-v3-b-r1",
+  "sourceManifest": "audit/holdout/manifest-v3-b.json",
+  "sourceManifestFileSha256": "acc27986617cd9f560a37e4f937b99a93a5bdff70393d090c29d81caf4db3b41",
+  "revisedManifest": "audit/holdout/manifest-v3-b-r1.json",
+  "revisedManifestFileSha256": "9c852af4fe99a3af67ef9bd9d56df22e99cd5ce2abf8439603a8447cb1e66b01",
+  "revisedManifestCanonicalJsonSha256": "802f888720e87a5eb6b68c78572cb5b51321c4a8c3eb127f1b9a85119d576682",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r2.json",
+  "sourceQuestionIndexFileSha256": "d4661458ada43bae9ab19aa50856414f9be9160bef7a32013d53c110ea1daab5",
+  "revisedQuestionIndex": "audit/holdout/question-index-v3-r3.json",
+  "revisedQuestionIndexFileSha256": "07dfd9e143dbdb5db87dd8244ebb70953a17a13932372a028790538154416328",
+  "selectionSeed": 20260923,
+  "documentSelectionChanged": false,
+  "questionSelectionChanged": true,
+  "affectedDocuments": [
+    "doc-6a2c2be2ecd4"
+  ],
+  "allOtherDocumentQuestionSelectionsIdentical": true,
+  "oldSelectedQuestionIds": [
+    "doc-6a2c2be2ecd4:q1",
+    "doc-6a2c2be2ecd4:q6",
+    "doc-6a2c2be2ecd4:q11"
+  ],
+  "newSelectedQuestionIds": [
+    "doc-6a2c2be2ecd4:q9",
+    "doc-6a2c2be2ecd4:q14",
+    "doc-6a2c2be2ecd4:q24"
+  ],
+  "selectedQuestionsTotal": 144,
+  "uniqueSelectedQuestionIds": 144,
+  "responseSemanticsUsedForRevision": false,
+  "auditorExecutedBeforeRevision": false,
+  "reason": "The frozen question index represented this 30-question exam as only 14 questions, all on canonical page 25. After a neutral repair of question numbering and page ranges, the original document-local deterministic tertile selector was reapplied with the unchanged seed.",
+  "freezeStatus": "ready_for_ground_truth_annotation"
+}

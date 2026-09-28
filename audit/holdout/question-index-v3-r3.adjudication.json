@@ -1,0 +1,358 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "neutral-question-index-revision-adjudication",
+  "revision": "r3",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r2.json",
+  "sourceQuestionIndexFileSha256": "d4661458ada43bae9ab19aa50856414f9be9160bef7a32013d53c110ea1daab5",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeRevision": false,
+  "responseSemanticsUsedForRevision": false,
+  "documentSelectionChanged": false,
+  "targetDocument": "doc-6a2c2be2ecd4",
+  "questionsBeforeInTargetDocument": 14,
+  "questionsAfterInTargetDocument": 30,
+  "corrections": [
+    {
+      "action": "update_question_range",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q1",
+      "questionNumber": 1,
+      "oldPages": [
+        25
+      ],
+      "newPages": [
+        2
+      ],
+      "reason": "Neutral question-index repair: the previous index mistook response-sheet numbering on canonical page 25 for question locations."
+    },
+    {
+      "action": "update_question_range",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q2",
+      "questionNumber": 2,
+      "oldPages": [
+        25
+      ],
+      "newPages": [
+        3
+      ],
+      "reason": "Neutral question-index repair: the previous index mistook response-sheet numbering on canonical page 25 for question locations."
+    },
+    {
+      "action": "update_question_range",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q3",
+      "questionNumber": 3,
+      "oldPages": [
+        25
+      ],
+      "newPages": [
+        3
+      ],
+      "reason": "Neutral question-index repair: the previous index mistook response-sheet numbering on canonical page 25 for question locations."
+    },
+    {
+      "action": "update_question_range",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q4",
+      "questionNumber": 4,
+      "oldPages": [
+        25
+      ],
+      "newPages": [
+        5
+      ],
+      "reason": "Neutral question-index repair: the previous index mistook response-sheet numbering on canonical page 25 for question locations."
+    },
+    {
+      "action": "update_question_range",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q5",
+      "questionNumber": 5,
+      "oldPages": [
+        25
+      ],
+      "newPages": [
+        6
+      ],
+      "reason": "Neutral question-index repair: the previous index mistook response-sheet numbering on canonical page 25 for question locations."
+    },
+    {
+      "action": "update_question_range",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q6",
+      "questionNumber": 6,
+      "oldPages": [
+        25
+      ],
+      "newPages": [
+        7
+      ],
+      "reason": "Neutral question-index repair: the previous index mistook response-sheet numbering on canonical page 25 for question locations."
+    },
+    {
+      "action": "update_question_range",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q7",
+      "questionNumber": 7,
+      "oldPages": [
+        25
+      ],
+      "newPages": [
+        7
+      ],
+      "reason": "Neutral question-index repair: the previous index mistook response-sheet numbering on canonical page 25 for question locations."
+    },
+    {
+      "action": "update_question_range",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q8",
+      "questionNumber": 8,
+      "oldPages": [
+        25
+      ],
+      "newPages": [
+        8
+      ],
+      "reason": "Neutral question-index repair: the previous index mistook response-sheet numbering on canonical page 25 for question locations."
+    },
+    {
+      "action": "update_question_range",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q9",
+      "questionNumber": 9,
+      "oldPages": [
+        25
+      ],
+      "newPages": [
+        9
+      ],
+      "reason": "Neutral question-index repair: the previous index mistook response-sheet numbering on canonical page 25 for question locations."
+    },
+    {
+      "action": "update_question_range",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q10",
+      "questionNumber": 10,
+      "oldPages": [
+        25
+      ],
+      "newPages": [
+        10
+      ],
+      "reason": "Neutral question-index repair: the previous index mistook response-sheet numbering on canonical page 25 for question locations."
+    },
+    {
+      "action": "update_question_range",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q11",
+      "questionNumber": 11,
+      "oldPages": [
+        25
+      ],
+      "newPages": [
+        10
+      ],
+      "reason": "Neutral question-index repair: the previous index mistook response-sheet numbering on canonical page 25 for question locations."
+    },
+    {
+      "action": "update_question_range",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q12",
+      "questionNumber": 12,
+      "oldPages": [
+        25
+      ],
+      "newPages": [
+        11
+      ],
+      "reason": "Neutral question-index repair: the previous index mistook response-sheet numbering on canonical page 25 for question locations."
+    },
+    {
+      "action": "update_question_range",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q13",
+      "questionNumber": 13,
+      "oldPages": [
+        25
+      ],
+      "newPages": [
+        12
+      ],
+      "reason": "Neutral question-index repair: the previous index mistook response-sheet numbering on canonical page 25 for question locations."
+    },
+    {
+      "action": "update_question_range",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q14",
+      "questionNumber": 14,
+      "oldPages": [
+        25
+      ],
+      "newPages": [
+        12
+      ],
+      "reason": "Neutral question-index repair: the previous index mistook response-sheet numbering on canonical page 25 for question locations."
+    },
+    {
+      "action": "add_missing_question",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q15",
+      "questionNumber": 15,
+      "newPages": [
+        13
+      ],
+      "reason": "Neutral question-index repair: question was present in the canonical PDF but absent from R2."
+    },
+    {
+      "action": "add_missing_question",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q16",
+      "questionNumber": 16,
+      "newPages": [
+        14
+      ],
+      "reason": "Neutral question-index repair: question was present in the canonical PDF but absent from R2."
+    },
+    {
+      "action": "add_missing_question",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q17",
+      "questionNumber": 17,
+      "newPages": [
+        14
+      ],
+      "reason": "Neutral question-index repair: question was present in the canonical PDF but absent from R2."
+    },
+    {
+      "action": "add_missing_question",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q18",
+      "questionNumber": 18,
+      "newPages": [
+        15
+      ],
+      "reason": "Neutral question-index repair: question was present in the canonical PDF but absent from R2."
+    },
+    {
+      "action": "add_missing_question",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q19",
+      "questionNumber": 19,
+      "newPages": [
+        16
+      ],
+      "reason": "Neutral question-index repair: question was present in the canonical PDF but absent from R2."
+    },
+    {
+      "action": "add_missing_question",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q20",
+      "questionNumber": 20,
+      "newPages": [
+        16
+      ],
+      "reason": "Neutral question-index repair: question was present in the canonical PDF but absent from R2."
+    },
+    {
+      "action": "add_missing_question",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q21",
+      "questionNumber": 21,
+      "newPages": [
+        17
+      ],
+      "reason": "Neutral question-index repair: question was present in the canonical PDF but absent from R2."
+    },
+    {
+      "action": "add_missing_question",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q22",
+      "questionNumber": 22,
+      "newPages": [
+        18
+      ],
+      "reason": "Neutral question-index repair: question was present in the canonical PDF but absent from R2."
+    },
+    {
+      "action": "add_missing_question",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q23",
+      "questionNumber": 23,
+      "newPages": [
+        19
+      ],
+      "reason": "Neutral question-index repair: question was present in the canonical PDF but absent from R2."
+    },
+    {
+      "action": "add_missing_question",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q24",
+      "questionNumber": 24,
+      "newPages": [
+        19
+      ],
+      "reason": "Neutral question-index repair: question was present in the canonical PDF but absent from R2."
+    },
+    {
+      "action": "add_missing_question",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q25",
+      "questionNumber": 25,
+      "newPages": [
+        20
+      ],
+      "reason": "Neutral question-index repair: question was present in the canonical PDF but absent from R2."
+    },
+    {
+      "action": "add_missing_question",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q26",
+      "questionNumber": 26,
+      "newPages": [
+        20
+      ],
+      "reason": "Neutral question-index repair: question was present in the canonical PDF but absent from R2."
+    },
+    {
+      "action": "add_missing_question",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q27",
+      "questionNumber": 27,
+      "newPages": [
+        21
+      ],
+      "reason": "Neutral question-index repair: question was present in the canonical PDF but absent from R2."
+    },
+    {
+      "action": "add_missing_question",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q28",
+      "questionNumber": 28,
+      "newPages": [
+        21
+      ],
+      "reason": "Neutral question-index repair: question was present in the canonical PDF but absent from R2."
+    },
+    {
+      "action": "add_missing_question",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q29",
+      "questionNumber": 29,
+      "newPages": [
+        22
+      ],
+      "reason": "Neutral question-index repair: question was present in the canonical PDF but absent from R2."
+    },
+    {
+      "action": "add_missing_question",
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q30",
+      "questionNumber": 30,
+      "newPages": [
+        23
+      ],
+      "reason": "Neutral question-index repair: question was present in the canonical PDF but absent from R2."
+    }
+  ]
+}
