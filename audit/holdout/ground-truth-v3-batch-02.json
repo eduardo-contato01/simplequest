@@ -1,0 +1,165 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-02",
+  "sourceManifest": "audit/holdout/manifest-v3-b.json",
+  "sourceManifestFileSha256": "acc27986617cd9f560a37e4f937b99a93a5bdff70393d090c29d81caf4db3b41",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3.json",
+  "sourceQuestionIndexFileSha256": "3fdcc5e0a05d6301c2bd24febcdc0420e7ea90d88cf9df37afcb17bca84aa087",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-188b8757dfd5": "188b8757dfd5f7ccafc37a711138715ad98d2684371e2cea9320da6b20bef681",
+    "doc-1967252ced29": "1967252ced29f4f53d8b8f9b988b34b4918cf291ac47574220f8c9a2afb57cb5",
+    "doc-1f0fe9f00a73": "1f0fe9f00a73453db1bcc69fe345f61d9778dc08035bf52c0c3cb0da0e3e3354"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-188b8757dfd5",
+      "questionId": "doc-188b8757dfd5:q13",
+      "pages": [
+        5
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item de julgamento ligado ao texto Mar; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-188b8757dfd5",
+      "questionId": "doc-188b8757dfd5:q66",
+      "pages": [
+        12
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento matematico ligado ao modelo e a figura de tronco de piramide; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-188b8757dfd5",
+      "questionId": "doc-188b8757dfd5:q82",
+      "pages": [
+        14
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item de julgamento textual e gramatical ligado ao fragmento de La Boetie; embora o bloco tambem contenha a obra de Frida Kahlo, o item nao depende da imagem e nao possui controles C/E locais."
+    },
+    {
+      "documentId": "doc-1967252ced29",
+      "questionId": "doc-1967252ced29:q7",
+      "pages": [
+        2
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item de julgamento de lingua espanhola ligado ao Texto II; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-1967252ced29",
+      "questionId": "doc-1967252ced29:q57",
+      "pages": [
+        10
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento diretamente relacionado a tirinha sobre amebas; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-1967252ced29",
+      "questionId": "doc-1967252ced29:q80",
+      "pages": [
+        12
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento de dinamica de fluidos no bloco sobre aquedutos, com texto e ilustracao esquematica precedentes; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-1f0fe9f00a73",
+      "questionId": "doc-1f0fe9f00a73:q16",
+      "pages": [
+        3
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento matematico ligado a figura cartesiana, tabela de coordenadas e expressao algebrica precedentes; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-1f0fe9f00a73",
+      "questionId": "doc-1f0fe9f00a73:q58",
+      "pages": [
+        7
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento baseado na figura de testes de aglutinacao do sistema ABO; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-1f0fe9f00a73",
+      "questionId": "doc-1f0fe9f00a73:q102",
+      "pages": [
+        13
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento baseado nos diagramas dos circuitos I e II, com pilhas, lampada, capacitor e chave; nao ha alternativas nem controles C/E locais."
+    }
+  ]
+}
