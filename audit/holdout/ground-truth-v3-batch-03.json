@@ -1,0 +1,219 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-03",
+  "sourceManifest": "audit/holdout/manifest-v3-b.json",
+  "sourceManifestFileSha256": "acc27986617cd9f560a37e4f937b99a93a5bdff70393d090c29d81caf4db3b41",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3.json",
+  "sourceQuestionIndexFileSha256": "3fdcc5e0a05d6301c2bd24febcdc0420e7ea90d88cf9df37afcb17bca84aa087",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-21b1367493fe": "21b1367493fe78f0de166254ba936171c28baf8bd5f1c4a8d17aa9afd663b4cb",
+    "doc-273eb386d3ec": "273eb386d3ec8e1d50feab42e70899ce219ab0234d949611a02450228586b482",
+    "doc-2f4df1da2128": "2f4df1da21284a1153f28756e6b33cf856e9b138805d23c675d8542495c34625"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-21b1367493fe",
+      "questionId": "doc-21b1367493fe:q2",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questao matematica com ilustracoes de melancias e medidas de massa; cinco alternativas A-E parenthesized."
+    },
+    {
+      "documentId": "doc-21b1367493fe",
+      "questionId": "doc-21b1367493fe:q7",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questao matematica contextualizada com tabela de precos de etanol e gasolina; cinco alternativas A-E parenthesized."
+    },
+    {
+      "documentId": "doc-21b1367493fe",
+      "questionId": "doc-21b1367493fe:q20",
+      "pages": [
+        18
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questao matematica textual com fracao e valores monetarios; cinco alternativas A-E parenthesized."
+    },
+    {
+      "documentId": "doc-273eb386d3ec",
+      "questionId": "doc-273eb386d3ec:q7",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 4,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Quatro afirmativas internas numeradas de 1 a 4; a resposta final e a quantidade de afirmativas corretas, escolhida entre cinco alternativas."
+    },
+    {
+      "documentId": "doc-273eb386d3ec",
+      "questionId": "doc-273eb386d3ec:q16",
+      "pages": [
+        17
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-273eb386d3ec",
+      "questionId": "doc-273eb386d3ec:q21",
+      "pages": [
+        22
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-2f4df1da2128",
+      "questionId": "doc-2f4df1da2128:q3",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-2f4df1da2128",
+      "questionId": "doc-2f4df1da2128:q11",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-2f4df1da2128",
+      "questionId": "doc-2f4df1da2128:q16",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    }
+  ]
+}
