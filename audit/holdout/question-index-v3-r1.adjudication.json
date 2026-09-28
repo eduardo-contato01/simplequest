@@ -1,0 +1,28 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "neutral-question-index-revision-adjudication",
+  "revision": "r1",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3.json",
+  "sourceQuestionIndexFileSha256": "3fdcc5e0a05d6301c2bd24febcdc0420e7ea90d88cf9df37afcb17bca84aa087",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeRevision": false,
+  "responseSemanticsUsedForRevision": false,
+  "selectionChanged": false,
+  "corrections": [
+    {
+      "documentId": "doc-382419106b57",
+      "questionId": "doc-382419106b57:q14",
+      "field": "pageEnd",
+      "oldValue": 8,
+      "newValue": 9,
+      "oldPages": [
+        8
+      ],
+      "newPages": [
+        8,
+        9
+      ],
+      "reason": "Neutral page-boundary correction: the question stem and internal items begin on canonical PDF page 8 and its final answer alternatives continue on canonical PDF page 9."
+    }
+  ]
+}
