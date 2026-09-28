@@ -1,0 +1,201 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-05",
+  "sourceManifest": "audit/holdout/manifest-v3-b.json",
+  "sourceManifestFileSha256": "acc27986617cd9f560a37e4f937b99a93a5bdff70393d090c29d81caf4db3b41",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r1.json",
+  "sourceQuestionIndexFileSha256": "53aaf61ad12b600a622088c93bd856b6b6881c31704bf90ecbfc2a5296f31ff2",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-403fa98cb83a": "403fa98cb83a510c0b9d94403b2e1017b1415cd9d735cc17d27b0b20507eac4f",
+    "doc-45025ec5b48c": "45025ec5b48c7f9584bfd3f9fd4fad8c262384f4613644d506522aaf5ea7476f",
+    "doc-537ca397c1da": "537ca397c1da176c3e1e0a7842183243cf6700d16f15205dbbdde921676f59dc"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-403fa98cb83a",
+      "questionId": "doc-403fa98cb83a:q3",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-403fa98cb83a",
+      "questionId": "doc-403fa98cb83a:q9",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-403fa98cb83a",
+      "questionId": "doc-403fa98cb83a:q18",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-45025ec5b48c",
+      "questionId": "doc-45025ec5b48c:q39",
+      "pages": [
+        6
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item individual de julgamento associado a obra Ritmo de outono, de Jackson Pollock, e ao texto precedente; nao ha controles C/E locais."
+    },
+    {
+      "documentId": "doc-45025ec5b48c",
+      "questionId": "doc-45025ec5b48c:q46",
+      "pages": [
+        7
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item individual de julgamento ligado ao texto sobre o grupo Seu Estrelo e o Fua do Terreiro; nao ha controles C/E locais."
+    },
+    {
+      "documentId": "doc-45025ec5b48c",
+      "questionId": "doc-45025ec5b48c:q109",
+      "pages": [
+        13
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item individual de julgamento baseado na figura que ilustra parte da pele humana; nao ha controles C/E locais."
+    },
+    {
+      "documentId": "doc-537ca397c1da",
+      "questionId": "doc-537ca397c1da:q6",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-537ca397c1da",
+      "questionId": "doc-537ca397c1da:q8",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-537ca397c1da",
+      "questionId": "doc-537ca397c1da:q16",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "Questao de interpretacao diretamente ligada a charge apresentada na mesma pagina; cinco alternativas a-e."
+    }
+  ]
+}
