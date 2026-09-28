@@ -1,0 +1,219 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-07",
+  "sourceManifest": "audit/holdout/manifest-v3-b-r1.json",
+  "sourceManifestFileSha256": "9c852af4fe99a3af67ef9bd9d56df22e99cd5ce2abf8439603a8447cb1e66b01",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r3.json",
+  "sourceQuestionIndexFileSha256": "07dfd9e143dbdb5db87dd8244ebb70953a17a13932372a028790538154416328",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-6a2c2be2ecd4": "6a2c2be2ecd44fa4539ade3eca9d164bdf34d8ccf636f5850b84c15be56324ce",
+    "doc-6d3454d4a7b8": "6d3454d4a7b8877b344fc01e2cbfafda8f80dc0f24ec1c4c7397de66c0af707e",
+    "doc-6fc18179cbc1": "6fc18179cbc160a0d81180a4bd3da9a82efd7b065059a2bfec84ea52c58ccf5e"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q9",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q14",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q24",
+      "pages": [
+        19
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6d3454d4a7b8",
+      "questionId": "doc-6d3454d4a7b8:q1",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6d3454d4a7b8",
+      "questionId": "doc-6d3454d4a7b8:q13",
+      "pages": [
+        11
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6d3454d4a7b8",
+      "questionId": "doc-6d3454d4a7b8:q24",
+      "pages": [
+        18
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "A pagina inclui imagem ilustrativa de estrada, mas os dados necessarios para responder estao expressos no enunciado."
+    },
+    {
+      "documentId": "doc-6fc18179cbc1",
+      "questionId": "doc-6fc18179cbc1:q3",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6fc18179cbc1",
+      "questionId": "doc-6fc18179cbc1:q9",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6fc18179cbc1",
+      "questionId": "doc-6fc18179cbc1:q20",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    }
+  ]
+}
