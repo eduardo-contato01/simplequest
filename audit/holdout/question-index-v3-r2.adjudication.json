@@ -1,0 +1,28 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "neutral-question-index-revision-adjudication",
+  "revision": "r2",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r1.json",
+  "sourceQuestionIndexFileSha256": "53aaf61ad12b600a622088c93bd856b6b6881c31704bf90ecbfc2a5296f31ff2",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeRevision": false,
+  "responseSemanticsUsedForRevision": false,
+  "selectionChanged": false,
+  "corrections": [
+    {
+      "documentId": "doc-58ed2eef13c5",
+      "questionId": "doc-58ed2eef13c5:q5",
+      "field": "pageEnd",
+      "oldValue": 4,
+      "newValue": 3,
+      "oldPages": [
+        3,
+        4
+      ],
+      "newPages": [
+        3
+      ],
+      "reason": "Neutral page-boundary correction: question 5, including its final alternatives, is fully contained on canonical PDF page 3; canonical page 4 begins Text IV and question 6."
+    }
+  ]
+}
