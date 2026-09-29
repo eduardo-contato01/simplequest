@@ -1,0 +1,216 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-11",
+  "sourceManifest": "audit/holdout/manifest-v3-b-r2.json",
+  "sourceManifestFileSha256": "03e1e76efb6a6e96d95876c7a59cacb3a2351c0d60fdb4faef572ac3b99c8ad7",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r4.json",
+  "sourceQuestionIndexFileSha256": "da821ee8ea87d272f628a5f8b5cd85ead54b9e2202130ee19bc2a6e27946a709",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-a388e6f21fc7": "a388e6f21fc7ff11cc12ec8dc697691495969d31dfecf5dbaf6c451dee20d89b",
+    "doc-a69802d8aa53": "a69802d8aa53c27652f8a374950dddab9e3015215dbec2fc38587daf4be64fd9",
+    "doc-ab0ec29ca74f": "ab0ec29ca74f0c6280c0a82cd84c63ac8ea2baba2bbdcc59a3d52f96f9983708"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-a388e6f21fc7",
+      "questionId": "doc-a388e6f21fc7:q2",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Questao textual de interpretacao ligada ao Texto I; quatro alternativas A-D."
+    },
+    {
+      "documentId": "doc-a388e6f21fc7",
+      "questionId": "doc-a388e6f21fc7:q20",
+      "pages": [
+        11
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "A questao depende da tirinha do Texto XII; quatro alternativas A-D. O boundary foi corrigido neutralmente no R4 de paginas 11-12 para somente pagina 11."
+    },
+    {
+      "documentId": "doc-a388e6f21fc7",
+      "questionId": "doc-a388e6f21fc7:q34",
+      "pages": [
+        17
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Questao conceitual sobre o nome do contorno de uma pista circular; a imagem e ilustrativa e a informacao necessaria esta explicitamente no enunciado."
+    },
+    {
+      "documentId": "doc-a69802d8aa53",
+      "questionId": "doc-a69802d8aa53:q4",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual de reescrita com cinco alternativas A-E."
+    },
+    {
+      "documentId": "doc-a69802d8aa53",
+      "questionId": "doc-a69802d8aa53:q8",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A interpretacao depende da tirinha sobre consumismo apresentada como Texto 3."
+    },
+    {
+      "documentId": "doc-a69802d8aa53",
+      "questionId": "doc-a69802d8aa53:q19",
+      "pages": [
+        16
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 3,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Tres afirmativas internas I-III antecedem cinco alternativas finais A-E."
+    },
+    {
+      "documentId": "doc-ab0ec29ca74f",
+      "questionId": "doc-ab0ec29ca74f:q8",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questao matematica dependente da fotografia arquitetonica e da construcao geometrica com semicircunferencias."
+    },
+    {
+      "documentId": "doc-ab0ec29ca74f",
+      "questionId": "doc-ab0ec29ca74f:q14",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual sobre valores semanticos de elementos do Texto 1."
+    },
+    {
+      "documentId": "doc-ab0ec29ca74f",
+      "questionId": "doc-ab0ec29ca74f:q19",
+      "pages": [
+        16
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual que pede a sequencia para completar as lacunas do Texto 3."
+    }
+  ]
+}
