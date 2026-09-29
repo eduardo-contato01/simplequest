@@ -1,0 +1,201 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-10",
+  "sourceManifest": "audit/holdout/manifest-v3-b-r1.json",
+  "sourceManifestFileSha256": "9c852af4fe99a3af67ef9bd9d56df22e99cd5ce2abf8439603a8447cb1e66b01",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r3.json",
+  "sourceQuestionIndexFileSha256": "07dfd9e143dbdb5db87dd8244ebb70953a17a13932372a028790538154416328",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-8fd0e13b7394": "8fd0e13b7394744023e25b838096afa19cd77c946d5ce179e62ba3286dff661f",
+    "doc-9b9057e500c7": "9b9057e500c76454e6ddebaf800a0cfd438791be984f5e7ed21efceba984c274",
+    "doc-a218bd48a3eb": "a218bd48a3eb3a352214006f6b17729ef32748a9431dc0526e76bddad5d4fd8b"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-8fd0e13b7394",
+      "questionId": "doc-8fd0e13b7394:q3",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual ligada ao Texto I."
+    },
+    {
+      "documentId": "doc-8fd0e13b7394",
+      "questionId": "doc-8fd0e13b7394:q13",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao gramatical textual ligada ao Texto III."
+    },
+    {
+      "documentId": "doc-8fd0e13b7394",
+      "questionId": "doc-8fd0e13b7394:q20",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questao integradora sobre os textos anteriores, incluindo material verbal, infografico e charge."
+    },
+    {
+      "documentId": "doc-9b9057e500c7",
+      "questionId": "doc-9b9057e500c7:q39",
+      "pages": [
+        5
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item individual de julgamento matematico ligado ao modelo e a figura do cone; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-9b9057e500c7",
+      "questionId": "doc-9b9057e500c7:q90",
+      "pages": [
+        12
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item individual de julgamento diretamente ligado ao esquema das linhas de campo magnetico da coilgun; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-9b9057e500c7",
+      "questionId": "doc-9b9057e500c7:q126",
+      "pages": [
+        16
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item individual de julgamento ligado a situacao fisica e a figura do efeito domino; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-a218bd48a3eb",
+      "questionId": "doc-a218bd48a3eb:q2",
+      "pages": [
+        1
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-a218bd48a3eb",
+      "questionId": "doc-a218bd48a3eb:q8",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende do grafico das funcoes apresentado na figura."
+    },
+    {
+      "documentId": "doc-a218bd48a3eb",
+      "questionId": "doc-a218bd48a3eb:q17",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    }
+  ]
+}
