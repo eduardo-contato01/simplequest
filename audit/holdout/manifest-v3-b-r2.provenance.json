@@ -1,0 +1,72 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "deterministic-question-selection-revision-provenance",
+  "revision": "manifest-v3-b-r2",
+  "sourceManifest": "audit/holdout/manifest-v3-b-r1.json",
+  "sourceManifestFileSha256": "9c852af4fe99a3af67ef9bd9d56df22e99cd5ce2abf8439603a8447cb1e66b01",
+  "revisedManifest": "audit/holdout/manifest-v3-b-r2.json",
+  "revisedManifestFileSha256": "03e1e76efb6a6e96d95876c7a59cacb3a2351c0d60fdb4faef572ac3b99c8ad7",
+  "revisedManifestCanonicalJsonSha256": "64d0b6fb64d1cf7025f3a92e854b76b7c20712973855f2022786dd694b6bab11",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r3.json",
+  "sourceQuestionIndexFileSha256": "07dfd9e143dbdb5db87dd8244ebb70953a17a13932372a028790538154416328",
+  "revisedQuestionIndex": "audit/holdout/question-index-v3-r4.json",
+  "revisedQuestionIndexFileSha256": "da821ee8ea87d272f628a5f8b5cd85ead54b9e2202130ee19bc2a6e27946a709",
+  "selectionSeed": 20260923,
+  "documentSelectionChanged": false,
+  "questionSelectionChanged": false,
+  "selectionRecomputed": false,
+  "selectedQuestionIdsUnchanged": true,
+  "selectedQuestionBindingsChanged": true,
+  "affectedDocuments": [
+    "doc-382419106b57",
+    "doc-58ed2eef13c5",
+    "doc-a388e6f21fc7"
+  ],
+  "changedBindings": [
+    {
+      "documentId": "doc-382419106b57",
+      "questionId": "doc-382419106b57:q14",
+      "oldPages": [
+        8
+      ],
+      "newPages": [
+        8,
+        9
+      ],
+      "origin": "inherited R1 index correction"
+    },
+    {
+      "documentId": "doc-58ed2eef13c5",
+      "questionId": "doc-58ed2eef13c5:q5",
+      "oldPages": [
+        3,
+        4
+      ],
+      "newPages": [
+        3
+      ],
+      "origin": "inherited R2 index correction"
+    },
+    {
+      "documentId": "doc-a388e6f21fc7",
+      "questionId": "doc-a388e6f21fc7:q20",
+      "oldPages": [
+        11,
+        12
+      ],
+      "newPages": [
+        11
+      ],
+      "origin": "R4 index correction"
+    }
+  ],
+  "allOtherDocumentQuestionSelectionsIdentical": true,
+  "allOtherSelectedQuestionBindingsIdentical": true,
+  "selectedQuestionsTotal": 144,
+  "uniqueSelectedQuestionIds": 144,
+  "allSelectedBindingsMatchRevisedQuestionIndex": true,
+  "responseSemanticsUsedForRevision": false,
+  "auditorExecutedBeforeRevision": false,
+  "reason": "Manifest B-R2 preserves the exact frozen set and order of 144 selected question IDs while synchronizing selected page bindings with question-index-v3-r4. Two bindings were historical manifest drift inherited from R1/R2 (doc-382419106b57:q14 and doc-58ed2eef13c5:q5); the third is the new neutral R4 correction for doc-a388e6f21fc7:q20.",
+  "freezeStatus": "ready_for_ground_truth_annotation"
+}

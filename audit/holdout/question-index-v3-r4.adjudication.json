@@ -1,0 +1,28 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "neutral-question-index-revision-adjudication",
+  "revision": "r4",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r3.json",
+  "sourceQuestionIndexFileSha256": "07dfd9e143dbdb5db87dd8244ebb70953a17a13932372a028790538154416328",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeRevision": false,
+  "responseSemanticsUsedForRevision": false,
+  "selectionChanged": false,
+  "corrections": [
+    {
+      "documentId": "doc-a388e6f21fc7",
+      "questionId": "doc-a388e6f21fc7:q20",
+      "field": "pageEnd",
+      "oldValue": 12,
+      "newValue": 11,
+      "oldPages": [
+        11,
+        12
+      ],
+      "newPages": [
+        11
+      ],
+      "reason": "Neutral page-boundary correction: question 20, including all four alternatives, is fully contained on canonical PDF page 11; canonical page 12 begins the Mathematics section and question 21."
+    }
+  ]
+}
