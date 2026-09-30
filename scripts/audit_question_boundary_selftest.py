@@ -28,6 +28,111 @@ def line(page: int, top: float, text: str) -> observations.ObservedLine:
   return observations.ObservedLine(page=page, text=text, bbox=(50.0, top, 500.0, top + 12.0), source="synthetic")
 
 
+def line_at(
+  page: int,
+  top: float,
+  text: str,
+  x0: float,
+  x1: float,
+) -> observations.ObservedLine:
+  return observations.ObservedLine(
+    page=page,
+    text=text,
+    bbox=(
+      x0,
+      top,
+      x1,
+      top + 12.0,
+    ),
+    source="synthetic",
+  )
+
+
+def make_parallel_columns_bundle() -> observations.ObservationBundle:
+  lines = []
+
+  lines.append(
+    line_at(
+      1,
+      100,
+      "9. Questao esquerda",
+      40,
+      250,
+    )
+  )
+
+  for index, label in enumerate(
+    "ABCDE"
+  ):
+    lines.append(
+      line_at(
+        1,
+        125 + index * 24,
+        f"({label}) esquerda {label}",
+        50,
+        250,
+      )
+    )
+
+  lines.append(
+    line_at(
+      1,
+      100,
+      "10. Questao direita",
+      320,
+      560,
+    )
+  )
+
+  for index, label in enumerate(
+    "ABCDE"
+  ):
+    lines.append(
+      line_at(
+        1,
+        125 + index * 24,
+        f"({label}) direita {label}",
+        330,
+        560,
+      )
+    )
+
+  for index, item in enumerate(lines):
+    item.line_index = index
+
+  visuals = []
+
+  for index in range(5):
+    visuals.append(
+      visual(
+        1,
+        125 + index * 24,
+        left=60,
+      )
+    )
+
+    visuals.append(
+      visual(
+        1,
+        125 + index * 24,
+        left=340,
+      )
+    )
+
+  return observations.ObservationBundle(
+    words=[],
+    lines=lines,
+    visual_components=visuals,
+    page_geometry={
+      1: {
+        "pdfHeight": 800.0,
+        "pdfWidth": 600.0,
+      }
+    },
+    source="synthetic",
+  )
+
+
 def make_bundle(pages, height: float = 800.0) -> observations.ObservationBundle:
   lines: list[observations.ObservedLine] = []
   for page in sorted(pages):
@@ -71,6 +176,205 @@ def run_question(bundle, index_doc, qid, gt_pages=None):
   boundary = question_boundary.compute_question_boundary(bundle, current or {"questionId": qid, "questionNumber": -1, "pageStart": -1, "pageEnd": -1}, nxt, pages)
   filtered = question_boundary.filter_bundle(bundle, boundary)
   return boundary, filtered
+
+
+def test_parallel_two_column_questions() -> None:
+  bundle = make_parallel_columns_bundle()
+
+  index = data(
+    "d",
+    [
+      entry(
+        "d:q9",
+        9,
+        1,
+        1,
+      ),
+      entry(
+        "d:q10",
+        10,
+        1,
+        1,
+      ),
+    ],
+  )
+
+  b9, f9 = run_question(
+    bundle,
+    index,
+    "d:q9",
+  )
+
+  b10, f10 = run_question(
+    bundle,
+    index,
+    "d:q10",
+  )
+
+  q9_limits = (
+    b9.get(
+      "pageLimits",
+      {},
+    ).get(
+      1,
+      {},
+    )
+  )
+
+  q10_limits = (
+    b10.get(
+      "pageLimits",
+      {},
+    ).get(
+      1,
+      {},
+    )
+  )
+
+  check(
+    "columns2d.q9_mode",
+    b9.get(
+      "boundaryMode"
+    ) == "two_column",
+    b9,
+  )
+
+  check(
+    "columns2d.q9_x1",
+    q9_limits.get(
+      "x1"
+    ) is not None
+    and q9_limits[
+      "x1"
+    ] < 300.0,
+    q9_limits,
+  )
+
+  check(
+    "columns2d.q9_count",
+    option_count(
+      f9,
+      b9,
+    ) == 5,
+    option_count(
+      f9,
+      b9,
+    ),
+  )
+
+  check(
+    "columns2d.q9_only_left",
+    bool(
+      f9.lines
+    )
+    and all(
+      (
+        line.bbox[0]
+        + line.bbox[2]
+      ) / 2.0
+      < 300.0
+      for line in f9.lines
+    ),
+    [
+      list(
+        line.bbox
+      )
+      for line in f9.lines
+    ],
+  )
+
+  check(
+    "columns2d.q10_mode",
+    b10.get(
+      "boundaryMode"
+    ) == "two_column",
+    b10,
+  )
+
+  check(
+    "columns2d.q10_x0",
+    q10_limits.get(
+      "x0"
+    ) is not None
+    and q10_limits[
+      "x0"
+    ] > 100.0
+    and q10_limits[
+      "x0"
+    ] < 300.0,
+    q10_limits,
+  )
+
+  check(
+    "columns2d.q10_count",
+    option_count(
+      f10,
+      b10,
+    ) == 5,
+    option_count(
+      f10,
+      b10,
+    ),
+  )
+
+  check(
+    "columns2d.q10_only_right",
+    bool(
+      f10.lines
+    )
+    and all(
+      (
+        line.bbox[0]
+        + line.bbox[2]
+      ) / 2.0
+      > 300.0
+      for line in f10.lines
+    ),
+    [
+      list(
+        line.bbox
+      )
+      for line in f10.lines
+    ],
+  )
+
+  visual_evidence = [
+    {
+      "page":
+        component.page,
+
+      "bbox":
+        list(
+          component.bbox
+        ),
+    }
+    for component
+    in bundle.visual_components
+  ]
+
+  q10_visual = (
+    question_boundary
+    .filter_visual_items(
+      visual_evidence,
+      b10,
+    )
+  )
+
+  check(
+    "columns2d.visual_right_only",
+    len(
+      q10_visual
+    ) == 5
+    and all(
+      (
+        item["bbox"][0]
+        + item["bbox"][2]
+      ) / 2.0
+      > 300.0
+      for item in q10_visual
+    ),
+    q10_visual,
+  )
 
 
 def test_same_page_two_questions_ae() -> None:
@@ -235,6 +539,7 @@ def test_visual_respects_boundary() -> None:
 
 
 def main() -> None:
+  test_parallel_two_column_questions()
   test_same_page_two_questions_ae()
   test_same_page_five_questions_ae()
   test_same_page_three_questions_ad()
