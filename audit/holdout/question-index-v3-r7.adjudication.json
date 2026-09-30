@@ -1,0 +1,29 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "neutral-question-index-revision-adjudication",
+  "revision": "r7",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r6.json",
+  "sourceQuestionIndexFileSha256": "297347f193f2558ebb8353ba6164bb54193ad54e07fdd00f88739f9f2055d0eb",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeRevision": false,
+  "responseSemanticsUsedForRevision": false,
+  "selectionChanged": false,
+  "corrections": [
+    {
+      "documentId": "doc-ec2c48d75bf3",
+      "questionId": "doc-ec2c48d75bf3:q20",
+      "field": "pageEnd",
+      "oldValue": 12,
+      "newValue": 10,
+      "oldPages": [
+        10,
+        11,
+        12
+      ],
+      "newPages": [
+        10
+      ],
+      "reason": "Neutral page-boundary correction: question 20, including its complete statement and alternatives A-E, is fully contained on canonical PDF page 10. Canonical page 11 begins the REDACAO section and canonical page 12 is the writing sheet."
+    }
+  ]
+}

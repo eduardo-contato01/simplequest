@@ -1,0 +1,47 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "deterministic-question-selection-revision-provenance",
+  "revision": "manifest-v3-b-r5",
+  "sourceManifest": "audit/holdout/manifest-v3-b-r4.json",
+  "sourceManifestFileSha256": "30924e23c3286d342c199687edd74630102dbaf5f7001afc8dd83f7a94b8424e",
+  "revisedManifest": "audit/holdout/manifest-v3-b-r5.json",
+  "revisedManifestFileSha256": "ba3e3f985b4f7da73ad61f10cb7aa54234a8039843e51fb58ea7c9209bb11ed9",
+  "revisedManifestCanonicalJsonSha256": "80aab7623a1a51a4cb873e597fae8dca68fae77253ce32c8aa6f88f04e278f62",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r6.json",
+  "sourceQuestionIndexFileSha256": "297347f193f2558ebb8353ba6164bb54193ad54e07fdd00f88739f9f2055d0eb",
+  "revisedQuestionIndex": "audit/holdout/question-index-v3-r7.json",
+  "revisedQuestionIndexFileSha256": "05fae5716e229b95400c80666dd9ce2a8a76e4a003a7f95483aeb774d4d4d78b",
+  "selectionSeed": 20260923,
+  "documentSelectionChanged": false,
+  "questionSelectionChanged": false,
+  "selectionRecomputed": false,
+  "selectedQuestionIdsUnchanged": true,
+  "selectedQuestionBindingsChanged": true,
+  "affectedDocuments": [
+    "doc-ec2c48d75bf3"
+  ],
+  "changedBindings": [
+    {
+      "documentId": "doc-ec2c48d75bf3",
+      "questionId": "doc-ec2c48d75bf3:q20",
+      "oldPages": [
+        10,
+        11,
+        12
+      ],
+      "newPages": [
+        10
+      ],
+      "origin": "R7 neutral index correction"
+    }
+  ],
+  "allOtherDocumentQuestionSelectionsIdentical": true,
+  "allOtherSelectedQuestionBindingsIdentical": true,
+  "selectedQuestionsTotal": 144,
+  "uniqueSelectedQuestionIds": 144,
+  "allSelectedBindingsMatchRevisedQuestionIndex": true,
+  "responseSemanticsUsedForRevision": false,
+  "auditorExecutedBeforeRevision": false,
+  "reason": "Manifest B-R5 preserves the exact frozen set and order of 144 selected question IDs while synchronizing doc-ec2c48d75bf3:q20 with question-index-v3-r7. Question 20 is complete on canonical page 10; canonical page 11 begins REDACAO and page 12 is the writing sheet.",
+  "freezeStatus": "ready_for_ground_truth_annotation"
+}
