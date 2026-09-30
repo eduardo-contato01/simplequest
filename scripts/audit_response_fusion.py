@@ -38,6 +38,7 @@ OPTION_BLOCKING_HARD = {
   "count_conflict",
   "parent_child_competing",
   "weak_anchor_only",
+  "visual_only_content_region_missing",
 }
 
 ANSWER_OPTION_PATTERNS = {"one_per_option", "grid_option_markers", "internal_enumeration_then_options"}
@@ -204,6 +205,30 @@ def fuse_response_evidence(
     hard_blockers.append("label_conflict")
   if count_conflict:
     hard_blockers.append("count_conflict")
+
+  answer_origin_sets = [
+    set(slots[index]["origins"])
+    for index in answer_slot_indexes
+  ]
+  visual_only_answers = (
+    bool(answer_origin_sets)
+    and all(
+      origins == {"visual_marker"}
+      for origins in answer_origin_sets
+    )
+  )
+  visual_only_missing_region = (
+    visual_only_answers
+    and any(
+      "content_region_missing"
+      in (slots[index].get("blockers") or [])
+      for index in answer_slot_indexes
+    )
+  )
+  if visual_only_missing_region:
+    hard_blockers.append(
+      "visual_only_content_region_missing"
+    )
 
   hard_blockers = sorted(set(hard_blockers))
   soft_blockers = sorted(set(soft_blockers))

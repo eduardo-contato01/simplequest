@@ -145,8 +145,33 @@ def test_slot_without_region_kept() -> None:
   slots = [slot(index, observations=[obs("visual", visual_index=index)], content=None) for index in range(3)]
   result = fusion.fuse_response_evidence({"reliable": True}, structure(), visual(3), regions(slots, []))
   check("noregion.slots_kept", len(result["slots"]) == 3, result["slots"])
-  check("noregion.count", result["optionCountHypothesis"] == 3, result)
+  check("noregion.count_blocked", result["optionCountHypothesis"] is None, result)
   check("noregion.soft", "content_region_missing" in result["softBlockers"], result["softBlockers"])
+  check(
+    "noregion.visual_only_hard",
+    "visual_only_content_region_missing" in result["hardBlockers"],
+    result["hardBlockers"],
+  )
+
+
+def test_textual_missing_region_does_not_trigger_visual_only_blocker() -> None:
+  slots = [
+    slot(index, label="ABC"[index], observations=[obs("strong", "ABC"[index])],
+         content=None if index == 2 else index)
+    for index in range(3)
+  ]
+  result = fusion.fuse_response_evidence(
+    {"reliable": True},
+    structure(markers=markers(3, "ABC")),
+    visual(),
+    regions(slots, ["text", "text"]),
+  )
+  check("textmissing.count", result["optionCountHypothesis"] == 3, result)
+  check(
+    "textmissing.no_visual_only_hard",
+    "visual_only_content_region_missing" not in result["hardBlockers"],
+    result["hardBlockers"],
+  )
 
 
 def test_region_kind_unknown_keeps_slot() -> None:
@@ -215,6 +240,7 @@ def main() -> None:
   test_paired_controls_no_option_count()
   test_parent_child_beats_circle_cluster()
   test_slot_without_region_kept()
+  test_textual_missing_region_does_not_trigger_visual_only_blocker()
   test_region_kind_unknown_keeps_slot()
   test_count_conflict()
   test_label_conflict()
