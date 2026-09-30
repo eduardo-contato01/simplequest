@@ -1,0 +1,219 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-12",
+  "sourceManifest": "audit/holdout/manifest-v3-b-r3.json",
+  "sourceManifestFileSha256": "4ccbef28fa19640724e367cc0b6b77b6ab7ff6b59e9870ad4dcfb69d1556d2b6",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r5.json",
+  "sourceQuestionIndexFileSha256": "652acbed281b6995b4c38f12d88f8e232f5af205e7f1bf7441864a4a09bf17ad",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-b85a1c21f081": "b85a1c21f08167fe21335a60a333a19571a6e3afcf28ccc8d5f3e507aab38943",
+    "doc-bb2d8abd32d4": "bb2d8abd32d4297f02c8ff6a41f9fabafaa21bf20f0a16ed8204bfad81314054",
+    "doc-bc9b2cef859e": "bc9b2cef859eb071a6f379a603fe64ca61eae6b55a08c67285e02fcbd6776cd6"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-b85a1c21f081",
+      "questionId": "doc-b85a1c21f081:q7",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questao matematica textual de contagem sobre datas ambiguas; cinco alternativas A-E."
+    },
+    {
+      "documentId": "doc-b85a1c21f081",
+      "questionId": "doc-b85a1c21f081:q25",
+      "pages": [
+        23
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao gramatical sobre tempos e modos verbais vinculada ao texto anterior; boundary corrigido neutralmente no R5 de paginas 23-25 para somente pagina 23."
+    },
+    {
+      "documentId": "doc-b85a1c21f081",
+      "questionId": "doc-b85a1c21f081:q32",
+      "pages": [
+        30
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual sobre o emprego de oracoes subordinadas adverbiais finais no artigo de opiniao."
+    },
+    {
+      "documentId": "doc-bb2d8abd32d4",
+      "questionId": "doc-bb2d8abd32d4:q4",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende da malha quadriculada e das figuras geometricas pintadas."
+    },
+    {
+      "documentId": "doc-bb2d8abd32d4",
+      "questionId": "doc-bb2d8abd32d4:q16",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questao matematica sobre a fracao de um dia correspondente a quarenta minutos."
+    },
+    {
+      "documentId": "doc-bb2d8abd32d4",
+      "questionId": "doc-bb2d8abd32d4:q21",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende da tabela com a quantidade de dias dos meses de 2014."
+    },
+    {
+      "documentId": "doc-bc9b2cef859e",
+      "questionId": "doc-bc9b2cef859e:q11",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questao matematica textual de contagem de partidas em fases de um torneio."
+    },
+    {
+      "documentId": "doc-bc9b2cef859e",
+      "questionId": "doc-bc9b2cef859e:q24",
+      "pages": [
+        25
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A interpretacao depende dos elementos verbais e nao verbais da charge apresentada como Texto 3."
+    },
+    {
+      "documentId": "doc-bc9b2cef859e",
+      "questionId": "doc-bc9b2cef859e:q27",
+      "pages": [
+        27
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questao de pontuacao ligada ao trecho verbal e ao contexto visual da tirinha apresentada como Texto 5."
+    }
+  ]
+}
