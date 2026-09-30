@@ -479,6 +479,260 @@ def recover_missing_markers(selected: dict[str, Any] | None, lines: list[Observe
   return recovered
 
 
+EDGE_SEQUENCE_X_TOL = 12.0
+EDGE_SEQUENCE_MAX_VERTICAL_GAP = 20.0
+EDGE_SEQUENCE_MAX_TOKENS = 8
+
+
+def detect_edge_sequence_ambiguity(
+  selected: dict[str, Any] | None,
+  lines: list[ObservedLine],
+) -> list[dict[str, Any]]:
+  if (
+    not selected
+    or selected.get("size") != 3
+  ):
+    return []
+
+  if float(
+    selected.get(
+      "xIqr"
+    )
+    or 0.0
+  ) > EDGE_SEQUENCE_X_TOL:
+    return []
+
+  labels = [
+    str(label).upper()
+    for label in (
+      selected.get(
+        "labels"
+      )
+      or []
+    )
+  ]
+
+  if labels == [
+    "A",
+    "B",
+    "C",
+  ]:
+    direction = "trailing"
+    expected_label = "D"
+    target_line_index = (
+      int(
+        selected[
+          "lineEnd"
+        ]
+      )
+      + 1
+    )
+
+    reference = max(
+      selected[
+        "candidates"
+      ],
+      key=lambda candidate: int(
+        candidate[
+          "lineIndex"
+        ]
+      ),
+    )
+
+  elif labels == [
+    "B",
+    "C",
+    "D",
+  ]:
+    direction = "leading"
+    expected_label = "A"
+    target_line_index = (
+      int(
+        selected[
+          "lineStart"
+        ]
+      )
+      - 1
+    )
+
+    reference = min(
+      selected[
+        "candidates"
+      ],
+      key=lambda candidate: int(
+        candidate[
+          "lineIndex"
+        ]
+      ),
+    )
+
+  else:
+    return []
+
+  matching_lines = [
+    line
+    for line in lines
+    if (
+      line.line_index
+      == target_line_index
+    )
+  ]
+
+  if len(
+    matching_lines
+  ) != 1:
+    return []
+
+  candidate_line = (
+    matching_lines[
+      0
+    ]
+  )
+
+  if (
+    candidate_line.page
+    != int(
+      reference[
+        "page"
+      ]
+    )
+  ):
+    return []
+
+  text = (
+    candidate_line.text
+    or ""
+  ).strip()
+
+  if not text:
+    return []
+
+  if parse_marker(
+    text
+  ):
+    return []
+
+  if len(
+    text.split()
+  ) > EDGE_SEQUENCE_MAX_TOKENS:
+    return []
+
+  x_reference = median(
+    [
+      float(
+        candidate[
+          "bbox"
+        ][
+          0
+        ]
+      )
+      for candidate
+      in selected[
+        "candidates"
+      ]
+    ]
+  )
+
+  if abs(
+    float(
+      candidate_line.x0
+    )
+    - x_reference
+  ) > EDGE_SEQUENCE_X_TOL:
+    return []
+
+  if direction == "trailing":
+    vertical_gap = (
+      float(
+        candidate_line.top
+      )
+      - float(
+        reference[
+          "bbox"
+        ][
+          3
+        ]
+      )
+    )
+
+  else:
+    vertical_gap = (
+      float(
+        reference[
+          "bbox"
+        ][
+          1
+        ]
+      )
+      - float(
+        candidate_line.bottom
+      )
+    )
+
+  if not (
+    -5.0
+    <= vertical_gap
+    <= EDGE_SEQUENCE_MAX_VERTICAL_GAP
+  ):
+    return []
+
+  return [{
+    "direction":
+      direction,
+
+    "expectedLabel":
+      expected_label,
+
+    "label":
+      None,
+
+    "labelSource":
+      "edge_geometry_ambiguous",
+
+    "page":
+      candidate_line.page,
+
+    "bbox":
+      [
+        round(
+          candidate_line.x0,
+          2,
+        ),
+        round(
+          candidate_line.top,
+          2,
+        ),
+        round(
+          candidate_line.x1,
+          2,
+        ),
+        round(
+          candidate_line.bottom,
+          2,
+        ),
+      ],
+
+    "lineIndex":
+      candidate_line.line_index,
+
+    "text":
+      candidate_line.text,
+
+    "verticalGap":
+      round(
+        vertical_gap,
+        2,
+      ),
+
+    "evidence": [
+      "edge_sequence_gap",
+      "alignment",
+      "adjacent_line",
+      "near_edge",
+    ],
+  }]
+
+
 def _layout(candidates: list[dict[str, Any]]) -> tuple[str, bool]:
   x_values = sorted(candidate["bbox"][0] for candidate in candidates)
   if len(x_values) < 2:
@@ -571,6 +825,10 @@ def discover_response_structure(
   selected, ambiguous = _selected_cluster(clusters)
   internal = _internal_enumeration(clusters, selected)
   recovered = recover_missing_markers(selected, lines)
+  edge_ambiguity = detect_edge_sequence_ambiguity(
+    selected,
+    lines,
+  )
   mode_info = _response_mode(selected, internal, lines)
   mode = mode_info["mode"]
   option_labels = mode_info["optionLabels"]
@@ -606,6 +864,7 @@ def discover_response_structure(
     and terminal_ok
     and not ambiguous
     and not recovered_labels
+    and not edge_ambiguity
     and selected["size"] == len(sequence_indices)
   )
   option_count = selected["size"] if count_confident else None
@@ -649,6 +908,10 @@ def discover_response_structure(
     evidence.append(f"layout:{layout}")
   if recovered:
     evidence.append(f"recovered_markers:{len(recovered)}")
+  if edge_ambiguity:
+    evidence.append(
+      f"edge_sequence_ambiguity:{len(edge_ambiguity)}"
+    )
   if ambiguous:
     evidence.append("ambiguous_clusters")
 
@@ -689,6 +952,7 @@ def discover_response_structure(
     "responseSetCandidates": clusters,
     "internalEnumerationCandidates": internal,
     "recoveredAlternativeMarkerCandidates": recovered,
+    "edgeSequenceAmbiguityCandidates": edge_ambiguity,
     "alternativeMarkerCandidates": [candidate.to_dict() for candidate in candidates],
     "documentAlternativeProfile": document_profile,
     "sectionAlternativeProfile": section_profile,

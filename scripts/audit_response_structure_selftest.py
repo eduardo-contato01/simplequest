@@ -63,6 +63,181 @@ def test_vertical_abc() -> None:
   check("abc.count", s["expectedOptionCount"] == 3, s)
 
 
+def test_trailing_edge_sequence_ambiguity() -> None:
+  result = structure([
+    ("A- um", 100, 50),
+    ("B- dois", 130, 50),
+    ("C- tres", 160, 50),
+    ("DX ruido curto", 172, 51),
+  ])
+
+  edge = (
+    result.get(
+      "edgeSequenceAmbiguityCandidates"
+    )
+    or []
+  )
+
+  inferred = result[
+    "inferredResponseStructure"
+  ]
+
+  check(
+    "edge.trailing.detected",
+    len(edge) == 1,
+    edge,
+  )
+
+  check(
+    "edge.trailing.direction",
+    bool(edge)
+    and edge[0]["direction"] == "trailing",
+    edge,
+  )
+
+  check(
+    "edge.trailing.expected_d",
+    bool(edge)
+    and edge[0]["expectedLabel"] == "D",
+    edge,
+  )
+
+  check(
+    "edge.trailing.count_blocked",
+    inferred["expectedOptionCount"] is None,
+    inferred,
+  )
+
+
+def test_leading_edge_sequence_ambiguity() -> None:
+  result = structure([
+    ("AX ruido curto", 88, 51),
+    ("B-( ) dois", 100, 50),
+    ("C-( ) tres", 130, 50),
+    ("D-( ) quatro", 160, 50),
+  ])
+
+  edge = (
+    result.get(
+      "edgeSequenceAmbiguityCandidates"
+    )
+    or []
+  )
+
+  inferred = result[
+    "inferredResponseStructure"
+  ]
+
+  check(
+    "edge.leading.detected",
+    len(edge) == 1,
+    edge,
+  )
+
+  check(
+    "edge.leading.direction",
+    bool(edge)
+    and edge[0]["direction"] == "leading",
+    edge,
+  )
+
+  check(
+    "edge.leading.expected_a",
+    bool(edge)
+    and edge[0]["expectedLabel"] == "A",
+    edge,
+  )
+
+  check(
+    "edge.leading.count_blocked",
+    inferred["expectedOptionCount"] is None,
+    inferred,
+  )
+
+
+def test_edge_sequence_negative_controls() -> None:
+  ordinary_abc = structure([
+    ("A) um", 100, 50),
+    ("B) dois", 130, 50),
+    ("C) tres", 160, 50),
+  ])
+
+  check(
+    "edge.ordinary_abc_not_blocked",
+    not (
+      ordinary_abc.get(
+        "edgeSequenceAmbiguityCandidates"
+      )
+      or []
+    )
+    and ordinary_abc[
+      "inferredResponseStructure"
+    ][
+      "expectedOptionCount"
+    ] == 3,
+    ordinary_abc,
+  )
+
+  far_line = structure([
+    ("A) um", 100, 50),
+    ("B) dois", 130, 50),
+    ("C) tres", 160, 50),
+    ("DX ruido curto", 240, 51),
+  ])
+
+  check(
+    "edge.far_line_not_blocked",
+    not (
+      far_line.get(
+        "edgeSequenceAmbiguityCandidates"
+      )
+      or []
+    ),
+    far_line,
+  )
+
+  long_line = structure([
+    ("A) um", 100, 50),
+    ("B) dois", 130, 50),
+    ("C) tres", 160, 50),
+    (
+      "esta linha longa claramente pertence "
+      "ao corpo normal da questao e nao alternativa",
+      172,
+      51,
+    ),
+  ])
+
+  check(
+    "edge.long_line_not_blocked",
+    not (
+      long_line.get(
+        "edgeSequenceAmbiguityCandidates"
+      )
+      or []
+    ),
+    long_line,
+  )
+
+  displaced_line = structure([
+    ("A) um", 100, 50),
+    ("B) dois", 130, 50),
+    ("C) tres", 160, 50),
+    ("DX ruido curto", 172, 150),
+  ])
+
+  check(
+    "edge.displaced_line_not_blocked",
+    not (
+      displaced_line.get(
+        "edgeSequenceAmbiguityCandidates"
+      )
+      or []
+    ),
+    displaced_line,
+  )
+
+
 def test_lowercase() -> None:
   result = structure([
     ("a) um", 100, 50), ("b) dois", 120, 50), ("c) tres", 140, 50),
@@ -361,6 +536,9 @@ def main() -> None:
   test_vertical_abcde()
   test_vertical_abcd()
   test_vertical_abc()
+  test_trailing_edge_sequence_ambiguity()
+  test_leading_edge_sequence_ambiguity()
+  test_edge_sequence_negative_controls()
   test_lowercase()
   test_parentheses_and_separators()
   test_constrained_leading_ocr_noise()

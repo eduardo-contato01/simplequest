@@ -41,6 +41,7 @@ OPTION_BLOCKING_HARD = {
   "parent_child_competing",
   "weak_anchor_only",
   "visual_only_content_region_missing",
+  "edge_sequence_ambiguity",
 }
 
 ANSWER_OPTION_PATTERNS = {"one_per_option", "grid_option_markers", "internal_enumeration_then_options"}
@@ -163,8 +164,21 @@ def fuse_response_evidence(
   # ---- structural blockers -------------------------------------------------
   hard_blockers: list[str] = []
   soft_blockers: list[str] = []
+
+  edge_sequence_ambiguities = (
+    structure.get(
+      "edgeSequenceAmbiguityCandidates"
+    )
+    or []
+  )
+
   if not reliable:
     hard_blockers.append("boundary_uncertain")
+
+  if edge_sequence_ambiguities:
+    hard_blockers.append(
+      "edge_sequence_ambiguity"
+    )
   if len([h for h in visual_hypotheses if int(h.get("support") or 0) >= 3]) >= 2:
     hard_blockers.append("competing_response_sets")
   if pattern_name == "paired_controls_per_row" and answer_slot_indexes:
@@ -313,6 +327,12 @@ def fuse_response_evidence(
     else:
       option_labels = _contiguous_labels([str(label).upper() for label in observed])
 
+  if (
+    edge_sequence_ambiguities
+    and labels_applicable
+  ):
+    option_labels = "unknown"
+
   # ---- agreement -----------------------------------------------------------
   conflict = bool({"role_conflict", "label_conflict", "count_conflict"} & set(hard_blockers))
   if count_conflict:
@@ -368,6 +388,9 @@ def fuse_response_evidence(
   if option_count is not None and option_labels == "unknown" and interpretation_confidence == "high":
     interpretation_confidence = "medium"
   if "boundary_uncertain" in hard_blockers:
+    interpretation_confidence = "low"
+
+  if "edge_sequence_ambiguity" in hard_blockers:
     interpretation_confidence = "low"
 
   evidence: list[str] = [
