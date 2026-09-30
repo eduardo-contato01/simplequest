@@ -1,0 +1,219 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-13",
+  "sourceManifest": "audit/holdout/manifest-v3-b-r3.json",
+  "sourceManifestFileSha256": "4ccbef28fa19640724e367cc0b6b77b6ab7ff6b59e9870ad4dcfb69d1556d2b6",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r5.json",
+  "sourceQuestionIndexFileSha256": "652acbed281b6995b4c38f12d88f8e232f5af205e7f1bf7441864a4a09bf17ad",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-c46447811fd3": "c46447811fd30b6bdbdd2f5ccd091906367a25ffb53e30e9e01abfd984cd471f",
+    "doc-c7f2f02d07ca": "c7f2f02d07cac81720089ec0d75558c5b6381f301ce2ce40fe1ac1dbb9451dda",
+    "doc-ce6f77f83acf": "ce6f77f83acf80c553241cd0fd4b5cbeabb6b50dc503571241c3c41ac757bdc6"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-c46447811fd3",
+      "questionId": "doc-c46447811fd3:q8",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questao matematica textual sobre recorte de quatro triangulos retangulos em uma cartolina retangular para formar um octogono."
+    },
+    {
+      "documentId": "doc-c46447811fd3",
+      "questionId": "doc-c46447811fd3:q17",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual de interpretacao sobre a finalidade do Texto 1."
+    },
+    {
+      "documentId": "doc-c46447811fd3",
+      "questionId": "doc-c46447811fd3:q25",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao gramatical ligada ao Texto 6; as cinco alternativas reproduzem os trechos relevantes para identificar qual nao constitui oracao, sem dependencia visual necessaria."
+    },
+    {
+      "documentId": "doc-c7f2f02d07ca",
+      "questionId": "doc-c7f2f02d07ca:q1",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual de interpretacao do Texto I com cinco alternativas A-E."
+    },
+    {
+      "documentId": "doc-c7f2f02d07ca",
+      "questionId": "doc-c7f2f02d07ca:q12",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 4,
+      "responseControls": 4,
+      "layout": "mixed",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Questao de correspondencia com quatro trechos precedidos por controles parenteticos, cinco categorias em algarismos romanos e cinco alternativas finais A-E contendo sequencias; a resposta final continua sendo uma unica alternativa."
+    },
+    {
+      "documentId": "doc-c7f2f02d07ca",
+      "questionId": "doc-c7f2f02d07ca:q21",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 4,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Quatro proposicoes internas I-IV antecedem cinco alternativas finais A-E com sequencias de classificacao verbal."
+    },
+    {
+      "documentId": "doc-ce6f77f83acf",
+      "questionId": "doc-ce6f77f83acf:q5",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Questao matematica sobre probabilidade de abertura de um cofre com senha de quatro digitos; cada alternativa possui controle parentetico."
+    },
+    {
+      "documentId": "doc-ce6f77f83acf",
+      "questionId": "doc-ce6f77f83acf:q13",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Questao textual de interpretacao do Texto 1; cinco alternativas com controles parenteticos."
+    },
+    {
+      "documentId": "doc-ce6f77f83acf",
+      "questionId": "doc-ce6f77f83acf:q18",
+      "pages": [
+        17
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Questao sobre composicao, enfoque tematico e finalidade dos Textos 2 e 3; o Texto 3 e uma tirinha, tornando a evidencia verbal e visual relevante."
+    }
+  ]
+}
