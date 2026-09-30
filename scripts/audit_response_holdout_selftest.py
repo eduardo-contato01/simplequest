@@ -482,7 +482,140 @@ def test_deterministic_v2() -> None:
   check("v2.deterministic", [d["documentId"] for d in first["documents"]] == [d["documentId"] for d in second["documents"]])
 
 
+def test_recovered_geometry_marker_adapter() -> None:
+  lines = [
+    {
+      "text": "A) um",
+      "page": 1,
+      "x0": 50.0,
+      "top": 100.0,
+      "x1": 150.0,
+      "bottom": 112.0,
+      "lineIndex": 0,
+    },
+    {
+      "text": "B) dois",
+      "page": 1,
+      "x0": 50.0,
+      "top": 130.0,
+      "x1": 150.0,
+      "bottom": 142.0,
+      "lineIndex": 1,
+    },
+    {
+      "text": "(Cc) tres",
+      "page": 1,
+      "x0": 50.0,
+      "top": 160.0,
+      "x1": 150.0,
+      "bottom": 172.0,
+      "lineIndex": 2,
+    },
+    {
+      "text": "D) quatro",
+      "page": 1,
+      "x0": 50.0,
+      "top": 190.0,
+      "x1": 150.0,
+      "bottom": 202.0,
+      "lineIndex": 3,
+    },
+    {
+      "text": "E) cinco",
+      "page": 1,
+      "x0": 50.0,
+      "top": 220.0,
+      "x1": 150.0,
+      "bottom": 232.0,
+      "lineIndex": 4,
+    },
+  ]
+
+  structure = {
+    "recoveredAlternativeMarkerCandidates": [{
+      "expectedLabel": "C",
+      "label": None,
+      "labelSource": "recovered_geometry",
+      "page": 1,
+      "bbox": [50.0, 160.0, 150.0, 172.0],
+      "lineIndex": 2,
+      "text": "(Cc) tres",
+      "evidence": [
+        "sequence_gap",
+        "alignment",
+        "spatial_cluster",
+      ],
+    }],
+  }
+
+  markers = runner._markers_with_recovered_geometry(
+    lines,
+    structure,
+  )
+
+  recovered = [
+    marker
+    for marker in markers
+    if marker.get("source") == "recovered_geometry"
+  ]
+
+  labels = {
+    marker.get("label")
+    for marker in markers
+    if marker.get("markerKind") == "answer_marker"
+  }
+
+  check(
+    "adapter.recovered_one",
+    len(recovered) == 1,
+    recovered,
+  )
+
+  check(
+    "adapter.recovered_label",
+    recovered
+    and recovered[0]["label"] == "C",
+    recovered,
+  )
+
+  check(
+    "adapter.complete_labels",
+    labels == set("ABCDE"),
+    labels,
+  )
+
+  invalid_structure = {
+    "recoveredAlternativeMarkerCandidates": [{
+      "expectedLabel": "C",
+      "labelSource": "recovered_geometry",
+      "page": 1,
+      "bbox": [50.0, 160.0, 150.0, 172.0],
+      "lineIndex": 2,
+      "text": "(Cc) tres",
+      "evidence": [
+        "sequence_gap",
+        "alignment",
+      ],
+    }],
+  }
+
+  invalid_markers = runner._markers_with_recovered_geometry(
+    lines,
+    invalid_structure,
+  )
+
+  check(
+    "adapter.requires_full_evidence",
+    not any(
+      marker.get("source") == "recovered_geometry"
+      for marker in invalid_markers
+    ),
+    invalid_markers,
+  )
+
+
 def main() -> None:
+  test_recovered_geometry_marker_adapter()
   test_deterministic_and_quotas()
   test_pool_filters()
   test_same_content_dedup_and_canonical()

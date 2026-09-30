@@ -14,6 +14,7 @@ ORIGIN_BY_SOURCE = {
   "rendered_visual": "visual_marker",
   "weak": "weak_anchor",
   "ocr_word_geometry": "word_geometry",
+  "recovered_geometry": "recovered_geometry",
 }
 
 ORIGIN_CONFIDENCE = {
@@ -23,6 +24,7 @@ ORIGIN_CONFIDENCE = {
   "weak_anchor": "low",
   "word_geometry": "low",
   "content_geometry": "low",
+  "recovered_geometry": "low",
 }
 
 CONFIDENCE_ORDER = {"low": 0, "medium": 1, "high": 2}
@@ -185,21 +187,54 @@ def fuse_response_evidence(
   if pattern_name in {"internal_enumeration", "internal_enumeration_then_options"} and not answer_slot_indexes:
     soft_blockers.append("missing_marker_observation")
 
-  # count conflict: explicit option markers vs answer_option slots disagree
+  # count conflict: structural answer markers vs answer_option slots disagree.
+  # A recovered marker is allowed to participate only when it came from the
+  # conservative internal-gap recovery path with all required evidence.
   text_markers = [
     marker for marker in (structure.get("alternativeMarkerCandidates") or [])
     if marker.get("markerKind") == "answer_marker"
     and str(marker.get("label") or "").upper() in list("ABCDE")
   ]
+
+  recovered_required_evidence = {
+    "sequence_gap",
+    "alignment",
+    "spatial_cluster",
+  }
+
+  recovered_markers = [
+    marker
+    for marker in (
+      structure.get("recoveredAlternativeMarkerCandidates")
+      or []
+    )
+    if marker.get("labelSource") == "recovered_geometry"
+    and str(marker.get("expectedLabel") or "").upper() in list("ABCDE")
+    and recovered_required_evidence
+        <= {
+          str(value)
+          for value in (
+            marker.get("evidence")
+            or []
+          )
+        }
+  ]
+
+  structural_marker_count = (
+    len(text_markers)
+    + len(recovered_markers)
+  )
+
   # label conflict inside a merged slot
   label_conflict = any(
     len({str(o.get("label")) for o in (slot.get("markerObservations") or []) if o.get("label")}) > 1
     for slot in slot_hypotheses
   )
+
   count_conflict = (
-    len(text_markers) >= 3
+    structural_marker_count >= 3
     and len(answer_slot_indexes) >= 3
-    and len(text_markers) != len(answer_slot_indexes)
+    and structural_marker_count != len(answer_slot_indexes)
   )
   if label_conflict:
     hard_blockers.append("label_conflict")

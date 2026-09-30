@@ -373,11 +373,135 @@ def _run_with_boundary(bundle: observations.ObservationBundle, question: dict[st
   return _run_from_bundle(filtered, boundary, rendered_dir, pages)
 
 
+RECOVERED_MARKER_REQUIRED_EVIDENCE = {
+  "sequence_gap",
+  "alignment",
+  "spatial_cluster",
+}
+
+
+def _markers_with_recovered_geometry(
+  lines: list[dict[str, Any]],
+  structure: dict[str, Any] | None,
+) -> list[dict[str, Any]]:
+  markers = observations.extract_text_markers(lines)
+  structure = structure or {}
+
+  for candidate in (
+    structure.get("recoveredAlternativeMarkerCandidates")
+    or []
+  ):
+    label = str(
+      candidate.get("expectedLabel")
+      or ""
+    ).upper()
+
+    evidence = {
+      str(value)
+      for value in (
+        candidate.get("evidence")
+        or []
+      )
+    }
+
+    if (
+      candidate.get("labelSource")
+      != "recovered_geometry"
+    ):
+      continue
+
+    if label not in set("ABCDE"):
+      continue
+
+    if not (
+      RECOVERED_MARKER_REQUIRED_EVIDENCE
+      <= evidence
+    ):
+      continue
+
+    bbox = candidate.get("bbox") or (
+      0,
+      0,
+      0,
+      0,
+    )
+
+    if len(bbox) != 4:
+      continue
+
+    markers.append({
+      "source":
+        "recovered_geometry",
+
+      "markerKind":
+        "answer_marker",
+
+      "label":
+        label,
+
+      "subitemLabel":
+        None,
+
+      "parentQuestion":
+        None,
+
+      "labelCase":
+        "upper",
+
+      "markerShape":
+        "none",
+
+      "separator":
+        "none",
+
+      "responseField":
+        "absent",
+
+      "text":
+        str(
+          candidate.get("text")
+          or ""
+        ),
+
+      "page":
+        int(
+          candidate.get("page")
+          or 0
+        ),
+
+      "bbox":
+        [
+          float(value)
+          for value in bbox
+        ],
+
+      "lineIndex":
+        candidate.get("lineIndex"),
+
+      "recoveredEvidence":
+        sorted(evidence),
+    })
+
+  return markers
+
+
 def _run_from_bundle(bundle: observations.ObservationBundle, boundary: dict[str, Any], rendered_dir: Path | None,
                      pages: list[int]) -> dict[str, Any]:
   lines = bundle.lines_as_region_input()
   words = bundle.words_as_region_input()
-  markers = observations.extract_text_markers(lines)
+
+  structure = (
+    response_structure
+    .discover_response_structure(
+      _observed_lines(lines)
+    )
+  )
+
+  markers = _markers_with_recovered_geometry(
+    lines,
+    structure,
+  )
+
   raster = bundle.visual_as_region_input()
   visual_markers: list[dict[str, Any]] = []
   for page in pages:
@@ -398,7 +522,6 @@ def _run_from_bundle(bundle: observations.ObservationBundle, boundary: dict[str,
     boundary=boundary, lines=lines, words=words, strong_markers=markers,
     visual_markers=visual_markers, raster_components=raster,
   )
-  structure = response_structure.discover_response_structure(_observed_lines(lines))
   visual_shadow = {"visualAlternativeEvidence": visual_markers} if visual_markers else {}
   return fusion.fuse_response_evidence(boundary, structure, visual_shadow, discovered)
 

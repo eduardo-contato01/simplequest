@@ -32,11 +32,17 @@ def slot(slot_id: int, role: str = "answer_option", label: str | None = None,
   }
 
 
-def structure(mode: str = "single_choice", markers: list[dict] | None = None, internal: list[dict] | None = None) -> dict:
+def structure(
+  mode: str = "single_choice",
+  markers: list[dict] | None = None,
+  internal: list[dict] | None = None,
+  recovered: list[dict] | None = None,
+) -> dict:
   return {
     "inferredResponseStructure": {"mode": mode, "confidence": "medium"},
     "alternativeMarkerCandidates": markers or [],
     "internalEnumerationCandidates": internal or [],
+    "recoveredAlternativeMarkerCandidates": recovered or [],
   }
 
 
@@ -181,6 +187,98 @@ def test_region_kind_unknown_keeps_slot() -> None:
   check("unknownkind.count", result["optionCountHypothesis"] == 3, result)
 
 
+def test_recovered_geometry_completes_internal_gap() -> None:
+  explicit = [
+    {"markerKind": "answer_marker", "label": "A", "lineIndex": 0},
+    {"markerKind": "answer_marker", "label": "B", "lineIndex": 1},
+    {"markerKind": "answer_marker", "label": "D", "lineIndex": 3},
+    {"markerKind": "answer_marker", "label": "E", "lineIndex": 4},
+  ]
+
+  recovered = [{
+    "expectedLabel": "C",
+    "label": None,
+    "labelSource": "recovered_geometry",
+    "lineIndex": 2,
+    "evidence": [
+      "sequence_gap",
+      "alignment",
+      "spatial_cluster",
+    ],
+  }]
+
+  slots = [
+    slot(
+      0,
+      label="A",
+      observations=[obs("strong", "A")],
+      content=0,
+    ),
+    slot(
+      1,
+      label="B",
+      observations=[obs("strong", "B")],
+      content=1,
+    ),
+    slot(
+      2,
+      label="C",
+      observations=[obs("recovered_geometry", "C")],
+      content=2,
+      confidence="low",
+    ),
+    slot(
+      3,
+      label="D",
+      observations=[obs("strong", "D")],
+      content=3,
+    ),
+    slot(
+      4,
+      label="E",
+      observations=[obs("strong", "E")],
+      content=4,
+    ),
+  ]
+
+  result = fusion.fuse_response_evidence(
+    {"reliable": True},
+    structure(
+      markers=explicit,
+      recovered=recovered,
+    ),
+    visual(),
+    regions(
+      slots,
+      ["text"] * 5,
+    ),
+  )
+
+  check(
+    "recovered.count",
+    result["optionCountHypothesis"] == 5,
+    result,
+  )
+
+  check(
+    "recovered.labels",
+    result["optionLabelsHypothesis"] == "A-E",
+    result,
+  )
+
+  check(
+    "recovered.no_count_conflict",
+    "count_conflict" not in result["hardBlockers"],
+    result["hardBlockers"],
+  )
+
+  check(
+    "recovered.origin",
+    result["slots"][2]["origins"] == ["recovered_geometry"],
+    result["slots"][2],
+  )
+
+
 def test_count_conflict() -> None:
   slots = [slot(index, observations=[obs("strong", "ABCD"[index])], content=index) for index in range(4)]
   result = fusion.fuse_response_evidence({"reliable": True}, structure(markers=markers(5)), visual(), regions(slots, ["text"] * 4))
@@ -242,6 +340,7 @@ def main() -> None:
   test_slot_without_region_kept()
   test_textual_missing_region_does_not_trigger_visual_only_blocker()
   test_region_kind_unknown_keeps_slot()
+  test_recovered_geometry_completes_internal_gap()
   test_count_conflict()
   test_label_conflict()
   test_boundary_uncertain_blocks_strong()
