@@ -1,0 +1,29 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "neutral-question-index-revision-adjudication",
+  "revision": "r5",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r4.json",
+  "sourceQuestionIndexFileSha256": "da821ee8ea87d272f628a5f8b5cd85ead54b9e2202130ee19bc2a6e27946a709",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeRevision": false,
+  "responseSemanticsUsedForRevision": false,
+  "selectionChanged": false,
+  "corrections": [
+    {
+      "documentId": "doc-b85a1c21f081",
+      "questionId": "doc-b85a1c21f081:q25",
+      "field": "pageEnd",
+      "oldValue": 25,
+      "newValue": 23,
+      "oldPages": [
+        23,
+        24,
+        25
+      ],
+      "newPages": [
+        23
+      ],
+      "reason": "Neutral page-boundary correction: question 25, including its complete statement and alternatives A-E, is fully contained on canonical PDF page 23. Canonical page 24 begins Texto 2 and canonical page 25 contains question 26."
+    }
+  ]
+}

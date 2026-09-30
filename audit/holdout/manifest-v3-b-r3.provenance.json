@@ -1,0 +1,47 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "deterministic-question-selection-revision-provenance",
+  "revision": "manifest-v3-b-r3",
+  "sourceManifest": "audit/holdout/manifest-v3-b-r2.json",
+  "sourceManifestFileSha256": "03e1e76efb6a6e96d95876c7a59cacb3a2351c0d60fdb4faef572ac3b99c8ad7",
+  "revisedManifest": "audit/holdout/manifest-v3-b-r3.json",
+  "revisedManifestFileSha256": "4ccbef28fa19640724e367cc0b6b77b6ab7ff6b59e9870ad4dcfb69d1556d2b6",
+  "revisedManifestCanonicalJsonSha256": "e2cf0f6761477c1fc733602b0355d14a59ac14c0550be0a01bbe50c650b96917",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r4.json",
+  "sourceQuestionIndexFileSha256": "da821ee8ea87d272f628a5f8b5cd85ead54b9e2202130ee19bc2a6e27946a709",
+  "revisedQuestionIndex": "audit/holdout/question-index-v3-r5.json",
+  "revisedQuestionIndexFileSha256": "652acbed281b6995b4c38f12d88f8e232f5af205e7f1bf7441864a4a09bf17ad",
+  "selectionSeed": 20260923,
+  "documentSelectionChanged": false,
+  "questionSelectionChanged": false,
+  "selectionRecomputed": false,
+  "selectedQuestionIdsUnchanged": true,
+  "selectedQuestionBindingsChanged": true,
+  "affectedDocuments": [
+    "doc-b85a1c21f081"
+  ],
+  "changedBindings": [
+    {
+      "documentId": "doc-b85a1c21f081",
+      "questionId": "doc-b85a1c21f081:q25",
+      "oldPages": [
+        23,
+        24,
+        25
+      ],
+      "newPages": [
+        23
+      ],
+      "origin": "R5 neutral index correction"
+    }
+  ],
+  "allOtherDocumentQuestionSelectionsIdentical": true,
+  "allOtherSelectedQuestionBindingsIdentical": true,
+  "selectedQuestionsTotal": 144,
+  "uniqueSelectedQuestionIds": 144,
+  "allSelectedBindingsMatchRevisedQuestionIndex": true,
+  "responseSemanticsUsedForRevision": false,
+  "auditorExecutedBeforeRevision": false,
+  "reason": "Manifest B-R3 preserves the exact frozen set and order of 144 selected question IDs while synchronizing doc-b85a1c21f081:q25 with question-index-v3-r5. The complete question and alternatives A-E are on canonical page 23; page 24 begins Texto 2 and page 25 contains question 26.",
+  "freezeStatus": "ready_for_ground_truth_annotation"
+}
