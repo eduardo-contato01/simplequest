@@ -1,0 +1,43 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "neutral-question-index-revision-adjudication",
+  "revision": "r6",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r5.json",
+  "sourceQuestionIndexFileSha256": "652acbed281b6995b4c38f12d88f8e232f5af205e7f1bf7441864a4a09bf17ad",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeRevision": false,
+  "responseSemanticsUsedForRevision": false,
+  "selectionChanged": false,
+  "corrections": [
+    {
+      "documentId": "doc-e0a1bafb0ea7",
+      "questionId": "doc-e0a1bafb0ea7:q5",
+      "field": "pageEnd",
+      "oldValue": 4,
+      "newValue": 3,
+      "oldPages": [
+        3,
+        4
+      ],
+      "newPages": [
+        3
+      ],
+      "reason": "Neutral page-boundary correction: question 5, including all five alternatives A-E, is fully contained on canonical PDF page 3; canonical page 4 begins Texto 3."
+    },
+    {
+      "documentId": "doc-e0a1bafb0ea7",
+      "questionId": "doc-e0a1bafb0ea7:q9",
+      "field": "pageEnd",
+      "oldValue": 7,
+      "newValue": 6,
+      "oldPages": [
+        6,
+        7
+      ],
+      "newPages": [
+        6
+      ],
+      "reason": "Neutral page-boundary correction: question 9, including all five alternatives A-E, is fully contained on canonical PDF page 6; canonical page 7 begins Textos 4 e 5 and question 10."
+    }
+  ]
+}

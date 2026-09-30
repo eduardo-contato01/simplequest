@@ -1,0 +1,32 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "neutral-question-index-revision-provenance",
+  "revision": "r6",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r5.json",
+  "sourceQuestionIndexFileSha256": "652acbed281b6995b4c38f12d88f8e232f5af205e7f1bf7441864a4a09bf17ad",
+  "revisedQuestionIndex": "audit/holdout/question-index-v3-r6.json",
+  "revisedQuestionIndexFileSha256": "297347f193f2558ebb8353ba6164bb54193ad54e07fdd00f88739f9f2055d0eb",
+  "revisedQuestionIndexCanonicalJsonSha256": "9533b209e6337e777f21f5a64db7db1c2faf43144757a07dbce358f4d5aba8d6",
+  "adjudication": "audit/holdout/question-index-v3-r6.adjudication.json",
+  "adjudicationFileSha256": "d40e3f896ab239f2c813797d727d89a1bcecdb143258f269e40833e59ead635c",
+  "documentsBefore": 48,
+  "documentsAfter": 48,
+  "questionsBefore": 2107,
+  "questionsAfter": 2107,
+  "questionIdsChanged": false,
+  "documentSelectionChanged": false,
+  "questionSelectionChanged": false,
+  "inheritedPriorRevision": "question-index-v3-r5",
+  "inheritedR1CorrectionPreserved": true,
+  "inheritedR2CorrectionPreserved": true,
+  "inheritedR3CorrectionPreserved": true,
+  "inheritedR4CorrectionPreserved": true,
+  "inheritedR5CorrectionPreserved": true,
+  "onlyChangesFromR5": [
+    "doc-e0a1bafb0ea7:q5.pageEnd: 4 -> 3",
+    "doc-e0a1bafb0ea7:q9.pageEnd: 7 -> 6"
+  ],
+  "responseSemanticsUsedForRevision": false,
+  "auditorExecutedBeforeRevision": false,
+  "freezeStatus": "requires_selected_question_binding_revision"
+}

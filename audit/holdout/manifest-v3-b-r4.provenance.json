@@ -1,0 +1,58 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "deterministic-question-selection-revision-provenance",
+  "revision": "manifest-v3-b-r4",
+  "sourceManifest": "audit/holdout/manifest-v3-b-r3.json",
+  "sourceManifestFileSha256": "4ccbef28fa19640724e367cc0b6b77b6ab7ff6b59e9870ad4dcfb69d1556d2b6",
+  "revisedManifest": "audit/holdout/manifest-v3-b-r4.json",
+  "revisedManifestFileSha256": "30924e23c3286d342c199687edd74630102dbaf5f7001afc8dd83f7a94b8424e",
+  "revisedManifestCanonicalJsonSha256": "7bc3b1df438e6f50fc735ec42f2489c3f643e776e8c535867d8115162f56b57a",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r5.json",
+  "sourceQuestionIndexFileSha256": "652acbed281b6995b4c38f12d88f8e232f5af205e7f1bf7441864a4a09bf17ad",
+  "revisedQuestionIndex": "audit/holdout/question-index-v3-r6.json",
+  "revisedQuestionIndexFileSha256": "297347f193f2558ebb8353ba6164bb54193ad54e07fdd00f88739f9f2055d0eb",
+  "selectionSeed": 20260923,
+  "documentSelectionChanged": false,
+  "questionSelectionChanged": false,
+  "selectionRecomputed": false,
+  "selectedQuestionIdsUnchanged": true,
+  "selectedQuestionBindingsChanged": true,
+  "affectedDocuments": [
+    "doc-e0a1bafb0ea7"
+  ],
+  "changedBindings": [
+    {
+      "documentId": "doc-e0a1bafb0ea7",
+      "questionId": "doc-e0a1bafb0ea7:q5",
+      "oldPages": [
+        3,
+        4
+      ],
+      "newPages": [
+        3
+      ],
+      "origin": "R6 neutral index correction"
+    },
+    {
+      "documentId": "doc-e0a1bafb0ea7",
+      "questionId": "doc-e0a1bafb0ea7:q9",
+      "oldPages": [
+        6,
+        7
+      ],
+      "newPages": [
+        6
+      ],
+      "origin": "R6 neutral index correction"
+    }
+  ],
+  "allOtherDocumentQuestionSelectionsIdentical": true,
+  "allOtherSelectedQuestionBindingsIdentical": true,
+  "selectedQuestionsTotal": 144,
+  "uniqueSelectedQuestionIds": 144,
+  "allSelectedBindingsMatchRevisedQuestionIndex": true,
+  "responseSemanticsUsedForRevision": false,
+  "auditorExecutedBeforeRevision": false,
+  "reason": "Manifest B-R4 preserves the exact frozen set and order of 144 selected question IDs while synchronizing two selected bindings from doc-e0a1bafb0ea7 with R6. Question 5 is complete on canonical page 3 and page 4 begins Texto 3; question 9 is complete on canonical page 6 and page 7 begins Textos 4 e 5 and question 10.",
+  "freezeStatus": "ready_for_ground_truth_annotation"
+}
