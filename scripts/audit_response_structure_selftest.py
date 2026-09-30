@@ -83,6 +83,45 @@ def test_parentheses_and_separators() -> None:
   check("dash.separator", dash["inferredAlternativeProfile"]["separator"] == "dash", dash)
 
 
+def test_constrained_leading_ocr_noise() -> None:
+  noisy_field = rs.parse_marker('. E.( ) "texto da alternativa"')
+  check(
+    "leadnoise.field_detected",
+    noisy_field is not None
+    and noisy_field["label"] == "E"
+    and noisy_field["responseField"] == "present"
+    and noisy_field["separator"] == "dot",
+    noisy_field,
+  )
+
+  noisy_parenthesized = rs.parse_marker(", (C) alternativa")
+  check(
+    "leadnoise.parenthesized_detected",
+    noisy_parenthesized is not None
+    and noisy_parenthesized["label"] == "C"
+    and noisy_parenthesized["markerShape"] == "parentheses",
+    noisy_parenthesized,
+  )
+
+  plain_dot_sentence = rs.parse_marker(
+    ". E. exemplo textual sem campo de resposta"
+  )
+  check(
+    "leadnoise.plain_dot_not_marker",
+    plain_dot_sentence is None,
+    plain_dot_sentence,
+  )
+
+  ordinary_word = rs.parse_marker(
+    ". Exemplo textual"
+  )
+  check(
+    "leadnoise.word_not_marker",
+    ordinary_word is None,
+    ordinary_word,
+  )
+
+
 def test_response_fields() -> None:
   spaced = structure([("A ( ) um", 100, 50), ("B ( ) dois", 120, 50), ("C ( ) tres", 140, 50)])
   check("field.spaced", spaced["inferredAlternativeProfile"]["responseField"] == "present", spaced)
@@ -324,6 +363,7 @@ def main() -> None:
   test_vertical_abc()
   test_lowercase()
   test_parentheses_and_separators()
+  test_constrained_leading_ocr_noise()
   test_response_fields()
   test_lost_marker_merges_cluster()
   test_circled()

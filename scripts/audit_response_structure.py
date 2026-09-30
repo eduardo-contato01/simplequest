@@ -19,6 +19,22 @@ LEAD_ARTIFACTS_RE = re.compile(r"^[\s\|\[\]\{\}~^]+")
 
 FIELD_CONTENT = r"\(\s*[_\s.]*\s*\)"
 
+# OCR may occasionally prepend a single punctuation artifact before an
+# otherwise strong answer marker, e.g. ". E.( ) text".
+#
+# Deliberately narrow:
+# - at most one leading punctuation artifact;
+# - immediately followed by a strong marker form;
+# - plain forms such as ". E. sentence" are not normalized.
+OCR_LEAD_PUNCT_RE = re.compile(
+  r"^[.,;:]\s*(?=(?:"
+  r"\([A-Ea-e]\)"
+  r"|[A-Ea-e]\s*\)"
+  r"|[A-Ea-e]\s*[.\-??:]\s*" + FIELD_CONTENT +
+  r"|[A-Ea-e]\s*" + FIELD_CONTENT +
+  r"))"
+)
+
 PARENT_CHILD_RE = re.compile(r"^(\d{1,3})\s*[-–—]\s*([A-Ea-e])\b\s*(.*)$")
 PAREN_RE = re.compile(r"^\(([A-Ea-e])\)\s*(.*)$")
 RIGHT_PAREN_RE = re.compile(r"^([A-Ea-e])\s*\)\s*(.*)$")
@@ -156,7 +172,19 @@ def parse_marker(text: str) -> dict[str, Any] | None:
   stripped = LEAD_ARTIFACTS_RE.sub("", raw)
   if not stripped:
     return None
+
   lead = len(raw) - len(stripped)
+
+  # Normalize only when a strong answer-marker form is visible
+  # immediately after the leading OCR punctuation artifact.
+  ocr_lead = OCR_LEAD_PUNCT_RE.match(stripped)
+  if ocr_lead:
+    stripped = stripped[ocr_lead.end():]
+    lead += ocr_lead.end()
+
+  if not stripped:
+    return None
+
   first = stripped[0]
   circled = _circled_label(first)
   if circled:

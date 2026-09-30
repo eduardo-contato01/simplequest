@@ -139,6 +139,31 @@ def test_derived_spatial_not_double() -> None:
   check("derived.origin", result["slots"][0]["origins"] == ["visual_marker"], result["slots"][0])
 
 
+def test_constrained_leading_ocr_marker_integration() -> None:
+  positive = observations.extract_text_markers([
+    line('. E.( ) "alternativa final"', 1, 100, 50),
+  ])
+
+  check(
+    "ocrnoise.marker_detected",
+    len(positive) == 1
+    and positive[0]["label"] == "E"
+    and positive[0]["responseField"] == "present",
+    positive,
+  )
+
+  negative = observations.extract_text_markers([
+    line(". E. exemplo textual sem campo", 1, 100, 50),
+    line(". Exemplo textual", 1, 130, 50),
+  ])
+
+  check(
+    "ocrnoise.no_false_positive",
+    negative == [],
+    negative,
+  )
+
+
 def main() -> None:
   test_instruction_context()
   test_espaco_livre_not_field()
@@ -148,6 +173,7 @@ def main() -> None:
   test_stem_media_not_option()
   test_same_parser_independent()
   test_derived_spatial_not_double()
+  test_constrained_leading_ocr_marker_integration()
   if FAILURES:
     print(f"\n{len(FAILURES)} checks falharam: {FAILURES}")
     raise SystemExit(1)
