@@ -1,0 +1,3107 @@
+{
+  "artifactType": "human-ground-truth",
+  "protocolVersion": "holdout-v3",
+  "annotationVersion": 1,
+  "freezeVersion": 1,
+  "sourceManifest": "audit/holdout/manifest-v3-b-r5.json",
+  "manifestSha256": "797dba3b37587e6fe4bf264c563f4c27668155e5f7284e5c132b648aa8dedebc",
+  "sourceManifestFileSha256": "ba3e3f985b4f7da73ad61f10cb7aa54234a8039843e51fb58ea7c9209bb11ed9",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r7.json",
+  "questionIndexFileSha256": "05fae5716e229b95400c80666dd9ce2a8a76e4a003a7f95483aeb774d4d4d78b",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documents": 48,
+  "questionsAnnotated": 144,
+  "documentFingerprints": {
+    "doc-017f1b3fd833": "017f1b3fd833b8feef1e5d185fb0f55cc2b3a2dc5a2f552a666ff448efe2c04b",
+    "doc-106d9cb7c4ac": "106d9cb7c4ace2c320b177c90c2aabeb2eb6c3d7ca2c9ab6c91db9dc945f7afd",
+    "doc-186673c8476d": "186673c8476dfeb5806ae7b4e424e8c31bcf335ee49e0a2b4ac49a2c69cc6221",
+    "doc-188b8757dfd5": "188b8757dfd5f7ccafc37a711138715ad98d2684371e2cea9320da6b20bef681",
+    "doc-1967252ced29": "1967252ced29f4f53d8b8f9b988b34b4918cf291ac47574220f8c9a2afb57cb5",
+    "doc-1f0fe9f00a73": "1f0fe9f00a73453db1bcc69fe345f61d9778dc08035bf52c0c3cb0da0e3e3354",
+    "doc-21b1367493fe": "21b1367493fe78f0de166254ba936171c28baf8bd5f1c4a8d17aa9afd663b4cb",
+    "doc-273eb386d3ec": "273eb386d3ec8e1d50feab42e70899ce219ab0234d949611a02450228586b482",
+    "doc-2f4df1da2128": "2f4df1da21284a1153f28756e6b33cf856e9b138805d23c675d8542495c34625",
+    "doc-3402d1263b7e": "3402d1263b7ef413c0e68a6f64842006e7a0943a6c0e9078e0ed2346cd6f13fa",
+    "doc-382419106b57": "382419106b5788d6eed3dc88313e21dd28b36809766d5615f9511ed3f0097354",
+    "doc-3c4434b96a50": "3c4434b96a50fa5f777c8c046ec3fbd4c07c0a8686f4b39946506dd742d14fa6",
+    "doc-403fa98cb83a": "403fa98cb83a510c0b9d94403b2e1017b1415cd9d735cc17d27b0b20507eac4f",
+    "doc-45025ec5b48c": "45025ec5b48c7f9584bfd3f9fd4fad8c262384f4613644d506522aaf5ea7476f",
+    "doc-537ca397c1da": "537ca397c1da176c3e1e0a7842183243cf6700d16f15205dbbdde921676f59dc",
+    "doc-58ed2eef13c5": "58ed2eef13c5e9aa9e58647cf11f1548321f94967668a03ceb58633e701c2175",
+    "doc-5ab1bb813119": "5ab1bb813119938507bdbe00b707d4a62af36cd1dbc567bcb04843c928a1270c",
+    "doc-5bf8b76be281": "5bf8b76be281a3fc7999924916ac07d07396828c2c1dd044107cd35f1d29f1cf",
+    "doc-6a2c2be2ecd4": "6a2c2be2ecd44fa4539ade3eca9d164bdf34d8ccf636f5850b84c15be56324ce",
+    "doc-6d3454d4a7b8": "6d3454d4a7b8877b344fc01e2cbfafda8f80dc0f24ec1c4c7397de66c0af707e",
+    "doc-6fc18179cbc1": "6fc18179cbc160a0d81180a4bd3da9a82efd7b065059a2bfec84ea52c58ccf5e",
+    "doc-75e67e4e308f": "75e67e4e308f96259d05f96179ec36f25c5f3b48a14066f47360a16ccf1a1fe9",
+    "doc-77742da9fa12": "77742da9fa12eeeef5455ade226e0a120f6b10b84a5d83260476b043af477764",
+    "doc-79712ca8f567": "79712ca8f5675f3b58f1516b7ab52531c2d3d0115eced477485834ad84c8213c",
+    "doc-7e21d913377b": "7e21d913377b16296b0a0538987340a75c75d3a207cb468a78b84e0d4e37fcff",
+    "doc-80a2d526fe20": "80a2d526fe2031bb9e19f2e99abc3f96f98a6c1531f6656d442facb08b8b8103",
+    "doc-8f045d628a3b": "8f045d628a3bc52e8c066952d775d9c630061cbe4bb0c61d2521e975d3610b34",
+    "doc-8fd0e13b7394": "8fd0e13b7394744023e25b838096afa19cd77c946d5ce179e62ba3286dff661f",
+    "doc-9b9057e500c7": "9b9057e500c76454e6ddebaf800a0cfd438791be984f5e7ed21efceba984c274",
+    "doc-a218bd48a3eb": "a218bd48a3eb3a352214006f6b17729ef32748a9431dc0526e76bddad5d4fd8b",
+    "doc-a388e6f21fc7": "a388e6f21fc7ff11cc12ec8dc697691495969d31dfecf5dbaf6c451dee20d89b",
+    "doc-a69802d8aa53": "a69802d8aa53c27652f8a374950dddab9e3015215dbec2fc38587daf4be64fd9",
+    "doc-ab0ec29ca74f": "ab0ec29ca74f0c6280c0a82cd84c63ac8ea2baba2bbdcc59a3d52f96f9983708",
+    "doc-b85a1c21f081": "b85a1c21f08167fe21335a60a333a19571a6e3afcf28ccc8d5f3e507aab38943",
+    "doc-bb2d8abd32d4": "bb2d8abd32d4297f02c8ff6a41f9fabafaa21bf20f0a16ed8204bfad81314054",
+    "doc-bc9b2cef859e": "bc9b2cef859eb071a6f379a603fe64ca61eae6b55a08c67285e02fcbd6776cd6",
+    "doc-c46447811fd3": "c46447811fd30b6bdbdd2f5ccd091906367a25ffb53e30e9e01abfd984cd471f",
+    "doc-c7f2f02d07ca": "c7f2f02d07cac81720089ec0d75558c5b6381f301ce2ce40fe1ac1dbb9451dda",
+    "doc-ce6f77f83acf": "ce6f77f83acf80c553241cd0fd4b5cbeabb6b50dc503571241c3c41ac757bdc6",
+    "doc-d452c3def3e5": "d452c3def3e52cb9e9769d86d9888d6bba78f07c65c268c75c4ab9bd624a6222",
+    "doc-de124896cd9d": "de124896cd9d8383bad3221c3c9fff0aea1e8b31c0f5b106f309d3445e42445b",
+    "doc-e0a1bafb0ea7": "e0a1bafb0ea7726b5a0ed7cd398f3f760d64835f0d0199bdc6622747ee02821f",
+    "doc-e3dd87b27a53": "e3dd87b27a53caf4bf061818e4918b1c31a65201ffcf1b2fcbda0c1b3661db6a",
+    "doc-e623f0284632": "e623f0284632adb0a80f4566c0952aec6135612d3dd49bf71c84219974a4aff7",
+    "doc-e981c0dce132": "e981c0dce132898297112fd6b9fdce8dd6b1f32ba23106ceeeb9c8ac9f173d26",
+    "doc-ec2c48d75bf3": "ec2c48d75bf3db2aa38ece4cb006e8efd0c1d6927d247a4c5ccd48d491d35212",
+    "doc-f0b208eead34": "f0b208eead34fe9bbda2f1b8f78ee29c26f87553ca41a4b9ba2f9057f3db5ed7",
+    "doc-f707c87d4d0e": "f707c87d4d0e8bb88efb168d1c159fa7628fd572c6c8e4207e4d93ed9006c7d3"
+  },
+  "questions": [
+    {
+      "documentId": "doc-017f1b3fd833",
+      "questionId": "doc-017f1b3fd833:q6",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Cinco alternativas A-E com controles vazios explícitos no padrão A ( )."
+    },
+    {
+      "documentId": "doc-017f1b3fd833",
+      "questionId": "doc-017f1b3fd833:q16",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 3,
+      "responseControls": 5,
+      "layout": "mixed",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Três afirmações internas I-III antecedem cinco alternativas finais A-E com controles vazios explícitos."
+    },
+    {
+      "documentId": "doc-017f1b3fd833",
+      "questionId": "doc-017f1b3fd833:q30",
+      "pages": [
+        22
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": 5,
+      "responseControls": 10,
+      "layout": "parent_child",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Cinco subitens 30-A a 30-E; cada subitem é julgado como C ou E por dois controles explícitos. A questão inclui figura geométrica/trigonométrica."
+    },
+    {
+      "documentId": "doc-106d9cb7c4ac",
+      "questionId": "doc-106d9cb7c4ac:q2",
+      "pages": [
+        1
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-106d9cb7c4ac",
+      "questionId": "doc-106d9cb7c4ac:q11",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-106d9cb7c4ac",
+      "questionId": "doc-106d9cb7c4ac:q15",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-186673c8476d",
+      "questionId": "doc-186673c8476d:q2",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Cinco alternativas A-E com controles vazios explícitos."
+    },
+    {
+      "documentId": "doc-186673c8476d",
+      "questionId": "doc-186673c8476d:q11",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "mixed",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Questão matemática estruturada com tabela e cinco alternativas A-E com controles vazios explícitos."
+    },
+    {
+      "documentId": "doc-186673c8476d",
+      "questionId": "doc-186673c8476d:q17",
+      "pages": [
+        15
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Questão matemática ligada ao contexto geométrico das embalagens apresentado anteriormente."
+    },
+    {
+      "documentId": "doc-188b8757dfd5",
+      "questionId": "doc-188b8757dfd5:q13",
+      "pages": [
+        5
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item de julgamento ligado ao texto Mar; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-188b8757dfd5",
+      "questionId": "doc-188b8757dfd5:q66",
+      "pages": [
+        12
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento matematico ligado ao modelo e a figura de tronco de piramide; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-188b8757dfd5",
+      "questionId": "doc-188b8757dfd5:q82",
+      "pages": [
+        14
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item de julgamento textual e gramatical ligado ao fragmento de La Boetie; embora o bloco tambem contenha a obra de Frida Kahlo, o item nao depende da imagem e nao possui controles C/E locais."
+    },
+    {
+      "documentId": "doc-1967252ced29",
+      "questionId": "doc-1967252ced29:q7",
+      "pages": [
+        2
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item de julgamento de lingua espanhola ligado ao Texto II; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-1967252ced29",
+      "questionId": "doc-1967252ced29:q57",
+      "pages": [
+        10
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento diretamente relacionado a tirinha sobre amebas; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-1967252ced29",
+      "questionId": "doc-1967252ced29:q80",
+      "pages": [
+        12
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento de dinamica de fluidos no bloco sobre aquedutos, com texto e ilustracao esquematica precedentes; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-1f0fe9f00a73",
+      "questionId": "doc-1f0fe9f00a73:q16",
+      "pages": [
+        3
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento matematico ligado a figura cartesiana, tabela de coordenadas e expressao algebrica precedentes; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-1f0fe9f00a73",
+      "questionId": "doc-1f0fe9f00a73:q58",
+      "pages": [
+        7
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento baseado na figura de testes de aglutinacao do sistema ABO; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-1f0fe9f00a73",
+      "questionId": "doc-1f0fe9f00a73:q102",
+      "pages": [
+        13
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item de julgamento baseado nos diagramas dos circuitos I e II, com pilhas, lampada, capacitor e chave; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-21b1367493fe",
+      "questionId": "doc-21b1367493fe:q2",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questao matematica com ilustracoes de melancias e medidas de massa; cinco alternativas A-E parenthesized."
+    },
+    {
+      "documentId": "doc-21b1367493fe",
+      "questionId": "doc-21b1367493fe:q7",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questao matematica contextualizada com tabela de precos de etanol e gasolina; cinco alternativas A-E parenthesized."
+    },
+    {
+      "documentId": "doc-21b1367493fe",
+      "questionId": "doc-21b1367493fe:q20",
+      "pages": [
+        18
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questao matematica textual com fracao e valores monetarios; cinco alternativas A-E parenthesized."
+    },
+    {
+      "documentId": "doc-273eb386d3ec",
+      "questionId": "doc-273eb386d3ec:q7",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 4,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Quatro afirmativas internas numeradas de 1 a 4; a resposta final e a quantidade de afirmativas corretas, escolhida entre cinco alternativas."
+    },
+    {
+      "documentId": "doc-273eb386d3ec",
+      "questionId": "doc-273eb386d3ec:q16",
+      "pages": [
+        17
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-273eb386d3ec",
+      "questionId": "doc-273eb386d3ec:q21",
+      "pages": [
+        22
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-2f4df1da2128",
+      "questionId": "doc-2f4df1da2128:q3",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-2f4df1da2128",
+      "questionId": "doc-2f4df1da2128:q11",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-2f4df1da2128",
+      "questionId": "doc-2f4df1da2128:q16",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-3402d1263b7e",
+      "questionId": "doc-3402d1263b7e:q1",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "mixed",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": "Cinco alternativas finais a-e em disposicao horizontal; questao matematica com fracoes."
+    },
+    {
+      "documentId": "doc-3402d1263b7e",
+      "questionId": "doc-3402d1263b7e:q14",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-3402d1263b7e",
+      "questionId": "doc-3402d1263b7e:q22",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-382419106b57",
+      "questionId": "doc-382419106b57:q5",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 3,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Tres afirmativas internas I-III antecedem cinco alternativas finais A-E."
+    },
+    {
+      "documentId": "doc-382419106b57",
+      "questionId": "doc-382419106b57:q14",
+      "pages": [
+        8,
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 5,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Cinco itens internos I-V antecedem alternativas finais A-E. A questao atravessa as paginas canonicas 8 e 9: o enunciado e os itens internos estao na pagina 8 e as alternativas finais aparecem no inicio da pagina 9. Esta correcao originou a revisao neutra question-index-v3-r1."
+    },
+    {
+      "documentId": "doc-382419106b57",
+      "questionId": "doc-382419106b57:q17",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 5,
+      "responseControls": 5,
+      "layout": "mixed",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Cinco afirmativas internas possuem controles locais V/F representados por parenteses vazios; a resposta final e uma sequencia escolhida entre cinco alternativas A-E."
+    },
+    {
+      "documentId": "doc-3c4434b96a50",
+      "questionId": "doc-3c4434b96a50:q1",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questao matematica com Figura 1 representando a composicao numerica usada no enunciado."
+    },
+    {
+      "documentId": "doc-3c4434b96a50",
+      "questionId": "doc-3c4434b96a50:q12",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 5,
+      "responseControls": null,
+      "layout": "mixed",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Figura geometrica acompanhada de cinco condicoes internas enumeradas a-e; essas condicoes pertencem ao enunciado e nao sao as alternativas finais."
+    },
+    {
+      "documentId": "doc-3c4434b96a50",
+      "questionId": "doc-3c4434b96a50:q22",
+      "pages": [
+        22
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-403fa98cb83a",
+      "questionId": "doc-403fa98cb83a:q3",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-403fa98cb83a",
+      "questionId": "doc-403fa98cb83a:q9",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-403fa98cb83a",
+      "questionId": "doc-403fa98cb83a:q18",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-45025ec5b48c",
+      "questionId": "doc-45025ec5b48c:q39",
+      "pages": [
+        6
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item individual de julgamento associado a obra Ritmo de outono, de Jackson Pollock, e ao texto precedente; nao ha controles C/E locais."
+    },
+    {
+      "documentId": "doc-45025ec5b48c",
+      "questionId": "doc-45025ec5b48c:q46",
+      "pages": [
+        7
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item individual de julgamento ligado ao texto sobre o grupo Seu Estrelo e o Fua do Terreiro; nao ha controles C/E locais."
+    },
+    {
+      "documentId": "doc-45025ec5b48c",
+      "questionId": "doc-45025ec5b48c:q109",
+      "pages": [
+        13
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item individual de julgamento baseado na figura que ilustra parte da pele humana; nao ha controles C/E locais."
+    },
+    {
+      "documentId": "doc-537ca397c1da",
+      "questionId": "doc-537ca397c1da:q6",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-537ca397c1da",
+      "questionId": "doc-537ca397c1da:q8",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-537ca397c1da",
+      "questionId": "doc-537ca397c1da:q16",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "Questao de interpretacao diretamente ligada a charge apresentada na mesma pagina; cinco alternativas a-e."
+    },
+    {
+      "documentId": "doc-58ed2eef13c5",
+      "questionId": "doc-58ed2eef13c5:q5",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "Questao baseada nos textos II e III, incluindo tirinha no Texto III; quatro alternativas A-D. A questao e suas alternativas estao integralmente na pagina canonica 3; o pageEnd 4 do R1 foi corrigido de forma neutra no R2."
+    },
+    {
+      "documentId": "doc-58ed2eef13c5",
+      "questionId": "doc-58ed2eef13c5:q25",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": "Questao matematica que modifica a equacao apresentada na questao 24; quatro alternativas A-D."
+    },
+    {
+      "documentId": "doc-58ed2eef13c5",
+      "questionId": "doc-58ed2eef13c5:q34",
+      "pages": [
+        15
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "Questao de estatistica baseada na tabela de pesos apresentada na questao 33; quatro alternativas A-D."
+    },
+    {
+      "documentId": "doc-5ab1bb813119",
+      "questionId": "doc-5ab1bb813119:q3",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Quatro alternativas A-D, cada uma acompanhada de controle vazio explicito."
+    },
+    {
+      "documentId": "doc-5ab1bb813119",
+      "questionId": "doc-5ab1bb813119:q6",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Quatro alternativas A-D, cada uma acompanhada de controle vazio explicito."
+    },
+    {
+      "documentId": "doc-5ab1bb813119",
+      "questionId": "doc-5ab1bb813119:q14",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Quatro alternativas A-D, cada uma acompanhada de controle vazio explicito."
+    },
+    {
+      "documentId": "doc-5bf8b76be281",
+      "questionId": "doc-5bf8b76be281:q1",
+      "pages": [
+        1
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Cinco alternativas a-e, cada uma acompanhada de controle vazio explicito."
+    },
+    {
+      "documentId": "doc-5bf8b76be281",
+      "questionId": "doc-5bf8b76be281:q10",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Cinco alternativas a-e, cada uma acompanhada de controle vazio explicito."
+    },
+    {
+      "documentId": "doc-5bf8b76be281",
+      "questionId": "doc-5bf8b76be281:q16",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Cinco alternativas a-e, cada uma acompanhada de controle vazio explicito."
+    },
+    {
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q9",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q14",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6a2c2be2ecd4",
+      "questionId": "doc-6a2c2be2ecd4:q24",
+      "pages": [
+        19
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6d3454d4a7b8",
+      "questionId": "doc-6d3454d4a7b8:q1",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6d3454d4a7b8",
+      "questionId": "doc-6d3454d4a7b8:q13",
+      "pages": [
+        11
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6d3454d4a7b8",
+      "questionId": "doc-6d3454d4a7b8:q24",
+      "pages": [
+        18
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "A pagina inclui imagem ilustrativa de estrada, mas os dados necessarios para responder estao expressos no enunciado."
+    },
+    {
+      "documentId": "doc-6fc18179cbc1",
+      "questionId": "doc-6fc18179cbc1:q3",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6fc18179cbc1",
+      "questionId": "doc-6fc18179cbc1:q9",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6fc18179cbc1",
+      "questionId": "doc-6fc18179cbc1:q20",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-75e67e4e308f",
+      "questionId": "doc-75e67e4e308f:q3",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende do grafico de despesas apresentado na propria questao."
+    },
+    {
+      "documentId": "doc-75e67e4e308f",
+      "questionId": "doc-75e67e4e308f:q11",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende da figura do boneco e da malha triangular apresentada na questao."
+    },
+    {
+      "documentId": "doc-75e67e4e308f",
+      "questionId": "doc-75e67e4e308f:q14",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "A questao compartilha as tabelas de ingredientes, equivalencias e receita apresentadas para as questoes 13 a 15."
+    },
+    {
+      "documentId": "doc-77742da9fa12",
+      "questionId": "doc-77742da9fa12:q6",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A resolucao utiliza o grafico de depreciacao apresentado na pagina."
+    },
+    {
+      "documentId": "doc-77742da9fa12",
+      "questionId": "doc-77742da9fa12:q11",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende da representacao geometrica dos cabos do portico."
+    },
+    {
+      "documentId": "doc-77742da9fa12",
+      "questionId": "doc-77742da9fa12:q19",
+      "pages": [
+        20
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Os valores a comparar aparecem nas placas A, B, C e D da figura da questao."
+    },
+    {
+      "documentId": "doc-79712ca8f567",
+      "questionId": "doc-79712ca8f567:q4",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-79712ca8f567",
+      "questionId": "doc-79712ca8f567:q12",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A comparacao de areas depende das figuras A, B e C apresentadas na malha quadriculada."
+    },
+    {
+      "documentId": "doc-79712ca8f567",
+      "questionId": "doc-79712ca8f567:q15",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende das balancas e dos cartazes de preco apresentados na figura."
+    },
+    {
+      "documentId": "doc-7e21d913377b",
+      "questionId": "doc-7e21d913377b:q5",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-7e21d913377b",
+      "questionId": "doc-7e21d913377b:q9",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende da figura do triangulo retangulo apresentada na questao."
+    },
+    {
+      "documentId": "doc-7e21d913377b",
+      "questionId": "doc-7e21d913377b:q18",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende da figura do retangulo ABCD e do triangulo AMN."
+    },
+    {
+      "documentId": "doc-80a2d526fe20",
+      "questionId": "doc-80a2d526fe20:q1",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "A questao utiliza o infografico sobre ordens de grandeza e dimensoes apresentado na pagina."
+    },
+    {
+      "documentId": "doc-80a2d526fe20",
+      "questionId": "doc-80a2d526fe20:q13",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-80a2d526fe20",
+      "questionId": "doc-80a2d526fe20:q20",
+      "pages": [
+        15
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende da figura geometrica do triangulo retangulo ABC."
+    },
+    {
+      "documentId": "doc-8f045d628a3b",
+      "questionId": "doc-8f045d628a3b:q2",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-8f045d628a3b",
+      "questionId": "doc-8f045d628a3b:q18",
+      "pages": [
+        19
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende da figura do percurso retangular e de suas dimensoes."
+    },
+    {
+      "documentId": "doc-8f045d628a3b",
+      "questionId": "doc-8f045d628a3b:q35",
+      "pages": [
+        30
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 5,
+      "responseControls": 5,
+      "layout": "mixed",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "A questao apresenta cinco afirmativas com controles para julgamento V/F e, em seguida, cinco alternativas A-E contendo sequencias de V/F; a resposta final continua sendo uma unica alternativa. Depende dos Textos III e IV."
+    },
+    {
+      "documentId": "doc-8fd0e13b7394",
+      "questionId": "doc-8fd0e13b7394:q3",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual ligada ao Texto I."
+    },
+    {
+      "documentId": "doc-8fd0e13b7394",
+      "questionId": "doc-8fd0e13b7394:q13",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao gramatical textual ligada ao Texto III."
+    },
+    {
+      "documentId": "doc-8fd0e13b7394",
+      "questionId": "doc-8fd0e13b7394:q20",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questao integradora sobre os textos anteriores, incluindo material verbal, infografico e charge."
+    },
+    {
+      "documentId": "doc-9b9057e500c7",
+      "questionId": "doc-9b9057e500c7:q39",
+      "pages": [
+        5
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item individual de julgamento matematico ligado ao modelo e a figura do cone; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-9b9057e500c7",
+      "questionId": "doc-9b9057e500c7:q90",
+      "pages": [
+        12
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item individual de julgamento diretamente ligado ao esquema das linhas de campo magnetico da coilgun; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-9b9057e500c7",
+      "questionId": "doc-9b9057e500c7:q126",
+      "pages": [
+        16
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item individual de julgamento ligado a situacao fisica e a figura do efeito domino; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-a218bd48a3eb",
+      "questionId": "doc-a218bd48a3eb:q2",
+      "pages": [
+        1
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-a218bd48a3eb",
+      "questionId": "doc-a218bd48a3eb:q8",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende do grafico das funcoes apresentado na figura."
+    },
+    {
+      "documentId": "doc-a218bd48a3eb",
+      "questionId": "doc-a218bd48a3eb:q17",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-a388e6f21fc7",
+      "questionId": "doc-a388e6f21fc7:q2",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Questao textual de interpretacao ligada ao Texto I; quatro alternativas A-D."
+    },
+    {
+      "documentId": "doc-a388e6f21fc7",
+      "questionId": "doc-a388e6f21fc7:q20",
+      "pages": [
+        11
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "A questao depende da tirinha do Texto XII; quatro alternativas A-D. O boundary foi corrigido neutralmente no R4 de paginas 11-12 para somente pagina 11."
+    },
+    {
+      "documentId": "doc-a388e6f21fc7",
+      "questionId": "doc-a388e6f21fc7:q34",
+      "pages": [
+        17
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Questao conceitual sobre o nome do contorno de uma pista circular; a imagem e ilustrativa e a informacao necessaria esta explicitamente no enunciado."
+    },
+    {
+      "documentId": "doc-a69802d8aa53",
+      "questionId": "doc-a69802d8aa53:q4",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual de reescrita com cinco alternativas A-E."
+    },
+    {
+      "documentId": "doc-a69802d8aa53",
+      "questionId": "doc-a69802d8aa53:q8",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A interpretacao depende da tirinha sobre consumismo apresentada como Texto 3."
+    },
+    {
+      "documentId": "doc-a69802d8aa53",
+      "questionId": "doc-a69802d8aa53:q19",
+      "pages": [
+        16
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 3,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Tres afirmativas internas I-III antecedem cinco alternativas finais A-E."
+    },
+    {
+      "documentId": "doc-ab0ec29ca74f",
+      "questionId": "doc-ab0ec29ca74f:q8",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questao matematica dependente da fotografia arquitetonica e da construcao geometrica com semicircunferencias."
+    },
+    {
+      "documentId": "doc-ab0ec29ca74f",
+      "questionId": "doc-ab0ec29ca74f:q14",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual sobre valores semanticos de elementos do Texto 1."
+    },
+    {
+      "documentId": "doc-ab0ec29ca74f",
+      "questionId": "doc-ab0ec29ca74f:q19",
+      "pages": [
+        16
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual que pede a sequencia para completar as lacunas do Texto 3."
+    },
+    {
+      "documentId": "doc-b85a1c21f081",
+      "questionId": "doc-b85a1c21f081:q7",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questao matematica textual de contagem sobre datas ambiguas; cinco alternativas A-E."
+    },
+    {
+      "documentId": "doc-b85a1c21f081",
+      "questionId": "doc-b85a1c21f081:q25",
+      "pages": [
+        23
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao gramatical sobre tempos e modos verbais vinculada ao texto anterior; boundary corrigido neutralmente no R5 de paginas 23-25 para somente pagina 23."
+    },
+    {
+      "documentId": "doc-b85a1c21f081",
+      "questionId": "doc-b85a1c21f081:q32",
+      "pages": [
+        30
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual sobre o emprego de oracoes subordinadas adverbiais finais no artigo de opiniao."
+    },
+    {
+      "documentId": "doc-bb2d8abd32d4",
+      "questionId": "doc-bb2d8abd32d4:q4",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende da malha quadriculada e das figuras geometricas pintadas."
+    },
+    {
+      "documentId": "doc-bb2d8abd32d4",
+      "questionId": "doc-bb2d8abd32d4:q16",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questao matematica sobre a fracao de um dia correspondente a quarenta minutos."
+    },
+    {
+      "documentId": "doc-bb2d8abd32d4",
+      "questionId": "doc-bb2d8abd32d4:q21",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A resolucao depende da tabela com a quantidade de dias dos meses de 2014."
+    },
+    {
+      "documentId": "doc-bc9b2cef859e",
+      "questionId": "doc-bc9b2cef859e:q11",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questao matematica textual de contagem de partidas em fases de um torneio."
+    },
+    {
+      "documentId": "doc-bc9b2cef859e",
+      "questionId": "doc-bc9b2cef859e:q24",
+      "pages": [
+        25
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A interpretacao depende dos elementos verbais e nao verbais da charge apresentada como Texto 3."
+    },
+    {
+      "documentId": "doc-bc9b2cef859e",
+      "questionId": "doc-bc9b2cef859e:q27",
+      "pages": [
+        27
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questao de pontuacao ligada ao trecho verbal e ao contexto visual da tirinha apresentada como Texto 5."
+    },
+    {
+      "documentId": "doc-c46447811fd3",
+      "questionId": "doc-c46447811fd3:q8",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questao matematica textual sobre recorte de quatro triangulos retangulos em uma cartolina retangular para formar um octogono."
+    },
+    {
+      "documentId": "doc-c46447811fd3",
+      "questionId": "doc-c46447811fd3:q17",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual de interpretacao sobre a finalidade do Texto 1."
+    },
+    {
+      "documentId": "doc-c46447811fd3",
+      "questionId": "doc-c46447811fd3:q25",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao gramatical ligada ao Texto 6; as cinco alternativas reproduzem os trechos relevantes para identificar qual nao constitui oracao, sem dependencia visual necessaria."
+    },
+    {
+      "documentId": "doc-c7f2f02d07ca",
+      "questionId": "doc-c7f2f02d07ca:q1",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual de interpretacao do Texto I com cinco alternativas A-E."
+    },
+    {
+      "documentId": "doc-c7f2f02d07ca",
+      "questionId": "doc-c7f2f02d07ca:q12",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 4,
+      "responseControls": 4,
+      "layout": "mixed",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Questao de correspondencia com quatro trechos precedidos por controles parenteticos, cinco categorias em algarismos romanos e cinco alternativas finais A-E contendo sequencias; a resposta final continua sendo uma unica alternativa."
+    },
+    {
+      "documentId": "doc-c7f2f02d07ca",
+      "questionId": "doc-c7f2f02d07ca:q21",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 4,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Quatro proposicoes internas I-IV antecedem cinco alternativas finais A-E com sequencias de classificacao verbal."
+    },
+    {
+      "documentId": "doc-ce6f77f83acf",
+      "questionId": "doc-ce6f77f83acf:q5",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Questao matematica sobre probabilidade de abertura de um cofre com senha de quatro digitos; cada alternativa possui controle parentetico."
+    },
+    {
+      "documentId": "doc-ce6f77f83acf",
+      "questionId": "doc-ce6f77f83acf:q13",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Questao textual de interpretacao do Texto 1; cinco alternativas com controles parenteticos."
+    },
+    {
+      "documentId": "doc-ce6f77f83acf",
+      "questionId": "doc-ce6f77f83acf:q18",
+      "pages": [
+        17
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Questao sobre composicao, enfoque tematico e finalidade dos Textos 2 e 3; o Texto 3 e uma tirinha, tornando a evidencia verbal e visual relevante."
+    },
+    {
+      "documentId": "doc-d452c3def3e5",
+      "questionId": "doc-d452c3def3e5:q19",
+      "pages": [
+        5
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item individual de julgamento textual sobre Casa de bonecas; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-d452c3def3e5",
+      "questionId": "doc-d452c3def3e5:q58",
+      "pages": [
+        9
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item individual de julgamento textual que relaciona as ideias de Kant a situacao de Bertoleza; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-d452c3def3e5",
+      "questionId": "doc-d452c3def3e5:q95",
+      "pages": [
+        16
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item individual de julgamento textual sobre uso de biomassa na producao energetica brasileira; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-de124896cd9d",
+      "questionId": "doc-de124896cd9d:q8",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 4,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Quatro afirmativas internas I-IV sao avaliadas com base no grafico de producao mundial de etanol; a resposta final e uma unica alternativa A-E."
+    },
+    {
+      "documentId": "doc-de124896cd9d",
+      "questionId": "doc-de124896cd9d:q16",
+      "pages": [
+        18
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual sobre a finalidade do Texto I; cinco alternativas A-E."
+    },
+    {
+      "documentId": "doc-de124896cd9d",
+      "questionId": "doc-de124896cd9d:q22",
+      "pages": [
+        22
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questao de pontuacao que depende dos elementos verbais e visuais dos quadrinhos da Mafalda."
+    },
+    {
+      "documentId": "doc-e0a1bafb0ea7",
+      "questionId": "doc-e0a1bafb0ea7:q5",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Questao textual de concordancia verbal com cinco alternativas, cada uma acompanhada por controle parentetico; boundary corrigido no R6 para somente pagina 3."
+    },
+    {
+      "documentId": "doc-e0a1bafb0ea7",
+      "questionId": "doc-e0a1bafb0ea7:q9",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Questao textual sobre elementos coesivos do Texto 3 com cinco alternativas e controles parenteticos; boundary corrigido no R6 para somente pagina 6."
+    },
+    {
+      "documentId": "doc-e0a1bafb0ea7",
+      "questionId": "doc-e0a1bafb0ea7:q16",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Questao de interpretacao diretamente ligada ao Texto 7 em quadrinhos; cinco alternativas com controles parenteticos."
+    },
+    {
+      "documentId": "doc-e3dd87b27a53",
+      "questionId": "doc-e3dd87b27a53:cmc:q36",
+      "pages": [
+        59
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questao da secao CMC sobre a interjeicao Ah no quarto quadrinho do Texto V; a interpretacao depende das linguagens verbal e nao verbal da tirinha apresentada na pagina anterior."
+    },
+    {
+      "documentId": "doc-e3dd87b27a53",
+      "questionId": "doc-e3dd87b27a53:cmf:q35",
+      "pages": [
+        100
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao da secao CMF sobre o sentido da palavra sacra no verso reproduzido no proprio enunciado; cinco alternativas parentetizadas."
+    },
+    {
+      "documentId": "doc-e3dd87b27a53",
+      "questionId": "doc-e3dd87b27a53:cms:q24",
+      "pages": [
+        178
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questao da secao CMS sobre os valores semanticos de como e com em uma tirinha; o estimulo verbal esta integrado ao elemento visual."
+    },
+    {
+      "documentId": "doc-e623f0284632",
+      "questionId": "doc-e623f0284632:q11",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Questao matematica de interpretacao de grafico sobre medalhas olimpicas; cinco alternativas com controles parenteticos."
+    },
+    {
+      "documentId": "doc-e623f0284632",
+      "questionId": "doc-e623f0284632:q23",
+      "pages": [
+        17
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Questao textual de coesao referencial a partir de fragmento do Texto 1; cinco alternativas com controles parenteticos."
+    },
+    {
+      "documentId": "doc-e623f0284632",
+      "questionId": "doc-e623f0284632:q37",
+      "pages": [
+        25
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Questao de pontuacao referente ao uso da virgula no primeiro quadrinho do Texto 6; cinco alternativas com controles parenteticos."
+    },
+    {
+      "documentId": "doc-e981c0dce132",
+      "questionId": "doc-e981c0dce132:q2",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual de substituicao lexical sobre o termo ressarcido; cinco alternativas parentetizadas."
+    },
+    {
+      "documentId": "doc-e981c0dce132",
+      "questionId": "doc-e981c0dce132:q8",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual de compreensao da entrevista com Michael Pollan; cinco alternativas parentetizadas."
+    },
+    {
+      "documentId": "doc-e981c0dce132",
+      "questionId": "doc-e981c0dce132:q19",
+      "pages": [
+        18
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual sobre a conjuncao que nao preservaria a relacao de sentido entre duas oracoes da fala da mae de Calvin; as duas oracoes relevantes sao reproduzidas no enunciado."
+    },
+    {
+      "documentId": "doc-ec2c48d75bf3",
+      "questionId": "doc-ec2c48d75bf3:q2",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Questao textual sobre o valor semantico da conjuncao Mas; cinco alternativas simples a-e sem controles locais."
+    },
+    {
+      "documentId": "doc-ec2c48d75bf3",
+      "questionId": "doc-ec2c48d75bf3:q10",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Questao textual que pede a alternativa que melhor resume o poema Cibernauta; a imagem da capa do livro e ilustrativa e nao e necessaria para responder."
+    },
+    {
+      "documentId": "doc-ec2c48d75bf3",
+      "questionId": "doc-ec2c48d75bf3:q20",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Questao textual de comparacao entre O menino impossivel e O menino que consertou o mundo; boundary corrigido neutralmente no R7 de paginas 10-12 para somente pagina 10."
+    },
+    {
+      "documentId": "doc-f0b208eead34",
+      "questionId": "doc-f0b208eead34:mat:q10",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Questao matematica sobre a distribuicao das figurinhas restantes em pacotes iguais; utiliza as quantidades textuais apresentadas no Texto III e possui cinco controles parenteticos nas alternativas."
+    },
+    {
+      "documentId": "doc-f0b208eead34",
+      "questionId": "doc-f0b208eead34:mat:q15",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Questao matematica sobre a economia mensal necessaria para quatro passagens aereas; a imagem do Qatar 2022 e ilustrativa e nao e necessaria para a resolucao."
+    },
+    {
+      "documentId": "doc-f0b208eead34",
+      "questionId": "doc-f0b208eead34:port:q6",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Questao textual de identificacao da relacao fato-consequencia entre trechos citados; cinco alternativas com controles parenteticos."
+    },
+    {
+      "documentId": "doc-f707c87d4d0e",
+      "questionId": "doc-f707c87d4d0e:q13",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questao matematica sobre numeros naturais definidos como parentes a partir de seus divisores; cinco alternativas parentetizadas."
+    },
+    {
+      "documentId": "doc-f707c87d4d0e",
+      "questionId": "doc-f707c87d4d0e:q15",
+      "pages": [
+        16
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 3,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questao matematica sobre dois dados octaedricos; tres condicoes internas I-III antecedem cinco alternativas finais A-E e nao possuem controles locais."
+    },
+    {
+      "documentId": "doc-f707c87d4d0e",
+      "questionId": "doc-f707c87d4d0e:q40",
+      "pages": [
+        37
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 5,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Cinco assertivas internas I-V sao avaliadas a partir da tabela do Texto IX e do grafico do Texto X; a resposta final e uma unica alternativa A-E. A questao esta integralmente na pagina 37, embora os estimulos visuais estejam nas paginas anteriores."
+    }
+  ]
+}

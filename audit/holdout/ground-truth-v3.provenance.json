@@ -1,0 +1,147 @@
+{
+  "artifactType": "holdout-v3-ground-truth-provenance",
+  "protocolVersion": "holdout-v3",
+  "groundTruth": "audit/holdout/ground-truth-v3.json",
+  "groundTruthFileSha256": "46dc699d124d4fca48df4edf93682e7bb1d61073dda15cc34c9795f7b9796e1f",
+  "groundTruthCanonicalJsonSha256": "5b8a0623c115db59872f196023bc5d2339fc739035da152a9ec9f81353f69034",
+  "sourceManifest": "audit/holdout/manifest-v3-b-r5.json",
+  "sourceManifestFileSha256": "ba3e3f985b4f7da73ad61f10cb7aa54234a8039843e51fb58ea7c9209bb11ed9",
+  "sourceManifestCanonicalJsonSha256": "797dba3b37587e6fe4bf264c563f4c27668155e5f7284e5c132b648aa8dedebc",
+  "questionIndex": "audit/holdout/question-index-v3-r7.json",
+  "questionIndexFileSha256": "05fae5716e229b95400c80666dd9ce2a8a76e4a003a7f95483aeb774d4d4d78b",
+  "questionIndexCanonicalJsonSha256": "8c7c9bb2ac95d4d9811f3bbd1f122873fd0d8fc3fa31eb5f60ed55862949b066",
+  "protocol": "audit/holdout/protocol-v3.json",
+  "protocolFileSha256": "418e98e6f6d3095c9dd2b381a6b5d4943b677c505d868397a7ded33f1ee3c39b",
+  "protocolCanonicalJsonSha256": "c9abe37e1f279da352c7aebe542e560a7c0cf73948e8a6806b2c510bf9face4a",
+  "sourceGitCommit": "b634ada61229d66e8a18637daeda051e858fa422",
+  "sourceGroundTruthBatches": [
+    {
+      "batch": 1,
+      "path": "audit/holdout/ground-truth-v3-batch-01.json",
+      "fileSha256": "e15db9807ea0b961a12493a24b95d338bfcff8c04431b5ce116c68c1f960f44c",
+      "canonicalJsonSha256": "be8a216970f38c8f511b3fae78ba184f8fb8ffafa441d8060505662fc754ce75",
+      "questions": 9
+    },
+    {
+      "batch": 2,
+      "path": "audit/holdout/ground-truth-v3-batch-02.json",
+      "fileSha256": "50e4f9626a4986e729e5a6009f7e0c69dabd646503a2c4c241fa3087ebc91f7b",
+      "canonicalJsonSha256": "1ca76cb24584a8c70210e435adddfbc21d1d8b6d0e58eb08b50d45602e7af28f",
+      "questions": 9
+    },
+    {
+      "batch": 3,
+      "path": "audit/holdout/ground-truth-v3-batch-03.json",
+      "fileSha256": "db608c5e43b4b30980bd26b4bad2aeeef59a012a26f46cce087b632384299255",
+      "canonicalJsonSha256": "26c3907c613021f6a9dd6ed287b9077a9b649c3e5d8bc512ff00ab34a0ba702d",
+      "questions": 9
+    },
+    {
+      "batch": 4,
+      "path": "audit/holdout/ground-truth-v3-batch-04.json",
+      "fileSha256": "d1804b065026760fd3d075ded62fbbb082ee6f8257ffdc0ce084007cd977f0e4",
+      "canonicalJsonSha256": "5b7eb6a28fefa020cc1ecd7fce4a532be2afbd66ee6cd1d308d5afcbad29d9b2",
+      "questions": 9
+    },
+    {
+      "batch": 5,
+      "path": "audit/holdout/ground-truth-v3-batch-05.json",
+      "fileSha256": "389a4cb15407f4cd4f253198bcc16a5a2554d3ccceb45568c427a33b4435c3c7",
+      "canonicalJsonSha256": "5e6b850a23e8813a34daef5ad34a0521d59aa880681e4961c762f607ec41d692",
+      "questions": 9
+    },
+    {
+      "batch": 6,
+      "path": "audit/holdout/ground-truth-v3-batch-06.json",
+      "fileSha256": "ee961500178d2b45e99c56647841b77633b844972d33d3bb2765f9d397894a14",
+      "canonicalJsonSha256": "850728753ecb8a2601cb958517654c611dc4108da8c2fe2fc7b378f4a1e442ca",
+      "questions": 9
+    },
+    {
+      "batch": 7,
+      "path": "audit/holdout/ground-truth-v3-batch-07.json",
+      "fileSha256": "fc28651e187e3cb9bdaa3e8ca671c1db1ee7e9bf609d14d79ccb33b26ffb477a",
+      "canonicalJsonSha256": "b9dd7eeafaeb27817db21c47f9eee5c63a21424083de22428205f5127a408a9a",
+      "questions": 9
+    },
+    {
+      "batch": 8,
+      "path": "audit/holdout/ground-truth-v3-batch-08.json",
+      "fileSha256": "d3161d8e1a7cd948e8710bcdb357531a7e09cfd1e776fe063c392978f386d804",
+      "canonicalJsonSha256": "805fd36e0a44439e39177f29d3b3e6f59ffffb4e782da5ebd1144e5f361ca597",
+      "questions": 9
+    },
+    {
+      "batch": 9,
+      "path": "audit/holdout/ground-truth-v3-batch-09.json",
+      "fileSha256": "02a9cafc6846afd1b64b1d795c8c857666877b3c85892b46c4bd75e03c0c7427",
+      "canonicalJsonSha256": "be1187b4e93ce6696f9a8c2a931e180148e633f34a88544fa8ae9ed470e1a756",
+      "questions": 9
+    },
+    {
+      "batch": 10,
+      "path": "audit/holdout/ground-truth-v3-batch-10.json",
+      "fileSha256": "15c70815ad4b878e78b4f833096d9f2efcf748105dc2a8aae86909ada18e889c",
+      "canonicalJsonSha256": "58acead8bd7bdd4cc4217d26f9ddcc0cd1d6fff62ad57ef06e4f3caaaf6e707f",
+      "questions": 9
+    },
+    {
+      "batch": 11,
+      "path": "audit/holdout/ground-truth-v3-batch-11.json",
+      "fileSha256": "d015903553787117e25e544686c4ef98998c77934639f7ebba417f1f6a37f526",
+      "canonicalJsonSha256": "9c2774cb93071e0368032752c0d37b6c425e9e427f8d062d595a179f18be88aa",
+      "questions": 9
+    },
+    {
+      "batch": 12,
+      "path": "audit/holdout/ground-truth-v3-batch-12.json",
+      "fileSha256": "48ade4a77fcbfff1c58bfe7e6c14f66fc9a7594851b24637d80055a7d91c61b1",
+      "canonicalJsonSha256": "cec052b33a84732d578239034d8d0e964a15e1f0293242eaaa363aca7443442d",
+      "questions": 9
+    },
+    {
+      "batch": 13,
+      "path": "audit/holdout/ground-truth-v3-batch-13.json",
+      "fileSha256": "9f4350aa436962e433f0482e9cb8925a90c1a99eb585f2759f03cb57dcb336a2",
+      "canonicalJsonSha256": "44ae08466c634e5ebaddd96adc82ffa4e3a09ba0318a85b892cdad979c94843d",
+      "questions": 9
+    },
+    {
+      "batch": 14,
+      "path": "audit/holdout/ground-truth-v3-batch-14.json",
+      "fileSha256": "62596679a35af7146c404f139dcda4733df73dc4919c741850cf8dd1647eee4c",
+      "canonicalJsonSha256": "68f102ae4a58c3ade4eeb5c4c01c8cd5eefb50e19b452ad38359e220ebb23d9b",
+      "questions": 9
+    },
+    {
+      "batch": 15,
+      "path": "audit/holdout/ground-truth-v3-batch-15.json",
+      "fileSha256": "6f7726f1207b024fb0034eabb1b0827b6d1169cd4213526c8cf75874cb82fc38",
+      "canonicalJsonSha256": "04987deba08bf134aaef33ea4b608a5656948a4c90f03910a5f7bd7a1bf9461b",
+      "questions": 9
+    },
+    {
+      "batch": 16,
+      "path": "audit/holdout/ground-truth-v3-batch-16.json",
+      "fileSha256": "97b351402e292906c12a6805180d2f73c1e8af7aef0a70c8879826d4fb7ead54",
+      "canonicalJsonSha256": "c232fe945735428dcb5326615f52b987721588eac27224f8b735a6797a7a5cdd",
+      "questions": 9
+    }
+  ],
+  "sourceBatchSetCanonicalJsonSha256": "34ca301112daac52a7a84c022fc2cc5ccbcda68fa5d89e7ce372722b01911018",
+  "batchCount": 16,
+  "documents": 48,
+  "questions": 144,
+  "annotatedQuestions": 144,
+  "uniqueQuestionIds": 144,
+  "unknownQuestions": 0,
+  "humanAdjudicated": true,
+  "allSelectedQuestionsCovered": true,
+  "allBindingsMatchFinalQuestionIndex": true,
+  "allDocumentFingerprintsMatchManifest": true,
+  "questionOrderMatchesFinalManifest": true,
+  "auditorExecutedBeforeFreeze": false,
+  "freezePolicy": "The Git commit that first introduces this provenance file and ground-truth-v3.json constitutes the formal Ground Truth V3 freeze. Auditor execution is permitted only after that commit exists.",
+  "freezeStatus": "ready_for_freeze_commit",
+  "generatedAt": "2026-09-30T17:22:02.603486+00:00"
+}
