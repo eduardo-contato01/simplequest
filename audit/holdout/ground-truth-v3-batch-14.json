@@ -1,0 +1,201 @@
+{
+  "protocolVersion": "holdout-v3",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-14",
+  "sourceManifest": "audit/holdout/manifest-v3-b-r4.json",
+  "sourceManifestFileSha256": "30924e23c3286d342c199687edd74630102dbaf5f7001afc8dd83f7a94b8424e",
+  "sourceQuestionIndex": "audit/holdout/question-index-v3-r6.json",
+  "sourceQuestionIndexFileSha256": "297347f193f2558ebb8353ba6164bb54193ad54e07fdd00f88739f9f2055d0eb",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-d452c3def3e5": "d452c3def3e52cb9e9769d86d9888d6bba78f07c65c268c75c4ab9bd624a6222",
+    "doc-de124896cd9d": "de124896cd9d8383bad3221c3c9fff0aea1e8b31c0f5b106f309d3445e42445b",
+    "doc-e0a1bafb0ea7": "e0a1bafb0ea7726b5a0ed7cd398f3f760d64835f0d0199bdc6622747ee02821f"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-d452c3def3e5",
+      "questionId": "doc-d452c3def3e5:q19",
+      "pages": [
+        5
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item individual de julgamento textual sobre Casa de bonecas; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-d452c3def3e5",
+      "questionId": "doc-d452c3def3e5:q58",
+      "pages": [
+        9
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item individual de julgamento textual que relaciona as ideias de Kant a situacao de Bertoleza; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-d452c3def3e5",
+      "questionId": "doc-d452c3def3e5:q95",
+      "pages": [
+        16
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item individual de julgamento textual sobre uso de biomassa na producao energetica brasileira; nao ha alternativas nem controles C/E locais."
+    },
+    {
+      "documentId": "doc-de124896cd9d",
+      "questionId": "doc-de124896cd9d:q8",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 4,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Quatro afirmativas internas I-IV sao avaliadas com base no grafico de producao mundial de etanol; a resposta final e uma unica alternativa A-E."
+    },
+    {
+      "documentId": "doc-de124896cd9d",
+      "questionId": "doc-de124896cd9d:q16",
+      "pages": [
+        18
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questao textual sobre a finalidade do Texto I; cinco alternativas A-E."
+    },
+    {
+      "documentId": "doc-de124896cd9d",
+      "questionId": "doc-de124896cd9d:q22",
+      "pages": [
+        22
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Questao de pontuacao que depende dos elementos verbais e visuais dos quadrinhos da Mafalda."
+    },
+    {
+      "documentId": "doc-e0a1bafb0ea7",
+      "questionId": "doc-e0a1bafb0ea7:q5",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Questao textual de concordancia verbal com cinco alternativas, cada uma acompanhada por controle parentetico; boundary corrigido no R6 para somente pagina 3."
+    },
+    {
+      "documentId": "doc-e0a1bafb0ea7",
+      "questionId": "doc-e0a1bafb0ea7:q9",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Questao textual sobre elementos coesivos do Texto 3 com cinco alternativas e controles parenteticos; boundary corrigido no R6 para somente pagina 6."
+    },
+    {
+      "documentId": "doc-e0a1bafb0ea7",
+      "questionId": "doc-e0a1bafb0ea7:q16",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Questao de interpretacao diretamente ligada ao Texto 7 em quadrinhos; cinco alternativas com controles parenteticos."
+    }
+  ]
+}
