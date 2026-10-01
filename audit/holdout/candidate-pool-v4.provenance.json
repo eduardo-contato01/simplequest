@@ -1,0 +1,35 @@
+{
+  "artifactType": "candidate-pool-provenance",
+  "protocolVersion": "holdout-v4",
+  "createdFromGitCommit": "b33b98465f3f2b58e4aefc357efa598d8364c22b",
+  "sourceV3ResultFreeze": "b3082e093df58d8054f1acda61183d52e5b1a605",
+  "historicalIntegrityMethod": "Git blob identity against V3 result-freeze commit",
+  "sourceGitObjects": {
+    "audit/holdout/protocol-v3.json": "5fdea25dc9dc9f65cb41fec0bfab9eb8809fd165",
+    "audit/holdout/candidate-pool-v3.json": "27ec5b6e121eddf086a39a2a2df47febde1ac02f",
+    "audit/holdout/manifest-v3-b-r5.json": "28fc8cba08d4e04e415805c3691dcea345962314"
+  },
+  "generationRule": "candidate-pool-v3 minus exactly all contentFingerprints selected by manifest-v3-b-r5",
+  "randomSelectionPerformed": false,
+  "selectionSeedChosen": false,
+  "auditorExecuted": false,
+  "v4ProtocolFrozen": false,
+  "contaminationChecks": {
+    "v1Overlap": 0,
+    "v2Overlap": 0,
+    "v3Overlap": 0,
+    "developmentOverlap": 0
+  },
+  "v3SelectedFingerprintsRemoved": 48,
+  "candidatePoolV4Count": 487,
+  "candidatePoolV4FingerprintSetSha256": "82cc19852f61ca76111680d8f56fbc08bbde563a7b845b5168c34aa513977d63",
+  "candidatePoolV4FileSha256": "cdee45a7273c152a4677dd4074a93b974fae178c0f234f134efc1fb3420b774a",
+  "candidatePoolV4CanonicalJsonSha256": "45b14a93d8021ad4300044aa2fabbe6f2c813d4cf9b3cc69790f0b24a52a0a2b",
+  "v3ReservedPoolBinding": {
+    "expectedCount": 487,
+    "actualCount": 487,
+    "expectedFingerprintSetSha256": "82cc19852f61ca76111680d8f56fbc08bbde563a7b845b5168c34aa513977d63",
+    "actualFingerprintSetSha256": "82cc19852f61ca76111680d8f56fbc08bbde563a7b845b5168c34aa513977d63",
+    "exactMatch": true
+  }
+}
