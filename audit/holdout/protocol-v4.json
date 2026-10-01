@@ -1,0 +1,178 @@
+{
+  "protocolVersion": "holdout-v4",
+  "description": "Final blind development holdout before the SimpleQuest Auditor Final Blind Evaluation. V4 evaluates generalization after the V3 postmortem fixes without reusing any V1/V2/V3/development content.",
+  "selectionSeed": 20261001,
+  "seedPolicy": {
+    "value": 20261001,
+    "basis": "calendar date of protocol freeze 2026-10-01",
+    "chosenBeforeDocumentSelection": true,
+    "chosenBeforeQuestionSelection": true,
+    "chosenBeforeGroundTruth": true,
+    "chosenBeforeAuditorExecution": true,
+    "notChosenFromPerformanceOutcomes": true
+  },
+  "randomHoldout": {
+    "targetDocuments": 48,
+    "questionsPerDocument": 3,
+    "maxDocumentsPerFamily": 3,
+    "minFamilies": 16,
+    "minDistinctYears": 12,
+    "eras": [
+      "2004-2009",
+      "2010-2014",
+      "2015-2019",
+      "2020-2025"
+    ],
+    "sourceQuota": {
+      "text_native": 32,
+      "raster": 15,
+      "text_low_quality": 0,
+      "hybrid": 1
+    }
+  },
+  "samplingFrameV4": {
+    "candidatePoolArtifact": "audit/holdout/candidate-pool-v4.json",
+    "candidatePoolArtifactSha256": "cdee45a7273c152a4677dd4074a93b974fae178c0f234f134efc1fb3420b774a",
+    "candidatePoolCanonicalJsonSha256": "45b14a93d8021ad4300044aa2fabbe6f2c813d4cf9b3cc69790f0b24a52a0a2b",
+    "contentFingerprintSetSha256": "82cc19852f61ca76111680d8f56fbc08bbde563a7b845b5168c34aa513977d63",
+    "eligibleDocuments": 487,
+    "sourceDistribution": {
+      "text_native": 327,
+      "raster": 158,
+      "hybrid": 2
+    },
+    "eraDistribution": {
+      "2004-2009": 35,
+      "2010-2014": 109,
+      "2015-2019": 191,
+      "2020-2025": 152
+    },
+    "distinctFamilies": 24,
+    "distinctYears": 22,
+    "basis": "exact frozen V3 reserved pool after removing all V3 revealed fingerprints"
+  },
+  "sourceQuotaRationale": {
+    "pool": {
+      "text_native": 327,
+      "raster": 158,
+      "hybrid": 2
+    },
+    "selectedQuota": {
+      "text_native": 32,
+      "raster": 15,
+      "text_low_quality": 0,
+      "hybrid": 1
+    },
+    "method": "Reserve exactly one of the two remaining hybrid documents for the Final Blind Evaluation; distribute the remaining 47 V4 slots approximately proportionally across text_native and raster.",
+    "nonHybridCalculation": {
+      "availableTextNative": 327,
+      "availableRaster": 158,
+      "slots": 47,
+      "selectedTextNative": 32,
+      "selectedRaster": 15
+    },
+    "expectedReservedAfterV4": {
+      "text_native": 295,
+      "raster": 143,
+      "hybrid": 1,
+      "total": 439
+    }
+  },
+  "diversityPolicy": {
+    "maxDocumentsPerFamily": 3,
+    "minimumFamilies": 16,
+    "minimumDistinctYears": 12,
+    "allFourErasRequired": true,
+    "eraQuotaTuning": false,
+    "rationale": "Family cap 3 forces at least 16 families in a 48-document holdout. Era representation is required but not performance-tuned or assigned fixed quotas."
+  },
+  "constraintPolicy": {
+    "abortOnConstraintFailure": true,
+    "noSilentRelaxation": true,
+    "noSeedSearch": true,
+    "noRetryWithAlternateSeed": true,
+    "onFailure": "record the failed frozen selection attempt and revise methodology explicitly; never search seeds for a convenient sample"
+  },
+  "challengeSet": {
+    "targetDocuments": 0,
+    "policy": "No V4 challenge set. The later Final Blind Evaluation is a separate frozen evaluation stage."
+  },
+  "developmentDocuments": [
+    "CMBH - 6ANO - 2017_2018 (mat).pdf",
+    "CMC - 6ANO - 2011_2012 (mat).pdf",
+    "CMBH - 6ANO - 2018_2019 (mat).pdf",
+    "CMBel - 6ANO - 2017_2018 (mat).pdf",
+    "CMT - 6ANO - 2022_2023.pdf",
+    "PAS 2 - 2019.pdf"
+  ],
+  "priorRevealedExclusionPolicy": {
+    "unit": "contentFingerprint",
+    "excludeV1": true,
+    "excludeV2": true,
+    "excludeV3": true,
+    "developmentExcluded": true,
+    "candidatePoolAlreadyMaterializesExclusions": true
+  },
+  "ocrPolicy": {
+    "allowedInExecutionPhase": true,
+    "frozenConfiguration": true,
+    "noRetuneFromHoldoutResults": true,
+    "failuresObservedAsNotExecutable": true
+  },
+  "antiContamination": {
+    "developmentExcluded": true,
+    "v1RevealedExcluded": true,
+    "v2RevealedExcluded": true,
+    "v3RevealedExcluded": true,
+    "duplicateFingerprintsAcrossSplitsForbidden": true,
+    "runnerNeverEditsManifestOrGroundTruth": true,
+    "v3PerformanceNotUsedForV4DocumentChoice": true,
+    "auditorNotRunBeforeGroundTruthFreeze": true
+  },
+  "finalDevelopmentGate": {
+    "role": "last blind development holdout before final blind evaluation",
+    "passWithoutSubstantiveAuditorChange": "proceed to Final Blind Evaluation",
+    "ifAuditorLogicChangesAfterV4Reveal": "V4 becomes development evidence and a new blind holdout is required before Final Blind Evaluation",
+    "substantiveChangesInclude": [
+      "new heuristic",
+      "fusion logic change",
+      "boundary logic change",
+      "OCR configuration change",
+      "threshold change",
+      "new blocker",
+      "parser rule change"
+    ]
+  },
+  "finalBlindReservationPolicy": {
+    "finalEvaluationSeparateFromV4": true,
+    "preserveAtLeastOneHybrid": true,
+    "expectedReservedAfterV4": {
+      "text_native": 295,
+      "raster": 143,
+      "hybrid": 1,
+      "total": 439
+    },
+    "reservedDocumentsExpected": 439
+  },
+  "metricsPolicy": {
+    "primarySafetyMetrics": [
+      "unsafeError",
+      "unsafeErrorMediumHighConfidence",
+      "questionLevelEmittedPrecision"
+    ],
+    "coverageMetrics": [
+      "coverage",
+      "abstention"
+    ],
+    "diagnosticSlices": [
+      "sourceType",
+      "family",
+      "era",
+      "responseMode",
+      "layout",
+      "markerStyle",
+      "contentKind"
+    ],
+    "noSingleMetricPassCriterion": true
+  }
+}

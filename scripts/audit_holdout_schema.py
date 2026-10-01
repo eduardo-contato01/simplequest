@@ -9,9 +9,14 @@ from typing import Any
 
 
 PROTOCOL_VERSION = "holdout-v1"
-SUPPORTED_PROTOCOL_VERSIONS = ("holdout-v1", "holdout-v2", "holdout-v3")
+SUPPORTED_PROTOCOL_VERSIONS = ("holdout-v1", "holdout-v2", "holdout-v3", "holdout-v4")
 SELECTOR_VERSION = "holdout-v1"
-SELECTOR_VERSION_BY_PROTOCOL = {"holdout-v1": "holdout-v1", "holdout-v2": "holdout-v2", "holdout-v3": "holdout-v3"}
+SELECTOR_VERSION_BY_PROTOCOL = {
+  "holdout-v1": "holdout-v1",
+  "holdout-v2": "holdout-v2",
+  "holdout-v3": "holdout-v3",
+  "holdout-v4": "holdout-v4",
+}
 FINGERPRINT_CACHE_VERSION = 1
 
 ANSWER_KEY_DIRECTORY_SEGMENTS = ("gabarito", "gabaritos")

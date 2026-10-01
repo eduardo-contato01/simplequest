@@ -1,0 +1,44 @@
+{
+  "artifactType": "protocol-freeze-provenance",
+  "protocolVersion": "holdout-v4",
+  "protocol": "audit/holdout/protocol-v4.json",
+  "protocolFileSha256": "f70fb425dd17a7a117a02926a8e0c6c7b9e199dc3c3d2640848b5f9a7b325183",
+  "protocolCanonicalJsonSha256": "94ff2f2340339de1487c23bf90b05416634f85852db37bdbdc2ef0811ff221bd",
+  "candidatePool": "audit/holdout/candidate-pool-v4.json",
+  "candidatePoolFileSha256": "cdee45a7273c152a4677dd4074a93b974fae178c0f234f134efc1fb3420b774a",
+  "candidatePoolCanonicalJsonSha256": "45b14a93d8021ad4300044aa2fabbe6f2c813d4cf9b3cc69790f0b24a52a0a2b",
+  "candidatePoolFingerprintSetSha256": "82cc19852f61ca76111680d8f56fbc08bbde563a7b845b5168c34aa513977d63",
+  "freezeParentCommit": "66bb0cb4b26232e6bc8cbdddaab560b6b5050ce5",
+  "selectionSeed": 20261001,
+  "selectionSeedBasis": "protocol freeze date 2026-10-01",
+  "randomSelectionPerformed": false,
+  "questionSelectionPerformed": false,
+  "groundTruthCreated": false,
+  "auditorExecuted": false,
+  "sourceQuota": {
+    "text_native": 32,
+    "raster": 15,
+    "text_low_quality": 0,
+    "hybrid": 1
+  },
+  "expectedReservedAfterV4": {
+    "text_native": 295,
+    "raster": 143,
+    "hybrid": 1,
+    "total": 439
+  },
+  "finalBlindEvaluationReserved": true,
+  "recoveryHistory": {
+    "failedAttemptsBeforeCommit": 3,
+    "remoteChangedDuringFailures": false,
+    "selectionPerformedDuringFailures": false,
+    "auditorExecutedDuringFailures": false,
+    "lastFailure": "worktree guard path parser misparsed scripts/audit_holdout_schema.py",
+    "recovery3UsesPorcelainPathSlicing": false,
+    "schemaStateBeforeRecovery3": "ALREADY_PATCHED",
+    "indexEntryBefore": "H scripts/audit_holdout_schema.py",
+    "indexEntryAfter": "H scripts/audit_holdout_schema.py",
+    "schemaComparedAgainstHead": true,
+    "schemaLimitedToExactV4SupportPatch": true
+  }
+}
