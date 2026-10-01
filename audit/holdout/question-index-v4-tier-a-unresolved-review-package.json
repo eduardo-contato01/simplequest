@@ -1,0 +1,82 @@
+{
+  "artifactType": "holdout-v4-tier-a-unresolved-review-package",
+  "protocolVersion": "holdout-v4",
+  "sourceTriageCommit": "ffcc8363868bbfb46aa468d4dcb4f92488ef64b8",
+  "sourceReviewQueueSha256": "088bb091436bb8a195244da2a037394d0da02f66835e2be228fa029809f92592",
+  "documents": [
+    {
+      "order": 1,
+      "documentId": "doc-591f3e819d58",
+      "contentFingerprint": "591f3e819d5810c359b2a0d9e8a32cdc54a7c6245e0b3cf03d9521a46ee7b3f8",
+      "pageCount": 15,
+      "indexMethod": "ocr",
+      "rawQuestionCount": 10,
+      "rawAnomalyCount": 23,
+      "reviewCopySha256": "591f3e819d5810c359b2a0d9e8a32cdc54a7c6245e0b3cf03d9521a46ee7b3f8",
+      "byteIdenticalToSource": true
+    },
+    {
+      "order": 2,
+      "documentId": "doc-6dde932fb681",
+      "contentFingerprint": "6dde932fb681b017099925612def8c5d325c9cc899ad7a35f97d56cb07c5b4ae",
+      "pageCount": 15,
+      "indexMethod": "ocr",
+      "rawQuestionCount": 5,
+      "rawAnomalyCount": 12,
+      "reviewCopySha256": "6dde932fb681b017099925612def8c5d325c9cc899ad7a35f97d56cb07c5b4ae",
+      "byteIdenticalToSource": true
+    },
+    {
+      "order": 3,
+      "documentId": "doc-44ea716ed9b7",
+      "contentFingerprint": "44ea716ed9b726f56e3a6243bf6c3822f168b051b02b00ae85c742719fd888de",
+      "pageCount": 20,
+      "indexMethod": "ocr",
+      "rawQuestionCount": 12,
+      "rawAnomalyCount": 9,
+      "reviewCopySha256": "44ea716ed9b726f56e3a6243bf6c3822f168b051b02b00ae85c742719fd888de",
+      "byteIdenticalToSource": true
+    },
+    {
+      "order": 4,
+      "documentId": "doc-5d61be2ac853",
+      "contentFingerprint": "5d61be2ac8537a32577aa37aab20221820b7499b2488f292ac60f49397170fc8",
+      "pageCount": 13,
+      "indexMethod": "ocr",
+      "rawQuestionCount": 4,
+      "rawAnomalyCount": 9,
+      "reviewCopySha256": "5d61be2ac8537a32577aa37aab20221820b7499b2488f292ac60f49397170fc8",
+      "byteIdenticalToSource": true
+    },
+    {
+      "order": 5,
+      "documentId": "doc-0db5ce524459",
+      "contentFingerprint": "0db5ce524459a88bc7d2120a47cd3f19c4909c2c7ee378bde5468892a76cdf9d",
+      "pageCount": 15,
+      "indexMethod": "ocr",
+      "rawQuestionCount": 1,
+      "rawAnomalyCount": 3,
+      "reviewCopySha256": "0db5ce524459a88bc7d2120a47cd3f19c4909c2c7ee378bde5468892a76cdf9d",
+      "byteIdenticalToSource": true
+    },
+    {
+      "order": 6,
+      "documentId": "doc-c41ddc7b55ec",
+      "contentFingerprint": "c41ddc7b55ec4e18550e2be6decab59f307b6acc7699ab17e69b7f478330ca4e",
+      "pageCount": 4,
+      "indexMethod": "ocr",
+      "rawQuestionCount": 1,
+      "rawAnomalyCount": 2,
+      "reviewCopySha256": "c41ddc7b55ec4e18550e2be6decab59f307b6acc7699ab17e69b7f478330ca4e",
+      "byteIdenticalToSource": true
+    }
+  ],
+  "reviewContextIgnoredPath": "outputs/audit/holdout/v4-tier-a-unresolved-review/review-context.json",
+  "reviewContextSha256": "d5b9cd55f1d2171bfde5a0b4128d5836b184a403350a4acc8e9654e69f1b9cef",
+  "pdfCopiesTracked": false,
+  "reviewContextTracked": false,
+  "manualAdjudicationPerformed": false,
+  "questionSelectionExecuted": false,
+  "groundTruthCreated": false,
+  "auditorExecuted": false
+}
