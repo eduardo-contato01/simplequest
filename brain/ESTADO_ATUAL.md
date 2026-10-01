@@ -34,12 +34,18 @@
 - `npm run test` passou apos o ultimo commit publicado.
 - `npm run lint` terminou com codigo 0, mas reportou avisos em arquivos gerados/declarações (`outputs/component-contracts.mjs`, `types/cloudflare-runtime.d.ts`).
 
-## Auditor — estagio atual (freeze V1)
+## Auditor / Holdout V4 — checkpoint 2026-10-01
 
-- Auditor V1 entrou em fase de **freeze arquitetural / preparacao para holdout**.
+- Branch: `audit/holdout-v4`. Arquitetura V1 do Auditor **congelada para avaliacao**.
 - Camadas atuais: (1) admission/preflight; (2) marker/profile/page scope; (3) OCR content; (4) response structure; (5) visual marker evidence; (6) response regions/slots; (7) response evidence fusion; (8) observation adapter OCR/native.
 - Tudo continua shadow/read-only onde aplicavel; a V1 de OCR ainda **nao** produz `difference`.
 - Nenhuma hipotese de estrutura e promovida ao catalogo.
-- Proximo marco: holdout independente e medicao de precision/coverage/abstention por layout/familia.
+- Candidate pool V4 congelado; selecao documental concluida com 48 documentos; raw neutral question index congelado.
+- Tier A: 18/18 adjudicados. Tier B: 9/9 adjudicados e commitados, com 246 questoes canonicas.
+- Tier C: 13 documentos pendentes. Tier D: 8 controles pendentes.
+- Final question index: nao criado (`false`). Question selection: nao executada (`false`).
+- Ground Truth V4: nao criado (`false`). Auditor V4: nao executado (`false`).
+- Adjudicacao neutra usa apenas evidencia permitida pelo protocolo, sem answer keys, Ground Truth, Auditor output ou novas heuristicas para casos individuais.
+- Proximo passo previsto: Tier C, somente apos este checkpoint de documentacao; ainda nao iniciado. Estado e referencias em [[AUDITORIA_PROVAS#Holdout V4 — checkpoint apos Tier B]].
 
 Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_PROVAS]].

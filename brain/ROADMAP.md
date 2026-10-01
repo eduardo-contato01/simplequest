@@ -2,6 +2,16 @@
 
 ## Curto prazo
 
+Prioridade: continuar o Holdout V4 a partir do checkpoint A/B concluido, com arquitetura V1 congelada e isolamento da adjudicacao neutra (ver [[AUDITORIA_PROVAS#Holdout V4 — checkpoint apos Tier B]]).
+
+1. Continuar o Holdout V4 apos este checkpoint de documentacao; Tier C ainda nao iniciado.
+2. Adjudicar os 13 documentos Tier C com a evidencia neutra permitida pelo protocolo.
+3. Adjudicar os 8 controles Tier D.
+4. Construir o final question index somente depois de concluir as adjudicacoes.
+5. Executar question selection somente depois do indice final.
+6. Criar Ground Truth V4 depois da selecao de questoes.
+7. Executar Auditor V4 somente apos Ground Truth congelado conforme o protocolo.
+
 - Manter este brain atualizado quando arquitetura, decisoes ou estado relevante mudarem.
 - Atualizar `README.md` para descrever o SimpleQuest real, comandos atuais e fluxo de dados.
 - Resolver divergencia entre `public/data/stats.json` e `public/data/questions.json`, ou remover/explicar o arquivo se nao for usado.
