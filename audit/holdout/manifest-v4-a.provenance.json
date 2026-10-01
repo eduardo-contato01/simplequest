@@ -1,0 +1,70 @@
+{
+  "artifactType": "holdout-v4-document-selection-provenance",
+  "protocolVersion": "holdout-v4",
+  "selectionAttempt": 1,
+  "selectionSucceeded": true,
+  "selectionSeed": 20261001,
+  "selectorCommit": "278fae2b2a4260d25535a119f78d52b93cdfa202",
+  "selectorSha256": "e6a46acb47d29b75dee6c643be07452b734f27b56565ccfcbfff9169d899a416",
+  "genericSelectorSha256": "a13f6cc0f53228c6464caf5fab8b8abcf9481f95d5c87b3844a8415164733e27",
+  "protocol": "audit/holdout/protocol-v4.json",
+  "protocolFileSha256": "f70fb425dd17a7a117a02926a8e0c6c7b9e199dc3c3d2640848b5f9a7b325183",
+  "candidatePool": "audit/holdout/candidate-pool-v4.json",
+  "candidatePoolFileSha256": "cdee45a7273c152a4677dd4074a93b974fae178c0f234f134efc1fb3420b774a",
+  "candidatePoolFingerprintSetSha256": "82cc19852f61ca76111680d8f56fbc08bbde563a7b845b5168c34aa513977d63",
+  "manifest": "audit/holdout/manifest-v4-a.json",
+  "manifestFileSha256": "be69ceafd2fde2ce00f5f72966c12e22d33f575785ddc00ae57030fe74b2dccc",
+  "manifestCanonicalJsonSha256": "cd4e2a6a39c736d5f7cd58f53095e920d88ef98858e9fc42fd75a5fd6250a1c1",
+  "selectedDocuments": 48,
+  "selectedBySource": {
+    "text_native": 32,
+    "raster": 15,
+    "hybrid": 1
+  },
+  "selectedFamilies": 22,
+  "maxSelectedPerFamily": 3,
+  "selectedDistinctYears": 17,
+  "coveredEras": [
+    "2004-2009",
+    "2010-2014",
+    "2015-2019",
+    "2020-2025"
+  ],
+  "reservedDocuments": 439,
+  "reservedPoolHash": "80c19ebd19a6a859176a0aecee935cfb1f949748955106e6894f19c293ce48e0",
+  "reservedBySource": {
+    "text_native": 295,
+    "raster": 143,
+    "hybrid": 1
+  },
+  "finalBlindHybridReserved": 1,
+  "selectorInvocations": 1,
+  "alternateSeedRetry": false,
+  "silentConstraintRelaxation": false,
+  "questionSelectionExecuted": false,
+  "groundTruthCreated": false,
+  "auditorExecuted": false,
+  "selectorStdout": {
+    "status": "ok",
+    "out": "audit\\holdout\\manifest-v4-a.json",
+    "documents": 48,
+    "selectionSeed": 20261001,
+    "selectedBySource": {
+      "text_native": 32,
+      "raster": 15,
+      "hybrid": 1
+    },
+    "selectedFamilies": 22,
+    "selectedDistinctYears": 17,
+    "coveredEras": [
+      "2004-2009",
+      "2010-2014",
+      "2015-2019",
+      "2020-2025"
+    ],
+    "reservedCount": 439,
+    "reservedPoolHash": "80c19ebd19a6a859176a0aecee935cfb1f949748955106e6894f19c293ce48e0",
+    "gitCommit": "278fae2b2a4260d25535a119f78d52b93cdfa202",
+    "selectionCodeState": "clean"
+  }
+}
