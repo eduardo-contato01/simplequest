@@ -1,0 +1,180 @@
+{
+  "artifactType": "holdout-v4-tier-b-neutral-review-package",
+  "protocolVersion": "holdout-v4",
+  "sourceCommit": "28fc274deac5f95f3d0bf2c44f51ba625f28b12b",
+  "sourceGitBlobs": {
+    "audit/holdout/question-index-v4-review-queue.json": "b757033bfb9a4f63db1200b35cee4bd85f15dff8",
+    "audit/holdout/manifest-v4-a.json": "29b295ad85a771389b155488987d233e5339be77",
+    "audit/holdout/question-index-v4-raw-report.json": "b409388b725a4cdc85618a00bf13fc8656e68bc2",
+    "audit/holdout/question-index-v4-tier-a-unresolved-adjudication.json": "4d0bac34f391d6bd9117306bed7fba8f99a9918a",
+    "audit/holdout/question-index-v4-tier-a-neutral-adjudication.json": "bef0b6de98cdbe907c4eeeb1b5dcba372e67619a"
+  },
+  "priorTierACompletedDocuments": 18,
+  "documents": [
+    {
+      "order": 1,
+      "documentId": "doc-7f0815783d8c",
+      "family": "CMC",
+      "year": 2012,
+      "contentFingerprint": "7f0815783d8c21fcfa4b6022fca3b131df5b7be91e3e4a87784dd86f7ad21de0",
+      "pageCount": 9,
+      "indexMethod": "native",
+      "rawQuestionCount": 30,
+      "rawAnomalyCount": 54,
+      "anomalyTypeCounts": {
+        "duplicate_question_number": 51,
+        "non_monotonic_numbering": 3
+      },
+      "reviewCopySha256": "7f0815783d8c21fcfa4b6022fca3b131df5b7be91e3e4a87784dd86f7ad21de0",
+      "byteIdenticalToSource": true
+    },
+    {
+      "order": 2,
+      "documentId": "doc-9236ae9f513e",
+      "family": "CMSP",
+      "year": 2019,
+      "contentFingerprint": "9236ae9f513e7eba0267c2be6d844b9e532d93b29160c643a3abc481ff50a3c1",
+      "pageCount": 12,
+      "indexMethod": "native",
+      "rawQuestionCount": 24,
+      "rawAnomalyCount": 31,
+      "anomalyTypeCounts": {
+        "duplicate_question_number": 26,
+        "missing_question_number": 4,
+        "non_monotonic_numbering": 1
+      },
+      "reviewCopySha256": "9236ae9f513e7eba0267c2be6d844b9e532d93b29160c643a3abc481ff50a3c1",
+      "byteIdenticalToSource": true
+    },
+    {
+      "order": 3,
+      "documentId": "doc-dce5637b3bd7",
+      "family": "CMT",
+      "year": 2016,
+      "contentFingerprint": "dce5637b3bd742052e90e4a2cbf33a3b660250937ddb12cad382ffc7ea03d150",
+      "pageCount": 16,
+      "indexMethod": "native",
+      "rawQuestionCount": 20,
+      "rawAnomalyCount": 20,
+      "anomalyTypeCounts": {
+        "duplicate_question_number": 20
+      },
+      "reviewCopySha256": "dce5637b3bd742052e90e4a2cbf33a3b660250937ddb12cad382ffc7ea03d150",
+      "byteIdenticalToSource": true
+    },
+    {
+      "order": 4,
+      "documentId": "doc-cef618be31e6",
+      "family": "CMRJ",
+      "year": 2022,
+      "contentFingerprint": "cef618be31e62342be648b0e0d772f5ca53f83f62b417bcacde60efbc1a5c149",
+      "pageCount": 17,
+      "indexMethod": "native",
+      "rawQuestionCount": 26,
+      "rawAnomalyCount": 16,
+      "anomalyTypeCounts": {
+        "duplicate_question_number": 11,
+        "missing_question_number": 4,
+        "non_monotonic_numbering": 1
+      },
+      "reviewCopySha256": "cef618be31e62342be648b0e0d772f5ca53f83f62b417bcacde60efbc1a5c149",
+      "byteIdenticalToSource": true
+    },
+    {
+      "order": 5,
+      "documentId": "doc-074dd67cbd4a",
+      "family": "CMSM",
+      "year": 2013,
+      "contentFingerprint": "074dd67cbd4a4d15a7b935c6148c6b31af150b40d59fbb56d3343d68e383a648",
+      "pageCount": 19,
+      "indexMethod": "ocr",
+      "rawQuestionCount": 16,
+      "rawAnomalyCount": 11,
+      "anomalyTypeCounts": {
+        "duplicate_question_number": 6,
+        "missing_question_number": 4,
+        "non_monotonic_numbering": 1
+      },
+      "reviewCopySha256": "074dd67cbd4a4d15a7b935c6148c6b31af150b40d59fbb56d3343d68e383a648",
+      "byteIdenticalToSource": true
+    },
+    {
+      "order": 6,
+      "documentId": "doc-56268e79f6bf",
+      "family": "CMSM",
+      "year": 2018,
+      "contentFingerprint": "56268e79f6bf85a1cf08f2a97c69217adfd3410cd126f0ec1e7f5744e0fa0d1e",
+      "pageCount": 22,
+      "indexMethod": "ocr",
+      "rawQuestionCount": 5,
+      "rawAnomalyCount": 8,
+      "anomalyTypeCounts": {
+        "missing_question_number": 7,
+        "non_monotonic_numbering": 1
+      },
+      "reviewCopySha256": "56268e79f6bf85a1cf08f2a97c69217adfd3410cd126f0ec1e7f5744e0fa0d1e",
+      "byteIdenticalToSource": true
+    },
+    {
+      "order": 7,
+      "documentId": "doc-f1c03b7dfa39",
+      "family": "CMF",
+      "year": 2020,
+      "contentFingerprint": "f1c03b7dfa396041ded2025b519db1c87ab23deee9fd73369916b6ab28fcbef7",
+      "pageCount": 17,
+      "indexMethod": "native",
+      "rawQuestionCount": 22,
+      "rawAnomalyCount": 8,
+      "anomalyTypeCounts": {
+        "duplicate_question_number": 4,
+        "missing_question_number": 3,
+        "non_monotonic_numbering": 1
+      },
+      "reviewCopySha256": "f1c03b7dfa396041ded2025b519db1c87ab23deee9fd73369916b6ab28fcbef7",
+      "byteIdenticalToSource": true
+    },
+    {
+      "order": 8,
+      "documentId": "doc-bb62e60cf7ed",
+      "family": "CMSM",
+      "year": 2023,
+      "contentFingerprint": "bb62e60cf7ed1c961bcba262fd6136972ae6796d3759d8d1ecda67aab6e8e0fb",
+      "pageCount": 33,
+      "indexMethod": "native",
+      "rawQuestionCount": 20,
+      "rawAnomalyCount": 5,
+      "anomalyTypeCounts": {
+        "duplicate_question_number": 4,
+        "non_monotonic_numbering": 1
+      },
+      "reviewCopySha256": "bb62e60cf7ed1c961bcba262fd6136972ae6796d3759d8d1ecda67aab6e8e0fb",
+      "byteIdenticalToSource": true
+    },
+    {
+      "order": 9,
+      "documentId": "doc-1693ea690bbb",
+      "family": "CMT",
+      "year": 2023,
+      "contentFingerprint": "1693ea690bbb39b7680d33da27ccdf0b1ba1415a3f6dcc47ae29cd10fc8f46f8",
+      "pageCount": 21,
+      "indexMethod": "native",
+      "rawQuestionCount": 16,
+      "rawAnomalyCount": 3,
+      "anomalyTypeCounts": {
+        "missing_question_number": 1,
+        "non_monotonic_numbering": 2
+      },
+      "reviewCopySha256": "1693ea690bbb39b7680d33da27ccdf0b1ba1415a3f6dcc47ae29cd10fc8f46f8",
+      "byteIdenticalToSource": true
+    }
+  ],
+  "reviewContextIgnoredPath": "outputs/audit/holdout/v4-tier-b-review/review-context.json",
+  "reviewContextSha256": "f196e3bc5dd1f859df36be2739cf9d83c9f5ae316c0996ab8caefcd8f64eb933",
+  "pdfCopiesTracked": false,
+  "reviewContextTracked": false,
+  "manualAdjudicationPerformed": false,
+  "finalQuestionIndexCreated": false,
+  "questionSelectionExecuted": false,
+  "groundTruthCreated": false,
+  "auditorExecuted": false
+}
