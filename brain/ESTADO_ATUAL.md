@@ -43,9 +43,10 @@
 - Candidate pool V4 congelado; selecao documental concluida com 48 documentos; raw neutral question index congelado.
 - Tier A: 18/18 adjudicados. Tier B: 9/9 adjudicados e commitados, com 246 questoes canonicas.
 - Tier C: 13 documentos pendentes. Tier D: 8 controles pendentes.
+- Tier C review package: preparado para os 13 documentos congelados; adjudicacao ainda nao iniciada (`false`). Ver [pacote de revisao Tier C](../audit/holdout/V4_TIER_C_REVIEW_PACKAGE.md).
 - Final question index: nao criado (`false`). Question selection: nao executada (`false`).
 - Ground Truth V4: nao criado (`false`). Auditor V4: nao executado (`false`).
 - Adjudicacao neutra usa apenas evidencia permitida pelo protocolo, sem answer keys, Ground Truth, Auditor output ou novas heuristicas para casos individuais.
-- Proximo passo previsto: Tier C, somente apos este checkpoint de documentacao; ainda nao iniciado. Estado e referencias em [[AUDITORIA_PROVAS#Holdout V4 — checkpoint apos Tier B]].
+- Proximo passo previsto: adjudicacao neutra do Tier C a partir do pacote preparado; ainda nao iniciada. Restricoes e checkpoint A/B em [[AUDITORIA_PROVAS#Holdout V4 — checkpoint apos Tier B]].
 
 Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_PROVAS]].
