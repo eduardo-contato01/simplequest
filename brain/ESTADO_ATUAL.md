@@ -44,9 +44,10 @@
 - Tier A: 18/18 adjudicados. Tier B: 9/9 adjudicados e commitados, com 246 questoes canonicas.
 - Tier C: 13/13 adjudicados, com 430 questoes canonicas. Tier D: 8 controles pendentes; proximo passo, ainda nao iniciado.
 - Tier C review package preservado e congelado; adjudicacao concluida (`true`) a partir da revisao visual humana fornecida. Ver [adjudicacao Tier C](../audit/holdout/V4_TIER_C_ADJUDICATION.md).
+- Tier D review package: preparado para os 8 controles congelados; adjudicacao ainda pendente (`false`). Ver [pacote de revisao Tier D](../audit/holdout/V4_TIER_D_REVIEW_PACKAGE.md).
 - Final question index: nao criado (`false`). Question selection: nao executada (`false`).
 - Ground Truth V4: nao criado (`false`). Auditor V4: nao executado (`false`).
 - Adjudicacao neutra usa apenas evidencia permitida pelo protocolo, sem answer keys, Ground Truth, Auditor output ou novas heuristicas para casos individuais.
-- Proximo passo previsto: adjudicacao neutra dos 8 controles Tier D em etapa posterior; ainda nao iniciada. Restricoes e checkpoint A/B em [[AUDITORIA_PROVAS#Holdout V4 — checkpoint apos Tier B]].
+- Proximo passo previsto: revisao/adjudicacao neutra dos 8 controles Tier D a partir do pacote preparado, em etapa posterior; ainda nao iniciada. Restricoes e checkpoint A/B em [[AUDITORIA_PROVAS#Holdout V4 — checkpoint apos Tier B]].
 
 Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_PROVAS]].
