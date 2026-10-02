@@ -1,0 +1,92 @@
+{
+  "protocolVersion": "holdout-v4",
+  "artifactType": "manifest-provenance-sidecar",
+  "selectionStage": "documents_and_questions",
+  "questionSelectionStatus": "frozen",
+  "selectionGitCommit": "878d67918d87dadb1c6e04346f6fd6ec14d1cee3",
+  "selectionSeed": 20261001,
+  "selectionCodeState": "clean",
+  "selectorSha256": "a13f6cc0f53228c6464caf5fab8b8abcf9481f95d5c87b3844a8415164733e27",
+  "genericSelectorSha256": "a13f6cc0f53228c6464caf5fab8b8abcf9481f95d5c87b3844a8415164733e27",
+  "selectorFunction": "scripts/audit_response_holdout_select.py:select_questions",
+  "protocol": {
+    "path": "audit/holdout/protocol-v4.json",
+    "fileSha256": "f70fb425dd17a7a117a02926a8e0c6c7b9e199dc3c3d2640848b5f9a7b325183"
+  },
+  "manifestPhaseA": {
+    "path": "audit/holdout/manifest-v4-a.json",
+    "fileSha256": "be69ceafd2fde2ce00f5f72966c12e22d33f575785ddc00ae57030fe74b2dccc",
+    "canonicalJsonSha256": "cd4e2a6a39c736d5f7cd58f53095e920d88ef98858e9fc42fd75a5fd6250a1c1",
+    "provenancePath": "audit/holdout/manifest-v4-a.provenance.json",
+    "provenanceFileSha256": "9d168d1e2260c5f26e0d3156e24992da38c7e64aa0275db07e64132d2f8a377e"
+  },
+  "questionIndex": {
+    "path": "audit/holdout/question-index-v4-final.json",
+    "fileSha256": "c6552696da6cfc6bb96b04d1060fba676062991252b4cb92fffd2d93e1e8b0f8",
+    "canonicalJsonSha256": "978c09d6fec8ccebd7022a6e2f2f94d418f4ace6afbe112b5ead3460a7fca8f0",
+    "documents": 48,
+    "questions": 1732
+  },
+  "manifestPhaseB": {
+    "path": "audit/holdout/manifest-v4-b.json",
+    "fileSha256": "7250a9bd00f54bb49e0c68da468f4a5fb22dde9cd99943681642c582a619b885",
+    "canonicalJsonSha256": "b1cea45582373fe42762e0a836330feec444867051ca634d770ebcd725289223"
+  },
+  "selection": {
+    "documents": 48,
+    "questionsPerDocument": 3,
+    "selectedQuestionsTotal": 144,
+    "uniqueSelectedQuestionIds": 144,
+    "selectedBySource": {
+      "text_native": 32,
+      "raster": 15,
+      "hybrid": 1
+    },
+    "selectedFamilies": 22,
+    "selectedDistinctYears": 17,
+    "coveredEras": [
+      "2004-2009",
+      "2010-2014",
+      "2015-2019",
+      "2020-2025"
+    ]
+  },
+  "samplingFrame": {
+    "candidatePoolCount": 487,
+    "candidatePoolFingerprintSetSha256": "82cc19852f61ca76111680d8f56fbc08bbde563a7b845b5168c34aa513977d63",
+    "remainingReservedCount": 439,
+    "remainingReservedPoolHash": "80c19ebd19a6a859176a0aecee935cfb1f949748955106e6894f19c293ce48e0"
+  },
+  "guards": {
+    "documentSelectionChangedFromPhaseA": false,
+    "questionIndexChangedAfterFreeze": false,
+    "duplicateSelectedQuestionIds": 0,
+    "allSelectedQuestionsBoundToFrozenIndex": true,
+    "deterministicSelectionValidated": true,
+    "oneQuestionPerCanonicalTertile": true,
+    "documentSelectionReexecuted": false,
+    "alternateSeedRetry": false,
+    "questionOrderChanged": false,
+    "manualCherryPick": false
+  },
+  "neutralAdjudicationComplete": true,
+  "finalQuestionIndexCreated": true,
+  "questionSelectionExecuted": true,
+  "groundTruthCreated": false,
+  "auditorExecuted": false,
+  "freezeStatus": "ready_for_ground_truth_annotation",
+  "materializationRepair": {
+    "performed": true,
+    "selectionReexecuted": false,
+    "reason": "UTF-8 serialization repair after invalid cp1252 materialization",
+    "selectedQuestionIdsChanged": false,
+    "selectedQuestionIdsPreservedFromFailedSerializationAttempt": true,
+    "selectedIdsBeforeRepairHash": "301c9ff28731ca5d3ddbd2c1deb6429afa61d0f6d45497dd6cba634972a1e477",
+    "selectedIdsAfterRepairHash": "301c9ff28731ca5d3ddbd2c1deb6429afa61d0f6d45497dd6cba634972a1e477",
+    "selectedIdsHashFormat": "SHA256 of UTF-8 compact JSON [[documentId,[q1Id,q2Id,q3Id]],...] in Phase A order",
+    "sourceInvalidManifestFileSha256": "29128297bab0f5f18d7f1e3578c2f4c3dd90734fa42bfa9b86917ffc24221ed2",
+    "invalidReplacementCharacterCount": 0,
+    "documentNonSelectionDifferences": 0,
+    "deterministicReplayBasis": "PASS validated during original selection; no replay executed during materialization repair"
+  }
+}

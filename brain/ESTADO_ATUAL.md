@@ -45,9 +45,9 @@
 - Tier C: 13/13 adjudicados, com 430 questoes canonicas. Tier D: 8/8 adjudicados, com 180 questoes canonicas (182 raw; duas QUESTAO 21 de Producao Textual excluidas por decisao humana). Todos os tiers de adjudicacao neutra estao concluidos.
 - Tier C review package preservado e congelado; adjudicacao concluida (`true`) a partir da revisao visual humana fornecida. Ver [adjudicacao Tier C](../audit/holdout/V4_TIER_C_ADJUDICATION.md).
 - Tier D review package/contexto preservados como snapshots de preparacao; adjudicacao humana concluida (`true`). Ver [adjudicacao Tier D](../audit/holdout/V4_TIER_D_ADJUDICATION.md).
-- Final Question Index V4 criado e congelado (`true`): 48/48 documentos adjudicados, 1.732 questoes canonicas (A=876, B=246, C=430, D=180). Ver [indice final V4](../audit/holdout/V4_FINAL_QUESTION_INDEX.md). Question selection: nao executada (`false`).
+- Final Question Index V4 criado e congelado (`true`): 48/48 documentos adjudicados, 1.732 questoes canonicas (A=876, B=246, C=430, D=180). Ver [indice final V4](../audit/holdout/V4_FINAL_QUESTION_INDEX.md). Question Selection V4 concluida (`true`): 144 questoes, 3 por documento, seed 20261001; serializacao UTF-8 reparada sem nova selecao, com os mesmos 144 IDs. Phase A e indice final preservados. Ver [freeze da selecao](../audit/holdout/V4_QUESTION_SELECTION_FREEZE.md).
 - Ground Truth V4: nao criado (`false`). Auditor V4: nao executado (`false`).
 - Adjudicacao neutra usa apenas evidencia permitida pelo protocolo, sem answer keys, Ground Truth, Auditor output ou novas heuristicas para casos individuais.
-- Proximo passo previsto: definir/executar question selection V4 em etapa posterior; ainda nao iniciado. GT e Auditor ainda nao executados. Restricoes e checkpoint atualizado em [[AUDITORIA_PROVAS#Holdout V4 — checkpoint apos Tier B]].
+- Proximo passo previsto: criar Ground Truth V4 em etapa posterior; ainda nao iniciado. Auditor ainda nao executado. Restricoes e checkpoint atualizado em [[AUDITORIA_PROVAS#Holdout V4 — checkpoint apos Tier B]].
 
 Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_PROVAS]].
