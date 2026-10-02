@@ -1,0 +1,183 @@
+{
+  "protocolVersion": "holdout-v4",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-02",
+  "sourceManifest": "audit/holdout/manifest-v4-b.json",
+  "sourceManifestFileSha256": "7250a9bd00f54bb49e0c68da468f4a5fb22dde9cd99943681642c582a619b885",
+  "sourceQuestionIndex": "audit/holdout/question-index-v4-final.json",
+  "sourceQuestionIndexFileSha256": "c6552696da6cfc6bb96b04d1060fba676062991252b4cb92fffd2d93e1e8b0f8",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-0aa57ea3e5ed": "0aa57ea3e5ed3a939e931d353b419adfb1eb2cecc98d1b81c40b04df2baabaf4",
+    "doc-0bd82b9dc803": "0bd82b9dc8033412a81e5f0bc67ada7d5ec4e0c693e8a05a6dc6816e0ee6389d",
+    "doc-0db5ce524459": "0db5ce524459a88bc7d2120a47cd3f19c4909c2c7ee378bde5468892a76cdf9d"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-0aa57ea3e5ed",
+      "questionId": "doc-0aa57ea3e5ed:q31",
+      "pages": [
+        7
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-0aa57ea3e5ed",
+      "questionId": "doc-0aa57ea3e5ed:q55",
+      "pages": [
+        10
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item PAS Tipo A, julgado Certo/Errado, que depende diretamente das informações visuais e verbais de um rótulo de pesticida."
+    },
+    {
+      "documentId": "doc-0aa57ea3e5ed",
+      "questionId": "doc-0aa57ea3e5ed:q88",
+      "pages": [
+        15
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item PAS Tipo A com representação visual de estruturas moleculares."
+    },
+    {
+      "documentId": "doc-0bd82b9dc803",
+      "questionId": "doc-0bd82b9dc803:q40",
+      "pages": [
+        8
+      ],
+      "responseMode": "numeric_response",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "none",
+      "markerStyle": "none",
+      "contentKind": "math",
+      "notes": "Item PAS explicitamente identificado como Tipo B. Exige resposta numérica; não há alternativas nem controles locais de resposta na página da questão. O sistema C/D/U pertence ao Caderno de Respostas descrito nas instruções gerais."
+    },
+    {
+      "documentId": "doc-0bd82b9dc803",
+      "questionId": "doc-0bd82b9dc803:q57",
+      "pages": [
+        10
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-0bd82b9dc803",
+      "questionId": "doc-0bd82b9dc803:q121",
+      "pages": [
+        19
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-0db5ce524459",
+      "questionId": "doc-0db5ce524459:q7",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-0db5ce524459",
+      "questionId": "doc-0db5ce524459:q13",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-0db5ce524459",
+      "questionId": "doc-0db5ce524459:q26",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": null
+    }
+  ]
+}
