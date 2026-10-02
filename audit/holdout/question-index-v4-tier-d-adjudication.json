@@ -1,0 +1,1256 @@
+{
+  "artifactType": "holdout-v4-tier-d-neutral-adjudication",
+  "protocolVersion": "holdout-v4",
+  "tier": "D",
+  "sourceReviewPackageCommit": "709695d3bf0909e082d5a40f48efad42c2987f33",
+  "sourceReviewPackage": "audit/holdout/question-index-v4-tier-d-review-package.json",
+  "sourceReviewPackageSha256": "f886838926031e43d294a5f35f20392bd03f0a20424cedd9616874e674c9aa35",
+  "sourceReviewContext": "outputs/audit/holdout/v4-tier-d-review/review-context.json",
+  "sourceReviewContextSha256": "ed08fa450fbd92218529dac796b27ab39ab010d56319e5cf50000ec755575fec",
+  "sourceHumanAdjudication": "operator-supplied frozen Tier D human visual review, 2026-10-02",
+  "sourceHumanAdjudicationSha256": "8059ace44206f99965ab0eadaa2f38bf676fa331143d2e7d4b70032619f5bc82",
+  "sourcePriorTierAUnresolvedAdjudication": "audit/holdout/question-index-v4-tier-a-unresolved-adjudication.json",
+  "sourcePriorTierAUnresolvedAdjudicationSha256": "252cb855129bf544bc1982a08856fe8b1212784bac0e33e8f435c7f01398a0e3",
+  "sourcePriorTierANeutralAdjudication": "audit/holdout/question-index-v4-tier-a-neutral-adjudication.json",
+  "sourcePriorTierANeutralAdjudicationSha256": "9873515ef637abfd7f38b8907fd24f09b6685997591731ea9b8ae8d964569524",
+  "sourcePriorTierBAdjudication": "audit/holdout/question-index-v4-tier-b-adjudication.json",
+  "sourcePriorTierBAdjudicationSha256": "837ef7f04c5745140ab7850b9be975935e66d53bf55cfdbf3ce2de5f407377d7",
+  "sourcePriorTierCAdjudication": "audit/holdout/question-index-v4-tier-c-adjudication.json",
+  "sourcePriorTierCAdjudicationSha256": "61e20f03f2fa8decb55ad61975ed2d3e8cc6812ecf1100e1b481b5e4b0a2aee6",
+  "sourceRawIndex": "audit/holdout/question-index-v4-raw.json",
+  "sourceRawIndexSha256": "36549f5067f3236fee90112fd1df63fb30c5ca5445ebec77ca139be41d722f79",
+  "adjudicationMode": "materialization-of-frozen-human-neutral-visual-review",
+  "operatorAcceptance": "The operator supplied the completed human review as authority; this step only materializes its numbering and page boundaries.",
+  "evidencePolicy": {
+    "authority": "operator-supplied frozen human visual mapping; PDFs not reinterpreted and OCR not used to replace human decisions",
+    "allowed": [
+      "visible question number",
+      "visible question start",
+      "question continuation/end page",
+      "visible section transition",
+      "printed numbering",
+      "document-declared item count",
+      "neutral page/document structure"
+    ],
+    "forbidden": [
+      "responseMode classification",
+      "optionCount inference",
+      "optionLabels inference",
+      "benchmark semantic classification",
+      "correct answer",
+      "answer key content",
+      "Ground Truth",
+      "Auditor output",
+      "downstream holdout-contaminating data"
+    ]
+  },
+  "canonicalizationPolicy": {
+    "sourcePdfModified": false,
+    "canonicalQuestionNumberEqualsPrintedQuestionNumber": true,
+    "questionIdFormat": "documentId:qN",
+    "legitimateNumberingRestartsPresent": false,
+    "sequenceRunRequired": false,
+    "writingTaskExclusionsRequireExplicitHumanProvenance": true
+  },
+  "humanExclusions": [
+    {
+      "documentId": "doc-1e18e7252399",
+      "printedQuestionNumber": 21,
+      "pageStart": 11,
+      "pageEnd": 11,
+      "decision": "excluded-writing-task",
+      "authority": "operator-supplied frozen human review",
+      "neutralNote": "source contains a printed \"QUESTÃO 21\" in the Produção Textual section; excluded from canonical neutral question index because it is the writing task, not one of the objective test questions."
+    },
+    {
+      "documentId": "doc-c8d6da47c18b",
+      "printedQuestionNumber": 21,
+      "pageStart": 10,
+      "pageEnd": 11,
+      "decision": "excluded-writing-task",
+      "authority": "operator-supplied frozen human review",
+      "neutralNote": "source contains a printed \"QUESTÃO 21\" in the Produção Textual section; excluded from canonical neutral question index because it is the writing task, not one of the objective test questions."
+    }
+  ],
+  "rawDiagnosticsPolicy": "rawQuestions and rawAnomalies are frozen neutral diagnostics, not adjudicated decisions. Zero automated anomalies does not establish canonical completeness or replace human review.",
+  "documents": [
+    {
+      "documentId": "doc-1e18e7252399",
+      "contentFingerprint": "1e18e72523997bdb75457f09eeb084ee5a69c70385c4a70263a627421a5bac5b",
+      "rawQuestionCount": 21,
+      "rawAnomalyCount": 0,
+      "adjudicatedQuestionCount": 20,
+      "status": "adjudicated",
+      "questions": [
+        {
+          "questionId": "doc-1e18e7252399:q1",
+          "questionNumber": 1,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-1e18e7252399:q2",
+          "questionNumber": 2,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-1e18e7252399:q3",
+          "questionNumber": 3,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-1e18e7252399:q4",
+          "questionNumber": 4,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-1e18e7252399:q5",
+          "questionNumber": 5,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-1e18e7252399:q6",
+          "questionNumber": 6,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-1e18e7252399:q7",
+          "questionNumber": 7,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-1e18e7252399:q8",
+          "questionNumber": 8,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-1e18e7252399:q9",
+          "questionNumber": 9,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-1e18e7252399:q10",
+          "questionNumber": 10,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-1e18e7252399:q11",
+          "questionNumber": 11,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-1e18e7252399:q12",
+          "questionNumber": 12,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-1e18e7252399:q13",
+          "questionNumber": 13,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-1e18e7252399:q14",
+          "questionNumber": 14,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-1e18e7252399:q15",
+          "questionNumber": 15,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-1e18e7252399:q16",
+          "questionNumber": 16,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-1e18e7252399:q17",
+          "questionNumber": 17,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-1e18e7252399:q18",
+          "questionNumber": 18,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-1e18e7252399:q19",
+          "questionNumber": 19,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-1e18e7252399:q20",
+          "questionNumber": 20,
+          "pageStart": 10,
+          "pageEnd": 10
+        }
+      ],
+      "neutralNotes": "source contains a printed \"QUESTÃO 21\" in the Produção Textual section; excluded from canonical neutral question index because it is the writing task, not one of the objective test questions. Canonical q1-q20 are single-page questions on pages 2-10; page 1 is base text and page 11 contains the excluded writing task."
+    },
+    {
+      "documentId": "doc-2790a3c9786b",
+      "contentFingerprint": "2790a3c9786b6786e7e06da4583ca7dee76a931bd8fb23d8e504fab3dbed5f97",
+      "rawQuestionCount": 20,
+      "rawAnomalyCount": 0,
+      "adjudicatedQuestionCount": 20,
+      "status": "adjudicated",
+      "questions": [
+        {
+          "questionId": "doc-2790a3c9786b:q1",
+          "questionNumber": 1,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q2",
+          "questionNumber": 2,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q3",
+          "questionNumber": 3,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q4",
+          "questionNumber": 4,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q5",
+          "questionNumber": 5,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q6",
+          "questionNumber": 6,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q7",
+          "questionNumber": 7,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q8",
+          "questionNumber": 8,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q9",
+          "questionNumber": 9,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q10",
+          "questionNumber": 10,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q11",
+          "questionNumber": 11,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q12",
+          "questionNumber": 12,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q13",
+          "questionNumber": 13,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q14",
+          "questionNumber": 14,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q15",
+          "questionNumber": 15,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q16",
+          "questionNumber": 16,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q17",
+          "questionNumber": 17,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q18",
+          "questionNumber": 18,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q19",
+          "questionNumber": 19,
+          "pageStart": 14,
+          "pageEnd": 14
+        },
+        {
+          "questionId": "doc-2790a3c9786b:q20",
+          "questionNumber": 20,
+          "pageStart": 15,
+          "pageEnd": 15
+        }
+      ],
+      "neutralNotes": "Canonical sequence is 1-20. Pages 1, 2, 6 and 10 contain cover/base-text/continuation material without new questions; pages 16-19 contain writing proposal/draft/sheets. All canonical questions are single-page."
+    },
+    {
+      "documentId": "doc-3e395d355d2c",
+      "contentFingerprint": "3e395d355d2c93d657dd2c71ed2761657828b01de125edd8db351706ee308dd9",
+      "rawQuestionCount": 40,
+      "rawAnomalyCount": 0,
+      "adjudicatedQuestionCount": 40,
+      "status": "adjudicated",
+      "questions": [
+        {
+          "questionId": "doc-3e395d355d2c:q1",
+          "questionNumber": 1,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q2",
+          "questionNumber": 2,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q3",
+          "questionNumber": 3,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q4",
+          "questionNumber": 4,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q5",
+          "questionNumber": 5,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q6",
+          "questionNumber": 6,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q7",
+          "questionNumber": 7,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q8",
+          "questionNumber": 8,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q9",
+          "questionNumber": 9,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q10",
+          "questionNumber": 10,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q11",
+          "questionNumber": 11,
+          "pageStart": 14,
+          "pageEnd": 14
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q12",
+          "questionNumber": 12,
+          "pageStart": 15,
+          "pageEnd": 15
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q13",
+          "questionNumber": 13,
+          "pageStart": 16,
+          "pageEnd": 16
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q14",
+          "questionNumber": 14,
+          "pageStart": 17,
+          "pageEnd": 17
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q15",
+          "questionNumber": 15,
+          "pageStart": 18,
+          "pageEnd": 18
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q16",
+          "questionNumber": 16,
+          "pageStart": 19,
+          "pageEnd": 19
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q17",
+          "questionNumber": 17,
+          "pageStart": 20,
+          "pageEnd": 20
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q18",
+          "questionNumber": 18,
+          "pageStart": 21,
+          "pageEnd": 21
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q19",
+          "questionNumber": 19,
+          "pageStart": 22,
+          "pageEnd": 22
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q20",
+          "questionNumber": 20,
+          "pageStart": 23,
+          "pageEnd": 23
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q21",
+          "questionNumber": 21,
+          "pageStart": 25,
+          "pageEnd": 26
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q22",
+          "questionNumber": 22,
+          "pageStart": 26,
+          "pageEnd": 26
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q23",
+          "questionNumber": 23,
+          "pageStart": 27,
+          "pageEnd": 27
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q24",
+          "questionNumber": 24,
+          "pageStart": 27,
+          "pageEnd": 27
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q25",
+          "questionNumber": 25,
+          "pageStart": 27,
+          "pageEnd": 27
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q26",
+          "questionNumber": 26,
+          "pageStart": 28,
+          "pageEnd": 28
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q27",
+          "questionNumber": 27,
+          "pageStart": 28,
+          "pageEnd": 28
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q28",
+          "questionNumber": 28,
+          "pageStart": 29,
+          "pageEnd": 29
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q29",
+          "questionNumber": 29,
+          "pageStart": 29,
+          "pageEnd": 29
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q30",
+          "questionNumber": 30,
+          "pageStart": 30,
+          "pageEnd": 30
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q31",
+          "questionNumber": 31,
+          "pageStart": 31,
+          "pageEnd": 31
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q32",
+          "questionNumber": 32,
+          "pageStart": 31,
+          "pageEnd": 31
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q33",
+          "questionNumber": 33,
+          "pageStart": 31,
+          "pageEnd": 31
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q34",
+          "questionNumber": 34,
+          "pageStart": 32,
+          "pageEnd": 32
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q35",
+          "questionNumber": 35,
+          "pageStart": 33,
+          "pageEnd": 33
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q36",
+          "questionNumber": 36,
+          "pageStart": 33,
+          "pageEnd": 33
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q37",
+          "questionNumber": 37,
+          "pageStart": 33,
+          "pageEnd": 33
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q38",
+          "questionNumber": 38,
+          "pageStart": 35,
+          "pageEnd": 35
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q39",
+          "questionNumber": 39,
+          "pageStart": 35,
+          "pageEnd": 35
+        },
+        {
+          "questionId": "doc-3e395d355d2c:q40",
+          "questionNumber": 40,
+          "pageStart": 35,
+          "pageEnd": 35
+        }
+      ],
+      "neutralNotes": "Canonical sequence is 1-40: Mathematics 1-20 and Portuguese 21-40, without a numbering restart. Only q21 spans pages 25-26. Pages 1-3, 24 and 34 contain cover/blank/opening/base-text material without new questions; pages 36-37 are the separate writing task."
+    },
+    {
+      "documentId": "doc-42af2b3d2b27",
+      "contentFingerprint": "42af2b3d2b27f4028c36e7298f79cfe81291db82e6b7bd098bcaa1e34c9f41ec",
+      "rawQuestionCount": 20,
+      "rawAnomalyCount": 0,
+      "adjudicatedQuestionCount": 20,
+      "status": "adjudicated",
+      "questions": [
+        {
+          "questionId": "doc-42af2b3d2b27:q1",
+          "questionNumber": 1,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q2",
+          "questionNumber": 2,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q3",
+          "questionNumber": 3,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q4",
+          "questionNumber": 4,
+          "pageStart": 6,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q5",
+          "questionNumber": 5,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q6",
+          "questionNumber": 6,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q7",
+          "questionNumber": 7,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q8",
+          "questionNumber": 8,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q9",
+          "questionNumber": 9,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q10",
+          "questionNumber": 10,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q11",
+          "questionNumber": 11,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q12",
+          "questionNumber": 12,
+          "pageStart": 14,
+          "pageEnd": 14
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q13",
+          "questionNumber": 13,
+          "pageStart": 14,
+          "pageEnd": 14
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q14",
+          "questionNumber": 14,
+          "pageStart": 15,
+          "pageEnd": 15
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q15",
+          "questionNumber": 15,
+          "pageStart": 16,
+          "pageEnd": 16
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q16",
+          "questionNumber": 16,
+          "pageStart": 17,
+          "pageEnd": 17
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q17",
+          "questionNumber": 17,
+          "pageStart": 17,
+          "pageEnd": 17
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q18",
+          "questionNumber": 18,
+          "pageStart": 18,
+          "pageEnd": 18
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q19",
+          "questionNumber": 19,
+          "pageStart": 19,
+          "pageEnd": 19
+        },
+        {
+          "questionId": "doc-42af2b3d2b27:q20",
+          "questionNumber": 20,
+          "pageStart": 19,
+          "pageEnd": 19
+        }
+      ],
+      "neutralNotes": "Canonical Mathematics sequence is 1-20. Pages 1-2 are cover/blank material. Only q4 spans pages 6-7."
+    },
+    {
+      "documentId": "doc-4310686d43a6",
+      "contentFingerprint": "4310686d43a6869a4470e38db614688ebde542a860b04ebeb0b742649fec4ac4",
+      "rawQuestionCount": 20,
+      "rawAnomalyCount": 0,
+      "adjudicatedQuestionCount": 20,
+      "status": "adjudicated",
+      "questions": [
+        {
+          "questionId": "doc-4310686d43a6:q1",
+          "questionNumber": 1,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-4310686d43a6:q2",
+          "questionNumber": 2,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-4310686d43a6:q3",
+          "questionNumber": 3,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-4310686d43a6:q4",
+          "questionNumber": 4,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-4310686d43a6:q5",
+          "questionNumber": 5,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-4310686d43a6:q6",
+          "questionNumber": 6,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-4310686d43a6:q7",
+          "questionNumber": 7,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-4310686d43a6:q8",
+          "questionNumber": 8,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-4310686d43a6:q9",
+          "questionNumber": 9,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-4310686d43a6:q10",
+          "questionNumber": 10,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-4310686d43a6:q11",
+          "questionNumber": 11,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-4310686d43a6:q12",
+          "questionNumber": 12,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-4310686d43a6:q13",
+          "questionNumber": 13,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-4310686d43a6:q14",
+          "questionNumber": 14,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-4310686d43a6:q15",
+          "questionNumber": 15,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-4310686d43a6:q16",
+          "questionNumber": 16,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-4310686d43a6:q17",
+          "questionNumber": 17,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-4310686d43a6:q18",
+          "questionNumber": 18,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-4310686d43a6:q19",
+          "questionNumber": 19,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-4310686d43a6:q20",
+          "questionNumber": 20,
+          "pageStart": 9,
+          "pageEnd": 9
+        }
+      ],
+      "neutralNotes": "Canonical sequence is 1-20. Pages 1 and 5 contain cover/base-text material without new questions; pages 10-11 contain the writing proposal/draft. All canonical questions are single-page."
+    },
+    {
+      "documentId": "doc-800c2a22f148",
+      "contentFingerprint": "800c2a22f148cade29d12faacc784f5e1e6522360ff77bb0410f6dc1aef16d8f",
+      "rawQuestionCount": 20,
+      "rawAnomalyCount": 0,
+      "adjudicatedQuestionCount": 20,
+      "status": "adjudicated",
+      "questions": [
+        {
+          "questionId": "doc-800c2a22f148:q1",
+          "questionNumber": 1,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-800c2a22f148:q2",
+          "questionNumber": 2,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-800c2a22f148:q3",
+          "questionNumber": 3,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-800c2a22f148:q4",
+          "questionNumber": 4,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-800c2a22f148:q5",
+          "questionNumber": 5,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-800c2a22f148:q6",
+          "questionNumber": 6,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-800c2a22f148:q7",
+          "questionNumber": 7,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-800c2a22f148:q8",
+          "questionNumber": 8,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-800c2a22f148:q9",
+          "questionNumber": 9,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-800c2a22f148:q10",
+          "questionNumber": 10,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-800c2a22f148:q11",
+          "questionNumber": 11,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-800c2a22f148:q12",
+          "questionNumber": 12,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-800c2a22f148:q13",
+          "questionNumber": 13,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-800c2a22f148:q14",
+          "questionNumber": 14,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-800c2a22f148:q15",
+          "questionNumber": 15,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-800c2a22f148:q16",
+          "questionNumber": 16,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-800c2a22f148:q17",
+          "questionNumber": 17,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-800c2a22f148:q18",
+          "questionNumber": 18,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-800c2a22f148:q19",
+          "questionNumber": 19,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-800c2a22f148:q20",
+          "questionNumber": 20,
+          "pageStart": 14,
+          "pageEnd": 14
+        }
+      ],
+      "neutralNotes": "Canonical sequence is 1-20: Portuguese 1-10 and Mathematics 11-20, without a numbering restart. Pages 1 and 5 are cover/base-text material; pages 15-18 contain the separate writing booklet/proposal/draft. All canonical questions are single-page."
+    },
+    {
+      "documentId": "doc-b605f7a51fd5",
+      "contentFingerprint": "b605f7a51fd572b4de2594787e7a5b5fcdb258ec199532bb8853c8301815198f",
+      "rawQuestionCount": 20,
+      "rawAnomalyCount": 0,
+      "adjudicatedQuestionCount": 20,
+      "status": "adjudicated",
+      "questions": [
+        {
+          "questionId": "doc-b605f7a51fd5:q1",
+          "questionNumber": 1,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q2",
+          "questionNumber": 2,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q3",
+          "questionNumber": 3,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q4",
+          "questionNumber": 4,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q5",
+          "questionNumber": 5,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q6",
+          "questionNumber": 6,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q7",
+          "questionNumber": 7,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q8",
+          "questionNumber": 8,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q9",
+          "questionNumber": 9,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q10",
+          "questionNumber": 10,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q11",
+          "questionNumber": 11,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q12",
+          "questionNumber": 12,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q13",
+          "questionNumber": 13,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q14",
+          "questionNumber": 14,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q15",
+          "questionNumber": 15,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q16",
+          "questionNumber": 16,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q17",
+          "questionNumber": 17,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q18",
+          "questionNumber": 18,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q19",
+          "questionNumber": 19,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "doc-b605f7a51fd5:q20",
+          "questionNumber": 20,
+          "pageStart": 14,
+          "pageEnd": 14
+        }
+      ],
+      "neutralNotes": "Canonical Mathematics sequence is 1-20 on pages 2-14. Page 1 is the cover. All canonical questions are single-page."
+    },
+    {
+      "documentId": "doc-c8d6da47c18b",
+      "contentFingerprint": "c8d6da47c18ba8083fb134a62cf3032c6be85ccbf8d2fa5aa921601c8433c1b3",
+      "rawQuestionCount": 21,
+      "rawAnomalyCount": 0,
+      "adjudicatedQuestionCount": 20,
+      "status": "adjudicated",
+      "questions": [
+        {
+          "questionId": "doc-c8d6da47c18b:q1",
+          "questionNumber": 1,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q2",
+          "questionNumber": 2,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q3",
+          "questionNumber": 3,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q4",
+          "questionNumber": 4,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q5",
+          "questionNumber": 5,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q6",
+          "questionNumber": 6,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q7",
+          "questionNumber": 7,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q8",
+          "questionNumber": 8,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q9",
+          "questionNumber": 9,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q10",
+          "questionNumber": 10,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q11",
+          "questionNumber": 11,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q12",
+          "questionNumber": 12,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q13",
+          "questionNumber": 13,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q14",
+          "questionNumber": 14,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q15",
+          "questionNumber": 15,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q16",
+          "questionNumber": 16,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q17",
+          "questionNumber": 17,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q18",
+          "questionNumber": 18,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q19",
+          "questionNumber": 19,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "doc-c8d6da47c18b:q20",
+          "questionNumber": 20,
+          "pageStart": 10,
+          "pageEnd": 10
+        }
+      ],
+      "neutralNotes": "source contains a printed \"QUESTÃO 21\" in the Produção Textual section; excluded from canonical neutral question index because it is the writing task, not one of the objective test questions. Canonical q1-q20 are single-page questions on pages 2-10. Pages 1 and 5 are base text without new questions; the writing task starts on page 10 after q20 and continues on page 11."
+    }
+  ],
+  "documentsAdjudicated": 8,
+  "rawQuestionsInBatch": 182,
+  "rawAnomaliesInBatch": 0,
+  "questionsAdjudicated": 180,
+  "adjudicationComplete": true,
+  "rawQuestionIndexModified": false,
+  "finalQuestionIndexCreated": false,
+  "questionSelectionExecuted": false,
+  "groundTruthCreated": false,
+  "auditorExecuted": false
+}

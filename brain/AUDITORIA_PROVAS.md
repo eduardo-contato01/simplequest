@@ -4,13 +4,15 @@ Projeto para auditoria em massa das provas importadas. Ainda não há uma ferram
 
 ## Holdout V4 — checkpoint apos Tier B
 
-- Branch `audit/holdout-v4`; checkpoint de adjudicacao A/B commitado em `4f0efdc88d758d436313f33d7ba854499ab96b6c`. Arquitetura V1 congelada para o holdout; nenhuma nova heuristica ou regra de layout para melhorar casos individuais durante a adjudicacao neutra.
-- Candidate pool e raw neutral question index V4 congelados; selecao documental concluida com 48 documentos. Tier A: 18/18 concluidos. Tier B: 9/9 concluidos, com 246 questoes canonicas. Tier C: 13 documentos pendentes; Tier D: 8 controles pendentes.
+Checkpoint operacional atualizado em 2026-10-02 apos Tier D; ancora mantida para preservar os links existentes.
+
+- Branch `audit/holdout-v4`. Arquitetura V1 congelada para o holdout; nenhuma nova heuristica ou regra de layout para melhorar casos individuais durante a adjudicacao neutra.
+- Candidate pool e raw neutral question index V4 congelados; selecao documental concluida com 48 documentos. Tier A: 18/18 concluidos. Tier B: 9/9 concluidos, com 246 questoes canonicas. Tier C: 13/13 concluidos, com 430 questoes canonicas. Tier D: 8/8 concluidos, com 180 canonicas (182 raw; duas QUESTAO 21 de Producao Textual excluidas por decisao humana, sem criar anomalias automaticas). Todos os tiers de adjudicacao neutra concluidos.
 - Isolamento: usar somente evidencia neutra permitida pelo protocolo (numero visivel, inicio, continuacao/fim, transicao de secao, contagem declarada e estrutura documental/pagina). Nao usar answer keys, Ground Truth, Auditor output, classificacao de resposta ou inferencia de quantidade de alternativas.
 - Tier B preserva identidade canonica continua nos reinicios por disciplina; `printedQuestionNumber` corrigido conforme as secoes, sem mudar boundaries, contagens ou fingerprints. SHA256 do artefato: `837ef7f04c5745140ab7850b9be975935e66d53bf55cfdbf3ce2de5f407377d7`.
-- Final question index, question selection, Ground Truth V4 e Auditor V4 continuam `false`. Proximo passo previsto: Tier C apos este checkpoint documental; ainda nao iniciado. Sequencia posterior em [[ROADMAP]].
+- Final question index, question selection, Ground Truth V4 e Auditor V4 continuam `false`. Proximo passo previsto: construir/finalizar o final question index V4 em etapa posterior; ainda nao iniciado. Sequencia posterior em [[ROADMAP]].
 - Fontes congeladas: [protocolo V4](../audit/holdout/protocol-v4.json), [candidate pool](../audit/holdout/candidate-pool-v4.json), [manifest documental](../audit/holdout/manifest-v4-a.json), [raw index](../audit/holdout/question-index-v4-raw.json) e [fila A/B/C/D](../audit/holdout/question-index-v4-review-queue.json).
-- Adjudicacoes: [Tier A unresolved](../audit/holdout/question-index-v4-tier-a-unresolved-adjudication.json), [Tier A neutral](../audit/holdout/question-index-v4-tier-a-neutral-adjudication.json), [Tier B](../audit/holdout/question-index-v4-tier-b-adjudication.json) e [fechamento Tier B](../audit/holdout/V4_TIER_B_ADJUDICATION.md). Historico incremental em [CONTEXTO_SIMPLEQUEST.md](../CONTEXTO_SIMPLEQUEST.md).
+- Adjudicacoes: [Tier A unresolved](../audit/holdout/question-index-v4-tier-a-unresolved-adjudication.json), [Tier A neutral](../audit/holdout/question-index-v4-tier-a-neutral-adjudication.json), [Tier B](../audit/holdout/question-index-v4-tier-b-adjudication.json), [fechamento Tier B](../audit/holdout/V4_TIER_B_ADJUDICATION.md), [Tier C](../audit/holdout/V4_TIER_C_ADJUDICATION.md) e [Tier D](../audit/holdout/V4_TIER_D_ADJUDICATION.md). Artefatos anteriores, raw e PDFs preservados; pacote/contexto Tier D permanecem snapshots congelados de preparacao. Historico incremental em [CONTEXTO_SIMPLEQUEST.md](../CONTEXTO_SIMPLEQUEST.md).
 
 ## Objetivo
 
