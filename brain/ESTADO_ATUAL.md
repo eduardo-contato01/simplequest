@@ -34,7 +34,7 @@
 - `npm run test` passou apos o ultimo commit publicado.
 - `npm run lint` terminou com codigo 0, mas reportou avisos em arquivos gerados/declarações (`outputs/component-contracts.mjs`, `types/cloudflare-runtime.d.ts`).
 
-## Auditor / Holdout V4 — checkpoint 2026-10-01
+## Auditor / Holdout V4 — checkpoint 2026-10-02
 
 - Branch: `audit/holdout-v4`. Arquitetura V1 do Auditor **congelada para avaliacao**.
 - Camadas atuais: (1) admission/preflight; (2) marker/profile/page scope; (3) OCR content; (4) response structure; (5) visual marker evidence; (6) response regions/slots; (7) response evidence fusion; (8) observation adapter OCR/native.
@@ -42,11 +42,11 @@
 - Nenhuma hipotese de estrutura e promovida ao catalogo.
 - Candidate pool V4 congelado; selecao documental concluida com 48 documentos; raw neutral question index congelado.
 - Tier A: 18/18 adjudicados. Tier B: 9/9 adjudicados e commitados, com 246 questoes canonicas.
-- Tier C: 13 documentos pendentes. Tier D: 8 controles pendentes.
-- Tier C review package: preparado para os 13 documentos congelados; adjudicacao ainda nao iniciada (`false`). Ver [pacote de revisao Tier C](../audit/holdout/V4_TIER_C_REVIEW_PACKAGE.md).
+- Tier C: 13/13 adjudicados, com 430 questoes canonicas. Tier D: 8 controles pendentes; proximo passo, ainda nao iniciado.
+- Tier C review package preservado e congelado; adjudicacao concluida (`true`) a partir da revisao visual humana fornecida. Ver [adjudicacao Tier C](../audit/holdout/V4_TIER_C_ADJUDICATION.md).
 - Final question index: nao criado (`false`). Question selection: nao executada (`false`).
 - Ground Truth V4: nao criado (`false`). Auditor V4: nao executado (`false`).
 - Adjudicacao neutra usa apenas evidencia permitida pelo protocolo, sem answer keys, Ground Truth, Auditor output ou novas heuristicas para casos individuais.
-- Proximo passo previsto: adjudicacao neutra do Tier C a partir do pacote preparado; ainda nao iniciada. Restricoes e checkpoint A/B em [[AUDITORIA_PROVAS#Holdout V4 — checkpoint apos Tier B]].
+- Proximo passo previsto: adjudicacao neutra dos 8 controles Tier D em etapa posterior; ainda nao iniciada. Restricoes e checkpoint A/B em [[AUDITORIA_PROVAS#Holdout V4 — checkpoint apos Tier B]].
 
 Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_PROVAS]].
