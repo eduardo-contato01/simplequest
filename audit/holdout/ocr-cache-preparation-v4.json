@@ -1,0 +1,1753 @@
+{
+  "artifactType": "holdout-v4-ocr-cache-preparation",
+  "protocolVersion": "holdout-v4",
+  "preparationVersion": 1,
+  "sourceGitCommit": "5c3263e0f2e9d3f9e8aa490a4fb6b2e45455eae3",
+  "generatedAt": "2026-10-05T21:50:52.576725+00:00",
+  "ocrExecutionConfig": "audit/holdout/ocr-execution-config-v4.json",
+  "ocrExecutionConfigFileSha256": "daa2fd7840901d587a75301cfde76b6dcfc0f3cf57b68bf4db13eb4f03605182",
+  "auditorExecuted": false,
+  "metricsGenerated": false,
+  "v4ResultsConsulted": false,
+  "evaluateManifestCalled": false,
+  "configurationChanged": false,
+  "alternateParametersTested": false,
+  "priorV4OfficialRunDetected": false,
+  "documents": 16,
+  "rasterDocuments": 15,
+  "hybridDocuments": 1,
+  "fullDocumentOcr": true,
+  "configuration": {
+    "engine": "tesseract",
+    "dpi": 160,
+    "psm": 6,
+    "lang": "por+eng"
+  },
+  "runtime": {
+    "engineVersion": "tesseract v5.4.0.20240606",
+    "pdftoppmVersion": "pdftoppm version 26.07.0",
+    "pdftoppmPath": "C:\\Users\\trans\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin\\pdftoppm.EXE",
+    "pdftoppmFixedInPreparationChildPath": true
+  },
+  "renderFilenameNormalization": {
+    "performed": true,
+    "reason": "pdftoppm filename padding differed from the frozen runner contract page-{page:02d}.png",
+    "runnerContract": "page-{page:02d}.png",
+    "filesScanned": 315,
+    "filesRenamed": 4,
+    "collisionCount": 0,
+    "ocrRerun": false,
+    "tesseractInvocationsDuringRepair": 0,
+    "pdftoppmInvocationsDuringRepair": 0,
+    "contentBytesChanged": false,
+    "pngContentBytesChanged": 0,
+    "ocrJsonChanged": 0,
+    "previousCacheSetCanonicalJsonSha256": "d36f9a1ea7205c36cbbf058f5fdc192bf32f1f2fda468ae436b220aead155999",
+    "renamedFiles": [
+      {
+        "documentId": "doc-c41ddc7b55ec",
+        "pageNumber": 1,
+        "oldRelativeName": "page-1.png",
+        "newRelativeName": "page-01.png",
+        "sha256Before": "5e381fa82d2c849d8925a87bc3d9b1bb58161f372d536c3d740d096cc6f98ff5",
+        "sha256After": "5e381fa82d2c849d8925a87bc3d9b1bb58161f372d536c3d740d096cc6f98ff5"
+      },
+      {
+        "documentId": "doc-c41ddc7b55ec",
+        "pageNumber": 2,
+        "oldRelativeName": "page-2.png",
+        "newRelativeName": "page-02.png",
+        "sha256Before": "33bd8b9632aaf08487a70018d40844d0ba893b8b57ac6f25b69e6a092c71998b",
+        "sha256After": "33bd8b9632aaf08487a70018d40844d0ba893b8b57ac6f25b69e6a092c71998b"
+      },
+      {
+        "documentId": "doc-c41ddc7b55ec",
+        "pageNumber": 3,
+        "oldRelativeName": "page-3.png",
+        "newRelativeName": "page-03.png",
+        "sha256Before": "e71251324927ea08bc7b874e93e0a352b2d5e70d2aeab3d6557999ccf792b436",
+        "sha256After": "e71251324927ea08bc7b874e93e0a352b2d5e70d2aeab3d6557999ccf792b436"
+      },
+      {
+        "documentId": "doc-c41ddc7b55ec",
+        "pageNumber": 4,
+        "oldRelativeName": "page-4.png",
+        "newRelativeName": "page-04.png",
+        "sha256Before": "2c10c09569dad0fbb52f93c525f0cef182474935f7c5c12671c290cafa036805",
+        "sha256After": "2c10c09569dad0fbb52f93c525f0cef182474935f7c5c12671c290cafa036805"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "documentId": "doc-0db5ce524459",
+      "sourceType": "raster",
+      "contentFingerprint": "0db5ce524459a88bc7d2120a47cd3f19c4909c2c7ee378bde5468892a76cdf9d",
+      "pdfFingerprint": {
+        "sha256": "0db5ce524459a88bc7d2120a47cd3f19c4909c2c7ee378bde5468892a76cdf9d",
+        "sizeBytes": 10003756
+      },
+      "pageCount": 15,
+      "pagesProcessed": 15,
+      "ocrJsonPath": "outputs/audit/ocr/doc-0db5ce524459/tesseract/ocr.json",
+      "ocrJsonSha256": "4cd2330bc16aae87b3f9554130ed5946befc87d114975947b32b346bc9b18842",
+      "renderedDirectory": "outputs/audit/ocr/doc-0db5ce524459/tesseract/rendered",
+      "renderedFileCount": 15,
+      "renderedFiles": [
+        {
+          "relativeFilename": "page-01.png",
+          "sha256": "4ca773befd60f5c7748e757878bba3bc9934ecd89ca38776621e1c435462600e"
+        },
+        {
+          "relativeFilename": "page-02.png",
+          "sha256": "fa9c59f65cba9ca94dbf0368d704c61965ecad9bc08c6e754c260b07264d678c"
+        },
+        {
+          "relativeFilename": "page-03.png",
+          "sha256": "c4f1965a579c02076aa532f309ace77329994f6883334a919799ff643045bd6a"
+        },
+        {
+          "relativeFilename": "page-04.png",
+          "sha256": "6c9b92ff17dcdc5b3b328f66f1dd46470927b42b3c5308c0726b732d800c4098"
+        },
+        {
+          "relativeFilename": "page-05.png",
+          "sha256": "ac483624f7aa54e15aaa9a09ca2ba18b9e4751453b06f935a5ad854c1bad50c7"
+        },
+        {
+          "relativeFilename": "page-06.png",
+          "sha256": "4ae99b90f29007dd204bce778827449a888cd83d56a9b60f8e1d14af23995b22"
+        },
+        {
+          "relativeFilename": "page-07.png",
+          "sha256": "d044cdd8027885376926822f89eddb8298f3feedadd1a7e11388ae95979655fa"
+        },
+        {
+          "relativeFilename": "page-08.png",
+          "sha256": "3038b1cf93b6fb1a9134733d2689526889483982c0a3ba8b87c03941d4bb3ed2"
+        },
+        {
+          "relativeFilename": "page-09.png",
+          "sha256": "f332c27a073b6ae68bab58b3e3848503b71069ce05b909724dde347df7d45e26"
+        },
+        {
+          "relativeFilename": "page-10.png",
+          "sha256": "e64079a3ab0ed32c22743f2206a3f229b30fc25a727618fe5d6c86ecf75a45d4"
+        },
+        {
+          "relativeFilename": "page-11.png",
+          "sha256": "c394096bf0e10f6cd5dd5bfaf84e582064aa7a4d09050fce290d8a0c743d08e7"
+        },
+        {
+          "relativeFilename": "page-12.png",
+          "sha256": "44a0bbd0622f0bb14c3dae72422978f86de4fae2498061685cc42326890d9a6e"
+        },
+        {
+          "relativeFilename": "page-13.png",
+          "sha256": "ca239f13fc47858defe64cb53f344ae614470985545dc06c074eb98daf611d47"
+        },
+        {
+          "relativeFilename": "page-14.png",
+          "sha256": "0d4c62cfddc5b0d36ae7dff74d65b58b24fb3fc4b05eb5832f2263a55a2ce9c9"
+        },
+        {
+          "relativeFilename": "page-15.png",
+          "sha256": "803acdf5cb2cdeb161f78f4ac07669bd166852ee4df7d494e903350b0a1400ee"
+        }
+      ],
+      "renderedSetCanonicalJsonSha256": "3c7deafa0ef50b64e4ebb50247110a5fca3937fd4dd434af91e9349d609494fa",
+      "requiredSelectedPages": [
+        5,
+        7,
+        13
+      ],
+      "requiredSelectedPagesPresent": true
+    },
+    {
+      "documentId": "doc-143e13dc75ed",
+      "sourceType": "raster",
+      "contentFingerprint": "143e13dc75ed1583aa4882cefbc4194d0ff1a46c25a80eeb70ad4361467d1dc5",
+      "pdfFingerprint": {
+        "sha256": "143e13dc75ed1583aa4882cefbc4194d0ff1a46c25a80eeb70ad4361467d1dc5",
+        "sizeBytes": 6641988
+      },
+      "pageCount": 20,
+      "pagesProcessed": 20,
+      "ocrJsonPath": "outputs/audit/ocr/doc-143e13dc75ed/tesseract/ocr.json",
+      "ocrJsonSha256": "182c71f60f6d3180e65dbbac05b20cf0aeb87ca8e9f49d50e6a4ef4368de6e70",
+      "renderedDirectory": "outputs/audit/ocr/doc-143e13dc75ed/tesseract/rendered",
+      "renderedFileCount": 20,
+      "renderedFiles": [
+        {
+          "relativeFilename": "page-01.png",
+          "sha256": "6e10b1219ad7220552950a8b70ba5510d0c31858206b18dd39d55467e1373489"
+        },
+        {
+          "relativeFilename": "page-02.png",
+          "sha256": "ecc64db2078b6654878dd92b1600bcf95783ff67dbf5c3482f3f338a7cf9d98d"
+        },
+        {
+          "relativeFilename": "page-03.png",
+          "sha256": "41de84af839b371271c0e430c13bbd6a6983ace2455e2d18fd99032f6d158fa4"
+        },
+        {
+          "relativeFilename": "page-04.png",
+          "sha256": "34f96b8e3ef15217f4d8d8e356da295c723f76d1888543a8ba2f90989f50fa94"
+        },
+        {
+          "relativeFilename": "page-05.png",
+          "sha256": "a4a3b1ff1cc776d0fbb93f04dd300e6ac6ffa667ba819d6ce25c203b77ec0abb"
+        },
+        {
+          "relativeFilename": "page-06.png",
+          "sha256": "8c903ba4b1515cb8f95f18347d78812e42a0f01948aac0f78922d0fa5f4ee821"
+        },
+        {
+          "relativeFilename": "page-07.png",
+          "sha256": "2b3407260540d6baad86fecf8ef482dd934c589478ce50090d4f4f30f1c2a33b"
+        },
+        {
+          "relativeFilename": "page-08.png",
+          "sha256": "1e41024233cb2c2a6fdfb4f4224ed0da5a55bed9737f849726d5006639a7c97d"
+        },
+        {
+          "relativeFilename": "page-09.png",
+          "sha256": "9fc53a62f89088f67c220928eae52cf88d7308dfe95bf8874e4fb711c73af05d"
+        },
+        {
+          "relativeFilename": "page-10.png",
+          "sha256": "a71b89ce23a5cdb9a981dc980b28a16c8b1dddb19b2ce3598d7f4402a404177c"
+        },
+        {
+          "relativeFilename": "page-11.png",
+          "sha256": "6b983f7d139923deaf8638108b738bbd6beb3712bc66ff06766a694dfb99746c"
+        },
+        {
+          "relativeFilename": "page-12.png",
+          "sha256": "8417f24880268a368e4cccf0f858e117bf0d8ec0e1b8d658eedf7bf921f9ef40"
+        },
+        {
+          "relativeFilename": "page-13.png",
+          "sha256": "05c0a29b813ccacd3dd78883836b4632b5b7b84ff825a075c898b6e9de566dca"
+        },
+        {
+          "relativeFilename": "page-14.png",
+          "sha256": "83b9378295a17eb8d1f3e83debb625c79f04f7c600e9f9d167e3d892b9d4ad84"
+        },
+        {
+          "relativeFilename": "page-15.png",
+          "sha256": "2b0fe7010db03a2004ef342b7e9f3d2781e01773b932efdb968c1342162730f1"
+        },
+        {
+          "relativeFilename": "page-16.png",
+          "sha256": "8e70a40269dfa04b8db5d27dbb8779fce48871a56a595b5b9d543afa00741e26"
+        },
+        {
+          "relativeFilename": "page-17.png",
+          "sha256": "d33d12316658f9e9d6d3bcbde760a272845bb115ea66476a528e90bb2cb6dabc"
+        },
+        {
+          "relativeFilename": "page-18.png",
+          "sha256": "2fcb8ec599bb646c70829f632a273324f39adfd39eb2c97ce92706170db93d4b"
+        },
+        {
+          "relativeFilename": "page-19.png",
+          "sha256": "a1587a168d5d9a87da52b19afabafb3a9fb55c1842f659d77f896010556e919b"
+        },
+        {
+          "relativeFilename": "page-20.png",
+          "sha256": "3dceb8d0e4cea5537f1798338e23ddea0ed6a741a933129a84e08d1805292513"
+        }
+      ],
+      "renderedSetCanonicalJsonSha256": "a92fbc0135984c1f7bee2c9ec5c7dac2f73d880925d90b5a6e46a685c174a3de",
+      "requiredSelectedPages": [
+        4,
+        11,
+        12
+      ],
+      "requiredSelectedPagesPresent": true
+    },
+    {
+      "documentId": "doc-2790a3c9786b",
+      "sourceType": "raster",
+      "contentFingerprint": "2790a3c9786b6786e7e06da4583ca7dee76a931bd8fb23d8e504fab3dbed5f97",
+      "pdfFingerprint": {
+        "sha256": "2790a3c9786b6786e7e06da4583ca7dee76a931bd8fb23d8e504fab3dbed5f97",
+        "sizeBytes": 2113463
+      },
+      "pageCount": 19,
+      "pagesProcessed": 19,
+      "ocrJsonPath": "outputs/audit/ocr/doc-2790a3c9786b/tesseract/ocr.json",
+      "ocrJsonSha256": "bac7668282896e5623052e96646bffd3555e84c0c6cbfa5c0be4e9e9d2ee5a9d",
+      "renderedDirectory": "outputs/audit/ocr/doc-2790a3c9786b/tesseract/rendered",
+      "renderedFileCount": 19,
+      "renderedFiles": [
+        {
+          "relativeFilename": "page-01.png",
+          "sha256": "873e41b112c5f4ca791fbdeef55ad6b57991ee3b765e53bb081cedf890c9d34b"
+        },
+        {
+          "relativeFilename": "page-02.png",
+          "sha256": "e40f004d5ee5902d11cf645d3afb3ef21a3b6840d5d028b48bc71586b01550f1"
+        },
+        {
+          "relativeFilename": "page-03.png",
+          "sha256": "81d5c6958046b119083a2055624299c14791b881e95653c242e67121e3c714d3"
+        },
+        {
+          "relativeFilename": "page-04.png",
+          "sha256": "6daa8aaabbc897704024bee9d7df5aa843c2733962ae723d05237a89d71277ca"
+        },
+        {
+          "relativeFilename": "page-05.png",
+          "sha256": "c3e1e1ba55afce7070b36b24d960a693693b7180797f9954fc96e21d1e885c05"
+        },
+        {
+          "relativeFilename": "page-06.png",
+          "sha256": "444bfffaa90e493e8a235aea32130086d532e1ebf2432ebcd951eabb0e79f076"
+        },
+        {
+          "relativeFilename": "page-07.png",
+          "sha256": "a28167a6500a5e54a7c3fac5fd21500f0849c255681a9f954f9aab46e115874c"
+        },
+        {
+          "relativeFilename": "page-08.png",
+          "sha256": "f2c0b938e2a3d87dd4200b3dd381c28975438a6318dfd7fc1a3500f7d5b28fcd"
+        },
+        {
+          "relativeFilename": "page-09.png",
+          "sha256": "320a9963874e1dae87d5bd6c09e0e50d99989a880530bfa44275551ecb8dbdfa"
+        },
+        {
+          "relativeFilename": "page-10.png",
+          "sha256": "34c098b4872746f7ebdf0fcdf5e922f5a8eede69e0af809b2b2466d4d0c1f22e"
+        },
+        {
+          "relativeFilename": "page-11.png",
+          "sha256": "faa0f9ccd96cbd1684d121d6b9280c3f517cd6e17cbd52356b8ebaec250d7793"
+        },
+        {
+          "relativeFilename": "page-12.png",
+          "sha256": "eba74a71f92844c2f98cf0f2f350971d273b3e2504d9119c82386f22c7be9597"
+        },
+        {
+          "relativeFilename": "page-13.png",
+          "sha256": "a0728bfd51a58180e1df9490a41fb59b22b863abd9a4d2375e5f1ba859326f55"
+        },
+        {
+          "relativeFilename": "page-14.png",
+          "sha256": "c3f8566549c66859000107b57712ba7192afd6918bcd8abac5004d288f21c5e2"
+        },
+        {
+          "relativeFilename": "page-15.png",
+          "sha256": "2cd9f44e7f905a59ef8d5165ccad3e27f743adc0fc951443ed7dcfa8d69aa129"
+        },
+        {
+          "relativeFilename": "page-16.png",
+          "sha256": "f3da1b457d0ad1f04c7eb5d82b09e87cb60e9cfe1901aaac099a72aa1ef1c6b2"
+        },
+        {
+          "relativeFilename": "page-17.png",
+          "sha256": "808b113327861bc8a12a75b9f7a0bfe96b2c31036df7eae1bd17ec74e52beb59"
+        },
+        {
+          "relativeFilename": "page-18.png",
+          "sha256": "0a369ce849eaef3b3ab82eb5b46f4e761aafc0d265ed7f34da5b45ab4f75f364"
+        },
+        {
+          "relativeFilename": "page-19.png",
+          "sha256": "b16d6291bf04b337548eefca5dd029763e8390f7638b16f8d104aa52fc6617f4"
+        }
+      ],
+      "renderedSetCanonicalJsonSha256": "0722eb6d01f0f2b1467eaea753129e904a940e66f0ba3efd90bdb26728e45bda",
+      "requiredSelectedPages": [
+        4,
+        11
+      ],
+      "requiredSelectedPagesPresent": true
+    },
+    {
+      "documentId": "doc-42af2b3d2b27",
+      "sourceType": "raster",
+      "contentFingerprint": "42af2b3d2b27f4028c36e7298f79cfe81291db82e6b7bd098bcaa1e34c9f41ec",
+      "pdfFingerprint": {
+        "sha256": "42af2b3d2b27f4028c36e7298f79cfe81291db82e6b7bd098bcaa1e34c9f41ec",
+        "sizeBytes": 785413
+      },
+      "pageCount": 19,
+      "pagesProcessed": 19,
+      "ocrJsonPath": "outputs/audit/ocr/doc-42af2b3d2b27/tesseract/ocr.json",
+      "ocrJsonSha256": "e56f3e24fac274aea378ca5f54efdcb07271d53108846a5d640801d5bd78ae60",
+      "renderedDirectory": "outputs/audit/ocr/doc-42af2b3d2b27/tesseract/rendered",
+      "renderedFileCount": 19,
+      "renderedFiles": [
+        {
+          "relativeFilename": "page-01.png",
+          "sha256": "2e003dcc03bc8218d23766ebcbacac7562ed21503aa3750d1b0d5ef1d3283f5f"
+        },
+        {
+          "relativeFilename": "page-02.png",
+          "sha256": "89614bf90490a78f88977186d4e667eba9c979a4d294f23815a239b907db3c82"
+        },
+        {
+          "relativeFilename": "page-03.png",
+          "sha256": "c10f6e001cc095213da0f6d5d7714d60b2f4f0061d4cc9bdbdef3348c943f883"
+        },
+        {
+          "relativeFilename": "page-04.png",
+          "sha256": "dc18d9d4df2bf12585d30538b1ae9f0286f4562fb53e7142451e994426c9de02"
+        },
+        {
+          "relativeFilename": "page-05.png",
+          "sha256": "afff28dbb096429a408afa8b8fd22649e76822146508e9b1b97566ad2d8948a1"
+        },
+        {
+          "relativeFilename": "page-06.png",
+          "sha256": "8a6521d08a20541908809c60d1bc0e62b2f3cdbbdf5d8e3f1510175cf5d2e1b0"
+        },
+        {
+          "relativeFilename": "page-07.png",
+          "sha256": "07376b67d9ded13f7ed5b67a29d297b6201438abbb11934aec20f39856774cc4"
+        },
+        {
+          "relativeFilename": "page-08.png",
+          "sha256": "c2fb8e76e2cda11f1f3997a52b674fb1d4354bf65f1133577d9f5de80e5d1b4c"
+        },
+        {
+          "relativeFilename": "page-09.png",
+          "sha256": "3c84e006a490aa708a2b89147a9fe203aa0a5df87344f647f356d8c73f3331b9"
+        },
+        {
+          "relativeFilename": "page-10.png",
+          "sha256": "a04a5795f2a5c08e62ada3f31efc2cba92fd80da1ea5a4ecc8a27a32c51cafec"
+        },
+        {
+          "relativeFilename": "page-11.png",
+          "sha256": "27c6de4f09230cc21d47bd05d1cae3c1b0f063cf0d92cdf3a99e1b4bd28bd24b"
+        },
+        {
+          "relativeFilename": "page-12.png",
+          "sha256": "2c8363733963655081f822496cb273e208d74cc65b40f20d1bd812a993a90e1a"
+        },
+        {
+          "relativeFilename": "page-13.png",
+          "sha256": "0841ce0d915e07fe231e04b624e83bdac97fe4fba0d3643022b10f8d8263dc54"
+        },
+        {
+          "relativeFilename": "page-14.png",
+          "sha256": "ce132d4dfc5e70b32060d1e670e36f5ff474ffe9ee077d7224a4e6b8cd1b8787"
+        },
+        {
+          "relativeFilename": "page-15.png",
+          "sha256": "34be05494fbd141fff76391d2a53ed265e5bc83763fdb4da0772a8e99822fd4b"
+        },
+        {
+          "relativeFilename": "page-16.png",
+          "sha256": "dce68b30d36bdc427d09439f92b92133b5dbf03139c5b9d0de35c438febdda3d"
+        },
+        {
+          "relativeFilename": "page-17.png",
+          "sha256": "c3f346737449d84135146d50e869f6b0603824167de4c276d84c58e39537fec4"
+        },
+        {
+          "relativeFilename": "page-18.png",
+          "sha256": "641ff75db2fa629eb116bf5961acf5a9ee0a2c13ce9acdd6a5cc18809c74e0bf"
+        },
+        {
+          "relativeFilename": "page-19.png",
+          "sha256": "e80fc670692211be2c4078a8d8c858ae115b94c10dedbb3072bddcf93e55389d"
+        }
+      ],
+      "renderedSetCanonicalJsonSha256": "4d5dc98177137986476c266b5fe96d08bbf8030ee33053c29067df447fe9d0cb",
+      "requiredSelectedPages": [
+        3,
+        14,
+        17
+      ],
+      "requiredSelectedPagesPresent": true
+    },
+    {
+      "documentId": "doc-56268e79f6bf",
+      "sourceType": "raster",
+      "contentFingerprint": "56268e79f6bf85a1cf08f2a97c69217adfd3410cd126f0ec1e7f5744e0fa0d1e",
+      "pdfFingerprint": {
+        "sha256": "56268e79f6bf85a1cf08f2a97c69217adfd3410cd126f0ec1e7f5744e0fa0d1e",
+        "sizeBytes": 8887837
+      },
+      "pageCount": 22,
+      "pagesProcessed": 22,
+      "ocrJsonPath": "outputs/audit/ocr/doc-56268e79f6bf/tesseract/ocr.json",
+      "ocrJsonSha256": "a747735d8730e7b6c527c3d85f3bf465ee6cb91aa6206b41545695af47090c75",
+      "renderedDirectory": "outputs/audit/ocr/doc-56268e79f6bf/tesseract/rendered",
+      "renderedFileCount": 22,
+      "renderedFiles": [
+        {
+          "relativeFilename": "page-01.png",
+          "sha256": "be269a04dedb14ee2b7d12a028d0123ca983796816e10397ebbdf36071dcdab3"
+        },
+        {
+          "relativeFilename": "page-02.png",
+          "sha256": "d30f8741c27e7c3ce14f64f549b251f80963d388a49fe8829a3924fc8f856556"
+        },
+        {
+          "relativeFilename": "page-03.png",
+          "sha256": "1d359619c67b8039da3811a0924af89e44085c5c9090b8201f98c2ba8ed1d27b"
+        },
+        {
+          "relativeFilename": "page-04.png",
+          "sha256": "dc33939a13c55c44cc5705ec51ec4ee1536a5b8989de7a467efab72823acf2b1"
+        },
+        {
+          "relativeFilename": "page-05.png",
+          "sha256": "d27a5fe3bc65386466d424d6b3e2125ee4ff647c4f71347a3dbbf954da5f3b4e"
+        },
+        {
+          "relativeFilename": "page-06.png",
+          "sha256": "1b09641c7057f6eaa604bd380669e2f6bd2c9129248550981a162c11611ac5da"
+        },
+        {
+          "relativeFilename": "page-07.png",
+          "sha256": "a94c7121b8b919f218148f6f2e3e2eb64160eead364b06d875b9028f324ea3ad"
+        },
+        {
+          "relativeFilename": "page-08.png",
+          "sha256": "c984a4edd041d00afffae157e4f02c9647a0458d98a95d0795024abad6cf7019"
+        },
+        {
+          "relativeFilename": "page-09.png",
+          "sha256": "0bdf5f5ca82560e38c137fc89d248bcb49e265c49a64a4077a4f927306127adf"
+        },
+        {
+          "relativeFilename": "page-10.png",
+          "sha256": "226e898fc670c91d532284f574762bb8499d015d6cefb907802d11d7089e350e"
+        },
+        {
+          "relativeFilename": "page-11.png",
+          "sha256": "c8c30bcbc6f766ccc5a5503ac2da1e16bed32db932fc440a4e66e17e6a14a97d"
+        },
+        {
+          "relativeFilename": "page-12.png",
+          "sha256": "0d59e282d5167a8a19183a8e697d1ba54bd16c7308074888664e55473ad20ab1"
+        },
+        {
+          "relativeFilename": "page-13.png",
+          "sha256": "6cfc030162b5ab8e2636ac80fde6caa2e7b7bee1e5b8f3ad8b0168ec5a95a875"
+        },
+        {
+          "relativeFilename": "page-14.png",
+          "sha256": "f6eb8ea9f65439d0d094a99492ea1ea38fe7b8337cec8d66f1e0f4eac128a7b8"
+        },
+        {
+          "relativeFilename": "page-15.png",
+          "sha256": "de2fc694411cb724701fddf96381cf0bf6e5f33c07770d2681458ee4404130a0"
+        },
+        {
+          "relativeFilename": "page-16.png",
+          "sha256": "d70819e3c3e6c6b841a6cf8413678e8dc4cdefedfc6457b8b3544903beeeb7e0"
+        },
+        {
+          "relativeFilename": "page-17.png",
+          "sha256": "8b4c479dadff073aec70088d7dbc591df34d6789baa1de8eb5f3871c75513026"
+        },
+        {
+          "relativeFilename": "page-18.png",
+          "sha256": "4b65112d3662e560c2e0a4fc711b988f415fce287526ff68dca747c9a462099d"
+        },
+        {
+          "relativeFilename": "page-19.png",
+          "sha256": "a62f6dbb8059b5c90983c24ea3357c5073619ff9765341c2657cf82cf117a5fb"
+        },
+        {
+          "relativeFilename": "page-20.png",
+          "sha256": "1b34e69beaa07e4acef2b1eed53819d437484b69747d30254cb294e99ef4d03f"
+        },
+        {
+          "relativeFilename": "page-21.png",
+          "sha256": "bdd9ded56c56721966d2ca908c71fb01a7117cdf6482ac67bee6b1cd1925238a"
+        },
+        {
+          "relativeFilename": "page-22.png",
+          "sha256": "5de95f02b9fe9fcb35e51fcf6332406f9e935f1f124234f40668b6b3dadea095"
+        }
+      ],
+      "renderedSetCanonicalJsonSha256": "2acab8fd1768d92315ede81be4cef1bdc3314333a2d596ce34fe6ba3f3d91768",
+      "requiredSelectedPages": [
+        8,
+        13,
+        16
+      ],
+      "requiredSelectedPagesPresent": true
+    },
+    {
+      "documentId": "doc-591f3e819d58",
+      "sourceType": "raster",
+      "contentFingerprint": "591f3e819d5810c359b2a0d9e8a32cdc54a7c6245e0b3cf03d9521a46ee7b3f8",
+      "pdfFingerprint": {
+        "sha256": "591f3e819d5810c359b2a0d9e8a32cdc54a7c6245e0b3cf03d9521a46ee7b3f8",
+        "sizeBytes": 725133
+      },
+      "pageCount": 15,
+      "pagesProcessed": 15,
+      "ocrJsonPath": "outputs/audit/ocr/doc-591f3e819d58/tesseract/ocr.json",
+      "ocrJsonSha256": "816c45167ceb71c5d4639291324bb6c314e155cd6882d76048031a38572ba88a",
+      "renderedDirectory": "outputs/audit/ocr/doc-591f3e819d58/tesseract/rendered",
+      "renderedFileCount": 15,
+      "renderedFiles": [
+        {
+          "relativeFilename": "page-01.png",
+          "sha256": "66df8a4a67a83a528a2ba9b9f5fed6a59c7d5410788e4f59cf6b61568d1182f4"
+        },
+        {
+          "relativeFilename": "page-02.png",
+          "sha256": "a7cc471f498096ecae9895bd3858d3bd78f2473a003303e8c581d33546c808bd"
+        },
+        {
+          "relativeFilename": "page-03.png",
+          "sha256": "d88cdd74bb4f8fe69255ac82cf7b48aec5866c1f0f0b0ee5a6673575e951adb8"
+        },
+        {
+          "relativeFilename": "page-04.png",
+          "sha256": "15454d666afd8b0e737f3b0c6ee9a05ccbd0bcd613055c9abd660a76da0ce398"
+        },
+        {
+          "relativeFilename": "page-05.png",
+          "sha256": "cc32425b08c5e928a0e367942ec48656a0c2f005c4f393dd8bf86bda621ff598"
+        },
+        {
+          "relativeFilename": "page-06.png",
+          "sha256": "a92d1e36c8e63a45dc9dad32a8fb98b5995dec6a4e6269ba87d2a33cbd0f7106"
+        },
+        {
+          "relativeFilename": "page-07.png",
+          "sha256": "8baedf378742f6ae3aaefcdaebee1061904726aa58740b309a8dede5a26ffd11"
+        },
+        {
+          "relativeFilename": "page-08.png",
+          "sha256": "d329033d12451e39ea5817ecfbb0fed42520e1d42457ab246124c4f2f3859456"
+        },
+        {
+          "relativeFilename": "page-09.png",
+          "sha256": "562ffde59675cb6bffa4a8a43c21de1c411bd22cc3a4686f9bd441a86365d73e"
+        },
+        {
+          "relativeFilename": "page-10.png",
+          "sha256": "5deb01773ad76787e208e3fe4c3794a1311027935f72c5a297628eee5c6bcfb8"
+        },
+        {
+          "relativeFilename": "page-11.png",
+          "sha256": "0029ec02120de50acc89c2a4131268a1b5ed7c0a51b966e00f7ff71e3d7f60de"
+        },
+        {
+          "relativeFilename": "page-12.png",
+          "sha256": "de61339ab34166ae6f94450d7883c6116b92481952483ee93e590a9e0b377c8c"
+        },
+        {
+          "relativeFilename": "page-13.png",
+          "sha256": "b44853cf6250fc4bf070ad4622f1eb7e2d1a06b742e889db1c416c89d38b1eb0"
+        },
+        {
+          "relativeFilename": "page-14.png",
+          "sha256": "0d1a53ffff55204ecd7904cb69053f5aa820004d0a65f06a5a7de77db87ebe1f"
+        },
+        {
+          "relativeFilename": "page-15.png",
+          "sha256": "1ba444bd24dfa78b675b5021d27caaf9fe8ebb03860afc57ab2da35c0e0311fd"
+        }
+      ],
+      "renderedSetCanonicalJsonSha256": "237ef4c81891f89bdc79bcef6bcc20a9298926629e2c5ea2d922f3f58e68f71d",
+      "requiredSelectedPages": [
+        5,
+        8,
+        9
+      ],
+      "requiredSelectedPagesPresent": true
+    },
+    {
+      "documentId": "doc-5d61be2ac853",
+      "sourceType": "raster",
+      "contentFingerprint": "5d61be2ac8537a32577aa37aab20221820b7499b2488f292ac60f49397170fc8",
+      "pdfFingerprint": {
+        "sha256": "5d61be2ac8537a32577aa37aab20221820b7499b2488f292ac60f49397170fc8",
+        "sizeBytes": 10004474
+      },
+      "pageCount": 13,
+      "pagesProcessed": 13,
+      "ocrJsonPath": "outputs/audit/ocr/doc-5d61be2ac853/tesseract/ocr.json",
+      "ocrJsonSha256": "8dc0a21cf9890137d123d3ce56081e99ec0e2ea3adf02529fd674e801de8006a",
+      "renderedDirectory": "outputs/audit/ocr/doc-5d61be2ac853/tesseract/rendered",
+      "renderedFileCount": 13,
+      "renderedFiles": [
+        {
+          "relativeFilename": "page-01.png",
+          "sha256": "f92cd500cb6bca2644f381c81607547149e8aeef955d1a55f016150ea6523d5d"
+        },
+        {
+          "relativeFilename": "page-02.png",
+          "sha256": "c70641fdb2feaaa4432a83352b5f591350c395c30d683a0fc314cb9af779e7b9"
+        },
+        {
+          "relativeFilename": "page-03.png",
+          "sha256": "a9e902cd40af9846ec5c3cb2c0238c62506223705a76579d5ceddf6d3798f4b6"
+        },
+        {
+          "relativeFilename": "page-04.png",
+          "sha256": "00d5bac235d4d84b0e748557c8b039aeaf982c97d9ca7348f05401b524f585ad"
+        },
+        {
+          "relativeFilename": "page-05.png",
+          "sha256": "3f6b2ee9eab21435d63d5957623c69a2f8787583d46105b767ca9cc7275012c2"
+        },
+        {
+          "relativeFilename": "page-06.png",
+          "sha256": "86746c714f1d3fcd1231532ac0aa6d6aeaa2e69da75962c3ce5c2f77c0ec5c11"
+        },
+        {
+          "relativeFilename": "page-07.png",
+          "sha256": "ff9153342c525db2c62a9495f1ed5450de595e624591b68ea186de261f30d667"
+        },
+        {
+          "relativeFilename": "page-08.png",
+          "sha256": "f5d6cf0469ddb2120096ff431fe9782896a6185a38acb3e0f6fdd3e69800ac08"
+        },
+        {
+          "relativeFilename": "page-09.png",
+          "sha256": "0087ec36f646b8080980b825437cdf1e976b71cda57d73dec34426abf235df01"
+        },
+        {
+          "relativeFilename": "page-10.png",
+          "sha256": "090903a48c275c32708f9e64f66f6e1579db3e84c9139fb5655714b7d9a2c291"
+        },
+        {
+          "relativeFilename": "page-11.png",
+          "sha256": "6b2cb1af4b2cc6dede2178e560352dd7a091b642fc2124491c9391fdfcace4e0"
+        },
+        {
+          "relativeFilename": "page-12.png",
+          "sha256": "ff478d0576e5b560b5963af53310e97770017662ce4730f7d9a7ef6ff7fc9ecb"
+        },
+        {
+          "relativeFilename": "page-13.png",
+          "sha256": "8979d07ef79fa4a01f49f9cc4ea5a66b1e6bdf855611ce1fd8f58b5c12096182"
+        }
+      ],
+      "renderedSetCanonicalJsonSha256": "a1aff311db38e0c80e4c9b3f63b5f166bb580d6721e94b06761390f4772cc1fa",
+      "requiredSelectedPages": [
+        8,
+        9
+      ],
+      "requiredSelectedPagesPresent": true
+    },
+    {
+      "documentId": "doc-89561bb8f1fe",
+      "sourceType": "raster",
+      "contentFingerprint": "89561bb8f1fea23a3f17560cabaf979c37ff326672900f5a0197a7fa507fb525",
+      "pdfFingerprint": {
+        "sha256": "89561bb8f1fea23a3f17560cabaf979c37ff326672900f5a0197a7fa507fb525",
+        "sizeBytes": 2731966
+      },
+      "pageCount": 11,
+      "pagesProcessed": 11,
+      "ocrJsonPath": "outputs/audit/ocr/doc-89561bb8f1fe/tesseract/ocr.json",
+      "ocrJsonSha256": "f12616094645875e265811815d977a91bf89dbb05f60b5340bf88d3bbdd66d9e",
+      "renderedDirectory": "outputs/audit/ocr/doc-89561bb8f1fe/tesseract/rendered",
+      "renderedFileCount": 11,
+      "renderedFiles": [
+        {
+          "relativeFilename": "page-01.png",
+          "sha256": "fbd96d93a4baaebee67417e7cdcf623ad9b4d32a4ac06fb948a344556e3cac22"
+        },
+        {
+          "relativeFilename": "page-02.png",
+          "sha256": "ec5cdfd9c315d906912459b6647d3a9cdf90c4147cca8aa43c2440b192e46eb3"
+        },
+        {
+          "relativeFilename": "page-03.png",
+          "sha256": "1a354c6655254c1db43d8b317b31119086d405af666446475bd90037f8456e60"
+        },
+        {
+          "relativeFilename": "page-04.png",
+          "sha256": "a3fe867c4c4a9d4f7fdb9f53832538451b55adc5287889a3bd76df8c5653b491"
+        },
+        {
+          "relativeFilename": "page-05.png",
+          "sha256": "03fa5a4c1177c8e719f1a536c5578c3217a97a30c27501b0b214fe160ae62d17"
+        },
+        {
+          "relativeFilename": "page-06.png",
+          "sha256": "27418431b491893e8c3ac2a50d840ec3bf58cfc80aa5c1b975f29289461d6369"
+        },
+        {
+          "relativeFilename": "page-07.png",
+          "sha256": "5b4f1dd6cc9e782db1e41077d3573095f568c80bbff1e16e73814bf1d3159058"
+        },
+        {
+          "relativeFilename": "page-08.png",
+          "sha256": "e10002348307443e93a3ee1c12147511ce2f0f2a7e3d98eba4dc1a9851285476"
+        },
+        {
+          "relativeFilename": "page-09.png",
+          "sha256": "b279afc35e1c10d439fce55993485c8c1421481a89f357de418a42b81da4d0fd"
+        },
+        {
+          "relativeFilename": "page-10.png",
+          "sha256": "629fc8f04c6e54430a9f8956564e4f8838995913cf1cf5321de57deb07fc51b5"
+        },
+        {
+          "relativeFilename": "page-11.png",
+          "sha256": "eb7bc4b8ea8f0796ff555319249cf93a4c68e74072cfce3e6c32af64b2b4c133"
+        }
+      ],
+      "renderedSetCanonicalJsonSha256": "6c5b43dc54779291163e7ae23f8b71e17f9c4ec130d40a505022969b4ebbf7ac",
+      "requiredSelectedPages": [
+        2,
+        6,
+        9
+      ],
+      "requiredSelectedPagesPresent": true
+    },
+    {
+      "documentId": "doc-a1ddc006ef56",
+      "sourceType": "raster",
+      "contentFingerprint": "a1ddc006ef5638f1ead8e452334e2db87a1e9995e02261b34cecb64c8e3b043e",
+      "pdfFingerprint": {
+        "sha256": "a1ddc006ef5638f1ead8e452334e2db87a1e9995e02261b34cecb64c8e3b043e",
+        "sizeBytes": 9813690
+      },
+      "pageCount": 24,
+      "pagesProcessed": 24,
+      "ocrJsonPath": "outputs/audit/ocr/doc-a1ddc006ef56/tesseract/ocr.json",
+      "ocrJsonSha256": "a21b32b72d9b0a5d2add3be0a132002e0372acacac46fdc836e280163a9ad165",
+      "renderedDirectory": "outputs/audit/ocr/doc-a1ddc006ef56/tesseract/rendered",
+      "renderedFileCount": 24,
+      "renderedFiles": [
+        {
+          "relativeFilename": "page-01.png",
+          "sha256": "1fe9d34a7d0327846a8078784c388146c77f757f45939aaf6ff6834bfb486bc1"
+        },
+        {
+          "relativeFilename": "page-02.png",
+          "sha256": "26db084f08916d9d9d2b80dde7f86a55dd26ce174390c68655d83a8837290540"
+        },
+        {
+          "relativeFilename": "page-03.png",
+          "sha256": "82843035229f982df9ad85d79cdb97e159ccce05ec71a983957d13b599e993d0"
+        },
+        {
+          "relativeFilename": "page-04.png",
+          "sha256": "c9c39d6011ce6098833ad1fcbcd1b84cd600a8b07c4feb01c9e7f152820f5592"
+        },
+        {
+          "relativeFilename": "page-05.png",
+          "sha256": "1d535d57e1b402e2f24fc93acc0dc353db8595cd2f20857807ef663b1e0e7fe6"
+        },
+        {
+          "relativeFilename": "page-06.png",
+          "sha256": "cb7bf69a7e75739a153590850e8052824dc78ee86001cb1f6b0fac01bdcecf2d"
+        },
+        {
+          "relativeFilename": "page-07.png",
+          "sha256": "850d808ae838cbf53d118ded4a6390a8ea01ae893ae77ef3b25ab76eb8dd85aa"
+        },
+        {
+          "relativeFilename": "page-08.png",
+          "sha256": "1877a06eb20cd53a6684cefef7e5a01c6142a5447b210f101a66828e47d65d52"
+        },
+        {
+          "relativeFilename": "page-09.png",
+          "sha256": "8c9bbcccc42a177459eed850d968dbd02d7382364f5be3f8877e2db713525b43"
+        },
+        {
+          "relativeFilename": "page-10.png",
+          "sha256": "b9bcb6ac8a00fba86685cbba8aa52a679eb1d0b212396befad726d7ec333098b"
+        },
+        {
+          "relativeFilename": "page-11.png",
+          "sha256": "3601b48fb68355d3cea3a53fc55a205e21da875752f531cbe162ad929f7e4a7f"
+        },
+        {
+          "relativeFilename": "page-12.png",
+          "sha256": "1d66a235e8894f8f197bbd74d26fcc550ef56fa3da4c3f1fb795714202e2248a"
+        },
+        {
+          "relativeFilename": "page-13.png",
+          "sha256": "0a1eb8812e23ed393260ce3f2d209ec2d445c4a2accd5db12b53b62a1df0ca33"
+        },
+        {
+          "relativeFilename": "page-14.png",
+          "sha256": "2cc214fbb57cab627c22c673452c9f3f347ddc8f1b91b60ddda015f76ab8a2b4"
+        },
+        {
+          "relativeFilename": "page-15.png",
+          "sha256": "333016e32cddfa96cf7a473d64b6f53039c746da99fa6adca6860a8cf72f1275"
+        },
+        {
+          "relativeFilename": "page-16.png",
+          "sha256": "8a9a751de01ee4c7de553028cc4cf9223cdae2e84b303ebb1b02a5da3ff5d452"
+        },
+        {
+          "relativeFilename": "page-17.png",
+          "sha256": "d53d270d4e499c56dae1edc5ecc174366c0f3c57f061c172f9e6c9a7cb2e5992"
+        },
+        {
+          "relativeFilename": "page-18.png",
+          "sha256": "c58b786e0585d5077bcb75ea5af6d59a6ee274092900805c72f75a651933565e"
+        },
+        {
+          "relativeFilename": "page-19.png",
+          "sha256": "3cb79a52da81c62273d647b50ecc86609d07ef749227168cd8631f5be3d85ec2"
+        },
+        {
+          "relativeFilename": "page-20.png",
+          "sha256": "5716ccae963117c8d7d3b1563a3c73210a1692ce99ce5aa27a7e7602cf1a7e9f"
+        },
+        {
+          "relativeFilename": "page-21.png",
+          "sha256": "274fe0a08c2165ff2d2a01a526a7419469d0298186f8e33dd12575ca43a59ed3"
+        },
+        {
+          "relativeFilename": "page-22.png",
+          "sha256": "90b4186a29cbaf344d9b8bd90a5f2587a6419ae4d344d5b3278fe7f4d489af19"
+        },
+        {
+          "relativeFilename": "page-23.png",
+          "sha256": "fc6110305a5f8d6376e149c8145ed84a357fdf0a4bba8e73427f201b89b40e8d"
+        },
+        {
+          "relativeFilename": "page-24.png",
+          "sha256": "8a8b8e3a3af362246e50623e890a2c7b8771f9d538449f4c43f8ad889a2e76a7"
+        }
+      ],
+      "renderedSetCanonicalJsonSha256": "4c49984d6f8315b8de0828b9605a85cb890e37306f2a6c35876a0464c595e1d6",
+      "requiredSelectedPages": [
+        2,
+        12,
+        15
+      ],
+      "requiredSelectedPagesPresent": true
+    },
+    {
+      "documentId": "doc-ad34c4cf7f30",
+      "sourceType": "raster",
+      "contentFingerprint": "ad34c4cf7f30b6c8a0ba2cfd5c6cef41e74b64e66ffc568dee16d3cada78cd83",
+      "pdfFingerprint": {
+        "sha256": "ad34c4cf7f30b6c8a0ba2cfd5c6cef41e74b64e66ffc568dee16d3cada78cd83",
+        "sizeBytes": 8150527
+      },
+      "pageCount": 14,
+      "pagesProcessed": 14,
+      "ocrJsonPath": "outputs/audit/ocr/doc-ad34c4cf7f30/tesseract/ocr.json",
+      "ocrJsonSha256": "77cc4ab829510f46cb1409640d168eb4bf28331d3c26fa8aab5fb844a281ec29",
+      "renderedDirectory": "outputs/audit/ocr/doc-ad34c4cf7f30/tesseract/rendered",
+      "renderedFileCount": 14,
+      "renderedFiles": [
+        {
+          "relativeFilename": "page-01.png",
+          "sha256": "1db45655bd25a6d3ac82b5711e7114aae59adfec61d6bcf24e95bd86dd042544"
+        },
+        {
+          "relativeFilename": "page-02.png",
+          "sha256": "27fde42d77b9280c87188e896fe8cbabdbabfb477452645e4780629b644ae828"
+        },
+        {
+          "relativeFilename": "page-03.png",
+          "sha256": "a486fa2331fa04b496edae8942b0045a451c854c229a54e54419cf383b27716e"
+        },
+        {
+          "relativeFilename": "page-04.png",
+          "sha256": "81d9f1ceb6627b169347350adf6fcbbc077324b95dda8e56e1f4ec58117c8813"
+        },
+        {
+          "relativeFilename": "page-05.png",
+          "sha256": "2a963754fa02bf51ec276a344ff3fe6ca444867e3ce1cc3172ef99467d3b7168"
+        },
+        {
+          "relativeFilename": "page-06.png",
+          "sha256": "3d0de8c6e97f225f234f190349a293248c79a79ff3f03df57558d7eb41e44d8b"
+        },
+        {
+          "relativeFilename": "page-07.png",
+          "sha256": "2bcaf9a6d55d3901a087ef000a8734fe38be1843055164df6232c00ef3323780"
+        },
+        {
+          "relativeFilename": "page-08.png",
+          "sha256": "8f025a47f8b083e9c50fc4cc2422ad23e852ed3e2e555f2ffbf9cae52fdfbe98"
+        },
+        {
+          "relativeFilename": "page-09.png",
+          "sha256": "28ef09ea39ad94a4532fc817f6edd8c1642acb36bfb3cd5b5312db57a78d1629"
+        },
+        {
+          "relativeFilename": "page-10.png",
+          "sha256": "892ffb9f833e1a4f0f16116d8102da289ed49fc8d96d868f0a183779c9773cdc"
+        },
+        {
+          "relativeFilename": "page-11.png",
+          "sha256": "f9e776e7da4cd6b113974c425d915bc77b649ac9a67280c6912a49e1a64e7b4c"
+        },
+        {
+          "relativeFilename": "page-12.png",
+          "sha256": "b51bbdb62141886dbca8a3a353ef4cc48952d79bb67d7117c7fac845c6c6cb39"
+        },
+        {
+          "relativeFilename": "page-13.png",
+          "sha256": "8d070fdc6635262aa8ed2921a11e6db8bd0d3fd3fcfea50eb3696ad061944bfb"
+        },
+        {
+          "relativeFilename": "page-14.png",
+          "sha256": "b80f734617c14d5d9b64c339126374d57a45222f5552eebe6694a497a995f043"
+        }
+      ],
+      "renderedSetCanonicalJsonSha256": "47e535981be371745ceef4d7c15b8f07d72c843b719db3f10e9ec0d30f082172",
+      "requiredSelectedPages": [
+        4,
+        9,
+        12
+      ],
+      "requiredSelectedPagesPresent": true
+    },
+    {
+      "documentId": "doc-c41ddc7b55ec",
+      "sourceType": "raster",
+      "contentFingerprint": "c41ddc7b55ec4e18550e2be6decab59f307b6acc7699ab17e69b7f478330ca4e",
+      "pdfFingerprint": {
+        "sha256": "c41ddc7b55ec4e18550e2be6decab59f307b6acc7699ab17e69b7f478330ca4e",
+        "sizeBytes": 1601168
+      },
+      "pageCount": 4,
+      "pagesProcessed": 4,
+      "ocrJsonPath": "outputs/audit/ocr/doc-c41ddc7b55ec/tesseract/ocr.json",
+      "ocrJsonSha256": "7d07c151b707aaa658097f9e84c297af6cebb918ca6fc15ab551fdfdf77c20a2",
+      "renderedDirectory": "outputs/audit/ocr/doc-c41ddc7b55ec/tesseract/rendered",
+      "renderedFileCount": 4,
+      "renderedFiles": [
+        {
+          "relativeFilename": "page-01.png",
+          "sha256": "5e381fa82d2c849d8925a87bc3d9b1bb58161f372d536c3d740d096cc6f98ff5"
+        },
+        {
+          "relativeFilename": "page-02.png",
+          "sha256": "33bd8b9632aaf08487a70018d40844d0ba893b8b57ac6f25b69e6a092c71998b"
+        },
+        {
+          "relativeFilename": "page-03.png",
+          "sha256": "e71251324927ea08bc7b874e93e0a352b2d5e70d2aeab3d6557999ccf792b436"
+        },
+        {
+          "relativeFilename": "page-04.png",
+          "sha256": "2c10c09569dad0fbb52f93c525f0cef182474935f7c5c12671c290cafa036805"
+        }
+      ],
+      "renderedSetCanonicalJsonSha256": "dc674d949b50474b0c5dce2f052691122d1edee2fac1d6b827805f4e4777dd76",
+      "requiredSelectedPages": [
+        3,
+        4
+      ],
+      "requiredSelectedPagesPresent": true
+    },
+    {
+      "documentId": "doc-c573e686e882",
+      "sourceType": "raster",
+      "contentFingerprint": "c573e686e88211332418b68914be57ed2c723977ed92dc7b68f24dd2a167d067",
+      "pdfFingerprint": {
+        "sha256": "c573e686e88211332418b68914be57ed2c723977ed92dc7b68f24dd2a167d067",
+        "sizeBytes": 2416786
+      },
+      "pageCount": 20,
+      "pagesProcessed": 20,
+      "ocrJsonPath": "outputs/audit/ocr/doc-c573e686e882/tesseract/ocr.json",
+      "ocrJsonSha256": "56ad5efdc14f4f80cc1154b2dbe8a68f9818189e0120585e19c37f576e202751",
+      "renderedDirectory": "outputs/audit/ocr/doc-c573e686e882/tesseract/rendered",
+      "renderedFileCount": 20,
+      "renderedFiles": [
+        {
+          "relativeFilename": "page-01.png",
+          "sha256": "0171a4d32adc8fbf021752f980cb95bcf0a1516dabf2c72e1df97372d4f67301"
+        },
+        {
+          "relativeFilename": "page-02.png",
+          "sha256": "b2915bec0827edb078e7331eb186352c23b3b7bc986bf826c0dc6f721366afe0"
+        },
+        {
+          "relativeFilename": "page-03.png",
+          "sha256": "6495c580e55348eeea4d8bb66131d2aa0cfa4ca64a6fa40171e846a5d74d374e"
+        },
+        {
+          "relativeFilename": "page-04.png",
+          "sha256": "5b89d112ba766565bd9987ba919be4a693a9d26df409186a816db01d1638c870"
+        },
+        {
+          "relativeFilename": "page-05.png",
+          "sha256": "8e0d0a1c9881480b4b6878bf0431b2a0b4a7a24a52c4d015c6fff3b90704b6b6"
+        },
+        {
+          "relativeFilename": "page-06.png",
+          "sha256": "66f40917bcf72684120fdb055601e3031d3a1ab40ffecaec275010844afd4d36"
+        },
+        {
+          "relativeFilename": "page-07.png",
+          "sha256": "ee8a4920ebce848170ffaa16b0b248b573fc79e554f9d600fd8b2071816404eb"
+        },
+        {
+          "relativeFilename": "page-08.png",
+          "sha256": "5332b358f7cb76d55ce56efe37ecda7bcb673bd2e2abc65a224506fac860cb94"
+        },
+        {
+          "relativeFilename": "page-09.png",
+          "sha256": "04df64c6cdfd5aa2e0c4d5e1532502403f493c38d7cc443a905f95bf36f4a8f4"
+        },
+        {
+          "relativeFilename": "page-10.png",
+          "sha256": "15c2d8a3436dc9c5c412e01eba098533e2e790e2ffd690d9c1d8dd02556845e3"
+        },
+        {
+          "relativeFilename": "page-11.png",
+          "sha256": "70ace57d4a4bd69f9763c46ced6d714cf064ecb2816042d70b01c3ca45a9bc2c"
+        },
+        {
+          "relativeFilename": "page-12.png",
+          "sha256": "8f1c57b6d567ddc6707da0d9dc8c172416e42a941355cd54d5f997065d65c0c3"
+        },
+        {
+          "relativeFilename": "page-13.png",
+          "sha256": "620917d8a492951eb000162d7bf2bbcd1346509330e7fbabc00ed3ab5d6e5fe1"
+        },
+        {
+          "relativeFilename": "page-14.png",
+          "sha256": "2477b4f6679ba5766fea2ec0a4b9fd1ddb19e75cebb36b4a872424a72e957739"
+        },
+        {
+          "relativeFilename": "page-15.png",
+          "sha256": "caff3ab63aeba0261958a882c050939ea07f1fe8cc33a36b81993bd5c63f6fe5"
+        },
+        {
+          "relativeFilename": "page-16.png",
+          "sha256": "40e884c44f2167efa334cc5fe889683741daf973454f88891707286f5a9f850f"
+        },
+        {
+          "relativeFilename": "page-17.png",
+          "sha256": "34e4a7ede5c7f0d22c38dcb3a03cac789ab1a00497aca37b3bc0cef2c24056f8"
+        },
+        {
+          "relativeFilename": "page-18.png",
+          "sha256": "ee9619bf732fe4755826cc53cfe3b61f5f625e6c253b05cebed89d02ce82a933"
+        },
+        {
+          "relativeFilename": "page-19.png",
+          "sha256": "3aaa40da71f96b929fc4bccd5ceac689b6166e5699a69440e225eaa9834ea72c"
+        },
+        {
+          "relativeFilename": "page-20.png",
+          "sha256": "30902336999024023361014a988dc07071c3aabce1c8b95b3ff3594d795f9edc"
+        }
+      ],
+      "renderedSetCanonicalJsonSha256": "4db50de3a9c09378531c86ed7a5afd995a9ef5eef9de785cfe77b04707b0ce96",
+      "requiredSelectedPages": [
+        6,
+        7,
+        18
+      ],
+      "requiredSelectedPagesPresent": true
+    },
+    {
+      "documentId": "doc-cf6b56e7abd7",
+      "sourceType": "raster",
+      "contentFingerprint": "cf6b56e7abd787dcdb64cc2cf7a41b848ba28a413fdde69d71f199b3efe058b2",
+      "pdfFingerprint": {
+        "sha256": "cf6b56e7abd787dcdb64cc2cf7a41b848ba28a413fdde69d71f199b3efe058b2",
+        "sizeBytes": 4274021
+      },
+      "pageCount": 20,
+      "pagesProcessed": 20,
+      "ocrJsonPath": "outputs/audit/ocr/doc-cf6b56e7abd7/tesseract/ocr.json",
+      "ocrJsonSha256": "56c9cea339e8a6aede5b18096cee73bcd877fce33dd3adc869d361ee9fda707a",
+      "renderedDirectory": "outputs/audit/ocr/doc-cf6b56e7abd7/tesseract/rendered",
+      "renderedFileCount": 20,
+      "renderedFiles": [
+        {
+          "relativeFilename": "page-01.png",
+          "sha256": "3841f9d02517c3f249c3d1f9db22805766f3a4ee4eb00469e312ca1607af1f78"
+        },
+        {
+          "relativeFilename": "page-02.png",
+          "sha256": "a25f11958fdbda780c7e95697a5cdf50bd58f0c9267cfe9df6366222e92be7c5"
+        },
+        {
+          "relativeFilename": "page-03.png",
+          "sha256": "a9001e565fa03364d80c714c63709f2974ad6c9b440fe6f8fd25f84226de9248"
+        },
+        {
+          "relativeFilename": "page-04.png",
+          "sha256": "640f3108020a18e26b96f1b1fde8b556a3c4cdd65d4877b0fae40d1e1037f09d"
+        },
+        {
+          "relativeFilename": "page-05.png",
+          "sha256": "99de4a9cc8f33cf7d3b8e847fb56ef624dd368b0f5664f170cd40732d60603cd"
+        },
+        {
+          "relativeFilename": "page-06.png",
+          "sha256": "4e930d820739fc500171b43e415ef0df1b2327605fa751d23f1942ca6c99aa85"
+        },
+        {
+          "relativeFilename": "page-07.png",
+          "sha256": "2dc2465aa98073cd1f583174a7e16673e8d4e36e11dfd6f36fa00f8cef3a99f8"
+        },
+        {
+          "relativeFilename": "page-08.png",
+          "sha256": "6539515cc4819fc89f84d41eaedec93ea708c07a87a8e6a44e61dc0716d70852"
+        },
+        {
+          "relativeFilename": "page-09.png",
+          "sha256": "8c6e4fcf8f7f3375d6ac0ab045002bf98ffb29e687d24b2dba3d00b38c7fbdcd"
+        },
+        {
+          "relativeFilename": "page-10.png",
+          "sha256": "866c39cb0ad46c62ee0b86ff87d7ab533d682ede5e217424de894292bdebb2e8"
+        },
+        {
+          "relativeFilename": "page-11.png",
+          "sha256": "0c7bd40f6faa8d95f2cd5440e36e8c368e6d8052bb6699bf9ca6baee9921e6fb"
+        },
+        {
+          "relativeFilename": "page-12.png",
+          "sha256": "307f51ad1abf571801b0aac272398629ff9f33ba51bdd9ce401ac32191c35118"
+        },
+        {
+          "relativeFilename": "page-13.png",
+          "sha256": "3ea882c8ad5fae66445c104f41392df098b5abdc90ef1323c42da768d9a68cf4"
+        },
+        {
+          "relativeFilename": "page-14.png",
+          "sha256": "e3fbf5773f7de639753e097430dd380d5e885e79d81d88f009e319e4ee889228"
+        },
+        {
+          "relativeFilename": "page-15.png",
+          "sha256": "c1810ffe8f91b2e2be4bc7d4d85c1fa834e83e83c579e234b5207e155b252f7f"
+        },
+        {
+          "relativeFilename": "page-16.png",
+          "sha256": "e7e5df102321074dfff8960d375d70c7eb2e1df533208dc53cc096edfe461580"
+        },
+        {
+          "relativeFilename": "page-17.png",
+          "sha256": "3239a1e88ad00c1a412451da326c2e1a30272cddd93155b2deba6db3b31b40bb"
+        },
+        {
+          "relativeFilename": "page-18.png",
+          "sha256": "fe3d36c581039433240711ff70b6eeed928b0976beae2fb61a85ac50410f099d"
+        },
+        {
+          "relativeFilename": "page-19.png",
+          "sha256": "8ebbe6e565f168032e07c8db1a4da4904704a50dafa90aa05b87988af4ed5c43"
+        },
+        {
+          "relativeFilename": "page-20.png",
+          "sha256": "fb842a0ff82149aa825f594a8775c03f0ae1ed7b04432b0def730f1863ce4a37"
+        }
+      ],
+      "renderedSetCanonicalJsonSha256": "0cdb652ec413595fb6152b86b70adda6cefc22071e45a4a830815d3ea001c6b4",
+      "requiredSelectedPages": [
+        5,
+        12,
+        16
+      ],
+      "requiredSelectedPagesPresent": true
+    },
+    {
+      "documentId": "doc-eefc3d15076e",
+      "sourceType": "raster",
+      "contentFingerprint": "eefc3d15076e47cc143d5b5dd62ebeeed0dc0c206bf07c67ef166bf19ed609c3",
+      "pdfFingerprint": {
+        "sha256": "eefc3d15076e47cc143d5b5dd62ebeeed0dc0c206bf07c67ef166bf19ed609c3",
+        "sizeBytes": 1033812
+      },
+      "pageCount": 39,
+      "pagesProcessed": 39,
+      "ocrJsonPath": "outputs/audit/ocr/doc-eefc3d15076e/tesseract/ocr.json",
+      "ocrJsonSha256": "868058a2de5882f7c19fef20217b29a79a3013841317a714248fb3f73887c25e",
+      "renderedDirectory": "outputs/audit/ocr/doc-eefc3d15076e/tesseract/rendered",
+      "renderedFileCount": 39,
+      "renderedFiles": [
+        {
+          "relativeFilename": "page-01.png",
+          "sha256": "04a0b0c9f061594cb9fd47b3ea5faf46556ecee7d825dea7473268a59189e7b7"
+        },
+        {
+          "relativeFilename": "page-02.png",
+          "sha256": "7f80f035410b61c3c1aea8fee8f7cb4db695f7a57e8d0246fe127204ee4fc4c3"
+        },
+        {
+          "relativeFilename": "page-03.png",
+          "sha256": "64d76380e79b9961b2461bf69d791dbb61cd962e7935211dc01a7768f3fe038d"
+        },
+        {
+          "relativeFilename": "page-04.png",
+          "sha256": "88d79d14d5b6d55aea31f24da4147799e79eb521f7bc25cb50c49bb39908a8de"
+        },
+        {
+          "relativeFilename": "page-05.png",
+          "sha256": "0c5717ba32a7aa5d531765cbaf48e4556261cf7bd250f880791314ee6172b83b"
+        },
+        {
+          "relativeFilename": "page-06.png",
+          "sha256": "4eea484cb8d52657b293e243acb8df006f99069d39f62f921951559bea67db59"
+        },
+        {
+          "relativeFilename": "page-07.png",
+          "sha256": "c29fd597aee843ab801039379264d1657a7b8a8d84ea858db9545c3c1a5d71d4"
+        },
+        {
+          "relativeFilename": "page-08.png",
+          "sha256": "b12c8ebe7918b902f848ad2127fbf8cab494f25019c45842ad6f039c7ed196e8"
+        },
+        {
+          "relativeFilename": "page-09.png",
+          "sha256": "09b584a6d272f3c74b7a4e6646f5b138db7220f6312b95a74b8293f335c90657"
+        },
+        {
+          "relativeFilename": "page-10.png",
+          "sha256": "7f92e40af172ed5d09125d175277575e1458146095d5a4ccb70bb5a0f1206a35"
+        },
+        {
+          "relativeFilename": "page-11.png",
+          "sha256": "e466d1329fca5ab6fd3fe236db27b972a4ecb217270b886656156d3cd5df92f5"
+        },
+        {
+          "relativeFilename": "page-12.png",
+          "sha256": "30eb3a8d52930f8154ebaa1c198af30dddf0c5c2462f6b23072d2b003585797d"
+        },
+        {
+          "relativeFilename": "page-13.png",
+          "sha256": "af411aef2747c9a6929a2925a16107cbc23f0aa6620b2c174a771ae30e78e13e"
+        },
+        {
+          "relativeFilename": "page-14.png",
+          "sha256": "2acb087c6be28aa26a0ad028c405b2e62d490c8061fac03dffc7bd1064729a43"
+        },
+        {
+          "relativeFilename": "page-15.png",
+          "sha256": "3d2759845bc4536934122dbdc398c9cdd83dc919726165d84083409426f984b8"
+        },
+        {
+          "relativeFilename": "page-16.png",
+          "sha256": "68e65b193269402b3d1d9452c715518e6e5d96d84a55bdb9985608e502624cb4"
+        },
+        {
+          "relativeFilename": "page-17.png",
+          "sha256": "e0e777b1097ff571ed3087196556a99defd7f2c10aa3549a7b8b1dbda91a66a8"
+        },
+        {
+          "relativeFilename": "page-18.png",
+          "sha256": "6807542006ad8ffa64edf81d31bf89db6172880ad92dfeb41a5fdf3c78048f6d"
+        },
+        {
+          "relativeFilename": "page-19.png",
+          "sha256": "934e2fa94fc9394383381536f5916e37d83b93f96430ce074c2b705be7574839"
+        },
+        {
+          "relativeFilename": "page-20.png",
+          "sha256": "d1ad6203120ed239b46e873b2dd11399096d1373ef49fc678b1acf52202dc75a"
+        },
+        {
+          "relativeFilename": "page-21.png",
+          "sha256": "cb1d163f4709cd5b910bb67a3ac3fe44c9640ccaf314926376a1df4cc18bdfbe"
+        },
+        {
+          "relativeFilename": "page-22.png",
+          "sha256": "8df08d46dcea726bda46306fe63ce5927d68d35642c5d890a89d89d45e311987"
+        },
+        {
+          "relativeFilename": "page-23.png",
+          "sha256": "d5729b31a1e8c2e3f009467ee77da5601627479e9605853503aa82abcc2a6c5d"
+        },
+        {
+          "relativeFilename": "page-24.png",
+          "sha256": "10c4edf084b7a2d3c959fd05b826b932bcbc24c01815be60ee1042fc0613d97d"
+        },
+        {
+          "relativeFilename": "page-25.png",
+          "sha256": "c95a90e68d409f4f817bbdb1ecd606b23a3317f75a6655482e49f36062ae35fa"
+        },
+        {
+          "relativeFilename": "page-26.png",
+          "sha256": "67e95ee645975e5a284a661afd27b9cf822d0f877e20142cbede83c9e9b9fb6b"
+        },
+        {
+          "relativeFilename": "page-27.png",
+          "sha256": "e7604314551979fea617f4c3f0b8df173da472a362f433c36d6fbe8bd5eabdbc"
+        },
+        {
+          "relativeFilename": "page-28.png",
+          "sha256": "21f6e485c27e69d4063fcdeb5f29d5c83738ae5a4f77bd16fb376a6f09c69d85"
+        },
+        {
+          "relativeFilename": "page-29.png",
+          "sha256": "441dea4f1cae6a23d282200ba9c9b8f4930732445c53db3ef921b0903dcf7ccc"
+        },
+        {
+          "relativeFilename": "page-30.png",
+          "sha256": "85f8d2459de982213bf670b6728503e0e72c865b608fb8716ffe1bc835d292ac"
+        },
+        {
+          "relativeFilename": "page-31.png",
+          "sha256": "efabe5cffd46d0e30d2cc0bb55a18db0d77ffc61e6b5892114863aa6e32dfc39"
+        },
+        {
+          "relativeFilename": "page-32.png",
+          "sha256": "99aa04bfda3cb2d4ead1d56de8af4d8e853c83e48325f61e5575d8afa948e323"
+        },
+        {
+          "relativeFilename": "page-33.png",
+          "sha256": "e8ce65615a94f7fffad3b5381a5215b56b5c1fb78261c8546bce311761698db7"
+        },
+        {
+          "relativeFilename": "page-34.png",
+          "sha256": "98c1f8a4e091d1ce4a9b0c1054434c8284e2a5520239b77b9d5d9e7b2e574d05"
+        },
+        {
+          "relativeFilename": "page-35.png",
+          "sha256": "d99e09d7179a039ffe8afabbf9fe6fd54217f3c5f0800dbc4043cd9eca39a1f4"
+        },
+        {
+          "relativeFilename": "page-36.png",
+          "sha256": "b99e0a6c83977dedf9468ad53314b8e8fe8fba956e1124a0537633d4eeb02c9f"
+        },
+        {
+          "relativeFilename": "page-37.png",
+          "sha256": "27fd65cbecec16dc11acce73b3d5100676f2905dc17bf71e22207949db82705d"
+        },
+        {
+          "relativeFilename": "page-38.png",
+          "sha256": "534acc9727613bddeeb95a0f4c412090638733dd8ea67ed5717369f98dd614b2"
+        },
+        {
+          "relativeFilename": "page-39.png",
+          "sha256": "53dc1dff7c2b7274caa829e7d08fe8fbb28c9f1fc9e95f2cf42115f46996d45a"
+        }
+      ],
+      "renderedSetCanonicalJsonSha256": "1f0d52a9e97920d29f8d479481ee7b19772469cbfa0c8023e4f46f6fc4d7a0f0",
+      "requiredSelectedPages": [
+        14,
+        18,
+        36
+      ],
+      "requiredSelectedPagesPresent": true
+    },
+    {
+      "documentId": "doc-f03e7d17eec1",
+      "sourceType": "hybrid",
+      "contentFingerprint": "f03e7d17eec1cd97788ae2f938dbeb4c91e64c79db0b57e0b064ab28670669d7",
+      "pdfFingerprint": {
+        "sha256": "f03e7d17eec1cd97788ae2f938dbeb4c91e64c79db0b57e0b064ab28670669d7",
+        "sizeBytes": 910782
+      },
+      "pageCount": 39,
+      "pagesProcessed": 39,
+      "ocrJsonPath": "outputs/audit/ocr/doc-f03e7d17eec1/tesseract/ocr.json",
+      "ocrJsonSha256": "f858189a97413b73b0f0f2b29ad2d8cb09180ab2d9c97489dec829c2aa81409a",
+      "renderedDirectory": "outputs/audit/ocr/doc-f03e7d17eec1/tesseract/rendered",
+      "renderedFileCount": 39,
+      "renderedFiles": [
+        {
+          "relativeFilename": "page-01.png",
+          "sha256": "3a57dbf56bf25501751b12ca93a8ef282b9e5202decad025bfc72dfb71ca8ed0"
+        },
+        {
+          "relativeFilename": "page-02.png",
+          "sha256": "934cf456e42aa72a9dfcda140463a4422b21cb2ddcf57d522e780cbbcc83b68c"
+        },
+        {
+          "relativeFilename": "page-03.png",
+          "sha256": "cba4aed965f4016070b575ce6f3832d3a93cfbf9183a208fb9de9d7a58967a8e"
+        },
+        {
+          "relativeFilename": "page-04.png",
+          "sha256": "aeed14cceedf9a7e05784a4f57ff72d48366f3d3078f536c947a9699358dcbb9"
+        },
+        {
+          "relativeFilename": "page-05.png",
+          "sha256": "b8f5ad96e8e27c7aa3b02de3943ec8849700eaf3b02abb7316d8ea9e52487e55"
+        },
+        {
+          "relativeFilename": "page-06.png",
+          "sha256": "292d814cb18ef11bb772b14c73914c9acd5f1a8839e5b7951bb37d99297026ff"
+        },
+        {
+          "relativeFilename": "page-07.png",
+          "sha256": "d2e734777663c16af38c72f746131330c13a09a78c60025dae430f1db406d86e"
+        },
+        {
+          "relativeFilename": "page-08.png",
+          "sha256": "b4229b0b30cd6733ddf69c95d9ee26bd93afa78c12ec79922875ecb7cd267644"
+        },
+        {
+          "relativeFilename": "page-09.png",
+          "sha256": "bba2afa1429f10e65f79de3a128c66a8152dc724c8937c93bd0c2f22544d5d6d"
+        },
+        {
+          "relativeFilename": "page-10.png",
+          "sha256": "d51963b67d6479461db4238bb8ac4a498a681c99eec4fabe4b33d54bfd806517"
+        },
+        {
+          "relativeFilename": "page-11.png",
+          "sha256": "d6f8aeec48db04421f18b11fc73a3c7bdf85cd5216457e7aec6f271d3a4182e2"
+        },
+        {
+          "relativeFilename": "page-12.png",
+          "sha256": "645e769bf0368504501112104b7a0d50bf52f85c2fe72abc955e5cee15a3c906"
+        },
+        {
+          "relativeFilename": "page-13.png",
+          "sha256": "3effa42f01b0681fc5c9d2f642cc01bb57e3568e06f52aefa0b964458abd3dad"
+        },
+        {
+          "relativeFilename": "page-14.png",
+          "sha256": "93ddf305dfe77810ea1bc5bc0c745b2a66681a44963bae19c08823bb4be379ae"
+        },
+        {
+          "relativeFilename": "page-15.png",
+          "sha256": "af3edab966c548133f7e5665df3a03f67406fac0ea2e1b9d2c340a7b880c15b4"
+        },
+        {
+          "relativeFilename": "page-16.png",
+          "sha256": "ec9efb359d6392b7f4709b9a66483e360614b183ec294cf4ccdb4f7b5a53fcd3"
+        },
+        {
+          "relativeFilename": "page-17.png",
+          "sha256": "9270c9324b7302353294063ef28f9172b11455874f76f89c70945c513eb6f8ce"
+        },
+        {
+          "relativeFilename": "page-18.png",
+          "sha256": "b44513ee5566f823653eb754870aaa0f53157a8ec6c67c4b6d8e0f88fecfac84"
+        },
+        {
+          "relativeFilename": "page-19.png",
+          "sha256": "e75965d91c86ed75337c010abc5dfc35a5f181d10d8dbe1f5afe7686d79f52fb"
+        },
+        {
+          "relativeFilename": "page-20.png",
+          "sha256": "0e8fc22fe7c7a0434eb2317d2c059659119faca6560e4c038a169fd11bac6c4f"
+        },
+        {
+          "relativeFilename": "page-21.png",
+          "sha256": "9a7f8d3a0833c40cfb7190d04fd2ed27f0b60b2a10cdf06c1c63452bb6245a2c"
+        },
+        {
+          "relativeFilename": "page-22.png",
+          "sha256": "8f677d8c0275a04f7ed23ce0b0b0f807a6a3122d14c2e282937c1ba6a57b48b0"
+        },
+        {
+          "relativeFilename": "page-23.png",
+          "sha256": "5d0b20fdc00ddae30b00e456db15212995b389eaa73827c19af4ea120bb0e6a4"
+        },
+        {
+          "relativeFilename": "page-24.png",
+          "sha256": "9f36214c16fe7fc1160c6dfc456bd8ec3bdc70415e06ca0a39b02dfc9a4d513c"
+        },
+        {
+          "relativeFilename": "page-25.png",
+          "sha256": "6bfc8362be13dd6265e6fd88a5d5090df08b9300641a6b53758ecfa094e5f8db"
+        },
+        {
+          "relativeFilename": "page-26.png",
+          "sha256": "ccc4a3ac875bdf3f43c8d42e221c9034ead4e721a0d4de6b14c4075fac23cf89"
+        },
+        {
+          "relativeFilename": "page-27.png",
+          "sha256": "11f0f7ef5ba7f744123d4343f8361465f8cae9deb241edfec130a63afd2c3808"
+        },
+        {
+          "relativeFilename": "page-28.png",
+          "sha256": "29dd139b885c0ca5941c54ccc9d5afd9394ba586a4c0ee300a65737ae184769b"
+        },
+        {
+          "relativeFilename": "page-29.png",
+          "sha256": "e36a59bb77f0b76eb6af6d6fc3996a51a43f30dc3f9d5dd7b5c5126064c924b2"
+        },
+        {
+          "relativeFilename": "page-30.png",
+          "sha256": "3b8a7500ffe578ee9aa2ac03878d09681b11b0affd3939e8d91d7d565e796413"
+        },
+        {
+          "relativeFilename": "page-31.png",
+          "sha256": "d98f26c50735a6db1a3fb7de340a8611a78fc04acb0691de2f067c6d0548bc6b"
+        },
+        {
+          "relativeFilename": "page-32.png",
+          "sha256": "7c56fe046bd37e1a01ea88e6460e465e173de42015b798ac5ae679d51ed4c3f6"
+        },
+        {
+          "relativeFilename": "page-33.png",
+          "sha256": "bdf6865cb113f74da0dbcfef3581470f72f3fec487c38f91ed87bcda24be6e52"
+        },
+        {
+          "relativeFilename": "page-34.png",
+          "sha256": "4d0e8bf0b941d076f649ae31a32eb4cbc4852078fe0757815de0c1fef91c8996"
+        },
+        {
+          "relativeFilename": "page-35.png",
+          "sha256": "8ad90e66f24b95067e5789f871970509550fb126c1a0d26d81954cf72db8f3a2"
+        },
+        {
+          "relativeFilename": "page-36.png",
+          "sha256": "da81686a88b6ecfcbb225e52d52d3c044835b02e2bf71ef352b1502a07e65c53"
+        },
+        {
+          "relativeFilename": "page-37.png",
+          "sha256": "82da710e2926bbe30008c3d43b0e192ef126106ebdc21674e8439fcb17cba5d1"
+        },
+        {
+          "relativeFilename": "page-38.png",
+          "sha256": "7a8027301fd1b5fad6fc1dbcf9cc32dbd37396d4793c0319d773120b264c7f29"
+        },
+        {
+          "relativeFilename": "page-39.png",
+          "sha256": "221d48d141ef35d6217e589473fb143dd1f555af5a9035f14828e0f62e9eaff9"
+        }
+      ],
+      "renderedSetCanonicalJsonSha256": "9f706c9a89eca2a602ef139277d969789788a1a67a0fb7ae8c6e10f4ad322bd8",
+      "requiredSelectedPages": [
+        37
+      ],
+      "requiredSelectedPagesPresent": true
+    },
+    {
+      "documentId": "doc-f4dd01071816",
+      "sourceType": "raster",
+      "contentFingerprint": "f4dd0107181635855698e2242629cade64f086ecd5068f81a0ffddb97c25060f",
+      "pdfFingerprint": {
+        "sha256": "f4dd0107181635855698e2242629cade64f086ecd5068f81a0ffddb97c25060f",
+        "sizeBytes": 12983564
+      },
+      "pageCount": 21,
+      "pagesProcessed": 21,
+      "ocrJsonPath": "outputs/audit/ocr/doc-f4dd01071816/tesseract/ocr.json",
+      "ocrJsonSha256": "d6653f6fbd40a8622d508f1c23605ac8955d9d1d887cb2f09d79fdd8b460a24c",
+      "renderedDirectory": "outputs/audit/ocr/doc-f4dd01071816/tesseract/rendered",
+      "renderedFileCount": 21,
+      "renderedFiles": [
+        {
+          "relativeFilename": "page-01.png",
+          "sha256": "39ab1f598caea247af60fe97fb56a3418c50d7ac9fdd8488f84302b8963d7877"
+        },
+        {
+          "relativeFilename": "page-02.png",
+          "sha256": "0094eb076f22674e4ae563cd3bd6db02a2ae2c461ec19889a7d1f6854c3c060d"
+        },
+        {
+          "relativeFilename": "page-03.png",
+          "sha256": "c99bde41ffa9a863e3f24f4f2cb8b32d43a4bd68d4ccc4afc10deefbd9faa629"
+        },
+        {
+          "relativeFilename": "page-04.png",
+          "sha256": "f1eab79919368783bc15922e6b2f2b9be750bd0838a1fc0a318545061671ca8e"
+        },
+        {
+          "relativeFilename": "page-05.png",
+          "sha256": "7579b4782b31533330b8938d201aa99d7929db8d1189736ed6de1ac698787ca5"
+        },
+        {
+          "relativeFilename": "page-06.png",
+          "sha256": "0ce84857bc9afd91f2d292f9b3ca43cbd7b78b24453e508100bf6a620cf69dfb"
+        },
+        {
+          "relativeFilename": "page-07.png",
+          "sha256": "536937d408093ff06df33ec0fd3bd505b54ccf9eac33e0453989ef68ed2f5e4c"
+        },
+        {
+          "relativeFilename": "page-08.png",
+          "sha256": "b663a32a41621c86ec8a543ef14aaaf90a844278a64677bc363b323515b08095"
+        },
+        {
+          "relativeFilename": "page-09.png",
+          "sha256": "2cc08ba984637546fd1aef096fc6efdb30212d56ec73e099c37241c9d7487b13"
+        },
+        {
+          "relativeFilename": "page-10.png",
+          "sha256": "6c8fe7b11baee6bb05ec18c938552edd2d8065e1b8b04f84d1fe1541df2ceb25"
+        },
+        {
+          "relativeFilename": "page-11.png",
+          "sha256": "87ac8ba000e6a62d771dd360798f0967fdbe9682800ae9c830c95c4475a95268"
+        },
+        {
+          "relativeFilename": "page-12.png",
+          "sha256": "0bb50f1c3125c89505c6061e9039f6c43fe4ed9f9019564c6ac0f9be3d8b531c"
+        },
+        {
+          "relativeFilename": "page-13.png",
+          "sha256": "443dc00532c648501d53f4dd0b7616ab58560f63d926b0f4240c3d7aaa8e11fd"
+        },
+        {
+          "relativeFilename": "page-14.png",
+          "sha256": "e0fff70757c6f9e0cee9fd494dcfcad572288294a11f0f8823319a71d625116e"
+        },
+        {
+          "relativeFilename": "page-15.png",
+          "sha256": "2eb604876e64018ae0551659eb3361d631ac79dd14c922522e24e1de89364f67"
+        },
+        {
+          "relativeFilename": "page-16.png",
+          "sha256": "bba77120c62bba22bbecbffb42ca23c2e23e05cd01e873ad1af62b60dffc466e"
+        },
+        {
+          "relativeFilename": "page-17.png",
+          "sha256": "611bc0ab6f656562220dbf254fa12529e86fc7af4a6d49c4bfbf412b0e3fca8f"
+        },
+        {
+          "relativeFilename": "page-18.png",
+          "sha256": "282a5cd7d9dc78932335c54b7287b6f13050018438e7f146937c8c28b54b3809"
+        },
+        {
+          "relativeFilename": "page-19.png",
+          "sha256": "646b016740feafc591b7e4ea4d06e8841953e07caa3a1dc687992856913aa7cf"
+        },
+        {
+          "relativeFilename": "page-20.png",
+          "sha256": "336616b1c1dac46dd90041566a2085c0002c41fe52b65aa2e9ede34eccf53589"
+        },
+        {
+          "relativeFilename": "page-21.png",
+          "sha256": "1cd0b1b2da10fd672ba8138dda6e8d92c383595fa7b21d172f5f676c099a3837"
+        }
+      ],
+      "renderedSetCanonicalJsonSha256": "f0146b0372de7af3c622bcf7f727f48fa3f7ea62e8c167bfc2e30fabb391387f",
+      "requiredSelectedPages": [
+        6,
+        14,
+        20
+      ],
+      "requiredSelectedPagesPresent": true
+    }
+  ],
+  "cacheSetCanonicalJsonSha256": "13c7694f146155ab4f3bdd9e9b3700a556b7c81fbb2ecebc48fbafd34ef59f37",
+  "allPdfFingerprintsMatch": true,
+  "allCachesValid": true,
+  "allRequiredPagesPresent": true,
+  "runnerAddressableRenderedPages": 315,
+  "requiredPagesPhysicallyPresent": 43,
+  "requiredPagesRunnerAddressable": 43,
+  "groundTruthFrozen": true,
+  "ocrExecutionConfigFrozen": true,
+  "frozenOCRConfigurationIdentifiable": true,
+  "preflight": {
+    "pdfFingerprintsMatched": 48,
+    "cachesReady": 16,
+    "cachesMissing": 0,
+    "requiredPagesMissing": 0,
+    "selftestsPassed": true,
+    "selftests": [
+      "scripts/audit_ocr_content_selftest.py",
+      "scripts/audit_response_structure_selftest.py",
+      "scripts/audit_visual_marker_evidence_selftest.py",
+      "scripts/audit_response_regions_selftest.py",
+      "scripts/audit_response_fusion_selftest.py",
+      "scripts/audit_observations_selftest.py",
+      "scripts/audit_question_boundary_selftest.py"
+    ],
+    "functionalCodeUnchanged": true,
+    "priorV4OfficialRunDetected": false,
+    "officialRunReady": true
+  },
+  "officialRunReadyAfterCachePreparation": true,
+  "freezePolicy": "The Git commit that first introduces this manifest constitutes the Holdout V4 OCR cache preparation freeze. Local outputs remain ignored; the first official Auditor run is not performed during this preparation."
+}
