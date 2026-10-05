@@ -26,7 +26,7 @@ ANSWER_KEY_FILENAME_PREFIX = "gab_"
 SOURCE_CLASSES = ("text_native", "raster", "text_low_quality", "hybrid")
 SPLITS = ("random", "challenge", "reserved")
 
-RESPONSE_MODES = ("single_choice", "true_false", "numeric", "discursive", "other", "unknown")
+RESPONSE_MODES = ("single_choice", "true_false", "numeric", "numeric_response", "discursive", "other", "unknown")
 LAYOUTS = ("vertical", "two_column", "grid", "parent_child", "internal_enumeration", "mixed", "none", "unknown")
 MARKER_STYLES = ("textual", "parenthesized", "circled_outline", "circled_filled", "symbolic_control", "none", "mixed", "unknown")
 CONTENT_KINDS = ("text", "math", "media", "mixed", "none", "unknown")

@@ -340,6 +340,10 @@ def test_slice_and_labels() -> None:
 
 
 def test_validators() -> None:
+  for response_mode in ("numeric", "numeric_response"):
+    valid_gt = {"protocolVersion": "holdout-v4", "questions": [gt_question(response_mode=response_mode, count=None)]}
+    schema.validate_ground_truth(valid_gt)
+    check(f"validators.gt_{response_mode}_accept", valid_gt["questions"][0]["responseMode"] == response_mode)
   invalid_manifest = {"protocolVersion": "holdout-v1", "selectionSeed": 1, "selectionConfig": {}, "documents": [
     {"documentId": "d1", "canonicalPath": "x", "contentFingerprint": "f", "family": "CMF", "year": 2010, "sourceType": "bogus"}]}
   try:
