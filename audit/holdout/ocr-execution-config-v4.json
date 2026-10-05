@@ -1,0 +1,50 @@
+{
+  "artifactType": "holdout-v4-ocr-execution-config",
+  "protocolVersion": "holdout-v4",
+  "configurationVersion": 1,
+  "sourceGitCommit": "d9a37577c844213152a9db8c3cded1166c3a4cb9",
+  "configurationBasis": {
+    "inheritedFrom": "audit/holdout/results/auditor-v1-holdout-v3-first-run.provenance.json",
+    "inheritedFromFileSha256": "45e6460fb6656c3d8ac05372e64c948e589fab9248de159208ffc0de4ff32398",
+    "retunedFromV4": false,
+    "v4ResultsAvailableAtFreeze": false,
+    "questionIndexOcrConfigReused": false
+  },
+  "ocr": {
+    "engine": "tesseract",
+    "dpi": 160,
+    "psm": 6,
+    "lang": "por+eng",
+    "fullDocumentOcr": true
+  },
+  "runtime": {
+    "tesseractPath": "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+    "tesseractVersion": "tesseract v5.4.0.20240606",
+    "tessdataPath": "C:\\Users\\trans\\Documents\\SimpleQuest\\tmp\\tessdata",
+    "pdftoppmPath": "C:\\Users\\trans\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\poppler\\Library\\bin\\pdftoppm.EXE",
+    "pdftoppmVersion": "pdftoppm version 26.07.0",
+    "requiredLanguages": [
+      "por",
+      "eng"
+    ],
+    "availableLanguages": [
+      "eng",
+      "osd",
+      "por"
+    ]
+  },
+  "environmentDrift": {
+    "pdftoppmVersionDriftFromV3": true,
+    "previousVersion": "25.07.0",
+    "currentVersion": "26.07.0",
+    "reason": "local environment/tool version changed before any V4 Auditor run",
+    "v4ResultsConsultedForDecision": false
+  },
+  "cacheLayout": {
+    "root": "outputs/audit/ocr",
+    "documentPattern": "<documentId>/tesseract",
+    "payload": "ocr.json",
+    "renderedDirectory": "rendered"
+  },
+  "freezePolicy": "The Git commit that first introduces this configuration constitutes the OCR execution configuration freeze for the first official Holdout V4 run. No OCR cache for that run may be generated before this commit exists."
+}
