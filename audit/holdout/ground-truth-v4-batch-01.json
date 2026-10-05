@@ -4,9 +4,9 @@
   "annotationVersion": 1,
   "batchId": "ground-truth-01",
   "sourceManifest": "audit/holdout/manifest-v4-b.json",
-  "sourceManifestFileSha256": "7250a9bd00f54bb49e0c68da468f4a5fb22dde9cd99943681642c582a619b885",
+  "sourceManifestFileSha256": "763290a582e5ed9436717c8cd754bb4501ad5a6f6aa5c69d8b3287014e93f8e7",
   "sourceQuestionIndex": "audit/holdout/question-index-v4-final.json",
-  "sourceQuestionIndexFileSha256": "c6552696da6cfc6bb96b04d1060fba676062991252b4cb92fffd2d93e1e8b0f8",
+  "sourceQuestionIndexFileSha256": "4681bb8b257642ba1709c7c908791c011c16bc94b88c0071b4a971515c0bb4ab",
   "humanAdjudicated": true,
   "auditorExecutedBeforeFreeze": false,
   "documentFingerprints": {

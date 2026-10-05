@@ -672,7 +672,7 @@
           "questionId": "doc-6381aed53bb1:q19",
           "questionNumber": 19,
           "pageStart": 14,
-          "pageEnd": 14
+          "pageEnd": 15
         },
         {
           "questionId": "doc-6381aed53bb1:q20",
@@ -801,7 +801,7 @@
           "pageEnd": 27
         }
       ],
-      "neutralNotes": "Materializado exclusivamente da revisao visual humana fornecida; numero canonico igual ao impresso, sem reinicio de numeracao. p16 = texto/base da seção de Língua Portuguesa, sem nova questão. p24 = texto/base, sem nova questão. p28-p29 sem novas questões."
+      "neutralNotes": "Materializado exclusivamente da revisao visual humana fornecida; numero canonico igual ao impresso, sem reinicio de numeracao. p16 = texto/base da seção de Língua Portuguesa, sem nova questão. p24 = texto/base, sem nova questão. p28-p29 sem novas questões. Post-freeze objective page-range correction: q19 continues from page 14 to page 15, where its printed answer alternatives appear before q20 starts."
     },
     {
       "documentId": "doc-89561bb8f1fe",

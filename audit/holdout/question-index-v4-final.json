@@ -169,7 +169,7 @@
     {
       "tier": "C",
       "path": "audit/holdout/question-index-v4-tier-c-adjudication.json",
-      "sha256": "61e20f03f2fa8decb55ad61975ed2d3e8cc6812ecf1100e1b481b5e4b0a2aee6",
+      "sha256": "bcc5898931127ec11f5d2c25412da4ccba20005ce6707c00133cc24be6c66d6a",
       "provenance": {
         "artifactType": "holdout-v4-tier-c-neutral-adjudication",
         "protocolVersion": "holdout-v4",
@@ -8434,7 +8434,7 @@
           "questionId": "doc-6381aed53bb1:q19",
           "questionNumber": 19,
           "pageStart": 14,
-          "pageEnd": 14
+          "pageEnd": 15
         },
         {
           "questionId": "doc-6381aed53bb1:q20",
@@ -8563,7 +8563,7 @@
           "pageEnd": 27
         }
       ],
-      "neutralNotes": "Materializado exclusivamente da revisao visual humana fornecida; numero canonico igual ao impresso, sem reinicio de numeracao. p16 = texto/base da seção de Língua Portuguesa, sem nova questão. p24 = texto/base, sem nova questão. p28-p29 sem novas questões."
+      "neutralNotes": "Materializado exclusivamente da revisao visual humana fornecida; numero canonico igual ao impresso, sem reinicio de numeracao. p16 = texto/base da seção de Língua Portuguesa, sem nova questão. p24 = texto/base, sem nova questão. p28-p29 sem novas questões. Post-freeze objective page-range correction: q19 continues from page 14 to page 15, where its printed answer alternatives appear before q20 starts."
     },
     {
       "documentId": "doc-89561bb8f1fe",

@@ -86,4 +86,10 @@ Original PDFs and the raw question index are byte-preserved.
 
 `audit/holdout/question-index-v4-tier-c-adjudication.json`
 
-SHA256: `61e20f03f2fa8decb55ad61975ed2d3e8cc6812ecf1100e1b481b5e4b0a2aee6`.
+SHA256: `bcc5898931127ec11f5d2c25412da4ccba20005ce6707c00133cc24be6c66d6a`.
+
+## Post-freeze objective erratum — 2026-10-05
+
+Human-confirmed correction: doc-6381aed53bb1:q19 keeps pageStart = 14; pageEnd changes from 14 to 15 because its printed alternatives on page 15 precede q20. The five multi-page ranges and other statements above record the original freeze; q19 is now a sixth multi-page question. No other question, identity, count or fingerprint changed (13 documents / 430 canonical questions). The document neutralNotes appends the objective correction.
+
+Original artifact SHA256: 61e20f03f2fa8decb55ad61975ed2d3e8cc6812ecf1100e1b481b5e4b0a2aee6. Current SHA256: bcc5898931127ec11f5d2c25412da4ccba20005ce6707c00133cc24be6c66d6a. Frozen review package/context and original human-source metadata remain historical snapshots. No selection, GT adjudication, PDF reinterpretation or Auditor execution occurred. See [objective erratum](V4_OBJECTIVE_ERRATUM_Q19_PAGE_RANGE.md).

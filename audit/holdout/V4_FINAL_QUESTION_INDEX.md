@@ -17,11 +17,11 @@ Tier A e a uniao disjunta das adjudicacoes unresolved e neutral: 6 + 12 = 18 doc
 ## Linhagem e hashes
 
 - HEAD anterior: `4735ea5e3cf108b7c79ea9fa8b9c7aafff0bb563`.
-- [Final question index](question-index-v4-final.json): SHA256 `c6552696da6cfc6bb96b04d1060fba676062991252b4cb92fffd2d93e1e8b0f8`.
+- [Final question index](question-index-v4-final.json): SHA256 `4681bb8b257642ba1709c7c908791c011c16bc94b88c0071b4a971515c0bb4ab`.
 - [question-index-v4-tier-a-unresolved-adjudication.json](question-index-v4-tier-a-unresolved-adjudication.json): SHA256 `252cb855129bf544bc1982a08856fe8b1212784bac0e33e8f435c7f01398a0e3`.
 - [question-index-v4-tier-a-neutral-adjudication.json](question-index-v4-tier-a-neutral-adjudication.json): SHA256 `9873515ef637abfd7f38b8907fd24f09b6685997591731ea9b8ae8d964569524`.
 - [question-index-v4-tier-b-adjudication.json](question-index-v4-tier-b-adjudication.json): SHA256 `837ef7f04c5745140ab7850b9be975935e66d53bf55cfdbf3ce2de5f407377d7`.
-- [question-index-v4-tier-c-adjudication.json](question-index-v4-tier-c-adjudication.json): SHA256 `61e20f03f2fa8decb55ad61975ed2d3e8cc6812ecf1100e1b481b5e4b0a2aee6`.
+- [question-index-v4-tier-c-adjudication.json](question-index-v4-tier-c-adjudication.json): SHA256 `bcc5898931127ec11f5d2c25412da4ccba20005ce6707c00133cc24be6c66d6a`.
 - [question-index-v4-tier-d-adjudication.json](question-index-v4-tier-d-adjudication.json): SHA256 `78586630fc0552a612ee230c9896d39f39e0cacbb6c8b8e3939e62032b0b0751`.
 - [Manifest documental](manifest-v4-a.json): SHA256 `be69ceafd2fde2ce00f5f72966c12e22d33f575785ddc00ae57030fe74b2dccc`.
 - [Review queue](question-index-v4-review-queue.json): SHA256 `088bb091436bb8a195244da2a037394d0da02f66835e2be228fa029809f92592`.
@@ -119,3 +119,9 @@ Nenhum gabarito/answer key, Ground Truth, Auditor output ou artefato downstream 
 - auditorExecuted = false
 
 Proximo passo: definir/executar question selection V4 em outra etapa. Esta execucao nao seleciona questoes, nao cria GT, nao executa Auditor e nao faz merge na main.
+
+## Errata objetiva pos-freeze — 2026-10-05
+
+Somente doc-6381aed53bb1:q19.pageEnd foi corrigido de 14 para 15; pageStart permanece 14. A nota neutra do documento e o hash da fonte Tier C foram sincronizados. Permanecem 48 documentos / 1.732 questoes, mesmos IDs, ordem, contagens por tier e fingerprints. SHA256 atual do final index: 4681bb8b257642ba1709c7c908791c011c16bc94b88c0071b4a971515c0bb4ab.
+
+As metricas e declaracoes de preservacao/isolamento anteriores descrevem a consolidacao original, nao este reparo posterior. A provenance historica de Tier D continua apontando ao snapshot Tier C usado naquela adjudicacao. Selecao nao reexecutada; 144 IDs preservados; decisoes humanas GT 01-07 intactas (63/144), apenas hashes de fonte atualizados. Review packages 08-10 preservados, mas precisam ser regenerados contra o novo HEAD em outra etapa. GT final=false; Auditor=false. Ver [errata e hashes antes/depois](V4_OBJECTIVE_ERRATUM_Q19_PAGE_RANGE.md).

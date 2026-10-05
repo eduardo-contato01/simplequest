@@ -22,15 +22,15 @@
   },
   "questionIndex": {
     "path": "audit/holdout/question-index-v4-final.json",
-    "fileSha256": "c6552696da6cfc6bb96b04d1060fba676062991252b4cb92fffd2d93e1e8b0f8",
-    "canonicalJsonSha256": "978c09d6fec8ccebd7022a6e2f2f94d418f4ace6afbe112b5ead3460a7fca8f0",
+    "fileSha256": "4681bb8b257642ba1709c7c908791c011c16bc94b88c0071b4a971515c0bb4ab",
+    "canonicalJsonSha256": "89d852af97c30bc39607d54fc8017c484f0ae3fea8af09a78e29f17311f3a62d",
     "documents": 48,
     "questions": 1732
   },
   "manifestPhaseB": {
     "path": "audit/holdout/manifest-v4-b.json",
-    "fileSha256": "7250a9bd00f54bb49e0c68da468f4a5fb22dde9cd99943681642c582a619b885",
-    "canonicalJsonSha256": "b1cea45582373fe42762e0a836330feec444867051ca634d770ebcd725289223"
+    "fileSha256": "763290a582e5ed9436717c8cd754bb4501ad5a6f6aa5c69d8b3287014e93f8e7",
+    "canonicalJsonSha256": "26d76c5938b54a92a88b69552db8652ef61e0fb69fc0028cb55b001d20be55d4"
   },
   "selection": {
     "documents": 48,
@@ -59,7 +59,7 @@
   },
   "guards": {
     "documentSelectionChangedFromPhaseA": false,
-    "questionIndexChangedAfterFreeze": false,
+    "questionIndexChangedAfterFreeze": true,
     "duplicateSelectedQuestionIds": 0,
     "allSelectedQuestionsBoundToFrozenIndex": true,
     "deterministicSelectionValidated": true,
@@ -88,5 +88,20 @@
     "invalidReplacementCharacterCount": 0,
     "documentNonSelectionDifferences": 0,
     "deterministicReplayBasis": "PASS validated during original selection; no replay executed during materialization repair"
+  },
+  "selectionReexecuted": false,
+  "selectedQuestionIdsChanged": false,
+  "objectiveMetadataRepair": true,
+  "objectiveMetadataRepairDetails": {
+    "reason": "Corrected canonical pageEnd of doc-6381aed53bb1:q19 from 14 to 15 after human visual verification.",
+    "sourceCommit": "aa0d5bdacef8c640dfb5b3f6b3255595c2908778",
+    "documentId": "doc-6381aed53bb1",
+    "questionId": "doc-6381aed53bb1:q19",
+    "previousPageRange": [14, 14],
+    "correctedPageRange": [14, 15],
+    "selectedIdsBeforeRepairHash": "301c9ff28731ca5d3ddbd2c1deb6429afa61d0f6d45497dd6cba634972a1e477",
+    "selectedIdsAfterRepairHash": "301c9ff28731ca5d3ddbd2c1deb6429afa61d0f6d45497dd6cba634972a1e477",
+    "groundTruthHumanDecisionDifferences": 0,
+    "reviewPackagesRegenerated": false
   }
 }

@@ -45,9 +45,9 @@ Phase A e Final Question Index usam ordens documentais distintas ja congeladas; 
 - Funcao original usada somente na tentativa anterior: `scripts/audit_response_holdout_select.py:select_questions`; generic selector SHA256 `a13f6cc0f53228c6464caf5fab8b8abcf9481f95d5c87b3844a8415164733e27`.
 - selectionCodeState original: `clean`, capturado antes dos arquivos da tentativa falha.
 - [Phase A](manifest-v4-a.json): SHA256 `be69ceafd2fde2ce00f5f72966c12e22d33f575785ddc00ae57030fe74b2dccc`; canonical JSON SHA256 `cd4e2a6a39c736d5f7cd58f53095e920d88ef98858e9fc42fd75a5fd6250a1c1`.
-- [Final Question Index](question-index-v4-final.json): SHA256 `c6552696da6cfc6bb96b04d1060fba676062991252b4cb92fffd2d93e1e8b0f8`; canonical JSON SHA256 `978c09d6fec8ccebd7022a6e2f2f94d418f4ace6afbe112b5ead3460a7fca8f0`; 48 documentos / 1.732 questoes.
-- [Phase B reparada](manifest-v4-b.json): SHA256 `7250a9bd00f54bb49e0c68da468f4a5fb22dde9cd99943681642c582a619b885`; canonical JSON SHA256 `b1cea45582373fe42762e0a836330feec444867051ca634d770ebcd725289223`.
-- [Provenance Phase B](manifest-v4-b.provenance.json): SHA256 `b023ced0ed1b565e56113f10f87585ca25216a937c0f1facfedd721aa2e68eec`.
+- [Final Question Index](question-index-v4-final.json): SHA256 `4681bb8b257642ba1709c7c908791c011c16bc94b88c0071b4a971515c0bb4ab`; canonical JSON SHA256 `89d852af97c30bc39607d54fc8017c484f0ae3fea8af09a78e29f17311f3a62d`; 48 documentos / 1.732 questoes.
+- [Phase B reparada](manifest-v4-b.json): SHA256 `763290a582e5ed9436717c8cd754bb4501ad5a6f6aa5c69d8b3287014e93f8e7`; canonical JSON SHA256 `26d76c5938b54a92a88b69552db8652ef61e0fb69fc0028cb55b001d20be55d4`.
+- [Provenance Phase B](manifest-v4-b.provenance.json): SHA256 `921bfd858c472164a3d50eae153444105eab6170a482cd793372bc4c805cbb42`.
 
 Hashes canonical JSON dos artefatos seguem audit_holdout_schema.sha256_json, como no V3. O hash da lista de IDs usa a convencao compacta definida acima.
 
@@ -67,3 +67,15 @@ Nao houve alternate seed, retry, cherry-pick, selecao documental, reinterpretaca
 - freezeStatus = ready_for_ground_truth_annotation
 
 Proximo passo: Ground Truth V4 em outra etapa. Nenhum merge ou alteracao da main.
+
+## Reparo objetivo de metadata pos-freeze — 2026-10-05
+
+Somente pageEnd da selectedQuestion doc-6381aed53bb1:q19 mudou de 14 para 15. Nenhuma selecao ou replay foi reexecutado; seed, ordem documental e os mesmos 144 IDs permanecem congelados. O final index foi reparado objetivamente; por isso questionIndexChangedAfterFreeze=true na provenance, sem mudanca de escolha.
+
+- selectionReexecuted = false
+- selectedQuestionIdsChanged = false
+- objectiveMetadataRepair = true
+- selected IDs before/after SHA256 = 301c9ff28731ca5d3ddbd2c1deb6429afa61d0f6d45497dd6cba634972a1e477 (identicos).
+- Manifest B SHA256 atual = 763290a582e5ed9436717c8cd754bb4501ad5a6f6aa5c69d8b3287014e93f8e7.
+
+GT humano 01-07: zero diferencas estruturais ou de bytes em questions[]; progresso 63/144. Review packages/contextos 08-10 nao regenerados e aguardam regeneracao no novo source state. GT final=false; Auditor=false. O registro de reparo UTF-8 anterior permanece historico e intacto. Ver [errata](V4_OBJECTIVE_ERRATUM_Q19_PAGE_RANGE.md).
