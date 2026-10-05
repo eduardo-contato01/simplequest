@@ -1,0 +1,207 @@
+{
+  "protocolVersion": "holdout-v4",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-15",
+  "sourceManifest": "audit/holdout/manifest-v4-b.json",
+  "sourceManifestFileSha256": "763290a582e5ed9436717c8cd754bb4501ad5a6f6aa5c69d8b3287014e93f8e7",
+  "sourceQuestionIndex": "audit/holdout/question-index-v4-final.json",
+  "sourceQuestionIndexFileSha256": "4681bb8b257642ba1709c7c908791c011c16bc94b88c0071b4a971515c0bb4ab",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-e13d030b1f9e": "e13d030b1f9e1e9e61c06f930a8cc35583413459ead8f3213b032d98b48c4cb7",
+    "doc-ee51036d2382": "ee51036d2382d989fd2423ca1e0a7dfaf7ec8c389d49299e65580ade166d4270",
+    "doc-eefc3d15076e": "eefc3d15076e47cc143d5b5dd62ebeeed0dc0c206bf07c67ef166bf19ed609c3"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-e13d030b1f9e",
+      "questionId": "doc-e13d030b1f9e:q9",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-e13d030b1f9e",
+      "questionId": "doc-e13d030b1f9e:q15",
+      "pages": [
+        12
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": 5,
+      "responseControls": 10,
+      "layout": "parent_child",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Five child assertions A-E, each with explicit C/E controls."
+    },
+    {
+      "documentId": "doc-e13d030b1f9e",
+      "questionId": "doc-e13d030b1f9e:q30",
+      "pages": [
+        20
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": 5,
+      "responseControls": 10,
+      "layout": "parent_child",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Five child assertions A-E with C/E controls; the Pick-theorem figures and grid are required."
+    },
+    {
+      "documentId": "doc-ee51036d2382",
+      "questionId": "doc-ee51036d2382:q11",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-ee51036d2382",
+      "questionId": "doc-ee51036d2382:q14",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-ee51036d2382",
+      "questionId": "doc-ee51036d2382:q39",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "The butter-tablet diagram carries the dimensions needed for the volume calculation."
+    },
+    {
+      "documentId": "doc-eefc3d15076e",
+      "questionId": "doc-eefc3d15076e:q13",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "The trapezoid, semicircle and sector diagram is required."
+    },
+    {
+      "documentId": "doc-eefc3d15076e",
+      "questionId": "doc-eefc3d15076e:q17",
+      "pages": [
+        18
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "The triangle diagram supplies the geometric configuration and side labels."
+    },
+    {
+      "documentId": "doc-eefc3d15076e",
+      "questionId": "doc-eefc3d15076e:q40",
+      "pages": [
+        36
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "The question directly analyzes the charge and its visual-verbal communicative situation."
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "protocolVersion": "holdout-v4",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-12",
+  "sourceManifest": "audit/holdout/manifest-v4-b.json",
+  "sourceManifestFileSha256": "763290a582e5ed9436717c8cd754bb4501ad5a6f6aa5c69d8b3287014e93f8e7",
+  "sourceQuestionIndex": "audit/holdout/question-index-v4-final.json",
+  "sourceQuestionIndexFileSha256": "4681bb8b257642ba1709c7c908791c011c16bc94b88c0071b4a971515c0bb4ab",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-b71d45cbb12c": "b71d45cbb12c198751e58f3771eafcea7c3f4d4c799d5b1f5666fcddfce53d27",
+    "doc-bb62e60cf7ed": "bb62e60cf7ed1c961bcba262fd6136972ae6796d3759d8d1ecda67aab6e8e0fb",
+    "doc-c41ddc7b55ec": "c41ddc7b55ec4e18550e2be6decab59f307b6acc7699ab17e69b7f478330ca4e"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-b71d45cbb12c",
+      "questionId": "doc-b71d45cbb12c:q6",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-b71d45cbb12c",
+      "questionId": "doc-b71d45cbb12c:q14",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-b71d45cbb12c",
+      "questionId": "doc-b71d45cbb12c:q15",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-bb62e60cf7ed",
+      "questionId": "doc-bb62e60cf7ed:q9",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-bb62e60cf7ed",
+      "questionId": "doc-bb62e60cf7ed:q19",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-bb62e60cf7ed",
+      "questionId": "doc-bb62e60cf7ed:q27",
+      "pages": [
+        20
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Canonical q27 is printed as mathematics item 07 after the section numbering restart; the diagram is supportive and the required measures are stated in text."
+    },
+    {
+      "documentId": "doc-c41ddc7b55ec",
+      "questionId": "doc-c41ddc7b55ec:q2",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-c41ddc7b55ec",
+      "questionId": "doc-c41ddc7b55ec:q10",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-c41ddc7b55ec",
+      "questionId": "doc-c41ddc7b55ec:q18",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "The shoe-box diagram carries the dimensions needed for the volume calculation."
+    }
+  ]
+}

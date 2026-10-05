@@ -1,0 +1,216 @@
+{
+  "protocolVersion": "holdout-v4",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-16",
+  "sourceManifest": "audit/holdout/manifest-v4-b.json",
+  "sourceManifestFileSha256": "763290a582e5ed9436717c8cd754bb4501ad5a6f6aa5c69d8b3287014e93f8e7",
+  "sourceQuestionIndex": "audit/holdout/question-index-v4-final.json",
+  "sourceQuestionIndexFileSha256": "4681bb8b257642ba1709c7c908791c011c16bc94b88c0071b4a971515c0bb4ab",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-f03e7d17eec1": "f03e7d17eec1cd97788ae2f938dbeb4c91e64c79db0b57e0b064ab28670669d7",
+    "doc-f1c03b7dfa39": "f1c03b7dfa396041ded2025b519db1c87ab23deee9fd73369916b6ab28fcbef7",
+    "doc-f4dd01071816": "f4dd0107181635855698e2242629cade64f086ecd5068f81a0ffddb97c25060f"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-f03e7d17eec1",
+      "questionId": "doc-f03e7d17eec1:q3",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "The square/circular token diagram and fixed shape sequence are required to form the expression."
+    },
+    {
+      "documentId": "doc-f03e7d17eec1",
+      "questionId": "doc-f03e7d17eec1:q20",
+      "pages": [
+        22
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-f03e7d17eec1",
+      "questionId": "doc-f03e7d17eec1:q38",
+      "pages": [
+        37
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Depends on the shared Text 5 population graph on the previous page; the canonical question boundary remains page 37."
+    },
+    {
+      "documentId": "doc-f1c03b7dfa39",
+      "questionId": "doc-f1c03b7dfa39:q5",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-f1c03b7dfa39",
+      "questionId": "doc-f1c03b7dfa39:q15",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-f1c03b7dfa39",
+      "questionId": "doc-f1c03b7dfa39:q22",
+      "pages": [
+        11
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "Depends on the visual-verbal Armandinho comic shown on the same page."
+    },
+    {
+      "documentId": "doc-f4dd01071816",
+      "questionId": "doc-f4dd01071816:q5",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "The population projection graph supplies the numerical data used by the question."
+    },
+    {
+      "documentId": "doc-f4dd01071816",
+      "questionId": "doc-f4dd01071816:q13",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Canonical q13 is the printed question 13 on PDF page 14; no numbering normalization is needed for this selected item."
+    },
+    {
+      "documentId": "doc-f4dd01071816",
+      "questionId": "doc-f4dd01071816:q20",
+      "pages": [
+        20
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "The airplane construction diagrams and box diagram provide the dimensions and geometric constraints needed to answer."
+    }
+  ]
+}

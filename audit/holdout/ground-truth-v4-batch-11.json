@@ -1,0 +1,201 @@
+{
+  "protocolVersion": "holdout-v4",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-11",
+  "sourceManifest": "audit/holdout/manifest-v4-b.json",
+  "sourceManifestFileSha256": "763290a582e5ed9436717c8cd754bb4501ad5a6f6aa5c69d8b3287014e93f8e7",
+  "sourceQuestionIndex": "audit/holdout/question-index-v4-final.json",
+  "sourceQuestionIndexFileSha256": "4681bb8b257642ba1709c7c908791c011c16bc94b88c0071b4a971515c0bb4ab",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-a272afbae2ca": "a272afbae2ca3bd4bcc36e14869cb0f2b6d11b9daea5c203ef0e9c0326e9d19a",
+    "doc-ad34c4cf7f30": "ad34c4cf7f30b6c8a0ba2cfd5c6cef41e74b64e66ffc568dee16d3cada78cd83",
+    "doc-b605f7a51fd5": "b605f7a51fd572b4de2594787e7a5b5fcdb258ec199532bb8853c8301815198f"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-a272afbae2ca",
+      "questionId": "doc-a272afbae2ca:q1",
+      "pages": [
+        2
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-a272afbae2ca",
+      "questionId": "doc-a272afbae2ca:q112",
+      "pages": [
+        11
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-a272afbae2ca",
+      "questionId": "doc-a272afbae2ca:q137",
+      "pages": [
+        14
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Depends on the gear diagram on the same page."
+    },
+    {
+      "documentId": "doc-ad34c4cf7f30",
+      "questionId": "doc-ad34c4cf7f30:q5",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-ad34c4cf7f30",
+      "questionId": "doc-ad34c4cf7f30:q26",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "Hexagon diagram is necessary to interpret the geometric regions."
+    },
+    {
+      "documentId": "doc-ad34c4cf7f30",
+      "questionId": "doc-ad34c4cf7f30:q33",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "Diagram of the three adjacent squares and shaded region is necessary."
+    },
+    {
+      "documentId": "doc-b605f7a51fd5",
+      "questionId": "doc-b605f7a51fd5:q5",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Truck image is contextual; all numerical data are textual."
+    },
+    {
+      "documentId": "doc-b605f7a51fd5",
+      "questionId": "doc-b605f7a51fd5:q7",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Requires the five top-view drawings of geometric solids."
+    },
+    {
+      "documentId": "doc-b605f7a51fd5",
+      "questionId": "doc-b605f7a51fd5:q20",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Depends on the shared CMBH grid drawing introduced on the previous page for questions 19 and 20; canonical question boundary remains page 14."
+    }
+  ]
+}

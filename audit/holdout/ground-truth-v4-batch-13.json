@@ -1,0 +1,219 @@
+{
+  "protocolVersion": "holdout-v4",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-13",
+  "sourceManifest": "audit/holdout/manifest-v4-b.json",
+  "sourceManifestFileSha256": "763290a582e5ed9436717c8cd754bb4501ad5a6f6aa5c69d8b3287014e93f8e7",
+  "sourceQuestionIndex": "audit/holdout/question-index-v4-final.json",
+  "sourceQuestionIndexFileSha256": "4681bb8b257642ba1709c7c908791c011c16bc94b88c0071b4a971515c0bb4ab",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-c573e686e882": "c573e686e88211332418b68914be57ed2c723977ed92dc7b68f24dd2a167d067",
+    "doc-c8d6da47c18b": "c8d6da47c18ba8083fb134a62cf3032c6be85ccbf8d2fa5aa921601c8433c1b3",
+    "doc-cd0a32a92382": "cd0a32a923828730979adbd73959100d889a3f789e92a6fc379b2ad60a3b1dc6"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-c573e686e882",
+      "questionId": "doc-c573e686e882:q12",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-c573e686e882",
+      "questionId": "doc-c573e686e882:q15",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-c573e686e882",
+      "questionId": "doc-c573e686e882:q33",
+      "pages": [
+        18
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-c8d6da47c18b",
+      "questionId": "doc-c8d6da47c18b:q4",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 5,
+      "responseControls": 5,
+      "layout": "mixed",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Five internal statements I-V precede five final A-( ) response options."
+    },
+    {
+      "documentId": "doc-c8d6da47c18b",
+      "questionId": "doc-c8d6da47c18b:q9",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-c8d6da47c18b",
+      "questionId": "doc-c8d6da47c18b:q15",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-cd0a32a92382",
+      "questionId": "doc-cd0a32a92382:q2",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-cd0a32a92382",
+      "questionId": "doc-cd0a32a92382:q13",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-cd0a32a92382",
+      "questionId": "doc-cd0a32a92382:q16",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    }
+  ]
+}

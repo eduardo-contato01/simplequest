@@ -1,0 +1,216 @@
+{
+  "protocolVersion": "holdout-v4",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-14",
+  "sourceManifest": "audit/holdout/manifest-v4-b.json",
+  "sourceManifestFileSha256": "763290a582e5ed9436717c8cd754bb4501ad5a6f6aa5c69d8b3287014e93f8e7",
+  "sourceQuestionIndex": "audit/holdout/question-index-v4-final.json",
+  "sourceQuestionIndexFileSha256": "4681bb8b257642ba1709c7c908791c011c16bc94b88c0071b4a971515c0bb4ab",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-cef618be31e6": "cef618be31e62342be648b0e0d772f5ca53f83f62b417bcacde60efbc1a5c149",
+    "doc-cf6b56e7abd7": "cf6b56e7abd787dcdb64cc2cf7a41b848ba28a413fdde69d71f199b3efe058b2",
+    "doc-dce5637b3bd7": "dce5637b3bd742052e90e4a2cbf33a3b660250937ddb12cad382ffc7ea03d150"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-cef618be31e6",
+      "questionId": "doc-cef618be31e6:q2",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-cef618be31e6",
+      "questionId": "doc-cef618be31e6:q16",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-cef618be31e6",
+      "questionId": "doc-cef618be31e6:q23",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-cf6b56e7abd7",
+      "questionId": "doc-cf6b56e7abd7:q3",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-cf6b56e7abd7",
+      "questionId": "doc-cf6b56e7abd7:q12",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "The two magic-square matrices and their spatial cell layout are necessary."
+    },
+    {
+      "documentId": "doc-cf6b56e7abd7",
+      "questionId": "doc-cf6b56e7abd7:q15",
+      "pages": [
+        16
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-dce5637b3bd7",
+      "questionId": "doc-dce5637b3bd7:q10",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-dce5637b3bd7",
+      "questionId": "doc-dce5637b3bd7:q18",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-dce5637b3bd7",
+      "questionId": "doc-dce5637b3bd7:q30",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Canonical q30 is printed as mathematics Questao 10 after the section numbering restart."
+    }
+  ]
+}
