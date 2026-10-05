@@ -1,0 +1,216 @@
+{
+  "protocolVersion": "holdout-v4",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-09",
+  "sourceManifest": "audit/holdout/manifest-v4-b.json",
+  "sourceManifestFileSha256": "763290a582e5ed9436717c8cd754bb4501ad5a6f6aa5c69d8b3287014e93f8e7",
+  "sourceQuestionIndex": "audit/holdout/question-index-v4-final.json",
+  "sourceQuestionIndexFileSha256": "4681bb8b257642ba1709c7c908791c011c16bc94b88c0071b4a971515c0bb4ab",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-800c2a22f148": "800c2a22f148cade29d12faacc784f5e1e6522360ff77bb0410f6dc1aef16d8f",
+    "doc-89561bb8f1fe": "89561bb8f1fea23a3f17560cabaf979c37ff326672900f5a0197a7fa507fb525",
+    "doc-9236ae9f513e": "9236ae9f513e7eba0267c2be6d844b9e532d93b29160c643a3abc481ff50a3c1"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-800c2a22f148",
+      "questionId": "doc-800c2a22f148:q1",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Quatro alternativas no formato A.( ), B.( ), C.( ), D.( ), com quatro campos explícitos de resposta."
+    },
+    {
+      "documentId": "doc-800c2a22f148",
+      "questionId": "doc-800c2a22f148:q9",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "A questão compara as finalidades dos textos V, VI e VII, incluindo campanha/cartaz visual sobre soltura de balões. Quatro alternativas com campos A.( )."
+    },
+    {
+      "documentId": "doc-800c2a22f148",
+      "questionId": "doc-800c2a22f148:q15",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Questão matemática com quatro alternativas e campos explícitos A.( )."
+    },
+    {
+      "documentId": "doc-89561bb8f1fe",
+      "questionId": "doc-89561bb8f1fe:q1",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Alternativas impressas em estilo textual a), b), c), d), e), sem campos separados de resposta."
+    },
+    {
+      "documentId": "doc-89561bb8f1fe",
+      "questionId": "doc-89561bb8f1fe:q10",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-89561bb8f1fe",
+      "questionId": "doc-89561bb8f1fe:q18",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Questão gramatical textual baseada na Oração do Pai Nosso; cinco alternativas em estilo a)-e)."
+    },
+    {
+      "documentId": "doc-9236ae9f513e",
+      "questionId": "doc-9236ae9f513e:q7",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-9236ae9f513e",
+      "questionId": "doc-9236ae9f513e:q10",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-9236ae9f513e",
+      "questionId": "doc-9236ae9f513e:q16",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questão de comparação temática entre dois textos predominantemente verbais."
+    }
+  ]
+}

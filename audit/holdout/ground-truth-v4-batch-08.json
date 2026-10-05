@@ -1,0 +1,221 @@
+{
+  "protocolVersion": "holdout-v4",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-08",
+  "sourceManifest": "audit/holdout/manifest-v4-b.json",
+  "sourceManifestFileSha256": "763290a582e5ed9436717c8cd754bb4501ad5a6f6aa5c69d8b3287014e93f8e7",
+  "sourceQuestionIndex": "audit/holdout/question-index-v4-final.json",
+  "sourceQuestionIndexFileSha256": "4681bb8b257642ba1709c7c908791c011c16bc94b88c0071b4a971515c0bb4ab",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-6381aed53bb1": "6381aed53bb131b730a31a328b679e479c6e3e14e796e24f49a7bcb1302d7c7b",
+    "doc-6dde932fb681": "6dde932fb681b017099925612def8c5d325c9cc899ad7a35f97d56cb07c5b4ae",
+    "doc-7f0815783d8c": "7f0815783d8c21fcfa4b6022fca3b131df5b7be91e3e4a87784dd86f7ad21de0"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-6381aed53bb1",
+      "questionId": "doc-6381aed53bb1:q5",
+      "pages": [
+        4,
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão começa com um cardápio visual parcialmente apagado na página 4 e continua na página 5 com os dados de consumo e as alternativas."
+    },
+    {
+      "documentId": "doc-6381aed53bb1",
+      "questionId": "doc-6381aed53bb1:q19",
+      "pages": [
+        14,
+        15
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 5,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão depende de um climograma e contém cinco afirmações internas I-V. As alternativas finais A-E continuam na página 15. Boundary pós-errata confirmado como 14-15."
+    },
+    {
+      "documentId": "doc-6381aed53bb1",
+      "questionId": "doc-6381aed53bb1:q36",
+      "pages": [
+        25
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 4,
+      "responseControls": 4,
+      "layout": "mixed",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão depende do infográfico do Texto 5. Há quatro afirmações internas, cada uma precedida por campo explícito '( )', seguidas por cinco alternativas finais A-E com sequências V/F."
+    },
+    {
+      "documentId": "doc-6dde932fb681",
+      "questionId": "doc-6dde932fb681:q6",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6dde932fb681",
+      "questionId": "doc-6dde932fb681:q7",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6dde932fb681",
+      "questionId": "doc-6dde932fb681:q19",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 4,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão analisa um quadrinho e contém quatro afirmações internas I-IV antes das alternativas finais."
+    },
+    {
+      "documentId": "doc-7f0815783d8c",
+      "questionId": "doc-7f0815783d8c:q1",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-7f0815783d8c",
+      "questionId": "doc-7f0815783d8c:q8",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-7f0815783d8c",
+      "questionId": "doc-7f0815783d8c:q21",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "A frase relevante do segundo quadrinho é reproduzida integralmente no enunciado; a análise pedida é textual/gramatical."
+    }
+  ]
+}

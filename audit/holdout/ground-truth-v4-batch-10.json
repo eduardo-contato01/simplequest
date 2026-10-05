@@ -1,0 +1,219 @@
+{
+  "protocolVersion": "holdout-v4",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-10",
+  "sourceManifest": "audit/holdout/manifest-v4-b.json",
+  "sourceManifestFileSha256": "763290a582e5ed9436717c8cd754bb4501ad5a6f6aa5c69d8b3287014e93f8e7",
+  "sourceQuestionIndex": "audit/holdout/question-index-v4-final.json",
+  "sourceQuestionIndexFileSha256": "4681bb8b257642ba1709c7c908791c011c16bc94b88c0071b4a971515c0bb4ab",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-9832ec9bb87d": "9832ec9bb87dfbf843c744234a29bc6791f7d0461029ba1fdfc6e0816dc46f82",
+    "doc-9e4d161e7bfb": "9e4d161e7bfb2507917bd7e83efe6cae3de1905e33cb469e7e7b870b48246702",
+    "doc-a1ddc006ef56": "a1ddc006ef5638f1ead8e452334e2db87a1e9995e02261b34cecb64c8e3b043e"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-9832ec9bb87d",
+      "questionId": "doc-9832ec9bb87d:q1",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": "Questão matemática puramente textual; alternativas no formato A)-E)."
+    },
+    {
+      "documentId": "doc-9832ec9bb87d",
+      "questionId": "doc-9832ec9bb87d:q8",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "A questão depende diretamente dos gráficos do Raio-X dos gols; as alternativas usam A)-E)."
+    },
+    {
+      "documentId": "doc-9832ec9bb87d",
+      "questionId": "doc-9832ec9bb87d:q20",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-9e4d161e7bfb",
+      "questionId": "doc-9e4d161e7bfb:q2",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "A fotografia da gráfica é contextual; os dados necessários à resolução estão no texto."
+    },
+    {
+      "documentId": "doc-9e4d161e7bfb",
+      "questionId": "doc-9e4d161e7bfb:q12",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "A fotografia do rio é contextual; as relações geométricas, distâncias e largura necessárias são fornecidas verbalmente."
+    },
+    {
+      "documentId": "doc-9e4d161e7bfb",
+      "questionId": "doc-9e4d161e7bfb:q17",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "A figura geométrica ilustra a configuração, mas o enunciado explicita CD=L, AD=2L, E pertencente a BD, F pertencente a BC e EF perpendicular a BD."
+    },
+    {
+      "documentId": "doc-a1ddc006ef56",
+      "questionId": "doc-a1ddc006ef56:q2",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questão matemática de periodicidade dos festivais. Os pequenos elementos gráficos da página são decorativos."
+    },
+    {
+      "documentId": "doc-a1ddc006ef56",
+      "questionId": "doc-a1ddc006ef56:q23",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questão textual de inferência sobre a expressão 'a flor da terra'."
+    },
+    {
+      "documentId": "doc-a1ddc006ef56",
+      "questionId": "doc-a1ddc006ef56:q28",
+      "pages": [
+        15
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questão textual de classificação das sílabas tônicas."
+    }
+  ]
+}
