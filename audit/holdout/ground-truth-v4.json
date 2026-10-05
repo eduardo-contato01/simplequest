@@ -1,0 +1,3142 @@
+{
+  "artifactType": "human-ground-truth",
+  "protocolVersion": "holdout-v4",
+  "annotationVersion": 1,
+  "freezeVersion": 1,
+  "sourceManifest": "audit/holdout/manifest-v4-b.json",
+  "manifestSha256": "26d76c5938b54a92a88b69552db8652ef61e0fb69fc0028cb55b001d20be55d4",
+  "sourceManifestFileSha256": "763290a582e5ed9436717c8cd754bb4501ad5a6f6aa5c69d8b3287014e93f8e7",
+  "sourceQuestionIndex": "audit/holdout/question-index-v4-final.json",
+  "questionIndexFileSha256": "4681bb8b257642ba1709c7c908791c011c16bc94b88c0071b4a971515c0bb4ab",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documents": 48,
+  "questionsAnnotated": 144,
+  "documentFingerprints": {
+    "doc-03a9e3fe97aa": "03a9e3fe97aa894b2f95ca8054945eaec95c3d04db17e5801472caec0f4880a8",
+    "doc-074dd67cbd4a": "074dd67cbd4a4d15a7b935c6148c6b31af150b40d59fbb56d3343d68e383a648",
+    "doc-08d3b1b8b1e8": "08d3b1b8b1e80750e4d2179d1c31868bf4b661f2cbc77e1023e78222a508da86",
+    "doc-0aa57ea3e5ed": "0aa57ea3e5ed3a939e931d353b419adfb1eb2cecc98d1b81c40b04df2baabaf4",
+    "doc-0bd82b9dc803": "0bd82b9dc8033412a81e5f0bc67ada7d5ec4e0c693e8a05a6dc6816e0ee6389d",
+    "doc-0db5ce524459": "0db5ce524459a88bc7d2120a47cd3f19c4909c2c7ee378bde5468892a76cdf9d",
+    "doc-143e13dc75ed": "143e13dc75ed1583aa4882cefbc4194d0ff1a46c25a80eeb70ad4361467d1dc5",
+    "doc-1693ea690bbb": "1693ea690bbb39b7680d33da27ccdf0b1ba1415a3f6dcc47ae29cd10fc8f46f8",
+    "doc-1e18e7252399": "1e18e72523997bdb75457f09eeb084ee5a69c70385c4a70263a627421a5bac5b",
+    "doc-27775227a392": "27775227a392c3acfe055f03b7ad4e6563b6718d3d597a07fc3b9c3a35ccac3f",
+    "doc-2790a3c9786b": "2790a3c9786b6786e7e06da4583ca7dee76a931bd8fb23d8e504fab3dbed5f97",
+    "doc-3971adb7884f": "3971adb7884fc87184ecbb9c32f05952f9b2a3fbd2c5b54b1c428c664fb0bb9e",
+    "doc-3e395d355d2c": "3e395d355d2c93d657dd2c71ed2761657828b01de125edd8db351706ee308dd9",
+    "doc-3fb1e1ce24be": "3fb1e1ce24be68ce1d360d6027d2697a9e084a7a17ebcf69a510e42519d6440d",
+    "doc-41045384ae4b": "41045384ae4bff042f574053549c4fb19902738f89af6225c4db8a2f901d9eb9",
+    "doc-42af2b3d2b27": "42af2b3d2b27f4028c36e7298f79cfe81291db82e6b7bd098bcaa1e34c9f41ec",
+    "doc-4310686d43a6": "4310686d43a6869a4470e38db614688ebde542a860b04ebeb0b742649fec4ac4",
+    "doc-44ea716ed9b7": "44ea716ed9b726f56e3a6243bf6c3822f168b051b02b00ae85c742719fd888de",
+    "doc-56268e79f6bf": "56268e79f6bf85a1cf08f2a97c69217adfd3410cd126f0ec1e7f5744e0fa0d1e",
+    "doc-591f3e819d58": "591f3e819d5810c359b2a0d9e8a32cdc54a7c6245e0b3cf03d9521a46ee7b3f8",
+    "doc-5d61be2ac853": "5d61be2ac8537a32577aa37aab20221820b7499b2488f292ac60f49397170fc8",
+    "doc-6381aed53bb1": "6381aed53bb131b730a31a328b679e479c6e3e14e796e24f49a7bcb1302d7c7b",
+    "doc-6dde932fb681": "6dde932fb681b017099925612def8c5d325c9cc899ad7a35f97d56cb07c5b4ae",
+    "doc-7f0815783d8c": "7f0815783d8c21fcfa4b6022fca3b131df5b7be91e3e4a87784dd86f7ad21de0",
+    "doc-800c2a22f148": "800c2a22f148cade29d12faacc784f5e1e6522360ff77bb0410f6dc1aef16d8f",
+    "doc-89561bb8f1fe": "89561bb8f1fea23a3f17560cabaf979c37ff326672900f5a0197a7fa507fb525",
+    "doc-9236ae9f513e": "9236ae9f513e7eba0267c2be6d844b9e532d93b29160c643a3abc481ff50a3c1",
+    "doc-9832ec9bb87d": "9832ec9bb87dfbf843c744234a29bc6791f7d0461029ba1fdfc6e0816dc46f82",
+    "doc-9e4d161e7bfb": "9e4d161e7bfb2507917bd7e83efe6cae3de1905e33cb469e7e7b870b48246702",
+    "doc-a1ddc006ef56": "a1ddc006ef5638f1ead8e452334e2db87a1e9995e02261b34cecb64c8e3b043e",
+    "doc-a272afbae2ca": "a272afbae2ca3bd4bcc36e14869cb0f2b6d11b9daea5c203ef0e9c0326e9d19a",
+    "doc-ad34c4cf7f30": "ad34c4cf7f30b6c8a0ba2cfd5c6cef41e74b64e66ffc568dee16d3cada78cd83",
+    "doc-b605f7a51fd5": "b605f7a51fd572b4de2594787e7a5b5fcdb258ec199532bb8853c8301815198f",
+    "doc-b71d45cbb12c": "b71d45cbb12c198751e58f3771eafcea7c3f4d4c799d5b1f5666fcddfce53d27",
+    "doc-bb62e60cf7ed": "bb62e60cf7ed1c961bcba262fd6136972ae6796d3759d8d1ecda67aab6e8e0fb",
+    "doc-c41ddc7b55ec": "c41ddc7b55ec4e18550e2be6decab59f307b6acc7699ab17e69b7f478330ca4e",
+    "doc-c573e686e882": "c573e686e88211332418b68914be57ed2c723977ed92dc7b68f24dd2a167d067",
+    "doc-c8d6da47c18b": "c8d6da47c18ba8083fb134a62cf3032c6be85ccbf8d2fa5aa921601c8433c1b3",
+    "doc-cd0a32a92382": "cd0a32a923828730979adbd73959100d889a3f789e92a6fc379b2ad60a3b1dc6",
+    "doc-cef618be31e6": "cef618be31e62342be648b0e0d772f5ca53f83f62b417bcacde60efbc1a5c149",
+    "doc-cf6b56e7abd7": "cf6b56e7abd787dcdb64cc2cf7a41b848ba28a413fdde69d71f199b3efe058b2",
+    "doc-dce5637b3bd7": "dce5637b3bd742052e90e4a2cbf33a3b660250937ddb12cad382ffc7ea03d150",
+    "doc-e13d030b1f9e": "e13d030b1f9e1e9e61c06f930a8cc35583413459ead8f3213b032d98b48c4cb7",
+    "doc-ee51036d2382": "ee51036d2382d989fd2423ca1e0a7dfaf7ec8c389d49299e65580ade166d4270",
+    "doc-eefc3d15076e": "eefc3d15076e47cc143d5b5dd62ebeeed0dc0c206bf07c67ef166bf19ed609c3",
+    "doc-f03e7d17eec1": "f03e7d17eec1cd97788ae2f938dbeb4c91e64c79db0b57e0b064ab28670669d7",
+    "doc-f1c03b7dfa39": "f1c03b7dfa396041ded2025b519db1c87ab23deee9fd73369916b6ab28fcbef7",
+    "doc-f4dd01071816": "f4dd0107181635855698e2242629cade64f086ecd5068f81a0ffddb97c25060f"
+  },
+  "questions": [
+    {
+      "documentId": "doc-03a9e3fe97aa",
+      "questionId": "doc-03a9e3fe97aa:q9",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-03a9e3fe97aa",
+      "questionId": "doc-03a9e3fe97aa:q15",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-03a9e3fe97aa",
+      "questionId": "doc-03a9e3fe97aa:q39",
+      "pages": [
+        16
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-074dd67cbd4a",
+      "questionId": "doc-074dd67cbd4a:q4",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questão matemática com figura geométrica de uma pirâmide de base quadrada e cinco alternativas."
+    },
+    {
+      "documentId": "doc-074dd67cbd4a",
+      "questionId": "doc-074dd67cbd4a:q7",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questão matemática baseada em tabela de número de visitantes; cinco alternativas."
+    },
+    {
+      "documentId": "doc-074dd67cbd4a",
+      "questionId": "doc-074dd67cbd4a:q16",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questão matemática baseada em tabela de faixas etárias e valores de ingresso; cinco alternativas."
+    },
+    {
+      "documentId": "doc-08d3b1b8b1e8",
+      "questionId": "doc-08d3b1b8b1e8:q5",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": 3,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Três afirmações internas I-III são avaliadas por quatro alternativas finais A-D."
+    },
+    {
+      "documentId": "doc-08d3b1b8b1e8",
+      "questionId": "doc-08d3b1b8b1e8:q24",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "Questão depende de diagrama geométrico de quebra-cabeça identificado por letras A-H, com quatro alternativas textuais A-D."
+    },
+    {
+      "documentId": "doc-08d3b1b8b1e8",
+      "questionId": "doc-08d3b1b8b1e8:q39",
+      "pages": [
+        16
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "As quatro alternativas A-D são representadas visualmente por diagramas de grade/posição; a informação visual é necessária para distinguir as opções."
+    },
+    {
+      "documentId": "doc-0aa57ea3e5ed",
+      "questionId": "doc-0aa57ea3e5ed:q31",
+      "pages": [
+        7
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-0aa57ea3e5ed",
+      "questionId": "doc-0aa57ea3e5ed:q55",
+      "pages": [
+        10
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item PAS Tipo A, julgado Certo/Errado, que depende diretamente das informações visuais e verbais de um rótulo de pesticida."
+    },
+    {
+      "documentId": "doc-0aa57ea3e5ed",
+      "questionId": "doc-0aa57ea3e5ed:q88",
+      "pages": [
+        15
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Item PAS Tipo A com representação visual de estruturas moleculares."
+    },
+    {
+      "documentId": "doc-0bd82b9dc803",
+      "questionId": "doc-0bd82b9dc803:q40",
+      "pages": [
+        8
+      ],
+      "responseMode": "numeric_response",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "none",
+      "markerStyle": "none",
+      "contentKind": "math",
+      "notes": "Item PAS explicitamente identificado como Tipo B. Exige resposta numérica; não há alternativas nem controles locais de resposta na página da questão. O sistema C/D/U pertence ao Caderno de Respostas descrito nas instruções gerais."
+    },
+    {
+      "documentId": "doc-0bd82b9dc803",
+      "questionId": "doc-0bd82b9dc803:q57",
+      "pages": [
+        10
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-0bd82b9dc803",
+      "questionId": "doc-0bd82b9dc803:q121",
+      "pages": [
+        19
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-0db5ce524459",
+      "questionId": "doc-0db5ce524459:q7",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-0db5ce524459",
+      "questionId": "doc-0db5ce524459:q13",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-0db5ce524459",
+      "questionId": "doc-0db5ce524459:q26",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-143e13dc75ed",
+      "questionId": "doc-143e13dc75ed:q2",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-143e13dc75ed",
+      "questionId": "doc-143e13dc75ed:q13",
+      "pages": [
+        11
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão depende diretamente da fala da professora no último quadrinho do Texto IV."
+    },
+    {
+      "documentId": "doc-143e13dc75ed",
+      "questionId": "doc-143e13dc75ed:q15",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão depende diretamente do cartum identificado como Texto V."
+    },
+    {
+      "documentId": "doc-1693ea690bbb",
+      "questionId": "doc-1693ea690bbb:q3",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-1693ea690bbb",
+      "questionId": "doc-1693ea690bbb:q14",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "A questão depende do cartaz referido no enunciado e da alteração de seu título."
+    },
+    {
+      "documentId": "doc-1693ea690bbb",
+      "questionId": "doc-1693ea690bbb:q28",
+      "pages": [
+        18
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-1e18e7252399",
+      "questionId": "doc-1e18e7252399:q1",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-1e18e7252399",
+      "questionId": "doc-1e18e7252399:q10",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-1e18e7252399",
+      "questionId": "doc-1e18e7252399:q16",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "A questão exige comparação entre os personagens masculinos apresentados em uma charge e uma tirinha."
+    },
+    {
+      "documentId": "doc-27775227a392",
+      "questionId": "doc-27775227a392:q1",
+      "pages": [
+        1
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 4,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão apresenta um gráfico do Ideb e quatro afirmações internas I-IV antes das cinco alternativas finais."
+    },
+    {
+      "documentId": "doc-27775227a392",
+      "questionId": "doc-27775227a392:q14",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-27775227a392",
+      "questionId": "doc-27775227a392:q26",
+      "pages": [
+        15
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-2790a3c9786b",
+      "questionId": "doc-2790a3c9786b:q4",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-2790a3c9786b",
+      "questionId": "doc-2790a3c9786b:q13",
+      "pages": [
+        11
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão depende da fala da professora no último quadrinho do Texto IV."
+    },
+    {
+      "documentId": "doc-2790a3c9786b",
+      "questionId": "doc-2790a3c9786b:q14",
+      "pages": [
+        11
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão compara acontecimentos visuais entre o primeiro e o segundo quadrinhos do Texto IV."
+    },
+    {
+      "documentId": "doc-3971adb7884f",
+      "questionId": "doc-3971adb7884f:q3",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-3971adb7884f",
+      "questionId": "doc-3971adb7884f:q12",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão depende de equivalências e grupos de símbolos/desenhos apresentados graficamente."
+    },
+    {
+      "documentId": "doc-3971adb7884f",
+      "questionId": "doc-3971adb7884f:q15",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-3e395d355d2c",
+      "questionId": "doc-3e395d355d2c:q4",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão depende do cupom fiscal parcialmente ilegível apresentado visualmente para determinar o valor solicitado."
+    },
+    {
+      "documentId": "doc-3e395d355d2c",
+      "questionId": "doc-3e395d355d2c:q25",
+      "pages": [
+        27
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-3e395d355d2c",
+      "questionId": "doc-3e395d355d2c:q27",
+      "pages": [
+        28
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-3fb1e1ce24be",
+      "questionId": "doc-3fb1e1ce24be:q12",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-3fb1e1ce24be",
+      "questionId": "doc-3fb1e1ce24be:q20",
+      "pages": [
+        15
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-3fb1e1ce24be",
+      "questionId": "doc-3fb1e1ce24be:q32",
+      "pages": [
+        21
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão pergunta pelo efeito de humor de uma tirinha e depende da sequência visual dos quadrinhos."
+    },
+    {
+      "documentId": "doc-41045384ae4b",
+      "questionId": "doc-41045384ae4b:q3",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-41045384ae4b",
+      "questionId": "doc-41045384ae4b:q11",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-41045384ae4b",
+      "questionId": "doc-41045384ae4b:q21",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão depende do primeiro quadrinho da tirinha de Schulz para identificar o verbo implícito."
+    },
+    {
+      "documentId": "doc-42af2b3d2b27",
+      "questionId": "doc-42af2b3d2b27:q1",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "A fotografia do veículo é contextual; todos os dados necessários ao cálculo de escala aparecem textualmente."
+    },
+    {
+      "documentId": "doc-42af2b3d2b27",
+      "questionId": "doc-42af2b3d2b27:q12",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-42af2b3d2b27",
+      "questionId": "doc-42af2b3d2b27:q16",
+      "pages": [
+        17
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-4310686d43a6",
+      "questionId": "doc-4310686d43a6:q2",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "As alternativas usam letras A-E visualmente circundadas; não existe campo de resposta vazio separado na página."
+    },
+    {
+      "documentId": "doc-4310686d43a6",
+      "questionId": "doc-4310686d43a6:q8",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "As alternativas usam letras A-E visualmente circundadas; não existe campo de resposta vazio separado na página."
+    },
+    {
+      "documentId": "doc-4310686d43a6",
+      "questionId": "doc-4310686d43a6:q14",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "As alternativas usam letras A-E visualmente circundadas; não existe campo de resposta vazio separado na página."
+    },
+    {
+      "documentId": "doc-44ea716ed9b7",
+      "questionId": "doc-44ea716ed9b7:q22",
+      "pages": [
+        6
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item PAS Tipo A pertencente a um bloco de itens julgados individualmente como Certo/Errado."
+    },
+    {
+      "documentId": "doc-44ea716ed9b7",
+      "questionId": "doc-44ea716ed9b7:q54",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Item PAS explicitamente identificado como Tipo C. As alternativas A-D usam marcadores circulares com a letra, sem campo vazio separado."
+    },
+    {
+      "documentId": "doc-44ea716ed9b7",
+      "questionId": "doc-44ea716ed9b7:q88",
+      "pages": [
+        15
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "A questão apresenta quatro gráficos de velocidade versus tempo como alternativas A-D. Os marcadores são circulares, sem campo vazio separado."
+    },
+    {
+      "documentId": "doc-56268e79f6bf",
+      "questionId": "doc-56268e79f6bf:q6",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão depende do desenho do recipiente em forma de paralelepípedo e de suas dimensões para calcular o volume de sangue."
+    },
+    {
+      "documentId": "doc-56268e79f6bf",
+      "questionId": "doc-56268e79f6bf:q11",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "A imagem do corpo humano é contextual; a resposta depende dos valores numéricos fornecidos no texto e de conversões aritméticas."
+    },
+    {
+      "documentId": "doc-56268e79f6bf",
+      "questionId": "doc-56268e79f6bf:q14",
+      "pages": [
+        16
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão depende da tabela visual com os preços dos quatro medicamentos e de cálculo de pagamento parcelado."
+    },
+    {
+      "documentId": "doc-591f3e819d58",
+      "questionId": "doc-591f3e819d58:q10",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão exige leitura do gráfico preço versus quantidade."
+    },
+    {
+      "documentId": "doc-591f3e819d58",
+      "questionId": "doc-591f3e819d58:q19",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "As dimensões do aquário são explicitadas no texto; a figura é apenas apoio geométrico."
+    },
+    {
+      "documentId": "doc-591f3e819d58",
+      "questionId": "doc-591f3e819d58:q21",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão depende da malha triangular subdividida em 36 triângulos e da distribuição visual dos triângulos pintados."
+    },
+    {
+      "documentId": "doc-5d61be2ac853",
+      "questionId": "doc-5d61be2ac853:q3",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "A questão depende das situações vividas por Cascão na sequência de quadrinhos do Texto II. Cada alternativa possui campo explícito A-( )."
+    },
+    {
+      "documentId": "doc-5d61be2ac853",
+      "questionId": "doc-5d61be2ac853:q5",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "A questão pergunta o valor da onomatopeia CABRUUUM no segundo quadrinho do Texto II. Cada alternativa possui campo explícito A-( )."
+    },
+    {
+      "documentId": "doc-5d61be2ac853",
+      "questionId": "doc-5d61be2ac853:q11",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Questão textual sobre emprego de pontuação; quatro alternativas com campos explícitos A-( )."
+    },
+    {
+      "documentId": "doc-6381aed53bb1",
+      "questionId": "doc-6381aed53bb1:q5",
+      "pages": [
+        4,
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão começa com um cardápio visual parcialmente apagado na página 4 e continua na página 5 com os dados de consumo e as alternativas."
+    },
+    {
+      "documentId": "doc-6381aed53bb1",
+      "questionId": "doc-6381aed53bb1:q19",
+      "pages": [
+        14,
+        15
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 5,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão depende de um climograma e contém cinco afirmações internas I-V. As alternativas finais A-E continuam na página 15. Boundary pós-errata confirmado como 14-15."
+    },
+    {
+      "documentId": "doc-6381aed53bb1",
+      "questionId": "doc-6381aed53bb1:q36",
+      "pages": [
+        25
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 4,
+      "responseControls": 4,
+      "layout": "mixed",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão depende do infográfico do Texto 5. Há quatro afirmações internas, cada uma precedida por campo explícito '( )', seguidas por cinco alternativas finais A-E com sequências V/F."
+    },
+    {
+      "documentId": "doc-6dde932fb681",
+      "questionId": "doc-6dde932fb681:q6",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6dde932fb681",
+      "questionId": "doc-6dde932fb681:q7",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-6dde932fb681",
+      "questionId": "doc-6dde932fb681:q19",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 4,
+      "responseControls": null,
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão analisa um quadrinho e contém quatro afirmações internas I-IV antes das alternativas finais."
+    },
+    {
+      "documentId": "doc-7f0815783d8c",
+      "questionId": "doc-7f0815783d8c:q1",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-7f0815783d8c",
+      "questionId": "doc-7f0815783d8c:q8",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-7f0815783d8c",
+      "questionId": "doc-7f0815783d8c:q21",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "A frase relevante do segundo quadrinho é reproduzida integralmente no enunciado; a análise pedida é textual/gramatical."
+    },
+    {
+      "documentId": "doc-800c2a22f148",
+      "questionId": "doc-800c2a22f148:q1",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Quatro alternativas no formato A.( ), B.( ), C.( ), D.( ), com quatro campos explícitos de resposta."
+    },
+    {
+      "documentId": "doc-800c2a22f148",
+      "questionId": "doc-800c2a22f148:q9",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "A questão compara as finalidades dos textos V, VI e VII, incluindo campanha/cartaz visual sobre soltura de balões. Quatro alternativas com campos A.( )."
+    },
+    {
+      "documentId": "doc-800c2a22f148",
+      "questionId": "doc-800c2a22f148:q15",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Questão matemática com quatro alternativas e campos explícitos A.( )."
+    },
+    {
+      "documentId": "doc-89561bb8f1fe",
+      "questionId": "doc-89561bb8f1fe:q1",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Alternativas impressas em estilo textual a), b), c), d), e), sem campos separados de resposta."
+    },
+    {
+      "documentId": "doc-89561bb8f1fe",
+      "questionId": "doc-89561bb8f1fe:q10",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-89561bb8f1fe",
+      "questionId": "doc-89561bb8f1fe:q18",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "Questão gramatical textual baseada na Oração do Pai Nosso; cinco alternativas em estilo a)-e)."
+    },
+    {
+      "documentId": "doc-9236ae9f513e",
+      "questionId": "doc-9236ae9f513e:q7",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-9236ae9f513e",
+      "questionId": "doc-9236ae9f513e:q10",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-9236ae9f513e",
+      "questionId": "doc-9236ae9f513e:q16",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questão de comparação temática entre dois textos predominantemente verbais."
+    },
+    {
+      "documentId": "doc-9832ec9bb87d",
+      "questionId": "doc-9832ec9bb87d:q1",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": "Questão matemática puramente textual; alternativas no formato A)-E)."
+    },
+    {
+      "documentId": "doc-9832ec9bb87d",
+      "questionId": "doc-9832ec9bb87d:q8",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "A questão depende diretamente dos gráficos do Raio-X dos gols; as alternativas usam A)-E)."
+    },
+    {
+      "documentId": "doc-9832ec9bb87d",
+      "questionId": "doc-9832ec9bb87d:q20",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-9e4d161e7bfb",
+      "questionId": "doc-9e4d161e7bfb:q2",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "A fotografia da gráfica é contextual; os dados necessários à resolução estão no texto."
+    },
+    {
+      "documentId": "doc-9e4d161e7bfb",
+      "questionId": "doc-9e4d161e7bfb:q12",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "A fotografia do rio é contextual; as relações geométricas, distâncias e largura necessárias são fornecidas verbalmente."
+    },
+    {
+      "documentId": "doc-9e4d161e7bfb",
+      "questionId": "doc-9e4d161e7bfb:q17",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "A figura geométrica ilustra a configuração, mas o enunciado explicita CD=L, AD=2L, E pertencente a BD, F pertencente a BC e EF perpendicular a BD."
+    },
+    {
+      "documentId": "doc-a1ddc006ef56",
+      "questionId": "doc-a1ddc006ef56:q2",
+      "pages": [
+        2
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Questão matemática de periodicidade dos festivais. Os pequenos elementos gráficos da página são decorativos."
+    },
+    {
+      "documentId": "doc-a1ddc006ef56",
+      "questionId": "doc-a1ddc006ef56:q23",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questão textual de inferência sobre a expressão 'a flor da terra'."
+    },
+    {
+      "documentId": "doc-a1ddc006ef56",
+      "questionId": "doc-a1ddc006ef56:q28",
+      "pages": [
+        15
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "Questão textual de classificação das sílabas tônicas."
+    },
+    {
+      "documentId": "doc-a272afbae2ca",
+      "questionId": "doc-a272afbae2ca:q1",
+      "pages": [
+        2
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-a272afbae2ca",
+      "questionId": "doc-a272afbae2ca:q112",
+      "pages": [
+        11
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-a272afbae2ca",
+      "questionId": "doc-a272afbae2ca:q137",
+      "pages": [
+        14
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "mixed",
+      "notes": "Depends on the gear diagram on the same page."
+    },
+    {
+      "documentId": "doc-ad34c4cf7f30",
+      "questionId": "doc-ad34c4cf7f30:q5",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-ad34c4cf7f30",
+      "questionId": "doc-ad34c4cf7f30:q26",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "Hexagon diagram is necessary to interpret the geometric regions."
+    },
+    {
+      "documentId": "doc-ad34c4cf7f30",
+      "questionId": "doc-ad34c4cf7f30:q33",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "Diagram of the three adjacent squares and shaded region is necessary."
+    },
+    {
+      "documentId": "doc-b605f7a51fd5",
+      "questionId": "doc-b605f7a51fd5:q5",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Truck image is contextual; all numerical data are textual."
+    },
+    {
+      "documentId": "doc-b605f7a51fd5",
+      "questionId": "doc-b605f7a51fd5:q7",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Requires the five top-view drawings of geometric solids."
+    },
+    {
+      "documentId": "doc-b605f7a51fd5",
+      "questionId": "doc-b605f7a51fd5:q20",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Depends on the shared CMBH grid drawing introduced on the previous page for questions 19 and 20; canonical question boundary remains page 14."
+    },
+    {
+      "documentId": "doc-b71d45cbb12c",
+      "questionId": "doc-b71d45cbb12c:q6",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-b71d45cbb12c",
+      "questionId": "doc-b71d45cbb12c:q14",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-b71d45cbb12c",
+      "questionId": "doc-b71d45cbb12c:q15",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-bb62e60cf7ed",
+      "questionId": "doc-bb62e60cf7ed:q9",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-bb62e60cf7ed",
+      "questionId": "doc-bb62e60cf7ed:q19",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-bb62e60cf7ed",
+      "questionId": "doc-bb62e60cf7ed:q27",
+      "pages": [
+        20
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "Canonical q27 is printed as mathematics item 07 after the section numbering restart; the diagram is supportive and the required measures are stated in text."
+    },
+    {
+      "documentId": "doc-c41ddc7b55ec",
+      "questionId": "doc-c41ddc7b55ec:q2",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-c41ddc7b55ec",
+      "questionId": "doc-c41ddc7b55ec:q10",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-c41ddc7b55ec",
+      "questionId": "doc-c41ddc7b55ec:q18",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "The shoe-box diagram carries the dimensions needed for the volume calculation."
+    },
+    {
+      "documentId": "doc-c573e686e882",
+      "questionId": "doc-c573e686e882:q12",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-c573e686e882",
+      "questionId": "doc-c573e686e882:q15",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-c573e686e882",
+      "questionId": "doc-c573e686e882:q33",
+      "pages": [
+        18
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-c8d6da47c18b",
+      "questionId": "doc-c8d6da47c18b:q4",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": 5,
+      "responseControls": 5,
+      "layout": "mixed",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Five internal statements I-V precede five final A-( ) response options."
+    },
+    {
+      "documentId": "doc-c8d6da47c18b",
+      "questionId": "doc-c8d6da47c18b:q9",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-c8d6da47c18b",
+      "questionId": "doc-c8d6da47c18b:q15",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-cd0a32a92382",
+      "questionId": "doc-cd0a32a92382:q2",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-cd0a32a92382",
+      "questionId": "doc-cd0a32a92382:q13",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-cd0a32a92382",
+      "questionId": "doc-cd0a32a92382:q16",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-cef618be31e6",
+      "questionId": "doc-cef618be31e6:q2",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-cef618be31e6",
+      "questionId": "doc-cef618be31e6:q16",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-cef618be31e6",
+      "questionId": "doc-cef618be31e6:q23",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-cf6b56e7abd7",
+      "questionId": "doc-cf6b56e7abd7:q3",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-cf6b56e7abd7",
+      "questionId": "doc-cf6b56e7abd7:q12",
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "The two magic-square matrices and their spatial cell layout are necessary."
+    },
+    {
+      "documentId": "doc-cf6b56e7abd7",
+      "questionId": "doc-cf6b56e7abd7:q15",
+      "pages": [
+        16
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-dce5637b3bd7",
+      "questionId": "doc-dce5637b3bd7:q10",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-dce5637b3bd7",
+      "questionId": "doc-dce5637b3bd7:q18",
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-dce5637b3bd7",
+      "questionId": "doc-dce5637b3bd7:q30",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Canonical q30 is printed as mathematics Questao 10 after the section numbering restart."
+    },
+    {
+      "documentId": "doc-e13d030b1f9e",
+      "questionId": "doc-e13d030b1f9e:q9",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": 5,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-e13d030b1f9e",
+      "questionId": "doc-e13d030b1f9e:q15",
+      "pages": [
+        12
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": 5,
+      "responseControls": 10,
+      "layout": "parent_child",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Five child assertions A-E, each with explicit C/E controls."
+    },
+    {
+      "documentId": "doc-e13d030b1f9e",
+      "questionId": "doc-e13d030b1f9e:q30",
+      "pages": [
+        20
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": 5,
+      "responseControls": 10,
+      "layout": "parent_child",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "Five child assertions A-E with C/E controls; the Pick-theorem figures and grid are required."
+    },
+    {
+      "documentId": "doc-ee51036d2382",
+      "questionId": "doc-ee51036d2382:q11",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-ee51036d2382",
+      "questionId": "doc-ee51036d2382:q14",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-ee51036d2382",
+      "questionId": "doc-ee51036d2382:q39",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "The butter-tablet diagram carries the dimensions needed for the volume calculation."
+    },
+    {
+      "documentId": "doc-eefc3d15076e",
+      "questionId": "doc-eefc3d15076e:q13",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "The trapezoid, semicircle and sector diagram is required."
+    },
+    {
+      "documentId": "doc-eefc3d15076e",
+      "questionId": "doc-eefc3d15076e:q17",
+      "pages": [
+        18
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "The triangle diagram supplies the geometric configuration and side labels."
+    },
+    {
+      "documentId": "doc-eefc3d15076e",
+      "questionId": "doc-eefc3d15076e:q40",
+      "pages": [
+        36
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "The question directly analyzes the charge and its visual-verbal communicative situation."
+    },
+    {
+      "documentId": "doc-f03e7d17eec1",
+      "questionId": "doc-f03e7d17eec1:q3",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "The square/circular token diagram and fixed shape sequence are required to form the expression."
+    },
+    {
+      "documentId": "doc-f03e7d17eec1",
+      "questionId": "doc-f03e7d17eec1:q20",
+      "pages": [
+        22
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-f03e7d17eec1",
+      "questionId": "doc-f03e7d17eec1:q38",
+      "pages": [
+        37
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "Depends on the shared Text 5 population graph on the previous page; the canonical question boundary remains page 37."
+    },
+    {
+      "documentId": "doc-f1c03b7dfa39",
+      "questionId": "doc-f1c03b7dfa39:q5",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-f1c03b7dfa39",
+      "questionId": "doc-f1c03b7dfa39:q15",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": null
+    },
+    {
+      "documentId": "doc-f1c03b7dfa39",
+      "questionId": "doc-f1c03b7dfa39:q22",
+      "pages": [
+        11
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "Depends on the visual-verbal Armandinho comic shown on the same page."
+    },
+    {
+      "documentId": "doc-f4dd01071816",
+      "questionId": "doc-f4dd01071816:q5",
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "The population projection graph supplies the numerical data used by the question."
+    },
+    {
+      "documentId": "doc-f4dd01071816",
+      "questionId": "doc-f4dd01071816:q13",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Canonical q13 is the printed question 13 on PDF page 14; no numbering normalization is needed for this selected item."
+    },
+    {
+      "documentId": "doc-f4dd01071816",
+      "questionId": "doc-f4dd01071816:q20",
+      "pages": [
+        20
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "The airplane construction diagrams and box diagram provide the dimensions and geometric constraints needed to answer."
+    }
+  ]
+}
