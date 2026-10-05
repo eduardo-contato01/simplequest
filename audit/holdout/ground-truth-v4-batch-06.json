@@ -1,0 +1,211 @@
+{
+  "protocolVersion": "holdout-v4",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-06",
+  "sourceManifest": "audit/holdout/manifest-v4-b.json",
+  "sourceManifestFileSha256": "7250a9bd00f54bb49e0c68da468f4a5fb22dde9cd99943681642c582a619b885",
+  "sourceQuestionIndex": "audit/holdout/question-index-v4-final.json",
+  "sourceQuestionIndexFileSha256": "c6552696da6cfc6bb96b04d1060fba676062991252b4cb92fffd2d93e1e8b0f8",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-42af2b3d2b27": "42af2b3d2b27f4028c36e7298f79cfe81291db82e6b7bd098bcaa1e34c9f41ec",
+    "doc-4310686d43a6": "4310686d43a6869a4470e38db614688ebde542a860b04ebeb0b742649fec4ac4",
+    "doc-44ea716ed9b7": "44ea716ed9b726f56e3a6243bf6c3822f168b051b02b00ae85c742719fd888de"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-42af2b3d2b27",
+      "questionId": "doc-42af2b3d2b27:q1",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "A fotografia do veículo é contextual; todos os dados necessários ao cálculo de escala aparecem textualmente."
+    },
+    {
+      "documentId": "doc-42af2b3d2b27",
+      "questionId": "doc-42af2b3d2b27:q12",
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-42af2b3d2b27",
+      "questionId": "doc-42af2b3d2b27:q16",
+      "pages": [
+        17
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": null
+    },
+    {
+      "documentId": "doc-4310686d43a6",
+      "questionId": "doc-4310686d43a6:q2",
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "As alternativas usam letras A-E visualmente circundadas; não existe campo de resposta vazio separado na página."
+    },
+    {
+      "documentId": "doc-4310686d43a6",
+      "questionId": "doc-4310686d43a6:q8",
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "As alternativas usam letras A-E visualmente circundadas; não existe campo de resposta vazio separado na página."
+    },
+    {
+      "documentId": "doc-4310686d43a6",
+      "questionId": "doc-4310686d43a6:q14",
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "As alternativas usam letras A-E visualmente circundadas; não existe campo de resposta vazio separado na página."
+    },
+    {
+      "documentId": "doc-44ea716ed9b7",
+      "questionId": "doc-44ea716ed9b7:q22",
+      "pages": [
+        6
+      ],
+      "responseMode": "true_false",
+      "optionCount": null,
+      "optionLabels": null,
+      "subitems": null,
+      "responseControls": null,
+      "layout": "parent_child",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "Item PAS Tipo A pertencente a um bloco de itens julgados individualmente como Certo/Errado."
+    },
+    {
+      "documentId": "doc-44ea716ed9b7",
+      "questionId": "doc-44ea716ed9b7:q54",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "notes": "Item PAS explicitamente identificado como Tipo C. As alternativas A-D usam marcadores circulares com a letra, sem campo vazio separado."
+    },
+    {
+      "documentId": "doc-44ea716ed9b7",
+      "questionId": "doc-44ea716ed9b7:q88",
+      "pages": [
+        15
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "A questão apresenta quatro gráficos de velocidade versus tempo como alternativas A-D. Os marcadores são circulares, sem campo vazio separado."
+    }
+  ]
+}

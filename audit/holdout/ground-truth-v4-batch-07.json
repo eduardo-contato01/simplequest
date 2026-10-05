@@ -1,0 +1,216 @@
+{
+  "protocolVersion": "holdout-v4",
+  "artifactType": "human-ground-truth-annotation-batch",
+  "annotationVersion": 1,
+  "batchId": "ground-truth-07",
+  "sourceManifest": "audit/holdout/manifest-v4-b.json",
+  "sourceManifestFileSha256": "7250a9bd00f54bb49e0c68da468f4a5fb22dde9cd99943681642c582a619b885",
+  "sourceQuestionIndex": "audit/holdout/question-index-v4-final.json",
+  "sourceQuestionIndexFileSha256": "c6552696da6cfc6bb96b04d1060fba676062991252b4cb92fffd2d93e1e8b0f8",
+  "humanAdjudicated": true,
+  "auditorExecutedBeforeFreeze": false,
+  "documentFingerprints": {
+    "doc-56268e79f6bf": "56268e79f6bf85a1cf08f2a97c69217adfd3410cd126f0ec1e7f5744e0fa0d1e",
+    "doc-591f3e819d58": "591f3e819d5810c359b2a0d9e8a32cdc54a7c6245e0b3cf03d9521a46ee7b3f8",
+    "doc-5d61be2ac853": "5d61be2ac8537a32577aa37aab20221820b7499b2488f292ac60f49397170fc8"
+  },
+  "documents": 3,
+  "questionsAnnotated": 9,
+  "questions": [
+    {
+      "documentId": "doc-56268e79f6bf",
+      "questionId": "doc-56268e79f6bf:q6",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão depende do desenho do recipiente em forma de paralelepípedo e de suas dimensões para calcular o volume de sangue."
+    },
+    {
+      "documentId": "doc-56268e79f6bf",
+      "questionId": "doc-56268e79f6bf:q11",
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "A imagem do corpo humano é contextual; a resposta depende dos valores numéricos fornecidos no texto e de conversões aritméticas."
+    },
+    {
+      "documentId": "doc-56268e79f6bf",
+      "questionId": "doc-56268e79f6bf:q14",
+      "pages": [
+        16
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão depende da tabela visual com os preços dos quatro medicamentos e de cálculo de pagamento parcelado."
+    },
+    {
+      "documentId": "doc-591f3e819d58",
+      "questionId": "doc-591f3e819d58:q10",
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão exige leitura do gráfico preço versus quantidade."
+    },
+    {
+      "documentId": "doc-591f3e819d58",
+      "questionId": "doc-591f3e819d58:q19",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "notes": "As dimensões do aquário são explicitadas no texto; a figura é apenas apoio geométrico."
+    },
+    {
+      "documentId": "doc-591f3e819d58",
+      "questionId": "doc-591f3e819d58:q21",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": null,
+      "responseControls": null,
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "A questão depende da malha triangular subdividida em 36 triângulos e da distribuição visual dos triângulos pintados."
+    },
+    {
+      "documentId": "doc-5d61be2ac853",
+      "questionId": "doc-5d61be2ac853:q3",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "A questão depende das situações vividas por Cascão na sequência de quadrinhos do Texto II. Cada alternativa possui campo explícito A-( )."
+    },
+    {
+      "documentId": "doc-5d61be2ac853",
+      "questionId": "doc-5d61be2ac853:q5",
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "notes": "A questão pergunta o valor da onomatopeia CABRUUUM no segundo quadrinho do Texto II. Cada alternativa possui campo explícito A-( )."
+    },
+    {
+      "documentId": "doc-5d61be2ac853",
+      "questionId": "doc-5d61be2ac853:q11",
+      "pages": [
+        9
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": null,
+      "responseControls": 4,
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "notes": "Questão textual sobre emprego de pontuação; quatro alternativas com campos explícitos A-( )."
+    }
+  ]
+}
