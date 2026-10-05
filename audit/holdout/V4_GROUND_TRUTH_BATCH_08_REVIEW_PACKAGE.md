@@ -3,9 +3,9 @@
 Preparacao para revisao humana, sem adjudicacao. Batch independente: `ground-truth-08`, com 3 documentos / 9 questoes, nas posicoes 22–24 do manifest congelado.
 
 - Branch: `audit/holdout-v4`.
-- Commit fonte: `0276e62d1cb6c4de8d10a13d310f02c504bdfea6`.
-- Manifest: `audit/holdout/manifest-v4-b.json`; SHA256: `7250a9bd00f54bb49e0c68da468f4a5fb22dde9cd99943681642c582a619b885`.
-- Indice: `audit/holdout/question-index-v4-final.json`; SHA256: `c6552696da6cfc6bb96b04d1060fba676062991252b4cb92fffd2d93e1e8b0f8`.
+- Commit fonte: `5dbae24861fe4270ce5b7f69ec7d6d191ef6d2cc`.
+- Manifest: `audit/holdout/manifest-v4-b.json`; SHA256: `763290a582e5ed9436717c8cd754bb4501ad5a6f6aa5c69d8b3287014e93f8e7`.
+- Indice: `audit/holdout/question-index-v4-final.json`; SHA256: `4681bb8b257642ba1709c7c908791c011c16bc94b88c0071b4a971515c0bb4ab`.
 - Diretorio local (ignorado pelo Git): `outputs/audit/holdout/v4-ground-truth-batch-08-review/`.
 
 ## Documentos e identidades congeladas
@@ -22,10 +22,12 @@ Paginas fisicas do PDF integral; IDs e boundaries copiados do manifest e conferi
 
 Atencao: `doc-6381aed53bb1:q5` ocupa as paginas 4–5 (`pageStart=4`, `pageEnd=5`); range de duas paginas preservado, sem colapsar.
 
+Errata upstream refletida: `doc-6381aed53bb1:q19` — page range corrected upstream from 14-14 to 14-15 before human GT adjudication. Ver [errata objetiva](V4_OBJECTIVE_ERRATUM_Q19_PAGE_RANGE.md).
+
 | Question ID | Numero canonico | pageStart | pageEnd |
 | --- | --- | --- | --- |
 | `doc-6381aed53bb1:q5` | 5 | 4 | 5 |
-| `doc-6381aed53bb1:q19` | 19 | 14 | 14 |
+| `doc-6381aed53bb1:q19` | 19 | 14 | 15 |
 | `doc-6381aed53bb1:q36` | 36 | 25 | 25 |
 | `doc-6dde932fb681:q6` | 6 | 5 | 5 |
 | `doc-6dde932fb681:q7` | 7 | 6 | 6 |
@@ -44,7 +46,7 @@ Exatamente cinco arquivos, na ordem de `FILES_TO_UPLOAD.txt`:
 - `review-context.json`
 - `FILES_TO_UPLOAD.txt`
 
-- SHA256 de `review-context.json`: `8f25f095d408b38c360f89ff0dab2062a602e2043fa1bcbb1b3078c85fff34a1`.
+- SHA256 de `review-context.json`: `9750e983410f903efba2508c86c6faf92298a0bc0891f94848ca97e55c6ee16c`.
 - SHA256 de `FILES_TO_UPLOAD.txt`: `8a0e1638b76b193df844d7a9192a74560e9128c1ab5242dfe5bc6a780ed56a2a`.
 - PDFs integrais, byte-identicos aos originais: `true`; SHA256 de cada copia igual ao fingerprint acima, com comparacao binaria direta.
 

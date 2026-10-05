@@ -3,9 +3,9 @@
 Preparacao para revisao humana, sem adjudicacao. Batch independente: `ground-truth-10`, com 3 documentos / 9 questoes, nas posicoes 28–30 do manifest congelado.
 
 - Branch: `audit/holdout-v4`.
-- Commit fonte: `0276e62d1cb6c4de8d10a13d310f02c504bdfea6`.
-- Manifest: `audit/holdout/manifest-v4-b.json`; SHA256: `7250a9bd00f54bb49e0c68da468f4a5fb22dde9cd99943681642c582a619b885`.
-- Indice: `audit/holdout/question-index-v4-final.json`; SHA256: `c6552696da6cfc6bb96b04d1060fba676062991252b4cb92fffd2d93e1e8b0f8`.
+- Commit fonte: `5dbae24861fe4270ce5b7f69ec7d6d191ef6d2cc`.
+- Manifest: `audit/holdout/manifest-v4-b.json`; SHA256: `763290a582e5ed9436717c8cd754bb4501ad5a6f6aa5c69d8b3287014e93f8e7`.
+- Indice: `audit/holdout/question-index-v4-final.json`; SHA256: `4681bb8b257642ba1709c7c908791c011c16bc94b88c0071b4a971515c0bb4ab`.
 - Diretorio local (ignorado pelo Git): `outputs/audit/holdout/v4-ground-truth-batch-10-review/`.
 
 ## Documentos e identidades congeladas
@@ -42,7 +42,7 @@ Exatamente cinco arquivos, na ordem de `FILES_TO_UPLOAD.txt`:
 - `review-context.json`
 - `FILES_TO_UPLOAD.txt`
 
-- SHA256 de `review-context.json`: `e5ddfccb1e350c7bb4faaeae4c0cccf077953fe41faecda13913b761fce3ebf3`.
+- SHA256 de `review-context.json`: `3e213229352cf48a86f1dda46b2853863be593dd35a2c557b649d26fa95a8034`.
 - SHA256 de `FILES_TO_UPLOAD.txt`: `e2f44d50c949996db599cf1cca05c6a7c45cf2c661c90b3e25ab7080dce46f00`.
 - PDFs integrais, byte-identicos aos originais: `true`; SHA256 de cada copia igual ao fingerprint acima, com comparacao binaria direta.
 
