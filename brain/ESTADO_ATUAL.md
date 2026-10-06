@@ -79,3 +79,9 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - Replay diagnóstico de 30 casos reproduziu as classificações/campos comparados; 45 entradas de páginas completas revisadas, nenhuma revisão visual humana pendente. Resultado oficial preservado; officialAuditorExecutionCount=1, officialAuditorRerun=false; nenhum patch ou mudança funcional/cache/GT.
 - Famílias: markers corrompidos ou falsos, response set selecionado versus candidatos brutos, papéis de slots e completude/fusion; coverage também limitado por identidade/gramática/scope de boundary e observação visual. Categorias na amostra: boundary=13, structure=5, visual=1, observação complementar=5; não extrapolar para as 66 nem tratar como ganho medido.
 - Próximo passo: priorizar correções generalizáveis/TDD com controles positivos/negativos, começando por response set/completude. Qualquer patch pós-V4 exige V5 blind para avaliação imparcial; sem merge nesta etapa. Ver [análise](../audit/postmortem/V4_POSTMORTEM_ANALYSIS.md) e [findings](../audit/postmortem/v4-postmortem-findings.json).
+
+## Checkpoint corrente — Patch 01 pós-V4, 2026-10-06
+
+- `selected_response_set_contract` implementado na branch `audit/holdout-v4-postmortem-fixes`: Structure → Regions → Fusion preservam conjunto selecionado e provenance; seleção ambígua continua conservadora.
+- TDD RED/GREEN, 14 suítes e regressão diagnóstica dos seis casos obrigatórios PASS. Completude não corrigida; resultado oficial e fontes/caches intactos, execução oficial única, sem rerun.
+- V4 revelado não é benchmark pós-patch; V5 blind obrigatório antes de claims. Próximo passo separado: `response_set_completeness`. Detalhes/limitações no [Patch 01](../audit/postmortem/V4_PATCH_01_SELECTED_RESPONSE_SET.md); sem merge.

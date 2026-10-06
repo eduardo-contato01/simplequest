@@ -814,6 +814,81 @@ def _response_mode(
   return {"mode": "unknown", "optionLabels": "none", "subitems": "unknown", "subitemLabels": [], "evidence": evidence}
 
 
+RECOVERED_SET_EVIDENCE = {"sequence_gap", "alignment", "spatial_cluster"}
+
+
+def response_candidate_ref(candidate: dict[str, Any]) -> dict[str, Any]:
+  """Structural identity, independent of full candidate content."""
+  return {
+    "clusterId": candidate.get("clusterId"),
+    "page": candidate.get("page"),
+    "lineIndex": candidate.get("lineIndex"),
+    "ordinalWithinLine": candidate.get("ordinalWithinLine", 0),
+    "label": str(candidate.get("label") or candidate.get("expectedLabel") or "").upper(),
+    "spanWithinLine": list(candidate.get("spanWithinLine") or []),
+  }
+
+
+def response_set_authoritative(selected: dict[str, Any] | None) -> bool:
+  return bool(selected is not None and selected.get("clusterId") is not None
+              and not selected.get("ambiguous", True))
+
+
+def accepted_response_candidates(selected: dict[str, Any]) -> list[dict[str, Any]]:
+  return [candidate for candidate in selected.get("candidates") or []
+          if candidate.get("clusterId") == selected.get("clusterId")
+          and (candidate.get("labelSource") != "recovered_geometry"
+               or (RECOVERED_SET_EVIDENCE <= set(candidate.get("evidence") or [])
+                   and len(candidate.get("bbox") or []) == 4))]
+
+
+def selected_response_markers(markers: list[dict[str, Any]],
+                              selected: dict[str, Any] | None) -> list[dict[str, Any]]:
+  """Filter only answer markers; preserve non-answer roles and ambiguous sets."""
+  if not response_set_authoritative(selected):
+    return markers
+  candidates = accepted_response_candidates(selected)
+  kept: list[dict[str, Any]] = []
+  for marker in markers:
+    if marker.get("markerKind") != "answer_marker":
+      kept.append(marker)
+      continue
+    recovered = marker.get("source") == "recovered_geometry"
+    for candidate in candidates:
+      ref = response_candidate_ref(candidate)
+      # The observation adapter reads only the leading marker (ordinal zero).
+      # It does not expose spans; attach the Structure reference after matching.
+      if (marker.get("page") != ref["page"] or marker.get("lineIndex") != ref["lineIndex"]
+          or str(marker.get("label") or "").upper() != ref["label"]
+          or marker.get("ordinalWithinLine", 0) != ref["ordinalWithinLine"]
+          or recovered != (candidate.get("labelSource") == "recovered_geometry")):
+        continue
+      if marker.get("candidateRef") is not None and marker["candidateRef"] != ref:
+        continue
+      kept.append({**marker, "clusterId": ref["clusterId"], "candidateRef": ref,
+                   "selectedResponseSetMember": True, "recovered": recovered})
+      break
+  return kept
+
+
+def _response_set_contract(selected: dict[str, Any] | None, ambiguous: bool,
+                           recovered: list[dict[str, Any]]) -> dict[str, Any]:
+  candidates = []
+  if selected is not None:
+    # Recovered entries are generated exclusively from this selected cluster.
+    candidates = [{key: value for key, value in c.items() if key != "text"}
+                  for c in selected["candidates"]]
+    candidates += [{**{key: value for key, value in c.items() if key != "text"},
+                    "label": c["expectedLabel"], "markerKind": "answer_marker",
+                    "clusterId": selected["clusterId"], "ordinalWithinLine": 0,
+                    "spanWithinLine": []} for c in recovered]
+    candidates.sort(key=lambda c: (c["page"], c["bbox"][1], c["bbox"][0], c.get("ordinalWithinLine", 0)))
+  return {"clusterId": selected["clusterId"] if selected is not None else None,
+          "labels": [c["label"] for c in candidates],
+          "ambiguous": ambiguous, "candidateRefs": [response_candidate_ref(c) for c in candidates],
+          "candidates": candidates}
+
+
 def discover_response_structure(
   lines: list[ObservedLine],
   image_path: str | None = None,
@@ -950,6 +1025,7 @@ def discover_response_structure(
     "inferredResponseStructure": structure,
     "inferredAlternativeProfile": profile,
     "responseSetCandidates": clusters,
+    "selectedResponseSet": _response_set_contract(selected, ambiguous or layout_ambiguous, recovered),
     "internalEnumerationCandidates": internal,
     "recoveredAlternativeMarkerCandidates": recovered,
     "edgeSequenceAmbiguityCandidates": edge_ambiguity,

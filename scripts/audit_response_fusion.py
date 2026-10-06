@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from typing import Any
 
+import audit_response_structure as response_structure
+
 
 ORIGIN_BY_SOURCE = {
   "strong": "textual_marker",
@@ -121,6 +123,25 @@ def fuse_response_evidence(
   pattern_name = str(pattern.get("pattern") or "unknown")
   pattern_confidence = str(pattern.get("confidence") or "low")
   structure_info = structure.get("inferredResponseStructure") or {}
+  selected_set = structure.get("selectedResponseSet")
+  selected_set_used = response_structure.response_set_authoritative(selected_set)
+  selected_candidates = response_structure.accepted_response_candidates(selected_set) if selected_set_used else []
+  selected_refs = [response_structure.response_candidate_ref(c) for c in selected_candidates]
+  rejected_slot_refs = []
+  if selected_set_used:
+    retained = []
+    for slot in slot_hypotheses:
+      observations = slot.get("markerObservations") or []
+      if slot.get("role") == "answer_option":
+        rejected_slot_refs.extend(o["candidateRef"] for o in observations
+                                  if o.get("candidateRef") is not None and o["candidateRef"] not in selected_refs)
+        observations = [o for o in observations if o.get("candidateRef") is None
+                        or o["candidateRef"] in selected_refs]
+      if slot.get("role") == "answer_option" and not any(
+          o.get("candidateRef") in selected_refs for o in observations):
+        continue
+      retained.append({**slot, "markerObservations": observations})
+    slot_hypotheses = retained
 
   slots: list[dict[str, Any]] = []
   answer_slot_indexes: list[int] = []
@@ -143,9 +164,12 @@ def fuse_response_evidence(
       "label": slot.get("label"),
       "contentRegionId": content_region_id,
       "textualMarkerRefs": [
-        {"source": observation.get("source"), "lineIndex": observation.get("lineIndex")}
+        {"source": observation.get("source"), "lineIndex": observation.get("lineIndex"),
+         "clusterId": observation.get("clusterId"), "candidateRef": observation.get("candidateRef"),
+         "selectedResponseSetMember": observation.get("selectedResponseSetMember"),
+         "recovered": observation.get("recovered", False)}
         for origin, observation in origins.items()
-        if origin in {"textual_marker", "symbol_control"}
+        if origin in {"textual_marker", "symbol_control", "recovered_geometry"}
       ],
       "visualEvidenceRefs": [
         observation.get("visualIndex")
@@ -179,6 +203,8 @@ def fuse_response_evidence(
     hard_blockers.append(
       "edge_sequence_ambiguity"
     )
+  if (selected_set or {}).get("ambiguous"):
+    hard_blockers.append("competing_response_sets")
   if len([h for h in visual_hypotheses if int(h.get("support") or 0) >= 3]) >= 2:
     hard_blockers.append("competing_response_sets")
   if pattern_name == "paired_controls_per_row" and answer_slot_indexes:
@@ -204,9 +230,14 @@ def fuse_response_evidence(
   # count conflict: structural answer markers vs answer_option slots disagree.
   # A recovered marker is allowed to participate only when it came from the
   # conservative internal-gap recovery path with all required evidence.
+  marker_candidates = (selected_candidates if selected_set_used
+                       else structure.get("alternativeMarkerCandidates") or [])
+  recovery_candidates = (selected_candidates if selected_set_used
+                         else structure.get("recoveredAlternativeMarkerCandidates") or [])
   text_markers = [
-    marker for marker in (structure.get("alternativeMarkerCandidates") or [])
+    marker for marker in marker_candidates
     if marker.get("markerKind") == "answer_marker"
+    and marker.get("labelSource") != "recovered_geometry"
     and str(marker.get("label") or "").upper() in list("ABCDE")
   ]
 
@@ -219,8 +250,7 @@ def fuse_response_evidence(
   recovered_markers = [
     marker
     for marker in (
-      structure.get("recoveredAlternativeMarkerCandidates")
-      or []
+      recovery_candidates
     )
     if marker.get("labelSource") == "recovered_geometry"
     and str(marker.get("expectedLabel") or "").upper() in list("ABCDE")
@@ -367,8 +397,8 @@ def fuse_response_evidence(
   else:
     necessary = [
       _origin_confidence(origin, observation, visual_evidence)
-      for slot in slots
-      for origin, observation in _slot_origins(slot_hypotheses[slot["slotId"]]).items()
+      for slot in slot_hypotheses
+      for origin, observation in _slot_origins(slot).items()
     ] if slots else []
     observation_confidence = _min_confidence(necessary) if necessary else "low"
     association_confidence = _min_confidence([slot["associationConfidence"] for slot in slots]) if slots else "low"
@@ -404,6 +434,11 @@ def fuse_response_evidence(
     evidence.append(f"optionLabelsHypothesis:{option_labels}")
 
   return {
+    "selectedResponseSetUsed": selected_set_used,
+    "selectedResponseSetClusterId": selected_set.get("clusterId") if selected_set_used else None,
+    "selectedResponseCandidateRefs": selected_refs,
+    "excludedAnswerSlotCandidateRefs": rejected_slot_refs,
+    "structuralMarkerCount": structural_marker_count,
     "agreement": agreement,
     "sources": sources,
     "slots": slots,

@@ -5,6 +5,8 @@ from dataclasses import dataclass, field
 from statistics import median
 from typing import Any
 
+import audit_response_structure as response_structure
+
 
 INSTRUCTION_RE = re.compile(
   r"\b(assinale|assinalar|correta|correto|julgue|julgar|op[çc][ãa]o|op[çc][õo]es|letra|"
@@ -131,6 +133,10 @@ def _anchor_from_marker(marker: dict[str, Any]) -> dict[str, Any]:
     "page": int(marker.get("page") or 0),
     "bbox": [float(value) for value in marker.get("bbox") or (0, 0, 0, 0)],
     "lineIndex": marker.get("lineIndex"),
+    "clusterId": marker.get("clusterId"),
+    "candidateRef": marker.get("candidateRef"),
+    "selectedResponseSetMember": marker.get("selectedResponseSetMember"),
+    "recovered": marker.get("recovered", False),
   }
 
 
@@ -420,7 +426,10 @@ def discover_response_regions(
   strong_markers: list[dict[str, Any]],
   visual_markers: list[dict[str, Any]] | None = None,
   raster_components: list[dict[str, Any]] | None = None,
+  selected_response_set: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
+  strong_markers = response_structure.selected_response_markers(strong_markers, selected_response_set)
+  authoritative_set = response_structure.response_set_authoritative(selected_response_set)
   visual_markers = visual_markers or []
   raster_components = raster_components or []
   words = words or []
@@ -465,7 +474,7 @@ def discover_response_regions(
         anchor["role"] = "subitem"
         anchor["subitemLabel"] = anchor.get("label")
 
-  if not text_anchors and not parent_anchors and not visual_anchors:
+  if not authoritative_set and not text_anchors and not parent_anchors and not visual_anchors:
     single_letter_anchors = _detect_single_letter_anchors(words)
     if not single_letter_anchors:
       weak_anchors = _detect_weak_anchors(lines, used_lines)
@@ -562,6 +571,12 @@ def discover_response_regions(
     anchor.setdefault("role", "subitem")
     anchor.setdefault("label", anchor.get("subitemLabel"))
     anchor.setdefault("parentLabel", str(anchor.get("parentQuestion")))
+
+  if authoritative_set:
+    # Unmatched visual/fallback anchors cannot enlarge the selected answer set.
+    # Controls, fields and subitems are not answer options and remain available.
+    anchors = [anchor for anchor in anchors if anchor.get("role") != "answer_option"
+               or anchor.get("selectedResponseSetMember") is True]
 
   # ---- regions -------------------------------------------------------------
   regions: list[ObservedResponseRegion] = []
@@ -688,6 +703,10 @@ def discover_response_regions(
       "lineIndex": anchor.get("lineIndex"),
       "visualIndex": anchor.get("visualIndex"),
       "fill": anchor.get("fill"),
+      "clusterId": anchor.get("clusterId"),
+      "candidateRef": anchor.get("candidateRef"),
+      "selectedResponseSetMember": anchor.get("selectedResponseSetMember"),
+      "recovered": anchor.get("recovered", False),
     }]
     observations.extend(anchor.get("additionalObservations") or [])
     slot = ResponseSlotHypothesis(

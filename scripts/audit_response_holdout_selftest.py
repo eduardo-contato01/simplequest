@@ -618,7 +618,146 @@ def test_recovered_geometry_marker_adapter() -> None:
   )
 
 
+def selected_set_lines(texts: list[tuple[str, float]]) -> list[dict]:
+  return [{"text": text, "page": 1, "x0": 50.0, "x1": 250.0,
+           "top": top, "bottom": top + 12.0, "lineIndex": i, "role": "stem"}
+          for i, (text, top) in enumerate(texts)]
+
+
+def selected_set_pipeline(lines: list[dict], structure=None):
+  structure = structure or runner.response_structure.discover_response_structure(runner._observed_lines(lines))
+  markers = runner._markers_with_recovered_geometry(lines, structure)
+  boundary = {"reliable": True, "pages": [1]}
+  kwargs = {}
+  # The new contract must be supported by the consumer, but RED remains runnable.
+  import inspect
+  if "selected_response_set" in inspect.signature(runner.regions.discover_response_regions).parameters:
+    kwargs["selected_response_set"] = structure.get("selectedResponseSet")
+  regions = runner.regions.discover_response_regions(boundary=boundary, lines=lines, words=None,
+                                                    strong_markers=markers, **kwargs)
+  fusion = runner.fusion.fuse_response_evidence(boundary, structure, {}, regions)
+  return structure, markers, regions, fusion
+
+
+def test_selected_response_set_contract() -> None:
+  options = [(f"({label}) alternativa com conteudo", 300.0 + i * 24) for i, label in enumerate("ABCDE")]
+  for name, texts, count, labels in [
+    ("before", [("(A) falso marcador no enunciado", 40.0)] + options, 5, "A-E"),
+    ("after", options[:4] + [("(E) rodape independente", 800.0)], 4, "A-D"),
+    ("inline", options[:3] + [("(D) conteudo com (A) referencia interna", 372.0)], 4, "A-D"),
+    ("real_ad", options[:4], 4, "A-D"),
+    ("real_ae", options, 5, "A-E"),
+    ("real_ac_no_clamp", options[:3], 3, "A-C"),
+  ]:
+    structure, markers, regions, fusion = selected_set_pipeline(selected_set_lines(texts))
+    answers = [s for s in regions["responseSlotHypotheses"] if s["role"] == "answer_option"]
+    contract = structure.get("selectedResponseSet") or {}
+    check(f"selected.{name}.contract", contract.get("clusterId") is not None and not contract.get("ambiguous", True))
+    check(f"selected.{name}.slots", len(answers) == count, len(answers))
+    check(f"selected.{name}.count_labels", fusion["optionCountHypothesis"] == count and fusion["optionLabelsHypothesis"] == labels, fusion)
+    check(f"selected.{name}.no_conflict", not {"count_conflict", "label_conflict"} & set(fusion["blockers"]))
+    check(f"selected.{name}.provenance", all(o.get("selectedResponseSetMember") is True
+          for s in answers for o in s["markerObservations"] if o["source"] in {"strong", "recovered_geometry"}))
+    check(f"selected.{name}.refs", all("text" not in ref and "spanWithinLine" in ref
+          for ref in contract.get("candidateRefs", [])) and bool(contract.get("candidateRefs")))
+
+  competing = options + [(f"({label}) outro conjunto legitimo", 650.0 + i * 24) for i, label in enumerate("ABCDE")]
+  structure, markers, regions, fusion = selected_set_pipeline(selected_set_lines(competing))
+  check("selected.ambiguous.structure", structure["ambiguous"] is True)
+  check("selected.ambiguous.not_hidden", len([m for m in markers if m["markerKind"] == "answer_marker"]) == 10)
+  check("selected.ambiguous.blocked", fusion["optionCountHypothesis"] is None and "competing_response_sets" in fusion["hardBlockers"])
+
+  # Internal enumeration keeps its role instead of becoming an extra answer.
+  texts = [("I) primeiro item interno", 40.0), ("II) segundo item interno", 64.0)] + options
+  _, _, regions, fusion = selected_set_pipeline(selected_set_lines(texts))
+  check("selected.internal.not_option", len([s for s in regions["responseSlotHypotheses"] if s["role"] == "answer_option"]) == 5)
+  check("selected.internal.subitems", any(s["role"] == "subitem" for s in regions["responseSlotHypotheses"]))
+
+  # Existing conservative internal-gap recovery, not a new observation capability.
+  gap = options.copy()
+  gap[2] = ("corrompido mas alinhado com as alternativas", 348.0)
+  lines = selected_set_lines(gap)
+  structure, markers, regions, fusion = selected_set_pipeline(lines)
+  check("selected.recovered.valid", any(m.get("source") == "recovered_geometry" and m.get("selectedResponseSetMember") for m in markers))
+  check("selected.recovered.count", fusion["optionCountHypothesis"] == 5, fusion)
+  check("selected.recovered.labels", structure["selectedResponseSet"]["labels"] == list("ABCDE")
+        and fusion["optionLabelsHypothesis"] == "A-E")
+  import copy
+  foreign = copy.deepcopy(structure)
+  foreign["recoveredAlternativeMarkerCandidates"][0]["page"] = 2
+  _, markers, _, _ = selected_set_pipeline(lines, foreign)
+  check("selected.recovered.membership_required", not any(m.get("source") == "recovered_geometry" for m in markers))
+  invalid = copy.deepcopy(structure)
+  for key in ("recoveredAlternativeMarkerCandidates",):
+    for candidate in invalid[key]:
+      candidate["evidence"] = ["sequence_gap", "alignment"]
+  for candidate in (invalid.get("selectedResponseSet") or {}).get("candidates", []):
+    if candidate.get("labelSource") == "recovered_geometry":
+      candidate["evidence"] = ["sequence_gap", "alignment"]
+  _, markers, _, fusion = selected_set_pipeline(lines, invalid)
+  check("selected.recovered.invalid", not any(m.get("source") == "recovered_geometry" for m in markers))
+
+  # Filtering must retain non-answer roles even alongside an authoritative set.
+  structure = runner.response_structure.discover_response_structure(runner._observed_lines(selected_set_lines(options)))
+  non_answers = selected_set_lines([( "12-A afirmacao com controle", 100.0), ("12-B segunda afirmacao", 124.0)])
+  raw = runner.observations.extract_text_markers(non_answers)
+  kept = runner._markers_with_recovered_geometry(non_answers, structure)
+  check("selected.parent_control.preserved", bool(raw) and [m for m in kept if m["markerKind"] != "answer_marker"] == raw)
+  ce = selected_set_lines([( "Julgue os itens como certo ou errado", 40.0),
+                           ("12-A primeira afirmacao", 100.0), ("12-B segunda afirmacao", 124.0)])
+  structure, _, _, fusion = selected_set_pipeline(ce)
+  check("selected.parent_child.not_single", structure["inferredResponseStructure"]["mode"] != "single_choice" and fusion["optionCountHypothesis"] is None)
+  structure, _, _, fusion = selected_set_pipeline(selected_set_lines([
+    ("(C) afirmacao verdadeira", 300.0), ("(E) afirmacao falsa", 324.0)]))
+  check("selected.ce.not_single", structure["inferredResponseStructure"]["mode"] != "single_choice"
+        and fusion["optionCountHypothesis"] is None and fusion["optionLabelsHypothesis"] == "CE")
+  # C/E controls and parent-child slots survive an authoritative answer filter.
+  texts = [("Julgue as afirmacoes e assinale C ou E", 40.0)]
+  for i, label in enumerate("ABC"):
+    texts.append((f"12-{label} afirmacao com \ue000 \ue001 controles", 100.0 + i * 40))
+  texts += options
+  structure, _, regions, _ = selected_set_pipeline(selected_set_lines(texts))
+  roles = [slot["role"] for slot in regions["responseSlotHypotheses"]]
+  check("selected.ce.controls_retained", roles.count("response_control") == 6 and roles.count("subitem") == 3, roles)
+  non_answer_roles = [{"markerKind": kind} for kind in ("parent_child", "subitem", "response_control")]
+  check("selected.non_answer_roles.unfiltered", runner.response_structure.selected_response_markers(
+        non_answer_roles, structure.get("selectedResponseSet")) == non_answer_roles)
+  # A leading observation cannot claim membership of a rejected inline ordinal.
+  lines = selected_set_lines(options[:3] + [("(D) conteudo com (A) referencia interna", 372.0)])
+  structure, markers, regions, fusion = selected_set_pipeline(lines)
+  rejected = next(c for c in structure["alternativeMarkerCandidates"] if c["ordinalWithinLine"] == 1)
+  forged = {**markers[-1], "label": rejected["label"], "candidateRef": runner.response_structure.response_candidate_ref(rejected)}
+  check("selected.identity.inline_rejected", runner.response_structure.selected_response_markers([forged], structure["selectedResponseSet"]) == [])
+  # Regions and Fusion independently enforce the contract on stale raw inputs.
+  raw_regions = runner.regions.discover_response_regions(boundary={"reliable": True, "pages": [1]},
+    lines=lines, words=None, strong_markers=runner.observations.extract_text_markers(lines),
+    selected_response_set=structure["selectedResponseSet"])
+  check("selected.regions.direct_contract", all(o.get("selectedResponseSetMember") for s in raw_regions["responseSlotHypotheses"]
+    if s["role"] == "answer_option" for o in s["markerObservations"]))
+  stale = copy.deepcopy(regions)
+  stale_slot = copy.deepcopy(stale["responseSlotHypotheses"][-1])
+  stale_slot["slotId"] = 99
+  stale_slot["label"] = rejected["label"]
+  stale_slot["markerObservations"] = [{"source": "strong", "label": rejected["label"],
+    "candidateRef": runner.response_structure.response_candidate_ref(rejected)}]
+  stale["responseSlotHypotheses"].insert(0, stale_slot)
+  fused = runner.fusion.fuse_response_evidence({"reliable": True}, structure, {}, stale)
+  check("selected.fusion.direct_contract", fused["optionCountHypothesis"] == 4 and fused["optionLabelsHypothesis"] == "A-D"
+        and len(fused["excludedAnswerSlotCandidateRefs"]) == 1, fused)
+  merged = copy.deepcopy(regions)
+  merged["responseSlotHypotheses"][-1]["markerObservations"] += stale_slot["markerObservations"]
+  fused = runner.fusion.fuse_response_evidence({"reliable": True}, structure, {}, merged)
+  check("selected.fusion.rejected_merge_excluded", fused["optionCountHypothesis"] == 4
+        and "label_conflict" not in fused["blockers"] and len(fused["excludedAnswerSlotCandidateRefs"]) == 1)
+  # Missing internal label without a recovery observation is not invented.
+  _, markers, _, _ = selected_set_pipeline(selected_set_lines(options[:2] + options[3:]))
+  check("selected.missing_label.not_invented", not any(m["label"] == "C" for m in markers))
+  check("selected.no_new_recovery_policy", all(m.get("source") != "recovered_geometry" or
+        set(m.get("recoveredEvidence", [])) >= {"sequence_gap", "alignment", "spatial_cluster"} for m in markers))
+
+
 def main() -> None:
+  test_selected_response_set_contract()
   test_recovered_geometry_marker_adapter()
   test_deterministic_and_quotas()
   test_pool_filters()

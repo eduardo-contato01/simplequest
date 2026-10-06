@@ -482,7 +482,7 @@ def _markers_with_recovered_geometry(
         sorted(evidence),
     })
 
-  return markers
+  return response_structure.selected_response_markers(markers, structure.get("selectedResponseSet"))
 
 
 def _run_from_bundle(bundle: observations.ObservationBundle, boundary: dict[str, Any], rendered_dir: Path | None,
@@ -521,6 +521,7 @@ def _run_from_bundle(bundle: observations.ObservationBundle, boundary: dict[str,
   discovered = regions.discover_response_regions(
     boundary=boundary, lines=lines, words=words, strong_markers=markers,
     visual_markers=visual_markers, raster_components=raster,
+    selected_response_set=structure.get("selectedResponseSet"),
   )
   visual_shadow = {"visualAlternativeEvidence": visual_markers} if visual_markers else {}
   return fusion.fuse_response_evidence(boundary, structure, visual_shadow, discovered)

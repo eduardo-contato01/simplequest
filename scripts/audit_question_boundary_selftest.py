@@ -151,11 +151,12 @@ def visual(page: int, top: float, left: float = 60.0, size: float = 14.0) -> obs
 
 def option_count(bundle: observations.ObservationBundle, boundary: dict) -> int | None:
   lines = bundle.lines_as_region_input()
-  markers = observations.extract_text_markers(lines)
+  structure = response_structure.discover_response_structure(runner._observed_lines(lines))
+  markers = runner._markers_with_recovered_geometry(lines, structure)
   discovered = regions.discover_response_regions(
     boundary=boundary, lines=lines, words=[], strong_markers=markers, visual_markers=[], raster_components=[],
+    selected_response_set=structure.get("selectedResponseSet"),
   )
-  structure = response_structure.discover_response_structure(runner._observed_lines(lines))
   result = fusion.fuse_response_evidence(boundary, structure, {}, discovered)
   return result.get("optionCountHypothesis")
 
@@ -387,7 +388,7 @@ def test_same_page_two_questions_ae() -> None:
   unfiltered = option_count(bundle, {"reliable": True, "pages": [1]})
   b1, f1 = run_question(bundle, index, "d:q1")
   b2, f2 = run_question(bundle, index, "d:q2")
-  check("two_ae.bug_unfiltered_10", unfiltered == 10, unfiltered)
+  check("two_ae.unfiltered_conservative", unfiltered is None, unfiltered)
   check("two_ae.q1_reliable", b1["reliable"] is True, b1)
   check("two_ae.q1_count_5", option_count(f1, b1) == 5, option_count(f1, b1))
   check("two_ae.q2_count_5", option_count(f2, b2) == 5, option_count(f2, b2))
@@ -405,7 +406,7 @@ def test_same_page_five_questions_ae() -> None:
   index = data("d", questions)
   unfiltered = option_count(bundle, {"reliable": True, "pages": [1]})
   boundary, filtered = run_question(bundle, index, "d:q3")
-  check("five_ae.bug_unfiltered_25", unfiltered == 25, unfiltered)
+  check("five_ae.unfiltered_conservative", unfiltered is None, unfiltered)
   check("five_ae.q3_count_5", option_count(filtered, boundary) == 5, option_count(filtered, boundary))
 
 
@@ -420,7 +421,7 @@ def test_same_page_three_questions_ad() -> None:
   index = data("d", [entry("d:q1", 1, 1, 1), entry("d:q2", 2, 1, 1), entry("d:q3", 3, 1, 1)])
   unfiltered = option_count(bundle, {"reliable": True, "pages": [1]})
   boundary, filtered = run_question(bundle, index, "d:q2")
-  check("three_ad.bug_unfiltered_12", unfiltered == 12, unfiltered)
+  check("three_ad.unfiltered_conservative", unfiltered is None, unfiltered)
   check("three_ad.middle_count_4", option_count(filtered, boundary) == 4, option_count(filtered, boundary))
 
 
@@ -435,7 +436,13 @@ def test_multi_page_question() -> None:
   check("multi.pages", boundary["pages"] == [1, 2], boundary["pages"])
   check("multi.start_limit", boundary["pageLimits"][1]["top"] == 100.0, boundary["pageLimits"])
   check("multi.end_limit", boundary["pageLimits"][2]["bottom"] == 300.0, boundary["pageLimits"])
-  check("multi.count_of_q1", option_count(filtered, boundary) == 5, option_count(filtered, boundary))
+  # Existing Structure clustering is page-local and selects A-B here, not the
+  # C-E continuation. The contract must not silently union rejected clusters.
+  # Cross-page completeness is outside this patch; preserve safe abstention.
+  selected = response_structure.discover_response_structure(
+    runner._observed_lines(filtered.lines_as_region_input()))["selectedResponseSet"]
+  check("multi.selected_fragment", selected["labels"] == ["A", "B"], selected)
+  check("multi.selected_fragment_conservative", option_count(filtered, boundary) is None, option_count(filtered, boundary))
   boundary2, filtered2 = run_question(bundle, index, "d:q2")
   check("multi.q2_count", option_count(filtered2, boundary2) == 5, option_count(filtered2, boundary2))
 
