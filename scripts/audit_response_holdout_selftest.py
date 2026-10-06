@@ -756,7 +756,121 @@ def test_selected_response_set_contract() -> None:
         set(m.get("recoveredEvidence", [])) >= {"sequence_gap", "alignment", "spatial_cluster"} for m in markers))
 
 
+def test_response_set_completeness() -> None:
+  def options(labels):
+    return [(f"({label}) alternativa observada", 300.0 + i * 24) for i, label in enumerate(labels)]
+
+  cases = [
+    ("real_ad", options("ABCD"), "complete", 4, "A-D"),
+    ("real_ae", options("ABCDE"), "complete", 5, "A-E"),
+    ("real_ac", options("ABC"), "complete", 3, "A-C"),
+    ("suffix_cde", options("CDE"), "incomplete", None, "unknown"),
+    ("suffix_bcde", options("BCDE"), "incomplete", None, "unknown"),
+    ("gap_acde", options("ACDE"), "incomplete", None, "unknown"),
+    ("gap_abde", options("ABDE"), "incomplete", None, "unknown"),
+    ("terminal_residual", options("ABCD") + [("?? fragmento residual curto", 396.0)], "ambiguous", None, "unknown"),
+    ("distant_footer", options("ABCD") + [("rodape distante", 800.0)], "complete", 4, "A-D"),
+  ]
+  for name, texts, status, count, labels in cases:
+    structure, markers, _, fusion = selected_set_pipeline(selected_set_lines(texts))
+    completeness = structure.get("responseSetCompleteness") or {}
+    check(f"completeness.{name}.status", completeness.get("status") == status, completeness)
+    check(f"completeness.{name}.emission", fusion["optionCountHypothesis"] == count and fusion["optionLabelsHypothesis"] == labels, fusion)
+    check(f"completeness.{name}.no_invention", all(m.get("source") != "recovered_geometry" for m in markers))
+    if status != "complete":
+      check(f"completeness.{name}.hard_gate", bool(set(completeness.get("blockers", [])) & set(fusion["hardBlockers"])))
+      check(f"completeness.{name}.confidence", fusion["interpretationConfidence"] != "high")
+
+  lines = selected_set_lines(options("ABCD") + [("continuacao textual curta", 396.0)])
+  lines[-1]["x0"] = 100.0
+  s, _, _, f = selected_set_pipeline(lines)
+  check("completeness.unaligned_continuation", (s.get("responseSetCompleteness") or {}).get("status") == "complete"
+        and f["optionCountHypothesis"] == 4 and f["optionLabelsHypothesis"] == "A-D")
+  for name, mutate in [("other_page", lambda x: x.update(page=2)),
+                       ("long_text", lambda x: x.update(text="palavra " * 12))]:
+    lines = selected_set_lines(options("ABCD") + [("residual curto", 396.0)])
+    mutate(lines[-1])
+    s, _, _, f = selected_set_pipeline(lines)
+    check(f"completeness.{name}.negative", (s.get("responseSetCompleteness") or {}).get("status") == "complete" and f["optionCountHypothesis"] == 4)
+
+  # Adjacency must work in pixel-scaled observations, not only PDF-size units.
+  scaled = selected_set_lines(options("ABCD") + [("residual curto alinhado", 396.0)])
+  for line in scaled:
+    for key in ("x0", "x1", "top", "bottom"):
+      line[key] *= 2.0
+  s, _, _, f = selected_set_pipeline(scaled)
+  check("completeness.scaled_cadence.ambiguous", (s.get("responseSetCompleteness") or {}).get("status") == "ambiguous"
+        and f["optionCountHypothesis"] is None)
+  scaled[-1]["top"] = 1100.0
+  scaled[-1]["bottom"] = 1124.0
+  s, _, _, f = selected_set_pipeline(scaled)
+  check("completeness.scaled_cadence.distant_negative", (s.get("responseSetCompleteness") or {}).get("status") == "complete" and f["optionCountHypothesis"] == 4)
+
+  # Operator spacing is not additional prose; use a general residual-size guard.
+  s, markers, _, f = selected_set_pipeline(selected_set_lines(options("ABCD") + [
+    ("?? x < 1 + y > 2 = z", 396.0)]))
+  check("completeness.operator_spacing.residual", (s.get("responseSetCompleteness") or {}).get("status") == "ambiguous"
+        and f["optionCountHypothesis"] is None and not any(m["label"] == "E" for m in markers))
+
+  gap = selected_set_lines(options("ABCDE"))
+  gap[1]["text"] = "conteudo alinhado sem marcador legivel"
+  s, markers, _, f = selected_set_pipeline(gap)
+  check("completeness.recovered_gap.complete", (s.get("responseSetCompleteness") or {}).get("status") == "complete"
+        and f["optionCountHypothesis"] == 5 and f["optionLabelsHypothesis"] == "A-E")
+  check("completeness.recovered_gap.old_evidence", any(m.get("source") == "recovered_geometry" and
+        set(m.get("recoveredEvidence", [])) >= {"sequence_gap", "alignment", "spatial_cluster"} for m in markers))
+
+  # Rejected A may diagnose fragmentation, never supply a response slot/label.
+  s, markers, _, f = selected_set_pipeline(selected_set_lines(
+    [("(A) candidato isolado", 40.0)] + options("CDE")))
+  check("completeness.rejected_prefix.not_reintroduced", not any(m["label"] == "A" for m in markers)
+        and f["optionCountHypothesis"] is None and f["optionLabelsHypothesis"] == "unknown")
+
+  for name, texts in [
+    ("ce", [("julgue os itens como certo ou errado", 40.0)] + options("CE")),
+    ("parent_child", [("julgue os itens como certo ou errado", 40.0), ("12-A afirmacao", 100.0), ("12-B afirmacao", 124.0)]),
+    ("numeric", [("Resposta: valor solicitado", 100.0)]),
+    ("discursive", [("Justifique sua resposta", 100.0)]),
+    ("internal", [("I) primeiro item", 100.0), ("II) segundo item", 124.0)]),
+    ("unknown", [("texto sem estrutura de resposta", 100.0)]),
+  ]:
+    s, _, _, f = selected_set_pipeline(selected_set_lines(texts))
+    c = s.get("responseSetCompleteness") or {}
+    check(f"completeness.{name}.exempt", c.get("requiredForOptionEmission") is False and c.get("status") != "incomplete"
+          and not {"response_set_incomplete", "response_set_completeness_uncertain"} & set(f["hardBlockers"]))
+
+  # No cross-page stitching: a selected A-B fragment remains non-emitting.
+  lines = selected_set_lines(options("AB") + [(f"({label}) continuacao", 60.0 + i * 24) for i, label in enumerate("CDE")])
+  for line in lines[2:]:
+    line["page"] = 2
+  s, markers, _, f = selected_set_pipeline(lines)
+  c = s.get("responseSetCompleteness") or {}
+  check("completeness.multipage.conservative", c.get("status") in {"incomplete", "ambiguous", "unknown"}
+        and bool(c) and f["optionCountHypothesis"] is None)
+  check("completeness.multipage.no_stitching", len({m["page"] for m in markers}) == 1)
+
+  # A high-confidence independent observation cannot override a closure gate.
+  import copy
+  s, _, r, _ = selected_set_pipeline(selected_set_lines(options("ABCDE")))
+  for slot in r["responseSlotHypotheses"]:
+    slot["confidence"] = "high"
+    slot["markerObservations"].append({"source": "visual", "visualIndex": slot["slotId"]})
+  visual = {"visualAlternativeEvidence": [{"confidence": "high"}] * 5}
+  for status in ("incomplete", "ambiguous", "unknown"):
+    blocked = copy.deepcopy(s)
+    blocked["responseSetCompleteness"] = {"status": status, "requiredForOptionEmission": True,
+                                         "selectedLabels": list("ABCDE"), "evidence": [], "blockers": []}
+    f = runner.fusion.fuse_response_evidence({"reliable": True}, blocked, visual, r)
+    check(f"completeness.fusion.{status}.status_not_confidence", f["optionCountHypothesis"] is None
+          and f["optionLabelsHypothesis"] == "unknown" and f["interpretationConfidence"] != "high")
+  del s["responseSetCompleteness"]
+  f = runner.fusion.fuse_response_evidence({"reliable": True}, s, visual, r)
+  check("completeness.fusion.missing_contract.fail_closed", f["optionCountHypothesis"] is None
+        and f["responseSetCompleteness"]["status"] == "unknown")
+
+
 def main() -> None:
+  test_response_set_completeness()
   test_selected_response_set_contract()
   test_recovered_geometry_marker_adapter()
   test_deterministic_and_quotas()

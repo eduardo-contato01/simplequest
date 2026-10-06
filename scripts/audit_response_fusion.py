@@ -44,6 +44,8 @@ OPTION_BLOCKING_HARD = {
   "weak_anchor_only",
   "visual_only_content_region_missing",
   "edge_sequence_ambiguity",
+  "response_set_incomplete",
+  "response_set_completeness_uncertain",
 }
 
 ANSWER_OPTION_PATTERNS = {"one_per_option", "grid_option_markers", "internal_enumeration_then_options"}
@@ -123,8 +125,16 @@ def fuse_response_evidence(
   pattern_name = str(pattern.get("pattern") or "unknown")
   pattern_confidence = str(pattern.get("confidence") or "low")
   structure_info = structure.get("inferredResponseStructure") or {}
+  completeness = structure.get("responseSetCompleteness")
   selected_set = structure.get("selectedResponseSet")
   selected_set_used = response_structure.response_set_authoritative(selected_set)
+  if completeness is None and selected_set_used and structure_info.get("mode") in {"single_choice", "mixed"}:
+    # An explicit selected-set producer must also provide its closure contract.
+    completeness = {"status": "unknown", "requiredForOptionEmission": True,
+                    "selectedLabels": [], "evidence": ["missing_completeness_contract"],
+                    "blockers": ["response_set_completeness_uncertain"]}
+  completeness_blocked = bool((completeness or {}).get("requiredForOptionEmission")
+                              and completeness.get("status") != "complete")
   selected_candidates = response_structure.accepted_response_candidates(selected_set) if selected_set_used else []
   selected_refs = [response_structure.response_candidate_ref(c) for c in selected_candidates]
   rejected_slot_refs = []
@@ -188,6 +198,10 @@ def fuse_response_evidence(
   # ---- structural blockers -------------------------------------------------
   hard_blockers: list[str] = []
   soft_blockers: list[str] = []
+
+  if completeness_blocked:
+    hard_blockers.append("response_set_incomplete" if completeness.get("status") == "incomplete"
+                         else "response_set_completeness_uncertain")
 
   edge_sequence_ambiguities = (
     structure.get(
@@ -363,6 +377,9 @@ def fuse_response_evidence(
   ):
     option_labels = "unknown"
 
+  if completeness_blocked:
+    option_labels = "unknown" if labels_applicable else None
+
   # ---- agreement -----------------------------------------------------------
   conflict = bool({"role_conflict", "label_conflict", "count_conflict"} & set(hard_blockers))
   if count_conflict:
@@ -422,18 +439,23 @@ def fuse_response_evidence(
 
   if "edge_sequence_ambiguity" in hard_blockers:
     interpretation_confidence = "low"
+  if completeness_blocked:
+    interpretation_confidence = "low"
 
   evidence: list[str] = [
     f"pattern:{pattern_name}",
     f"answer_option_slots:{len(answer_slot_indexes)}",
     f"origins:{'+'.join(sorted({origin for slot in slots for origin in slot['origins']})) or 'none'}",
   ]
+  if completeness is not None:
+    evidence.append(f"response_set_completeness:{completeness.get('status')}")
   if option_count is not None:
     evidence.append(f"optionCountHypothesis:{option_count}")
   if option_labels is not None:
     evidence.append(f"optionLabelsHypothesis:{option_labels}")
 
   return {
+    "responseSetCompleteness": completeness,
     "selectedResponseSetUsed": selected_set_used,
     "selectedResponseSetClusterId": selected_set.get("clusterId") if selected_set_used else None,
     "selectedResponseCandidateRefs": selected_refs,

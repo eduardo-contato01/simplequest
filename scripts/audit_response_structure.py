@@ -488,10 +488,7 @@ def detect_edge_sequence_ambiguity(
   selected: dict[str, Any] | None,
   lines: list[ObservedLine],
 ) -> list[dict[str, Any]]:
-  if (
-    not selected
-    or selected.get("size") != 3
-  ):
+  if not selected:
     return []
 
   if float(
@@ -512,13 +509,11 @@ def detect_edge_sequence_ambiguity(
     )
   ]
 
-  if labels == [
-    "A",
-    "B",
-    "C",
-  ]:
+  if (len(labels) >= 3
+      and labels == list("ABCDE"[:len(labels)])
+      and ord(labels[-1]) < ord("E")):
     direction = "trailing"
-    expected_label = "D"
+    expected_label = chr(ord(labels[-1]) + 1)
     target_line_index = (
       int(
         selected[
@@ -612,9 +607,10 @@ def detect_edge_sequence_ambiguity(
   ):
     return []
 
-  if len(
-    text.split()
-  ) > EDGE_SEQUENCE_MAX_TOKENS:
+  # Operator/punctuation spacing is not extra prose (native and OCR can differ).
+  # This is only a residual-size guard, never marker parsing or label recovery.
+  substantive_tokens = sum(any(char.isalnum() for char in token) for token in text.split())
+  if substantive_tokens > EDGE_SEQUENCE_MAX_TOKENS:
     return []
 
   x_reference = median(
@@ -669,10 +665,17 @@ def detect_edge_sequence_ambiguity(
       )
     )
 
+  # OCR pixels and native PDF units have different scales. A trailing residual
+  # can be adjacent at the observed inter-option cadence without raising a
+  # global pixel threshold. Keep all other residual guards unchanged.
+  vertical_gap_limit = EDGE_SEQUENCE_MAX_VERTICAL_GAP
+  if direction == "trailing":
+    vertical_gap_limit = max(vertical_gap_limit, float(selected.get("yGapMedian") or 0.0))
+
   if not (
     -5.0
     <= vertical_gap
-    <= EDGE_SEQUENCE_MAX_VERTICAL_GAP
+    <= vertical_gap_limit
   ):
     return []
 
@@ -729,6 +732,7 @@ def detect_edge_sequence_ambiguity(
       "alignment",
       "adjacent_line",
       "near_edge",
+      "observed_option_cadence",
     ],
   }]
 
@@ -889,6 +893,50 @@ def _response_set_contract(selected: dict[str, Any] | None, ambiguous: bool,
           "candidates": candidates}
 
 
+def assess_response_set_completeness(
+  selected: dict[str, Any],
+  mode: str,
+  edge_ambiguities: list[dict[str, Any]],
+) -> dict[str, Any]:
+  """Closure of standard textual answer sets, not missing-label recovery."""
+  candidates = accepted_response_candidates(selected)
+  labels = [str(c.get("label") or "").upper() for c in candidates]
+  required = mode in {"single_choice", "mixed"} and selected.get("clusterId") is not None
+  evidence: list[str] = []
+  if not required:
+    status = "unknown"
+    evidence.append("completeness_not_applicable_to_response_mode")
+  elif selected.get("ambiguous"):
+    status = "ambiguous"
+    evidence.append("selected_response_set_ambiguous")
+  elif not labels:
+    status = "unknown"
+    evidence.append("no_selected_answer_observation")
+  elif labels[0] != "A":
+    status = "incomplete"
+    evidence.append("missing_initial_label")
+  elif labels != list("ABCDE"[:len(labels)]):
+    status = "incomplete"
+    evidence.append("internal_label_gap")
+  elif edge_ambiguities:
+    status = "ambiguous"
+    evidence.append("possible_edge_continuation")
+    evidence.extend(sorted({e for candidate in edge_ambiguities for e in candidate.get("evidence") or []}))
+  elif len(labels) < 3:
+    status = "unknown"
+    evidence.append("prefix_closure_not_established")
+  else:
+    status = "complete"
+    evidence.extend(["contiguous_prefix_from_a", "no_observed_edge_continuation"])
+    if any(c.get("labelSource") == "recovered_geometry" for c in candidates):
+      evidence.append("accepted_internal_gap_recovery")
+  blockers = []
+  if required and status != "complete":
+    blockers.append("response_set_incomplete" if status == "incomplete" else "response_set_completeness_uncertain")
+  return {"status": status, "requiredForOptionEmission": required,
+          "selectedLabels": labels, "evidence": evidence, "blockers": blockers}
+
+
 def discover_response_structure(
   lines: list[ObservedLine],
   image_path: str | None = None,
@@ -929,6 +977,9 @@ def discover_response_structure(
       if candidate["markerShape"] == "circle":
         candidate["markerFill"] = _visual_circle_fill(image_path, candidate["bbox"])
 
+  selected_contract = _response_set_contract(selected, ambiguous or layout_ambiguous, recovered)
+  completeness = assess_response_set_completeness(selected_contract, mode, edge_ambiguity)
+  completeness_allows_emission = not completeness["requiredForOptionEmission"] or completeness["status"] == "complete"
   sequence_indices = [ord(label) - ord("A") for label in selected["labels"]] if selected else []
   contiguous = bool(sequence_indices) and sequence_indices == list(range(sequence_indices[0], sequence_indices[-1] + 1))
   recovered_labels = {entry["expectedLabel"] for entry in recovered}
@@ -941,6 +992,7 @@ def discover_response_structure(
     and not recovered_labels
     and not edge_ambiguity
     and selected["size"] == len(sequence_indices)
+    and completeness_allows_emission
   )
   option_count = selected["size"] if count_confident else None
 
@@ -962,6 +1014,9 @@ def discover_response_structure(
   elif option_labels in {"A-E", "A-D", "A-C"}:
     option_labels_confidence = "medium"
   else:
+    option_labels_confidence = "low"
+
+  if not completeness_allows_emission:
     option_labels_confidence = "low"
 
   if option_count is None:
@@ -1025,7 +1080,8 @@ def discover_response_structure(
     "inferredResponseStructure": structure,
     "inferredAlternativeProfile": profile,
     "responseSetCandidates": clusters,
-    "selectedResponseSet": _response_set_contract(selected, ambiguous or layout_ambiguous, recovered),
+    "selectedResponseSet": selected_contract,
+    "responseSetCompleteness": completeness,
     "internalEnumerationCandidates": internal,
     "recoveredAlternativeMarkerCandidates": recovered,
     "edgeSequenceAmbiguityCandidates": edge_ambiguity,

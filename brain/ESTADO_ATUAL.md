@@ -85,3 +85,9 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - `selected_response_set_contract` implementado na branch `audit/holdout-v4-postmortem-fixes`: Structure → Regions → Fusion preservam conjunto selecionado e provenance; seleção ambígua continua conservadora.
 - TDD RED/GREEN, 14 suítes e regressão diagnóstica dos seis casos obrigatórios PASS. Completude não corrigida; resultado oficial e fontes/caches intactos, execução oficial única, sem rerun.
 - V4 revelado não é benchmark pós-patch; V5 blind obrigatório antes de claims. Próximo passo separado: `response_set_completeness`. Detalhes/limitações no [Patch 01](../audit/postmortem/V4_PATCH_01_SELECTED_RESPONSE_SET.md); sem merge.
+
+## Checkpoint corrente — Patch 02 pós-V4, 2026-10-06
+
+- `response_set_completeness` implementado: incomplete/ambiguous/unknown aplicável bloqueia count/labels; não inventa alternativas nem faz stitching multipágina. Contrato Patch 01 preservado.
+- TDD RED/GREEN, 14 suítes e replay diagnóstico dos seis PASS; os dois undercounts revelados agora abstêm, como regression behavior, sem claim de performance. Resultado oficial/fontes/caches intactos; execução oficial única, sem rerun; V5 blind obrigatório.
+- Próximo passo separado: `neutral_boundary_identity_and_scope`, ainda não iniciado. Ver [Patch 02](../audit/postmortem/V4_PATCH_02_RESPONSE_SET_COMPLETENESS.md); sem merge.

@@ -161,3 +161,7 @@ Na amostra, 13 categorias de boundary (incluindo dois recortes de coluna falsame
 ## Contrato do response set selecionado
 
 Structure → Regions → Fusion compartilham `selectedResponseSet` e identidade/provenance estrutural, não texto integral. Com cluster selecionado não ambíguo, somente seus answer candidates (incluindo recovery aceita pela política existente) alimentam slots, count/labels e conflitos; candidatos rejeitados não voltam a ser opções. Ambiguidade preserva concorrentes e bloqueia count seguro. Parent_child, subitems e controles permanecem separados de opções. Completude é política distinta, não inferida por membership. Ver [Patch 01](../audit/postmortem/V4_PATCH_01_SELECTED_RESPONSE_SET.md); V5 blind obrigatório para avaliação imparcial pós-patch.
+
+## Safety gate de completude
+
+Count/labels textuais padrão exigem selected response set + `responseSetCompleteness` explícita + gate da Fusion. Structure avalia fechamento (complete/incomplete/ambiguous/unknown), separado de confidence; Regions mantém membership, sem decidir completude. Quando aplicável, qualquer estado diferente de complete bloqueia count/labels e interpretação high. Prefixo contíguo e ausência de resíduo terminal pela política observacional não autorizam inventar labels; CE e modos não single_choice são tratados conforme seu papel. Recovery existente preservada; sem stitching multipágina ou inferência por GT. Ver [Patch 02](../audit/postmortem/V4_PATCH_02_RESPONSE_SET_COMPLETENESS.md); V4 revelado continua apenas regressão, V5 blind obrigatório.

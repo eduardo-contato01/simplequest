@@ -7,13 +7,14 @@ Trabalho vigente em 2026-10-06. Estado factual em [[ESTADO_ATUAL]]; visão detal
 1. [x] Postmortem V4 diagnóstico sem patch: cinco unsafe_error e um partial; replay restrito reproduziu os seis, sem rerun oficial.
 2. [x] Amostra metadata-only de 24/66 safe_abstention congelada antes de inspeção; causas/recovery classificadas sem extrapolar ganhos para as 66. Nenhuma revisão visual pendente.
 3. [x] Patch 01 `selected_response_set_contract`: contrato/provenance preservados downstream; TDD e replay diagnóstico restrito PASS. Ver [Patch 01](../audit/postmortem/V4_PATCH_01_SELECTED_RESPONSE_SET.md).
-4. Próxima prioridade: `response_set_completeness`, em decisão separada com TDD positivo/negativo. Depois identidade/gramática/scope de boundary, role/spacing e observação complementar, sem regras específicas para casos individuais. Essas famílias permanecem pendentes.
-5. Se houver mudança funcional após analisar o V4, criar novo Holdout V5 cego; preservar o primeiro resultado V4.
-6. Avaliar novamente precision + coverage em V5 blind, buscando recuperar cobertura sem perder precisão.
+4. [x] Patch 02 `response_set_completeness`: safety gate de incomplete/ambiguous/unknown aplicável; TDD e replay diagnóstico restrito PASS, sem labels inventados ou stitching. Ver [Patch 02](../audit/postmortem/V4_PATCH_02_RESPONSE_SET_COMPLETENESS.md).
+5. Próxima prioridade: `neutral_boundary_identity_and_scope`, em decisão separada com TDD positivo/negativo, ainda não iniciado. Role/spacing e observação complementar continuam pendentes, sem regras por casos individuais.
+6. Se houver mudança funcional após analisar o V4, criar novo Holdout V5 cego; preservar o primeiro resultado V4.
+7. Avaliar novamente precision + coverage em V5 blind, buscando recuperar cobertura sem perder precisão.
 
 Meta operacional: precision >= 99,5%; coverage >= 80%; unsafe_error <= 0,5%; direção ideal de precision 99,8–99,9%. São metas futuras, não o desempenho atual.
 
-Ver [[AUDITORIA_PROVAS]]. Postmortem e Patch 01 concluídos; demais patches/TDD e avaliação V5 blind permanecem futuros.
+Ver [[AUDITORIA_PROVAS]]. Postmortem e Patches 01/02 concluídos; demais patches/TDD e avaliação V5 blind permanecem futuros.
 
 ## Depois — Ingestão/transcrição
 
