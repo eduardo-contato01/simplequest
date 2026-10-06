@@ -1,0 +1,2186 @@
+{
+  "artifactType": "holdout-v4-postmortem-findings",
+  "protocolVersion": "holdout-v4",
+  "sampleFreezeCommit": "84ff03278aeae0f9a1b94eecd82fc674e753c8ff",
+  "resultFreezeCommit": "89f482b373449022423b4d34536160e62774cd2d",
+  "postmortemBaseCommit": "0eda2880edaa70915e80cc78889cb837307e7d43",
+  "sourceResultSha256": "2284bbb2f309b17115ddef5975121ed843d89799ebab052f47dcf01f995dc734",
+  "officialAuditorExecutionCount": 1,
+  "officialAuditorRerun": false,
+  "diagnosticReplayCount": 30,
+  "diagnosticReplayMismatch": false,
+  "productionCodeChanged": false,
+  "patchImplemented": false,
+  "sampleSelectedBeforePdfInspection": true,
+  "safeAbstentionPopulation": 66,
+  "safeAbstentionSampleSize": 24,
+  "visualPageEntriesReviewed": 45,
+  "needsHumanVisualReview": false,
+  "analysisConclusiveWithinScope": true,
+  "recoveryNotMeasured": true,
+  "extrapolationToPopulation": false,
+  "V5RequiredIfPatched": true,
+  "populationCensus": {
+    "blockerSignature": {
+      "boundary_uncertain": 50,
+      "missing_marker_observation": 2,
+      "no_explicit_blocker": 13,
+      "weak_anchor_only": 1
+    },
+    "sourceType": {
+      "hybrid": 1,
+      "raster": 24,
+      "text_native": 41
+    },
+    "markerStyle": {
+      "parenthesized": 31,
+      "symbolic_control": 19,
+      "textual": 16
+    },
+    "contentKind": {
+      "math": 20,
+      "mixed": 18,
+      "text": 28
+    },
+    "agreement": {
+      "insufficient": 57,
+      "partial": 8,
+      "strong": 1
+    },
+    "observationConfidence": {
+      "low": 58,
+      "medium": 8
+    },
+    "interpretationConfidence": {
+      "low": 57,
+      "medium": 9
+    },
+    "family": {
+      "CMB": 1,
+      "CMBH": 7,
+      "CMBel": 1,
+      "CMC": 1,
+      "CMF": 8,
+      "CMJF": 5,
+      "CMM": 9,
+      "CMPA": 2,
+      "CMR": 3,
+      "CMRJ": 2,
+      "CMSM": 6,
+      "CMSP": 1,
+      "CMT": 5,
+      "CMVM": 2,
+      "COLÉGIO PÓDION": 6,
+      "COLÉGIO SÓLIDO": 1,
+      "OUTRAS": 4,
+      "PAS 1": 2
+    },
+    "era": {
+      "2010-2014": 10,
+      "2015-2019": 25,
+      "2020-2025": 31
+    }
+  },
+  "unsafeFindings": [
+    {
+      "questionId": "doc-42af2b3d2b27:q16",
+      "documentId": "doc-42af2b3d2b27",
+      "pages": [
+        17
+      ],
+      "family": "CMPA",
+      "sourceType": "raster",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": 4,
+        "optionLabelsHypothesis": "A-D"
+      },
+      "officialClassification": "unsafe_error",
+      "boundary": {
+        "questionId": "doc-42af2b3d2b27:q16",
+        "questionNumber": 16,
+        "reliable": true,
+        "reason": "ok",
+        "pages": [
+          17
+        ],
+        "expectedPages": [
+          17
+        ],
+        "currentMarker": {
+          "number": 16,
+          "page": 17,
+          "top": 233,
+          "x0": 605,
+          "family": "keyword",
+          "kind": "keyword",
+          "text": "Questão 16"
+        },
+        "nextMarker": {
+          "number": 17,
+          "page": 17,
+          "top": 866,
+          "x0": 604,
+          "family": "keyword",
+          "kind": "keyword",
+          "text": "Questão 17"
+        },
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {
+          "17": {
+            "top": 233,
+            "bottom": 866
+          }
+        }
+      },
+      "rootCauses": [
+        "observation_missing_or_corrupted",
+        "marker_detection_failure",
+        "fusion_policy_failure"
+      ],
+      "firstFailingStage": "observation",
+      "didCorrectEvidenceExistUpstream": "partial",
+      "evidence": "A quinta alternativa é visível; o cache OCR registra o prefixo (EB), não (E), na linha 9, y=649..682. Só A-D passam aos quatro slots; não há recovered E.",
+      "incorrectSlotMechanism": "Perda do slot E por prefixo OCR corrompido.",
+      "neighborQuestionLeak": false,
+      "falseMarker": false,
+      "realMarkerLost": true,
+      "countAndLabelsDivergedForDifferentReasons": false,
+      "safetyGateShouldAbstain": true,
+      "safetyAssessment": "Deveria reter emissão sem evidência de completude e response set consistente.",
+      "generalizableRisk": "Sequência observada A-D contínua não prova completude do response set; corrupção terminal produz undercount silencioso.",
+      "candidateFixFamily": "completude do response set e recuperação corroborada de markers",
+      "needsHumanVisualReview": false
+    },
+    {
+      "questionId": "doc-cef618be31e6:q23",
+      "documentId": "doc-cef618be31e6",
+      "pages": [
+        12
+      ],
+      "family": "CMRJ",
+      "sourceType": "text_native",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": 4,
+        "optionLabelsHypothesis": "unknown"
+      },
+      "officialClassification": "unsafe_error",
+      "boundary": {
+        "questionId": "doc-cef618be31e6:q23",
+        "questionNumber": 23,
+        "reliable": true,
+        "reason": "ok",
+        "pages": [
+          12
+        ],
+        "expectedPages": [
+          12
+        ],
+        "currentMarker": {
+          "number": 23,
+          "page": 12,
+          "top": 402.40464,
+          "x0": 29.52,
+          "family": "separator",
+          "kind": "numeric",
+          "text": "23. Observe os seguintes excertos:"
+        },
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {
+          "12": {
+            "top": 402.40464,
+            "bottom": 841
+          }
+        }
+      },
+      "rootCauses": [
+        "observation_missing_or_corrupted",
+        "marker_detection_failure",
+        "fusion_policy_failure"
+      ],
+      "firstFailingStage": "observation",
+      "didCorrectEvidenceExistUpstream": "partial",
+      "evidence": "A segunda alternativa é visível como B, mas o texto nativo da linha 24, y=602.75..612.30, começa por (8). Markers/slots A,C,D,E somam quatro. A estrutura seleciona cluster C-E com expectedOptionCount=3; fusion usa quatro candidatos.",
+      "incorrectSlotMechanism": "Perda do slot B; o gap impede labels A-E, mas não impede count=4.",
+      "neighborQuestionLeak": false,
+      "falseMarker": false,
+      "realMarkerLost": true,
+      "countAndLabelsDivergedForDifferentReasons": true,
+      "safetyGateShouldAbstain": true,
+      "safetyAssessment": "Deveria reter emissão sem evidência de completude e response set consistente.",
+      "generalizableRisk": "Uma lacuna de labels não deve coexistir com count aparentemente seguro; text_native não garante texto fiel.",
+      "candidateFixFamily": "completude, gaps e proveniência observacional",
+      "needsHumanVisualReview": false
+    },
+    {
+      "questionId": "doc-cf6b56e7abd7:q15",
+      "documentId": "doc-cf6b56e7abd7",
+      "pages": [
+        16
+      ],
+      "family": "CMB",
+      "sourceType": "raster",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": 6,
+        "optionLabelsHypothesis": "A-E"
+      },
+      "officialClassification": "unsafe_error",
+      "boundary": {
+        "questionId": "doc-cf6b56e7abd7:q15",
+        "questionNumber": 15,
+        "reliable": true,
+        "reason": "ok",
+        "pages": [
+          16
+        ],
+        "expectedPages": [
+          16
+        ],
+        "currentMarker": {
+          "number": 15,
+          "page": 16,
+          "top": 153,
+          "x0": 76,
+          "family": "keyword",
+          "kind": "keyword",
+          "text": "QUESTÃO 15. Suponha que, nos 3408 lançamentos realizados por Lazzerini, a razão 7 seja igual"
+        },
+        "nextMarker": {
+          "number": 16,
+          "page": 16,
+          "top": 680,
+          "x0": 76,
+          "family": "keyword",
+          "kind": "keyword",
+          "text": "QUESTÃO 16. Seguindo o exemplo do italiano Lazzerini, cinco alunos do 9º ano do CMB"
+        },
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {
+          "16": {
+            "top": 153,
+            "bottom": 680
+          }
+        }
+      },
+      "rootCauses": [
+        "marker_detection_failure",
+        "region_slot_failure",
+        "fusion_policy_failure"
+      ],
+      "firstFailingStage": "marker_detection",
+      "didCorrectEvidenceExistUpstream": true,
+      "evidence": "Linha 5, bbox [77,227,1259,286], contém a variável a seguida por traço no enunciado matemático. Ela cria um falso A/slot 0 além de A-E reais. A estrutura seleciona corretamente cluster 1, cinco alternativas; regions/fusion consomem também o candidato rejeitado.",
+      "incorrectSlotMechanism": "Falso slot A do enunciado; seis slots textuais.",
+      "neighborQuestionLeak": false,
+      "falseMarker": true,
+      "realMarkerLost": false,
+      "countAndLabelsDivergedForDifferentReasons": true,
+      "safetyGateShouldAbstain": true,
+      "safetyAssessment": "Deveria reter emissão sem evidência de completude e response set consistente.",
+      "generalizableRisk": "Pool bruto de candidatos substitui response set selecionado. Labels deduplicadas A-E podem mascarar count=6.",
+      "candidateFixFamily": "contrato de response set selecionado entre structure, regions e fusion",
+      "needsHumanVisualReview": false
+    },
+    {
+      "questionId": "doc-eefc3d15076e:q40",
+      "documentId": "doc-eefc3d15076e",
+      "pages": [
+        36
+      ],
+      "family": "CMBH",
+      "sourceType": "raster",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": 6,
+        "optionLabelsHypothesis": "A-E"
+      },
+      "officialClassification": "unsafe_error",
+      "boundary": {
+        "questionId": "doc-eefc3d15076e:q40",
+        "questionNumber": 40,
+        "reliable": true,
+        "reason": "ok",
+        "pages": [
+          36
+        ],
+        "expectedPages": [
+          36
+        ],
+        "currentMarker": {
+          "number": 40,
+          "page": 36,
+          "top": 208,
+          "x0": 114,
+          "family": "keyword",
+          "kind": "keyword",
+          "text": "QUESTÃO 40"
+        },
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {
+          "36": {
+            "top": 208,
+            "bottom": 1872
+          }
+        }
+      },
+      "rootCauses": [
+        "marker_detection_failure",
+        "region_slot_failure",
+        "fusion_policy_failure"
+      ],
+      "firstFailingStage": "marker_detection",
+      "didCorrectEvidenceExistUpstream": true,
+      "evidence": "OCR da área de crédito/site da tirinha, linha 10 bbox [296,894,1045,983], começa por a -. É convertido em falso A antes das opções reais em y>=1163. Structure seleciona cluster 1, cinco A-E; regions/fusion somam seis.",
+      "incorrectSlotMechanism": "Falso slot A proveniente da figura/crédito, não da questão vizinha.",
+      "neighborQuestionLeak": false,
+      "falseMarker": true,
+      "realMarkerLost": false,
+      "countAndLabelsDivergedForDifferentReasons": true,
+      "safetyGateShouldAbstain": true,
+      "safetyAssessment": "Deveria reter emissão sem evidência de completude e response set consistente.",
+      "generalizableRisk": "Ruído OCR de mídia promove candidato textual forte; contar slots brutos e deduplicar labels diverge.",
+      "candidateFixFamily": "contrato de response set selecionado e exclusão de texto não-resposta",
+      "needsHumanVisualReview": false
+    },
+    {
+      "questionId": "doc-f4dd01071816:q20",
+      "documentId": "doc-f4dd01071816",
+      "pages": [
+        20
+      ],
+      "family": "CMJF",
+      "sourceType": "raster",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 4,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": 5,
+        "optionLabelsHypothesis": "A-E"
+      },
+      "officialClassification": "unsafe_error",
+      "boundary": {
+        "questionId": "doc-f4dd01071816:q20",
+        "questionNumber": 20,
+        "reliable": true,
+        "reason": "ok",
+        "pages": [
+          20
+        ],
+        "expectedPages": [
+          20
+        ],
+        "currentMarker": {
+          "number": 20,
+          "page": 20,
+          "top": 226,
+          "x0": 156,
+          "family": "separator",
+          "kind": "numeric",
+          "text": "20. Construa seu aviãozinho de isopor"
+        },
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {
+          "20": {
+            "top": 226,
+            "bottom": 1871
+          }
+        }
+      },
+      "rootCauses": [
+        "marker_detection_failure",
+        "boundary_failure",
+        "region_slot_failure",
+        "fusion_policy_failure"
+      ],
+      "firstFailingStage": "marker_detection",
+      "didCorrectEvidenceExistUpstream": true,
+      "evidence": "O footer OCR da linha 22, bbox [0,1835,1247,1870], começa por E: antes de Seção Técnica de Ensino. A página mostra A-D e FIM DA PROVA; a estrutura seleciona quatro opções. O boundary da última questão inclui rodapé e cria slot E adicional.",
+      "incorrectSlotMechanism": "Falso slot E do rodapé; cinco slots em vez de quatro.",
+      "neighborQuestionLeak": false,
+      "falseMarker": true,
+      "realMarkerLost": false,
+      "countAndLabelsDivergedForDifferentReasons": false,
+      "safetyGateShouldAbstain": true,
+      "safetyAssessment": "Deveria reter emissão sem evidência de completude e response set consistente.",
+      "generalizableRisk": "Fim do intervalo de página não equivale a fim da região de resposta. Footer textual pode contaminar count e labels juntos.",
+      "candidateFixFamily": "response set selecionado e escopo neutro de rodapé",
+      "needsHumanVisualReview": false
+    }
+  ],
+  "partialFindings": [
+    {
+      "questionId": "doc-800c2a22f148:q1",
+      "documentId": "doc-800c2a22f148",
+      "pages": [
+        2
+      ],
+      "family": "CMDPII",
+      "sourceType": "text_native",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 4,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": "A-D"
+      },
+      "officialClassification": "partial",
+      "boundary": {
+        "questionId": "doc-800c2a22f148:q1",
+        "questionNumber": 1,
+        "reliable": true,
+        "reason": "ok",
+        "pages": [
+          2
+        ],
+        "expectedPages": [
+          2
+        ],
+        "currentMarker": {
+          "number": 1,
+          "page": 2,
+          "top": 468.66999999999996,
+          "x0": 51.24,
+          "family": "keyword",
+          "kind": "keyword",
+          "text": "QUESTÃO 1"
+        },
+        "nextMarker": {
+          "number": 2,
+          "page": 2,
+          "top": 642.67,
+          "x0": 51.24,
+          "family": "keyword",
+          "kind": "keyword",
+          "text": "QUESTÃO 2"
+        },
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {
+          "2": {
+            "top": 468.66999999999996,
+            "bottom": 642.67
+          }
+        }
+      },
+      "rootCauses": [
+        "marker_detection_failure",
+        "fusion_policy_failure"
+      ],
+      "firstFailingStage": "marker_detection",
+      "didCorrectEvidenceExistUpstream": true,
+      "evidence": "A-D e quatro slots são corretos. O parser estrutural extrai ainda e) de desfazer(-se). dentro da opção D, mesma linha 25, como quinto candidato. Structure seleciona cluster 0 com quatro; fusion compara cinco candidatos brutos com quatro slots e cria count_conflict.",
+      "incorrectSlotMechanism": "Nenhum slot espacial falso: conflito artificial vem do candidato inline adicional.",
+      "neighborQuestionLeak": false,
+      "falseMarker": true,
+      "realMarkerLost": false,
+      "countAndLabelsDivergedForDifferentReasons": true,
+      "safetyGateShouldAbstain": false,
+      "safetyAssessment": "Abstenção de count protege diante do conflito, mas o conflito é artificial; quatro slots corretos existem.",
+      "generalizableRisk": "Candidato inline de texto não deve ser comparado como response set independente; gate absteve count corretamente diante do conflito produzido.",
+      "candidateFixFamily": "response set selecionado e contrato de provenance",
+      "needsHumanVisualReview": false
+    }
+  ],
+  "abstentionFindings": [
+    {
+      "questionId": "doc-27775227a392:q1",
+      "documentId": "doc-27775227a392",
+      "pages": [
+        1
+      ],
+      "family": "CMF",
+      "sourceType": "text_native",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-27775227a392:q1",
+        "questionNumber": 1,
+        "reliable": true,
+        "reason": "ok",
+        "pages": [
+          1
+        ],
+        "expectedPages": [
+          1
+        ],
+        "currentMarker": {
+          "number": 1,
+          "page": 1,
+          "top": 119.97199999999998,
+          "x0": 42.6,
+          "family": "separator",
+          "kind": "numeric",
+          "text": "1. O gráfico abaixo mostra o Índice de Desenvolvimento da Educação Básica (Ideb) do Ensino Médio do"
+        },
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {
+          "1": {
+            "top": 119.97199999999998,
+            "bottom": 841.92
+          }
+        }
+      },
+      "selectionStratum": [
+        "text_native",
+        "parenthesized",
+        "mixed"
+      ],
+      "recoveryCategory": "recoverable_structure",
+      "rootCauses": [
+        "marker_detection_failure",
+        "response_structure_failure"
+      ],
+      "evidence": "Markers ( a )..( e ) existem nas linhas nativas 13-17, mas gramática não aceita espaços; regiões confundem alternativas com enumeração interna (nove subitems).",
+      "gateRelaxationRisk": "Distinguir enumeração interna I-IV de alternativas; não promover nove subitems a nove opções.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-27775227a392:q14",
+      "documentId": "doc-27775227a392",
+      "pages": [
+        9
+      ],
+      "family": "CMF",
+      "sourceType": "text_native",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-27775227a392:q14",
+        "questionNumber": 14,
+        "reliable": true,
+        "reason": "ok",
+        "pages": [
+          9
+        ],
+        "expectedPages": [
+          9
+        ],
+        "currentMarker": {
+          "number": 14,
+          "page": 9,
+          "top": 78.55199999999991,
+          "x0": 42.6,
+          "family": "separator",
+          "kind": "numeric",
+          "text": "14. Atualmente, estão sendo realizados eventos com espaços controlados, buscando evitar a superlotação"
+        },
+        "nextMarker": {
+          "number": 15,
+          "page": 9,
+          "top": 333.7219999999999,
+          "x0": 35.52,
+          "family": "separator",
+          "kind": "numeric",
+          "text": "15. Na figura a seguir, cada triângulo e o quadrado central possui um número natural oculto."
+        },
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {
+          "9": {
+            "top": 78.55199999999991,
+            "bottom": 333.7219999999999
+          }
+        }
+      },
+      "selectionStratum": [
+        "text_native",
+        "parenthesized",
+        "math"
+      ],
+      "recoveryCategory": "recoverable_structure",
+      "rootCauses": [
+        "marker_detection_failure",
+        "response_structure_failure"
+      ],
+      "evidence": "Cinco prefixes ( a )..( e ) presentes no native; markers fortes ausentes e cinco slots classificados como subitem.",
+      "gateRelaxationRisk": "Espaçamento/minúsculas não provam papel; exigir response set coerente.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-3fb1e1ce24be:q32",
+      "documentId": "doc-3fb1e1ce24be",
+      "pages": [
+        21
+      ],
+      "family": "CMF",
+      "sourceType": "text_native",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": "unknown"
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-3fb1e1ce24be:q32",
+        "questionNumber": 32,
+        "reliable": true,
+        "reason": "ok",
+        "pages": [
+          21
+        ],
+        "expectedPages": [
+          21
+        ],
+        "currentMarker": {
+          "number": 32,
+          "page": 21,
+          "top": 381.03069999999997,
+          "x0": 50.54,
+          "family": "separator",
+          "kind": "numeric",
+          "text": "32. O efeito de humor na tirinha acima (TEXTO 4) se dá por meio:"
+        },
+        "nextMarker": {
+          "number": 33,
+          "page": 21,
+          "top": 572.7949,
+          "x0": 50.06,
+          "family": "separator",
+          "kind": "numeric",
+          "text": "33. É uma palavra empregada na tirinha (TEXTO 4) que, por meio do processo de derivação, dá ênfase ao"
+        },
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {
+          "21": {
+            "top": 381.03069999999997,
+            "bottom": 572.7949
+          }
+        }
+      },
+      "selectionStratum": [
+        "text_native",
+        "parenthesized",
+        "mixed"
+      ],
+      "recoveryCategory": "recoverable_structure",
+      "rootCauses": [
+        "marker_detection_failure",
+        "region_slot_failure"
+      ],
+      "evidence": "Native expõe cinco prefixes parenthesized espaçados; zero markers fortes. Oito slots misturam três answer_option fracos e cinco subitems; weak_anchor_only bloqueia corretamente.",
+      "gateRelaxationRisk": "Não converter weak anchors/linhas de continuação em alternativas.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-f03e7d17eec1:q20",
+      "documentId": "doc-f03e7d17eec1",
+      "pages": [
+        22
+      ],
+      "family": "CMPA",
+      "sourceType": "hybrid",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-f03e7d17eec1:q20",
+        "questionNumber": 20,
+        "reliable": false,
+        "reason": "current_marker_not_found",
+        "pages": [
+          22
+        ],
+        "expectedPages": [
+          22
+        ],
+        "currentMarker": null,
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {}
+      },
+      "selectionStratum": [
+        "hybrid",
+        "parenthesized",
+        "math"
+      ],
+      "recoveryCategory": "recoverable_boundary",
+      "rootCauses": [
+        "boundary_failure"
+      ],
+      "evidence": "Native híbrido contém Questao - 20 e A-E; variante com hífen não entra nos marcadores atuais; boundary false descarta 27 linhas.",
+      "gateRelaxationRisk": "Aceitar variante somente com número/posição/ordem coerentes, não abrir página inteira.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-eefc3d15076e:q17",
+      "documentId": "doc-eefc3d15076e",
+      "pages": [
+        18
+      ],
+      "family": "CMBH",
+      "sourceType": "raster",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-eefc3d15076e:q17",
+        "questionNumber": 17,
+        "reliable": true,
+        "reason": "ok",
+        "pages": [
+          18
+        ],
+        "expectedPages": [
+          18
+        ],
+        "currentMarker": {
+          "number": 17,
+          "page": 18,
+          "top": 219,
+          "x0": 112,
+          "family": "keyword",
+          "kind": "keyword",
+          "text": "QUESTÃO 17"
+        },
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {
+          "18": {
+            "top": 219,
+            "bottom": 1872
+          }
+        }
+      },
+      "selectionStratum": [
+        "raster",
+        "parenthesized",
+        "mixed"
+      ],
+      "recoveryCategory": "requires_new_observation_capability",
+      "rootCauses": [
+        "observation_missing_or_corrupted"
+      ],
+      "evidence": "Boundary correto; OCR colapsa opções e figura em uma linha y=417..1038. Algumas palavras C/E sobrevivem; não há cinco markers completos/slots.",
+      "gateRelaxationRisk": "Reagrupar words pode ajudar, mas cache não sustenta recuperação completa dos cinco labels; não presumir cinco.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-2790a3c9786b:q4",
+      "documentId": "doc-2790a3c9786b",
+      "pages": [
+        4
+      ],
+      "family": "CMBel",
+      "sourceType": "raster",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": "unknown"
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-2790a3c9786b:q4",
+        "questionNumber": 4,
+        "reliable": true,
+        "reason": "ok",
+        "pages": [
+          4
+        ],
+        "expectedPages": [
+          4
+        ],
+        "currentMarker": {
+          "number": 4,
+          "page": 4,
+          "top": 585,
+          "x0": 81,
+          "family": "keyword",
+          "kind": "keyword",
+          "text": "Questão 4"
+        },
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {
+          "4": {
+            "top": 585,
+            "bottom": 1872
+          }
+        }
+      },
+      "selectionStratum": [
+        "raster",
+        "parenthesized",
+        "text"
+      ],
+      "recoveryCategory": "recoverable_structure",
+      "rootCauses": [
+        "region_slot_failure",
+        "fusion_policy_failure"
+      ],
+      "evidence": "Structure já seleciona cinco A-E com confiança alta e cinco markers reais; regions atribuem três subitems e apenas dois answer_option a opções minúsculas.",
+      "gateRelaxationRisk": "Corrigir associação/papel com evidência; não tratar toda enumeração a-e como resposta.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-f4dd01071816:q13",
+      "documentId": "doc-f4dd01071816",
+      "pages": [
+        14
+      ],
+      "family": "CMJF",
+      "sourceType": "raster",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 4,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": "unknown"
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-f4dd01071816:q13",
+        "questionNumber": 13,
+        "reliable": true,
+        "reason": "ok",
+        "pages": [
+          14
+        ],
+        "expectedPages": [
+          14
+        ],
+        "currentMarker": {
+          "number": 13,
+          "page": 14,
+          "top": 221,
+          "x0": 137,
+          "family": "separator",
+          "kind": "numeric",
+          "text": "13. Um número natural é um número perfeito quando esse número é igual à soma dos seus próprios"
+        },
+        "nextMarker": {
+          "number": 14,
+          "page": 14,
+          "top": 716,
+          "x0": 141,
+          "family": "separator",
+          "kind": "numeric",
+          "text": "14. Leia as informações abaixo e, a seguir, assinale a alternativa correta."
+        },
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {
+          "14": {
+            "top": 221,
+            "bottom": 716
+          }
+        }
+      },
+      "selectionStratum": [
+        "raster",
+        "symbolic_control",
+        "math"
+      ],
+      "recoveryCategory": "requires_new_observation_capability",
+      "rootCauses": [
+        "observation_missing_or_corrupted"
+      ],
+      "evidence": "Quatro A-D visíveis, mas bundle filtrado expõe somente D como marker; words não apresentam conjunto A-D íntegro.",
+      "gateRelaxationRisk": "Não inferir opções faltantes pela quantidade esperada; exigir observação complementar.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-5d61be2ac853:q11",
+      "documentId": "doc-5d61be2ac853",
+      "pages": [
+        9
+      ],
+      "family": "CMJF",
+      "sourceType": "raster",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 4,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": "unknown"
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-5d61be2ac853:q11",
+        "questionNumber": 11,
+        "reliable": true,
+        "reason": "ok",
+        "pages": [
+          9
+        ],
+        "expectedPages": [
+          9
+        ],
+        "currentMarker": {
+          "number": 11,
+          "page": 9,
+          "top": 1071,
+          "x0": 123,
+          "family": "separator",
+          "kind": "numeric",
+          "text": "11. Tendo em vista o uso da pontuação, assinale a opção correta:"
+        },
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {
+          "9": {
+            "top": 1071,
+            "bottom": 1871
+          }
+        }
+      },
+      "selectionStratum": [
+        "raster",
+        "symbolic_control",
+        "text"
+      ],
+      "recoveryCategory": "requires_new_observation_capability",
+      "rootCauses": [
+        "observation_missing_or_corrupted"
+      ],
+      "evidence": "Quatro opções A-D visíveis; OCR filtrado tem três linhas e somente A como marker, com geometria/conteúdo colapsados.",
+      "gateRelaxationRisk": "Texto residual não prova quatro slots; novas observações precisam controles de regressão.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-3fb1e1ce24be:q12",
+      "documentId": "doc-3fb1e1ce24be",
+      "pages": [
+        8
+      ],
+      "family": "CMF",
+      "sourceType": "text_native",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": "unknown"
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-3fb1e1ce24be:q12",
+        "questionNumber": 12,
+        "reliable": true,
+        "reason": "ok",
+        "pages": [
+          8
+        ],
+        "expectedPages": [
+          8
+        ],
+        "currentMarker": {
+          "number": 12,
+          "page": 8,
+          "top": 347.42069999999995,
+          "x0": 57.13,
+          "family": "separator",
+          "kind": "numeric",
+          "text": "12. \"Em uma polêmica decisão, os gondoleiros de Veneza"
+        },
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {
+          "8": {
+            "top": 347.42069999999995,
+            "bottom": 845.28
+          }
+        }
+      },
+      "selectionStratum": [
+        "text_native",
+        "parenthesized",
+        "math"
+      ],
+      "recoveryCategory": "recoverable_structure",
+      "rootCauses": [
+        "marker_detection_failure",
+        "region_slot_failure"
+      ],
+      "evidence": "Native contém a-d com espaços dentro dos parênteses e e compacto; só E vira marker forte. Cinco slots existem, quatro classificados subitem.",
+      "gateRelaxationRisk": "Papéis/continuações não podem ser decididos apenas pela caixa das letras.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-3e395d355d2c:q25",
+      "documentId": "doc-3e395d355d2c",
+      "pages": [
+        27
+      ],
+      "family": "CMPA",
+      "sourceType": "text_native",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-3e395d355d2c:q25",
+        "questionNumber": 25,
+        "reliable": true,
+        "reason": "ok",
+        "pages": [
+          27
+        ],
+        "expectedPages": [
+          27
+        ],
+        "currentMarker": {
+          "number": 25,
+          "page": 27,
+          "top": 487.66839999999996,
+          "x0": 268.37,
+          "family": "keyword",
+          "kind": "keyword",
+          "text": "Questão 25"
+        },
+        "nextMarker": null,
+        "boundaryMode": "two_column",
+        "columnLimits": {
+          "x0": 162.505,
+          "x1": 595.32,
+          "split": 162.505,
+          "side": "right",
+          "peerMarker": {
+            "number": 23,
+            "page": 27,
+            "top": 564.9784,
+            "x0": 56.64,
+            "family": "separator",
+            "kind": "numeric",
+            "text": "23)."
+          }
+        },
+        "pageLimits": {
+          "27": {
+            "top": 487.66839999999996,
+            "bottom": 841.92,
+            "x0": 162.505,
+            "x1": 595.32
+          }
+        }
+      },
+      "selectionStratum": [
+        "text_native",
+        "parenthesized",
+        "text"
+      ],
+      "recoveryCategory": "recoverable_boundary",
+      "rootCauses": [
+        "boundary_failure"
+      ],
+      "evidence": "Cabeçalho central Questão 25 correto; falso peer 23). do conteúdo em x=56.64 induz two_column/right x>=162.505 e exclui opções A-E em x=56.64.",
+      "gateRelaxationRisk": "Não usar qualquer número do conteúdo como prova de coluna paralela.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-b605f7a51fd5:q5",
+      "documentId": "doc-b605f7a51fd5",
+      "pages": [
+        4
+      ],
+      "family": "CMBH",
+      "sourceType": "text_native",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-b605f7a51fd5:q5",
+        "questionNumber": 5,
+        "reliable": true,
+        "reason": "ok",
+        "pages": [
+          4
+        ],
+        "expectedPages": [
+          4
+        ],
+        "currentMarker": {
+          "number": 5,
+          "page": 4,
+          "top": 110.73199999999997,
+          "x0": 27,
+          "family": "keyword",
+          "kind": "keyword",
+          "text": "QUESTÃO 5 – O planejamento de uma viagem pode ser feito por diversas maneiras: analisar a rota"
+        },
+        "nextMarker": {
+          "number": 6,
+          "page": 4,
+          "top": 501.02199999999993,
+          "x0": 27,
+          "family": "keyword",
+          "kind": "keyword",
+          "text": "QUESTÃO 6 – Em vista da crise no comércio que vem assolando o mercado, resultando em baixa de vendas e"
+        },
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {
+          "4": {
+            "top": 110.73199999999997,
+            "bottom": 501.02199999999993
+          }
+        }
+      },
+      "selectionStratum": [
+        "text_native",
+        "symbolic_control",
+        "math"
+      ],
+      "recoveryCategory": "recoverable_visual",
+      "rootCauses": [
+        "visual_evidence_failure",
+        "observation_missing_or_corrupted"
+      ],
+      "evidence": "Cinco labels circulados visíveis não aparecem como texto de marcador no native; zero markers/evidence/slots. Render visual existente não contribui nesta execução.",
+      "gateRelaxationRisk": "Detector de círculos pode recuperar count; identificar A-E requer evidência do glyph, não apenas círculo.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-b605f7a51fd5:q20",
+      "documentId": "doc-b605f7a51fd5",
+      "pages": [
+        14
+      ],
+      "family": "CMBH",
+      "sourceType": "text_native",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-b605f7a51fd5:q20",
+        "questionNumber": 20,
+        "reliable": true,
+        "reason": "ok",
+        "pages": [
+          14
+        ],
+        "expectedPages": [
+          14
+        ],
+        "currentMarker": {
+          "number": 20,
+          "page": 14,
+          "top": 110.73199999999997,
+          "x0": 27,
+          "family": "keyword",
+          "kind": "keyword",
+          "text": "QUESTÃO 20 – Escolhendo ao acaso um quadradinho da malha quadriculada, podemos afirmar que:"
+        },
+        "nextMarker": null,
+        "boundaryMode": "two_column",
+        "columnLimits": {
+          "x0": 0,
+          "x1": 191.44983351503598,
+          "split": 191.44983351503598,
+          "side": "left",
+          "peerMarker": {
+            "number": 1,
+            "page": 14,
+            "top": 186.39792251572067,
+            "x0": 355.89966703007195,
+            "family": "bare",
+            "kind": "numeric",
+            "text": "1 6 8"
+          }
+        },
+        "pageLimits": {
+          "14": {
+            "top": 110.73199999999997,
+            "bottom": 841.92,
+            "x0": 0,
+            "x1": 191.44983351503598
+          }
+        }
+      },
+      "selectionStratum": [
+        "text_native",
+        "symbolic_control",
+        "mixed"
+      ],
+      "recoveryCategory": "recoverable_boundary",
+      "rootCauses": [
+        "boundary_failure",
+        "visual_evidence_failure"
+      ],
+      "evidence": "Fração do conteúdo 1 6 8 vira peer em x=355.90; two_column/left x<=191.45 remove todas as 24 linhas. Cinco labels circulados também exigem suporte visual.",
+      "gateRelaxationRisk": "Reparar scope é pré-requisito, não promessa de emissão; símbolos circulados continuam não textuais.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-56268e79f6bf:q11",
+      "documentId": "doc-56268e79f6bf",
+      "pages": [
+        13
+      ],
+      "family": "CMSM",
+      "sourceType": "raster",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-56268e79f6bf:q11",
+        "questionNumber": 11,
+        "reliable": false,
+        "reason": "current_marker_not_found",
+        "pages": [
+          13
+        ],
+        "expectedPages": [
+          13
+        ],
+        "currentMarker": null,
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {}
+      },
+      "selectionStratum": [
+        "raster",
+        "parenthesized",
+        "math"
+      ],
+      "recoveryCategory": "recoverable_boundary",
+      "rootCauses": [
+        "boundary_failure",
+        "observation_missing_or_corrupted"
+      ],
+      "evidence": "OCR header QUESTÃO e 11 colapsados com cabeçalho institucional; words preservam localização e opções a-e. Current_marker_not_found esvazia bundle.",
+      "gateRelaxationRisk": "Ressegmentar geometria do header; não associar número do ano/rodapé.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-56268e79f6bf:q14",
+      "documentId": "doc-56268e79f6bf",
+      "pages": [
+        16
+      ],
+      "family": "CMSM",
+      "sourceType": "raster",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-56268e79f6bf:q14",
+        "questionNumber": 14,
+        "reliable": false,
+        "reason": "current_marker_not_found",
+        "pages": [
+          16
+        ],
+        "expectedPages": [
+          16
+        ],
+        "currentMarker": null,
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {}
+      },
+      "selectionStratum": [
+        "raster",
+        "parenthesized",
+        "mixed"
+      ],
+      "recoveryCategory": "recoverable_boundary",
+      "rootCauses": [
+        "boundary_failure",
+        "observation_missing_or_corrupted"
+      ],
+      "evidence": "Mesmo colapso header QUESTÃO/14; opções a-e observadas separadamente no cache; boundary não associa número atual.",
+      "gateRelaxationRisk": "Validar ordem/página/posição do header, não substring genérica.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-a1ddc006ef56:q23",
+      "documentId": "doc-a1ddc006ef56",
+      "pages": [
+        12
+      ],
+      "family": "CMVM",
+      "sourceType": "raster",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-a1ddc006ef56:q23",
+        "questionNumber": 23,
+        "reliable": false,
+        "reason": "current_marker_not_found",
+        "pages": [
+          12
+        ],
+        "expectedPages": [
+          12
+        ],
+        "currentMarker": null,
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {}
+      },
+      "selectionStratum": [
+        "raster",
+        "parenthesized",
+        "text"
+      ],
+      "recoveryCategory": "recoverable_boundary",
+      "rootCauses": [
+        "boundary_failure"
+      ],
+      "evidence": "Header 23. A partir ... existe no OCR, mas NUMERIC_RE rejeita sequência numérica seguida por A isolado (proteção de parent-child). Q22/Q24 são encontrados.",
+      "gateRelaxationRisk": "Manter proteção contra subitems; testar headers legítimos começando por A sem aceitar falsas questões.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-f4dd01071816:q5",
+      "documentId": "doc-f4dd01071816",
+      "pages": [
+        6
+      ],
+      "family": "CMJF",
+      "sourceType": "raster",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 4,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-f4dd01071816:q5",
+        "questionNumber": 5,
+        "reliable": false,
+        "reason": "current_marker_not_found",
+        "pages": [
+          6
+        ],
+        "expectedPages": [
+          6
+        ],
+        "currentMarker": null,
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {}
+      },
+      "selectionStratum": [
+        "raster",
+        "symbolic_control",
+        "mixed"
+      ],
+      "recoveryCategory": "recoverable_boundary",
+      "rootCauses": [
+        "boundary_failure",
+        "observation_missing_or_corrupted"
+      ],
+      "evidence": "Palavra 05. em [141,221,172,240] sobrevive no OCR, mas quase toda a página vira uma única linha bbox 0..1256. Boundary não encontra q5.",
+      "gateRelaxationRisk": "Words/geometria precisam ressegmentação antes do scope; conteúdo não deve ser aceito em bloco inteiro.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-0db5ce524459:q26",
+      "documentId": "doc-0db5ce524459",
+      "pages": [
+        13
+      ],
+      "family": "COLÉGIO PÓDION",
+      "sourceType": "raster",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-0db5ce524459:q26",
+        "questionNumber": 26,
+        "reliable": false,
+        "reason": "current_marker_not_found",
+        "pages": [
+          13
+        ],
+        "expectedPages": [
+          13
+        ],
+        "currentMarker": null,
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {}
+      },
+      "selectionStratum": [
+        "raster",
+        "textual",
+        "math"
+      ],
+      "recoveryCategory": "requires_new_observation_capability",
+      "rootCauses": [
+        "observation_missing_or_corrupted",
+        "boundary_failure"
+      ],
+      "evidence": "Página com coluna de cálculos/manuscrito; cache possui só cinco linhas extensas e header 26 não foi preservado de forma utilizável. A página visual identifica questão/opções.",
+      "gateRelaxationRisk": "Não recuperar número pelo parecido 07 nem pelos rabiscos; exige observação mais fiel.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-ad34c4cf7f30:q26",
+      "documentId": "doc-ad34c4cf7f30",
+      "pages": [
+        9
+      ],
+      "family": "COLÉGIO PÓDION",
+      "sourceType": "raster",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-ad34c4cf7f30:q26",
+        "questionNumber": 26,
+        "reliable": false,
+        "reason": "current_marker_not_found",
+        "pages": [
+          9
+        ],
+        "expectedPages": [
+          9
+        ],
+        "currentMarker": null,
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {}
+      },
+      "selectionStratum": [
+        "raster",
+        "textual",
+        "mixed"
+      ],
+      "recoveryCategory": "requires_new_observation_capability",
+      "rootCauses": [
+        "observation_missing_or_corrupted",
+        "boundary_failure"
+      ],
+      "evidence": "Página com q24/q25/q26 e coluna de cálculo; quatro linhas OCR, uma bbox y=218..1721. Número 26/associação de alternativas não estão íntegros.",
+      "gateRelaxationRisk": "Não promover texto/manuscrito da coluna vizinha; não basta relaxar boundary.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-c41ddc7b55ec:q2",
+      "documentId": "doc-c41ddc7b55ec",
+      "pages": [
+        3
+      ],
+      "family": "OUTRAS",
+      "sourceType": "raster",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 4,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-c41ddc7b55ec:q2",
+        "questionNumber": 2,
+        "reliable": false,
+        "reason": "current_marker_not_found",
+        "pages": [
+          3
+        ],
+        "expectedPages": [
+          3
+        ],
+        "currentMarker": null,
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {}
+      },
+      "selectionStratum": [
+        "raster",
+        "textual",
+        "text"
+      ],
+      "recoveryCategory": "recoverable_boundary",
+      "rootCauses": [
+        "boundary_failure",
+        "observation_missing_or_corrupted"
+      ],
+      "evidence": "Words preservam 02. em x=84,y=571 e 07. em x=663,y=578; linhas mesclam colunas. Header atual e A/B/D locais observáveis, C local perdido.",
+      "gateRelaxationRisk": "Scope por coluna é pré-requisito; poderá ainda precisar observação complementar do C, sem adivinhar count.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-bb62e60cf7ed:q27",
+      "documentId": "doc-bb62e60cf7ed",
+      "pages": [
+        20
+      ],
+      "family": "CMSM",
+      "sourceType": "text_native",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-bb62e60cf7ed:q27",
+        "questionNumber": 27,
+        "reliable": false,
+        "reason": "current_marker_not_found",
+        "pages": [
+          20
+        ],
+        "expectedPages": [
+          20
+        ],
+        "currentMarker": null,
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {}
+      },
+      "selectionStratum": [
+        "text_native",
+        "parenthesized",
+        "math"
+      ],
+      "recoveryCategory": "recoverable_boundary",
+      "rootCauses": [
+        "boundary_failure"
+      ],
+      "evidence": "Canonical q27 usa printedQuestionNumber=7, section=mathematics no índice; página/header impresso 07. Boundary procura 27 e ignora metadado neutro já congelado.",
+      "gateRelaxationRisk": "Preservar questionId/ordem canônica; usar seção+printed sem relabeling do GT.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-6dde932fb681:q19",
+      "documentId": "doc-6dde932fb681",
+      "pages": [
+        14
+      ],
+      "family": "CMM",
+      "sourceType": "text_native",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-6dde932fb681:q19",
+        "questionNumber": 19,
+        "reliable": false,
+        "reason": "current_marker_not_found",
+        "pages": [
+          14
+        ],
+        "expectedPages": [
+          14
+        ],
+        "currentMarker": null,
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {}
+      },
+      "selectionStratum": [
+        "text_native",
+        "parenthesized",
+        "mixed"
+      ],
+      "recoveryCategory": "recoverable_boundary",
+      "rootCauses": [
+        "boundary_failure"
+      ],
+      "evidence": "Native registra 19º Item e cinco A-E; gramática atual não reconhece ordinal antes de Item.",
+      "gateRelaxationRisk": "Exigir posição de início/ordem, evitando referências ao item no enunciado.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-6dde932fb681:q7",
+      "documentId": "doc-6dde932fb681",
+      "pages": [
+        6
+      ],
+      "family": "CMM",
+      "sourceType": "text_native",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-6dde932fb681:q7",
+        "questionNumber": 7,
+        "reliable": false,
+        "reason": "current_marker_not_found",
+        "pages": [
+          6
+        ],
+        "expectedPages": [
+          6
+        ],
+        "currentMarker": null,
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {}
+      },
+      "selectionStratum": [
+        "text_native",
+        "parenthesized",
+        "text"
+      ],
+      "recoveryCategory": "recoverable_boundary",
+      "rootCauses": [
+        "boundary_failure"
+      ],
+      "evidence": "Native registra 7º Item e A-E; mesma variante ordinal não reconhecida.",
+      "gateRelaxationRisk": "Não confundir contexto Texto 3/itens 7 a 9 com começo da questão.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-44ea716ed9b7:q54",
+      "documentId": "doc-44ea716ed9b7",
+      "pages": [
+        9
+      ],
+      "family": "PAS 1",
+      "sourceType": "text_native",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 4,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-44ea716ed9b7:q54",
+        "questionNumber": 54,
+        "reliable": false,
+        "reason": "current_marker_not_found",
+        "pages": [
+          9
+        ],
+        "expectedPages": [
+          9
+        ],
+        "currentMarker": null,
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {}
+      },
+      "selectionStratum": [
+        "text_native",
+        "symbolic_control",
+        "math"
+      ],
+      "recoveryCategory": "recoverable_boundary",
+      "rootCauses": [
+        "boundary_failure",
+        "observation_missing_or_corrupted"
+      ],
+      "evidence": "54 é marcador neutro na coluna direita; linhas nativas mesclam colunas e número não inicia a linha usada pelo detector. A-D/Tipo C estão visíveis.",
+      "gateRelaxationRisk": "Reconstruir ordem por words/colunas, preservando itens C/E e controles sem resposta múltipla.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    },
+    {
+      "questionId": "doc-1693ea690bbb:q14",
+      "documentId": "doc-1693ea690bbb",
+      "pages": [
+        10
+      ],
+      "family": "CMT",
+      "sourceType": "text_native",
+      "expected": {
+        "responseMode": "single_choice",
+        "optionCount": 5,
+        "optionLabels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "emitted": {
+        "optionCountHypothesis": null,
+        "optionLabelsHypothesis": null
+      },
+      "officialClassification": "safe_abstention",
+      "boundary": {
+        "questionId": "doc-1693ea690bbb:q14",
+        "questionNumber": 14,
+        "reliable": false,
+        "reason": "current_marker_not_found",
+        "pages": [
+          10
+        ],
+        "expectedPages": [
+          10
+        ],
+        "currentMarker": null,
+        "nextMarker": null,
+        "boundaryMode": "vertical",
+        "columnLimits": null,
+        "pageLimits": {}
+      },
+      "selectionStratum": [
+        "text_native",
+        "symbolic_control",
+        "mixed"
+      ],
+      "recoveryCategory": "recoverable_boundary",
+      "rootCauses": [
+        "boundary_failure"
+      ],
+      "evidence": "Native contém prefixo PUA U+F0D8 antes de Questão 14 (e 15); match ancorado falha apesar de A-E e header íntegros.",
+      "gateRelaxationRisk": "Tratar decoração com provenance/posição; não remover indiscriminadamente símbolos C/E do conteúdo.",
+      "recoveryIsHypothesisNotMeasured": true,
+      "needsHumanVisualReview": false,
+      "safetyAssessment": "Abstenção correta dada a evidência/policy atual; categoria identifica trabalho futuro, não emissão validada."
+    }
+  ],
+  "rootCauseCountsScope": "six mandatory cases; multi-label, counts are not mutually exclusive",
+  "rootCauseCounts": {
+    "observation_missing_or_corrupted": 2,
+    "marker_detection_failure": 6,
+    "fusion_policy_failure": 6,
+    "region_slot_failure": 3,
+    "boundary_failure": 1
+  },
+  "abstentionRootCauseCounts": {
+    "marker_detection_failure": 4,
+    "response_structure_failure": 2,
+    "region_slot_failure": 3,
+    "boundary_failure": 15,
+    "observation_missing_or_corrupted": 11,
+    "fusion_policy_failure": 1,
+    "visual_evidence_failure": 2
+  },
+  "recoveryCategoryCounts": {
+    "recoverable_structure": 5,
+    "recoverable_boundary": 13,
+    "requires_new_observation_capability": 5,
+    "recoverable_visual": 1
+  },
+  "candidateFixFamilies": [
+    {
+      "priority": 1,
+      "id": "selected_response_set_contract",
+      "scope": "Structure, regions e fusion devem preservar o mesmo response set selecionado; candidatos rejeitados/inline não são confirmação independente.",
+      "potentialImpact": "Três overcounts e um partial observados.",
+      "generality": "Alta: enunciado, mídia, rodapé e texto interno.",
+      "regressionRisk": "Desconsiderar alternativas legítimas espalhadas/multi-set.",
+      "testability": "Alta: fixtures sintéticas com candidatos falsos, cluster selecionado, duplicatas e inline."
+    },
+    {
+      "priority": 2,
+      "id": "response_set_completeness",
+      "scope": "Completude e gaps, inclusive perda terminal; recuperação de marker somente com geometria/cluster corroborados.",
+      "potentialImpact": "Dois undercounts; segurança antes de coverage.",
+      "generality": "Alta para OCR e text_native corrompido.",
+      "regressionRisk": "Inventar E/B por expectativa ou reduzir coverage indiscriminadamente.",
+      "testability": "Controles de conjuntos reais A-D/A-E/CE/custom, gaps e terminal corrompido; nunca clamp."
+    },
+    {
+      "priority": 3,
+      "id": "neutral_boundary_identity_and_scope",
+      "scope": "Printed versus canonical/seção, variantes de header, decoração PUA, ressegmentação por words e prova de colunas; excluir peer do conteúdo.",
+      "potentialImpact": "13/24 categorias de amostra; população tem 50 boundary_uncertain, sem extrapolação de recuperação.",
+      "generality": "Alta, mas separar identidade/gramática/geometria em testes independentes.",
+      "regressionRisk": "Vazamento entre questões/colunas e falsos headers; count seguro não é consequência automática.",
+      "testability": "Headers legítimos e referências negativas, reset por disciplina, matemática simulando números e multipágina."
+    },
+    {
+      "priority": 4,
+      "id": "marker_role_and_spacing",
+      "scope": "Markers espaçados/minúsculos, enumeração interna versus answer_option; provenance de papel.",
+      "potentialImpact": "Cinco casos da amostra com observações aproveitáveis.",
+      "generality": "Alta para parenthesized.",
+      "regressionRisk": "Transformar subitems em alternativas; opções com continuação.",
+      "testability": "Controles sintéticos internos a-e/I-IV e conjuntos reais com espaços."
+    },
+    {
+      "priority": 5,
+      "id": "observation_visual_and_resegmentation",
+      "scope": "Observação complementar de markers destruídos e símbolos circulados; avaliar capacidades existentes antes de novos detectores.",
+      "potentialImpact": "Cinco requires_new_observation_capability e um recoverable_visual; boundary pode ocultar lacunas adicionais.",
+      "generality": "Média/alta para raster, fonte simbólica e manuscrito.",
+      "regressionRisk": "Falsos círculos, arte/rodapé/manuscrito, glyph não observado; custo/latência.",
+      "testability": "Negativos de figura/controles e medições por provenance; count e label avaliados separadamente."
+    }
+  ],
+  "operationalNotes": [
+    "Refresh Git autorizado limpou o status sem modificar bytes/config; exitCode=1 needs update, status subsequente vazio.",
+    "Primeira tentativa do wrapper falhou em import por ROOT incorreto antes de executar qualquer caso; corrigido somente wrapper ignorado; execução concluída possui exatamente 30 chamadas diagnósticas.",
+    "Checkers corrigidos para convenção canonical JSON com espaços e comparação de histórico por linhas (HEAD LF/worktree CRLF preexistente); nenhum artefato congelado normalizado.",
+    "Metadados family Unicode foram preservados literalmente; caracteres acentuados devem ser lidos em UTF-8, sem recodificação."
+  ]
+}

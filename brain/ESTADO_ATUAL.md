@@ -72,3 +72,10 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - Se houver patch funcional após analisar o V4, avaliar em V5 blind holdout; V4 e suas fontes permanecem congelados.
 - Visão de produto consolidada em [[IDEIAS_E_PROXIMOS_PASSOS]], distinta da implementação atual. [[ROADMAP]] contém somente trabalho atual/futuro; o roadmap antigo foi movido integralmente para [[HISTORICO]].
 - Notas anteriores do V4 foram preservadas como snapshots históricos; este checkpoint corrente prevalece para leitura do estado atual.
+
+## Checkpoint corrente — postmortem V4 diagnóstico, 2026-10-06
+
+- Postmortem concluído na branch separada `audit/holdout-v4-postmortem`: cinco unsafe_error + um partial analisados integralmente e 24/66 safe_abstention por amostra metadata-only congelada/publicada em `84ff03278aeae0f9a1b94eecd82fc674e753c8ff`, antes de abrir suas páginas.
+- Replay diagnóstico de 30 casos reproduziu as classificações/campos comparados; 45 entradas de páginas completas revisadas, nenhuma revisão visual humana pendente. Resultado oficial preservado; officialAuditorExecutionCount=1, officialAuditorRerun=false; nenhum patch ou mudança funcional/cache/GT.
+- Famílias: markers corrompidos ou falsos, response set selecionado versus candidatos brutos, papéis de slots e completude/fusion; coverage também limitado por identidade/gramática/scope de boundary e observação visual. Categorias na amostra: boundary=13, structure=5, visual=1, observação complementar=5; não extrapolar para as 66 nem tratar como ganho medido.
+- Próximo passo: priorizar correções generalizáveis/TDD com controles positivos/negativos, começando por response set/completude. Qualquer patch pós-V4 exige V5 blind para avaliação imparcial; sem merge nesta etapa. Ver [análise](../audit/postmortem/V4_POSTMORTEM_ANALYSIS.md) e [findings](../audit/postmortem/v4-postmortem-findings.json).

@@ -149,3 +149,11 @@ Verificar fidelidade entre provas originais e o cátalogo renderizado no SimpleQ
 - **Estado experimental.** O Holdout V2 R2 **está revelado** e **não** é mais avaliação limpa para versões posteriores do Auditor (os resultados já foram vistos). Uma nova avaliação imparcial exige o reserved pool / um V3. Artefatos R1/R2/V2 e o primeiro resultado congelado permanecem preservados; nenhum rerun do R2 foi feito para esta correção.
 
 Ver tambem: [[IMPORTADOR]], [[ROADMAP]], [[ESTRUTURAS_DE_RESPOSTA]].
+
+## Holdout V4 — postmortem diagnóstico concluído
+
+Resultado oficial único e congelado preservado; V4 já revelado não serve como avaliação cega de versões alteradas. A amostra de 24/66 abstentions foi selecionada somente por metadata e commitada/publicada antes da inspeção visual; cinco unsafe + um partial eram obrigatórios. Replay restrito aos 30 reproduziu o resultado (sem CLI oficial/main/evaluate_manifest), com revisão de 45 entradas de páginas completas, sem OCR novo, patch ou alteração de cache/GT. Nenhuma causa ficou dependente de interpretação visual incerta.
+
+As duas perdas de opção vêm de prefixos corrompidos em OCR/text_native; os três overcounts vêm de falso marker em enunciado/figura/rodapé. No partial, candidato inline cria conflito artificial apesar de quatro slots corretos. O padrão de segurança é preservar o response set selecionado, provenance e completude entre structure/regions/fusion, sem tratar candidatos brutos como opções nem inferir labels ausentes. Não houve vazamento da questão vizinha nesses seis casos.
+
+Na amostra, 13 categorias de boundary (incluindo dois recortes de coluna falsamente reliable), cinco de structure/papel/espaçamento, uma de capacidade visual existente e cinco que exigem observação complementar. Identidade canonical/printed por disciplina, variantes de header e word geometry merecem TDD; não relaxar gates globalmente. São hipóteses diagnósticas, não coverage recuperada ou estimativa das 66. Próxima decisão: priorizar famílias generalizáveis com controles positivos/negativos; qualquer mudança funcional requer V5 blind. Detalhes e contagens em [análise](../audit/postmortem/V4_POSTMORTEM_ANALYSIS.md), [findings](../audit/postmortem/v4-postmortem-findings.json) e [freeze da amostra](../audit/postmortem/V4_POSTMORTEM_SAMPLE_FREEZE.md).
