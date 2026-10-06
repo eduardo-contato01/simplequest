@@ -4,7 +4,9 @@ Projeto para auditoria em massa das provas importadas. Ainda não há uma ferram
 
 ## Holdout V4 — checkpoint apos Tier B
 
-Checkpoint operacional atualizado em 2026-10-05 apos freeze do GT V4, da configuracao OCR e da preparacao dos caches; ancora mantida para preservar os links existentes.
+Checkpoint operacional atualizado em 2026-10-05 apos primeira execucao oficial unica do Auditor V4; ancora mantida para preservar os links existentes.
+
+- Estado atual: GT/config OCR/preparacao dos caches previamente congelados; Auditor V4 executado exatamente uma vez, exitCode=0, rerun=false, source commit 394ce73f38848ec90f520a25b8d3ce71dd14099a, runStamp=20261005T221306Z. Resultado JSON/Markdown byte-identico ao raw em [results](../audit/holdout/results/auditor-v1-holdout-v4-first-run.provenance.json), 144 records validados apenas estruturalmente; provenance pronta para freeze formal pelo commit de introducao. Metricas nao exibidas/analisadas; failure analysis nao iniciada. Proximo passo apos commit/push, em etapa separada: interpretar o resultado congelado. Notas de preparacao abaixo, inclusive estados Auditor=false, preservadas como historico.
 
 - Branch `audit/holdout-v4`. Arquitetura V1 congelada para o holdout; nenhuma nova heuristica ou regra de layout para melhorar casos individuais durante a adjudicacao neutra.
 - Candidate pool e raw neutral question index V4 congelados; selecao documental concluida com 48 documentos. Tier A: 18/18 concluidos. Tier B: 9/9 concluidos, com 246 questoes canonicas. Tier C: 13/13 concluidos, com 430 questoes canonicas. Tier D: 8/8 concluidos, com 180 canonicas (182 raw; duas QUESTAO 21 de Producao Textual excluidas por decisao humana, sem criar anomalias automaticas). Todos os tiers de adjudicacao neutra concluidos.
