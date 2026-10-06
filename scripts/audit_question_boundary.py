@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import re
+import unicodedata
 from typing import Any
 
 import audit_holdout_question_index as indexer
@@ -20,8 +22,9 @@ Truth content to locate the boundary. When the current or the next question
 marker cannot be located unambiguously the boundary is declared
 ``reliable=False`` so downstream fusion withholds unsafe emissions.
 
-The marker grammar is the same neutral grammar used to build the question
-index (QUESTAO_RE / ITEM_RE / NUMERIC_RE / BARE_NUMERIC_RE).
+Global markers retain the frozen index grammar. Current/next matching adds
+anchored neutral variants only for their expected printed/canonical identities;
+those variants are not promoted to global parallel-column peers.
 """
 
 # Families ordered by the neutral hierarchy used by the question index.
@@ -35,6 +38,107 @@ COLUMN_MIN_X_GAP_RATIO = 0.25
 COLUMN_MAX_Y_GAP_ABS = 60.0
 COLUMN_MAX_Y_GAP_RATIO = 0.10
 COLUMN_MIN_SIDE_RATIO = 0.20
+
+_KEYWORD_SEPARATOR_RE = re.compile(r"^(?:QUEST[ÃA]O|ITEM)\s*[:\-–—]\s*0*(\d{1,3})\b", re.IGNORECASE)
+_ORDINAL_ITEM_RE = re.compile(r"^0*(\d{1,3})\.?[º°]\s+ITEM\b", re.IGNORECASE)
+_TARGET_NUMERIC_RE = re.compile(r"^0*(\d{1,3})(?!\d)\s*[.)\-–—]\s*(?=\S)")
+
+
+def _valid_printed_number(value: Any) -> int | None:
+  # Never truncate floats or treat booleans as question numbers.
+  if type(value) is int:
+    number = value
+  elif isinstance(value, str) and re.fullmatch(r"[0-9]{1,3}", value):
+    number = int(value)
+  else:
+    return None
+  return number if 1 <= number <= indexer.MAX_QUESTION_NUMBER else None
+
+
+def _observed_question_number(question: dict[str, Any]) -> int:
+  printed = _valid_printed_number(question.get("printedQuestionNumber"))
+  return printed if printed is not None else int(question["questionNumber"])
+
+
+def _question_identity(question: dict[str, Any]) -> dict[str, Any]:
+  return {"canonicalQuestionNumber": int(question["questionNumber"]),
+          "observedQuestionNumber": _observed_question_number(question),
+          "numberSource": "printed" if _valid_printed_number(question.get("printedQuestionNumber")) is not None else "canonical"}
+
+
+def _keyword_header(text: str) -> tuple[re.Match | None, str]:
+  match = indexer.QUESTAO_RE.match(text) or indexer.ITEM_RE.match(text)
+  if match:
+    return match, "legacy_keyword"
+  return _KEYWORD_SEPARATOR_RE.match(text), "keyword_separator"
+
+
+def _leading_keyword_decoration(text: str) -> tuple[str, bool]:
+  # Only a decoration-only prefix immediately before an anchored keyword.
+  # Leave all body text and the original observation untouched.
+  offset = 0
+  saw_decoration = False
+  for char in text:
+    if char.isspace():
+      offset += 1
+    elif unicodedata.category(char) == "Co" or char in "•◦▪▫►▸▶➤➢→":
+      offset += 1
+      saw_decoration = True
+    else:
+      break
+  remainder = text[offset:]
+  if saw_decoration and _keyword_header(remainder)[0]:
+    return remainder, True
+  return text, False
+
+
+def _target_question_matches(
+  lines: list[dict[str, Any]],
+  markers: list[dict[str, Any]],
+  question: dict[str, Any],
+) -> list[dict[str, Any]]:
+  """Exact number/page matching; no response evidence or fuzzy substitution."""
+  identity = _question_identity(question)
+  number = identity["observedQuestionNumber"]
+  page = int(question["pageStart"])
+  legacy = {(m["page"], m["top"], m["x0"], m["text"]): m
+            for m in _unique_match(markers, number, page)}
+  repeated = indexer._repeated_line_keys(as_question_marker_lines(lines))
+  matches = []
+  for line in lines:
+    if int(line.get("page") or 0) != page:
+      continue
+    original = str(line.get("text") or "")
+    text, decorated = _leading_keyword_decoration(original.strip())
+    match, grammar = _keyword_header(text)
+    family, kind = "keyword", "keyword"
+    if not match:
+      match = _ORDINAL_ITEM_RE.match(text)
+      grammar = "ordinal_item"
+    if not match:
+      # Dash + isolated A-E is a parent-child header, not a new question.
+      if indexer.PARENT_CHILD_RE.match(text) or indexer.ROMAN_RE.match(text):
+        continue
+      key = (page, float(line.get("top") or 0.0), float(line.get("x0") or 0.0), original.strip())
+      existing = legacy.get(key)
+      if existing and existing["family"] != "keyword":
+        matches.append({**existing, **identity, "text": original,
+                        "matchGrammar": "numeric_separator" if existing["family"] == "separator" else "legacy_bare_numeric",
+                        "leadingDecorationNormalized": False})
+        continue
+      match = _TARGET_NUMERIC_RE.match(text)
+      grammar, family, kind = "numeric_separator", "separator", "numeric"
+      if match:
+        rest = text[match.end(1):]
+        if (rest.startswith(".") and rest[1:2].isdigit()) or indexer._line_key(text) in repeated:
+          continue
+    if not match or int(match.group(1)) != number:
+      continue
+    matches.append({"number": number, "page": page,
+                    "top": float(line.get("top") or 0.0), "x0": float(line.get("x0") or 0.0),
+                    "family": family, "kind": kind, "text": original,
+                    **identity, "matchGrammar": grammar, "leadingDecorationNormalized": decorated})
+  return matches
 
 
 def as_question_marker_lines(lines: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -501,12 +605,14 @@ def compute_question_boundary(
   ``bundle`` may contain several pages and several questions. The returned
   metadata describes which vertical slice of each page belongs to ``question``.
   """
-  markers = detect_question_markers(bundle.lines_as_region_input())
+  marker_lines = bundle.lines_as_region_input()
+  markers = detect_question_markers(marker_lines)
   pages = list(expected)
 
   result: dict[str, Any] = {
     "questionId": question.get("questionId"),
     "questionNumber": question.get("questionNumber"),
+    **_question_identity(question),
     "reliable": True,
     "reason": "ok",
     "pages": pages,
@@ -523,7 +629,7 @@ def compute_question_boundary(
     result["reason"] = "current_page_not_loaded"
     return result
 
-  current_matches = _unique_match(markers, int(question["questionNumber"]), int(question["pageStart"]))
+  current_matches = _target_question_matches(marker_lines, markers, question)
   current_reason = _match_reason(current_matches, "current")
   if current_reason:
     result["reliable"] = False
@@ -626,7 +732,7 @@ def compute_question_boundary(
   next_marker: dict[str, Any] | None = None
   next_in_pages = bool(next_question) and int(next_question.get("pageStart") or 0) in pages
   if next_in_pages:
-    next_matches = _unique_match(markers, int(next_question["questionNumber"]), int(next_question["pageStart"]))
+    next_matches = _target_question_matches(marker_lines, markers, next_question)
     next_reason = _match_reason(next_matches, "next")
     if next_reason:
       result["reliable"] = False

@@ -91,3 +91,9 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - `response_set_completeness` implementado: incomplete/ambiguous/unknown aplicável bloqueia count/labels; não inventa alternativas nem faz stitching multipágina. Contrato Patch 01 preservado.
 - TDD RED/GREEN, 14 suítes e replay diagnóstico dos seis PASS; os dois undercounts revelados agora abstêm, como regression behavior, sem claim de performance. Resultado oficial/fontes/caches intactos; execução oficial única, sem rerun; V5 blind obrigatório.
 - Próximo passo separado: `neutral_boundary_identity_and_scope`, ainda não iniciado. Ver [Patch 02](../audit/postmortem/V4_PATCH_02_RESPONSE_SET_COMPLETENESS.md); sem merge.
+
+## Checkpoint corrente — Patch 03A pós-V4, 2026-10-06
+
+- Identity/grammar do boundary implementados: número impresso distinto do canônico e variantes ancoradas de keyword/separador, ordinal Item e decoração; provenance preservada. Índice congelado e contratos dos Patches 01/02 intactos.
+- TDD RED/GREEN, 14 suítes e replay diagnóstico restrito a 19 IDs PASS; seis alvos reconhecidos, sem regressão unsafe. V4 apenas regression behavior, execução oficial única sem rerun; V5 blind obrigatório.
+- Sem alteração de column scope ou reconstrução por words. Próximo separado: Patch 03B `neutral_boundary_scope_and_column_peers`; boundary inteiro não concluído. Ver [Patch 03A](../audit/postmortem/V4_PATCH_03A_BOUNDARY_IDENTITY_GRAMMAR.md); sem merge.

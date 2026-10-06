@@ -545,7 +545,95 @@ def test_visual_respects_boundary() -> None:
   check("visual.evidence_no_q2", all(item["bbox"][1] < 300.0 for item in kept))
 
 
+def test_target_identity_and_grammar() -> None:
+  def boundary_for(text, canonical=23, printed=None, next_text=None, next_printed=None):
+    current = entry("synthetic:q23", canonical, 1, 1)
+    if printed is not None:
+      current["printedQuestionNumber"] = printed
+      current["section"] = "synthetic_section"
+    questions = [current]
+    rows = [(100, text), (120, "(A) alpha"), (140, "(B) beta"), (160, "(C) gamma")]
+    if next_text is not None:
+      nxt = entry("synthetic:next", canonical + 1, 1, 1)
+      if next_printed is not None:
+        nxt["printedQuestionNumber"] = next_printed
+      questions.append(nxt)
+      rows.append((300, next_text))
+    bundle = make_bundle({1: rows})
+    return run_question(bundle, data("synthetic", questions), current["questionId"])[0]
+
+  normal = boundary_for("23. Enunciado")
+  check("identity.normal_reliable", normal["reliable"], normal)
+  check("identity.normal_canonical_source", (normal.get("currentMarker") or {}).get("numberSource") == "canonical", normal)
+  check("identity.normal_grammar", (normal.get("currentMarker") or {}).get("matchGrammar") == "numeric_separator", normal)
+
+  printed = boundary_for("07. Enunciado", canonical=27, printed=7, next_text="08. Proxima", next_printed=8)
+  check("identity.printed_current_reliable", printed["reliable"], printed)
+  marker = printed.get("currentMarker") or {}
+  check("identity.printed_number", marker.get("number") == 7, marker)
+  check("identity.canonical_unchanged", printed["questionNumber"] == 27 and marker.get("canonicalQuestionNumber") == 27, printed)
+  check("identity.printed_provenance", marker.get("observedQuestionNumber") == 7 and marker.get("numberSource") == "printed", marker)
+  check("identity.next_printed", (printed.get("nextMarker") or {}).get("number") == 8 and (printed.get("nextMarker") or {}).get("numberSource") == "printed", printed)
+  check("identity.next_cut", (printed.get("pageLimits", {}).get(1) or {}).get("bottom") == 300.0, printed)
+  for invalid in [0, -1, True, 1.5, "invalid", "7x"]:
+    b = boundary_for("23. Enunciado", printed=invalid)
+    check(f"identity.invalid_printed_{invalid!r}", b["reliable"] and (b.get("currentMarker") or {}).get("numberSource") == "canonical", b)
+  text_printed = boundary_for("07. Enunciado", canonical=27, printed="07")
+  check("identity.valid_digit_string", text_printed["reliable"] and (text_printed.get("currentMarker") or {}).get("numberSource") == "printed", text_printed)
+
+  for header in ["QUESTÃO - 20", "QUESTÃO – 20", "QUESTÃO — 20", "QUESTÃO: 20", "questao - 20", "ITEM: 20"]:
+    b = boundary_for(header, canonical=20)
+    check(f"identity.keyword_{header}", b["reliable"] and (b.get("currentMarker") or {}).get("matchGrammar") == "keyword_separator", b)
+  for header, number in [("7º Item", 7), ("19° Item", 19), ("7.º Item", 7), ("19.º item", 19)]:
+    b = boundary_for(header, canonical=number)
+    check(f"identity.ordinal_{header}", b["reliable"] and (b.get("currentMarker") or {}).get("matchGrammar") == "ordinal_item", b)
+  for header in ["Questão 14", "Item 14"]:
+    b = boundary_for(header, canonical=14)
+    check(f"identity.legacy_{header}", b["reliable"] and (b.get("currentMarker") or {}).get("matchGrammar") == "legacy_keyword", b)
+
+  for prefix in ["\uf0d8 ", "• ", "\ue123\ue124 "]:
+    text = prefix + "Questão 14"
+    b = boundary_for(text, canonical=14)
+    marker = b.get("currentMarker") or {}
+    check(f"identity.decoration_{prefix!r}", b["reliable"] and marker.get("leadingDecorationNormalized") is True, b)
+    check(f"identity.decoration_original_{prefix!r}", marker.get("text") == text, marker)
+  embedded = boundary_for("Questão 14 enunciado \uf0d8")
+  check("identity.wrong_number_no_fuzzy", not embedded["reliable"], embedded)
+  decorated_next = boundary_for("\uf0d8 Questão 14", canonical=14, next_text="\uf0d8 Questão: 15")
+  check("identity.decorated_next", decorated_next["reliable"] and (decorated_next.get("nextMarker") or {}).get("leadingDecorationNormalized") is True, decorated_next)
+
+  for body in ["A partir da figura", "Basta observar", "Como mostrado", "Dado o valor", "Entre os pontos"]:
+    b = boundary_for("23. " + body)
+    check(f"identity.numeric_letter_{body}", b["reliable"] and (b.get("currentMarker") or {}).get("matchGrammar") == "numeric_separator", b)
+  for text in ["23-A alternativa/subitem", "23 – A texto", "23—A texto", "Texto 3 referente aos itens 7 a 9", "considere os itens 7 a 9", "considere ITEM 7", "Questão texto 7", "\uf0d8 Texto Questão 7", "23.6 valor decimal"]:
+    target = 7 if "7" in text else 23
+    b = boundary_for(text, canonical=target)
+    check(f"identity.negative_{text}", not b["reliable"] and b["reason"] == "current_marker_not_found", b)
+
+  duplicate = make_bundle({1: [(100, "QUESTÃO - 20"), (300, "Questão 20")]})
+  b, _ = run_question(duplicate, data("d", [entry("d:q20", 20, 1, 1)]), "d:q20")
+  check("identity.mixed_grammar_duplicate", not b["reliable"] and b["reason"] == "current_marker_ambiguous", b)
+  same_grammar = make_bundle({1: [(100, "7º Item"), (300, "7° Item")]})
+  b, _ = run_question(same_grammar, data("d", [entry("d:q7", 7, 1, 1)]), "d:q7")
+  check("identity.ordinal_duplicate", not b["reliable"] and b["reason"] == "current_marker_ambiguous", b)
+  missing_next = boundary_for("Questão - 20", canonical=20, next_text="Questão - 22")
+  check("identity.next_wrong_number", not missing_next["reliable"] and missing_next["reason"] == "next_marker_not_found", missing_next)
+  duplicate_next = make_bundle({1: [(100, "Questão - 20"), (300, "21º Item"), (400, "Questão 21")]})
+  b, _ = run_question(duplicate_next, data("d", [entry("d:q20", 20, 1, 1), entry("d:q21", 21, 1, 1)]), "d:q20")
+  check("identity.next_duplicate", not b["reliable"] and b["reason"] == "next_marker_ambiguous", b)
+  reset_index = data("d", [entry("d:q7", 7, 1, 1), {**entry("d:q27", 27, 2, 2), "printedQuestionNumber": 7},
+                          {**entry("d:q28", 28, 2, 2), "printedQuestionNumber": 8}])
+  reset_bundle = make_bundle({1: [(100, "7º Item")], 2: [(100, "7º Item"), (300, "8º Item")]})
+  b, _ = run_question(reset_bundle, reset_index, "d:q27")
+  check("identity.reset_page", b["reliable"] and (b.get("currentMarker") or {}).get("page") == 2, b)
+  check("identity.reset_next", (b.get("nextMarker") or {}).get("number") == 8, b)
+  check("identity.frozen_metadata_not_mutated", reset_index["questions"][1]["questionNumber"] == 27 and reset_index["questions"][1]["printedQuestionNumber"] == 7, reset_index)
+  global_before = question_boundary.detect_question_markers(make_bundle({1: [(100, "Questão - 20"), (300, "7º Item")]}).lines_as_region_input())
+  check("identity.global_grammar_not_extended", global_before == [], global_before)
+
+
 def main() -> None:
+  test_target_identity_and_grammar()
   test_parallel_two_column_questions()
   test_same_page_two_questions_ae()
   test_same_page_five_questions_ae()

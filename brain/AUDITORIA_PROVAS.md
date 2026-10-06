@@ -165,3 +165,7 @@ Structure → Regions → Fusion compartilham `selectedResponseSet` e identidade
 ## Safety gate de completude
 
 Count/labels textuais padrão exigem selected response set + `responseSetCompleteness` explícita + gate da Fusion. Structure avalia fechamento (complete/incomplete/ambiguous/unknown), separado de confidence; Regions mantém membership, sem decidir completude. Quando aplicável, qualquer estado diferente de complete bloqueia count/labels e interpretação high. Prefixo contíguo e ausência de resíduo terminal pela política observacional não autorizam inventar labels; CE e modos não single_choice são tratados conforme seu papel. Recovery existente preservada; sem stitching multipágina ou inferência por GT. Ver [Patch 02](../audit/postmortem/V4_PATCH_02_RESPONSE_SET_COMPLETENESS.md); V4 revelado continua apenas regressão, V5 blind obrigatório.
+
+## Identidade observável do boundary
+
+Matching de atual/próxima usa a identidade neutra do frozen index: canonicalQuestionNumber preserva ordem/identidade, observedQuestionNumber usa printedQuestionNumber válido com fallback canônico. Variantes ancoradas são target-aware, sem ampliar peers globais de coluna, resposta/GT ou fuzzy substitution; provenance registra grammar, numberSource e decoração, mantendo texto original. Ausência/duplicata continua reliable=false. Identity/grammar não certifica scope nem emissão downstream; colunas e reconstrução por words são etapas separadas. Ver [Patch 03A](../audit/postmortem/V4_PATCH_03A_BOUNDARY_IDENTITY_GRAMMAR.md); V5 blind obrigatório.
