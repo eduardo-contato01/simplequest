@@ -1,0 +1,637 @@
+{
+  "artifactType": "holdout-v4-postmortem-sample",
+  "protocolVersion": "holdout-v4",
+  "sourceResult": "audit/holdout/results/auditor-v1-holdout-v4-first-run.json",
+  "sourceResultSha256": "2284bbb2f309b17115ddef5975121ed843d89799ebab052f47dcf01f995dc734",
+  "resultFreezeCommit": "89f482b373449022423b4d34536160e62774cd2d",
+  "postmortemBaseCommit": "0eda2880edaa70915e80cc78889cb837307e7d43",
+  "unsafeQuestions": [
+    "doc-42af2b3d2b27:q16",
+    "doc-cef618be31e6:q23",
+    "doc-cf6b56e7abd7:q15",
+    "doc-eefc3d15076e:q40",
+    "doc-f4dd01071816:q20"
+  ],
+  "partialQuestions": [
+    "doc-800c2a22f148:q1"
+  ],
+  "safeAbstentionPopulation": 66,
+  "safeAbstentionSampleSize": 24,
+  "selectionUsesPdfContent": false,
+  "selectionUsesGroundTruthContent": false,
+  "selectionUsesVisualEvidence": false,
+  "selectionAlgorithm": {
+    "version": "holdout-v4-postmortem-safe-v1",
+    "mandatoryOrder": "questionId ascending; all missing_marker_observation and weak_anchor_only plus unique hybrid",
+    "rank": "SHA256(\"holdout-v4-postmortem-safe-v1|\" + questionId), ascending hexadecimal",
+    "strata": [
+      "sourceType",
+      "markerStyle",
+      "contentKind"
+    ],
+    "stratumOrder": "lexicographic tuple ascending",
+    "roundRobin": "one unselected member per stratum per round; skip exhausted strata",
+    "stepB": "no explicit blocker: round robin until 8 total members of this group in sample",
+    "stepC": "boundary_uncertain: round robin until exactly 24 total",
+    "replacementAfterVisualInspection": false
+  },
+  "populationCensus": {
+    "blockerSignature": {
+      "boundary_uncertain": 50,
+      "missing_marker_observation": 2,
+      "no_explicit_blocker": 13,
+      "weak_anchor_only": 1
+    },
+    "sourceType": {
+      "hybrid": 1,
+      "raster": 24,
+      "text_native": 41
+    },
+    "markerStyle": {
+      "parenthesized": 31,
+      "symbolic_control": 19,
+      "textual": 16
+    },
+    "contentKind": {
+      "math": 20,
+      "mixed": 18,
+      "text": 28
+    },
+    "agreement": {
+      "insufficient": 57,
+      "partial": 8,
+      "strong": 1
+    },
+    "observationConfidence": {
+      "low": 58,
+      "medium": 8
+    },
+    "interpretationConfidence": {
+      "low": 57,
+      "medium": 9
+    },
+    "family": {
+      "CMB": 1,
+      "CMBH": 7,
+      "CMBel": 1,
+      "CMC": 1,
+      "CMF": 8,
+      "CMJF": 5,
+      "CMM": 9,
+      "CMPA": 2,
+      "CMR": 3,
+      "CMRJ": 2,
+      "CMSM": 6,
+      "CMSP": 1,
+      "CMT": 5,
+      "CMVM": 2,
+      "COLÉGIO PÓDION": 6,
+      "COLÉGIO SÓLIDO": 1,
+      "OUTRAS": 4,
+      "PAS 1": 2
+    },
+    "era": {
+      "2010-2014": 10,
+      "2015-2019": 25,
+      "2020-2025": 31
+    }
+  },
+  "sample": [
+    {
+      "documentId": "doc-27775227a392",
+      "questionId": "doc-27775227a392:q1",
+      "sourceType": "text_native",
+      "family": "CMF",
+      "era": "2020-2025",
+      "responseMode": "single_choice",
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "agreement": "partial",
+      "blockers": [
+        "missing_marker_observation"
+      ],
+      "observationConfidence": "medium",
+      "interpretationConfidence": "medium",
+      "selectionStratum": [
+        "text_native",
+        "parenthesized",
+        "mixed"
+      ],
+      "selectionRank": "0d4af3210be9bb83485a598bc87e0f04f5fb625f258c4999a4a1d5e2a9fbc3be"
+    },
+    {
+      "documentId": "doc-27775227a392",
+      "questionId": "doc-27775227a392:q14",
+      "sourceType": "text_native",
+      "family": "CMF",
+      "era": "2020-2025",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "agreement": "partial",
+      "blockers": [
+        "missing_marker_observation"
+      ],
+      "observationConfidence": "medium",
+      "interpretationConfidence": "medium",
+      "selectionStratum": [
+        "text_native",
+        "parenthesized",
+        "math"
+      ],
+      "selectionRank": "193138d832e033a078ae8e4047612015f00fc40d093a9dc86afc6bea25baec80"
+    },
+    {
+      "documentId": "doc-3fb1e1ce24be",
+      "questionId": "doc-3fb1e1ce24be:q32",
+      "sourceType": "text_native",
+      "family": "CMF",
+      "era": "2020-2025",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "agreement": "strong",
+      "blockers": [
+        "weak_anchor_only"
+      ],
+      "observationConfidence": "low",
+      "interpretationConfidence": "medium",
+      "selectionStratum": [
+        "text_native",
+        "parenthesized",
+        "mixed"
+      ],
+      "selectionRank": "0eb5d1e32dc3a6852e6d30842acaad5dc8081dcdd7fb0f64fb68d11835f047f2"
+    },
+    {
+      "documentId": "doc-f03e7d17eec1",
+      "questionId": "doc-f03e7d17eec1:q20",
+      "sourceType": "hybrid",
+      "family": "CMPA",
+      "era": "2020-2025",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "agreement": "insufficient",
+      "blockers": [
+        "boundary_uncertain"
+      ],
+      "observationConfidence": "low",
+      "interpretationConfidence": "low",
+      "selectionStratum": [
+        "hybrid",
+        "parenthesized",
+        "math"
+      ],
+      "selectionRank": "34123908a2f25ce96b2b783dff3ced57a69e29c68a358c888e3e0812db510c26"
+    },
+    {
+      "documentId": "doc-eefc3d15076e",
+      "questionId": "doc-eefc3d15076e:q17",
+      "sourceType": "raster",
+      "family": "CMBH",
+      "era": "2020-2025",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "agreement": "insufficient",
+      "blockers": [],
+      "observationConfidence": "low",
+      "interpretationConfidence": "low",
+      "selectionStratum": [
+        "raster",
+        "parenthesized",
+        "mixed"
+      ],
+      "selectionRank": "289d1572214af4f8b5ce14859f598e07fc158139146eacd9711f95c500015728"
+    },
+    {
+      "documentId": "doc-2790a3c9786b",
+      "questionId": "doc-2790a3c9786b:q4",
+      "sourceType": "raster",
+      "family": "CMBel",
+      "era": "2015-2019",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "agreement": "partial",
+      "blockers": [],
+      "observationConfidence": "medium",
+      "interpretationConfidence": "medium",
+      "selectionStratum": [
+        "raster",
+        "parenthesized",
+        "text"
+      ],
+      "selectionRank": "604c8d77a0bd8dc313cf2f5a7bd14378c2c1dae53f575ba4b1495d72c73a8372"
+    },
+    {
+      "documentId": "doc-f4dd01071816",
+      "questionId": "doc-f4dd01071816:q13",
+      "sourceType": "raster",
+      "family": "CMJF",
+      "era": "2015-2019",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "agreement": "partial",
+      "blockers": [],
+      "observationConfidence": "medium",
+      "interpretationConfidence": "medium",
+      "selectionStratum": [
+        "raster",
+        "symbolic_control",
+        "math"
+      ],
+      "selectionRank": "44d828978691fa4f44f0e35f5b2d20a61bb5a131f0e577b082386bf451fcb204"
+    },
+    {
+      "documentId": "doc-5d61be2ac853",
+      "questionId": "doc-5d61be2ac853:q11",
+      "sourceType": "raster",
+      "family": "CMJF",
+      "era": "2015-2019",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "text",
+      "agreement": "partial",
+      "blockers": [],
+      "observationConfidence": "medium",
+      "interpretationConfidence": "medium",
+      "selectionStratum": [
+        "raster",
+        "symbolic_control",
+        "text"
+      ],
+      "selectionRank": "68592c5f5ad0998e11f259197d460cddaba829a9aa66bda70e549a381f931040"
+    },
+    {
+      "documentId": "doc-3fb1e1ce24be",
+      "questionId": "doc-3fb1e1ce24be:q12",
+      "sourceType": "text_native",
+      "family": "CMF",
+      "era": "2020-2025",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "agreement": "partial",
+      "blockers": [],
+      "observationConfidence": "medium",
+      "interpretationConfidence": "medium",
+      "selectionStratum": [
+        "text_native",
+        "parenthesized",
+        "math"
+      ],
+      "selectionRank": "14babbed3ba8de9bad1226cdcd0a4b89eded66cca4a51b15ce1c007cea3edfda"
+    },
+    {
+      "documentId": "doc-3e395d355d2c",
+      "questionId": "doc-3e395d355d2c:q25",
+      "sourceType": "text_native",
+      "family": "CMPA",
+      "era": "2020-2025",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "agreement": "insufficient",
+      "blockers": [],
+      "observationConfidence": "low",
+      "interpretationConfidence": "low",
+      "selectionStratum": [
+        "text_native",
+        "parenthesized",
+        "text"
+      ],
+      "selectionRank": "621a44027804b38ed6d2195315a17577b3f843e5bf673928d3c9261ec4e6f6e1"
+    },
+    {
+      "documentId": "doc-b605f7a51fd5",
+      "questionId": "doc-b605f7a51fd5:q5",
+      "sourceType": "text_native",
+      "family": "CMBH",
+      "era": "2015-2019",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "agreement": "insufficient",
+      "blockers": [],
+      "observationConfidence": "low",
+      "interpretationConfidence": "low",
+      "selectionStratum": [
+        "text_native",
+        "symbolic_control",
+        "math"
+      ],
+      "selectionRank": "7f4274314b0945ad95fe2b4613c3435cab76ddd211029719bb9876a5185f7834"
+    },
+    {
+      "documentId": "doc-b605f7a51fd5",
+      "questionId": "doc-b605f7a51fd5:q20",
+      "sourceType": "text_native",
+      "family": "CMBH",
+      "era": "2015-2019",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "agreement": "insufficient",
+      "blockers": [],
+      "observationConfidence": "low",
+      "interpretationConfidence": "low",
+      "selectionStratum": [
+        "text_native",
+        "symbolic_control",
+        "mixed"
+      ],
+      "selectionRank": "89eeab5d3323d50d1e926f6d5e817093825d51c14d2e918cb895c72abf649ce3"
+    },
+    {
+      "documentId": "doc-56268e79f6bf",
+      "questionId": "doc-56268e79f6bf:q11",
+      "sourceType": "raster",
+      "family": "CMSM",
+      "era": "2015-2019",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "agreement": "insufficient",
+      "blockers": [
+        "boundary_uncertain"
+      ],
+      "observationConfidence": "low",
+      "interpretationConfidence": "low",
+      "selectionStratum": [
+        "raster",
+        "parenthesized",
+        "math"
+      ],
+      "selectionRank": "334ca476bd6309b3259c2a711278e9a975ca4fafa9b5a11fec828edccc3ac144"
+    },
+    {
+      "documentId": "doc-56268e79f6bf",
+      "questionId": "doc-56268e79f6bf:q14",
+      "sourceType": "raster",
+      "family": "CMSM",
+      "era": "2015-2019",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "agreement": "insufficient",
+      "blockers": [
+        "boundary_uncertain"
+      ],
+      "observationConfidence": "low",
+      "interpretationConfidence": "low",
+      "selectionStratum": [
+        "raster",
+        "parenthesized",
+        "mixed"
+      ],
+      "selectionRank": "45cc7045527400083b7cd17f72ebcd0e79aa2986bab35a9cb85b7b419704e10f"
+    },
+    {
+      "documentId": "doc-a1ddc006ef56",
+      "questionId": "doc-a1ddc006ef56:q23",
+      "sourceType": "raster",
+      "family": "CMVM",
+      "era": "2020-2025",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "agreement": "insufficient",
+      "blockers": [
+        "boundary_uncertain"
+      ],
+      "observationConfidence": "low",
+      "interpretationConfidence": "low",
+      "selectionStratum": [
+        "raster",
+        "parenthesized",
+        "text"
+      ],
+      "selectionRank": "c711b03b4abee1941a11adb4a90687ed4ee4c0df3dc8466f92eb71b6a548bf18"
+    },
+    {
+      "documentId": "doc-f4dd01071816",
+      "questionId": "doc-f4dd01071816:q5",
+      "sourceType": "raster",
+      "family": "CMJF",
+      "era": "2015-2019",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "agreement": "insufficient",
+      "blockers": [
+        "boundary_uncertain"
+      ],
+      "observationConfidence": "low",
+      "interpretationConfidence": "low",
+      "selectionStratum": [
+        "raster",
+        "symbolic_control",
+        "mixed"
+      ],
+      "selectionRank": "36c1c7cf5ac6d8a5724a2bb8018d556f6921ac5f025dd7ea60b727d8685dd9e4"
+    },
+    {
+      "documentId": "doc-0db5ce524459",
+      "questionId": "doc-0db5ce524459:q26",
+      "sourceType": "raster",
+      "family": "COLÉGIO PÓDION",
+      "era": "2020-2025",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "math",
+      "agreement": "insufficient",
+      "blockers": [
+        "boundary_uncertain"
+      ],
+      "observationConfidence": "low",
+      "interpretationConfidence": "low",
+      "selectionStratum": [
+        "raster",
+        "textual",
+        "math"
+      ],
+      "selectionRank": "ac82c79979fa17c5de0a4af28b5c3d3d8a290fc54e805283eb6dfa265ab10de5"
+    },
+    {
+      "documentId": "doc-ad34c4cf7f30",
+      "questionId": "doc-ad34c4cf7f30:q26",
+      "sourceType": "raster",
+      "family": "COLÉGIO PÓDION",
+      "era": "2020-2025",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "agreement": "insufficient",
+      "blockers": [
+        "boundary_uncertain"
+      ],
+      "observationConfidence": "low",
+      "interpretationConfidence": "low",
+      "selectionStratum": [
+        "raster",
+        "textual",
+        "mixed"
+      ],
+      "selectionRank": "1d03f314f422ba4ee9d57772ef72e7c3cc0b3b80206074b66375742b00ba0848"
+    },
+    {
+      "documentId": "doc-c41ddc7b55ec",
+      "questionId": "doc-c41ddc7b55ec:q2",
+      "sourceType": "raster",
+      "family": "OUTRAS",
+      "era": "2020-2025",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "agreement": "insufficient",
+      "blockers": [
+        "boundary_uncertain"
+      ],
+      "observationConfidence": "low",
+      "interpretationConfidence": "low",
+      "selectionStratum": [
+        "raster",
+        "textual",
+        "text"
+      ],
+      "selectionRank": "0d49832a292c5ab52e540e6615ac63299c6755a0de03990651b5e7332fc42090"
+    },
+    {
+      "documentId": "doc-bb62e60cf7ed",
+      "questionId": "doc-bb62e60cf7ed:q27",
+      "sourceType": "text_native",
+      "family": "CMSM",
+      "era": "2020-2025",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "math",
+      "agreement": "insufficient",
+      "blockers": [
+        "boundary_uncertain"
+      ],
+      "observationConfidence": "low",
+      "interpretationConfidence": "low",
+      "selectionStratum": [
+        "text_native",
+        "parenthesized",
+        "math"
+      ],
+      "selectionRank": "258fe6d07c697bb5ff865470d1ad58c969ceff33805f30ed2e9daf63043860e2"
+    },
+    {
+      "documentId": "doc-6dde932fb681",
+      "questionId": "doc-6dde932fb681:q19",
+      "sourceType": "text_native",
+      "family": "CMM",
+      "era": "2010-2014",
+      "responseMode": "single_choice",
+      "layout": "internal_enumeration",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "agreement": "insufficient",
+      "blockers": [
+        "boundary_uncertain"
+      ],
+      "observationConfidence": "low",
+      "interpretationConfidence": "low",
+      "selectionStratum": [
+        "text_native",
+        "parenthesized",
+        "mixed"
+      ],
+      "selectionRank": "24b4870ad14229703b1572c5b3c79805e99ee3df1d91872cb045d64b3c3d9af6"
+    },
+    {
+      "documentId": "doc-6dde932fb681",
+      "questionId": "doc-6dde932fb681:q7",
+      "sourceType": "text_native",
+      "family": "CMM",
+      "era": "2010-2014",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "agreement": "insufficient",
+      "blockers": [
+        "boundary_uncertain"
+      ],
+      "observationConfidence": "low",
+      "interpretationConfidence": "low",
+      "selectionStratum": [
+        "text_native",
+        "parenthesized",
+        "text"
+      ],
+      "selectionRank": "04091e3da1e615ba19a27acf78fe890092909a390008aac35c15d3b18267a16b"
+    },
+    {
+      "documentId": "doc-44ea716ed9b7",
+      "questionId": "doc-44ea716ed9b7:q54",
+      "sourceType": "text_native",
+      "family": "PAS 1",
+      "era": "2015-2019",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "math",
+      "agreement": "insufficient",
+      "blockers": [
+        "boundary_uncertain"
+      ],
+      "observationConfidence": "low",
+      "interpretationConfidence": "low",
+      "selectionStratum": [
+        "text_native",
+        "symbolic_control",
+        "math"
+      ],
+      "selectionRank": "a82647bee0f7c0a5d5a7ffa42a87d7902ad1b55e157cc0e58d252395ae5ebf4c"
+    },
+    {
+      "documentId": "doc-1693ea690bbb",
+      "questionId": "doc-1693ea690bbb:q14",
+      "sourceType": "text_native",
+      "family": "CMT",
+      "era": "2020-2025",
+      "responseMode": "single_choice",
+      "layout": "vertical",
+      "markerStyle": "symbolic_control",
+      "contentKind": "mixed",
+      "agreement": "insufficient",
+      "blockers": [
+        "boundary_uncertain"
+      ],
+      "observationConfidence": "low",
+      "interpretationConfidence": "low",
+      "selectionStratum": [
+        "text_native",
+        "symbolic_control",
+        "mixed"
+      ],
+      "selectionRank": "1ce52103e72f949fc2e313ad7679231af7adcbadf9a44b014cc59430b66abbc4"
+    }
+  ]
+}
