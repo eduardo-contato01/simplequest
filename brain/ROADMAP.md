@@ -10,13 +10,14 @@ Trabalho vigente em 2026-10-06. Estado factual em [[ESTADO_ATUAL]]; visão detal
 4. [x] Patch 02 `response_set_completeness`: safety gate de incomplete/ambiguous/unknown aplicável; TDD e replay diagnóstico restrito PASS, sem labels inventados ou stitching. Ver [Patch 02](../audit/postmortem/V4_PATCH_02_RESPONSE_SET_COMPLETENESS.md).
 5. [x] Patch 03A `neutral_boundary_identity_and_grammar`: identidade canônica/impressa e variantes neutras target-aware; TDD e replay restrito PASS. Ver [Patch 03A](../audit/postmortem/V4_PATCH_03A_BOUNDARY_IDENTITY_GRAMMAR.md). Boundary inteiro não concluído.
 6. [x] Patch 03B `neutral_boundary_scope_and_column_peers`: split exige peer index-backed com match único e geometria; TDD e replay restrito PASS. Ver [Patch 03B](../audit/postmortem/V4_PATCH_03B_BOUNDARY_SCOPE_COLUMNS.md).
-7. Próxima prioridade: Patch 03C `neutral_boundary_word_line_reconstruction`, ainda não iniciado. Role/spacing e observação complementar continuam pendentes, sem regras por casos individuais; boundary inteiro não concluído.
+7. [x] Patch 03C `neutral_boundary_word_line_reconstruction`: line-first, fallback somente por words observadas e reconstrução dentro de scope reliable; TDD/replay restrito sem unsafe. Ver [Patch 03C](../audit/postmortem/V4_PATCH_03C_BOUNDARY_WORD_RECONSTRUCTION.md). Patches 03A/03B/03C planejados concluídos, não boundary perfeito; CID ausente e abstenções conservadoras permanecem.
+   Próxima prioridade separada: `marker_role_and_spacing`; observação complementar continua pendente, sem regras por casos individuais.
 8. Se houver mudança funcional após analisar o V4, criar novo Holdout V5 cego; preservar o primeiro resultado V4.
 9. Avaliar novamente precision + coverage em V5 blind, buscando recuperar cobertura sem perder precisão.
 
 Meta operacional: precision >= 99,5%; coverage >= 80%; unsafe_error <= 0,5%; direção ideal de precision 99,8–99,9%. São metas futuras, não o desempenho atual.
 
-Ver [[AUDITORIA_PROVAS]]. Postmortem e Patches 01/02/03A/03B concluídos; reconstrução por words/linhas, demais patches/TDD e avaliação V5 blind permanecem futuros.
+Ver [[AUDITORIA_PROVAS]]. Postmortem e Patches 01/02/03A/03B/03C concluídos; role/spacing, observação complementar e avaliação V5 blind permanecem futuros.
 
 ## Depois — Ingestão/transcrição
 

@@ -739,7 +739,138 @@ def test_index_backed_column_peers() -> None:
     runner._run_ocr = original_ocr
 
 
+def test_word_boundary_and_local_reconstruction() -> None:
+  # A-U: synthetic observation geometry only; no holdout fixtures or GT hints.
+  def words(rows):
+    result = []
+    for page, top, x, tokens in rows:
+      for token in tokens:
+        width = max(10, len(token) * 6)
+        result.append(observations.ObservedWord(page, token, (x, top, x + width, top + 12), len(result), "synthetic"))
+        x += width + 6
+    return result
+  def bundle(rows, lines=None):
+    return observations.ObservationBundle(words(rows), lines or [], [],
+      {1: {"pdfWidth": 600, "pdfHeight": 800}, 2: {"pdfWidth": 600, "pdfHeight": 800}}, "synthetic")
+  def run(b, entries, qid=None):
+    return run_question(b, data("d", entries), qid or entries[0]["questionId"])
+  def start(b): return b.get("currentMarker") or {}
+  def recon(b): return b.get("lineReconstruction") or {}
+  current = entry("d:q5", 5, 1, 1)
+  nxt = entry("d:q6", 6, 1, 1)
+  normal = [line(1, 100, "Questão 5")]
+  b, f = run(bundle([(1, 100, 50, ["Questão", "5"])], normal), [current])
+  check("words.A.line_priority", start(b).get("matchSource") == "line", b)
+  check("words.A.healthy_preserved", f.lines == normal and not recon(b).get("used"), b)
+  b, f = run(bundle([(1, 100, 50, ["Questão", "5"])]), [current])
+  check("words.B.keyword_missing_line", b["reliable"] and start(b).get("matchSource") == "word_geometry", b)
+  check("words.B.provenance", start(b).get("wordIndexes") == [0, 1] and start(b).get("bbox") == [50,100,108,112], b)
+  check("words.N.zero_lines_reconstructed", recon(b).get("used") and f.lines[0].text == "Questão 5", b)
+  check("words.N.line_source", bool(f.lines) and f.lines[0].source == "reconstructed_from_words", b)
+  for tag, rows in [
+    ("C.distant", [(1,100,50,["Questão"]),(1,100,350,["5"])]),
+    ("C.other_band", [(1,100,50,["Questão"]),(1,160,100,["5"])]),
+    ("C.other_page", [(1,100,50,["Questão"]),(2,100,100,["5"])]),
+    ("C.intermediate", [(1,100,50,["Questão","texto","5"])]),
+    ("D.wrong", [(1,100,50,["Questão","6"])]),
+    ("G.year", [(1,100,50,["Questão","2005"])]),
+    ("G.footer", [(1,780,50,["05.","Página"])]),
+    ("G.decimal", [(1,100,50,["05.5","valor"])]),
+    ("H.parent_child", [(1,100,50,["5-A","item"])]),
+  ]:
+    b, _ = run(bundle(rows), [current])
+    check("words." + tag, not b["reliable"] and b["reason"] == "current_marker_not_found", b)
+  numeric = [(1,100,50,["05.","Texto","observado"]),(1,400,50,["06.","Próximo","texto"])]
+  b, _ = run(bundle(numeric), [current,nxt])
+  check("words.E.unique_numeric", b["reliable"] and start(b).get("matchGrammar") == "numeric_separator", b)
+  check("words.L.next_word_bottom", b.get("pageLimits", {}).get(1,{}).get("bottom") == 400, b)
+  b, _ = run(bundle(numeric + [(1,200,50,["05.","Outro","texto"])]), [current,nxt])
+  check("words.F.duplicate_numeric", not b["reliable"] and b["reason"] == "current_marker_ambiguous", b)
+  b, _ = run(bundle([(1,100,50,["Questão","5"]),(1,200,50,["Questão","5"])]), [current])
+  check("words.F.duplicate_keyword", not b["reliable"] and b["reason"] == "current_marker_ambiguous", b)
+  printed = {**entry("d:q27",27,1,1), "printedQuestionNumber": 7}
+  b, _ = run(bundle([(1,100,50,["07.","Atual","texto"]),(1,400,50,["08.","Próxima","texto"])]),
+             [printed,{**entry("d:q28",28,1,1),"printedQuestionNumber":8}])
+  check("words.I.printed", b["reliable"] and start(b).get("observedQuestionNumber") == 7 and start(b).get("canonicalQuestionNumber") == 27, b)
+  duplicate_lines = [line(1,100,"Questão 5"), line(1,200,"Questão 5")]
+  b, _ = run(bundle([(1,100,50,["Questão","5"])], duplicate_lines), [current])
+  check("words.M.line_ambiguity_not_overridden", not b["reliable"] and b["reason"] == "current_marker_ambiguous", b)
+
+  left, right, bottom = entry("d:q2",2,1,1), entry("d:q7",7,1,1), entry("d:q3",3,1,1)
+  rows = [(1,100,50,["02.","Esquerda","texto"]),(1,105,350,["07.","Direita","texto"]),
+          (1,400,50,["03.","Próxima","texto"])]
+  for i, label in enumerate("ABDE"):
+    rows += [(1,150+i*30,50,[f"({label})","local",label]), (1,150+i*30,350,[f"({label})","vizinha",label])]
+  merged = [observations.ObservedLine(1,"colunas mescladas",(40,90,590,370),source="synthetic",order_ambiguous=True)]
+  b, f = run(bundle(rows,merged), [left,bottom,right])
+  check("words.J.two_column", b["reliable"] and b["boundaryMode"] == "two_column", b)
+  peer = next((s for s in b.get("verifiedQuestionStarts",[]) if s["questionId"]==right["questionId"]),{})
+  check("words.J.verified_word_peer", peer.get("status") == "unique" and peer.get("matchSource") == "word_geometry", peer)
+  check("words.O.only_scoped_words", bool(f.words) and all(w.bbox[0] < 200 for w in f.words), f.words)
+  check("words.O.local_lines", bool(f.lines) and all("vizinha" not in l.text for l in f.lines) and recon(b).get("used"), b)
+  check("words.O.provenance_counts", recon(b).get("inputWordCount") == len(f.words) and recon(b).get("outputLineCount") == len(f.lines), b)
+  check("words.R.C_not_invented", all("(C)" not in l.text for l in f.lines), f.lines)
+  check("words.S.incomplete_still_gated", option_count(f,b) is None, option_count(f,b))
+  check("words.U.index_peer", (b.get("columnEvidence") or {}).get("peerQuestionId") == right["questionId"], b)
+  b, _ = run(bundle([(1,100,50,["Questão","5"]),(1,100,350,["77.","Não","indexado"])]),[current])
+  check("words.K.unindexed_not_peer", b["reliable"] and b["boundaryMode"] == "vertical", b)
+  healthy = [line(1,100,"Questão 5")] + [line(1,150+i*30,f"({label}) texto {label}") for i,label in enumerate("ABCDE")]
+  hrows = [(1,100,50,["Questão","5"])] + [(1,150+i*30,50,[f"({label})","texto",label]) for i,label in enumerate("ABCDE")]
+  b, f = run(bundle(hrows, healthy),[current])
+  check("words.Q.healthy_lines_unchanged", f.lines == healthy and not recon(b).get("used"), b)
+  check("words.S.selected_set_still_safe", option_count(f,b)==5, option_count(f,b))
+  collapsed = [observations.ObservedLine(1,"página toda fundida",(0,0,590,700),source="synthetic")]
+  b, f = run(bundle(hrows,collapsed),[current])
+  check("words.P.collapsed_reconstructed", recon(b).get("used") and len(f.lines)==6, b)
+  check("words.P.parseable", option_count(f,b)==5, option_count(f,b))
+  check("words.P.original_unmutated", collapsed[0].text=="página toda fundida", collapsed)
+  check("words.P.no_text_changes", [l.text for l in f.lines] == [" ".join(r[3]) for r in hrows], f.lines)
+  # Strong line grammar remains authoritative even with contradictory words.
+  b, _ = run(bundle([(1,100,50,["Questão","6"])],[line(1,100,"Questão - 5")]),[current])
+  check("words.T.03A_grammar", b["reliable"] and start(b).get("matchGrammar")=="keyword_separator" and start(b).get("matchSource")=="line", b)
+  # Single index entry + top isolated numeric header with local observed body.
+  solo = [(1,100,50,["05.","Texto","observado"]),(1,130,50,["Corpo","do","texto"]),(1,160,50,["Mais","texto"])]
+  b, _ = run(bundle(solo,collapsed),[current])
+  check("words.E.solo_top_header", b["reliable"], b)
+  b, _ = run(bundle([(1,400,50,["05.","número","isolado"])]),[current])
+  check("words.E.no_automatic_numeric", not b["reliable"], b)
+  # Tall noise may bridge rows in the global grouping, but cannot become a
+  # header token or swallow the target's separate baseline.
+  noisy = bundle(numeric)
+  noisy.words.append(observations.ObservedWord(1,"ruído",(20,80,48,160),99,"synthetic"))
+  b, _ = run(noisy,[current,nxt])
+  check("words.E.tall_noise_no_header_loss", b["reliable"] and start(b).get("top")==100, b)
+  # An unpadded numbered list below the next padded header is not a second
+  # index-backed start. Two genuinely corroborated padded duplicates stay ambiguous.
+  b, _ = run(bundle(numeric+[(1,500,50,["5.","item","enumerado"])]),[current,nxt])
+  check("words.E.list_not_indexed_header", b["reliable"] and start(b).get("top")==100, b)
+  header_only_row = [(1,100,50,["05."]),(1,99,76,["Texto","observado","abaixo"]),
+                     (1,280,50,["Corpo","observado"]),(1,320,50,["Mais","texto"])]
+  b, _ = run(bundle(header_only_row,collapsed),[current])
+  check("words.E.header_before_body_row", b["reliable"] and start(b).get("top")==100, b)
+  list_rows = numeric + [(1,500+i*24,50,[f"{n}.","item","interno"]) for i,n in enumerate([4,5,6])]
+  b, _ = run(bundle(list_rows),[current,nxt])
+  check("words.G.internal_numeric_run_rejected", b["reliable"] and start(b).get("top")==100, b)
+  b, _ = run(bundle(list_rows[2:]),[current,nxt])
+  check("words.G.list_only_not_question_starts", not b["reliable"] and b["reason"]=="current_marker_not_found", b)
+  # OCR adapter may return only words. The runner must not discard that bundle.
+  originals = runner.observations.from_ocr_payload, runner._run_with_boundary, Path.exists, Path.read_text
+  captured = []
+  try:
+    runner.observations.from_ocr_payload = lambda *a: bundle([(1,100,50,["Questão","5"])])
+    runner._run_with_boundary = lambda *a, **k: captured.append(a[0]) or {"test": True}
+    Path.exists = lambda *a: True
+    Path.read_text = lambda *a, **k: "{}"
+    result = runner._run_ocr({"documentId":"synthetic"},current,current,None,[1],ROOT,document_questions=[current])
+    check("words.N.runner_words_only", bool(captured) and result == {"test":True}, result)
+  finally:
+    runner.observations.from_ocr_payload, runner._run_with_boundary, Path.exists, Path.read_text = originals
+  b, _ = run(bundle(numeric+[(1,200,50,["Questão","5"])]),[current,nxt])
+  check("words.F.mixed_grammar_duplicate", not b["reliable"] and b["reason"]=="current_marker_ambiguous", b)
+
+
 def main() -> None:
+  test_word_boundary_and_local_reconstruction()
   test_index_backed_column_peers()
   test_target_identity_and_grammar()
   test_parallel_two_column_questions()

@@ -103,3 +103,9 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - Column split agora exige peer corroborado pelo frozen index e match target-aware único; markers numéricos soltos não provam coluna. Duas colunas reais e next bottom preservados, sem alterar gramática 03A ou camadas de resposta.
 - TDD RED/GREEN, 14 suítes e replay diagnóstico restrito a 19 IDs PASS; dois falsos peers neutralizados, sem regressões unsafe nos Patches 01/02/03A. Resultado/fontes/caches intactos, execução oficial única sem rerun; V5 blind obrigatório, sem claim de performance.
 - Próximo separado: Patch 03C `neutral_boundary_word_line_reconstruction`, ainda não iniciado. Ver [Patch 03B](../audit/postmortem/V4_PATCH_03B_BOUNDARY_SCOPE_COLUMNS.md); boundary inteiro não concluído, sem merge.
+
+## Checkpoint corrente — Patch 03C pós-V4, 2026-10-06
+
+- Boundary line-first preserva matches únicos/ambíguos; somente ausência permite fallback target-aware por words observadas. Peers continuam index-backed; reconstrução local recebe somente words já filtradas por scope reliable, sem mudar texto/OCR/camadas de resposta.
+- TDD, 14 suítes e replay restrito aos 19 IDs PASS sem unsafe. Quatro starts/reconstruções dos cinco alvos observáveis; q54 continua ausente por tokens CID, sem decoding. q5/q2 abstêm; q20 raster perde emissão conservadoramente após reconstrução. Sem claim de performance; resultado/fontes/caches preservados, execução oficial única, V5 blind obrigatório.
+- Patches planejados 03A/03B/03C concluídos, não boundary perfeito. Próximo separado: `marker_role_and_spacing`. Ver [Patch 03C](../audit/postmortem/V4_PATCH_03C_BOUNDARY_WORD_RECONSTRUCTION.md); sem merge.

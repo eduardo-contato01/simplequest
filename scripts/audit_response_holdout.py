@@ -360,7 +360,7 @@ def _run_ocr(document: dict[str, Any], question: dict[str, Any], index_current: 
     return None
   payload = json.loads(payload_path.read_text(encoding="utf-8"))
   bundle = observations.from_ocr_payload(payload, pages)
-  if not bundle.lines:
+  if not bundle.lines and not bundle.words:
     return None
   return _run_with_boundary(bundle, question, index_current, index_next, pages, payload_path.parent / "rendered",
                             document_questions=document_questions)
