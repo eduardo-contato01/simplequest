@@ -62,3 +62,13 @@
 - Primeira execucao oficial V4 concluida exatamente uma vez (Auditor=true, exitCode=0, rerun=false), source commit 394ce73f38848ec90f520a25b8d3ce71dd14099a, runStamp=20261005T221306Z; 144 records validados somente por identidade/ordem/fingerprint. [JSON](../audit/holdout/results/auditor-v1-holdout-v4-first-run.json) e [Markdown](../audit/holdout/results/auditor-v1-holdout-v4-first-run.md) copiados byte-identicamente do raw; [provenance](../audit/holdout/results/auditor-v1-holdout-v4-first-run.provenance.json) pronta para freeze formal pelo commit de introducao. Metricas nao exibidas/analisadas e failure analysis nao iniciada. Proximo passo, somente apos commit/push e em etapa separada: abrir e interpretar o resultado congelado. Estados Auditor=false nas notas de preparacao acima sao historicos. Checkpoint em [[AUDITORIA_PROVAS#Holdout V4 — checkpoint apos Tier B]].
 
 Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_PROVAS]].
+
+## Checkpoint corrente — 2026-10-06
+
+- Primeira execução oficial V4 formalmente frozen no commit `89f482b373449022423b4d34536160e62774cd2d`, publicado em `audit/holdout-v4`; runStamp=20261005T221306Z, execução única, sem rerun.
+- Métricas abertas somente depois do freeze; conferidas no [resultado congelado](../audit/holdout/results/auditor-v1-holdout-v4-first-run.json), sem executar Auditor ou fazer postmortem nesta reorganização.
+- V4: 144 executáveis; 60 correct; 1 partial; 66 safe_abstention; 5 unsafe_error; 12 not_applicable; 0 not_executable. Precision emitida=92,42%; coverage=52,08%.
+- Próximo passo: postmortem dos 5 unsafe_error + 1 partial, sem patch inicial, e análise amostral estruturada das 66 abstenções. Objetivo: recuperar coverage sem perder precisão.
+- Se houver patch funcional após analisar o V4, avaliar em V5 blind holdout; V4 e suas fontes permanecem congelados.
+- Visão de produto consolidada em [[IDEIAS_E_PROXIMOS_PASSOS]], distinta da implementação atual. [[ROADMAP]] contém somente trabalho atual/futuro; o roadmap antigo foi movido integralmente para [[HISTORICO]].
+- Notas anteriores do V4 foram preservadas como snapshots históricos; este checkpoint corrente prevalece para leitura do estado atual.

@@ -1,70 +1,77 @@
 # Roadmap
 
-## Curto prazo
+Trabalho vigente em 2026-10-06. Estado factual em [[ESTADO_ATUAL]]; visão detalhada em [[IDEIAS_E_PROXIMOS_PASSOS]]. O roadmap anterior está integralmente preservado em [[HISTORICO]], fora da leitura padrão.
 
-Prioridade: continuar o Holdout V4 a partir do checkpoint A/B concluido, com arquitetura V1 congelada e isolamento da adjudicacao neutra (ver [[AUDITORIA_PROVAS#Holdout V4 — checkpoint apos Tier B]]).
+## Agora — Auditor
 
-1. Continuar o Holdout V4 apos este checkpoint de documentacao; Tier C ainda nao iniciado.
-2. Adjudicar os 13 documentos Tier C com a evidencia neutra permitida pelo protocolo.
-3. Adjudicar os 8 controles Tier D.
-4. Construir o final question index somente depois de concluir as adjudicacoes.
-5. Executar question selection somente depois do indice final.
-6. Criar Ground Truth V4 depois da selecao de questoes.
-7. Executar Auditor V4 somente apos Ground Truth congelado conforme o protocolo.
+1. Fazer postmortem V4 sem patch: 5 unsafe_error e 1 partial.
+2. Analisar também uma amostra estruturada dos 66 safe_abstention para entender perda de cobertura.
+3. Classificar causas raiz: undercount, overcount, conflitos e abstenções; não assumir a causa antes da análise.
+4. Implementar depois somente correções generalizáveis, com TDD, controles positivos e negativos e sem regras específicas para casos individuais.
+5. Se houver mudança funcional após analisar o V4, criar novo Holdout V5 cego; preservar o primeiro resultado V4.
+6. Avaliar novamente precision + coverage, buscando recuperar cobertura sem perder precisão.
 
-- Manter este brain atualizado quando arquitetura, decisoes ou estado relevante mudarem.
-- Atualizar `README.md` para descrever o SimpleQuest real, comandos atuais e fluxo de dados.
-- Resolver divergencia entre `public/data/stats.json` e `public/data/questions.json`, ou remover/explicar o arquivo se nao for usado.
-- Melhorar documentacao reprodutivel do importador e das dependencias em `work/source_files`.
+Meta operacional: precision >= 99,5%; coverage >= 80%; unsafe_error <= 0,5%; direção ideal de precision 99,8–99,9%. São metas futuras, não o desempenho atual.
 
-## Qualidade e seguranca
+Ver [[AUDITORIA_PROVAS]]. Esta reorganização documental não executa postmortem, patch ou Auditor.
 
-- Validar entradas da API com schemas explicitos.
-- Separar autorizacao real da nocao editorial de "Administrador".
-- Tratar `localStorage` indisponivel ou bloqueado.
-- Proteger edicoes nao salvas ao trocar de questao/sair da revisao.
+## Depois — Ingestão/transcrição
 
-## Produto
+1. Definir o contrato StructuredQuestionDraft.
+2. Reutilizar observation, boundary e estrutura do Auditor, sem segundo motor independente.
+3. Extrair texto, alternativas, mídia, fórmulas, tabelas e provenance.
+4. Criar staging/review queue, com referência ao PDF/página/região.
+5. Registrar confidence por componente.
+6. Fazer revisão humana por exceção e baixa confiança, antes do catálogo oficial.
+7. Processar lotes progressivos e medir erros sistêmicos antes de ampliar escala.
 
-- Evoluir navegacao planejada em etapas documentadas em `docs/simplequest-2.0-analise-tecnica.md`.
-- Criar fluxo de auditoria em massa conforme [[AUDITORIA_PROVAS]].
-- Melhorar exibicao/validacao de questoes com gabarito vazio, anulado ou fora de A-E antes de usar pontuacao automatica.
-- Manter impressao e exemplos baseline ao extrair ou reorganizar componentes.
+Ver [[IMPORTADOR]] e [[IDEIAS_E_PROXIMOS_PASSOS]].
 
-## Importacao
+## Taxonomia
 
-- Tornar pipeline de importacao mais reprodutivel e documentado.
-- Priorizar conversao/revisao das questoes com `pending-media`.
-- Auditar amostras ricas antes de autenticar lotes.
+1. Definir a primeira versão fechada: discipline/area/content/subcontent/skill.
+2. Usar IDs estáveis, relações N:N e confidence.
+3. Fazer a IA escolher IDs existentes, sem criação livre de categorias.
+4. Encaminhar baixa confiança à revisão humana.
 
-## Ingestão Assistida de Questões (pós-Auditor)
+## Produto 2.0
 
-Etapa **posterior ao Auditor de Provas**. Nao implementar durante a estabilizacao atual do pipeline de auditoria; so deve comecar quando admissao, segmentacao, extracao e confianca por componente estiverem validadas. Nao faz parte do escopo de estabilizacao em andamento.
+### Aluno
 
-Objetivo: reutilizar a infraestrutura do Auditor para extrair questoes que ainda nao existem no catalogo diretamente dos PDFs canonicos, evitando copia manual em escala.
+Início / Feed / Mundo / Configurações.
 
-Arquitetura conceitual:
+### Professor
 
-```
-PDF canonico
--> admissao/segmentacao
--> extracao estruturada da questao
--> staging/draft_import
--> classificacao de metadados
--> revisao por confianca
--> catalogo oficial
-```
+Pesquisa / Simulados / Configurações.
 
-Requisitos:
+Detalhes de aprendizagem, mundo visual, construção de simulados e defaults em [[IDEIAS_E_PROXIMOS_PASSOS]]. São capacidades planejadas, não já implementadas.
 
-- Nunca inserir automaticamente no catalogo oficial; toda ingestao passa por staging e revisao humana.
-- Manter referencia ao PDF/pagina/regiao original de cada questao extraida.
-- Preservar texto, alternativas, formatacao, tabelas, formulas e midia conforme a capacidade do Auditor.
-- Registrar confianca por componente (texto, alternativas, tabela, formula, midia, formatacao inline).
-- Derivar instituicao/ano/prova/serie/materia preferencialmente de metadados estruturais do documento, nao de digitacao.
-- Classificar tema/subtema/conteudo contra uma taxonomia fechada ja existente, sem criacao livre de categorias.
-- Permitir revisao em lote conforme faixas de confianca.
-- Usar as 1.217 questoes ja cadastradas como benchmark para medir a fidelidade da extracao automatica.
-- Futuramente permitir importar uma prova inteira para staging.
+## Infraestrutura de produto
 
-Ver tambem: [[PROBLEMAS_CONHECIDOS]], [[DECISOES]], [[AUDITORIA_PROVAS]].
+Autenticação, onboarding por papel, permissões, design system, mobile, cobrança mínima, testes E2E, performance, observabilidade e backups/hardening.
+
+## Meta 31/12/2026
+
+Beta real para professor/aluno, não produto definitivo. Objetivo mínimo:
+
+- banco significativo de questões, pesquisa e filtros;
+- simulados;
+- feed inicial e mundo inicial;
+- ingestão assistida e taxonomia;
+- auth e onboarding;
+- interface consistente;
+- cobrança inicial;
+- estabilidade suficiente para usuários reais.
+
+## Manutenção
+
+- Validar entradas da API com schemas explícitos.
+- Implementar autorização real, separada da noção editorial de “Administrador”.
+- Tornar localStorage resiliente e proteger edição não salva.
+- Atualizar README para o produto real e resolver/explicar a divergência de stats.json.
+- Documentar importador e dependências de forma reprodutível.
+- Priorizar questões com pending-media e validar amostras ricas antes de autenticar lotes.
+- Tratar gabarito vazio, anulado ou incompatível antes de usar pontuação automática.
+- Preservar impressão e exemplos baseline nas reorganizações futuras.
+
+Etapas concluídas do Holdout V4 não são tarefas pendentes deste roadmap; consultar [[HISTORICO]], [[AUDITORIA_PROVAS]] e o log cronológico quando necessário.

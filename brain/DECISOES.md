@@ -49,3 +49,49 @@ Este diretório deve ser memória operacional curta. Detalhes históricos longos
 Motivo: evitar que o vault vire diário ou duplicata de logs.
 
 Ver tambem: [[ARQUITETURA]], [[MODELO_DE_QUESTAO]].
+
+## Direção persistente de produto — 2026-10-06
+
+As decisões abaixo orientam trabalho futuro; não declaram funcionalidades já implementadas. Detalhes em [[IDEIAS_E_PROXIMOS_PASSOS]]; sequência em [[ROADMAP]].
+
+### Navegação por perfil
+
+Aluno: Início / Feed / Mundo / Configurações. Professor: Pesquisa / Simulados / Configurações.
+
+Motivo: separar objetivos de aprendizagem e preparação de provas, mantendo experiência consistente por papel.
+
+### Feed leve
+
+O 2.0 prioriza questões, leitura dinâmica, microexplicações, mapas mentais e revisão; vídeo não é prioridade inicial.
+
+Motivo: formatos rápidos, leves e baratos de carregar, combinando prática e explicação.
+
+### Mundo do conhecimento
+
+Casas, prédios e outros elementos representam conhecimento validado e domínio; não premiar apenas tempo de tela nem tratar o mundo como minigame separado.
+
+Motivo: progresso visual deve refletir aprendizado real, não permanência na aplicação.
+
+### Motor único
+
+Auditor e futura ingestão/transcrição compartilham observation, boundary e estrutura; não criar segundo motor independente.
+
+Motivo: reutilizar provenance e confiança por componente, reduzindo duplicação e revisão manual.
+
+### Taxonomia fechada
+
+Taxonomia versionada com IDs estáveis e relações N:N; IA seleciona IDs existentes com confidence, sem criação livre de categorias.
+
+Motivo: manter classificação pedagógica consistente e revisável em escala.
+
+### Onboarding progressivo
+
+Aluno/professor primeiro, seguido de poucas perguntas. Onboarding conversacional por texto/voz/contexto fica para 3.0.
+
+Motivo: personalizar com baixa fricção, sem tornar o conversacional requisito do 2.0.
+
+### Beta 31/12/2026
+
+Marco de beta real e utilizável por professores e alunos, não produto definitivo.
+
+Motivo: orientar um escopo operacional entregável e evolução progressiva.

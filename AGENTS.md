@@ -9,3 +9,11 @@ Antes de mudancas importantes no SimpleQuest:
 5. Evite duplicar documentacao que ja exista em `docs/` ou no proprio brain; prefira links e resumos operacionais.
 
 Este repositorio usa o brain como memoria persistente curta para humanos e agentes de IA. Ele nao deve virar diario de execucao nem deposito de logs.
+
+## Leitura orientada para trabalho novo
+
+- ROADMAP faz parte da leitura inicial junto de ESTADO_ATUAL, após consultar brain/00_INDEX.md.
+- Consulte brain/IDEIAS_E_PROXIMOS_PASSOS.md para decisões de produto/UX; a visão aprovada não equivale a implementação atual.
+- HISTORICO não deve ser carregado por padrão.
+- Consulte brain/HISTORICO.md somente quando for preciso recuperar contexto antigo ou a origem de uma decisão/etapa.
+- CONTEXTO_SIMPLEQUEST.md continua sendo log cronológico incremental, não documento de leitura inicial.
