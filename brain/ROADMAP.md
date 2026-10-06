@@ -9,13 +9,14 @@ Trabalho vigente em 2026-10-06. Estado factual em [[ESTADO_ATUAL]]; visão detal
 3. [x] Patch 01 `selected_response_set_contract`: contrato/provenance preservados downstream; TDD e replay diagnóstico restrito PASS. Ver [Patch 01](../audit/postmortem/V4_PATCH_01_SELECTED_RESPONSE_SET.md).
 4. [x] Patch 02 `response_set_completeness`: safety gate de incomplete/ambiguous/unknown aplicável; TDD e replay diagnóstico restrito PASS, sem labels inventados ou stitching. Ver [Patch 02](../audit/postmortem/V4_PATCH_02_RESPONSE_SET_COMPLETENESS.md).
 5. [x] Patch 03A `neutral_boundary_identity_and_grammar`: identidade canônica/impressa e variantes neutras target-aware; TDD e replay restrito PASS. Ver [Patch 03A](../audit/postmortem/V4_PATCH_03A_BOUNDARY_IDENTITY_GRAMMAR.md). Boundary inteiro não concluído.
-6. Próxima prioridade: Patch 03B `neutral_boundary_scope_and_column_peers`, ainda não iniciado; depois 03C reconstrução por words/linhas. Role/spacing e observação complementar continuam pendentes, sem regras por casos individuais.
-7. Se houver mudança funcional após analisar o V4, criar novo Holdout V5 cego; preservar o primeiro resultado V4.
-8. Avaliar novamente precision + coverage em V5 blind, buscando recuperar cobertura sem perder precisão.
+6. [x] Patch 03B `neutral_boundary_scope_and_column_peers`: split exige peer index-backed com match único e geometria; TDD e replay restrito PASS. Ver [Patch 03B](../audit/postmortem/V4_PATCH_03B_BOUNDARY_SCOPE_COLUMNS.md).
+7. Próxima prioridade: Patch 03C `neutral_boundary_word_line_reconstruction`, ainda não iniciado. Role/spacing e observação complementar continuam pendentes, sem regras por casos individuais; boundary inteiro não concluído.
+8. Se houver mudança funcional após analisar o V4, criar novo Holdout V5 cego; preservar o primeiro resultado V4.
+9. Avaliar novamente precision + coverage em V5 blind, buscando recuperar cobertura sem perder precisão.
 
 Meta operacional: precision >= 99,5%; coverage >= 80%; unsafe_error <= 0,5%; direção ideal de precision 99,8–99,9%. São metas futuras, não o desempenho atual.
 
-Ver [[AUDITORIA_PROVAS]]. Postmortem e Patches 01/02/03A concluídos; scope/colunas, demais patches/TDD e avaliação V5 blind permanecem futuros.
+Ver [[AUDITORIA_PROVAS]]. Postmortem e Patches 01/02/03A/03B concluídos; reconstrução por words/linhas, demais patches/TDD e avaliação V5 blind permanecem futuros.
 
 ## Depois — Ingestão/transcrição
 

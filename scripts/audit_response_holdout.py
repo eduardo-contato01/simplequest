@@ -334,6 +334,7 @@ def resolve_index_entries(index_document: dict[str, Any] | None, question_id: st
 def _run_question(document: dict[str, Any], question: dict[str, Any], gt: dict[str, Any], protocol: dict[str, Any],
                   base: Path, index_document: dict[str, Any] | None = None) -> dict[str, Any] | None:
   index_current, index_next = resolve_index_entries(index_document, question["questionId"])
+  document_questions = question_boundary.index_questions(index_document) if index_document is not None else None
   # The frozen question index is authoritative for document order and pages.
   # Ground-truth pages are only a fallback when the index entry is unavailable.
   if index_current is not None:
@@ -345,12 +346,15 @@ def _run_question(document: dict[str, Any], question: dict[str, Any], gt: dict[s
   if source == "text_native" or (canonical and Path(canonical).exists() and source != "raster"):
     bundle = observations.from_native_pdf(canonical, pages)
     if bundle.words:
-      return _run_with_boundary(bundle, question, index_current, index_next, pages, None)
-  return _run_ocr(document, question, index_current, index_next, pages, base)
+      return _run_with_boundary(bundle, question, index_current, index_next, pages, None,
+                                document_questions=document_questions)
+  return _run_ocr(document, question, index_current, index_next, pages, base,
+                  document_questions=document_questions)
 
 
 def _run_ocr(document: dict[str, Any], question: dict[str, Any], index_current: dict[str, Any] | None,
-             index_next: dict[str, Any] | None, pages: list[int], base: Path) -> dict[str, Any] | None:
+             index_next: dict[str, Any] | None, pages: list[int], base: Path,
+             document_questions: list[dict[str, Any]] | None = None) -> dict[str, Any] | None:
   payload_path = base / "outputs" / "audit" / "ocr" / document["documentId"] / "tesseract" / "ocr.json"
   if not payload_path.exists():
     return None
@@ -358,14 +362,17 @@ def _run_ocr(document: dict[str, Any], question: dict[str, Any], index_current: 
   bundle = observations.from_ocr_payload(payload, pages)
   if not bundle.lines:
     return None
-  return _run_with_boundary(bundle, question, index_current, index_next, pages, payload_path.parent / "rendered")
+  return _run_with_boundary(bundle, question, index_current, index_next, pages, payload_path.parent / "rendered",
+                            document_questions=document_questions)
 
 
 def _run_with_boundary(bundle: observations.ObservationBundle, question: dict[str, Any],
                        index_current: dict[str, Any] | None, index_next: dict[str, Any] | None,
-                       pages: list[int], rendered_dir: Path | None) -> dict[str, Any]:
+                       pages: list[int], rendered_dir: Path | None,
+                       document_questions: list[dict[str, Any]] | None = None) -> dict[str, Any]:
   effective = index_current or question
-  boundary = question_boundary.compute_question_boundary(bundle, effective, index_next, pages)
+  boundary = question_boundary.compute_question_boundary(bundle, effective, index_next, pages,
+                                                         document_questions=document_questions)
   if index_current is None:
     # Without a frozen index entry the question order is unknown; be conservative.
     boundary = {**boundary, "reliable": False, "reason": "question_not_in_index"}

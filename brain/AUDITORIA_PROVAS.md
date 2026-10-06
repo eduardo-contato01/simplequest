@@ -169,3 +169,7 @@ Count/labels textuais padrão exigem selected response set + `responseSetComplet
 ## Identidade observável do boundary
 
 Matching de atual/próxima usa a identidade neutra do frozen index: canonicalQuestionNumber preserva ordem/identidade, observedQuestionNumber usa printedQuestionNumber válido com fallback canônico. Variantes ancoradas são target-aware, sem ampliar peers globais de coluna, resposta/GT ou fuzzy substitution; provenance registra grammar, numberSource e decoração, mantendo texto original. Ausência/duplicata continua reliable=false. Identity/grammar não certifica scope nem emissão downstream; colunas e reconstrução por words são etapas separadas. Ver [Patch 03A](../audit/postmortem/V4_PATCH_03A_BOUNDARY_IDENTITY_GRAMMAR.md); V5 blind obrigatório.
+
+## Peers neutros de coluna
+
+Boundary 2D exige identidade index-backed + unique target-aware observed match + paralelismo geométrico. Entries do documento com pageStart na página atual geram verifiedQuestionStarts (unique/missing/ambiguous); somente unique, distinta da current, prova peer, independentemente da ordem documental. Ocorrência ambígua não é escolhida por proximidade; sem peer verificado não se aplica x-limit global. Column evidence conserva identidade/provenance; next mantém bottom vertical e os gates downstream continuam independentes. Sem resposta/GT para provar coluna ou word reconstruction. Ver [Patch 03B](../audit/postmortem/V4_PATCH_03B_BOUNDARY_SCOPE_COLUMNS.md); V5 blind obrigatório.

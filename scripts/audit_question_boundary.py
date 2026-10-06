@@ -22,9 +22,9 @@ Truth content to locate the boundary. When the current or the next question
 marker cannot be located unambiguously the boundary is declared
 ``reliable=False`` so downstream fusion withholds unsafe emissions.
 
-Global markers retain the frozen index grammar. Current/next matching adds
-anchored neutral variants only for their expected printed/canonical identities;
-those variants are not promoted to global parallel-column peers.
+Global markers retain the frozen index grammar. Current, next and peer matching
+share anchored target-aware grammar. Only uniquely matched same-page entries
+from the frozen document index can prove a parallel question/column.
 """
 
 # Families ordered by the neutral hierarchy used by the question index.
@@ -271,6 +271,25 @@ def _match_reason(matches: list[dict[str, Any]], label: str) -> str | None:
   if not matches:
     return f"{label}_marker_not_found"
   return f"{label}_marker_ambiguous"
+
+
+def _verified_question_starts(
+  lines: list[dict[str, Any]],
+  markers: list[dict[str, Any]],
+  document_questions: list[dict[str, Any]] | None,
+  page: int,
+) -> list[dict[str, Any]]:
+  starts = []
+  for entry in document_questions or []:
+    if int(entry.get("pageStart") or 0) != page:
+      continue
+    matches = _target_question_matches(lines, markers, entry)
+    status = "unique" if len(matches) == 1 else "ambiguous" if matches else "missing"
+    starts.append({"questionId": entry.get("questionId"), **_question_identity(entry),
+                   "matchCount": len(matches), "status": status,
+                   "matchGrammar": matches[0]["matchGrammar"] if status == "unique" else None,
+                   "marker": matches[0] if status == "unique" else None})
+  return starts
 
 
 def _infer_parallel_column_limits(
@@ -599,6 +618,7 @@ def compute_question_boundary(
   question: dict[str, Any],
   next_question: dict[str, Any] | None,
   expected: list[int],
+  document_questions: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
   """Return the neutral boundary metadata for one question.
 
@@ -621,6 +641,9 @@ def compute_question_boundary(
     "nextMarker": None,
     "boundaryMode": "vertical",
     "columnLimits": None,
+    "columnEvidence": None,
+    "verifiedQuestionStarts": [],
+    "columnPeerContextAvailable": document_questions is not None,
     "pageLimits": {},
   }
 
@@ -629,6 +652,8 @@ def compute_question_boundary(
     result["reason"] = "current_page_not_loaded"
     return result
 
+  verified_starts = _verified_question_starts(marker_lines, markers, document_questions, int(question["pageStart"]))
+  result["verifiedQuestionStarts"] = verified_starts
   current_matches = _target_question_matches(marker_lines, markers, question)
   current_reason = _match_reason(current_matches, "current")
   if current_reason:
@@ -656,10 +681,15 @@ def compute_question_boundary(
   )
 
   if single_page_question:
+    # No global numeric marker is evidence of another question. Missing or
+    # ambiguous index entries never supply a peer, even if one match is closer.
+    peers = [{**start["marker"], "questionId": start["questionId"]}
+             for start in verified_starts
+             if start["status"] == "unique" and start["questionId"] != question.get("questionId")]
     inferred_columns = (
       _infer_parallel_column_limits(
         bundle,
-        markers,
+        peers,
         current,
       )
     )
@@ -686,6 +716,17 @@ def compute_question_boundary(
       return result
 
     if inferred_columns:
+      peer = inferred_columns["peerMarker"]
+      result["columnEvidence"] = {
+        "peerQuestionId": peer["questionId"],
+        "peerCanonicalQuestionNumber": peer["canonicalQuestionNumber"],
+        "peerObservedQuestionNumber": peer["observedQuestionNumber"],
+        "peerNumberSource": peer["numberSource"],
+        "peerMatchGrammar": peer["matchGrammar"],
+        "peerMarker": peer,
+        "evidence": ["frozen_index_same_page", "unique_target_match",
+                     "parallel_x_separation", "parallel_y_alignment"],
+      }
       column_limits = {
         "x0":
           float(

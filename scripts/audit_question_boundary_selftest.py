@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import inspect
 import sys
 from pathlib import Path
 
@@ -174,7 +175,8 @@ def run_question(bundle, index_doc, qid, gt_pages=None):
   current = question_boundary.find_question(questions, qid)
   nxt = question_boundary.next_question_in_order(questions, qid)
   pages = question_boundary.expected_pages(current) if current else (gt_pages or [1])
-  boundary = question_boundary.compute_question_boundary(bundle, current or {"questionId": qid, "questionNumber": -1, "pageStart": -1, "pageEnd": -1}, nxt, pages)
+  context = {"document_questions": questions} if "document_questions" in inspect.signature(question_boundary.compute_question_boundary).parameters else {}
+  boundary = question_boundary.compute_question_boundary(bundle, current or {"questionId": qid, "questionNumber": -1, "pageStart": -1, "pageEnd": -1}, nxt, pages, **context)
   filtered = question_boundary.filter_bundle(bundle, boundary)
   return boundary, filtered
 
@@ -632,7 +634,113 @@ def test_target_identity_and_grammar() -> None:
   check("identity.global_grammar_not_extended", global_before == [], global_before)
 
 
+def test_index_backed_column_peers() -> None:
+  def scope(rows, entries, qid):
+    bundle = make_bundle({})
+    bundle.lines = [line_at(page, top, text, x0, x1) for page, top, text, x0, x1 in rows]
+    for i, observed in enumerate(bundle.lines):
+      observed.line_index = i
+    bundle.page_geometry = {p: {"pdfWidth": 600.0, "pdfHeight": 800.0} for p, *_ in rows}
+    boundary, filtered = run_question(bundle, data("synthetic", entries), qid)
+    return boundary, filtered
+
+  def verified(boundary, qid):
+    return next((v for v in boundary.get("verifiedQuestionStarts", []) if v.get("questionId") == qid), {})
+
+  real = [(1, 100, "9. Esquerda", 40, 250), (1, 100, "10. Direita", 320, 560)]
+  entries = [entry("d:q9", 9, 1, 1), entry("d:q10", 10, 1, 1)]
+  for qid, peer_id in [("d:q9", "d:q10"), ("d:q10", "d:q9")]:
+    b, _ = scope(real, entries, qid)
+    check(f"peers.real_columns_{qid}", b["reliable"] and b["boundaryMode"] == "two_column", b)
+    check(f"peers.real_evidence_{qid}", (b.get("columnEvidence") or {}).get("peerQuestionId") == peer_id, b)
+    check(f"peers.real_unique_{qid}", verified(b, peer_id).get("status") == "unique", b)
+  check("peers.optional_api", "document_questions" in inspect.signature(question_boundary.compute_question_boundary).parameters)
+
+  for fake in ["1 6 8", "77. Numero de conteudo"]:
+    b, _ = scope([(1, 100, "20. Questao", 40, 250), (1, 100, fake, 320, 560)], [entry("d:q20", 20, 1, 1)], "d:q20")
+    check(f"peers.unindexed_{fake}", b["boundaryMode"] == "vertical" and b["columnLimits"] is None, b)
+    check(f"peers.unindexed_evidence_{fake}", b.get("columnEvidence") is None, b)
+
+  reference_rows = [(1, 50, "23. Header real", 40, 250), (1, 200, "24. Header real", 40, 250),
+                    (1, 400, "Questão 25", 320, 560), (1, 420, "23). Referencia interna", 40, 250)]
+  reference_entries = [entry(f"d:q{n}", n, 1, 1) for n in [23, 24, 25]]
+  b, _ = scope(reference_rows, reference_entries, "d:q25")
+  check("peers.reference_no_split", b["reliable"] and b["boundaryMode"] == "vertical" and b["columnLimits"] is None, b)
+  check("peers.duplicate_status", verified(b, "d:q23").get("status") == "ambiguous" and verified(b, "d:q23").get("matchCount") == 2, b)
+  check("peers.duplicate_not_selected", b.get("columnEvidence") is None, b)
+  b, _ = scope(real, [entry("d:q9", 9, 1, 1), entry("d:q10", 10, 2, 2)], "d:q9")
+  check("peers.other_page_ignored", b["boundaryMode"] == "vertical" and not verified(b, "d:q10"), b)
+
+  for text, canonical, printed, grammar in [("07. Peer", 27, 7, "numeric_separator"),
+                                           ("7º Item", 7, None, "ordinal_item"),
+                                           ("Questão - 20", 20, None, "keyword_separator")]:
+    peer_entry = entry("d:peer", canonical, 1, 1)
+    if printed is not None:
+      peer_entry["printedQuestionNumber"] = printed
+    b, _ = scope([(1, 100, "9. Atual", 40, 250), (1, 100, text, 320, 560)], [entry("d:q9", 9, 1, 1), peer_entry], "d:q9")
+    evidence = b.get("columnEvidence") or {}
+    check(f"peers.variant_split_{text}", b["boundaryMode"] == "two_column", b)
+    check(f"peers.variant_grammar_{text}", evidence.get("peerMatchGrammar") == grammar, evidence)
+    check(f"peers.variant_source_{text}", evidence.get("peerNumberSource") == ("printed" if printed else "canonical"), evidence)
+    check(f"peers.variant_identity_{text}", evidence.get("peerCanonicalQuestionNumber") == canonical and evidence.get("peerObservedQuestionNumber") == (printed or canonical), evidence)
+    check(f"peers.variant_evidence_{text}", set(evidence.get("evidence") or []) == {"frozen_index_same_page", "unique_target_match", "parallel_x_separation", "parallel_y_alignment"}, evidence)
+
+  for rows, name in [([(1, 100, "9. Atual", 40, 250), (1, 350, "10. Abaixo", 320, 560)], "vertical_gap"),
+                     ([(1, 100, "9. Atual", 40, 250), (1, 150, "10. Indentada", 70, 280)], "small_x_gap")]:
+    b, _ = scope(rows, entries, "d:q9")
+    check(f"peers.no_parallel_{name}", b["boundaryMode"] == "vertical" and b["columnLimits"] is None, b)
+    check(f"peers.unique_but_not_parallel_{name}", verified(b, "d:q10").get("status") == "unique", b)
+
+  three = [(1, 100, "1. Esquerda", 20, 180), (1, 100, "2. Centro", 230, 370), (1, 100, "3. Direita", 440, 590)]
+  b, _ = scope(three, [entry(f"d:q{n}", n, 1, 1) for n in [1, 2, 3]], "d:q2")
+  check("peers.multiple_sides_blocked", not b["reliable"] and b["reason"] == "parallel_columns_multiple_sides", b)
+  check("peers.multiple_sides_verified", verified(b, "d:q1").get("status") == verified(b, "d:q3").get("status") == "unique", b)
+
+  stacked = [(1, 100, "9. Atual", 40, 250), (1, 110, "77. Falso peer", 320, 560), (1, 400, "10. Proxima", 40, 250)]
+  b, _ = scope(stacked, entries, "d:q9")
+  check("peers.false_peer_bottom_preserved", b["boundaryMode"] == "vertical" and b["pageLimits"][1]["bottom"] == 400.0, b)
+  check("peers.vertical_next_identity", (b.get("nextMarker") or {}).get("number") == 10, b)
+  missing_entries = [entry("d:q9", 9, 1, 1), entry("d:missing", 11, 1, 1)]
+  b, _ = scope([(1, 100, "9. Atual", 40, 250)], missing_entries, "d:q9")
+  check("peers.missing_status", verified(b, "d:missing").get("status") == "missing", b)
+  check("peers.missing_next_still_blocks", not b["reliable"] and b["reason"] == "next_marker_not_found", b)
+
+  # Ambiguous parallel previous question is not selected as a peer. With both
+  # response clusters observed, existing downstream gates must still abstain.
+  mixed = real + [(1, 500, "9. Outra ocorrencia", 40, 250)]
+  for i, label in enumerate("ABCDE"):
+    mixed += [(1, 130 + i * 24, f"({label}) esquerda", 50, 250),
+              (1, 130 + i * 24, f"({label}) direita", 330, 560)]
+  b, filtered = scope(mixed, entries, "d:q10")
+  check("peers.ambiguous_previous_no_split", b["boundaryMode"] == "vertical" and verified(b, "d:q9").get("status") == "ambiguous", b)
+  check("peers.ambiguous_mix_safe", option_count(filtered, b) is None, option_count(filtered, b))
+
+  captured = []
+  original_native = runner.observations.from_native_pdf
+  original_run = runner._run_with_boundary
+  original_ocr = runner._run_ocr
+  def capture(*args, **kwargs):
+    captured.append(kwargs.get("document_questions"))
+    return {}
+  try:
+    native_bundle = make_bundle({1: [(100, "9. Header")]})
+    native_bundle.words = [object()]  # admission only; capture prevents layer execution
+    runner.observations.from_native_pdf = lambda *args: native_bundle
+    runner._run_with_boundary = capture
+    runner._run_ocr = capture
+    index_doc = data("d", entries)
+    for source in ["text_native", "raster"]:
+      doc = {"sourceType": source, "canonicalPath": "synthetic.pdf"}
+      runner._run_question(doc, entries[0], {}, {}, ROOT, index_doc)
+      check(f"peers.runner_context_{source}", captured[-1] == entries, captured[-1])
+  finally:
+    runner.observations.from_native_pdf = original_native
+    runner._run_with_boundary = original_run
+    runner._run_ocr = original_ocr
+
+
 def main() -> None:
+  test_index_backed_column_peers()
   test_target_identity_and_grammar()
   test_parallel_two_column_questions()
   test_same_page_two_questions_ae()

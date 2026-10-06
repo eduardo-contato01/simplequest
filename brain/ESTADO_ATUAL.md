@@ -97,3 +97,9 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - Identity/grammar do boundary implementados: número impresso distinto do canônico e variantes ancoradas de keyword/separador, ordinal Item e decoração; provenance preservada. Índice congelado e contratos dos Patches 01/02 intactos.
 - TDD RED/GREEN, 14 suítes e replay diagnóstico restrito a 19 IDs PASS; seis alvos reconhecidos, sem regressão unsafe. V4 apenas regression behavior, execução oficial única sem rerun; V5 blind obrigatório.
 - Sem alteração de column scope ou reconstrução por words. Próximo separado: Patch 03B `neutral_boundary_scope_and_column_peers`; boundary inteiro não concluído. Ver [Patch 03A](../audit/postmortem/V4_PATCH_03A_BOUNDARY_IDENTITY_GRAMMAR.md); sem merge.
+
+## Checkpoint corrente — Patch 03B pós-V4, 2026-10-06
+
+- Column split agora exige peer corroborado pelo frozen index e match target-aware único; markers numéricos soltos não provam coluna. Duas colunas reais e next bottom preservados, sem alterar gramática 03A ou camadas de resposta.
+- TDD RED/GREEN, 14 suítes e replay diagnóstico restrito a 19 IDs PASS; dois falsos peers neutralizados, sem regressões unsafe nos Patches 01/02/03A. Resultado/fontes/caches intactos, execução oficial única sem rerun; V5 blind obrigatório, sem claim de performance.
+- Próximo separado: Patch 03C `neutral_boundary_word_line_reconstruction`, ainda não iniciado. Ver [Patch 03B](../audit/postmortem/V4_PATCH_03B_BOUNDARY_SCOPE_COLUMNS.md); boundary inteiro não concluído, sem merge.
