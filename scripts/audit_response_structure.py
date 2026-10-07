@@ -896,6 +896,19 @@ def _response_set_contract(selected: dict[str, Any] | None, ambiguous: bool,
           "candidates": candidates}
 
 
+def response_set_requires_completeness(selected: dict[str, Any] | None, mode: str) -> bool:
+  """Answer-option authority requires closure even when mode is unresolved."""
+  if selected is None or selected.get("clusterId") is None:
+    return False
+  if mode in {"single_choice", "mixed"}:
+    return True
+  candidates = accepted_response_candidates(selected)
+  return bool(response_set_authoritative(selected) and len(candidates) >= 3
+              and all(c.get("markerKind") == "answer_marker"
+                      and str(c.get("label") or "").upper() in "ABCDE"
+                      and len(str(c.get("label") or "")) == 1 for c in candidates))
+
+
 def assess_response_set_completeness(
   selected: dict[str, Any],
   mode: str,
@@ -904,7 +917,7 @@ def assess_response_set_completeness(
   """Closure of standard textual answer sets, not missing-label recovery."""
   candidates = accepted_response_candidates(selected)
   labels = [str(c.get("label") or "").upper() for c in candidates]
-  required = mode in {"single_choice", "mixed"} and selected.get("clusterId") is not None
+  required = response_set_requires_completeness(selected, mode)
   evidence: list[str] = []
   reconstructed = any("reconstructed_from_words" in (c.get("evidence") or []) for c in candidates)
   if reconstructed:

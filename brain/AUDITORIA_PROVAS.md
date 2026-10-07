@@ -189,3 +189,7 @@ Texto suficiente conserva autoridade do selected response set/completude. Native
 ## Provenance reconstruída e fechamento terminal
 
 Absence-of-observation não prova terminal closure quando o conjunto depende de fonte degradada reconstruída. Provenance existente chega do adapter aos candidates/selected set e à completude; prefixo antes de E fica unknown e bloqueia emissão. Mixed provenance não certifica coverage por ter algum marker original. A-C/A-D originais, A-E reconstruído, recovery interna e controles permanecem válidos conforme seus contratos. Ver [05B1](../audit/postmortem/V4_PATCH_05B1_RECONSTRUCTED_CLOSURE.md); a [bisseção](../audit/postmortem/V4_PATCH_05B_SAFETY_BISECT.md) exige tratar separadamente o loophole mode unknown/required=false no 05B2.
+
+## Applicability de completude independente de mode resolvido
+
+Selected set autoritativo com pelo menos três answer markers aceitos A-E exige closure válida antes de option emission, inclusive mode unknown. Contrato ausente ou applicability false obsoleta não contorna o gate consumidor. C-D-E não prova início do conjunto; recovery interna não prova count global. C/E contextual, controles, parent-child e visual-only sem selected set textual conservam seus contratos. Ver [05B2](../audit/postmortem/V4_PATCH_05B2_COMPLETENESS_APPLICABILITY.md); decisão derivada do contrato observado, sem GT.

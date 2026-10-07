@@ -128,11 +128,16 @@ def fuse_response_evidence(
   completeness = structure.get("responseSetCompleteness")
   selected_set = structure.get("selectedResponseSet")
   selected_set_used = response_structure.response_set_authoritative(selected_set)
-  if completeness is None and selected_set_used and structure_info.get("mode") in {"single_choice", "mixed"}:
+  completeness_required = response_structure.response_set_requires_completeness(selected_set, structure_info.get("mode"))
+  if completeness is None and completeness_required:
     # An explicit selected-set producer must also provide its closure contract.
     completeness = {"status": "unknown", "requiredForOptionEmission": True,
                     "selectedLabels": [], "evidence": ["missing_completeness_contract"],
                     "blockers": ["response_set_completeness_uncertain"]}
+  elif completeness is not None and completeness_required:
+    # Fail closed on a stale producer's false applicability flag; do not mutate
+    # its contract or override its closure status with confidence/slot count.
+    completeness = {**completeness, "requiredForOptionEmission": True}
   completeness_blocked = bool((completeness or {}).get("requiredForOptionEmission")
                               and completeness.get("status") != "complete")
   selected_candidates = response_structure.accepted_response_candidates(selected_set) if selected_set_used else []

@@ -1164,7 +1164,85 @@ def test_reconstructed_terminal_closure() -> None:
   check("closure.visual_only", f["optionCountHypothesis"] == 5 and f["optionLabelsHypothesis"] == "unknown")
 
 
+def test_selected_set_completeness_applicability() -> None:
+  import copy
+
+  def options(labels):
+    return selected_set_lines([(f"({label}) resposta observada", 300.0 + i * 24)
+                               for i, label in enumerate(labels)])
+
+  for labels, status, count in [("ABC", "complete", 3), ("ABCD", "complete", 4),
+      ("ABCDE", "complete", 5), ("CDE", "incomplete", None),
+      ("BCDE", "incomplete", None), ("ACD", "incomplete", None)]:
+    s, _, r, _ = selected_set_pipeline(options(labels))
+    s = copy.deepcopy(s)
+    s["inferredResponseStructure"]["mode"] = "unknown"
+    c = runner.response_structure.assess_response_set_completeness(s["selectedResponseSet"], "unknown", [])
+    s["responseSetCompleteness"] = c
+    f = runner.fusion.fuse_response_evidence({"reliable": True}, s, {}, r)
+    name = "applicability.unknown." + labels
+    check(name + ".required", c["requiredForOptionEmission"] is True)
+    check(name + ".status", c["status"] == status, c)
+    check(name + ".count", f["optionCountHypothesis"] == count, f)
+    check(name + ".labels", f["optionLabelsHypothesis"] == ("A-" + labels[-1] if count else "unknown"))
+    if count is None:
+      check(name + ".reason", ("internal_label_gap" if labels == "ACD" else "missing_initial_label") in c["evidence"])
+      check(name + ".hard_gate", "response_set_incomplete" in f["hardBlockers"])
+  # Reproduce the general C/E -> accepted internal D -> unknown-mode loophole.
+  lines = options("CDE")
+  lines[1]["text"] = "conteudo alinhado sem marcador"
+  s, markers, _, f = selected_set_pipeline(lines)
+  check("applicability.recovered_suffix.unknown_mode", s["inferredResponseStructure"]["mode"] == "unknown")
+  check("applicability.recovered_suffix.blocked", s["responseSetCompleteness"]["requiredForOptionEmission"] is True
+        and s["responseSetCompleteness"]["status"] == "incomplete" and f["optionCountHypothesis"] is None)
+  check("applicability.recovered_suffix.recovery_preserved", any(m.get("source") == "recovered_geometry" for m in markers))
+  s, _, r, _ = selected_set_pipeline(options("ABC"))
+  s["inferredResponseStructure"]["mode"] = "unknown"
+  del s["responseSetCompleteness"]
+  f = runner.fusion.fuse_response_evidence({"reliable": True}, s, {}, r)
+  check("applicability.consumer.missing_contract", f["optionCountHypothesis"] is None
+        and (f.get("responseSetCompleteness") or {}).get("requiredForOptionEmission") is True)
+  s["responseSetCompleteness"] = {"status": "unknown", "requiredForOptionEmission": False, "evidence": []}
+  f = runner.fusion.fuse_response_evidence({"reliable": True}, s, {}, r)
+  check("applicability.consumer.stale_false_gate", f["optionCountHypothesis"] is None
+        and f["optionLabelsHypothesis"] == "unknown" and "response_set_completeness_uncertain" in f["hardBlockers"])
+  check("applicability.consumer.input_immutable", s["responseSetCompleteness"]["requiredForOptionEmission"] is False)
+  lines = options("ABC")
+  for line in lines: line["source"] = "reconstructed_from_words"
+  s, _, r, _ = selected_set_pipeline(lines)
+  s["inferredResponseStructure"]["mode"] = "unknown"
+  s["responseSetCompleteness"] = runner.response_structure.assess_response_set_completeness(s["selectedResponseSet"], "unknown", [])
+  f = runner.fusion.fuse_response_evidence({"reliable": True}, s, {}, r)
+  check("applicability.b1_preserved_unknown_mode", s["responseSetCompleteness"]["requiredForOptionEmission"] is True
+        and f["optionCountHypothesis"] is None and f["optionLabelsHypothesis"] == "unknown")
+  for name, texts, mode in [
+      ("ce", [("julgue os itens como certo ou errado", 260.0), ("(C) verdadeiro", 300.0), ("(E) falso", 324.0)], "true_false_items"),
+      ("parent_child", [("julgue os itens como certo ou errado", 260.0), ("12-A afirmacao com \ue000 \ue001", 300.0), ("12-B afirmacao com \ue000 \ue001", 340.0)], "true_false_items"),
+      ("numeric", [("Resposta: valor solicitado", 300.0)], "numeric_response"),
+      ("discursive", [("Justifique sua resposta", 300.0)], "discursive")]:
+    s, _, r, f = selected_set_pipeline(selected_set_lines(texts))
+    check("applicability.exempt." + name, s["inferredResponseStructure"]["mode"] == mode
+          and s["responseSetCompleteness"]["requiredForOptionEmission"] is False and f["optionCountHypothesis"] is None)
+    if name == "parent_child":
+      roles = [slot["role"] for slot in r["responseSlotHypotheses"]]
+      check("applicability.controls", roles.count("subitem") == 2 and roles.count("response_control") == 4)
+  lines = options("ABCDE") + selected_set_lines([(f"({label}) outro conjunto", 650.0 + i * 24) for i, label in enumerate("ABCDE")])
+  for i, line in enumerate(lines): line["lineIndex"] = i
+  s, _, r, _ = selected_set_pipeline(lines)
+  s["inferredResponseStructure"]["mode"] = "unknown"
+  f = runner.fusion.fuse_response_evidence({"reliable": True}, s, {}, r)
+  check("applicability.ambiguous", s["selectedResponseSet"]["ambiguous"] and f["optionCountHypothesis"] is None)
+  # Existing synthetic native/raster visual-only controls run in main unchanged.
+  _, _, r, _ = selected_set_pipeline(options("ABCDE"))
+  for slot in r["responseSlotHypotheses"]:
+    slot["label"] = None
+    slot["markerObservations"] = [{"source": "visual", "visualIndex": slot["slotId"]}]
+  f = runner.fusion.fuse_response_evidence({"reliable": True}, {}, {"visualAlternativeEvidence": [{"confidence": "high"}] * 5}, r)
+  check("applicability.visual_only", f["optionCountHypothesis"] == 5 and f["optionLabelsHypothesis"] == "unknown")
+
+
 def main() -> None:
+  test_selected_set_completeness_applicability()
   test_reconstructed_terminal_closure()
   test_visual_response_set_fallback()
   test_marker_role_and_spacing()

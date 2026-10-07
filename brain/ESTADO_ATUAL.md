@@ -127,3 +127,8 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - Ampliação do regression sample aos 30 no 05A revelou duas regressões preexistentes introduzidas no 03C; [bisseção](../audit/postmortem/V4_PATCH_05B_SAFETY_BISECT.md) confirmou causas distintas e subpatches separados foram autorizados.
 - 05B1 concluído: provenance reconstruída chega à Structure/completude; ausência não prova fechamento de prefixo reconstruído antes de E. TDD e cinco controles reais PASS; q11 agora abstém, A-E reconstruído/visual q5 preservados. Ver [05B1](../audit/postmortem/V4_PATCH_05B1_RECONSTRUCTED_CLOSURE.md).
 - Próximo: 05B2 applicability, ainda não implementado; q17 não neutralizado nesta etapa. Observation complementary não iniciada; resultado oficial preservado, execução única sem rerun, V5 blind obrigatório.
+
+## Checkpoint corrente — Patch05B2 applicability, 2026-10-07
+
+- Selected answer set autoritativo com três ou mais labels A-E exige completude mesmo com mode unknown; C-D-E incompleto não emite count. Gate consumidor fecha contrato ausente/required=false obsoleto; CE/controles/parent_child/visual-only preservados. Ver [05B2](../audit/postmortem/V4_PATCH_05B2_COMPLETENESS_APPLICABILITY.md).
+- TDD RED/GREEN, 14 suítes e cinco replays intermediários PASS; q17/q11 abstêm nos controles. Replay final dos 30 será feito após publicar os dois commits funcionais; ainda não concluir o safety check ampliado. V4 oficial intacto/sem rerun; V5 blind obrigatório, observation complementary não iniciada.
