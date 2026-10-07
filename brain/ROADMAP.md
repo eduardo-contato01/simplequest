@@ -14,14 +14,15 @@ Trabalho vigente em 2026-10-06. Estado factual em [[ESTADO_ATUAL]]; visão detal
 8. [x] Patch 04 `marker_role_and_spacing`: parenthesized whitespace e selected membership autoritativo para role; enumerações/controles preservados, TDD/replay restrito sem unsafe. Ver [Patch 04](../audit/postmortem/V4_PATCH_04_MARKER_ROLE_SPACING.md).
 9. [x] Patch 05A `visual_response_set_evidence`: native render fallback text-first, cluster visual único + regiões/gates para count; labels unknown sem glyph evidence. TDD/replay dos 30 sem novas regressões unsafe. Ver [Patch 05A](../audit/postmortem/V4_PATCH_05A_VISUAL_RESPONSE_SET.md).
 10. [x] Patch05B1 `reconstructed_terminal_closure_guard`: provenance e closure conservadora; TDD/replay de cinco controles PASS. Ver [05B1](../audit/postmortem/V4_PATCH_05B1_RECONSTRUCTED_CLOSURE.md).
-11. [x] Patch05B2 `authoritative_selected_set_requires_completeness`: loophole mode unknown fechado; TDD/14 suítes e replay intermediário PASS. Ver [05B2](../audit/postmortem/V4_PATCH_05B2_COMPLETENESS_APPLICABILITY.md). Replay final dos 30 pendente após publicar os dois subpatches.
+11. [x] Patch05B2 `authoritative_selected_set_requires_completeness`: loophole mode unknown fechado; TDD/14 suítes e replay final dos 30 após publicar os dois subpatches PASS, duas regressões reveladas neutralizadas sem nova unsafe. Ver [05B2](../audit/postmortem/V4_PATCH_05B2_COMPLETENESS_APPLICABILITY.md).
     Ambos surgiram da ampliação do regression sample aos 30 no Patch05A; [bisseção](../audit/postmortem/V4_PATCH_05B_SAFETY_BISECT.md) confirmou causas distintas, não um único patch planejado no postmortem original. Observation complementary permanece posterior e não iniciada.
+    Próxima prioridade separada: `observation_complementary_capability`, não iniciada; sem regras por casos individuais.
 12. Criar novo Holdout V5 cego após as mudanças funcionais; preservar o primeiro resultado V4.
 13. Avaliar novamente precision + coverage em V5 blind, buscando recuperar cobertura sem perder precisão.
 
 Meta operacional: precision >= 99,5%; coverage >= 80%; unsafe_error <= 0,5%; direção ideal de precision 99,8–99,9%. São metas futuras, não o desempenho atual.
 
-Ver [[AUDITORIA_PROVAS]]. Postmortem e Patches 01/02/03A/03B/03C/04/05A concluídos; observation complementary e avaliação V5 blind permanecem futuros.
+Ver [[AUDITORIA_PROVAS]]. Postmortem e Patches 01/02/03A/03B/03C/04/05A/05B1/05B2 concluídos; observation complementary e avaliação V5 blind permanecem futuros.
 
 ## Depois — Ingestão/transcrição
 

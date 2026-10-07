@@ -76,3 +76,64 @@ Estado no commit funcional: subpatch implementado/testado; replay final dos
 A conclusão do replay e UMA entrada CONTEXTO 05B2 + replay final serão
 registradas depois, em fechamento somente documental, sem alterar produção.
 Observation_complementary_capability não iniciada; sem merge.
+
+## Fechamento pós-publicação — replay final original dos 30
+
+Executado somente após commit/push dos dois subpatches funcionais:
+
+- PATCH05B_BISECT_COMMIT = `f07b046430bb799a975736749941e4fe3330637e`.
+- PATCH05B1_COMMIT = `21aa7fbf995594c6052e6fd9069246c404ca8f77`.
+- PATCH05B2_COMMIT = `bc84ee4f83ee7d6a241c0b495f34b4168e2b30fb`.
+
+Baseline: Patch05A `98bae929c8300d2a4fe4cc23678ab4c09b274bd3`,
+`after-validated.json` SHA256
+`d1249a2ec24ce822c00c75f088fb9deda32583760b8c69d2931850e2e8cb58f9`.
+Mesmos 30 IDs originais (24 abstentions + cinco unsafe + um partial do
+postmortem congelado), não os 144. GT somente no wrapper de classificação;
+index neutro é autoritativo para páginas/ordem. Nenhum official runner.
+
+| ID | Baseline classification/count/labels | Após 05B1 + 05B2 |
+| --- | --- | --- |
+| doc-5d61be2ac853:q11 | unsafe_error / 3 / A-C | safe_abstention / null / unknown |
+| doc-eefc3d15076e:q17 | unsafe_error / 3 / unknown | safe_abstention / null / unknown |
+| doc-b605f7a51fd5:q5 | partial / 5 / unknown | partial / 5 / unknown |
+| doc-f4dd01071816:q20 | safe_abstention / null / unknown | safe_abstention / null / unknown |
+| doc-44ea716ed9b7:q54 | safe_abstention / null / null | safe_abstention / null / null |
+| doc-800c2a22f148:q1 | correct / 4 / A-D | safe_abstention / null / unknown |
+
+`knownRevealedUnsafeTargetsBefore=2`; `knownRevealedUnsafeTargetsAfter=0`;
+nos outros 28, `newUnsafeRegressionCount=0`. São resultados de segurança da
+amostra revelada, não unsafe rate/precision ou métricas oficiais.
+
+27/30 estados classification/count/labels inalterados. A-E reconstruído de
+doc-56268e79f6bf:q11/q14 permanece correct/5/A-E. Cinco targets Patch04
+doc-27775227a392:q1/q14, doc-3fb1e1ce24be:q32/q12 e doc-2790a3c9786b:q4
+permanecem correct/5/A-E. Boundary, candidateRefs, slot counts e modes
+permanecem idênticos à baseline em todos os 30; nenhuma membership nova.
+
+Efeito conservador adicional investigado: doc-800c2a22f148:q1 possui A-D
+inteiramente reconstruído por `original_line_order_ambiguous` já na baseline,
+39 words/8 linhas. Provenance antes perdida passa a bloquear closure por
+ausência antes de E, pela regra geral 05B1; não há erro de label/corte ou
+adaptação individual. Não foi recuperado count por GT nem criada exceção para
+reverter essa abstenção; originais saudáveis A-C/A-D permanecem verdes no TDD.
+
+q17: status=incomplete/required=true, evidence missing_initial_label,
+hard blocker response_set_incomplete. q11: unknown/required=true, evidence
+reconstructed_terminal_closure_unproven, hard blocker
+response_set_completeness_uncertain. Ambos bloqueiam count/labels, não só
+confidence. Nenhuma neutralização depende de classificação hardcoded.
+
+`final-replay.json` SHA256:
+`bcc8f165137072f1e180510d86cfa25a92b985bcb8f2ff5b66fc1d5e36cefa27`.
+Validação final dos controles/membership/safety e byte-preservação PASS.
+Total desta etapa funcional: 40 chamadas locais, cinco 05B1 + cinco 05B2 +
+30 final; nenhuma chamada extra/replay oficial ou OCR novo.
+
+Fechamento documental posterior aos commits funcionais, sem alterar produção;
+CONTEXTO recebe UMA entrada 05B2 + replay final, preservando diagnóstico e 05B1.
+`patch05B1Complete=true`; `patch05B2Complete=true`;
+`knownRevealedSafetyRegressionsNeutralized=true`.
+Próximo: observation_complementary_capability, NÃO iniciado. V5 blind continua
+obrigatório; officialAuditorExecutionCount=1, officialAuditorRerun=false,
+V4PerformanceClaimed=false, merge=false.

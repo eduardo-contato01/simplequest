@@ -132,3 +132,8 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 
 - Selected answer set autoritativo com três ou mais labels A-E exige completude mesmo com mode unknown; C-D-E incompleto não emite count. Gate consumidor fecha contrato ausente/required=false obsoleto; CE/controles/parent_child/visual-only preservados. Ver [05B2](../audit/postmortem/V4_PATCH_05B2_COMPLETENESS_APPLICABILITY.md).
 - TDD RED/GREEN, 14 suítes e cinco replays intermediários PASS; q17/q11 abstêm nos controles. Replay final dos 30 será feito após publicar os dois commits funcionais; ainda não concluir o safety check ampliado. V4 oficial intacto/sem rerun; V5 blind obrigatório, observation complementary não iniciada.
+
+## Checkpoint corrente — safety 05B1/05B2 fechado, 2026-10-07
+
+- Dois subpatches funcionais separados publicados; replay final dos 30 após ambos PASS: duas regressões unsafe reveladas neutralizadas, nenhuma nova unsafe nos outros 28. q5 visual, A-E reconstruído, cinco targets 04, q20 conservador e q54 preservados; um A-D reconstruído adicional abstém conservadoramente. Ver [fechamento 05B2](../audit/postmortem/V4_PATCH_05B2_COMPLETENESS_APPLICABILITY.md).
+- Resultado/fontes/caches congelados preservados; Auditor oficial executado uma vez, sem rerun nem claim V4, V5 blind obrigatório. Próximo separado: `observation_complementary_capability`, não iniciado; sem merge.
