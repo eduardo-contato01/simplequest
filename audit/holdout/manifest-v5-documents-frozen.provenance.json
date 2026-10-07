@@ -1,0 +1,712 @@
+{
+  "artifactType": "holdout-v5-document-selection-provenance",
+  "protocolVersion": "holdout-v5",
+  "phase": "A",
+  "candidateSourceCommit": "3b306d6a544cc63928ec8adf07640b224651742e",
+  "candidateSourceCommitSha256": "aedd26824957a58304206b5839ab0918fd95f4c5d40b4915aee62abd6834a7b8",
+  "candidateCommitHashEncoding": "ASCII 40-character Git SHA, no newline",
+  "sourceBranch": "audit/holdout-v4-postmortem-fixes",
+  "branch": "audit/holdout-v5-blind",
+  "headBeforeBranchCreation": "3b306d6a544cc63928ec8adf07640b224651742e",
+  "headAfterBranchCreation": "3b306d6a544cc63928ec8adf07640b224651742e",
+  "sourceWorktreeClean": true,
+  "sourceStagedFiles": 0,
+  "freezeAuthority": "Git commit introducing these versioned V5 files",
+  "artifactFileSha256": {
+    "v5-eligible-document-universe.json": "dd64269956de6c7210fe0e8cc4cbb23dc799925adefa4c5e6dd603ff997c5933",
+    "v5-prior-document-exclusions.json": "124c8741d578c7a70bf087ae0f7f28716c15adfb7c4d7d5ccf3dad19023faa66",
+    "PROTOCOL_V5.md": "77f8bb06d7c8eadba79c7ef70a580eebeff2d74f324017ae8e220f11bea9bb95",
+    "v5_document_selection.py": "fda14af52b9aff1350942645fb89ae7a5332bafab7ec1a48e6df20876482dc74",
+    "manifest-v5-documents-frozen.json": "c124fe77bae292cdeebb0045b489a0676784a8dac39400d748fe3c978eb3ca62"
+  },
+  "functionalBaselineFileSha256": {
+    "scripts/audit_holdout_question_index.py": "04262953d3949651bd8cf4c236cbd5e7b4e85b64c34db77033c19717824b5d3c",
+    "scripts/audit_holdout_question_index_selftest.py": "11d94583c6aceaeda88d8a12408f97f79e8b1d72099cb28b70ad3a2f7ebeef7f",
+    "scripts/audit_holdout_schema.py": "c1159d25ce2b3ea9b0a1afb739738fc7337335646ce85235022604fdf7db3c85",
+    "scripts/audit_holdout_v2_r1.py": "22f2914716c7d1b54c02a6f12303f8cebd449a41df42b3565164dd0e558caef2",
+    "scripts/audit_holdout_v2_r1_selftest.py": "6b700a3ddea45d67bba9159937da4446f6ae1ee4cba31b51ef9b72bd83718db5",
+    "scripts/audit_holdout_v2_r2.py": "eb8b0df535b453ad3724d0e480661cec41b770c0f42c0fb8bacbf5f4b1ba1140",
+    "scripts/audit_holdout_v2_r2_selftest.py": "3580edf5f03afe32c92b6f94f0768a05d0faf90e44060d8e8d0b32009e0c265a",
+    "scripts/audit_holdout_v3_select.py": "1b3d63c77cbe0806c40d4e28267f22a30a514622b5d5ef0a01cf896d7e3c13a4",
+    "scripts/audit_holdout_v3_select_selftest.py": "fde21f375d6098c7c339c68aa5f922464f41635f6af0d18e6a7d247dc97ba733",
+    "scripts/audit_holdout_v4_protocol_selftest.py": "a3971627665a9f7f6303e2c2799c2f52410c4a7ded45f114f6299b26a6b59d39",
+    "scripts/audit_holdout_v4_select.py": "e6a46acb47d29b75dee6c643be07452b734f27b56565ccfcbfff9169d899a416",
+    "scripts/audit_holdout_v4_select_selftest.py": "3e4c0f61136c82fd278278802c5d1af0e3ce47b066c40bf830510788b73771c6",
+    "scripts/audit_observations.py": "e8cfbc7398c6dd0c857758f4ca327ae25ba28ee1d139f61400bfd44167b7343d",
+    "scripts/audit_observations_selftest.py": "93abef35ff77c71b19ab9eb8ff7fa1777c303b77548db5e371a8f391f6d9fefb",
+    "scripts/audit_ocr_content.py": "68895546d35c9c80eccfd4e8c8b5cba3cbdac35549a5b576a3838f53678f36ca",
+    "scripts/audit_ocr_content_selftest.py": "b77fc88e69d46902a12fc1b232146b75b44284785ec6a318acdce95545036dc7",
+    "scripts/audit_pdf_mvp.py": "3a7db4a3488ce5036ef8746fa190158fc92ec6559b2f73263c5dab8ce1a69220",
+    "scripts/audit_question_boundary.py": "955d8e8557151b78a1fd51d2ba8d11a374c464d9f97043bf1116d473574ff285",
+    "scripts/audit_question_boundary_selftest.py": "57074b091532101cfb4c8e82bf02be214ed97a8c74e2b23543d1227ae7377eed",
+    "scripts/audit_response_fusion.py": "7a8b9b7e78f41c3486ae641e53d0c515691118219ebb245def6d5e471a06ce4a",
+    "scripts/audit_response_fusion_selftest.py": "efe8622b139824dc3cd4cb7706638769c8951214b43362ca5d08dcca6dede464",
+    "scripts/audit_response_holdout.py": "1ea4674fc603f5da94a76d3d2da1a15fda9c13234f60bd14eb0a86610f40b71b",
+    "scripts/audit_response_holdout_select.py": "a13f6cc0f53228c6464caf5fab8b8abcf9481f95d5c87b3844a8415164733e27",
+    "scripts/audit_response_holdout_selftest.py": "d341595fd199cb422b1f2d99dfb0975b074273f198a8d48c77838ebe8d3456c1",
+    "scripts/audit_response_regions.py": "9f7d63e5adba429e493163b6dba7578b39974faf771bdb8efd04a07528985fc2",
+    "scripts/audit_response_regions_benchmark.py": "b35dfc44cc6f517d5b31ec7db3169aea68adb1dc39e77a0cb7f171f65675f766",
+    "scripts/audit_response_regions_selftest.py": "12c35970c1c82932d43da738602038638926bac237d47cb6c064c18ed47f5923",
+    "scripts/audit_response_structure.py": "c4fb28312e890360604176afbae991f6e871597257a16dc345f9ab37b051ff6c",
+    "scripts/audit_response_structure_selftest.py": "33de202a780801bdb199060d97355c7c521aa938c09d7093f60e3fa77fc79f79",
+    "scripts/audit_visual_marker_evidence.py": "563456beedb4a0320481f4b1c577138edd6110823246bd2e86e33d11f1b46823",
+    "scripts/audit_visual_marker_evidence_selftest.py": "17eadecde06d80915ef248feaea472ae1d7458ea226deb840777440883294ee7",
+    "scripts/capture-print-baseline.mjs": "b0eb95e77deaf7ca691038637cd08420f7da46bb7d2fa662299505da4d2c6a81",
+    "scripts/catalog_image_dimensions.py": "310f4b8b3aa5148e1db4d165ee4f2101f9c3d54bbfb44a0785387327656730dd",
+    "scripts/extract_question_media.py": "59531552c62ffa54c19b4a20e30b4f8e852a87f3609b686396d3e0f4299728ec",
+    "scripts/inventory_pdf_corpus.py": "76dc6668284c33fe7dd817bde452b9f5a5e464fe814f9efecef21983fe6423c1",
+    "scripts/ocr_pdf_layer.py": "006f6139528fd3f38f8c8f7f587c8384cf553d2253076a1b929c81478e551121",
+    "scripts/ocr_raster_pilot.py": "8e65c92d7ead90d273dde7be9e290271cfe954a48a896fa6db9622a9df778b14",
+    "scripts/rename_question_media.py": "9cddea77a766b59ca12aef1b8bc3d23d53f5bccea84777bcb0d7525e39813903"
+  },
+  "discoveryPreparationToolSha256": "af599d555140aee7d9fdbd5debfc6171957106d293e2434cac39070e17fbf618",
+  "universeSummary": {
+    "totalDocumentsDiscovered": 1167,
+    "eligible": 407,
+    "excludedPriorHoldouts": 193,
+    "excludedCalibrationDocs": 148,
+    "excludedCalibrationOnly": 39,
+    "missingCorrupt": 0,
+    "duplicateFingerprints": 11,
+    "excludedByPrimaryReason": {
+      "answer_key_directory": 495,
+      "answer_key_filename": 19,
+      "incomplete_neutral_metadata": 14,
+      "prior_calibration_fingerprint": 39,
+      "prior_holdout_fingerprint": 193
+    },
+    "eligibleBySource": {
+      "hybrid": 1,
+      "raster": 129,
+      "text_native": 277
+    },
+    "eligibleByFamily": {
+      "CMB": 17,
+      "CMBH": 23,
+      "CMBel": 6,
+      "CMC": 20,
+      "CMCG": 17,
+      "CMDPII": 9,
+      "CMF": 30,
+      "CMJF": 29,
+      "CMM": 25,
+      "CMPA": 25,
+      "CMR": 22,
+      "CMRJ": 27,
+      "CMS": 9,
+      "CMSM": 50,
+      "CMSP": 4,
+      "CMT": 12,
+      "COLÉGIO PÓDION": 4,
+      "COLÉGIO SÓLIDO": 17,
+      "OUTRAS": 1,
+      "PAS 1": 16,
+      "PAS 2": 12,
+      "PAS 3": 15,
+      "VESTIBULAR_UNB": 17
+    },
+    "eligibleByYear": {
+      "2004": 1,
+      "2005": 5,
+      "2006": 7,
+      "2007": 4,
+      "2008": 8,
+      "2009": 8,
+      "2010": 12,
+      "2011": 17,
+      "2012": 18,
+      "2013": 22,
+      "2014": 25,
+      "2015": 28,
+      "2016": 36,
+      "2017": 27,
+      "2018": 33,
+      "2019": 40,
+      "2020": 16,
+      "2021": 21,
+      "2022": 19,
+      "2023": 21,
+      "2024": 19,
+      "2025": 20
+    },
+    "eligibleBySeries": {
+      "1º Ano": 108,
+      "5º Ano": 1,
+      "6º Ano": 225,
+      "7º Ano": 5,
+      "8º Ano": 5,
+      "9º Ano": 3,
+      "not_applicable_or_unspecified": 60
+    },
+    "priorHoldoutUniqueFingerprints": 192,
+    "priorCalibrationUniqueFingerprints": 147,
+    "countsUnit": "PDF path records; eligible documents are unique content fingerprints",
+    "secondaryExclusionCountsMayOverlap": true
+  },
+  "selectionSummary": {
+    "sourceQuotas": {
+      "hybrid": 1,
+      "raster": 15,
+      "text_native": 32
+    },
+    "selectedBySource": {
+      "hybrid": 1,
+      "raster": 15,
+      "text_native": 32
+    },
+    "selectedByFamily": {
+      "CMB": 2,
+      "CMBH": 2,
+      "CMBel": 2,
+      "CMC": 2,
+      "CMCG": 2,
+      "CMDPII": 2,
+      "CMF": 2,
+      "CMJF": 2,
+      "CMM": 2,
+      "CMPA": 2,
+      "CMR": 3,
+      "CMRJ": 2,
+      "CMS": 2,
+      "CMSM": 3,
+      "CMSP": 2,
+      "CMT": 2,
+      "COLÉGIO PÓDION": 2,
+      "COLÉGIO SÓLIDO": 2,
+      "OUTRAS": 1,
+      "PAS 1": 2,
+      "PAS 2": 3,
+      "PAS 3": 2,
+      "VESTIBULAR_UNB": 2
+    },
+    "selectedByYear": {
+      "2004": 1,
+      "2006": 2,
+      "2007": 1,
+      "2008": 2,
+      "2009": 2,
+      "2010": 2,
+      "2011": 2,
+      "2012": 2,
+      "2013": 2,
+      "2014": 3,
+      "2015": 3,
+      "2016": 3,
+      "2017": 2,
+      "2018": 4,
+      "2019": 3,
+      "2020": 2,
+      "2021": 2,
+      "2022": 3,
+      "2023": 3,
+      "2024": 2,
+      "2025": 2
+    },
+    "selectedByEra": {
+      "2004-2009": 8,
+      "2010-2014": 11,
+      "2015-2019": 15,
+      "2020-2025": 14
+    },
+    "selectedBySeries": {
+      "1º Ano": 12,
+      "5º Ano": 1,
+      "6º Ano": 23,
+      "7º Ano": 1,
+      "8º Ano": 1,
+      "9º Ano": 1,
+      "not_applicable_or_unspecified": 9
+    },
+    "selectedStrata": [
+      {
+        "stratum": [
+          "hybrid",
+          "PAS 2",
+          "2010-2014",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMB",
+          "2015-2019",
+          "1º Ano"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMBel",
+          "2015-2019",
+          "6º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMBel",
+          "2020-2025",
+          "1º Ano"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMC",
+          "2010-2014",
+          "6º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMCG",
+          "2010-2014",
+          "6º Ano"
+        ],
+        "eligible": 5,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMJF",
+          "2010-2014",
+          "1º Ano"
+        ],
+        "eligible": 6,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMJF",
+          "2015-2019",
+          "1º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMR",
+          "2010-2014",
+          "6º Ano"
+        ],
+        "eligible": 5,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMR",
+          "2015-2019",
+          "6º Ano"
+        ],
+        "eligible": 8,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMR",
+          "2020-2025",
+          "6º Ano"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMS",
+          "2015-2019",
+          "6º Ano"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMSM",
+          "2004-2009",
+          "1º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMSP",
+          "2015-2019",
+          "6º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "COLÉGIO PÓDION",
+          "2020-2025",
+          "5º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "COLÉGIO PÓDION",
+          "2020-2025",
+          "6º Ano"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMB",
+          "2015-2019",
+          "6º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMBH",
+          "2020-2025",
+          "1º Ano"
+        ],
+        "eligible": 4,
+        "selected": 2
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMC",
+          "2020-2025",
+          "6º Ano"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMCG",
+          "2015-2019",
+          "6º Ano"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMDPII",
+          "2015-2019",
+          "6º Ano"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMDPII",
+          "2020-2025",
+          "1º Ano"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMF",
+          "2004-2009",
+          "6º Ano"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMF",
+          "2020-2025",
+          "6º Ano"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMM",
+          "2010-2014",
+          "1º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMM",
+          "2010-2014",
+          "6º Ano"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMPA",
+          "2010-2014",
+          "1º Ano"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMPA",
+          "2015-2019",
+          "1º Ano"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMRJ",
+          "2010-2014",
+          "6º Ano"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMRJ",
+          "2020-2025",
+          "6º Ano"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMS",
+          "2015-2019",
+          "6º Ano"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMSM",
+          "2004-2009",
+          "1º Ano"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMSM",
+          "2004-2009",
+          "6º Ano"
+        ],
+        "eligible": 10,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMSP",
+          "2020-2025",
+          "6º Ano"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMT",
+          "2010-2014",
+          "6º Ano"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMT",
+          "2015-2019",
+          "7º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "COLÉGIO SÓLIDO",
+          "2015-2019",
+          "8º Ano"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "COLÉGIO SÓLIDO",
+          "2015-2019",
+          "9º Ano"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "OUTRAS",
+          "2020-2025",
+          "6º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "PAS 1",
+          "2004-2009",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "PAS 1",
+          "2010-2014",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "PAS 2",
+          "2004-2009",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "PAS 2",
+          "2020-2025",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 5,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "PAS 3",
+          "2004-2009",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "PAS 3",
+          "2015-2019",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "VESTIBULAR_UNB",
+          "2004-2009",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 5,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "VESTIBULAR_UNB",
+          "2020-2025",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 4,
+        "selected": 1
+      }
+    ],
+    "distinctFamilies": 23,
+    "distinctYears": 21,
+    "maxDocumentsPerFamily": 3
+  },
+  "selectionInvocations": 1,
+  "alternateSeedRetries": 0,
+  "manualSwaps": 0,
+  "priorHoldoutFingerprintOverlap": 0,
+  "priorPatchCalibrationDocumentOverlap": 0,
+  "v1V4ArtifactsChanged": false,
+  "auditorFunctionalCodeChanged": false,
+  "phaseAComplete": true,
+  "next": "V5 Phase B neutral question index + question selection freeze",
+  "merge": false,
+  "selectionFrozenBeforeQuestionInspection": true,
+  "questionInspectionPerformed": false,
+  "questionSelectionStarted": false,
+  "groundTruthStarted": false,
+  "auditorExecuted": false,
+  "metricsSeen": false
+}

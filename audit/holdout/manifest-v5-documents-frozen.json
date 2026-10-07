@@ -1,0 +1,1305 @@
+{
+  "artifactType": "holdout-v5-frozen-document-manifest",
+  "protocolVersion": "holdout-v5",
+  "phase": "A",
+  "sourceBranch": "audit/holdout-v4-postmortem-fixes",
+  "candidateSourceCommit": "3b306d6a544cc63928ec8adf07640b224651742e",
+  "candidateSourceCommitSha256": "aedd26824957a58304206b5839ab0918fd95f4c5d40b4915aee62abd6834a7b8",
+  "branch": "audit/holdout-v5-blind",
+  "targetDocuments": 48,
+  "selectedDocuments": 48,
+  "plannedFutureQuestionsPerDocument": 3,
+  "plannedFutureQuestions": 144,
+  "questionSelectionStatus": "not_started",
+  "seedMaterial": "simplequest-holdout-v5|3b306d6a544cc63928ec8adf07640b224651742e",
+  "seedSha256": "156bb96c58581fd34e8ddc29002a596fc6e03550c24763707b132d8db8337c1e",
+  "selector": "audit/holdout/v5_document_selection.py",
+  "protocolSha256": "77f8bb06d7c8eadba79c7ef70a580eebeff2d74f324017ae8e220f11bea9bb95",
+  "universeSha256": "dd64269956de6c7210fe0e8cc4cbb23dc799925adefa4c5e6dd603ff997c5933",
+  "exclusionRegistrySha256": "124c8741d578c7a70bf087ae0f7f28716c15adfb7c4d7d5ccf3dad19023faa66",
+  "selectionInvocations": 1,
+  "alternateSeedRetries": 0,
+  "manualSwaps": 0,
+  "objectiveReplacements": [],
+  "constraintsRelaxed": false,
+  "priorHoldoutFingerprintOverlap": 0,
+  "priorPatchCalibrationDocumentOverlap": 0,
+  "selectionSummary": {
+    "sourceQuotas": {
+      "hybrid": 1,
+      "raster": 15,
+      "text_native": 32
+    },
+    "selectedBySource": {
+      "hybrid": 1,
+      "raster": 15,
+      "text_native": 32
+    },
+    "selectedByFamily": {
+      "CMB": 2,
+      "CMBH": 2,
+      "CMBel": 2,
+      "CMC": 2,
+      "CMCG": 2,
+      "CMDPII": 2,
+      "CMF": 2,
+      "CMJF": 2,
+      "CMM": 2,
+      "CMPA": 2,
+      "CMR": 3,
+      "CMRJ": 2,
+      "CMS": 2,
+      "CMSM": 3,
+      "CMSP": 2,
+      "CMT": 2,
+      "COLÉGIO PÓDION": 2,
+      "COLÉGIO SÓLIDO": 2,
+      "OUTRAS": 1,
+      "PAS 1": 2,
+      "PAS 2": 3,
+      "PAS 3": 2,
+      "VESTIBULAR_UNB": 2
+    },
+    "selectedByYear": {
+      "2004": 1,
+      "2006": 2,
+      "2007": 1,
+      "2008": 2,
+      "2009": 2,
+      "2010": 2,
+      "2011": 2,
+      "2012": 2,
+      "2013": 2,
+      "2014": 3,
+      "2015": 3,
+      "2016": 3,
+      "2017": 2,
+      "2018": 4,
+      "2019": 3,
+      "2020": 2,
+      "2021": 2,
+      "2022": 3,
+      "2023": 3,
+      "2024": 2,
+      "2025": 2
+    },
+    "selectedByEra": {
+      "2004-2009": 8,
+      "2010-2014": 11,
+      "2015-2019": 15,
+      "2020-2025": 14
+    },
+    "selectedBySeries": {
+      "1º Ano": 12,
+      "5º Ano": 1,
+      "6º Ano": 23,
+      "7º Ano": 1,
+      "8º Ano": 1,
+      "9º Ano": 1,
+      "not_applicable_or_unspecified": 9
+    },
+    "selectedStrata": [
+      {
+        "stratum": [
+          "hybrid",
+          "PAS 2",
+          "2010-2014",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMB",
+          "2015-2019",
+          "1º Ano"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMBel",
+          "2015-2019",
+          "6º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMBel",
+          "2020-2025",
+          "1º Ano"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMC",
+          "2010-2014",
+          "6º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMCG",
+          "2010-2014",
+          "6º Ano"
+        ],
+        "eligible": 5,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMJF",
+          "2010-2014",
+          "1º Ano"
+        ],
+        "eligible": 6,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMJF",
+          "2015-2019",
+          "1º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMR",
+          "2010-2014",
+          "6º Ano"
+        ],
+        "eligible": 5,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMR",
+          "2015-2019",
+          "6º Ano"
+        ],
+        "eligible": 8,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMR",
+          "2020-2025",
+          "6º Ano"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMS",
+          "2015-2019",
+          "6º Ano"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMSM",
+          "2004-2009",
+          "1º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "CMSP",
+          "2015-2019",
+          "6º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "COLÉGIO PÓDION",
+          "2020-2025",
+          "5º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "raster",
+          "COLÉGIO PÓDION",
+          "2020-2025",
+          "6º Ano"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMB",
+          "2015-2019",
+          "6º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMBH",
+          "2020-2025",
+          "1º Ano"
+        ],
+        "eligible": 4,
+        "selected": 2
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMC",
+          "2020-2025",
+          "6º Ano"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMCG",
+          "2015-2019",
+          "6º Ano"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMDPII",
+          "2015-2019",
+          "6º Ano"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMDPII",
+          "2020-2025",
+          "1º Ano"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMF",
+          "2004-2009",
+          "6º Ano"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMF",
+          "2020-2025",
+          "6º Ano"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMM",
+          "2010-2014",
+          "1º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMM",
+          "2010-2014",
+          "6º Ano"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMPA",
+          "2010-2014",
+          "1º Ano"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMPA",
+          "2015-2019",
+          "1º Ano"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMRJ",
+          "2010-2014",
+          "6º Ano"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMRJ",
+          "2020-2025",
+          "6º Ano"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMS",
+          "2015-2019",
+          "6º Ano"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMSM",
+          "2004-2009",
+          "1º Ano"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMSM",
+          "2004-2009",
+          "6º Ano"
+        ],
+        "eligible": 10,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMSP",
+          "2020-2025",
+          "6º Ano"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMT",
+          "2010-2014",
+          "6º Ano"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "CMT",
+          "2015-2019",
+          "7º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "COLÉGIO SÓLIDO",
+          "2015-2019",
+          "8º Ano"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "COLÉGIO SÓLIDO",
+          "2015-2019",
+          "9º Ano"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "OUTRAS",
+          "2020-2025",
+          "6º Ano"
+        ],
+        "eligible": 1,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "PAS 1",
+          "2004-2009",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "PAS 1",
+          "2010-2014",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "PAS 2",
+          "2004-2009",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 3,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "PAS 2",
+          "2020-2025",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 5,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "PAS 3",
+          "2004-2009",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 2,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "PAS 3",
+          "2015-2019",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 4,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "VESTIBULAR_UNB",
+          "2004-2009",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 5,
+        "selected": 1
+      },
+      {
+        "stratum": [
+          "text_native",
+          "VESTIBULAR_UNB",
+          "2020-2025",
+          "not_applicable_or_unspecified"
+        ],
+        "eligible": 4,
+        "selected": 1
+      }
+    ],
+    "distinctFamilies": 23,
+    "distinctYears": 21,
+    "maxDocumentsPerFamily": 3
+  },
+  "documents": [
+    {
+      "documentId": "v5-doc-429b811d62a29a28",
+      "contentFingerprint": "429b811d62a29a28c9e2dfb8f89afc95fb0afa0d0529fe9e67a205dd1aa00605",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMB\\1º Ano\\CMB - 1ANO - 2017_2018 (port).pdf",
+      "relativePath": "CMB\\1º Ano\\CMB - 1ANO - 2017_2018 (port).pdf",
+      "family": "CMB",
+      "year": 2017,
+      "series": "1º Ano",
+      "sourceType": "raster",
+      "pageCount": 17,
+      "sizeBytes": 4620965,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-9341853cd786543a",
+      "contentFingerprint": "9341853cd786543a175749ae045cde1732f9909dd8706cd17e0a4dcda30a1a6d",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 2\\PAS 2 - 2014.pdf",
+      "relativePath": "PAS 2\\PAS 2 - 2014.pdf",
+      "family": "PAS 2",
+      "year": 2014,
+      "series": null,
+      "sourceType": "hybrid",
+      "pageCount": 24,
+      "sizeBytes": 869240,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-a37b092e0e967efc",
+      "contentFingerprint": "a37b092e0e967efc24dd4806830ad446c8d9a10bda7ae83ea1180090a36ac5bf",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMC\\6º Ano\\CMC - 6ANO - 2025_2026.pdf",
+      "relativePath": "CMC\\6º Ano\\CMC - 6ANO - 2025_2026.pdf",
+      "family": "CMC",
+      "year": 2025,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "pageCount": 28,
+      "sizeBytes": 1742254,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-78d5d0d89420b8d3",
+      "contentFingerprint": "78d5d0d89420b8d3936b823099c7ad00044b008f5cab15b0ec19e28cd88ddf6e",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\COLÉGIO SÓLIDO\\8º Ano\\SÓLIDO - 8ANO - 2018_2019 - PROVA DE BOLSAS.pdf",
+      "relativePath": "COLÉGIO SÓLIDO\\8º Ano\\SÓLIDO - 8ANO - 2018_2019 - PROVA DE BOLSAS.pdf",
+      "family": "COLÉGIO SÓLIDO",
+      "year": 2018,
+      "series": "8º Ano",
+      "sourceType": "text_native",
+      "pageCount": 15,
+      "sizeBytes": 1518410,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-906c5ae29d59a1ff",
+      "contentFingerprint": "906c5ae29d59a1ff734fd548b7ecd5552cdaab69a0c343496fab4b576f50f72b",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMT\\7º Ano\\CMT - 7ANO - 2016_2017 Remanescentes.pdf",
+      "relativePath": "CMT\\7º Ano\\CMT - 7ANO - 2016_2017 Remanescentes.pdf",
+      "family": "CMT",
+      "year": 2016,
+      "series": "7º Ano",
+      "sourceType": "text_native",
+      "pageCount": 15,
+      "sizeBytes": 1405281,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-7a302456c4a6afbe",
+      "contentFingerprint": "7a302456c4a6afbe0451df3e4cdf7027dbedee4801f4d24ddc0babaf440e4191",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\COLÉGIO PÓDION\\PÓDION - 5ANO - 2024_2025 - PROVA DE BOLSAS.pdf",
+      "relativePath": "COLÉGIO PÓDION\\PÓDION - 5ANO - 2024_2025 - PROVA DE BOLSAS.pdf",
+      "family": "COLÉGIO PÓDION",
+      "year": 2024,
+      "series": "5º Ano",
+      "sourceType": "raster",
+      "pageCount": 14,
+      "sizeBytes": 8801051,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-9e5595dac9eb75e3",
+      "contentFingerprint": "9e5595dac9eb75e3dffb955e2a39f1268c330fc4ecabe8250f3c89e17604eb32",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\COLÉGIO SÓLIDO\\9º Ano\\SÓLIDO - 9ANO - 2016_2017 - PROVA DE BOLSAS.pdf",
+      "relativePath": "COLÉGIO SÓLIDO\\9º Ano\\SÓLIDO - 9ANO - 2016_2017 - PROVA DE BOLSAS.pdf",
+      "family": "COLÉGIO SÓLIDO",
+      "year": 2016,
+      "series": "9º Ano",
+      "sourceType": "text_native",
+      "pageCount": 17,
+      "sizeBytes": 1473496,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-c6d6158a42ac379f",
+      "contentFingerprint": "c6d6158a42ac379fcd8ce8f39cc93b402da5441ad551c671d47d1c976991488b",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSM\\6º Ano\\CMSM - 6ANO - 2009_2010 (mat).pdf",
+      "relativePath": "CMSM\\6º Ano\\CMSM - 6ANO - 2009_2010 (mat).pdf",
+      "family": "CMSM",
+      "year": 2009,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "pageCount": 9,
+      "sizeBytes": 127848,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-0c51e49589f148bc",
+      "contentFingerprint": "0c51e49589f148bc6f66b4b1822b3bf78b9a57f7e78a055f09648703d9230d87",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMCG\\6º Ano\\CMCG - 6ANO - 2011_2012 (port).pdf",
+      "relativePath": "CMCG\\6º Ano\\CMCG - 6ANO - 2011_2012 (port).pdf",
+      "family": "CMCG",
+      "year": 2011,
+      "series": "6º Ano",
+      "sourceType": "raster",
+      "pageCount": 12,
+      "sizeBytes": 716640,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-91b5252bd14b8900",
+      "contentFingerprint": "91b5252bd14b8900e1a6d61519bff82687312d2c7b76e28cb8bb0247f58a97cf",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMDPII\\1º Ano\\CMDPII - 1ANO - 2023_2024.pdf",
+      "relativePath": "CMDPII\\1º Ano\\CMDPII - 1ANO - 2023_2024.pdf",
+      "family": "CMDPII",
+      "year": 2023,
+      "series": "1º Ano",
+      "sourceType": "text_native",
+      "pageCount": 16,
+      "sizeBytes": 902702,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-34e3910f5e106aae",
+      "contentFingerprint": "34e3910f5e106aae9ad6f03efcc3456743312f2f7d08c6ded9bfa517c4885e3d",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMM\\6º Ano\\CMM - 6ANO - 2013_2014 (mat).pdf",
+      "relativePath": "CMM\\6º Ano\\CMM - 6ANO - 2013_2014 (mat).pdf",
+      "family": "CMM",
+      "year": 2013,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "pageCount": 7,
+      "sizeBytes": 476046,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-74e153f9c146d887",
+      "contentFingerprint": "74e153f9c146d8878547d6f5fd0538953c61fcb15f17f27c6d1cfcddfadee53d",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSP\\6º Ano\\CMSP - 6ANO - 2019_2020 (mat).pdf",
+      "relativePath": "CMSP\\6º Ano\\CMSP - 6ANO - 2019_2020 (mat).pdf",
+      "family": "CMSP",
+      "year": 2019,
+      "series": "6º Ano",
+      "sourceType": "raster",
+      "pageCount": 1,
+      "sizeBytes": 4797969,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-ae2f4e91af8a01f9",
+      "contentFingerprint": "ae2f4e91af8a01f933ec58bd5ca44449e1b7aba486e324e21a6b3eb08058ed4a",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\VESTIBULAR_UNB\\VEST UnB 2021.pdf",
+      "relativePath": "VESTIBULAR_UNB\\VEST UnB 2021.pdf",
+      "family": "VESTIBULAR_UNB",
+      "year": 2021,
+      "series": null,
+      "sourceType": "text_native",
+      "pageCount": 17,
+      "sizeBytes": 2598599,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-815b83630e3d8c98",
+      "contentFingerprint": "815b83630e3d8c9899695cdcc4a30f96ee4a5f411d541d954c534cd5a8f9ef1a",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMF\\6º Ano\\CMF - 6ANO - 2008_2009 (port).pdf",
+      "relativePath": "CMF\\6º Ano\\CMF - 6ANO - 2008_2009 (port).pdf",
+      "family": "CMF",
+      "year": 2008,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "pageCount": 9,
+      "sizeBytes": 1014177,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-e9603e9180e6028b",
+      "contentFingerprint": "e9603e9180e6028ba3c7bb833cffd85d864e7f35233076c5fad1a96e26446207",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMJF\\1º Ano\\CMJF - 1ANO - 2015_2016 (port) (Prova 1).pdf",
+      "relativePath": "CMJF\\1º Ano\\CMJF - 1ANO - 2015_2016 (port) (Prova 1).pdf",
+      "family": "CMJF",
+      "year": 2015,
+      "series": "1º Ano",
+      "sourceType": "raster",
+      "pageCount": 12,
+      "sizeBytes": 8336643,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-dd8461744150ef4b",
+      "contentFingerprint": "dd8461744150ef4bd83208fbadb512a403a915633d0dcfb681df4b56f869dcac",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMRJ\\6º Ano\\CMRJ - 6ANO - 2012_2013 (mat).pdf",
+      "relativePath": "CMRJ\\6º Ano\\CMRJ - 6ANO - 2012_2013 (mat).pdf",
+      "family": "CMRJ",
+      "year": 2012,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "pageCount": 9,
+      "sizeBytes": 923141,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-a7256b9befdea91b",
+      "contentFingerprint": "a7256b9befdea91bb320dce88545d7ddafd85cd3d52e46ce4e27b9ec863c00d2",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBH\\1º Ano\\CMBH - 1ANO - 2020_2021.pdf",
+      "relativePath": "CMBH\\1º Ano\\CMBH - 1ANO - 2020_2021.pdf",
+      "family": "CMBH",
+      "year": 2020,
+      "series": "1º Ano",
+      "sourceType": "text_native",
+      "pageCount": 22,
+      "sizeBytes": 900526,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-cb4e2c7c9e714d00",
+      "contentFingerprint": "cb4e2c7c9e714d00249004ccfa6d5a29b461ccb978c1535c27f88122c0d4cca8",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBel\\1º Ano\\CMBel - 1ANO - 2022_2023.pdf",
+      "relativePath": "CMBel\\1º Ano\\CMBel - 1ANO - 2022_2023.pdf",
+      "family": "CMBel",
+      "year": 2022,
+      "series": "1º Ano",
+      "sourceType": "raster",
+      "pageCount": 19,
+      "sizeBytes": 1234482,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-e0b6c6a249033308",
+      "contentFingerprint": "e0b6c6a249033308b2a83a54a73997342f2f5ca9a4ea502e0d5c11bfbdf7ce59",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 1\\PAS 1 - 2010.pdf",
+      "relativePath": "PAS 1\\PAS 1 - 2010.pdf",
+      "family": "PAS 1",
+      "year": 2010,
+      "series": null,
+      "sourceType": "text_native",
+      "pageCount": 22,
+      "sizeBytes": 511151,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-2300b505b11855a2",
+      "contentFingerprint": "2300b505b11855a2b555ea8b24e792948072340d5ceb4e4e7efce1b326784970",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMS\\6º Ano\\CMS - 6ANO - 2019_2020 (port).pdf",
+      "relativePath": "CMS\\6º Ano\\CMS - 6ANO - 2019_2020 (port).pdf",
+      "family": "CMS",
+      "year": 2019,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "pageCount": 7,
+      "sizeBytes": 1440171,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-84179ac96b058ffb",
+      "contentFingerprint": "84179ac96b058ffb43a18ffbbaea9b573e43759b6c5942fa3b1d09266ac2afe6",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMR\\6º Ano\\CMR - 6ANO - 2023_2024.pdf",
+      "relativePath": "CMR\\6º Ano\\CMR - 6ANO - 2023_2024.pdf",
+      "family": "CMR",
+      "year": 2023,
+      "series": "6º Ano",
+      "sourceType": "raster",
+      "pageCount": 25,
+      "sizeBytes": 941336,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-05c35f7183da4927",
+      "contentFingerprint": "05c35f7183da4927c12b2ae2845f8c2b5e74df2591dd7eabaf63c48ca666223f",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMPA\\1º Ano\\CMPA - 1ANO - 2018_2019 (port).pdf",
+      "relativePath": "CMPA\\1º Ano\\CMPA - 1ANO - 2018_2019 (port).pdf",
+      "family": "CMPA",
+      "year": 2018,
+      "series": "1º Ano",
+      "sourceType": "text_native",
+      "pageCount": 12,
+      "sizeBytes": 463283,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-bd657a7d79e90389",
+      "contentFingerprint": "bd657a7d79e90389ae6bced8a39cb07dd1b2cdc162e368f7cad1093f2083552a",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 3\\PAS 3 - 2017.pdf",
+      "relativePath": "PAS 3\\PAS 3 - 2017.pdf",
+      "family": "PAS 3",
+      "year": 2017,
+      "series": null,
+      "sourceType": "text_native",
+      "pageCount": 24,
+      "sizeBytes": 1562102,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-02531e2612ade970",
+      "contentFingerprint": "02531e2612ade970720cc0a153080e77869fc9edc6f2a74cfed882f5aeec2138",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSM\\1º Ano\\CMSM - 1ANO - 2006_2007 (port).pdf",
+      "relativePath": "CMSM\\1º Ano\\CMSM - 1ANO - 2006_2007 (port).pdf",
+      "family": "CMSM",
+      "year": 2006,
+      "series": "1º Ano",
+      "sourceType": "raster",
+      "pageCount": 6,
+      "sizeBytes": 2264831,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-e223f9e9c5cea0cb",
+      "contentFingerprint": "e223f9e9c5cea0cb1bb88a9ea4efbcba7fb6cb997e99ef19aab92fae14e9730e",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\OUTRAS\\CMPCE\\CMPCE - 6º ANO - 2023.pdf",
+      "relativePath": "OUTRAS\\CMPCE\\CMPCE - 6º ANO - 2023.pdf",
+      "family": "OUTRAS",
+      "year": 2023,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "pageCount": 6,
+      "sizeBytes": 576600,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-a8e098aad9a7ece4",
+      "contentFingerprint": "a8e098aad9a7ece4f16a549cd1c92f2531903d0f7fff24fe6ed695ff61306ef0",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 1\\PAS 1 - 2007.pdf",
+      "relativePath": "PAS 1\\PAS 1 - 2007.pdf",
+      "family": "PAS 1",
+      "year": 2007,
+      "series": null,
+      "sourceType": "text_native",
+      "pageCount": 20,
+      "sizeBytes": 532649,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-4ec5bc5117bb7440",
+      "contentFingerprint": "4ec5bc5117bb7440c96231090f3e99c63596c3d64607ac0c5ef4d4f41db39e3a",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\VESTIBULAR_UNB\\VEST UnB 2004.pdf",
+      "relativePath": "VESTIBULAR_UNB\\VEST UnB 2004.pdf",
+      "family": "VESTIBULAR_UNB",
+      "year": 2004,
+      "series": null,
+      "sourceType": "text_native",
+      "pageCount": 16,
+      "sizeBytes": 871064,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-2442b4ab742e42f2",
+      "contentFingerprint": "2442b4ab742e42f29fccf524f47f841b7bf2592938c0fd528e6b51c99f952134",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMR\\6º Ano\\CMR - 6ANO - 2013_2014 (mat).pdf",
+      "relativePath": "CMR\\6º Ano\\CMR - 6ANO - 2013_2014 (mat).pdf",
+      "family": "CMR",
+      "year": 2013,
+      "series": "6º Ano",
+      "sourceType": "raster",
+      "pageCount": 10,
+      "sizeBytes": 1723103,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-e123ad77b8edc98f",
+      "contentFingerprint": "e123ad77b8edc98fdb7184c07925a676766bad4cb9d744cb3a22a2355cda0f54",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMCG\\6º Ano\\CMCG - 6ANO - 2015_2016 (port).pdf",
+      "relativePath": "CMCG\\6º Ano\\CMCG - 6ANO - 2015_2016 (port).pdf",
+      "family": "CMCG",
+      "year": 2015,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "pageCount": 12,
+      "sizeBytes": 790821,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-675affeba8d87308",
+      "contentFingerprint": "675affeba8d87308980a7e0d328616a1461538ab1bf4f1c2f556aba549078e12",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMT\\6º Ano\\CMT - 6ANO - 2014_2015.pdf",
+      "relativePath": "CMT\\6º Ano\\CMT - 6ANO - 2014_2015.pdf",
+      "family": "CMT",
+      "year": 2014,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "pageCount": 12,
+      "sizeBytes": 1067935,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-506c709758cb13a9",
+      "contentFingerprint": "506c709758cb13a9f8cc5d5454e168e61a96f5a1731f9003bfc2ae94013c3749",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\COLÉGIO PÓDION\\PÓDION - 6ANO - 2022_2023 - PROVA DE BOLSAS.pdf",
+      "relativePath": "COLÉGIO PÓDION\\PÓDION - 6ANO - 2022_2023 - PROVA DE BOLSAS.pdf",
+      "family": "COLÉGIO PÓDION",
+      "year": 2022,
+      "series": "6º Ano",
+      "sourceType": "raster",
+      "pageCount": 11,
+      "sizeBytes": 10037793,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-3a0c4b28948e4a30",
+      "contentFingerprint": "3a0c4b28948e4a30c92778da2ef70afef78740b77295639056ee697e9333c6e2",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMPA\\1º Ano\\CMPA - 1ANO - 2012_2013 (mat) (Prova 1).pdf",
+      "relativePath": "CMPA\\1º Ano\\CMPA - 1ANO - 2012_2013 (mat) (Prova 1).pdf",
+      "family": "CMPA",
+      "year": 2012,
+      "series": "1º Ano",
+      "sourceType": "text_native",
+      "pageCount": 8,
+      "sizeBytes": 245590,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-143f3f337e22fb52",
+      "contentFingerprint": "143f3f337e22fb529c8e610ca215f16214b425761ec1bd9b47e121a384bf2474",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMF\\6º Ano\\CMF - 6ANO - 2025_2026.pdf",
+      "relativePath": "CMF\\6º Ano\\CMF - 6ANO - 2025_2026.pdf",
+      "family": "CMF",
+      "year": 2025,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "pageCount": 33,
+      "sizeBytes": 1955602,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-87d7a7f5696b5a6a",
+      "contentFingerprint": "87d7a7f5696b5a6afbf9a10842a994b8ca6e759269b3aea0080faef0a2360b4e",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMC\\6º Ano\\CMC - 6ANO - 2011_2012 (port).pdf",
+      "relativePath": "CMC\\6º Ano\\CMC - 6ANO - 2011_2012 (port).pdf",
+      "family": "CMC",
+      "year": 2011,
+      "series": "6º Ano",
+      "sourceType": "raster",
+      "pageCount": 8,
+      "sizeBytes": 639755,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-1b6b371a30f5cd22",
+      "contentFingerprint": "1b6b371a30f5cd22dfc5ee6e0d24a6cce1f33215aaf0164ebac7d62c9d86628b",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMRJ\\6º Ano\\CMRJ - 6ANO - 2020_2021.pdf",
+      "relativePath": "CMRJ\\6º Ano\\CMRJ - 6ANO - 2020_2021.pdf",
+      "family": "CMRJ",
+      "year": 2020,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "pageCount": 19,
+      "sizeBytes": 1780727,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-80e01b1d6082d26b",
+      "contentFingerprint": "80e01b1d6082d26b6b022497e81a00b5ebb47e8f0a71c87b9cb17928fb4aa575",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBH\\1º Ano\\CMBH - 1ANO - 2021_2022.pdf",
+      "relativePath": "CMBH\\1º Ano\\CMBH - 1ANO - 2021_2022.pdf",
+      "family": "CMBH",
+      "year": 2021,
+      "series": "1º Ano",
+      "sourceType": "text_native",
+      "pageCount": 25,
+      "sizeBytes": 963145,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-d5099c3057735940",
+      "contentFingerprint": "d5099c30577359406ebc4faf4974434bf10f84fe24a3cc186dc162e7c866c838",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMJF\\1º Ano\\CMJF - 1ANO - 2010_2011 (port) (Prova 1).pdf",
+      "relativePath": "CMJF\\1º Ano\\CMJF - 1ANO - 2010_2011 (port) (Prova 1).pdf",
+      "family": "CMJF",
+      "year": 2010,
+      "series": "1º Ano",
+      "sourceType": "raster",
+      "pageCount": 13,
+      "sizeBytes": 7760136,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-b1498826d8a54db3",
+      "contentFingerprint": "b1498826d8a54db31c8803cf1daa3aab8d753b0316de12ba84cf49bb42f1e126",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 2\\PAS 2 - 2024.pdf",
+      "relativePath": "PAS 2\\PAS 2 - 2024.pdf",
+      "family": "PAS 2",
+      "year": 2024,
+      "series": null,
+      "sourceType": "text_native",
+      "pageCount": 12,
+      "sizeBytes": 952121,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-1fb8c32edfae9126",
+      "contentFingerprint": "1fb8c32edfae9126e6faa329a251518338a5728570202e42dfdb918e300b9462",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 3\\PAS 3 - 2009.pdf",
+      "relativePath": "PAS 3\\PAS 3 - 2009.pdf",
+      "family": "PAS 3",
+      "year": 2009,
+      "series": null,
+      "sourceType": "text_native",
+      "pageCount": 22,
+      "sizeBytes": 875694,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-d12896e095155245",
+      "contentFingerprint": "d12896e095155245ce24bf2df686b56797c6f9e41e7d5ec27f7e5c2eeaf62a9c",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBel\\6º Ano\\CMBel - 6ANO - 2019_2020 (port).pdf",
+      "relativePath": "CMBel\\6º Ano\\CMBel - 6ANO - 2019_2020 (port).pdf",
+      "family": "CMBel",
+      "year": 2019,
+      "series": "6º Ano",
+      "sourceType": "raster",
+      "pageCount": 17,
+      "sizeBytes": 1830081,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-c3bf2d29c7e1d9e8",
+      "contentFingerprint": "c3bf2d29c7e1d9e8a8ad05f64f313fa8b92bccebea2e90d5dc1d8a6b363faed2",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMDPII\\Modificadas\\CMDPII - 6ANO - 2018_2019 (modificado).pdf",
+      "relativePath": "CMDPII\\Modificadas\\CMDPII - 6ANO - 2018_2019 (modificado).pdf",
+      "family": "CMDPII",
+      "year": 2018,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "pageCount": 20,
+      "sizeBytes": 887135,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-0d7bc5575df13886",
+      "contentFingerprint": "0d7bc5575df13886e7269106b265133d9f1286fca97b8a035e34890a20b98d6e",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMB\\6º Ano\\CMB - 6ANO - 2015_2016 (port).pdf",
+      "relativePath": "CMB\\6º Ano\\CMB - 6ANO - 2015_2016 (port).pdf",
+      "family": "CMB",
+      "year": 2015,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "pageCount": 10,
+      "sizeBytes": 240018,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-1babdc250c302165",
+      "contentFingerprint": "1babdc250c302165ff32a5601fda24c215ab8b17eb0e78ee52d0e241bf132c40",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMS\\6º Ano\\CMS - 6ANO - 2018_2019 (port).PDF",
+      "relativePath": "CMS\\6º Ano\\CMS - 6ANO - 2018_2019 (port).PDF",
+      "family": "CMS",
+      "year": 2018,
+      "series": "6º Ano",
+      "sourceType": "raster",
+      "pageCount": 18,
+      "sizeBytes": 2421808,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-bc5d90aa69fa3416",
+      "contentFingerprint": "bc5d90aa69fa3416e2af5364542d5d6bbb4ba3b8550eca81aeeab2251aa7dd4d",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMM\\1º Ano\\CMM - 1ANO - 2014_2015 (port).pdf",
+      "relativePath": "CMM\\1º Ano\\CMM - 1ANO - 2014_2015 (port).pdf",
+      "family": "CMM",
+      "year": 2014,
+      "series": "1º Ano",
+      "sourceType": "text_native",
+      "pageCount": 12,
+      "sizeBytes": 514588,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-9b28d28efbbf0354",
+      "contentFingerprint": "9b28d28efbbf03544b7f805f7b84040c174148e10f132e3ff143161c81ee7b60",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSP\\6º Ano\\CMSP - 6ANO - 2022_2023.pdf",
+      "relativePath": "CMSP\\6º Ano\\CMSP - 6ANO - 2022_2023.pdf",
+      "family": "CMSP",
+      "year": 2022,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "pageCount": 19,
+      "sizeBytes": 1554518,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-47ff0591259f48eb",
+      "contentFingerprint": "47ff0591259f48eb52fcd70701aa87fa57010d632b8fda9d796bb2ce5ef2c9cf",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMR\\6º Ano\\CMR - 6ANO - 2016_2017 (mat).PDF",
+      "relativePath": "CMR\\6º Ano\\CMR - 6ANO - 2016_2017 (mat).PDF",
+      "family": "CMR",
+      "year": 2016,
+      "series": "6º Ano",
+      "sourceType": "raster",
+      "pageCount": 11,
+      "sizeBytes": 4938080,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-a08230ae0b1cad7e",
+      "contentFingerprint": "a08230ae0b1cad7e06f3e15215d54d0e53526e3e5c6b11008f4295a5fb469d09",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSM\\1º Ano\\CMSM - 1ANO - 2006_2007 (redação).pdf",
+      "relativePath": "CMSM\\1º Ano\\CMSM - 1ANO - 2006_2007 (redação).pdf",
+      "family": "CMSM",
+      "year": 2006,
+      "series": "1º Ano",
+      "sourceType": "text_native",
+      "pageCount": 4,
+      "sizeBytes": 230255,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    },
+    {
+      "documentId": "v5-doc-ccc36240e82f271d",
+      "contentFingerprint": "ccc36240e82f271de6eec6894138b19f6f939c1b461e399738869c48346cacbe",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 2\\PAS 2 - 2008.pdf",
+      "relativePath": "PAS 2\\PAS 2 - 2008.pdf",
+      "family": "PAS 2",
+      "year": 2008,
+      "series": null,
+      "sourceType": "text_native",
+      "pageCount": 16,
+      "sizeBytes": 1273130,
+      "fileAvailable": true,
+      "metadataSource": "outputs/audit/corpus-inventory.json",
+      "eligible": true
+    }
+  ],
+  "selectionFrozenBeforeQuestionInspection": true,
+  "questionInspectionPerformed": false,
+  "questionSelectionStarted": false,
+  "groundTruthStarted": false,
+  "auditorExecuted": false,
+  "metricsSeen": false
+}

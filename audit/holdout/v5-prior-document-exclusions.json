@@ -1,0 +1,3064 @@
+{
+  "artifactType": "holdout-v5-prior-document-exposure-registry",
+  "candidateSourceCommit": "3b306d6a544cc63928ec8adf07640b224651742e",
+  "priorHoldoutFingerprints": [
+    {
+      "contentFingerprint": "001d3fd671db9d12377ba7f45462db120556e7042c96149c561b9e746386f454",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "00dc74ed47894fb542f0a6e3ead48fc7e61c72832d099f37382e79ccf68756c3",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "017f1b3fd833b8feef1e5d185fb0f55cc2b3a2dc5a2f552a666ff448efe2c04b",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "018fde8484ecea5947316f986262119999f51e3906a190ff3fd9372a88d2db17",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "03a9e3fe97aa894b2f95ca8054945eaec95c3d04db17e5801472caec0f4880a8",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "0483f412fc1521c019d28773554513579d81035aebea7726c9ab80c6d12707d1",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "05a2dbd5dc88c21e7ced5974eba0d368880f4a6166f8fc369f96911328846d91",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "074dd67cbd4a4d15a7b935c6148c6b31af150b40d59fbb56d3343d68e383a648",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "07539ed3ce505a31373bdc1fe9a37865090de51a11a701a4407e7f4ec9f5ee00",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "0852c9dcb05e63840e9fc168e5d7a0026860592f090b08c7d7bcbef04bde8241",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "08d3b1b8b1e80750e4d2179d1c31868bf4b661f2cbc77e1023e78222a508da86",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "09ca54b4d723c2695d819fbc193069cdd3b58bc232f4980b963225a57b42a311",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "0aa57ea3e5ed3a939e931d353b419adfb1eb2cecc98d1b81c40b04df2baabaf4",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "0b3eba514fb3655a8867fac1aff4e2984d26de19cbb7dd3d7acb61879610981e",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "0bd82b9dc8033412a81e5f0bc67ada7d5ec4e0c693e8a05a6dc6816e0ee6389d",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "0c1b0b2b7f41626ad9bcb04a1d419a42b61f2e1c325c6578a8ac61fc0170da47",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "0ccd40b7309907d6d2b5d5b709e2b2d4fa5f31c1c70853d79a8d5ebf04e416c5",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "0db5ce524459a88bc7d2120a47cd3f19c4909c2c7ee378bde5468892a76cdf9d",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "0e45d0a32d5d0496aefde88df52b1cc9d73dcdf6aef7417816562c1729db76da",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "0fd5ef7a550c304c0a547667cff418b3f31a2341e1bc03999164056ba8eb5b33",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "106d9cb7c4ace2c320b177c90c2aabeb2eb6c3d7ca2c9ab6c91db9dc945f7afd",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "143e13dc75ed1583aa4882cefbc4194d0ff1a46c25a80eeb70ad4361467d1dc5",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "145e6ae80517852e1a4ad36c924a0d1f0ab7c147a654c9702c2d08a157f8c585",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "15804641564abe312319ee8a0e61b51efd237efb113ed9102c54a40244a3b1b6",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "1693ea690bbb39b7680d33da27ccdf0b1ba1415a3f6dcc47ae29cd10fc8f46f8",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "186673c8476dfeb5806ae7b4e424e8c31bcf335ee49e0a2b4ac49a2c69cc6221",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "188b8757dfd5f7ccafc37a711138715ad98d2684371e2cea9320da6b20bef681",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "1967252ced29f4f53d8b8f9b988b34b4918cf291ac47574220f8c9a2afb57cb5",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "19ff7456134502ced8df4db0a5ca75723ca4d09513e979374913de2c15ee8f3f",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "1cc59e302f338c3e8a54dc9a8fd0426b6471e3297b5e557aab881268d646828c",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "1e18e72523997bdb75457f09eeb084ee5a69c70385c4a70263a627421a5bac5b",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "1f0fe9f00a73453db1bcc69fe345f61d9778dc08035bf52c0c3cb0da0e3e3354",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "21b1367493fe78f0de166254ba936171c28baf8bd5f1c4a8d17aa9afd663b4cb",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "23cc3c9e22d919fe30ec5c47053fbd5797cf28160bb7fc1424823f4974b573b9",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "273eb386d3ec8e1d50feab42e70899ce219ab0234d949611a02450228586b482",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "27775227a392c3acfe055f03b7ad4e6563b6718d3d597a07fc3b9c3a35ccac3f",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "2790a3c9786b6786e7e06da4583ca7dee76a931bd8fb23d8e504fab3dbed5f97",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "2c5036d085346b27a7aed690f685b2647f45504c4b520b327c60cff4e638ff2e",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "2db0fa23d7c8af69d4acf0b20012d16f02f173ac6042b55fa31180c69fa5a664",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "2f4df1da21284a1153f28756e6b33cf856e9b138805d23c675d8542495c34625",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "3402d1263b7ef413c0e68a6f64842006e7a0943a6c0e9078e0ed2346cd6f13fa",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "381cca4d6df1e9375d481e683f3356acc5fee3a4288b584f48559b939dd42c44",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "382419106b5788d6eed3dc88313e21dd28b36809766d5615f9511ed3f0097354",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "3971adb7884fc87184ecbb9c32f05952f9b2a3fbd2c5b54b1c428c664fb0bb9e",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "3abeaa8200303dfe898ad1b33bccf19a62dd60501b6c952b9468fe2cab2bb29b",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "3bd0cd910dd4690d7528107e95e182d25164fa61a7465792e0f911c0cc77aa9c",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "3c4434b96a50fa5f777c8c046ec3fbd4c07c0a8686f4b39946506dd742d14fa6",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "3e395d355d2c93d657dd2c71ed2761657828b01de125edd8db351706ee308dd9",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "3fa6e3dba64cbb45a22e5ac86d21910e79c019ba088d2102a16e2de842f968de",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "3fb1e1ce24be68ce1d360d6027d2697a9e084a7a17ebcf69a510e42519d6440d",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "403fa98cb83a510c0b9d94403b2e1017b1415cd9d735cc17d27b0b20507eac4f",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "41045384ae4bff042f574053549c4fb19902738f89af6225c4db8a2f901d9eb9",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "416026f09a096c7908fb2f76eb8dc3d5dcec433f844d2a87114913c5f8cd2604",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "42af2b3d2b27f4028c36e7298f79cfe81291db82e6b7bd098bcaa1e34c9f41ec",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "4310686d43a6869a4470e38db614688ebde542a860b04ebeb0b742649fec4ac4",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "44ea716ed9b726f56e3a6243bf6c3822f168b051b02b00ae85c742719fd888de",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "45025ec5b48c7f9584bfd3f9fd4fad8c262384f4613644d506522aaf5ea7476f",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "4a0cbad99f17f4834a2592af6acf30fcbc4eec6f24b9d51b901cf75ad15979f8",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "4a4512d7f3c2d5ce5e4576d97f200bb7883294a1a98eb5745728e63b051eb889",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "4a6adbee0573ce2add65014b97b0842fac2bc84012061eeefb1c9f2a4d2429cc",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "5039a9af1ac3eb8f1a19259d45be6d55829f4d12cd1f7f5546357cf80a9b9e77",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "50af75296b8c486b91d49929f25b604f494801b9e25b9a85b72bf4fb251ce9ad",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "5219dd3764fd5d2ec62d7f05c7bf8c25eaab706ae2938958b52c45bd744548d5",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "5248787cbd83d01d7b745f19f7f0d5bb95daab255bdf61e06fea9c6e3a2fe0d1",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "5303244d2ed3d4eadf0734b6e2b41e5484172079ebee6a8b3219d027f489d66a",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "530c1f0284e31e818549db207020b078af266b990acd708415e1f09472519ec1",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "537ca397c1da176c3e1e0a7842183243cf6700d16f15205dbbdde921676f59dc",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "56268e79f6bf85a1cf08f2a97c69217adfd3410cd126f0ec1e7f5744e0fa0d1e",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "58ed2eef13c5e9aa9e58647cf11f1548321f94967668a03ceb58633e701c2175",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "591a954c3196c12b11f387727e32fa8a0311593430d21e85c130a78c6683e18a",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "591f3e819d5810c359b2a0d9e8a32cdc54a7c6245e0b3cf03d9521a46ee7b3f8",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "5ab1bb813119938507bdbe00b707d4a62af36cd1dbc567bcb04843c928a1270c",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "5b13e6839c6f6c5a9d255edb4e26e891b309feca91c9e56647d9d319596e6eb7",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "5bf8b76be281a3fc7999924916ac07d07396828c2c1dd044107cd35f1d29f1cf",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "5d61be2ac8537a32577aa37aab20221820b7499b2488f292ac60f49397170fc8",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "63219ee3db8a43672406cfa72e58f5f8b1cddbd9f5921308c0478b8ff7f4d5d2",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "6381aed53bb131b730a31a328b679e479c6e3e14e796e24f49a7bcb1302d7c7b",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "6502d4ab01bd226614885aac9865abd02af5543749ecd895bbb076a354f047f8",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "66d2de0c7e6e2868967273926f4743fb2a84f336fe09cdd76b2e8c83053a831d",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "6a2c2be2ecd44fa4539ade3eca9d164bdf34d8ccf636f5850b84c15be56324ce",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "6a5b9d9fa52e9cc403dc66e1c126b1fe244084438b53a409ccd10bd94ac3a613",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "6b51c50675642238b0125f974c57417657f7c7efafe989357fd438170bb5a26e",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "6b61dd9acf635cb325bc090afc316662697c9dbc8121bd3ed0f479b8c3b1311e",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "6cb109cd9276a08d524b80b9a52174ec33a52493da45d397322cc5d252b239d0",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "6d3454d4a7b8877b344fc01e2cbfafda8f80dc0f24ec1c4c7397de66c0af707e",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "6dde932fb681b017099925612def8c5d325c9cc899ad7a35f97d56cb07c5b4ae",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "6fc18179cbc160a0d81180a4bd3da9a82efd7b065059a2bfec84ea52c58ccf5e",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "71eb6ebe133ac7dc12f6876fa12a6b558d0f3b6171aa8a0709cc03726b991997",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "71f57acdf98c32a8917dc80d27fa1b1cb910573064af48d4e8e66c6992fdeff3",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "734f0dc83021639cea71ddf0e7e51abbd237918f653a70626b54f77095587cc2",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "75e67e4e308f96259d05f96179ec36f25c5f3b48a14066f47360a16ccf1a1fe9",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "7765d0b79b38f41aac8891493c30ccf7a247adea8102676d076ceb4134e50145",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "77742da9fa12eeeef5455ade226e0a120f6b10b84a5d83260476b043af477764",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "777be3cde2d7584533315fc85c540cd6af1f2f58d284f777333ce6fd45d22c6a",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "79712ca8f5675f3b58f1516b7ab52531c2d3d0115eced477485834ad84c8213c",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "79dd62d008f6761f59a837c220109052ae65108c44b0cd12a38bd52a35bf9332",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "7a7bf8f61f9cbe76e1e795dc93ace2d9f4742ac1187e491cb69307608a15f5a2",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "7a801b1ddbd21bbeec1f585c22a6e9f0486a8a586ec710fb7e4aa8944eb167b2",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "7bc52719726604c35e209f2434525075c088f5c0748271a8df4b1870ccd7d809",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "7e21d913377b16296b0a0538987340a75c75d3a207cb468a78b84e0d4e37fcff",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "7edc53bcc309a038c87d4d547431b6d37dc024e9b168712103ea8b67ecc30f64",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "7f0815783d8c21fcfa4b6022fca3b131df5b7be91e3e4a87784dd86f7ad21de0",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "7f81ede9830934b4c35f4a423bb4e9f27966fd2e7d441dd5db159465746b9cae",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "800c2a22f148cade29d12faacc784f5e1e6522360ff77bb0410f6dc1aef16d8f",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "8084259f61f871f2eb872429a93a9e83a8fb929baffe5423cf0ad4d945c6e0f7",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "80a2d526fe2031bb9e19f2e99abc3f96f98a6c1531f6656d442facb08b8b8103",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "83a6bd21c3df255ee6d740dbf972c4bd962285047f7177565131ef6f6e4c3dd1",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "875b5be9bc6028ae80ef50a5d3db1298e09301846742299252c642b9c2828d71",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "89561bb8f1fea23a3f17560cabaf979c37ff326672900f5a0197a7fa507fb525",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "8d679e7b8193e823fa8640a0ea42c1742319b6ad050459780b9db95c4b447beb",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "8d72d03154a6a2aaae05d955af08d5d099e8ffaa7725d041f0d9eb59a9edb654",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "8f045d628a3bc52e8c066952d775d9c630061cbe4bb0c61d2521e975d3610b34",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "8fd0e13b7394744023e25b838096afa19cd77c946d5ce179e62ba3286dff661f",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "910ec5c0586550c01e80aeb60b4b0b5f0c265642396c5406547403f036c7b78c",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "915e7418d7c1fce938486db39445e6f1612ac09bb9749bb2743bcad398cc8c9b",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "9236ae9f513e7eba0267c2be6d844b9e532d93b29160c643a3abc481ff50a3c1",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "978687999c1ba37f1e404aa0c0a7098500f69e1a238de2ffd235bb8b55129680",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "9832ec9bb87dfbf843c744234a29bc6791f7d0461029ba1fdfc6e0816dc46f82",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "98decdcd5e66b8ba820269d25503d234b9b759062abbe0c2c166badb8548d70f",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "9a32009f9e63aa9bb0c3251b5d0fc5a374eb13421a2d7840341fc18aaf9c9f75",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "9b9057e500c76454e6ddebaf800a0cfd438791be984f5e7ed21efceba984c274",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "9ba95ff94809a180a49e8105bbb12625ca915629fdfaa40cf1d140e1fdf83c5f",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "9e4d161e7bfb2507917bd7e83efe6cae3de1905e33cb469e7e7b870b48246702",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "9e5d2df289e0ab3d0ba8e1b1b0a5f9604011e44894cdadfa4bb137ac87ad9cfd",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "a03246583c05741eee5471bb48b51ab9c655548aaa8b7f3e87c5f1d351ae16f0",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "a1ddc006ef5638f1ead8e452334e2db87a1e9995e02261b34cecb64c8e3b043e",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "a218bd48a3eb3a352214006f6b17729ef32748a9431dc0526e76bddad5d4fd8b",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "a272afbae2ca3bd4bcc36e14869cb0f2b6d11b9daea5c203ef0e9c0326e9d19a",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "a32f45208796acfaaea4182bddb273cd794273716f11608bc011c584b47eb7e8",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "a388e6f21fc7ff11cc12ec8dc697691495969d31dfecf5dbaf6c451dee20d89b",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "a69802d8aa53c27652f8a374950dddab9e3015215dbec2fc38587daf4be64fd9",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "ab0ec29ca74f0c6280c0a82cd84c63ac8ea2baba2bbdcc59a3d52f96f9983708",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "ad34c4cf7f30b6c8a0ba2cfd5c6cef41e74b64e66ffc568dee16d3cada78cd83",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "b0190dc9aeef78743af4bf3f68f0b40b4dbc4edd87db8ed38afd065bccd4b006",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "b605f7a51fd572b4de2594787e7a5b5fcdb258ec199532bb8853c8301815198f",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "b71d45cbb12c198751e58f3771eafcea7c3f4d4c799d5b1f5666fcddfce53d27",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "b85a1c21f08167fe21335a60a333a19571a6e3afcf28ccc8d5f3e507aab38943",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "bae013fd6320dfd6239f558d32021cc4e8a67b59d57900e3879215cdcfb5b36b",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "baf8e7eb95bb52ddd07eb9447ff7e26dda11507f57a876237bb4df9fb9a183f8",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "bb2d8abd32d4297f02c8ff6a41f9fabafaa21bf20f0a16ed8204bfad81314054",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "bb62e60cf7ed1c961bcba262fd6136972ae6796d3759d8d1ecda67aab6e8e0fb",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "bc9b2cef859eb071a6f379a603fe64ca61eae6b55a08c67285e02fcbd6776cd6",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "bd94ca1b4e4787c8c25cb4569ded85d9b751e6585e1bf6defb6aee6c39525666",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "c41ddc7b55ec4e18550e2be6decab59f307b6acc7699ab17e69b7f478330ca4e",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "c46447811fd30b6bdbdd2f5ccd091906367a25ffb53e30e9e01abfd984cd471f",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "c494569a6fe709b6649917e9ffdd99be532ba324ccff7a1d89659f99fcd56261",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "c573e686e88211332418b68914be57ed2c723977ed92dc7b68f24dd2a167d067",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "c7ae7c1e6646dd6cff02e856a5faaa42cf583ebf204463453c436f2b24c7d1da",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "c7f2f02d07cac81720089ec0d75558c5b6381f301ce2ce40fe1ac1dbb9451dda",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "c8d6da47c18ba8083fb134a62cf3032c6be85ccbf8d2fa5aa921601c8433c1b3",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "cd0a32a923828730979adbd73959100d889a3f789e92a6fc379b2ad60a3b1dc6",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "ce6f77f83acf80c553241cd0fd4b5cbeabb6b50dc503571241c3c41ac757bdc6",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "cef618be31e62342be648b0e0d772f5ca53f83f62b417bcacde60efbc1a5c149",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "cf6b56e7abd787dcdb64cc2cf7a41b848ba28a413fdde69d71f199b3efe058b2",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "d06d5ba7bb8d691705335fa4e79322098d7b385627227783a912d77b004d91f1",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "d07b1e8945000086b2ca0f832cda4187505e496422f4eff69e90271f6d8908a0",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "d3f1faf18cced7d709cf78982b439d686d1a090d4a164274a891f0292b5aa5a8",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "d452c3def3e52cb9e9769d86d9888d6bba78f07c65c268c75c4ab9bd624a6222",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "d64482e70eae958999301355c9496f39a157a0caa2030277a201a1c25f17457d",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "d76d2933f96327bbf7fb6b6dfb3f65469fbde8990e8bfbe55caf95c264e82ab0",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "da77cb58fe91c525cf71212752de5e7d2dda1fa753ce92a95ea49467995f7aab",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "dbb0fb93b539230b669fbc53d48e6b5f1d1aa8e7d092640dc95e6a544c0dcb95",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "dce5637b3bd742052e90e4a2cbf33a3b660250937ddb12cad382ffc7ea03d150",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "de124896cd9d8383bad3221c3c9fff0aea1e8b31c0f5b106f309d3445e42445b",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "df06a451fb60feda74e6d38e9fa337258c6af248ed6f67b282adecf6220bca49",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "df9edb180cb3ec704c7e01632f71c93d6ad1b4d74ff3adaff388362aabb017cb",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "dfb78caf74babfbfd35b8b2c742c537fe9c551b7cd6a42d7b86cd16e61f77223",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "e0a1bafb0ea7726b5a0ed7cd398f3f760d64835f0d0199bdc6622747ee02821f",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "e13d030b1f9e1e9e61c06f930a8cc35583413459ead8f3213b032d98b48c4cb7",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "e240c4d24d4a0e2f8293241bd5c88b3d3e7dac1d120a54a96d42b7d2dfdca1b6",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "e3dd87b27a53caf4bf061818e4918b1c31a65201ffcf1b2fcbda0c1b3661db6a",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "e40d248176be1569a61517b910933b01de808432d246eb3d3e53f4e23cb4cb54",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "e57019a7359bc982f7ddf64d1e1251070963bff085f32107d3bb94a00ac5a2ce",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "e623f0284632adb0a80f4566c0952aec6135612d3dd49bf71c84219974a4aff7",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "e981c0dce132898297112fd6b9fdce8dd6b1f32ba23106ceeeb9c8ac9f173d26",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "ec2c48d75bf3db2aa38ece4cb006e8efd0c1d6927d247a4c5ccd48d491d35212",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "ecd771e271883d1d5e3e9ece71f6717121690978adbb7234b8ad5660e47f25a6",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "ee51036d2382d989fd2423ca1e0a7dfaf7ec8c389d49299e65580ade166d4270",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "eefc3d15076e47cc143d5b5dd62ebeeed0dc0c206bf07c67ef166bf19ed609c3",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "f03e7d17eec1cd97788ae2f938dbeb4c91e64c79db0b57e0b064ab28670669d7",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "f0b208eead34fe9bbda2f1b8f78ee29c26f87553ca41a4b9ba2f9057f3db5ed7",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "f18b4e5dc1935d7c9b8707addd63f9472d91bebe04cf067db61ff0031be734e5",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "f1c03b7dfa396041ded2025b519db1c87ab23deee9fd73369916b6ab28fcbef7",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "f24160c86424772296f74d3f39dcea0980f781dbd336a849501d7dc70fadcfb1",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "f4dd0107181635855698e2242629cade64f086ecd5068f81a0ffddb97c25060f",
+      "sources": [
+        "audit/holdout/manifest-v4-a.json",
+        "audit/holdout/manifest-v4-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "f4fec1ad1ba2ff4ed66b8b330ff2b53919e9cf8cdc9453f619f97e5926cdb46d",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "f64ab9b16528c639d06c525b2b1e0af36d67d692992ef90838b373beb45c7c05",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "f707c87d4d0e8bb88efb168d1c159fa7628fd572c6c8e4207e4d93ed9006c7d3",
+      "sources": [
+        "audit/holdout/manifest-v3-a.json",
+        "audit/holdout/manifest-v3-b-r1.json",
+        "audit/holdout/manifest-v3-b-r2.json",
+        "audit/holdout/manifest-v3-b-r3.json",
+        "audit/holdout/manifest-v3-b-r4.json",
+        "audit/holdout/manifest-v3-b-r5.json",
+        "audit/holdout/manifest-v3-b.json"
+      ]
+    },
+    {
+      "contentFingerprint": "fa89f582e02f2a8f3e83fe8feb94751700c79a06856380d93453a98aa45c0088",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    },
+    {
+      "contentFingerprint": "fb15983ac5ea9324a6dc099f13662e973908f56b5e37bc4f0d3e219ac22e2c46",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "fc9052837176dd8db29cad6f199c9c963c25ef3c04bc4fb9e1959e2fc6c8649a",
+      "sources": [
+        "audit/holdout/manifest-v2-b2-r1.json",
+        "audit/holdout/manifest-v2-b2-r2.json",
+        "audit/holdout/manifest-v2-b2.json",
+        "audit/holdout/manifest-v2.json"
+      ]
+    },
+    {
+      "contentFingerprint": "fea5957ad43c5660d3e0475d84faa321bab91afc5d5d72278024b8ec89d57f2d",
+      "sources": [
+        "audit/holdout/manifest-v1.json"
+      ]
+    }
+  ],
+  "priorCalibrationFingerprints": [
+    {
+      "contentFingerprint": "02c87cac5138dbf8e8d04fc738d864f8b23da05a7f899ab3bb6660cf5fcf0ffe",
+      "sources": [
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmc-2012-effective-audit.json"
+      ]
+    },
+    {
+      "contentFingerprint": "0483f412fc1521c019d28773554513579d81035aebea7726c9ab80c6d12707d1",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "06c12b3506291406a7a710cae71359b393c4f4d7d48cbf7355a3b4fb09024455",
+      "sources": [
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmdpii-2018-effective-audit.json"
+      ]
+    },
+    {
+      "contentFingerprint": "074dd67cbd4a4d15a7b935c6148c6b31af150b40d59fbb56d3343d68e383a648",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "078b862e4b54b8e05a9ee89138da3dc739f246ed25841c05a5fc5a117fef10de",
+      "sources": [
+        "scripts/audit_response_holdout_selftest.py"
+      ]
+    },
+    {
+      "contentFingerprint": "0852c9dcb05e63840e9fc168e5d7a0026860592f090b08c7d7bcbef04bde8241",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "0b3eba514fb3655a8867fac1aff4e2984d26de19cbb7dd3d7acb61879610981e",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "0c1b0b2b7f41626ad9bcb04a1d419a42b61f2e1c325c6578a8ac61fc0170da47",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "0ccd40b7309907d6d2b5d5b709e2b2d4fa5f31c1c70853d79a8d5ebf04e416c5",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "0d06cb43cca7326aa665e82d995a7a12db75b76ec82afd625c03d3d807f84a23",
+      "sources": [
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmdpii-2017-effective-audit.json"
+      ]
+    },
+    {
+      "contentFingerprint": "0db5ce524459a88bc7d2120a47cd3f19c4909c2c7ee378bde5468892a76cdf9d",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-0db5ce524459/tesseract/ocr.json",
+        "outputs/audit/postmortem-v4 (existing document directory)",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "0e45d0a32d5d0496aefde88df52b1cc9d73dcdf6aef7417816562c1729db76da",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "1010df39770e54c52d5e34ef74be86b2a02e5154fc0d4534f9467a1a46a69a2c",
+      "sources": [
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmb-2013-effective-audit.json"
+      ]
+    },
+    {
+      "contentFingerprint": "143e13dc75ed1583aa4882cefbc4194d0ff1a46c25a80eeb70ad4361467d1dc5",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-143e13dc75ed/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "1693ea690bbb39b7680d33da27ccdf0b1ba1415a3f6dcc47ae29cd10fc8f46f8",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmt-2023-effective-audit.json",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "186673c8476dfeb5806ae7b4e424e8c31bcf335ee49e0a2b4ac49a2c69cc6221",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-186673c8476d/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "188b8757dfd5f7ccafc37a711138715ad98d2684371e2cea9320da6b20bef681",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "19ff7456134502ced8df4db0a5ca75723ca4d09513e979374913de2c15ee8f3f",
+      "sources": [
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmbh-2013-effective-audit.json"
+      ]
+    },
+    {
+      "contentFingerprint": "1fd1922fcaffd79e4b087630e0d3e424ad1fd28e5b2640573b4e7b98556ef1ce",
+      "sources": [
+        "outputs/audit/cmb-2014-audit.json",
+        "outputs/audit/cmb-2014-effective-audit.json"
+      ]
+    },
+    {
+      "contentFingerprint": "21b1367493fe78f0de166254ba936171c28baf8bd5f1c4a8d17aa9afd663b4cb",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-21b1367493fe/tesseract/ocr.json",
+        "outputs/audit/postmortem-v3 (existing document directory)",
+        "outputs/audit/postmortem-v3/forensics-b3082e0/01-doc-21b1367493fe_q2/case.json",
+        "outputs/audit/postmortem-v3/forensics-b3082e0/postmortem-v3-forensics.json"
+      ]
+    },
+    {
+      "contentFingerprint": "2244d021d0fda055fd70bf811ca55dac2147c33663dbbf80e613abcfd4bf18c2",
+      "sources": [
+        "outputs/audit/cmbh-2023-effective-audit.json",
+        "outputs/audit/pilot-10-summary.json"
+      ]
+    },
+    {
+      "contentFingerprint": "23cc3c9e22d919fe30ec5c47053fbd5797cf28160bb7fc1424823f4974b573b9",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "270d3af0b1701d1ebb95cd8fb2d5ec9df104cd246e67d84ef46fde8f5860b4a6",
+      "sources": [
+        "audit/holdout/manifest-v1.provenance.json",
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-15-reconstruction-summary.json",
+        "outputs/audit/ocr-raster-15-summary.json",
+        "outputs/audit/ocr/cmc-6ano-2011-2012-mat/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "273eb386d3ec8e1d50feab42e70899ce219ab0234d949611a02450228586b482",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-15-reconstruction-summary.json",
+        "outputs/audit/ocr-raster-15-summary.json",
+        "outputs/audit/ocr/cmbel-6ano-2020-2021/tesseract/ocr.json",
+        "outputs/audit/ocr/doc-273eb386d3ec/tesseract/ocr.json",
+        "outputs/audit/postmortem-v3 (existing document directory)",
+        "outputs/audit/postmortem-v3/forensics-b3082e0/02-doc-273eb386d3ec_q7/case.json",
+        "outputs/audit/postmortem-v3/forensics-b3082e0/postmortem-v3-forensics.json"
+      ]
+    },
+    {
+      "contentFingerprint": "27775227a392c3acfe055f03b7ad4e6563b6718d3d597a07fc3b9c3a35ccac3f",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "2790a3c9786b6786e7e06da4583ca7dee76a931bd8fb23d8e504fab3dbed5f97",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-2790a3c9786b/tesseract/ocr.json",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "2911e5348c962f9a5f882efa60459aaaa1d2479fa742f2ccf99f9018d95457dd",
+      "sources": [
+        "audit/holdout/manifest-v1.provenance.json",
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmt-2022-effective-audit.json",
+        "scripts/audit_response_regions_benchmark.py"
+      ]
+    },
+    {
+      "contentFingerprint": "2c5036d085346b27a7aed690f685b2647f45504c4b520b327c60cff4e638ff2e",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "2db0fa23d7c8af69d4acf0b20012d16f02f173ac6042b55fa31180c69fa5a664",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "scripts/audit_response_holdout_selftest.py"
+      ]
+    },
+    {
+      "contentFingerprint": "2f0c960c74f8afe2c82ce8f3a12858c1b2ffc61f3372933452d824c70c7c53d0",
+      "sources": [
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-15-reconstruction-summary.json",
+        "outputs/audit/ocr-raster-15-summary.json",
+        "outputs/audit/ocr/cmb-6ano-2022-2023/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "2f4df1da21284a1153f28756e6b33cf856e9b138805d23c675d8542495c34625",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-2f4df1da2128/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "31e83e1fcff51b2928572725de74de970e4d5338c78ecc64d32050b765bc6484",
+      "sources": [
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-15-reconstruction-summary.json",
+        "outputs/audit/ocr-raster-15-summary.json",
+        "outputs/audit/ocr/cmb-6ano-2019-2020-mat/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "341a99118fdeb6fa0cde03884be537542178d58c9fa794b072491f84789f383b",
+      "sources": [
+        "outputs/audit/cmt-2020-effective-audit.json",
+        "outputs/audit/pilot-10-summary.json"
+      ]
+    },
+    {
+      "contentFingerprint": "381cca4d6df1e9375d481e683f3356acc5fee3a4288b584f48559b939dd42c44",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "3bd0cd910dd4690d7528107e95e182d25164fa61a7465792e0f911c0cc77aa9c",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "3c4434b96a50fa5f777c8c046ec3fbd4c07c0a8686f4b39946506dd742d14fa6",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-3c4434b96a50/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "3d92353f26d42281cb6e222779764f849167e8aa1debabd7097f77884f21ece9",
+      "sources": [
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmbh-2020-effective-audit.json"
+      ]
+    },
+    {
+      "contentFingerprint": "3e395d355d2c93d657dd2c71ed2761657828b01de125edd8db351706ee308dd9",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "3fa6e3dba64cbb45a22e5ac86d21910e79c019ba088d2102a16e2de842f968de",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "3fb1e1ce24be68ce1d360d6027d2697a9e084a7a17ebcf69a510e42519d6440d",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "403fa98cb83a510c0b9d94403b2e1017b1415cd9d735cc17d27b0b20507eac4f",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-403fa98cb83a/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "40c90ad0e64fcd2e5e8818473058756e1a18c5a7f90611927e7ca54ceb22eed0",
+      "sources": [
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-15-reconstruction-summary.json",
+        "outputs/audit/ocr-raster-15-summary.json",
+        "outputs/audit/ocr/cmc-6ano-2010-2011-mat/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "4194beb484828d4bca833d282058ae96cad1b481cf1767ad486ddf142483978b",
+      "sources": [
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-15-reconstruction-summary.json",
+        "outputs/audit/ocr-raster-15-summary.json",
+        "outputs/audit/ocr/cmb-6ano-2021-2022/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "42af2b3d2b27f4028c36e7298f79cfe81291db82e6b7bd098bcaa1e34c9f41ec",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-42af2b3d2b27/tesseract/ocr.json",
+        "outputs/audit/postmortem-v4 (existing document directory)",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "44773f773bc027143171fc2e8cc702b7ab040e635666ca2c7d465c52e65e3627",
+      "sources": [
+        "outputs/audit/cmb-2015-base-audit.json",
+        "outputs/audit/cmb-2015-effective-audit.json"
+      ]
+    },
+    {
+      "contentFingerprint": "44ea716ed9b726f56e3a6243bf6c3822f168b051b02b00ae85c742719fd888de",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "499211ead15937b9d594d71aecbfc57082b828a9ac1099afe2b71e37eb009bc9",
+      "sources": [
+        "outputs/audit/cmdpii-2023-effective-audit.json",
+        "outputs/audit/pilot-10-summary.json"
+      ]
+    },
+    {
+      "contentFingerprint": "4a0cbad99f17f4834a2592af6acf30fcbc4eec6f24b9d51b901cf75ad15979f8",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "4a4512d7f3c2d5ce5e4576d97f200bb7883294a1a98eb5745728e63b051eb889",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "4b52f302eb43fadd2b4ad474b96c8849722a79ae4c38cc361e6ab4b5322b1765",
+      "sources": [
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmbh-2016-effective-audit.json"
+      ]
+    },
+    {
+      "contentFingerprint": "5039a9af1ac3eb8f1a19259d45be6d55829f4d12cd1f7f5546357cf80a9b9e77",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "50af75296b8c486b91d49929f25b604f494801b9e25b9a85b72bf4fb251ce9ad",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "5219dd3764fd5d2ec62d7f05c7bf8c25eaab706ae2938958b52c45bd744548d5",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "5248787cbd83d01d7b745f19f7f0d5bb95daab255bdf61e06fea9c6e3a2fe0d1",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "555001fd03ec7d058802ef2c58750e6f9ef8a3c1d70a7958e90abf7d0362b33a",
+      "sources": [
+        "outputs/audit/cmbel-2022-effective-audit.json",
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-pilot-summary.json",
+        "outputs/audit/ocr/cmbel-6ano-2022-2023/rapidocr/ocr.json",
+        "outputs/audit/ocr/cmbel-6ano-2022-2023/tesseract/ocr.json",
+        "outputs/audit/pilot-10-summary.json",
+        "scripts/ocr_raster_pilot.py"
+      ]
+    },
+    {
+      "contentFingerprint": "56268e79f6bf85a1cf08f2a97c69217adfd3410cd126f0ec1e7f5744e0fa0d1e",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-56268e79f6bf/tesseract/ocr.json",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "591a954c3196c12b11f387727e32fa8a0311593430d21e85c130a78c6683e18a",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "591f3e819d5810c359b2a0d9e8a32cdc54a7c6245e0b3cf03d9521a46ee7b3f8",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-591f3e819d58/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "5ab1bb813119938507bdbe00b707d4a62af36cd1dbc567bcb04843c928a1270c",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-5ab1bb813119/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "5b13e6839c6f6c5a9d255edb4e26e891b309feca91c9e56647d9d319596e6eb7",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "5d61be2ac8537a32577aa37aab20221820b7499b2488f292ac60f49397170fc8",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-5d61be2ac853/tesseract/ocr.json",
+        "outputs/audit/postmortem-v4 (existing document directory)",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "63219ee3db8a43672406cfa72e58f5f8b1cddbd9f5921308c0478b8ff7f4d5d2",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "63ee5eb905b30c9ed06f8714090a606a55199d1067287cd749006437ead54fe6",
+      "sources": [
+        "outputs/audit/cmbh-2014-effective-audit.json",
+        "outputs/audit/pilot-10-summary.json"
+      ]
+    },
+    {
+      "contentFingerprint": "66d2de0c7e6e2868967273926f4743fb2a84f336fe09cdd76b2e8c83053a831d",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "69d30f17f8efbb425c7b452080254e4a04404300cc8968dac70017a6105f46bc",
+      "sources": [
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-15-reconstruction-summary.json",
+        "outputs/audit/ocr-raster-15-summary.json",
+        "outputs/audit/ocr/cmbel-6ano-2019-2020-mat/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "6a5b9d9fa52e9cc403dc66e1c126b1fe244084438b53a409ccd10bd94ac3a613",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "6b51c50675642238b0125f974c57417657f7c7efafe989357fd438170bb5a26e",
+      "sources": [
+        "scripts/audit_response_holdout_selftest.py"
+      ]
+    },
+    {
+      "contentFingerprint": "6b61dd9acf635cb325bc090afc316662697c9dbc8121bd3ed0f479b8c3b1311e",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "6dde932fb681b017099925612def8c5d325c9cc899ad7a35f97d56cb07c5b4ae",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "6fc18179cbc160a0d81180a4bd3da9a82efd7b065059a2bfec84ea52c58ccf5e",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "711b3af4f70827416cd922cae6341dce4138063aa0f93c20cf57516c040c9f7d",
+      "sources": [
+        "audit/holdout/manifest-v1.provenance.json",
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-pilot-summary.json",
+        "outputs/audit/ocr/cmbh-6ano-2017-2018-mat/tesseract/ocr.json",
+        "scripts/ocr_raster_pilot.py"
+      ]
+    },
+    {
+      "contentFingerprint": "71eb6ebe133ac7dc12f6876fa12a6b558d0f3b6171aa8a0709cc03726b991997",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "71f57acdf98c32a8917dc80d27fa1b1cb910573064af48d4e8e66c6992fdeff3",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "734f0dc83021639cea71ddf0e7e51abbd237918f653a70626b54f77095587cc2",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "76903eef85577b82ce4b1e30a912c2a194ef5f4103e46e2edc4114c1f68792c2",
+      "sources": [
+        "audit/holdout/manifest-v1.provenance.json",
+        "scripts/audit_response_regions_benchmark.py"
+      ]
+    },
+    {
+      "contentFingerprint": "7765d0b79b38f41aac8891493c30ccf7a247adea8102676d076ceb4134e50145",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "77742da9fa12eeeef5455ade226e0a120f6b10b84a5d83260476b043af477764",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-77742da9fa12/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "777be3cde2d7584533315fc85c540cd6af1f2f58d284f777333ce6fd45d22c6a",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "79dd62d008f6761f59a837c220109052ae65108c44b0cd12a38bd52a35bf9332",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "7a801b1ddbd21bbeec1f585c22a6e9f0486a8a586ec710fb7e4aa8944eb167b2",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "7bc52719726604c35e209f2434525075c088f5c0748271a8df4b1870ccd7d809",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "7e21d913377b16296b0a0538987340a75c75d3a207cb468a78b84e0d4e37fcff",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-7e21d913377b/tesseract/ocr.json",
+        "outputs/audit/postmortem-v3 (existing document directory)",
+        "outputs/audit/postmortem-v3/forensics-b3082e0/03-doc-7e21d913377b_q5/case.json",
+        "outputs/audit/postmortem-v3/forensics-b3082e0/04-doc-7e21d913377b_q18/case.json",
+        "outputs/audit/postmortem-v3/forensics-b3082e0/07-doc-7e21d913377b_q9/case.json",
+        "outputs/audit/postmortem-v3/forensics-b3082e0/postmortem-v3-forensics.json"
+      ]
+    },
+    {
+      "contentFingerprint": "7f81ede9830934b4c35f4a423bb4e9f27966fd2e7d441dd5db159465746b9cae",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "800c2a22f148cade29d12faacc784f5e1e6522360ff77bb0410f6dc1aef16d8f",
+      "sources": [
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmdpii-2022-effective-audit.json",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "80a2d526fe2031bb9e19f2e99abc3f96f98a6c1531f6656d442facb08b8b8103",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-80a2d526fe20/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "875b5be9bc6028ae80ef50a5d3db1298e09301846742299252c642b9c2828d71",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "89561bb8f1fea23a3f17560cabaf979c37ff326672900f5a0197a7fa507fb525",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-89561bb8f1fe/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "8b556d763a45353499c04a487f52bac8e03167762eff52e652f51e9541afc15f",
+      "sources": [
+        "outputs/audit/cmb-2024-effective-audit.json",
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-pilot-summary.json",
+        "outputs/audit/ocr/cmb-6ano-2024-2025/rapidocr/ocr.json",
+        "outputs/audit/ocr/cmb-6ano-2024-2025/tesseract/ocr.json",
+        "outputs/audit/pilot-10-summary.json",
+        "scripts/ocr_raster_pilot.py"
+      ]
+    },
+    {
+      "contentFingerprint": "8d679e7b8193e823fa8640a0ea42c1742319b6ad050459780b9db95c4b447beb",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "8f045d628a3bc52e8c066952d775d9c630061cbe4bb0c61d2521e975d3610b34",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-8f045d628a3b/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "910ec5c0586550c01e80aeb60b4b0b5f0c265642396c5406547403f036c7b78c",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "9244fa023c2ce3552cd71c0de932132f5db45fc53c81733ea0f9f5036aadbea5",
+      "sources": [
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmc-2022-effective-audit.json"
+      ]
+    },
+    {
+      "contentFingerprint": "98073fedab5530142b324c32888ffdbc8e94589bcba95dea06be3dd7c0ee531d",
+      "sources": [
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmbh-2021-effective-audit.json"
+      ]
+    },
+    {
+      "contentFingerprint": "9832ec9bb87dfbf843c744234a29bc6791f7d0461029ba1fdfc6e0816dc46f82",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "9ba95ff94809a180a49e8105bbb12625ca915629fdfaa40cf1d140e1fdf83c5f",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "9dc46cc2c41a31eb6c8b0957aab8e68aab83264d5607895e4c2f3122fe7ba6e0",
+      "sources": [
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmt-2021-effective-audit.json"
+      ]
+    },
+    {
+      "contentFingerprint": "9e5d2df289e0ab3d0ba8e1b1b0a5f9604011e44894cdadfa4bb137ac87ad9cfd",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "a03246583c05741eee5471bb48b51ab9c655548aaa8b7f3e87c5f1d351ae16f0",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "a1ddc006ef5638f1ead8e452334e2db87a1e9995e02261b34cecb64c8e3b043e",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-a1ddc006ef56/tesseract/ocr.json",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "a69802d8aa53c27652f8a374950dddab9e3015215dbec2fc38587daf4be64fd9",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-a69802d8aa53/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "ad34c4cf7f30b6c8a0ba2cfd5c6cef41e74b64e66ffc568dee16d3cada78cd83",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-ad34c4cf7f30/tesseract/ocr.json",
+        "outputs/audit/postmortem-v4 (existing document directory)",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "b605f7a51fd572b4de2594787e7a5b5fcdb258ec199532bb8853c8301815198f",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmbh-2015-effective-audit.json",
+        "outputs/audit/native-render/68d904d0b7d993ce/page-04-dpi160.png",
+        "outputs/audit/native-render/e8a88725db78c341/page-14-dpi160.png",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "ba6586b35bc27b2e1f9beb225d822e887a6d534d969fef71b9ed24811aa3bfef",
+      "sources": [
+        "audit/holdout/manifest-v1.provenance.json",
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmbh-2018-effective-audit.json",
+        "outputs/audit/native-render/1982b661687b7ec4/page-02-dpi160.png",
+        "scripts/audit_response_regions_benchmark.py"
+      ]
+    },
+    {
+      "contentFingerprint": "bae013fd6320dfd6239f558d32021cc4e8a67b59d57900e3879215cdcfb5b36b",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "baf8e7eb95bb52ddd07eb9447ff7e26dda11507f57a876237bb4df9fb9a183f8",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "bb2d8abd32d4297f02c8ff6a41f9fabafaa21bf20f0a16ed8204bfad81314054",
+      "sources": [
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmc-2013-effective-audit.json"
+      ]
+    },
+    {
+      "contentFingerprint": "bb62e60cf7ed1c961bcba262fd6136972ae6796d3759d8d1ecda67aab6e8e0fb",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "bd94ca1b4e4787c8c25cb4569ded85d9b751e6585e1bf6defb6aee6c39525666",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "bed61a4238e6fec7becd0ec129ea0226a24dcc79193e2be4bfdc7d506cb0a62e",
+      "sources": [
+        "outputs/audit/cmc-2014-effective-audit.json",
+        "outputs/audit/pilot-10-summary.json"
+      ]
+    },
+    {
+      "contentFingerprint": "c26a0b44ee4a7ad96258cf9eb648256d83779ec348943cbfe7de3787fff51dfa",
+      "sources": [
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-15-reconstruction-summary.json",
+        "outputs/audit/ocr-raster-15-summary.json",
+        "outputs/audit/ocr/cmbel-6ano-2018-2019-mat/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "c3bd7c5a8bcd831a60de2ec7ca342e304658c9addaf4b5ce8f345f53146e8e8d",
+      "sources": [
+        "outputs/audit/cmb-2016-effective-audit.json",
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-pilot-summary.json",
+        "outputs/audit/ocr/cmb-6ano-2016-2017-mat/rapidocr/ocr.json",
+        "outputs/audit/ocr/cmb-6ano-2016-2017-mat/tesseract/ocr.json",
+        "outputs/audit/pilot-10-summary.json",
+        "scripts/ocr_raster_pilot.py"
+      ]
+    },
+    {
+      "contentFingerprint": "c41ddc7b55ec4e18550e2be6decab59f307b6acc7699ab17e69b7f478330ca4e",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-c41ddc7b55ec/tesseract/ocr.json",
+        "outputs/audit/postmortem-v4 (existing document directory)",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "c494569a6fe709b6649917e9ffdd99be532ba324ccff7a1d89659f99fcd56261",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "c573e686e88211332418b68914be57ed2c723977ed92dc7b68f24dd2a167d067",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-c573e686e882/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "c7ae7c1e6646dd6cff02e856a5faaa42cf583ebf204463453c436f2b24c7d1da",
+      "sources": [
+        "outputs/audit/cmbh-2019-effective-audit.json"
+      ]
+    },
+    {
+      "contentFingerprint": "c7f2f02d07cac81720089ec0d75558c5b6381f301ce2ce40fe1ac1dbb9451dda",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "c801f355130f102272fd569ce2548464d86077f38a790c0c105b42ff7e75e9ca",
+      "sources": [
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-15-reconstruction-summary.json",
+        "outputs/audit/ocr-raster-15-summary.json",
+        "outputs/audit/ocr/cmb-6ano-2020-2021/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "cd0a32a923828730979adbd73959100d889a3f789e92a6fc379b2ad60a3b1dc6",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "cdfd5f9ff4140037ae0517dde427d17811ecf161c130c5739a1e4d0bfd452014",
+      "sources": [
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-15-reconstruction-summary.json",
+        "outputs/audit/ocr-raster-15-summary.json",
+        "outputs/audit/ocr/cmb-6ano-2018-2019-mat/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "ce3a397a5153cffa42987632c5dfad34ae1254f4723cff9f9acb09e50164265e",
+      "sources": [
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-15-reconstruction-summary.json",
+        "outputs/audit/ocr-raster-15-summary.json",
+        "outputs/audit/ocr/cmpa-6ano-2022-2023/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "ce6f77f83acf80c553241cd0fd4b5cbeabb6b50dc503571241c3c41ac757bdc6",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-ce6f77f83acf/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "cef618be31e62342be648b0e0d772f5ca53f83f62b417bcacde60efbc1a5c149",
+      "sources": [
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "cf6b56e7abd787dcdb64cc2cf7a41b848ba28a413fdde69d71f199b3efe058b2",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-cf6b56e7abd7/tesseract/ocr.json",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "d098c68386fe6bb2d89305d2e34f8e851567914876fc8c55644d0d96a210d734",
+      "sources": [
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-15-reconstruction-summary.json",
+        "outputs/audit/ocr-raster-15-summary.json",
+        "outputs/audit/ocr/cmb-6ano-2017-2018-mat/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "d24e3bf5f636c5a8b069d0ec6e0d80f6f1586470a4fc18942d229b513df5d63f",
+      "sources": [
+        "audit/holdout/manifest-v1.provenance.json",
+        "outputs/audit/cmbel-2017-effective-audit.json",
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-15-reconstruction-summary.json",
+        "outputs/audit/ocr-raster-15-summary.json",
+        "outputs/audit/ocr/cmbel-6ano-2017-2018-mat/tesseract/ocr.json",
+        "outputs/audit/pilot-10-summary.json"
+      ]
+    },
+    {
+      "contentFingerprint": "d452c3def3e52cb9e9769d86d9888d6bba78f07c65c268c75c4ab9bd624a6222",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "d5c07fa035bf97281630c2356f95234d1b2397d369ef893de78c1dfa77ee1565",
+      "sources": [
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmcg-2022-effective-audit.json"
+      ]
+    },
+    {
+      "contentFingerprint": "d64482e70eae958999301355c9496f39a157a0caa2030277a201a1c25f17457d",
+      "sources": [
+        "outputs/audit/cmc-2009-effective-audit.json",
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-pilot-summary.json",
+        "outputs/audit/ocr/cmc-6ano-2009-2010-mat/rapidocr/ocr.json",
+        "outputs/audit/ocr/cmc-6ano-2009-2010-mat/tesseract/ocr.json",
+        "outputs/audit/pilot-10-summary.json",
+        "scripts/ocr_raster_pilot.py"
+      ]
+    },
+    {
+      "contentFingerprint": "da77cb58fe91c525cf71212752de5e7d2dda1fa753ce92a95ea49467995f7aab",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "de124896cd9d8383bad3221c3c9fff0aea1e8b31c0f5b106f309d3445e42445b",
+      "sources": [
+        "outputs/audit/admission-pilot-summary.json",
+        "outputs/audit/cmbh-2022-effective-audit.json"
+      ]
+    },
+    {
+      "contentFingerprint": "df9edb180cb3ec704c7e01632f71c93d6ad1b4d74ff3adaff388362aabb017cb",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "dfb78caf74babfbfd35b8b2c742c537fe9c551b7cd6a42d7b86cd16e61f77223",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "dfc436902f72e7f71ea2d04e559fed8664ceb0ee485e970269b34c42d7e24be7",
+      "sources": [
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-15-reconstruction-summary.json",
+        "outputs/audit/ocr-raster-15-summary.json",
+        "outputs/audit/ocr/cmbel-6ano-2021-2022/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "e40d248176be1569a61517b910933b01de808432d246eb3d3e53f4e23cb4cb54",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "e57019a7359bc982f7ddf64d1e1251070963bff085f32107d3bb94a00ac5a2ce",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "e623f0284632adb0a80f4566c0952aec6135612d3dd49bf71c84219974a4aff7",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json",
+        "outputs/audit/ocr-marker-scorer-shadow-summary.json",
+        "outputs/audit/ocr-raster-15-reconstruction-summary.json",
+        "outputs/audit/ocr-raster-15-summary.json",
+        "outputs/audit/ocr/cmb-6ano-2023-2024/tesseract/ocr.json",
+        "outputs/audit/ocr/doc-e623f0284632/tesseract/ocr.json",
+        "outputs/audit/postmortem-v3 (existing document directory)",
+        "outputs/audit/postmortem-v3/forensics-b3082e0/05-doc-e623f0284632_q23/case.json",
+        "outputs/audit/postmortem-v3/forensics-b3082e0/postmortem-v3-forensics.json"
+      ]
+    },
+    {
+      "contentFingerprint": "e981c0dce132898297112fd6b9fdce8dd6b1f32ba23106ceeeb9c8ac9f173d26",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-e981c0dce132/tesseract/ocr.json"
+      ]
+    },
+    {
+      "contentFingerprint": "ebb36ff266148269af7603c0c4133266227ce64ac5498874d191145a7ec268d0",
+      "sources": [
+        "outputs/audit/cmcg-2023-effective-audit.json"
+      ]
+    },
+    {
+      "contentFingerprint": "ecd771e271883d1d5e3e9ece71f6717121690978adbb7234b8ad5660e47f25a6",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "eefc3d15076e47cc143d5b5dd62ebeeed0dc0c206bf07c67ef166bf19ed609c3",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-eefc3d15076e/tesseract/ocr.json",
+        "outputs/audit/postmortem-v4 (existing document directory)",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "f03e7d17eec1cd97788ae2f938dbeb4c91e64c79db0b57e0b064ab28670669d7",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-f03e7d17eec1/tesseract/ocr.json",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "f0b208eead34fe9bbda2f1b8f78ee29c26f87553ca41a4b9ba2f9057f3db5ed7",
+      "sources": [
+        "outputs/audit/postmortem-v3 (existing document directory)",
+        "outputs/audit/postmortem-v3/forensics-b3082e0/06-doc-f0b208eead34_mat_q10/case.json",
+        "outputs/audit/postmortem-v3/forensics-b3082e0/postmortem-v3-forensics.json"
+      ]
+    },
+    {
+      "contentFingerprint": "f4dd0107181635855698e2242629cade64f086ecd5068f81a0ffddb97c25060f",
+      "sources": [
+        "audit/postmortem/v4-postmortem-sample.json",
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)",
+        "outputs/audit/ocr/doc-f4dd01071816/tesseract/ocr.json",
+        "outputs/audit/postmortem-v4 (existing document directory)",
+        "outputs/audit/postmortem-v4/first-analysis/forensics.json",
+        "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json"
+      ]
+    },
+    {
+      "contentFingerprint": "f4fec1ad1ba2ff4ed66b8b330ff2b53919e9cf8cdc9453f619f97e5926cdb46d",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "f64ab9b16528c639d06c525b2b1e0af36d67d692992ef90838b373beb45c7c05",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "fc9052837176dd8db29cad6f199c9c963c25ef3c04bc4fb9e1959e2fc6c8649a",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)",
+        "outputs/audit/ocr (existing document directory)"
+      ]
+    },
+    {
+      "contentFingerprint": "fea5957ad43c5660d3e0475d84faa321bab91afc5d5d72278024b8ec89d57f2d",
+      "sources": [
+        "outputs/audit/holdout (existing document directory)"
+      ]
+    }
+  ],
+  "sourceFileSha256": {
+    "audit/holdout/manifest-v1.json": "72a04e811c6cabd3f282d3c38be8e06389af772610a2b37117805412b56811fc",
+    "audit/holdout/manifest-v1.provenance.json": "2af54f4b639c2d8ce7493212ed993e066e50e25ea6020df091cb00f49dea6b69",
+    "audit/holdout/manifest-v2-b2-r1.json": "b506578b591d187f154d3a0dd8e5d579d65e06225c799808c83d681aa6f11a26",
+    "audit/holdout/manifest-v2-b2-r2.json": "882ef8b49773c2a1c1ea969b2e21f65b7e2a277aa08d7bb2fd20dba8aecdcf68",
+    "audit/holdout/manifest-v2-b2.json": "f1b7d5b24d68b57bc4d954ef92d62c93c18bd59dbdc07ce48a1270a8d4ab2275",
+    "audit/holdout/manifest-v2.json": "1853f77f5231e2830e6f29f83b48b7a10db579f220b6591012407feaebcd1283",
+    "audit/holdout/manifest-v3-a.json": "fbcf43201c1984e6b84d70960f10945a249c5b3805bea9492e6f431ed0d4c20a",
+    "audit/holdout/manifest-v3-b-r1.json": "76f37be3ee65f92d6076b4f395d516e48be7cbaa62766241ad38ada5583bd8f7",
+    "audit/holdout/manifest-v3-b-r2.json": "7fd41af1daf38fb1f1411b49cbdbb29d637523fb9b1fe93cc7369f323e9e7898",
+    "audit/holdout/manifest-v3-b-r3.json": "5955e7d96d47f304e645dcdf6e82f124fc9fedfbee085e98f0d548e20c8296e0",
+    "audit/holdout/manifest-v3-b-r4.json": "2ccc005ef7ffdbf02551c73d0f3917c93a3ccc8c34bfe6cb22390f8e467efcc8",
+    "audit/holdout/manifest-v3-b-r5.json": "54252241ca182a15b8ad43266ed6e1d8ad8e91c7b3f300b41644c5b59eb606e4",
+    "audit/holdout/manifest-v3-b.json": "acc27986617cd9f560a37e4f937b99a93a5bdff70393d090c29d81caf4db3b41",
+    "audit/holdout/manifest-v4-a.json": "be69ceafd2fde2ce00f5f72966c12e22d33f575785ddc00ae57030fe74b2dccc",
+    "audit/holdout/manifest-v4-b.json": "763290a582e5ed9436717c8cd754bb4501ad5a6f6aa5c69d8b3287014e93f8e7",
+    "audit/postmortem/v4-postmortem-findings.json": "82056ffa71c4baefb44f8549fea6f5306fc528939690424622fe34fa433c0608",
+    "audit/postmortem/v4-postmortem-sample.json": "c3d9f0fde9f8977a1dd7e530842efc321c68bdfce4ac8554142337dd208b34fb",
+    "outputs/audit/admission-pilot-summary.json": "524bceac2469fc87e80746bba980732fcbe5e0870502d6064f363cc170db29fd",
+    "outputs/audit/cmb-2013-effective-audit.json": "4ba4c81c37c9fe85073a9b2381a81c49e91c2488e6cc17b0cd9cf2f227cd14bd",
+    "outputs/audit/cmb-2014-audit.json": "abb4c7e43aa6692e7db05f4ce42fa9b478d33dfb5e15cdde29469abd02e9c91e",
+    "outputs/audit/cmb-2014-effective-audit.json": "7c2a692285e5b97f28a383b24eeac7750918f7e4c907c958ad1fb83d50f8299c",
+    "outputs/audit/cmb-2015-base-audit.json": "892ec03aaaa97f1201b3f27cf3e3705f63d3d6e1a1e1ee5c97312c999eaa1772",
+    "outputs/audit/cmb-2015-effective-audit.json": "9292636f53c20947c76719c97dc0f846c5000d228f071e5946622d9f2b5d4351",
+    "outputs/audit/cmb-2016-effective-audit.json": "da957da3c710e93ec9975b27e74c74b19a5644f9c2ff169fa1942dcd9897920a",
+    "outputs/audit/cmb-2024-effective-audit.json": "e0e2f35671bc75fac901b05786035466f96fb8e39cca309dcdca96db473bf142",
+    "outputs/audit/cmbel-2017-effective-audit.json": "406c938517398c8857f2c867c72902ad4110115d2a93aa05abf7ff5a32b6df7b",
+    "outputs/audit/cmbel-2022-effective-audit.json": "d6e2191b971a8086a55818745b159bbe18e202ae0327d1cff079f61448b388ee",
+    "outputs/audit/cmbh-2013-effective-audit.json": "a0c684bf393340972603076c6219c1bea5a0c9d61a7dbad5412f35c69ed3e5b1",
+    "outputs/audit/cmbh-2014-effective-audit.json": "7dc55938453eeeda7eb4a89c20dfd5eeead22498e725cc2d66df05fe21f2b53e",
+    "outputs/audit/cmbh-2015-effective-audit.json": "e8ebd302877eca361ca222557d59d86c28f701d417699cd3eb5cce713749c9d4",
+    "outputs/audit/cmbh-2016-effective-audit.json": "7db632323c7214f81b46901254a37d3fba4ef8553f8d515abb871ac4e890ba6c",
+    "outputs/audit/cmbh-2018-effective-audit.json": "b7ae0f02639b02dc494c1865add719fb97d2ffa7e5db479b8d8c0ec41ed70348",
+    "outputs/audit/cmbh-2019-effective-audit.json": "43ea3403ec0474a48d88913e38645b19a43f068e5c57812b07aec4a00f77fa1c",
+    "outputs/audit/cmbh-2020-effective-audit.json": "1818be27c3073a82c8f380f1c6731c9236ce2ae47cb773af7811419b9f3edb75",
+    "outputs/audit/cmbh-2021-effective-audit.json": "f3141f09ed6d42a119465ce5f8d98c38ca482fc04bf5c46a5a43d4ce6b94d956",
+    "outputs/audit/cmbh-2022-effective-audit.json": "f0b7618adba0566f0fc91dfd906f297a203c0fd68c0a9eb1e608d4b2ec85aa68",
+    "outputs/audit/cmbh-2023-effective-audit.json": "bebf2208778d711a2369e7a7e1f34eb318666dd97cb3f1052cd471a0e632ad62",
+    "outputs/audit/cmc-2009-effective-audit.json": "7d3d2d395092d7e01b412d39aa109fdbb1c94a1a1330ec180fccea3a15f83865",
+    "outputs/audit/cmc-2012-effective-audit.json": "f364f4ccc8477c1c5f063e9b5a97913b12c3669cf3b92b23a23ead736ed06200",
+    "outputs/audit/cmc-2013-effective-audit.json": "fd78b5560fb975a7fd2395f343fca2e8a9c25908b325d92e5fcb94b7031831d1",
+    "outputs/audit/cmc-2014-effective-audit.json": "b3e1da48125cee4e64d19682fa6c421bf4b48d811bf9605673d776db3a67066e",
+    "outputs/audit/cmc-2022-effective-audit.json": "a1e67dbef62c9ca6621c714a07b11a94c73a035c4ec56b7e9265dfcc30a467ef",
+    "outputs/audit/cmcg-2022-effective-audit.json": "df8abc9c4833135294f2091bebe8b7c308a090520b2a0fc3575e473505f743ac",
+    "outputs/audit/cmcg-2023-effective-audit.json": "0c70d7cdabbe530df46651bdd23b327c66b54657cf75492be70d158b56b853e4",
+    "outputs/audit/cmdpii-2017-effective-audit.json": "34543dbba072ca52a3e9f3a4d1fcc5340c4bc70d6cf1081d75e81e94f360d579",
+    "outputs/audit/cmdpii-2018-effective-audit.json": "e07725a9115aec1a30cc26247f4722c050def1110e8f68142fe3d528639df881",
+    "outputs/audit/cmdpii-2022-effective-audit.json": "096347506efc2e8755cdbc38a4e5f4a44777455e86a45cd4f4e0f779fc1a1def",
+    "outputs/audit/cmdpii-2023-effective-audit.json": "e4487dc1e4709cb5273f4a9cc0c89b470fc01283a3cd7acca3a71671ac099744",
+    "outputs/audit/cmt-2020-effective-audit.json": "583e6ecf8f251100f85120e30e060397d16b3ed7b2b6f4fae3fb5f23a664818d",
+    "outputs/audit/cmt-2021-effective-audit.json": "ba12afb7c1b8957be7d704054a2107490b441fd0cebd5801a8188e5951f9135b",
+    "outputs/audit/cmt-2022-effective-audit.json": "b0757e19bb6ed334f985b822c434eb13658d8c324c45e41d1d19ad2871218356",
+    "outputs/audit/cmt-2023-effective-audit.json": "cd30aeaca630a2be05e22dc0da61ee47ba640823b2c24e20645792363ba146e7",
+    "outputs/audit/native-render/1982b661687b7ec4/page-02-dpi160.png": "2f64908be5c56c73b38eaaa28ba02a3f5ebfeb82357a64e825dab048128f4367",
+    "outputs/audit/native-render/68d904d0b7d993ce/page-04-dpi160.png": "ab2469bc1b8fb9694beb222919302af562aa0ee3bbb2ba69295a0f1bf5231318",
+    "outputs/audit/native-render/e8a88725db78c341/page-14-dpi160.png": "d0f81ae02d6043e47943151ea59523ef872ef2e17cee5ce1945b219979665ffd",
+    "outputs/audit/ocr-content-pilot.json": "596f13a2b143afb9dfd6a6e06c822eaa92966978ec32fe875cf12fe27496eaa9",
+    "outputs/audit/ocr-marker-scorer-ab-use-flag.json": "ffbbb05f22e68c195b8a106e3f25bed357d987acb4fe387466dd3e245d661f1c",
+    "outputs/audit/ocr-marker-scorer-shadow-after-numeric-list-guard.json": "a6d7f0ac341fde6e12b83d024859faf54cf4140f6fef497fb49a8d7dbbddb07b",
+    "outputs/audit/ocr-marker-scorer-shadow-summary.json": "dcae1c0c75c6658c061eba1f8e60726285d0926aaf1e2fc839551df30d7d0cad",
+    "outputs/audit/ocr-raster-15-reconstruction-summary.json": "a4b10a00f81fafa14a57500dabe2c7f9d0581d2a21287d9d8edcb85d4302f0d2",
+    "outputs/audit/ocr-raster-15-summary.json": "c81f9631ffa0471d06cf12df739b9c841d2711107595b694d4da64b79e485b03",
+    "outputs/audit/ocr-raster-pilot-summary.json": "a240e0f43c77a9e16da1f91d50f85eb531e762190932b85fee56de773b449213",
+    "outputs/audit/ocr/cmb-6ano-2016-2017-mat/rapidocr/ocr.json": "bb5b806c92cc405530feb5a5a09ca7286edf10662279fbaf0505bf773219772a",
+    "outputs/audit/ocr/cmb-6ano-2016-2017-mat/tesseract/ocr.json": "aa9e3c72fb89ec8c79167fbb450852adb4e3053d420f2f4bc00651ea579cfe0b",
+    "outputs/audit/ocr/cmb-6ano-2017-2018-mat/tesseract/ocr.json": "eec29577d91189f032832a2a5e0e500c99ad8d4397dafd4105bf94d0b4b3b442",
+    "outputs/audit/ocr/cmb-6ano-2018-2019-mat/tesseract/ocr.json": "1284735d87991ec76cc2d258bf6f6501873ba7f7b1a409022878b740e7e554e1",
+    "outputs/audit/ocr/cmb-6ano-2019-2020-mat/tesseract/ocr.json": "b9eced41ad2d9e10155cbb39b75938d8e49137dbeb4a6e29385acf1ea8a0c2f5",
+    "outputs/audit/ocr/cmb-6ano-2020-2021/tesseract/ocr.json": "236ad1f3162ca3e47377633958153906764a600146a536f852f79d4b14995c1a",
+    "outputs/audit/ocr/cmb-6ano-2021-2022/tesseract/ocr.json": "2499e85bc3e37047f8f7aa6c39852752715449bc346055fda7e9a0472e4dacd4",
+    "outputs/audit/ocr/cmb-6ano-2022-2023/tesseract/ocr.json": "2d308b0dd6bf467a8c5f71ee5017c0881e806a4eb541ebd7bfa2e893722b2674",
+    "outputs/audit/ocr/cmb-6ano-2023-2024/tesseract/ocr.json": "0a32894c22de419ccced4bc82387cf1b104f93ed81cf162dbd9c1603868a034d",
+    "outputs/audit/ocr/cmb-6ano-2024-2025/rapidocr/ocr.json": "35ddea5ad90e6e7ebed64c2979f10f6bfee3e72980dfb5d460d7876fa48e9e5c",
+    "outputs/audit/ocr/cmb-6ano-2024-2025/tesseract/ocr.json": "76f9050f8c05223572671d781d7e0c40f737df1b01f6d30e64e6472513673813",
+    "outputs/audit/ocr/cmbel-6ano-2017-2018-mat/tesseract/ocr.json": "433d1ac69e94afd16bc155712fff98fc76cf429b136cb486b550abcb6ba3e9ec",
+    "outputs/audit/ocr/cmbel-6ano-2018-2019-mat/tesseract/ocr.json": "cc6cbe207456c562fa48e7472b59834bf6cca945a6744e27efbc29a6fdea882b",
+    "outputs/audit/ocr/cmbel-6ano-2019-2020-mat/tesseract/ocr.json": "34add83e46b1a3b3a3095f71f4dfbe625ec56d40b9ee921e382df7698983133d",
+    "outputs/audit/ocr/cmbel-6ano-2020-2021/tesseract/ocr.json": "b531270fee5326af52bac56b2b4fa7ffb46a3a5bf6c0db14aaae5c7e221bebac",
+    "outputs/audit/ocr/cmbel-6ano-2021-2022/tesseract/ocr.json": "efe68deb8db925bd6a4da53de902485c2fd3bcbe30767bb123f1b5e2a3c6e5c3",
+    "outputs/audit/ocr/cmbel-6ano-2022-2023/rapidocr/ocr.json": "fbfcc0cb6724bdd6d975c5861a631b05aec5c77dd1365b588443930a9c94f288",
+    "outputs/audit/ocr/cmbel-6ano-2022-2023/tesseract/ocr.json": "9f65079fd44c8f0012280e6285baf4a8b77690394e1747dd3fbd6badfbca8d2f",
+    "outputs/audit/ocr/cmbh-6ano-2017-2018-mat/tesseract/ocr.json": "00588c3669eaf2ad552914baabcd1ca7f7ad03e62730f62fdb354605591da94a",
+    "outputs/audit/ocr/cmc-6ano-2009-2010-mat/rapidocr/ocr.json": "490e1f1e9c510887b8cf1e43d8412f0e69faa9d17893b910744ad09d61d7230a",
+    "outputs/audit/ocr/cmc-6ano-2009-2010-mat/tesseract/ocr.json": "78c429f9d2577c3d6f1848bbe3e5a0791c2256d120ad2135c7944f78cf52e509",
+    "outputs/audit/ocr/cmc-6ano-2010-2011-mat/tesseract/ocr.json": "676a8803616476fbcc6bbfd66a4b98935dc696067a5cb75d9f9aeaff34ee98d3",
+    "outputs/audit/ocr/cmc-6ano-2011-2012-mat/tesseract/ocr.json": "ed45d8cde6f54e80abf3452c7be2255b6efd008f3fa3bed8466ea32184980e68",
+    "outputs/audit/ocr/cmpa-6ano-2022-2023/tesseract/ocr.json": "ccfe2751f4a7245b75fafc747bd5ffd5e81c638b641f36a4b49eb841d2802a63",
+    "outputs/audit/ocr/doc-0ccd40b73099/tesseract/ocr.json": "9669cdad9fc5ed3a8663b37de0942590755bccbf9ea9deaed475bacb8288a7cf",
+    "outputs/audit/ocr/doc-0db5ce524459/tesseract/ocr.json": "4cd2330bc16aae87b3f9554130ed5946befc87d114975947b32b346bc9b18842",
+    "outputs/audit/ocr/doc-0e45d0a32d5d/tesseract/ocr.json": "355f6cfbd97fd704aee30ba70850c492be67e0a4269996baa2d0f3ed9bb30342",
+    "outputs/audit/ocr/doc-143e13dc75ed/tesseract/ocr.json": "182c71f60f6d3180e65dbbac05b20cf0aeb87ca8e9f49d50e6a4ef4368de6e70",
+    "outputs/audit/ocr/doc-186673c8476d/tesseract/ocr.json": "fb2aa13205873d26039a321e22fbb5e8e528c3e4affcf0124df1c7d4bd4c078e",
+    "outputs/audit/ocr/doc-21b1367493fe/tesseract/ocr.json": "549be91ec63197e39c40840e3c01085e1becb18c37ea1b3938b163779c8aad22",
+    "outputs/audit/ocr/doc-273eb386d3ec/tesseract/ocr.json": "defad8403463407318cf53cc70fd14f87b0ec9c79981fee2a1f8fc25c3fe2624",
+    "outputs/audit/ocr/doc-2790a3c9786b/tesseract/ocr.json": "bac7668282896e5623052e96646bffd3555e84c0c6cbfa5c0be4e9e9d2ee5a9d",
+    "outputs/audit/ocr/doc-2f4df1da2128/tesseract/ocr.json": "08ae71a3b9f4d1ce0b376f343b5545a5bb146c2daa18cca134b7c324d6f4e79b",
+    "outputs/audit/ocr/doc-381cca4d6df1/tesseract/ocr.json": "97fd6bdbf15da3b6195550b759fd63e4cee0e8b18a9ea82d94496c5f934d4ed3",
+    "outputs/audit/ocr/doc-3c4434b96a50/tesseract/ocr.json": "8fe986cd101beaded4f27386e0e7f0eaf95d0ae8b012ee3183b6b14ce9985874",
+    "outputs/audit/ocr/doc-403fa98cb83a/tesseract/ocr.json": "80d385a3776a8accf770e7cef9a7879d8e797efd5a822fbb3141f4753f4a840d",
+    "outputs/audit/ocr/doc-42af2b3d2b27/tesseract/ocr.json": "e56f3e24fac274aea378ca5f54efdcb07271d53108846a5d640801d5bd78ae60",
+    "outputs/audit/ocr/doc-56268e79f6bf/tesseract/ocr.json": "a747735d8730e7b6c527c3d85f3bf465ee6cb91aa6206b41545695af47090c75",
+    "outputs/audit/ocr/doc-591f3e819d58/tesseract/ocr.json": "816c45167ceb71c5d4639291324bb6c314e155cd6882d76048031a38572ba88a",
+    "outputs/audit/ocr/doc-5ab1bb813119/tesseract/ocr.json": "d00bf4380aa13d29c879b77fd6b3b0be81ef4ec468ad076ecd17b0885335b167",
+    "outputs/audit/ocr/doc-5b13e6839c6f/tesseract/ocr.json": "3c8f7dc0098c37f8d3a3047634ebb7ebbae85c1780ac06ff9e4d26f56cd1f166",
+    "outputs/audit/ocr/doc-5d61be2ac853/tesseract/ocr.json": "8dc0a21cf9890137d123d3ce56081e99ec0e2ea3adf02529fd674e801de8006a",
+    "outputs/audit/ocr/doc-6b61dd9acf63/tesseract/ocr.json": "1e6b2e908eb35e9e8e2ed0c7f597fe11e0e89a493cbcd41379d881975749766d",
+    "outputs/audit/ocr/doc-77742da9fa12/tesseract/ocr.json": "c823d211ddaa7df40ce07f44fd7bad96da780c81d714f8511517274437fdd5bc",
+    "outputs/audit/ocr/doc-79dd62d008f6/tesseract/ocr.json": "d9ab1dca9d5e95bc67ae2ccd5a4f3fc62ac7eaca310ded5794ce027f32f7d5f4",
+    "outputs/audit/ocr/doc-7a801b1ddbd2/tesseract/ocr.json": "48e6ca162d499dfd7e641d14b7f8fe67bd66ff9f847a043ec6daf522c7415fc5",
+    "outputs/audit/ocr/doc-7e21d913377b/tesseract/ocr.json": "a10e01743ebb5323370516bb374faf2541b3db59f66a98a1f71ca54e7c2d0cdb",
+    "outputs/audit/ocr/doc-80a2d526fe20/tesseract/ocr.json": "c748c6a38e1ea3cb8f09f2b5a9dc85d73bc863d4480e48849339ecbd6fbb7dde",
+    "outputs/audit/ocr/doc-875b5be9bc60/tesseract/ocr.json": "d7c2852b33cef4719fa85b25bf486c61700cf22d670eea87ea281df8a15486e0",
+    "outputs/audit/ocr/doc-89561bb8f1fe/tesseract/ocr.json": "f12616094645875e265811815d977a91bf89dbb05f60b5340bf88d3bbdd66d9e",
+    "outputs/audit/ocr/doc-8f045d628a3b/tesseract/ocr.json": "4210ad0409f001cf26769fffe82fc145702959c8b7e27c037681efa2f27a30f1",
+    "outputs/audit/ocr/doc-9e5d2df289e0/tesseract/ocr.json": "b7ddb0c45ac7a283a68329b915a41cc8401cb8779b21698708ca415369162a3f",
+    "outputs/audit/ocr/doc-a03246583c05/tesseract/ocr.json": "418fdccec08f7ff39f82a90b05ba7be78121fd96d1fc245623bb5b3b7826ae5e",
+    "outputs/audit/ocr/doc-a1ddc006ef56/tesseract/ocr.json": "a21b32b72d9b0a5d2add3be0a132002e0372acacac46fdc836e280163a9ad165",
+    "outputs/audit/ocr/doc-a69802d8aa53/tesseract/ocr.json": "f9cf7abe1964d41251624388054cbb5a956a5066960b308d5555b321b9123928",
+    "outputs/audit/ocr/doc-ad34c4cf7f30/tesseract/ocr.json": "77cc4ab829510f46cb1409640d168eb4bf28331d3c26fa8aab5fb844a281ec29",
+    "outputs/audit/ocr/doc-bd94ca1b4e47/tesseract/ocr.json": "d0b8c45a37759dadfe50c0ccad366a30dbc5f089e49765b48276bff1b4b65873",
+    "outputs/audit/ocr/doc-c41ddc7b55ec/tesseract/ocr.json": "7d07c151b707aaa658097f9e84c297af6cebb918ca6fc15ab551fdfdf77c20a2",
+    "outputs/audit/ocr/doc-c494569a6fe7/tesseract/ocr.json": "b49641bc1ec0f87c261debb5b6d9abcd8acdd8bd252f3d58c467fb7632289d85",
+    "outputs/audit/ocr/doc-c573e686e882/tesseract/ocr.json": "56ad5efdc14f4f80cc1154b2dbe8a68f9818189e0120585e19c37f576e202751",
+    "outputs/audit/ocr/doc-ce6f77f83acf/tesseract/ocr.json": "b3ef8c652ed262ab6330ba7f9c5f4c8cb300019f0a8108fce41b951373f68958",
+    "outputs/audit/ocr/doc-cf6b56e7abd7/tesseract/ocr.json": "56c9cea339e8a6aede5b18096cee73bcd877fce33dd3adc869d361ee9fda707a",
+    "outputs/audit/ocr/doc-e57019a7359b/tesseract/ocr.json": "f7506eaedd37f00d13951ca2887dc25eea2a2321da608f98b44df87a665e648e",
+    "outputs/audit/ocr/doc-e623f0284632/tesseract/ocr.json": "f144ef8e5788e30835c3773035924a3c40d3f06f07d2a70880853f49d6e5002c",
+    "outputs/audit/ocr/doc-e981c0dce132/tesseract/ocr.json": "fc8fbd6e1c74d26bfe0ff9fe9eed251e315fa98d3fffc5aa592ba0bad41c0ad3",
+    "outputs/audit/ocr/doc-eefc3d15076e/tesseract/ocr.json": "868058a2de5882f7c19fef20217b29a79a3013841317a714248fb3f73887c25e",
+    "outputs/audit/ocr/doc-f03e7d17eec1/tesseract/ocr.json": "f858189a97413b73b0f0f2b29ad2d8cb09180ab2d9c97489dec829c2aa81409a",
+    "outputs/audit/ocr/doc-f4dd01071816/tesseract/ocr.json": "d6653f6fbd40a8622d508f1c23605ac8955d9d1d887cb2f09d79fdd8b460a24c",
+    "outputs/audit/ocr/doc-fc9052837176/tesseract/ocr.json": "7ad1bcd4b35ce3a00fa4e9e50985b3de713e2c37f637dee2151e63c1d91b6e3a",
+    "outputs/audit/pilot-10-summary.json": "1ba98185036ab3258b6624391841d9779ff02dece21be55a84e33f4375831a73",
+    "outputs/audit/postmortem-v3/forensics-b3082e0/01-doc-21b1367493fe_q2/case.json": "544554787f5f7c6c1895ea218c2ee4ac05b9513d3a8795d07c81d56a4e83dc9c",
+    "outputs/audit/postmortem-v3/forensics-b3082e0/02-doc-273eb386d3ec_q7/case.json": "35cd7652eb9313b4df0387ea17c80857f9475e0db2f7c2b23ad61230a60a4075",
+    "outputs/audit/postmortem-v3/forensics-b3082e0/03-doc-7e21d913377b_q5/case.json": "bcb51b2f8d5ffef39f34900feca047f55a38d11f57eb919f80e871ccd1727fd4",
+    "outputs/audit/postmortem-v3/forensics-b3082e0/04-doc-7e21d913377b_q18/case.json": "1b6c1bd4d8e92fd4abe30853318a31c9e2abf097c59c4b761a1d3eb7fcd97299",
+    "outputs/audit/postmortem-v3/forensics-b3082e0/05-doc-e623f0284632_q23/case.json": "a28e676701af224f14c153ff2ca0e6b16d23dcb2f189e747cb41f6c835945ffa",
+    "outputs/audit/postmortem-v3/forensics-b3082e0/06-doc-f0b208eead34_mat_q10/case.json": "1f1988c8484b5f75e0353ad8946e51b3b6fca0ed5405a9aaff84786898bb8f01",
+    "outputs/audit/postmortem-v3/forensics-b3082e0/07-doc-7e21d913377b_q9/case.json": "a33c00bbe769c712de8fbec912db6d7ac456be2c7c77e3a4111d9ba465e3a9d3",
+    "outputs/audit/postmortem-v3/forensics-b3082e0/postmortem-v3-forensics.json": "5943f1a7a910ea29a7cfa4821f55f897c58151252f8b67866555d5cd90b251aa",
+    "outputs/audit/postmortem-v4/first-analysis/diagnostic-replay.json": "674c807049d13cb27cdcfb98f10ceab052ee95a3df8da15141ddcee8000099e2",
+    "outputs/audit/postmortem-v4/first-analysis/forensics.json": "bfedf92c16017860d925d04583106995246a5435b17a417a65de8e99651b57a0",
+    "outputs/audit/postmortem-v4/first-analysis/observation-probe.json": "82d8e1f12f0f47bba5d9d0ba8ef2a21bc3d07876ca23ab8392066d04cab63582",
+    "outputs/audit/postmortem-v4/first-analysis/pages-manifest.json": "eba74e80a5ead9b7b5bf2099fcb7d8e162bac3c1f97288b54821a20b6512ec65",
+    "outputs/audit/postmortem-v4/first-analysis/targets.json": "0d1ae16e6f0e4d357a00c8a163d5c72bc66c3dce5f508edf89ef85964dc9ab51",
+    "outputs/audit/postmortem-v4/patch-01-selected-response-set/diagnostic-replay.json": "efb2ebcd06f6416a053c9043e5ad4368c2146527dbcaa1655e5089b7673dfcca",
+    "outputs/audit/postmortem-v4/patch-01-selected-response-set/preservation-before.json": "c464842393d43d5a388ac6e8c1a3944fc219d883658964c98b3d98433aa5075c",
+    "outputs/audit/postmortem-v4/patch-02-response-set-completeness/diagnostic-replay.json": "d74a30ffc5b9c92198ef4d18bd2aa96f6369992b65be697ce426b4323fe80221",
+    "outputs/audit/postmortem-v4/patch-02-response-set-completeness/preservation-before.json": "e2deedaa08833fb63477847c0f70bd0c3d3d10cfec3a0a3ac6654eea1627ded6",
+    "outputs/audit/postmortem-v4/patch-03a-boundary-identity-grammar/diagnostic-replay.json": "5540824bb0faa4b05cf8c867e18e868ea85de1c2196e416147965fac3bf2f158",
+    "outputs/audit/postmortem-v4/patch-03a-boundary-identity-grammar/preservation-before.json": "b57502cd54945867730f7541caeee8963c5b60b5805c7bf40d1564f7f592a6c5",
+    "outputs/audit/postmortem-v4/patch-03b-boundary-scope-columns/diagnostic-replay.json": "58cfa0eed064e8d270e87410e0e8951cacc0b0196bab7b10d9755ec56b8b02a3",
+    "outputs/audit/postmortem-v4/patch-03b-boundary-scope-columns/preservation-before.json": "3b5f00fc8333f4aa3d32b4c1e2703f5a6f8bc13d18f752df756a598e13c88521",
+    "outputs/audit/postmortem-v4/patch-03c-boundary-word-reconstruction/diagnostic-replay-final.json": "993c26917ababb11bd263c739e25447192a0e8bb0e426fcf40e48239045f0ded",
+    "outputs/audit/postmortem-v4/patch-03c-boundary-word-reconstruction/diagnostic-replay-refined.json": "6789054bc58ed0f9f3bb5570db4f1637e772ede335ae972a03aa2106ed5d6a72",
+    "outputs/audit/postmortem-v4/patch-03c-boundary-word-reconstruction/diagnostic-replay-validated.json": "993c26917ababb11bd263c739e25447192a0e8bb0e426fcf40e48239045f0ded",
+    "outputs/audit/postmortem-v4/patch-03c-boundary-word-reconstruction/diagnostic-replay.json": "abd17465bb9ed56c062ed12a45ba2619df167d090fa51db6c60d5758bb0ae972",
+    "outputs/audit/postmortem-v4/patch-03c-boundary-word-reconstruction/preservation-before.json": "3364595289d7c06bafd59c70adfed31fd7f70eb28c5a7af9df38a565f70a6b7d",
+    "outputs/audit/postmortem-v4/patch-04-marker-role-spacing/diagnostic-replay.json": "8b3965ff18079a46f4c9d31bea9a0907ea59f18ad049b8b5db8d92a70fac0bc9",
+    "outputs/audit/postmortem-v4/patch-04-marker-role-spacing/preservation-before.json": "c17eb929a3e54bbff476826830a789358b8cca9826f8e2af8a920c253d02e55a",
+    "outputs/audit/postmortem-v4/patch-05a-visual-response-set/after-validated.json": "d1249a2ec24ce822c00c75f088fb9deda32583760b8c69d2931850e2e8cb58f9",
+    "outputs/audit/postmortem-v4/patch-05a-visual-response-set/after.json": "558f7bc9a80ac1ee88a2c6df737007543ca2f652c14c37907b84b09ca25ffac7",
+    "outputs/audit/postmortem-v4/patch-05a-visual-response-set/before.json": "0d94883b04507f6d0f0cb1fa57c290a0de73d87417b4028c7f289785793408a7",
+    "outputs/audit/postmortem-v4/patch-05a-visual-response-set/preservation-before.json": "d8faaa1ca8ba9c5be8fe8a6469e5b803463f6ef881d8c1c1f06874c0c4346b44",
+    "outputs/audit/postmortem-v4/patch-05b-safety-bisect/A.json": "9ca450abee3b3796a3b09f87e4d9304d57eaf0b5893aa1d4e96984ab62f20fc3",
+    "outputs/audit/postmortem-v4/patch-05b-safety-bisect/B.json": "9e957a369ece53b96178eb548545fb9f3db0e7fc7b7977a01c1f8e78a8473250",
+    "outputs/audit/postmortem-v4/patch-05b-safety-bisect/C.json": "ef0ef0d235e97ea871e610738811073f846782ab46e3775f3ec3e12e37d18b83",
+    "outputs/audit/postmortem-v4/patch-05b-safety-bisect/D.json": "4018710293d8883cbacb3790a1e9095b5cdaa0710b5bb4ba2301f745088a4475",
+    "outputs/audit/postmortem-v4/patch-05b-safety-bisect/E.json": "5d502c45a77235d4056897111ca06c7e9170973b1cb31c16c6c8fc727bcc6c21",
+    "outputs/audit/postmortem-v4/patch-05b-safety-bisect/F.json": "f1595530cbbc035a328724b6d7ab07dab23a7da672b77908567ea40b41b6d0af",
+    "outputs/audit/postmortem-v4/patch-05b-safety-bisect/G.json": "4c3b82be8356829eede9c1e8b964bba171cfde7da57053e48d507daae4704ce0",
+    "outputs/audit/postmortem-v4/patch-05b-safety-bisect/H.json": "9b9328de59debdf84f8bb24fbbafe73b54ea4a6287be5cc6b3aa61f4afe671d8",
+    "outputs/audit/postmortem-v4/patch-05b-safety-bisect/all.json": "c676c7c8e43666d3531734c9b5a15fafa70aa96f5f6d5437886abb809599144d",
+    "outputs/audit/postmortem-v4/patch-05b-safety-bisect/preservation-before.json": "ebed0fe99f49d781936c104ce94cd76027b9bc1a89b8346a9f8af2913b287776",
+    "outputs/audit/postmortem-v4/patch-05b-separated-safety/b1-replay.json": "2d580db9306c60bb3202d3363d2a822bb700f4b3a7a5161ee22eb306db8cdc2c",
+    "outputs/audit/postmortem-v4/patch-05b-separated-safety/b2-replay.json": "6e3e2552d21869e1652a6951fbd4d5e5bd63b38d327a68abaee4b31467d170f3",
+    "outputs/audit/postmortem-v4/patch-05b-separated-safety/final-replay.json": "bcc8f165137072f1e180510d86cfa25a92b985bcb8f2ff5b66fc1d5e36cefa27",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/05c1b/gutter-diagnostic.json": "562a08b9b6a76173ae05c19f1cc2c65dbb6fc53090d20747fad27db61572ca6e",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/05c1b/gutter-preflight-failed.json": "522897d9de66501aad4d5dd608b261bb52eadfe85f39f579bdc78ee943e763c1",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/05c1b/gutter/page-14-ocr.json": "39471e5f9e8894fa88f2f2c49c156163f97f9babbec8048491f333ab960afc60",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/05c1b/raw-q13-diagnosis.json": "29e2e2bbf4be86a50c0dd305a44aa65018b749b6efe56fa971f1da97f00f0301",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/baseline.json": "bfa155e1b520d878c503e472db8ac3c018bb4094f4cb1cfbbb4ed1651435c0cf",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/closeout/all-tests.json": "c90d605837c03afe8143986e70ce562511ff3ee0bbb8ff014759ed1c6e9a4bce",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/closeout/diff-audit.json": "ccdec5f0417b97f499305be74a034ef67ee073d6397ccab030d5f37e9dedd59f",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/closeout/ocr/doc-42af2b3d2b27/q16/page-17-ocr.json": "4bcf5124b1ebb38754ccf398b68b5adbc4f89f5e45c6e6cd55b128cf1d3dbc91",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/closeout/ocr/doc-5d61be2ac853/q11/page-09-ocr.json": "b1bea88ce7448691d8ba34e687f9986a0f9a62213a6ae8d3ce4f0f238c92c99d",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/closeout/ocr/doc-c41ddc7b55ec/q2/page-03-ocr.json": "56769016a6ebdc9c7a3d9b8aedc498c40cb017876736109566c8197975d44168",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/closeout/ocr/doc-eefc3d15076e/q17/page-18-ocr.json": "992381474ef91a81d01713afe39e9a9625382afdcf48eacc8109c0308e342108",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/closeout/ocr/doc-f4dd01071816/q13/page-14-ocr.json": "fc444e292f69f567b63e22a535e789f09ebc276938e1c9d6d81c15dab47fa966",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/closeout/ocr/doc-f4dd01071816/q20/page-20-ocr.json": "a99e8bb4448d3a35b3bee03f5b6038f62b7980417620df0237300724533214b9",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/closeout/ocr/doc-f4dd01071816/q5/page-06-ocr.json": "7bb196409638439be760b2c307ac40786a9b804e3e255a58a39557ed8580de36",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/closeout/related-tests.json": "419d74bd48fc25c69f0d9db9f958f7371c430224dc37290c3482eadaafb630d3",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/closeout/replay-validation.json": "0ed326c2913b465fa16ca9353502e313912444af661405f48ac5d77350d5a157",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/closeout/replay30.json": "a7eb2e64497c49e3538ef67466677ef25009f169a5347b5b579fbbb8f4e5e08c",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/ocr/doc-5d61be2ac853/q11/page-09-ocr.json": "b1bea88ce7448691d8ba34e687f9986a0f9a62213a6ae8d3ce4f0f238c92c99d",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/ocr/doc-eefc3d15076e/q17/page-18-ocr.json": "992381474ef91a81d01713afe39e9a9625382afdcf48eacc8109c0308e342108",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/ocr/doc-f4dd01071816/q13/page-14-ocr.json": "fc444e292f69f567b63e22a535e789f09ebc276938e1c9d6d81c15dab47fa966",
+    "outputs/audit/postmortem-v4/patch-05c1-complementary-ocr/targets.json": "b393c26ef9a3c0895be7ac424729c82453d0e5ee24f64cea6b8c490fff418973",
+    "outputs/audit/postmortem-v4/patch-05c2-layout-header/baseline.json": "ba98e2e975d81bf93b6c8df8507d3eb2236f347d0d5f501dc24a6607c3f92467",
+    "outputs/audit/postmortem-v4/patch-05c2-layout-header/baseline/ocr/doc-42af2b3d2b27/q16/page-17-ocr.json": "4bcf5124b1ebb38754ccf398b68b5adbc4f89f5e45c6e6cd55b128cf1d3dbc91",
+    "outputs/audit/postmortem-v4/patch-05c2-layout-header/baseline/ocr/doc-5d61be2ac853/q11/page-09-ocr.json": "b1bea88ce7448691d8ba34e687f9986a0f9a62213a6ae8d3ce4f0f238c92c99d",
+    "outputs/audit/postmortem-v4/patch-05c2-layout-header/baseline/ocr/doc-c41ddc7b55ec/q2/page-03-ocr.json": "56769016a6ebdc9c7a3d9b8aedc498c40cb017876736109566c8197975d44168",
+    "outputs/audit/postmortem-v4/patch-05c2-layout-header/baseline/ocr/doc-eefc3d15076e/q17/page-18-ocr.json": "992381474ef91a81d01713afe39e9a9625382afdcf48eacc8109c0308e342108",
+    "outputs/audit/postmortem-v4/patch-05c2-layout-header/baseline/ocr/doc-f4dd01071816/q13/page-14-ocr.json": "fc444e292f69f567b63e22a535e789f09ebc276938e1c9d6d81c15dab47fa966",
+    "outputs/audit/postmortem-v4/patch-05c2-layout-header/baseline/ocr/doc-f4dd01071816/q20/page-20-ocr.json": "a99e8bb4448d3a35b3bee03f5b6038f62b7980417620df0237300724533214b9",
+    "outputs/audit/postmortem-v4/patch-05c2-layout-header/baseline/ocr/doc-f4dd01071816/q5/page-06-ocr.json": "7bb196409638439be760b2c307ac40786a9b804e3e255a58a39557ed8580de36",
+    "outputs/audit/postmortem-v4/patch-05c2-layout-header/header-diagnostic.json": "7ad63e1db4690e48480472cd9c3a50c75c0db47abc1423b7879aae80f1bcfc6d",
+    "outputs/audit/postmortem-v4/patch-05c2-layout-header/image-diagnostic.json": "923567fb80b18c34d92e711e5f3422ce81b0f254b0ab0d49b49f7a46a9e5e24a",
+    "outputs/audit/postmortem-v4/patch-05c2-layout-header/tdd-red.json": "23f93fe31a48171f7e05fbfacbf10fa1b05432bdee31a2e4dec93ca1a5c0c27e",
+    "outputs/audit/response-regions-benchmark.json": "6bd3374e0c60a078f1c4d76cf02add5cd385dd2f875b311158c20408d3774fb0",
+    "outputs/audit/segmentation-section-pilot-summary.json": "0d556adf13a0b608203fcedecfe2c680e7a77e2e4d8424b29800a2cc55649ef7",
+    "scripts/audit_holdout_question_index_selftest.py": "11d94583c6aceaeda88d8a12408f97f79e8b1d72099cb28b70ad3a2f7ebeef7f",
+    "scripts/audit_holdout_v2_r1_selftest.py": "6b700a3ddea45d67bba9159937da4446f6ae1ee4cba31b51ef9b72bd83718db5",
+    "scripts/audit_holdout_v2_r2_selftest.py": "3580edf5f03afe32c92b6f94f0768a05d0faf90e44060d8e8d0b32009e0c265a",
+    "scripts/audit_holdout_v3_select_selftest.py": "fde21f375d6098c7c339c68aa5f922464f41635f6af0d18e6a7d247dc97ba733",
+    "scripts/audit_holdout_v4_protocol_selftest.py": "a3971627665a9f7f6303e2c2799c2f52410c4a7ded45f114f6299b26a6b59d39",
+    "scripts/audit_holdout_v4_select_selftest.py": "3e4c0f61136c82fd278278802c5d1af0e3ce47b066c40bf830510788b73771c6",
+    "scripts/audit_observations_selftest.py": "93abef35ff77c71b19ab9eb8ff7fa1777c303b77548db5e371a8f391f6d9fefb",
+    "scripts/audit_ocr_content_selftest.py": "b77fc88e69d46902a12fc1b232146b75b44284785ec6a318acdce95545036dc7",
+    "scripts/audit_question_boundary_selftest.py": "57074b091532101cfb4c8e82bf02be214ed97a8c74e2b23543d1227ae7377eed",
+    "scripts/audit_response_fusion_selftest.py": "efe8622b139824dc3cd4cb7706638769c8951214b43362ca5d08dcca6dede464",
+    "scripts/audit_response_holdout_selftest.py": "d341595fd199cb422b1f2d99dfb0975b074273f198a8d48c77838ebe8d3456c1",
+    "scripts/audit_response_regions_benchmark.py": "b35dfc44cc6f517d5b31ec7db3169aea68adb1dc39e77a0cb7f171f65675f766",
+    "scripts/audit_response_regions_selftest.py": "12c35970c1c82932d43da738602038638926bac237d47cb6c064c18ed47f5923",
+    "scripts/audit_response_structure_selftest.py": "33de202a780801bdb199060d97355c7c521aa938c09d7093f60e3fa77fc79f79",
+    "scripts/audit_visual_marker_evidence_selftest.py": "17eadecde06d80915ef248feaea472ae1d7458ea226deb840777440883294ee7",
+    "scripts/ocr_raster_pilot.py": "8e65c92d7ead90d273dde7be9e290271cfe954a48a896fa6db9622a9df778b14"
+  },
+  "sourceInventorySha256": "9c6a365adb0da7036ac965437ebec590fc01c72641b21f0297a20e02b72014c8",
+  "sourceFingerprintCacheSha256": "3d8300b83d7849b0c1139fbda20bc5b7b40ce80fe39c9c9b5c867583d7881315",
+  "nativeRenderIdentityReconciliation": [
+    {
+      "renderPath": "outputs/audit/native-render/1982b661687b7ec4/page-02-dpi160.png",
+      "pdfPaths": [
+        "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBH\\6º Ano\\CMBH - 6ANO - 2018_2019 (mat).pdf"
+      ]
+    },
+    {
+      "renderPath": "outputs/audit/native-render/68d904d0b7d993ce/page-04-dpi160.png",
+      "pdfPaths": [
+        "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBH\\6º Ano\\CMBH - 6ANO - 2015_2016 (mat).pdf"
+      ]
+    },
+    {
+      "renderPath": "outputs/audit/native-render/e8a88725db78c341/page-14-dpi160.png",
+      "pdfPaths": [
+        "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBH\\6º Ano\\CMBH - 6ANO - 2015_2016 (mat).pdf"
+      ]
+    }
+  ],
+  "syntheticLiteralReferencesIgnored": 82,
+  "unresolvedHistoricalDocumentIdentities": 0
+}

@@ -209,3 +209,20 @@ sem claim unsafe pós-patch ou métrica V4. Visual region proposal pode ser reut
 futuramente com justificativa empírica/blind, mas não integra o Auditor ativo atual.
 Ver [05C2](../audit/postmortem/V4_PATCH_05C2_VISUAL_HEADER_LAYOUT.md).
 Próxima prioridade=Holdout V5 blind, protocolo separado; não iniciado neste fechamento.
+
+## Holdout V5 blind — somente Fase A congelada
+
+Candidate `3b306d6a544cc63928ec8adf07640b224651742e`, baseline05C1/05C2 estacionado;
+branch `audit/holdout-v5-blind`. Código funcional do Auditor congelado até o
+primeiro resultado V5 executado/frozen; V1–V4 e postmortem imutáveis.
+48 documentos selecionados por metadados neutros de 407 conteúdos elegíveis,
+com exclusão por fingerprint de todos os holdouts/calibrações anteriores e
+overlap=0; nenhum PDF/questão aberto para seleção, nenhuma troca manual.
+23 famílias/21 anos/quatro eras/sete categorias de série; 32 native/15 raster/1 hybrid.
+Inspeção de questões, index/selection, GT, Auditor e métricas V5 ainda não iniciados.
+Ver [protocolo](../audit/holdout/PROTOCOL_V5.md) e [freeze](../audit/holdout/V5_DOCUMENT_SELECTION_FREEZE.md).
+Próximo separado=V5 Phase B neutral question index + question selection freeze;
+GT somente após selection freeze, Auditor somente após GT/config/cache freeze,
+primeira execução única/imutável, métricas somente após result freeze. V5 não completo.
+Hybrid não exposto restante consumido por V5; Final Blind Evaluation futura
+exige novo acervo nessa categoria, nunca reutilizar V5/holdouts revelados.
