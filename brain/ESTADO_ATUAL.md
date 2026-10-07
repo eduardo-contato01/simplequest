@@ -109,3 +109,9 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - Boundary line-first preserva matches únicos/ambíguos; somente ausência permite fallback target-aware por words observadas. Peers continuam index-backed; reconstrução local recebe somente words já filtradas por scope reliable, sem mudar texto/OCR/camadas de resposta.
 - TDD, 14 suítes e replay restrito aos 19 IDs PASS sem unsafe. Quatro starts/reconstruções dos cinco alvos observáveis; q54 continua ausente por tokens CID, sem decoding. q5/q2 abstêm; q20 raster perde emissão conservadoramente após reconstrução. Sem claim de performance; resultado/fontes/caches preservados, execução oficial única, V5 blind obrigatório.
 - Patches planejados 03A/03B/03C concluídos, não boundary perfeito. Próximo separado: `marker_role_and_spacing`. Ver [Patch 03C](../audit/postmortem/V4_PATCH_03C_BOUNDARY_WORD_RECONSTRUCTION.md); sem merge.
+
+## Checkpoint corrente — Patch 04 pós-V4, 2026-10-07
+
+- `marker_role_and_spacing` concluído: parenthesized whitespace suportado; selected response set autoritativo preserva answer-option role. Lowercase isoladamente não define subitem; enumerações internas, campos e controles permanecem separados.
+- TDD, 14 suítes e replay diagnóstico de 24 IDs sem regressão unsafe; resultado/fontes/caches intactos, execução oficial única sem rerun/OCR novo. V4 não é avaliação imparcial; V5 blind obrigatório.
+- Próximo separado: `visual_and_observation_recovery`, não iniciado. Ver [Patch 04](../audit/postmortem/V4_PATCH_04_MARKER_ROLE_SPACING.md); sem merge.

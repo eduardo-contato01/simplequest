@@ -36,7 +36,7 @@ OCR_LEAD_PUNCT_RE = re.compile(
 )
 
 PARENT_CHILD_RE = re.compile(r"^(\d{1,3})\s*[-–—]\s*([A-Ea-e])\b\s*(.*)$")
-PAREN_RE = re.compile(r"^\(([A-Ea-e])\)\s*(.*)$")
+PAREN_RE = re.compile(r"^\(\s*([A-Ea-e])\s*\)\s*(.*)$")
 RIGHT_PAREN_RE = re.compile(r"^([A-Ea-e])\s*\)\s*(.*)$")
 SEPARATOR_FIELD_RE = re.compile(r"^([A-Ea-e])\s*([.\-–—:])\s*" + FIELD_CONTENT + r"\s*(.*)$")
 SEPARATOR_RE = re.compile(r"^([A-Ea-e])\s*([.\-–—:])\s*(.*)$")

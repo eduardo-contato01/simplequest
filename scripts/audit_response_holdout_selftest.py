@@ -869,7 +869,115 @@ def test_response_set_completeness() -> None:
         and f["responseSetCompleteness"]["status"] == "unknown")
 
 
+def test_marker_role_and_spacing() -> None:
+  structure_api = runner.response_structure
+  # A-G: grammar and exact offsets/body, without fuzzy parsing.
+  for name, prefix, label, case in [
+    ("compact_upper", "(A)", "A", "upper"), ("spaced_upper", "( A )", "A", "upper"),
+    ("spaced_lower", "( a )", "A", "lower"), ("many_spaces", "(  b  )", "B", "lower"),
+    ("tab", "(\tc\t)", "C", "lower"), ("nbsp", "(\u00a0D\u00a0)", "D", "upper"),
+  ]:
+    raw = "  " + prefix + "  corpo  com   espacos"
+    parsed = structure_api.parse_marker(raw) or {}
+    check(f"spacing.parse.{name}.descriptor", parsed.get("label") == label
+          and parsed.get("labelCase") == case and parsed.get("markerShape") == "parentheses"
+          and parsed.get("markerKind") == "answer_marker", parsed)
+    check(f"spacing.parse.{name}.offset_body", parsed.get("spanStart") == 2
+          and parsed.get("spanEnd") == 2 + len(prefix) + 2
+          and parsed.get("textStart") == 2 + len(prefix) + 2
+          and parsed.get("text") == "corpo  com   espacos", parsed)
+  for raw in ("( palavra )", "(12)", "( 12 )", "(AB)", "( AB )", "(x)", "( x )", "A"):
+    check(f"spacing.reject.{raw}", structure_api.parse_marker(raw) is None)
+  prefixes = [f"({left}{label}{right})" for label in "ABCDEabcde"
+              for left, right in (("", ""), (" ", " "), ("  ", "\t"))]
+  check("spacing.strong_parser_consistent", all(structure_api.STRONG_MARKER_RE.fullmatch(prefix)
+        and structure_api.parse_marker(prefix + " corpo") for prefix in prefixes))
+
+  def options(labels="abcde", spaced=True, top=300):
+    return [(f"( {label} ) alternativa com conteudo" if spaced else f"({label}) alternativa com conteudo",
+             top + i * 24.0) for i, label in enumerate(labels)]
+
+  # H-K, T/U: all-lower is a style, not a role; instruction may follow options.
+  for name, labels, spaced in [("upper", "ABCDE", True), ("lower", "abcde", True),
+                               ("lower_compact", "abcde", False), ("real_ad", "ABCD", False),
+                               ("real_ae", "ABCDE", False)]:
+    lines = selected_set_lines(options(labels, spaced) + [("Assinale a opcao correta", 450.0)])
+    s, _, r, f = selected_set_pipeline(lines)
+    selected = s.get("selectedResponseSet") or {}
+    slots = r["responseSlotHypotheses"]
+    members = [slot for slot in slots if any(o.get("selectedResponseSetMember") is True
+               for o in slot["markerObservations"])]
+    check(f"spacing.set.{name}.authoritative", structure_api.response_set_authoritative(selected)
+          and selected.get("labels") == list(labels.upper()))
+    check(f"spacing.set.{name}.single_choice", s["inferredResponseStructure"]["mode"] == "single_choice")
+    check(f"spacing.set.{name}.member_roles", len(members) == len(labels)
+          and all(slot["role"] == "answer_option" for slot in members), slots)
+    check(f"spacing.set.{name}.role_evidence", bool(members) and all(
+          "selected_response_set_member" in slot["evidence"] for slot in members))
+    check(f"spacing.set.{name}.count", f["optionCountHypothesis"] == len(labels)
+          and f["optionLabelsHypothesis"] == "A-" + labels[-1].upper(), f)
+
+  # L-N: non-selected lowercase and Roman runs remain internal, without case-only selection.
+  for name, internal in [
+    ("lower_upper", [(f"{label}) afirmacao interna", 40.0 + i * 24) for i, label in enumerate("abc")]),
+    ("lower_lower", [(f"{label}) afirmacao interna", 40.0 + i * 24) for i, label in enumerate("abc")]),
+    ("roman", [(f"{label}. condicao interna", 40.0 + i * 24) for i, label in enumerate(["I", "II", "III"])]),
+  ]:
+    labels = "ABCDE" if name == "lower_upper" else "abcde"
+    s, _, r, f = selected_set_pipeline(selected_set_lines(internal + [("Escolha a opcao correta", 150.0)]
+                                                       + options(labels)))
+    slots = r["responseSlotHypotheses"]
+    check(f"spacing.internal.{name}.roles", sum(slot["role"] == "subitem" for slot in slots) == 3
+          and sum(slot["role"] == "answer_option" for slot in slots) == 5, slots)
+    check(f"spacing.internal.{name}.pattern", r["questionResponsePattern"]["pattern"] == "internal_enumeration_then_options")
+    check(f"spacing.internal.{name}.count", f["optionCountHypothesis"] == 5)
+    if name != "roman":
+      check(f"spacing.internal.{name}.structure", len(s["internalEnumerationCandidates"]) == 1)
+
+  # O-Q: incompatible roles and CE must not become single-choice members.
+  controls = [("Julgue as afirmacoes e assinale C ou E", 20.0)]
+  controls += [(f"15-{label} afirmacao com \ue000 \ue001 controles", 60.0 + i * 40) for i, label in enumerate("ABC")]
+  _, _, r, _ = selected_set_pipeline(selected_set_lines(controls + options()))
+  roles = [slot["role"] for slot in r["responseSlotHypotheses"]]
+  check("spacing.parent_child_controls", roles.count("subitem") == 3 and roles.count("response_control") == 6)
+  s, _, _, f = selected_set_pipeline(selected_set_lines([("( C ) certo", 300.0), ("( E ) errado", 324.0)]))
+  check("spacing.ce_preserved", s["inferredResponseStructure"]["mode"] != "single_choice"
+        and f["optionCountHypothesis"] is None and f["optionLabelsHypothesis"] == "CE")
+  s, _, r, _ = selected_set_pipeline(selected_set_lines([(f"{label}( )", 300.0 + i * 24) for i, label in enumerate("ABCDE")]))
+  check("spacing.response_fields_preserved", all(slot["role"] == "response_field" for slot in r["responseSlotHypotheses"])
+        and len(r["responseSlotHypotheses"]) == 5)
+
+  # R: parentheses do not remove a genuine competitor; original safety selection.
+  s, markers, _, f = selected_set_pipeline(selected_set_lines(options(top=100) + options(top=650)))
+  check("spacing.competing.ambiguous", s["ambiguous"] is True
+        and not structure_api.response_set_authoritative(s.get("selectedResponseSet")))
+  check("spacing.competing.retained", len(markers) == 10)
+  check("spacing.competing.blocked", f["optionCountHypothesis"] is None
+        and "competing_response_sets" in f["hardBlockers"])
+
+  # S: short weak geometry may remain diagnostic, never expands a selected set.
+  weak_lines = [("12", 40.0), ("17", 64.0), ("21", 88.0)]
+  s, _, r, f = selected_set_pipeline(selected_set_lines(weak_lines + options()))
+  check("spacing.weak.no_extra_slots", len(r["responseSlotHypotheses"]) == 5
+        and f["optionCountHypothesis"] == 5 and "weak_anchor_only" not in f["blockers"])
+
+  # V: spacing/role precedence cannot bypass the Patch02 closure gate.
+  s, _, _, f = selected_set_pipeline(selected_set_lines(options("acde") ))
+  check("spacing.completeness.gap", s["responseSetCompleteness"]["status"] == "incomplete"
+        and f["optionCountHypothesis"] is None and "response_set_incomplete" in f["hardBlockers"])
+
+  # W: same-line scanning materializes every detected strong spaced prefix.
+  raw = "( a ) um  texto ( B ) dois (  c  ) tres (d) quatro ( e ) cinco"
+  candidates = structure_api.extract_candidates(runner._observed_lines(selected_set_lines([(raw, 300.0)])))
+  check("spacing.same_line.labels", [c.label for c in candidates] == list("ABCDE"))
+  check("spacing.same_line.ordinal_body", [c.ordinal_within_line for c in candidates] == list(range(5))
+        and [c.text for c in candidates] == ["um  texto", "dois", "tres", "quatro", "cinco"])
+  check("spacing.same_line.spans", all(c.span[1] - c.span[0] >= len(c.text) for c in candidates)
+        and len(candidates) == 5)
+
+
 def main() -> None:
+  test_marker_role_and_spacing()
   test_response_set_completeness()
   test_selected_response_set_contract()
   test_recovered_geometry_marker_adapter()

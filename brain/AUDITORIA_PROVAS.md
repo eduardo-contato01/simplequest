@@ -177,3 +177,7 @@ Boundary 2D exige identidade index-backed + unique target-aware observed match +
 ## Fallback por words e reconstrução local
 
 Current/next/verified peers usam linha primeiro; ambiguidade de linha nunca é resolvida por words. Somente ausência permite baseline target-aware com número/keyword realmente observados, geometria e corroboração neutra para números; enumerações curtas e duplicatas não provam header. Boundary reliable filtra words por centro antes de reconstruir linhas locais danificadas, preservando tokens/provenance e linhas saudáveis, sem stitching ou OCR novo. Patches 01/02 seguem autoritativos downstream; header recuperado não prova completude. CID não reconhecido permanece ausente; reconstrução pode reduzir emissão conservadoramente. Ver [Patch 03C](../audit/postmortem/V4_PATCH_03C_BOUNDARY_WORD_RECONSTRUCTION.md); 03A/03B/03C planejados concluídos, não boundary perfeito; V5 blind obrigatório.
+
+## Estilo de marker versus papel selecionado
+
+Case/shape são evidências de estilo; membership do selected response set autoritativo define answer-set membership. Regions não pode contradizê-lo por lowercase/posição antes de instrução, salvo papel explicitamente incompatível (campo/controle/parent-child). Enumerações não selecionadas permanecem subitems; proveniência explica o papel. Parser e strong scanner compartilham parenthesized whitespace, sem alterar seleção/completude. Ver [Patch 04](../audit/postmortem/V4_PATCH_04_MARKER_ROLE_SPACING.md); próximo separado=visual/observation recovery, V5 blind obrigatório.

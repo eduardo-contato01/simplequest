@@ -395,6 +395,7 @@ def _build_internal_anchors(lines: list[dict[str, Any]], used: set[Any]) -> list
       "bbox": [float(line.get("x0") or 0), float(line.get("top") or 0), float(line.get("x1") or 0), float(line.get("bottom") or 0)],
       "lineIndex": index,
       "role": "subitem",
+      "roleEvidence": ["internal_enumeration"],
     })
   return anchors
 
@@ -466,6 +467,8 @@ def discover_response_regions(
     lower_run = [
       anchor for anchor in text_anchors
       if str(anchor.get("labelCase")) == "lower"
+      # Style/position cannot contradict the producer's selected membership.
+      and not (authoritative_set and anchor.get("selectedResponseSetMember") is True)
       and str(anchor.get("label") or "").upper() in list("ABC")
       and float(anchor["bbox"][1]) < instruction_top
     ]
@@ -473,6 +476,7 @@ def discover_response_regions(
       for anchor in lower_run:
         anchor["role"] = "subitem"
         anchor["subitemLabel"] = anchor.get("label")
+        anchor["roleEvidence"] = ["internal_enumeration_before_instruction"]
 
   if not authoritative_set and not text_anchors and not parent_anchors and not visual_anchors:
     single_letter_anchors = _detect_single_letter_anchors(words)
@@ -563,6 +567,8 @@ def discover_response_regions(
       anchor["role"] = "response_field"
     else:
       anchor["role"] = "answer_option"
+      if authoritative_set and anchor.get("selectedResponseSetMember") is True:
+        anchor["roleEvidence"] = ["selected_response_set_member"]
   for anchor in visual_anchors:
     anchor.setdefault("role", "answer_option")
   for anchor in weak_anchors:
@@ -685,6 +691,7 @@ def discover_response_regions(
   for anchor in anchors:
     role = anchor.get("role") or "unknown"
     evidence = [f"source:{anchor.get('source')}"]
+    evidence.extend(anchor.get("roleEvidence") or [])
     if anchor.get("markerShape"):
       evidence.append(f"shape:{anchor['markerShape']}")
     if anchor.get("fill"):

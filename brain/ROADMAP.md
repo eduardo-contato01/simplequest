@@ -11,13 +11,14 @@ Trabalho vigente em 2026-10-06. Estado factual em [[ESTADO_ATUAL]]; visão detal
 5. [x] Patch 03A `neutral_boundary_identity_and_grammar`: identidade canônica/impressa e variantes neutras target-aware; TDD e replay restrito PASS. Ver [Patch 03A](../audit/postmortem/V4_PATCH_03A_BOUNDARY_IDENTITY_GRAMMAR.md). Boundary inteiro não concluído.
 6. [x] Patch 03B `neutral_boundary_scope_and_column_peers`: split exige peer index-backed com match único e geometria; TDD e replay restrito PASS. Ver [Patch 03B](../audit/postmortem/V4_PATCH_03B_BOUNDARY_SCOPE_COLUMNS.md).
 7. [x] Patch 03C `neutral_boundary_word_line_reconstruction`: line-first, fallback somente por words observadas e reconstrução dentro de scope reliable; TDD/replay restrito sem unsafe. Ver [Patch 03C](../audit/postmortem/V4_PATCH_03C_BOUNDARY_WORD_RECONSTRUCTION.md). Patches 03A/03B/03C planejados concluídos, não boundary perfeito; CID ausente e abstenções conservadoras permanecem.
-   Próxima prioridade separada: `marker_role_and_spacing`; observação complementar continua pendente, sem regras por casos individuais.
-8. Se houver mudança funcional após analisar o V4, criar novo Holdout V5 cego; preservar o primeiro resultado V4.
-9. Avaliar novamente precision + coverage em V5 blind, buscando recuperar cobertura sem perder precisão.
+8. [x] Patch 04 `marker_role_and_spacing`: parenthesized whitespace e selected membership autoritativo para role; enumerações/controles preservados, TDD/replay restrito sem unsafe. Ver [Patch 04](../audit/postmortem/V4_PATCH_04_MARKER_ROLE_SPACING.md).
+   Próxima prioridade separada: `visual_and_observation_recovery` (visual_marker_evidence / observation complementary), não iniciada; sem regras por casos individuais.
+9. Se houver mudança funcional após analisar o V4, criar novo Holdout V5 cego; preservar o primeiro resultado V4.
+10. Avaliar novamente precision + coverage em V5 blind, buscando recuperar cobertura sem perder precisão.
 
 Meta operacional: precision >= 99,5%; coverage >= 80%; unsafe_error <= 0,5%; direção ideal de precision 99,8–99,9%. São metas futuras, não o desempenho atual.
 
-Ver [[AUDITORIA_PROVAS]]. Postmortem e Patches 01/02/03A/03B/03C concluídos; role/spacing, observação complementar e avaliação V5 blind permanecem futuros.
+Ver [[AUDITORIA_PROVAS]]. Postmortem e Patches 01/02/03A/03B/03C/04 concluídos; observação visual/complementar e avaliação V5 blind permanecem futuros.
 
 ## Depois — Ingestão/transcrição
 
