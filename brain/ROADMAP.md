@@ -21,14 +21,15 @@ Trabalho vigente em 2026-10-06. Estado factual em [[ESTADO_ATUAL]]; visão detal
 14. [x] V5 Phase A document selection/freeze: branch `audit/holdout-v5-blind`, candidate `3b306d6a544cc63928ec8adf07640b224651742e`/baseline05C1; 48 documentos metadata-only determinísticos, overlap zero com V1–V4/calibração, antes de inspeção de questões. Ver [freeze V5](../audit/holdout/V5_DOCUMENT_SELECTION_FREEZE.md). Auditor funcional congelado; V5 completo NÃO concluído.
 15. [x] V5 Phase B1 raw neutral question index freeze: protocolo/config congelados antes da execução única, 48 documentos/1063 questões brutas; validações automáticas PASS, sem adjudicação. Ver [raw freeze](../audit/holdout/V5_QUESTION_INDEX_RAW_FREEZE.md). Phase B inteira NÃO concluída.
 16. [x] V5 Phase B2a neutral triage freeze: política V4 sem retuning, queue48/tiers A22/B4/C14/D8, nenhum PDF/review visual/correção. Ver [triagem B2a](../audit/holdout/V5_QUESTION_INDEX_TRIAGE.md). Todos os 48 continuam sujeitos à revisão neutra futura; índice final NÃO concluído.
-17. Próxima prioridade separada: V5 Phase B2b neutral review/adjudication. Question selection ainda não iniciada; GT somente após selection freeze, Auditor somente após GT/config/cache freeze, execução primeira única/imutável e métricas somente após result freeze.
-18. Avaliar novamente precision + coverage em V5 blind depois dos freezes e da execução autorizada, buscando recuperar cobertura sem perder precisão.
+17. [x] V5 B2b Tier A Batch01 review package freeze: 11 documentos nas posições fixas 1–11/22, fingerprints e cópias byte-idênticas 11/11, context neutro ignorado e hashes congelados; nenhuma adjudicação/render/OCR. Ver [package Batch01](../audit/holdout/V5_TIER_A_BATCH_01_REVIEW_PACKAGE.md). Tier A e Phase B NÃO concluídos; Batch02 intocado.
+18. Próxima prioridade separada: V5 B2b Tier A Batch01 neutral visual adjudication. Question selection ainda não iniciada; GT somente após selection freeze, Auditor somente após GT/config/cache freeze, execução primeira única/imutável e métricas somente após result freeze.
+19. Avaliar novamente precision + coverage em V5 blind depois dos freezes e da execução autorizada, buscando recuperar cobertura sem perder precisão.
 
 Futuro condicionado à recorrência do padrão q13: possible marker-glyph recognition / alternate observation strategy. Nenhuma tarefa ou Patch05C3 criado agora.
 
 Meta operacional: precision >= 99,5%; coverage >= 80%; unsafe_error <= 0,5%; direção ideal de precision 99,8–99,9%. São metas futuras, não o desempenho atual.
 
-Ver [[AUDITORIA_PROVAS]]. Postmortem e Patches 01/02/03A/03B/03C/04/05A/05B1/05B2/05C1 concluídos; experimento 05C2 estacionado/não promovido; V5 Fases A/B1/B2a concluídas, B2b revisão/adjudicação, índice final, seleção de questões, GT e avaliação V5 ainda não iniciados.
+Ver [[AUDITORIA_PROVAS]]. Postmortem e Patches 01/02/03A/03B/03C/04/05A/05B1/05B2/05C1 concluídos; experimento 05C2 estacionado/não promovido; V5 Fases A/B1/B2a concluídas e package Tier A Batch01 congelado, mas B2b adjudicação, índice final, seleção de questões, GT e avaliação V5 ainda não iniciados.
 
 ## Depois — Ingestão/transcrição
 
