@@ -163,3 +163,8 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - Raw neutral question index congelado após execução única dos 48 documentos: 1063 questões brutas, um documento com zero questões preservado; integridade automática PASS. Protocolo/config do mesmo indexador V4 congelados antes da execução, sem tuning ou revisão humana de PDFs/anomalias. Ver [raw freeze](../audit/holdout/V5_QUESTION_INDEX_RAW_FREEZE.md).
 - V1–V4/postmortem/caches antigos, Phase A e código funcional05C1/schema preservados; 05C2 permanece estacionado. Somente cache neutro novo do índice, não cache do Auditor; OCR do índice não define OCR futuro do Auditor.
 - Somente B1 concluída; próximo separado=V5 Phase B2 neutral question-index adjudication/final freeze. Final index/selection/GT/Auditor/metrics=false; nenhuma adjudicação nesta execução, sem merge. Limitação do validator legado V1–V4 permanece para gate futuro.
+
+## Checkpoint corrente — Holdout V5 Phase B2a, 2026-10-07
+
+- Fila de triagem neutra congelada dos 48 documentos, política V4 sem retuning: A=22/B=4/C=14/D=8. Derivação somente de raw/report/manifest congelados; nenhuma inspeção PDF/visual ou adjudicação/correção. Todos os 48 permanecem obrigados à revisão neutra futura, inclusive controles D. Ver [triagem B2a](../audit/holdout/V5_QUESTION_INDEX_TRIAGE.md).
+- Phase A/B1/raw/caches e código funcional05C1 preservados; 05C2 estacionado. Somente B2a concluída, não índice final/Phase B inteira; próximo separado=B2b neutral review/adjudication. Final index/selection/GT/Auditor/metrics=false; sem merge.
