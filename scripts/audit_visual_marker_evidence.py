@@ -271,7 +271,9 @@ def build_response_set_hypotheses(evidence: list[dict[str, Any]], ocr_lines: lis
           continue
         diameters = [entry[1]["metrics"]["diameterNormalized"] for entry in cluster]
         median_diameter = median(diameters)
-        tolerance = max(6.0, X_ALIGN_TOL_RATIO * median_diameter)
+        # Alignment is in bbox units; normalized metrics remain detector units.
+        coordinate_scale = float(pair[1].get('coordinateScale') or 1.0)
+        tolerance = max(6.0, X_ALIGN_TOL_RATIO * median_diameter) / coordinate_scale
         if abs(pair[1]["bbox"][0] - median([entry[1]["bbox"][0] for entry in cluster])) > tolerance:
           continue
         if abs(pair[1]["metrics"]["diameterNormalized"] - median_diameter) > SIZE_TOL_RATIO * median_diameter:
@@ -297,7 +299,8 @@ def build_response_set_hypotheses(evidence: list[dict[str, Any]], ocr_lines: lis
     ]
     median_diameter = median(diameters) or 1.0
     x_spread = max(x_values) - min(x_values)
-    alignment_score = max(0.0, 1.0 - x_spread / max(6.0, X_ALIGN_TOL_RATIO * median_diameter))
+    coordinate_scale = float(items[0].get('coordinateScale') or 1.0)
+    alignment_score = max(0.0, 1.0 - x_spread / (max(6.0, X_ALIGN_TOL_RATIO * median_diameter) / coordinate_scale))
     size_spread = max(diameters) - min(diameters)
     size_consistency = max(0.0, 1.0 - size_spread / median_diameter)
     if gaps:

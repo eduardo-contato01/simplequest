@@ -181,3 +181,7 @@ Current/next/verified peers usam linha primeiro; ambiguidade de linha nunca é r
 ## Estilo de marker versus papel selecionado
 
 Case/shape são evidências de estilo; membership do selected response set autoritativo define answer-set membership. Regions não pode contradizê-lo por lowercase/posição antes de instrução, salvo papel explicitamente incompatível (campo/controle/parent-child). Enumerações não selecionadas permanecem subitems; proveniência explica o papel. Parser e strong scanner compartilham parenthesized whitespace, sem alterar seleção/completude. Ver [Patch 04](../audit/postmortem/V4_PATCH_04_MARKER_ROLE_SPACING.md); próximo separado=visual/observation recovery, V5 blind obrigatório.
+
+## Evidência visual complementar e conjunto selecionado
+
+Texto suficiente conserva autoridade do selected response set/completude. Native render é fallback somente sem esse conjunto e com boundary reliable; não é OCR. Raster/native compartilham crop 2D, associação de conteúdo e hypotheses; raw candidates não são slots sem conjunto visual único selecionado. Concorrentes bloqueiam count quando não há autoridade textual; somente selected markerIndexes alimentam Regions, conservando refs brutas. Count exige regiões/gates; glyph unknown implica labels unknown, nunca A-E por posição. Thresholds, Structure e boundary intactos. Ver [Patch 05A](../audit/postmortem/V4_PATCH_05A_VISUAL_RESPONSE_SET.md); observation complementary separado e V5 blind obrigatório.

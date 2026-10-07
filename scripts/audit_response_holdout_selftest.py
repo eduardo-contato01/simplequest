@@ -976,7 +976,128 @@ def test_marker_role_and_spacing() -> None:
         and len(candidates) == 5)
 
 
+def test_visual_response_set_fallback() -> None:
+  from unittest.mock import patch
+  from PIL import Image, ImageDraw
+  import audit_visual_marker_evidence_selftest as fixtures
+
+  def image_at(points):
+    image = Image.new('L', (500, 500), 255)
+    draw = ImageDraw.Draw(image)
+    for x, y in points:
+      fixtures.draw_ring(draw, x, y, 30)
+    return image
+
+  five = [(45, 120 + i * 55) for i in range(5)]
+  contents = [('Some substantial content for this response', 108 + i * 55, 70) for i in range(5)]
+
+  def run(points=five, texts=contents, limits=None, native=False, reliable=True, failure=False, raw_only=False,
+          line_right=340, missing=False):
+    with tempfile.TemporaryDirectory() as temporary:
+      directory = Path(temporary)
+      image = image_at(points)
+      if raw_only:
+        ImageDraw.Draw(image).rectangle((75, 108, 300, 125), fill=0)
+      image.save(directory / 'page-01.png')
+      scale = 160 / 72 if native else 1
+      lines = [runner.observations.ObservedLine(1, text, (x / scale, y / scale, line_right / scale, (y + 20) / scale),
+                line_index=i, source='native_pdf' if native else 'ocr_cache') for i, (text, y, x) in enumerate(texts)]
+      bundle = runner.observations.ObservationBundle([], lines, [], {}, 'native_pdf' if native else 'ocr_cache')
+      boundary = dict(reliable=reliable, pages=[1], pageLimits={1: limits or dict(top=0, bottom=500 / scale)})
+      bundle = runner.question_boundary.filter_bundle(bundle, boundary)
+      captured = {}
+      original = runner.fusion.fuse_response_evidence
+      def fuse(b, s, v, r):
+        captured.update(visual=v, regions=r, structure=s)
+        return original(b, s, v, r)
+      render = dict(path=str(directory / ('missing.png' if missing else 'page-01.png')), scale=scale)
+      with patch.object(runner.fusion, 'fuse_response_evidence', side_effect=fuse), patch.object(
+          runner.observations, 'render_pdf_page', side_effect=OSError('unavailable') if failure else None,
+          return_value=render) as render_mock:
+        try:
+          kwargs = dict(native_pdf=directory / 'canonical.pdf', native_render_cache=directory) if native else {}
+          result = runner._run_from_bundle(bundle, boundary, None if native else directory, [1], **kwargs)
+        except TypeError as error:
+          check('visual.native.contract', False, str(error))
+          return {}, {}, {}, render_mock.call_count
+      return result, captured.get('visual', {}), captured.get('regions', {}), render_mock.call_count
+
+  f, v, r, _ = run()
+  hypotheses = v.get('visualResponseSetHypotheses', [])
+  check('visual.A.unique_support', len(hypotheses) == 1 and hypotheses[0]['support'] == 5)
+  check('visual.A.adjacent_content', bool(hypotheses) and hypotheses[0]['adjacentContentEvidence'] == 1)
+  check('visual.B.count_regions', f.get('optionCountHypothesis') == 5 and all(
+        s['contentRegionId'] is not None for s in r.get('responseSlotHypotheses', [])))
+  check('visual.C.no_labels_by_order', f.get('optionLabelsHypothesis') == 'unknown'
+        and all(s['label'] is None for s in f.get('slots', [])))
+  check('visual.U.propagated', 'visualResponseSetHypotheses' in v and 'visualResponseSetAmbiguous' in v)
+  check('visual.provenance.raster', v.get('visualObservationSource') == 'raster_cache')
+  for name, points in [('D.one', five[:1]), ('E.two', five[:2]),
+                       ('I.scatter', [(40 + i * 65, 120 + i * 55) for i in range(5)])]:
+    f, v, r, _ = run(points)
+    check('visual.' + name + '.no_hypothesis', v.get('visualResponseSetHypotheses') == [])
+    check('visual.' + name + '.no_active', v.get('activeVisualMarkerIndexes') == [])
+    check('visual.' + name + '.no_count', f.get('optionCountHypothesis') is None)
+  f, v, r, _ = run(five + [(180, y) for _, y in five])
+  check('visual.F.ambiguous', v.get('visualResponseSetAmbiguous') is True)
+  check('visual.F.no_active', v.get('activeVisualMarkerIndexes') == [])
+  check('visual.V.existing_gate', f.get('optionCountHypothesis') is None and 'competing_response_sets' in f.get('blockers', []))
+  check('visual.F.no_answer_slots', not any(s['role'] == 'answer_option' for s in r.get('responseSlotHypotheses', [])))
+  # Isolated candidate precedes the selected set: refs must retain raw indexes.
+  f, v, r, _ = run([(350, 45)] + five)
+  check('visual.G.raw_retained', len(v.get('visualAlternativeEvidence', [])) == 6)
+  check('visual.G.selected_only', len(r.get('responseSlotHypotheses', [])) == 5 and f.get('optionCountHypothesis') == 5)
+  check('visual.G.raw_index_refs', [s['visualEvidenceRefs'] for s in f.get('slots', [])] == [[i] for i in range(1, 6)])
+  f, v, r, _ = run(texts=[])
+  check('visual.H.missing_region_gate', f.get('optionCountHypothesis') is None
+        and 'visual_only_content_region_missing' in f.get('blockers', []))
+  for labels, name in [('ABCD', 'J'), ('ABCDE', 'K')]:
+    text = [(f'({label}) substantial content for response', 108 + i * 55, 30) for i, label in enumerate(labels)]
+    f, v, r, _ = run(five + [(180, y) for _, y in five] + [(350, 45)], texts=text)
+    check('visual.' + name + '.text_authority', f.get('optionCountHypothesis') == len(labels)
+          and f.get('optionLabelsHypothesis') == 'A-' + labels[-1])
+  ce_text = [('Assinale C ou E para cada item', 10, 20)] + [
+    (f'12 - {letter} substantial statement', 108 + i * 55, 10) for i, letter in enumerate('ABC')]
+  f, v, r, _ = run([(x, 120 + i * 55) for i in range(3) for x in [250, 310]], texts=ce_text)
+  check('visual.L.controls_not_options', f.get('optionCountHypothesis') is None
+        and not any(s['role'] == 'answer_option' for s in f.get('slots', [])))
+  f, v, r, _ = run(texts=[('I. first internal statement', 10, 20), ('II. second internal statement', 40, 20)] + contents)
+  check('visual.M.internal_preserved', sum(s['role'] == 'subitem' for s in f.get('slots', [])) == 2)
+  check('visual.M.visual_set', f.get('optionCountHypothesis') == 5)
+  f, v, r, _ = run(five + [(45, 430)], limits=dict(top=100, bottom=370))
+  check('visual.N.vertical_crop', len(v.get('visualAlternativeEvidence', [])) == 5)
+  check('visual.N.selected_count', f.get('optionCountHypothesis') == 5)
+  check('visual.N.actual_crop', (v.get('visualPageGeometry') or [{}])[0].get('cropPixels') == [0, 100, 500, 370])
+  f, v, r, _ = run(five + [(300, y) for _, y in five], limits=dict(top=100, bottom=370, x0=0, x1=200), line_right=190)
+  check('visual.O.column_crop', len(v.get('visualAlternativeEvidence', [])) == 5 and f.get('optionCountHypothesis') == 5)
+  check('visual.O.actual_crop', (v.get('visualPageGeometry') or [{}])[0].get('cropPixels') == [0, 100, 200, 370])
+  f, v, r, calls = run(native=True)
+  check('visual.S.native_fallback', calls == 1 and v.get('nativeVisualFallbackTriggered') is True)
+  check('visual.P.native_count', f.get('optionCountHypothesis') == 5)
+  evidence = v.get('visualAlternativeEvidence', [])
+  check('visual.P.roundtrip', len(evidence) == 5 and all(abs(a - b) <= 0.01
+        for a, b in zip(evidence[0]['bbox'], [30 / (160 / 72), 105 / (160 / 72), 61 / (160 / 72), 136 / (160 / 72)])))
+  check('visual.P.native_source', v.get('visualObservationSource') == 'native_render')
+  f, v, r, _ = run(five + [(81, y) for _, y in five], native=True)
+  check('visual.P.scale_cluster_separation', len(v.get('visualResponseSetHypotheses', [])) == 2
+        and v.get('activeVisualMarkerIndexes') == [] and f.get('optionCountHypothesis') is None)
+  f, v, r, calls = run(native=True, reliable=False)
+  check('visual.Q.unreliable_no_render', calls == 0 and f.get('optionCountHypothesis') is None)
+  check('visual.Q.not_triggered', v.get('nativeVisualFallbackTriggered') is False)
+  f, v, r, calls = run(native=True, texts=[(f'({label}) substantial response content', 108 + i * 55, 30) for i, label in enumerate('ABCDE')])
+  check('visual.R.text_first_no_render', calls == 0 and f.get('optionCountHypothesis') == 5)
+  check('visual.R.not_triggered', v.get('nativeVisualFallbackTriggered') is False)
+  f, v, r, calls = run(native=True, failure=True)
+  check('visual.T.failure_safe', calls == 1 and f.get('optionCountHypothesis') is None)
+  f, v, r, calls = run(native=True, missing=True)
+  check('visual.T.missing_safe', calls == 1 and f.get('optionCountHypothesis') is None
+        and not v.get('activeVisualMarkerIndexes'))
+  f, v, r, _ = run(points=[], texts=[], raw_only=True)
+  check('visual.W.raw_not_marker', not f.get('slots') and f.get('optionCountHypothesis') is None)
+
+
 def main() -> None:
+  test_visual_response_set_fallback()
   test_marker_role_and_spacing()
   test_response_set_completeness()
   test_selected_response_set_contract()

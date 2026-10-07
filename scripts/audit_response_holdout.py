@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import datetime as _dt
 import json
+import math
 import subprocess
 from collections import Counter
 from pathlib import Path
@@ -347,7 +348,8 @@ def _run_question(document: dict[str, Any], question: dict[str, Any], gt: dict[s
     bundle = observations.from_native_pdf(canonical, pages)
     if bundle.words:
       return _run_with_boundary(bundle, question, index_current, index_next, pages, None,
-                                document_questions=document_questions)
+                                document_questions=document_questions, native_pdf=Path(canonical),
+                                native_render_cache=base / 'outputs' / 'audit' / 'native-render')
   return _run_ocr(document, question, index_current, index_next, pages, base,
                   document_questions=document_questions)
 
@@ -369,7 +371,8 @@ def _run_ocr(document: dict[str, Any], question: dict[str, Any], index_current: 
 def _run_with_boundary(bundle: observations.ObservationBundle, question: dict[str, Any],
                        index_current: dict[str, Any] | None, index_next: dict[str, Any] | None,
                        pages: list[int], rendered_dir: Path | None,
-                       document_questions: list[dict[str, Any]] | None = None) -> dict[str, Any]:
+                       document_questions: list[dict[str, Any]] | None = None,
+                       native_pdf: Path | None = None, native_render_cache: Path | None = None) -> dict[str, Any]:
   effective = index_current or question
   boundary = question_boundary.compute_question_boundary(bundle, effective, index_next, pages,
                                                          document_questions=document_questions)
@@ -377,7 +380,7 @@ def _run_with_boundary(bundle: observations.ObservationBundle, question: dict[st
     # Without a frozen index entry the question order is unknown; be conservative.
     boundary = {**boundary, "reliable": False, "reason": "question_not_in_index"}
   filtered = question_boundary.filter_bundle(bundle, boundary)
-  return _run_from_bundle(filtered, boundary, rendered_dir, pages)
+  return _run_from_bundle(filtered, boundary, rendered_dir, pages, native_pdf, native_render_cache)
 
 
 RECOVERED_MARKER_REQUIRED_EVIDENCE = {
@@ -492,8 +495,81 @@ def _markers_with_recovered_geometry(
   return response_structure.selected_response_markers(markers, structure.get("selectedResponseSet"))
 
 
+def _scoped_visual_observation(boundary: dict[str, Any], lines: list[dict[str, Any]],
+                               pages: list[int], rendered_dir: Path | None,
+                               native_pdf: Path | None, native_render_cache: Path | None,
+                               selected_text_set: dict[str, Any] | None) -> dict[str, Any]:
+  """Render-only observation, then one shared scoped visual selection contract."""
+  native_fallback = bool(native_pdf is not None and boundary.get('reliable')
+                         and not response_structure.response_set_authoritative(selected_text_set))
+  shadow: dict[str, Any] = dict(visualAlternativeEvidence=[], visualRawComponents=[],
+      visualResponseSetHypotheses=[], visualResponseSetAmbiguous=False,
+      visualResponseSet=None, activeVisualMarkerIndexes=[], visualPageGeometry=[],
+      nativeVisualFallbackTriggered=native_fallback, nativeVisualRenderExecutions=0,
+      renderedPages=[], visualObservationSource='native_render' if native_fallback else
+      ('raster_cache' if rendered_dir is not None else None), visualObservationErrors=[])
+  if not boundary.get('reliable'):
+    return shadow
+  from PIL import Image
+  for page in pages:
+    limits = (boundary.get('pageLimits') or {}).get(page)
+    if limits is None:
+      limits = (boundary.get('pageLimits') or {}).get(str(page))
+    if limits is None:
+      continue  # A missing scope is never permission to inspect the entire page.
+    try:
+      scale = 1.0
+      if native_fallback:
+        shadow['nativeVisualRenderExecutions'] += 1
+        info = observations.render_pdf_page(native_pdf, page, 160.0, cache_dir=native_render_cache)
+        image_path, scale = Path(info['path']), float(info['scale'])
+      elif rendered_dir is not None:
+        image_path = rendered_dir / f'page-{page:02d}.png'
+      else:
+        continue
+      if not image_path.exists():
+        shadow['visualObservationErrors'].append(dict(page=page, reason='render_missing'))
+        continue
+      if not math.isfinite(scale) or scale <= 0:
+        raise ValueError('Invalid render scale')
+      with Image.open(image_path) as image:
+        width, height = image.size
+        # Round inward: no pixels from a neighboring column/question are observed.
+        crop_box = (max(0, math.ceil(float(limits.get('x0', 0)) * scale)),
+                    max(0, math.ceil(float(limits.get('top', 0)) * scale)),
+                    min(width, math.floor(float(limits.get('x1', width / scale)) * scale)),
+                    min(height, math.floor(float(limits.get('bottom', height / scale)) * scale)))
+        if crop_box[2] <= crop_box[0] or crop_box[3] <= crop_box[1]:
+          continue
+        page_result = visual_evidence.analyze_image(image.crop(crop_box), 160.0, page, offset=crop_box[:2])
+      shadow['renderedPages'].append(page)
+      shadow['visualPageGeometry'].append(dict(page=page, scale=scale, cropPixels=list(crop_box),
+          crop=[value / scale for value in crop_box], boundaryLimits=dict(limits)))
+      for item in page_result['evidence']:
+        shadow['visualAlternativeEvidence'].append({**item, 'bbox': [value / scale for value in item['bbox']],
+          'coordinateScale': scale, 'source': 'rendered_visual' if native_fallback else item['source']})
+      for item in page_result['rawComponents']:
+        shadow['visualRawComponents'].append({**item, 'bbox': [value / scale for value in item['bbox']],
+          'width': item['width'] / scale, 'height': item['height'] / scale, 'area': item['area'] / scale ** 2})
+    except Exception as error:
+      # Observation failure does not authorize a guess or invalidate textual evidence.
+      shadow['visualObservationErrors'].append(dict(page=page, reason='visual_observation_failed',
+                                                   errorType=type(error).__name__))
+  evidence = question_boundary.filter_visual_items(shadow['visualAlternativeEvidence'], boundary)
+  shadow['visualAlternativeEvidence'] = evidence
+  shadow['visualRawComponents'] = question_boundary.filter_visual_items(shadow['visualRawComponents'], boundary)
+  visual_evidence.associate_with_ocr(evidence, lines)  # Historical name; native lines are not OCR.
+  hypotheses, ambiguous = visual_evidence.build_response_set_hypotheses(evidence, lines)
+  shadow['visualResponseSetHypotheses'], shadow['visualResponseSetAmbiguous'] = hypotheses, ambiguous
+  if len(hypotheses) == 1 and not ambiguous and not hypotheses[0].get('ambiguous'):
+    shadow['visualResponseSet'] = hypotheses[0]
+    shadow['activeVisualMarkerIndexes'] = list(hypotheses[0]['markerIndexes'])
+  return shadow
+
+
 def _run_from_bundle(bundle: observations.ObservationBundle, boundary: dict[str, Any], rendered_dir: Path | None,
-                     pages: list[int]) -> dict[str, Any]:
+                     pages: list[int], native_pdf: Path | None = None,
+                     native_render_cache: Path | None = None) -> dict[str, Any]:
   lines = bundle.lines_as_region_input()
   words = bundle.words_as_region_input()
 
@@ -509,29 +585,21 @@ def _run_from_bundle(bundle: observations.ObservationBundle, boundary: dict[str,
     structure,
   )
 
-  raster = bundle.visual_as_region_input()
-  visual_markers: list[dict[str, Any]] = []
-  for page in pages:
-    image_path = None
-    if rendered_dir is not None:
-      candidate = rendered_dir / f"page-{page:02d}.png"
-      image_path = str(candidate) if candidate.exists() else None
-    if image_path:
-      from PIL import Image
-      with Image.open(image_path) as image:
-        page_result = visual_evidence.analyze_image(image, 160.0, page)
-      visual_markers.extend(page_result["evidence"])
-      raster.extend(page_result["rawComponents"])
-  # Visual evidence must respect the same question boundary as text.
-  visual_markers = question_boundary.filter_visual_items(visual_markers, boundary)
-  raster = question_boundary.filter_visual_items(raster, boundary)
+  visual_shadow = _scoped_visual_observation(boundary, lines, pages, rendered_dir, native_pdf,
+                                            native_render_cache, structure.get('selectedResponseSet'))
+  evidence = visual_shadow['visualAlternativeEvidence']
+  visual_markers = [{**evidence[index], 'visualIndex': index}
+                    for index in visual_shadow['activeVisualMarkerIndexes']]
+  raster = question_boundary.filter_visual_items(bundle.visual_as_region_input(), boundary)
+  raster.extend(visual_shadow['visualRawComponents'])
   discovered = regions.discover_response_regions(
     boundary=boundary, lines=lines, words=words, strong_markers=markers,
     visual_markers=visual_markers, raster_components=raster,
     selected_response_set=structure.get("selectedResponseSet"),
   )
-  visual_shadow = {"visualAlternativeEvidence": visual_markers} if visual_markers else {}
-  return fusion.fuse_response_evidence(boundary, structure, visual_shadow, discovered)
+  result = fusion.fuse_response_evidence(boundary, structure, visual_shadow, discovered)
+  result['visualDiagnostics'] = visual_shadow
+  return result
 
 
 def _observed_lines(lines: list[dict[str, Any]]) -> list[Any]:

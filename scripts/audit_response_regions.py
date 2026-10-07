@@ -155,7 +155,7 @@ def _anchor_from_visual(item: dict[str, Any], index: int) -> dict[str, Any]:
     "page": int(item.get("page") or 0),
     "bbox": [float(value) for value in item.get("bbox") or (0, 0, 0, 0)],
     "lineIndex": None,
-    "visualIndex": index,
+    "visualIndex": item.get('visualIndex', index),
     "fill": item.get("fill"),
   }
 

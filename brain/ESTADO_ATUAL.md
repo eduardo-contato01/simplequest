@@ -115,3 +115,9 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - `marker_role_and_spacing` concluído: parenthesized whitespace suportado; selected response set autoritativo preserva answer-option role. Lowercase isoladamente não define subitem; enumerações internas, campos e controles permanecem separados.
 - TDD, 14 suítes e replay diagnóstico de 24 IDs sem regressão unsafe; resultado/fontes/caches intactos, execução oficial única sem rerun/OCR novo. V4 não é avaliação imparcial; V5 blind obrigatório.
 - Próximo separado: `visual_and_observation_recovery`, não iniciado. Ver [Patch 04](../audit/postmortem/V4_PATCH_04_MARKER_ROLE_SPACING.md); sem merge.
+
+## Checkpoint corrente — Patch 05A pós-V4, 2026-10-07
+
+- `visual_response_set_evidence` concluído: native PDFs fornecem render somente como fallback text-first, dentro do boundary. Count visual exige cluster único + região/gates; ordem visual nunca inventa labels.
+- TDD/14 suítes e replay dos 30 IDs sem nova regressão unsafe; q5 nativo partial/5/unknown. Dois unsafe observacionais já presentes na base atual permanecem fora do escopo. Render-only, sem OCR novo; resultado/fontes/caches preservados, execução oficial única sem rerun, V5 blind obrigatório.
+- Próximo separado: `observation_complementary_capability`, não iniciado. Ver [Patch 05A](../audit/postmortem/V4_PATCH_05A_VISUAL_RESPONSE_SET.md); sem merge.

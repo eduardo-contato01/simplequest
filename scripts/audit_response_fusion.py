@@ -219,7 +219,8 @@ def fuse_response_evidence(
     )
   if (selected_set or {}).get("ambiguous"):
     hard_blockers.append("competing_response_sets")
-  if len([h for h in visual_hypotheses if int(h.get("support") or 0) >= 3]) >= 2:
+  # Diagnostic visual competitors cannot override an authoritative textual set.
+  if not selected_set_used and len([h for h in visual_hypotheses if int(h.get("support") or 0) >= 3]) >= 2:
     hard_blockers.append("competing_response_sets")
   if pattern_name == "paired_controls_per_row" and answer_slot_indexes:
     hard_blockers.append("role_conflict")
