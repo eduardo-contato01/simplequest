@@ -121,3 +121,9 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - `visual_response_set_evidence` concluído: native PDFs fornecem render somente como fallback text-first, dentro do boundary. Count visual exige cluster único + região/gates; ordem visual nunca inventa labels.
 - TDD/14 suítes e replay dos 30 IDs sem nova regressão unsafe; q5 nativo partial/5/unknown. Dois unsafe observacionais já presentes na base atual permanecem fora do escopo. Render-only, sem OCR novo; resultado/fontes/caches preservados, execução oficial única sem rerun, V5 blind obrigatório.
 - Próximo separado: `observation_complementary_capability`, não iniciado. Ver [Patch 05A](../audit/postmortem/V4_PATCH_05A_VISUAL_RESPONSE_SET.md); sem merge.
+
+## Checkpoint corrente — Patch05B1 safety, 2026-10-07
+
+- Ampliação do regression sample aos 30 no 05A revelou duas regressões preexistentes introduzidas no 03C; [bisseção](../audit/postmortem/V4_PATCH_05B_SAFETY_BISECT.md) confirmou causas distintas e subpatches separados foram autorizados.
+- 05B1 concluído: provenance reconstruída chega à Structure/completude; ausência não prova fechamento de prefixo reconstruído antes de E. TDD e cinco controles reais PASS; q11 agora abstém, A-E reconstruído/visual q5 preservados. Ver [05B1](../audit/postmortem/V4_PATCH_05B1_RECONSTRUCTED_CLOSURE.md).
+- Próximo: 05B2 applicability, ainda não implementado; q17 não neutralizado nesta etapa. Observation complementary não iniciada; resultado oficial preservado, execução única sem rerun, V5 blind obrigatório.

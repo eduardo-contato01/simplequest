@@ -608,6 +608,7 @@ def _observed_lines(lines: list[dict[str, Any]]) -> list[Any]:
       text=str(line.get("text") or ""), page=int(line.get("page") or 0), top=float(line.get("top") or 0),
       bottom=float(line.get("bottom") or 0), x0=float(line.get("x0") or 0), x1=float(line.get("x1") or 0),
       line_index=int(line.get("lineIndex") or 0),
+      is_reconstructed=str(line.get("source") or "") == "reconstructed_from_words",
     )
     for line in lines
   ]

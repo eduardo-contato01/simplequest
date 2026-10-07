@@ -185,3 +185,7 @@ Case/shape são evidências de estilo; membership do selected response set autor
 ## Evidência visual complementar e conjunto selecionado
 
 Texto suficiente conserva autoridade do selected response set/completude. Native render é fallback somente sem esse conjunto e com boundary reliable; não é OCR. Raster/native compartilham crop 2D, associação de conteúdo e hypotheses; raw candidates não são slots sem conjunto visual único selecionado. Concorrentes bloqueiam count quando não há autoridade textual; somente selected markerIndexes alimentam Regions, conservando refs brutas. Count exige regiões/gates; glyph unknown implica labels unknown, nunca A-E por posição. Thresholds, Structure e boundary intactos. Ver [Patch 05A](../audit/postmortem/V4_PATCH_05A_VISUAL_RESPONSE_SET.md); observation complementary separado e V5 blind obrigatório.
+
+## Provenance reconstruída e fechamento terminal
+
+Absence-of-observation não prova terminal closure quando o conjunto depende de fonte degradada reconstruída. Provenance existente chega do adapter aos candidates/selected set e à completude; prefixo antes de E fica unknown e bloqueia emissão. Mixed provenance não certifica coverage por ter algum marker original. A-C/A-D originais, A-E reconstruído, recovery interna e controles permanecem válidos conforme seus contratos. Ver [05B1](../audit/postmortem/V4_PATCH_05B1_RECONSTRUCTED_CLOSURE.md); a [bisseção](../audit/postmortem/V4_PATCH_05B_SAFETY_BISECT.md) exige tratar separadamente o loophole mode unknown/required=false no 05B2.

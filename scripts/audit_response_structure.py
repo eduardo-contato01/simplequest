@@ -303,6 +303,8 @@ def extract_candidates(lines: list[ObservedLine]) -> list[MarkerCandidate]:
         span=(text_start, text_start + segment_end),
       )
       candidate.content_kind = "text" if candidate.text else "unknown"
+      if line.is_reconstructed:
+        candidate.evidence.append("reconstructed_from_words")
       candidates.append(candidate)
       if not match:
         break
@@ -473,7 +475,8 @@ def recover_missing_markers(selected: dict[str, Any] | None, lines: list[Observe
           "bbox": [round(line.x0, 2), round(line.top, 2), round(line.x1, 2), round(line.bottom, 2)],
           "lineIndex": line.line_index,
           "text": line.text,
-          "evidence": ["sequence_gap", "alignment", "spatial_cluster"],
+          "evidence": ["sequence_gap", "alignment", "spatial_cluster"]
+                      + (["reconstructed_from_words"] if line.is_reconstructed else []),
         })
         break
   return recovered
@@ -903,6 +906,9 @@ def assess_response_set_completeness(
   labels = [str(c.get("label") or "").upper() for c in candidates]
   required = mode in {"single_choice", "mixed"} and selected.get("clusterId") is not None
   evidence: list[str] = []
+  reconstructed = any("reconstructed_from_words" in (c.get("evidence") or []) for c in candidates)
+  if reconstructed:
+    evidence.append("reconstructed_from_words")
   if not required:
     status = "unknown"
     evidence.append("completeness_not_applicable_to_response_mode")
@@ -925,6 +931,11 @@ def assess_response_set_completeness(
   elif len(labels) < 3:
     status = "unknown"
     evidence.append("prefix_closure_not_established")
+  elif reconstructed and labels[-1] != "E":
+    # Mixed sets also depend on degraded observation coverage. Absence of a
+    # continuation is not terminal evidence; E closes the supported A-E domain.
+    status = "unknown"
+    evidence.extend(["contiguous_prefix_from_a", "reconstructed_terminal_closure_unproven"])
   else:
     status = "complete"
     evidence.extend(["contiguous_prefix_from_a", "no_observed_edge_continuation"])

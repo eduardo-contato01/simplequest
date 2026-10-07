@@ -1096,7 +1096,76 @@ def test_visual_response_set_fallback() -> None:
   check('visual.W.raw_not_marker', not f.get('slots') and f.get('optionCountHypothesis') is None)
 
 
+def test_reconstructed_terminal_closure() -> None:
+  import copy
+
+  def options(labels, rebuilt=()):
+    lines = selected_set_lines([(f"({label}) resposta observada", 300.0 + i * 24)
+                                for i, label in enumerate(labels)])
+    for line, label in zip(lines, labels):
+      line["source"] = "reconstructed_from_words" if label in rebuilt else "native_pdf"
+    return lines
+
+  for labels in ("ABC", "ABCD", "ABCDE"):
+    for rebuilt in (False, True):
+      name = f"closure.{'rebuilt' if rebuilt else 'original'}.{labels}"
+      lines = options(labels, labels if rebuilt else ())
+      observed = runner._observed_lines(lines)
+      s, _, _, f = selected_set_pipeline(lines)
+      complete = not rebuilt or labels == "ABCDE"
+      c = s["responseSetCompleteness"]
+      check(name + ".adapter", all(l.is_reconstructed == rebuilt for l in observed))
+      check(name + ".candidates", all(("reconstructed_from_words" in m["evidence"]) == rebuilt
+            for m in s["alternativeMarkerCandidates"]))
+      check(name + ".clusters", all(("reconstructed_from_words" in m["evidence"]) == rebuilt
+            for cluster in s["responseSetCandidates"] for m in cluster["candidates"]))
+      check(name + ".selected", all(("reconstructed_from_words" in m["evidence"]) == rebuilt
+            for m in s["selectedResponseSet"]["candidates"]))
+      check(name + ".completeness", c["status"] == "complete" if complete else c["status"] in {"unknown", "ambiguous"}, c)
+      check(name + ".count_labels", f["optionCountHypothesis"] == (len(labels) if complete else None)
+            and f["optionLabelsHypothesis"] == ("A-" + labels[-1] if complete else "unknown"))
+      check(name + ".provenance_evidence", ("reconstructed_from_words" in c["evidence"]) == rebuilt)
+      check(name + ".stable_identity", all("text" not in ref for ref in s["selectedResponseSet"]["candidateRefs"]))
+  for rebuilt in ("C", "A"):
+    s, _, _, f = selected_set_pipeline(options("ABC", rebuilt))
+    check("closure.mixed." + rebuilt, s["responseSetCompleteness"]["status"] in {"unknown", "ambiguous"}
+          and f["optionCountHypothesis"] is None and f["optionLabelsHypothesis"] == "unknown")
+  lines = options("ABC", "ABC") + selected_set_lines([("?? fragmento residual", 372.0)])
+  lines[-1]["lineIndex"] = 3
+  s, _, _, f = selected_set_pipeline(lines)
+  check("closure.residual", s["responseSetCompleteness"]["status"] == "ambiguous" and f["optionCountHypothesis"] is None)
+  lines = options("ABCDE", "ABCDE")
+  lines[1]["text"] = "conteudo alinhado sem marcador legivel"
+  s, markers, _, f = selected_set_pipeline(lines)
+  check("closure.internal_gap", s["responseSetCompleteness"]["status"] == "complete" and f["optionCountHypothesis"] == 5
+        and any(m.get("source") == "recovered_geometry" for m in markers))
+  recovered = next(m for m in s["selectedResponseSet"]["candidates"] if m.get("labelSource") == "recovered_geometry")
+  check("closure.internal_gap.provenance", "reconstructed_from_words" in recovered["evidence"])
+  for name, texts in [
+    ("ce", [("julgue os itens como certo ou errado", 260.0), ("(C) verdadeiro", 300.0), ("(E) falso", 324.0)]),
+    ("parent_child", [("julgue os itens como certo ou errado", 260.0), ("12-A afirmacao", 300.0), ("12-B afirmacao", 324.0)])]:
+    lines = selected_set_lines(texts)
+    for line in lines: line["source"] = "reconstructed_from_words"
+    s, _, _, f = selected_set_pipeline(lines)
+    check("closure." + name, s["responseSetCompleteness"]["requiredForOptionEmission"] is False and f["optionCountHypothesis"] is None)
+  lines = selected_set_lines([("(A) rejeitado no enunciado", 40.0)]) + options("ABCDE", "ABCDE")
+  for i, line in enumerate(lines): line["lineIndex"] = i
+  s, markers, r, f = selected_set_pipeline(lines)
+  check("closure.selected_rejected", len(markers) == 5 and f["optionCountHypothesis"] == 5
+        and not any(o["lineIndex"] == 0 for slot in r["responseSlotHypotheses"] if slot["role"] == "answer_option" for o in slot["markerObservations"]))
+  # Visual-only count has no textual selected set and no textual closure gate.
+  _, _, r, _ = selected_set_pipeline(options("ABCDE"))
+  r = copy.deepcopy(r)
+  for slot in r["responseSlotHypotheses"]:
+    slot["label"] = None
+    slot["markerObservations"] = [{"source": "visual", "visualIndex": slot["slotId"]}]
+  f = runner.fusion.fuse_response_evidence({"reliable": True}, {},
+      {"visualAlternativeEvidence": [{"confidence": "high"}] * 5}, r)
+  check("closure.visual_only", f["optionCountHypothesis"] == 5 and f["optionLabelsHypothesis"] == "unknown")
+
+
 def main() -> None:
+  test_reconstructed_terminal_closure()
   test_visual_response_set_fallback()
   test_marker_role_and_spacing()
   test_response_set_completeness()
