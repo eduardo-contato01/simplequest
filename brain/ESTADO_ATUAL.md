@@ -157,3 +157,9 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - Seleção anterior a inspeção; questionInspection/selection/GT/Auditor/metrics V5=false. Nenhum índice de questões V5; artefatos V1–V4/postmortem/caches preservados, sem merge. Único hybrid não exposto consumido por V5; futura Final Blind Evaluation precisará de novo acervo nessa categoria, sem reciclar documentos.
 - Próximo separado: V5 Phase B neutral question index + question selection freeze. V5 completo NÃO concluído; nenhuma questão selecionada nesta fase. Pódion continua interno conforme [[IMPORTADOR]], sem promoção ao catálogo.
 - Limitação futura registrada, sem correção: validador legado suporta V1–V4, não V5. Manifest atual é documental; compatibilidade/bindings de execução exigirão gate explícito, sem alterar Auditor funcional congelado nem contornar protocolVersion silenciosamente.
+
+## Checkpoint corrente — Holdout V5 Phase B1, 2026-10-07
+
+- Raw neutral question index congelado após execução única dos 48 documentos: 1063 questões brutas, um documento com zero questões preservado; integridade automática PASS. Protocolo/config do mesmo indexador V4 congelados antes da execução, sem tuning ou revisão humana de PDFs/anomalias. Ver [raw freeze](../audit/holdout/V5_QUESTION_INDEX_RAW_FREEZE.md).
+- V1–V4/postmortem/caches antigos, Phase A e código funcional05C1/schema preservados; 05C2 permanece estacionado. Somente cache neutro novo do índice, não cache do Auditor; OCR do índice não define OCR futuro do Auditor.
+- Somente B1 concluída; próximo separado=V5 Phase B2 neutral question-index adjudication/final freeze. Final index/selection/GT/Auditor/metrics=false; nenhuma adjudicação nesta execução, sem merge. Limitação do validator legado V1–V4 permanece para gate futuro.

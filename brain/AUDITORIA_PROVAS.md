@@ -226,3 +226,13 @@ GT somente após selection freeze, Auditor somente após GT/config/cache freeze,
 primeira execução única/imutável, métricas somente após result freeze. V5 não completo.
 Hybrid não exposto restante consumido por V5; Final Blind Evaluation futura
 exige novo acervo nessa categoria, nunca reutilizar V5/holdouts revelados.
+
+## Holdout V5 blind — Phase B1 raw freeze
+
+Indexador neutro V4 e OCR tesseract/160dpi/PSM11/por+eng congelados antes de
+uma execução nos 48 documentos; raw=1063 questões, integridade automática PASS.
+Um documento com zero questões mantido; anomalias apenas contadas, sem inspeção
+manual/adjudicação ou tuning. Ver [raw freeze B1](../audit/holdout/V5_QUESTION_INDEX_RAW_FREEZE.md).
+V1–V4/caches anteriores, Phase A e Auditor05C1/schema intocados; 05C2 estacionado.
+Somente B1 concluída, não Phase B inteira. Próximo separado=B2 neutral question-index
+adjudication/final freeze; final index/selection/GT/Auditor/metrics=false, sem merge.

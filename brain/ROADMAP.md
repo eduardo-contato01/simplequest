@@ -19,14 +19,15 @@ Trabalho vigente em 2026-10-06. Estado factual em [[ESTADO_ATUAL]]; visão detal
 12. [x] Patch05C1 `scoped_complementary_marker_ocr`: fallback conservador reliable/crop/markers explícitos; TDD/14 suítes/compile e replay30 sem nova unsafe. Dois revealed targets obtiveram conjuntos completos; q13 abstém por A não reconhecido. Gutter diagnóstico confirmou recognition limit e não entrou em produção; nenhum parameter search. Ver [05C1](../audit/postmortem/V4_PATCH_05C1_SCOPED_COMPLEMENTARY_MARKER_OCR.md). Isso não é métrica de coverage.
 13. [~] Patch05C2 `visual_header_and_layout_observation`: experimento diagnóstico encerrado/estacionado, capability NÃO promovida; 0/2 targets revelados recuperaram boundary, sem métrica de coverage. Produção/testes revertidos para 05C1; revisitar somente se evidência futura/blind justificar. Ver [05C2](../audit/postmortem/V4_PATCH_05C2_VISUAL_HEADER_LAYOUT.md).
 14. [x] V5 Phase A document selection/freeze: branch `audit/holdout-v5-blind`, candidate `3b306d6a544cc63928ec8adf07640b224651742e`/baseline05C1; 48 documentos metadata-only determinísticos, overlap zero com V1–V4/calibração, antes de inspeção de questões. Ver [freeze V5](../audit/holdout/V5_DOCUMENT_SELECTION_FREEZE.md). Auditor funcional congelado; V5 completo NÃO concluído.
-15. Próxima prioridade: V5 Phase B neutral question index + question selection freeze, em etapa separada. GT somente após esse freeze; Auditor somente após GT freeze, execução primeira única/imutável e métricas somente após result freeze.
-16. Avaliar novamente precision + coverage em V5 blind depois dos freezes e da execução autorizada, buscando recuperar cobertura sem perder precisão.
+15. [x] V5 Phase B1 raw neutral question index freeze: protocolo/config congelados antes da execução única, 48 documentos/1063 questões brutas; validações automáticas PASS, sem adjudicação. Ver [raw freeze](../audit/holdout/V5_QUESTION_INDEX_RAW_FREEZE.md). Phase B inteira NÃO concluída.
+16. Próxima prioridade separada: V5 Phase B2 neutral question-index adjudication/final freeze. Question selection ainda não iniciada; GT somente após selection freeze, Auditor somente após GT/config/cache freeze, execução primeira única/imutável e métricas somente após result freeze.
+17. Avaliar novamente precision + coverage em V5 blind depois dos freezes e da execução autorizada, buscando recuperar cobertura sem perder precisão.
 
 Futuro condicionado à recorrência do padrão q13: possible marker-glyph recognition / alternate observation strategy. Nenhuma tarefa ou Patch05C3 criado agora.
 
 Meta operacional: precision >= 99,5%; coverage >= 80%; unsafe_error <= 0,5%; direção ideal de precision 99,8–99,9%. São metas futuras, não o desempenho atual.
 
-Ver [[AUDITORIA_PROVAS]]. Postmortem e Patches 01/02/03A/03B/03C/04/05A/05B1/05B2/05C1 concluídos; experimento 05C2 estacionado/não promovido; somente Fase A V5 concluída, indexação/seleção de questões, GT e avaliação V5 ainda não iniciados.
+Ver [[AUDITORIA_PROVAS]]. Postmortem e Patches 01/02/03A/03B/03C/04/05A/05B1/05B2/05C1 concluídos; experimento 05C2 estacionado/não promovido; V5 Fases A/B1 concluídas, B2 adjudicação/índice final, seleção de questões, GT e avaliação V5 ainda não iniciados.
 
 ## Depois — Ingestão/transcrição
 
