@@ -333,7 +333,8 @@ def resolve_index_entries(index_document: dict[str, Any] | None, question_id: st
 
 
 def _run_question(document: dict[str, Any], question: dict[str, Any], gt: dict[str, Any], protocol: dict[str, Any],
-                  base: Path, index_document: dict[str, Any] | None = None) -> dict[str, Any] | None:
+                  base: Path, index_document: dict[str, Any] | None = None,
+                  complementary_output_root: Path | None = None) -> dict[str, Any] | None:
   index_current, index_next = resolve_index_entries(index_document, question["questionId"])
   document_questions = question_boundary.index_questions(index_document) if index_document is not None else None
   # The frozen question index is authoritative for document order and pages.
@@ -351,12 +352,13 @@ def _run_question(document: dict[str, Any], question: dict[str, Any], gt: dict[s
                                 document_questions=document_questions, native_pdf=Path(canonical),
                                 native_render_cache=base / 'outputs' / 'audit' / 'native-render')
   return _run_ocr(document, question, index_current, index_next, pages, base,
-                  document_questions=document_questions)
+                  document_questions=document_questions, complementary_output_root=complementary_output_root)
 
 
 def _run_ocr(document: dict[str, Any], question: dict[str, Any], index_current: dict[str, Any] | None,
              index_next: dict[str, Any] | None, pages: list[int], base: Path,
-             document_questions: list[dict[str, Any]] | None = None) -> dict[str, Any] | None:
+             document_questions: list[dict[str, Any]] | None = None,
+             complementary_output_root: Path | None = None) -> dict[str, Any] | None:
   payload_path = base / "outputs" / "audit" / "ocr" / document["documentId"] / "tesseract" / "ocr.json"
   if not payload_path.exists():
     return None
@@ -365,14 +367,17 @@ def _run_ocr(document: dict[str, Any], question: dict[str, Any], index_current: 
   if not bundle.lines and not bundle.words:
     return None
   return _run_with_boundary(bundle, question, index_current, index_next, pages, payload_path.parent / "rendered",
-                            document_questions=document_questions)
+                            document_questions=document_questions,
+                            complementary_output_dir=(complementary_output_root or base / 'outputs' / 'audit' / 'complementary-ocr')
+                            / document['documentId'] / question['questionId'].split(':')[-1])
 
 
 def _run_with_boundary(bundle: observations.ObservationBundle, question: dict[str, Any],
                        index_current: dict[str, Any] | None, index_next: dict[str, Any] | None,
                        pages: list[int], rendered_dir: Path | None,
                        document_questions: list[dict[str, Any]] | None = None,
-                       native_pdf: Path | None = None, native_render_cache: Path | None = None) -> dict[str, Any]:
+                       native_pdf: Path | None = None, native_render_cache: Path | None = None,
+                       complementary_output_dir: Path | None = None) -> dict[str, Any]:
   effective = index_current or question
   boundary = question_boundary.compute_question_boundary(bundle, effective, index_next, pages,
                                                          document_questions=document_questions)
@@ -380,7 +385,97 @@ def _run_with_boundary(bundle: observations.ObservationBundle, question: dict[st
     # Without a frozen index entry the question order is unknown; be conservative.
     boundary = {**boundary, "reliable": False, "reason": "question_not_in_index"}
   filtered = question_boundary.filter_bundle(bundle, boundary)
-  return _run_from_bundle(filtered, boundary, rendered_dir, pages, native_pdf, native_render_cache)
+  primary = _run_from_bundle(filtered, boundary, rendered_dir, pages, native_pdf, native_render_cache)
+  if rendered_dir is not None and complementary_output_dir is not None:
+    return _complementary_fallback(filtered, boundary, primary, rendered_dir, complementary_output_dir)
+  return primary
+
+
+def _primary_complementary_compatibility(primary_markers: list[dict[str, Any]],
+                                       complementary_markers: list[dict[str, Any]]) -> dict[str, Any]:
+  """Explicit primary labels must coincide spatially, not merely in sequence.
+
+  Geometry recovery is not an explicit primary observation. Compare leading
+  parser observations (including rejected ones conservatively), on the same
+  page and with tolerance derived solely from observed line heights.
+  """
+  conflicts = []
+  for marker in primary_markers:
+    if marker.get('markerKind') != 'answer_marker':
+      continue
+    matches = [other for other in complementary_markers
+               if other.get('label') == marker.get('label') and other.get('page') == marker.get('page')]
+    compatible = False
+    for other in matches:
+      a, b = marker['bbox'], other['bbox']
+      tolerance = 2 * max(float(a[3])-float(a[1]), float(b[3])-float(b[1]), 1.0)
+      if (abs(float(a[0])-float(b[0])) <= tolerance
+          and abs((float(a[1])+float(a[3]))/2-(float(b[1])+float(b[3]))/2) <= tolerance):
+        compatible = True
+        break
+    if not compatible:
+      conflicts.append({'label': marker.get('label'), 'page': marker.get('page'),
+                        'bbox': marker.get('bbox'), 'reason': 'label_or_geometry_conflict'})
+  return {'compatible': not conflicts, 'conflicts': conflicts, 'observationFamily': 'ocr_text'}
+
+
+def _complementary_fallback(bundle: observations.ObservationBundle, boundary: dict[str, Any],
+                            primary: dict[str, Any], rendered_dir: Path, output_dir: Path,
+                            ocr_adapter: Any = None) -> dict[str, Any]:
+  """Primary-first separate pipeline; new OCR never supplies inferred markers."""
+  primary_structure = primary.get('primaryStructure') or {}
+  selected = primary_structure.get('selectedResponseSet')
+  complete = primary_structure.get('responseSetCompleteness') or {}
+  diagnostics: dict[str, Any] = {'complementaryObservationTriggered': False,
+    'complementaryOcrExecutions': 0, 'complementaryOcrEngine': 'tesseract',
+    'complementaryOcrLang': 'por+eng', 'complementaryOcrPsm': 6, 'complementaryRasterScale': 2.0,
+    'complementaryPages': [], 'complementaryCrop': [], 'complementaryWords': [],
+    'complementaryLines': [], 'complementaryMarkers': [], 'complementarySelectedResponseSet': None,
+    'complementaryCompleteness': None, 'primaryComplementaryCompatibility': None,
+    'complementaryErrors': [], 'effectiveResponseSetSource': 'primary', 'promoted': False}
+  result = dict(primary)
+  eligible = (boundary.get('reliable') and boundary.get('pageLimits') and bundle.source == 'ocr_cache'
+    and not (primary.get('optionCountHypothesis') is not None
+      and response_structure.response_set_authoritative(selected)
+      and complete.get('status') == 'complete'))
+  if eligible:
+    complementary, observed = observations.scoped_complementary_ocr(
+      boundary, bundle, rendered_dir, output_dir, ocr_adapter)
+    diagnostics.update(observed)
+    if complementary.lines:
+      # Never concatenate the two passes; only effective selected markers go to Regions.
+      candidate_result = _run_from_bundle(complementary, boundary, None, boundary.get('pages') or [])
+      complementary_structure = candidate_result['primaryStructure']
+      candidate_set = complementary_structure.get('selectedResponseSet')
+      candidates = response_structure.accepted_response_candidates(candidate_set or {})
+      explicit = observations.extract_text_markers(complementary.lines_as_region_input())
+      markers = response_structure.selected_response_markers(explicit, candidate_set)
+      markers = [marker for marker in markers if marker.get('markerKind') == 'answer_marker']
+      closure = dict(complementary_structure.get('responseSetCompleteness') or {})
+      explicit_only = (bool(candidates) and len(markers) == len(candidates)
+        and all(c.get('labelSource') != 'recovered_geometry' and c.get('label') in set('ABCDE')
+                and c.get('markerKind') == 'answer_marker' for c in candidates))
+      if not explicit_only and candidates:
+        closure = {**closure, 'status': 'incomplete',
+                   'evidence': list(closure.get('evidence') or []) + ['complementary_explicit_markers_required']}
+      compatibility = _primary_complementary_compatibility(
+        observations.extract_text_markers(bundle.lines_as_region_input()), markers)
+      diagnostics.update(complementaryMarkers=explicit, complementarySelectedResponseSet=candidate_set,
+        complementaryCompleteness=closure, primaryComplementaryCompatibility=compatibility)
+      result['complementaryStructure'] = complementary_structure
+      if not compatibility['compatible']:
+        diagnostics['effectiveResponseSetSource'] = 'conflict'
+      if (not diagnostics['complementaryErrors'] and explicit_only
+          and response_structure.response_set_authoritative(candidate_set)
+          and closure.get('requiredForOptionEmission') and closure.get('status') == 'complete'
+          and compatibility['compatible'] and candidate_result.get('optionCountHypothesis') is not None
+          and 'competing_response_sets' not in candidate_result.get('blockers', [])):
+        result = {**candidate_result, 'primaryStructure': primary_structure,
+                  'complementaryStructure': complementary_structure}
+        diagnostics.update(effectiveResponseSetSource='complementary_ocr', promoted=True)
+  result['complementaryDiagnostics'] = diagnostics
+  result['effectiveResponseSetSource'] = diagnostics['effectiveResponseSetSource']
+  return result
 
 
 RECOVERED_MARKER_REQUIRED_EVIDENCE = {
@@ -585,6 +680,11 @@ def _run_from_bundle(bundle: observations.ObservationBundle, boundary: dict[str,
     structure,
   )
 
+  if bundle.source == 'complementary_ocr':
+    # No inferred gap marker may enter the complementary Regions pipeline.
+    markers = [{**marker, 'source': 'complementary_ocr', 'observationFamily': 'ocr_text'}
+               for marker in observations.extract_text_markers(lines)]
+
   visual_shadow = _scoped_visual_observation(boundary, lines, pages, rendered_dir, native_pdf,
                                             native_render_cache, structure.get('selectedResponseSet'))
   evidence = visual_shadow['visualAlternativeEvidence']
@@ -599,6 +699,8 @@ def _run_from_bundle(bundle: observations.ObservationBundle, boundary: dict[str,
   )
   result = fusion.fuse_response_evidence(boundary, structure, visual_shadow, discovered)
   result['visualDiagnostics'] = visual_shadow
+  result['primaryStructure'] = structure
+  result['effectiveResponseSetSource'] = 'primary'
   return result
 
 

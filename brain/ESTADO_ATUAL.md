@@ -137,3 +137,9 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 
 - Dois subpatches funcionais separados publicados; replay final dos 30 após ambos PASS: duas regressões unsafe reveladas neutralizadas, nenhuma nova unsafe nos outros 28. q5 visual, A-E reconstruído, cinco targets 04, q20 conservador e q54 preservados; um A-D reconstruído adicional abstém conservadoramente. Ver [fechamento 05B2](../audit/postmortem/V4_PATCH_05B2_COMPLETENESS_APPLICABILITY.md).
 - Resultado/fontes/caches congelados preservados; Auditor oficial executado uma vez, sem rerun nem claim V4, V5 blind obrigatório. Próximo separado: `observation_complementary_capability`, não iniciado; sem merge.
+
+## Checkpoint corrente — Patch05C1 fechado, 2026-10-07
+
+- `scoped_complementary_marker_ocr` concluído como fallback conservador: boundary reliable, crop do raster cacheado, Tesseract por+eng/PSM6/2x, conjuntos explicitamente observados e compatíveis; mesma imagem não conta como fontes independentes. Completude/gates 05B preservados. Ver [05C1](../audit/postmortem/V4_PATCH_05C1_SCOPED_COMPLEMENTARY_MARKER_OCR.md).
+- q17/q11 obtêm conjuntos explícitos completos; q13 permanece abstention por marker A não reconhecido. Gutter diagnóstico único recuperou B, não A, e NÃO entrou em produção. TDD/14 suítes/compile e replay dos mesmos 30 PASS sem nova unsafe; resultado/fontes/caches congelados intactos, execução oficial única sem rerun, nenhum claim V4; V5 blind obrigatório.
+- Capacidade completa não significa todos os targets recuperados. Próximo separado: 05C2 `visual_header_and_layout_observation`, NÃO iniciado. Estratégia alternativa de marker-glyph somente futura se o padrão q13 recorrer; nenhuma tarefa/05C3 criada, sem merge.

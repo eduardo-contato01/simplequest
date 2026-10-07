@@ -1241,7 +1241,96 @@ def test_selected_set_completeness_applicability() -> None:
   check("applicability.visual_only", f["optionCountHypothesis"] == 5 and f["optionLabelsHypothesis"] == "unknown")
 
 
+def test_scoped_complementary_marker_ocr() -> None:
+  import copy
+  from types import SimpleNamespace
+  from PIL import Image
+
+  if not hasattr(runner, '_complementary_fallback'):
+    for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
+      check('complementary.' + letter + '.contract', False, 'scoped fallback missing')
+    return
+
+  def bundle(labels='', rebuilt=False, shift=0):
+    lines = [runner.observations.ObservedLine(
+      1, f'({label}) resposta observada com conteudo', (50, 300 + 'ABCDE'.index(label)*24 + shift,
+       250, 312 + 'ABCDE'.index(label)*24 + shift), line_index=i,
+      source='reconstructed_from_words' if rebuilt else 'ocr_cache') for i,label in enumerate(labels)]
+    return runner.observations.ObservationBundle([], lines, [], {1: {'imageWidth':400,'imageHeight':900}}, 'ocr_cache')
+
+  with tempfile.TemporaryDirectory() as directory:
+    root=Path(directory); rendered=root/'rendered'; rendered.mkdir()
+    Image.new('RGB',(400,900),'white').save(rendered/'page-01.png')
+    boundary={'reliable':True,'pages':[1], 'pageLimits':{1:{'top':100.2,'bottom':700.8,'x0':20.2,'x1':350.8}}}
+    calls=[]
+    def run(primary_labels='', complementary_labels='ABCDE', *, rebuilt=False, shift=0,
+            reliable=True, missing=False, failure=False, texts=None, limits=None):
+      calls.clear(); b=copy.deepcopy(boundary); b['reliable']=reliable
+      if limits is not None: b['pageLimits']=limits
+      primary_bundle=bundle(primary_labels,rebuilt,shift)
+      primary=runner._run_from_bundle(primary_bundle,b,None,[1])
+      before=copy.deepcopy(primary)
+      def adapter(image_path,page):
+        image=Image.open(image_path); calls.append((image.size,page))
+        if failure: raise RuntimeError('stub engine failed')
+        crop=[21,101,350,700]; words=[]
+        rows=texts if texts is not None else [(f'({label}) resposta observada com conteudo',300+'ABCDE'.index(label)*24) for label in complementary_labels]
+        for text,y in rows:
+          x=50
+          for token in text.split():
+            width=max(8,len(token)*5)
+            words.append({'text':token,'bbox':[(x-crop[0])*2,(y-crop[1])*2,(x+width-crop[0])*2,(y+12-crop[1])*2], 'confidence':0.9})
+            x+=width+4
+        return SimpleNamespace(words=words,width=image.width,height=image.height,confidence=0.9)
+      result=runner._complementary_fallback(primary_bundle,b,primary,
+        root/'missing' if missing else rendered,root/'output',ocr_adapter=adapter)
+      check('complementary.input_immutable',primary==before)
+      return result,result['complementaryDiagnostics']
+
+    f,d=run(reliable=False); check('complementary.A.unreliable',not calls and not d['complementaryObservationTriggered'])
+    for labels,name in [('ABCD','B'),('ABCDE','C')]:
+      f,d=run(labels); check('complementary.'+name+'.primary_first',not calls and f['optionCountHypothesis']==len(labels))
+    f,d=run(); check('complementary.D.eligible',len(calls)==1 and d['complementaryObservationTriggered'])
+    check('complementary.E.vertical_crop',d['complementaryCrop'][0]['cropPixels'][1::2]==[101,700])
+    check('complementary.F.column_crop',d['complementaryCrop'][0]['cropPixels'][::2]==[21,350])
+    check('complementary.G.next_question_excluded',calls[0][0]==(658,1198))
+    first=d['complementaryWords'][0]
+    check('complementary.H.roundtrip',first['bbox']==[50,300,65,312])
+    check('complementary.H.provenance',first['source']=='complementary_ocr' and first['isComplementary'] and first['ocrConfidence']==0.9)
+    check('complementary.I.explicit_ae',f['optionCountHypothesis']==5 and f['optionLabelsHypothesis']=='A-E' and d['complementaryCompleteness']['status']=='complete')
+    check('complementary.I.separate',f['primaryStructure']['selectedResponseSet']['clusterId'] is None and f['complementaryStructure']['selectedResponseSet']['labels']==list('ABCDE'))
+    f,d=run(texts=[(f'{label}  -  (   ) resposta com conteudo',300+i*24) for i,label in enumerate('ABCD')])
+    check('complementary.J.symbolic_ad',f['optionCountHypothesis']==4 and f['optionLabelsHypothesis']=='A-D')
+    f,d=run(complementary_labels='ABC'); check('complementary.K.no_terminal_invention',d['complementarySelectedResponseSet']['labels']==list('ABC') and len(d['complementaryMarkers'])==3)
+    f,d=run(complementary_labels='ACD'); check('complementary.L.no_gap_invention',not d['promoted'] and d['complementaryCompleteness']['status']=='incomplete' and [m['label'] for m in d['complementaryMarkers']]==list('ACD'))
+    f,d=run(complementary_labels='CDE'); check('complementary.M.no_initial_invention',not d['promoted'] and d['complementaryCompleteness']['status']=='incomplete')
+    f,d=run('CDE'); check('complementary.N.compatible_suffix',d['promoted'] and f['optionCountHypothesis']==5)
+    f,d=run('ABC','ABCD',rebuilt=True); check('complementary.O.compatible_prefix',d['promoted'] and f['optionCountHypothesis']==4)
+    f,d=run('ACE','ABCD'); check('complementary.P.label_conflict',not d['promoted'] and not d['primaryComplementaryCompatibility']['compatible'])
+    f,d=run('ABC','ABCD',rebuilt=True,shift=150); check('complementary.Q.geometry_conflict',not d['promoted'])
+    f,d=run(texts=[(s,180+i*24) for i,s in enumerate(['A','B','C','P'])]+[(f'({l}) resposta com conteudo',300+i*24) for i,l in enumerate('ABCDE')])
+    check('complementary.R.figure_bare_labels',len(d['complementaryMarkers'])==5 and f['optionCountHypothesis']==5)
+    rows=[]
+    for i,l in enumerate('ABCDE'):
+      rows += [(f'({l}) resposta observada',300+i*48),('continuacao de conteudo',314+i*48)]
+    f,d=run(texts=rows); check('complementary.S.multiline',f['optionCountHypothesis']==5 and all(s['contentRegionId'] is not None for s in f['slots'] if s['role']=='answer_option'), str((d['complementaryCompleteness'],d['complementaryErrors'],f.get('blockers'))))
+    f,d=run('ABC','ABCD',rebuilt=True); check('complementary.T.no_duplicate_slots',sum(s['role']=='answer_option' for s in f['slots'])==4)
+    check('complementary.T.slot_provenance',all(o['source']=='complementary_ocr' for s in f['slots'] if s['role']=='answer_option' for o in s['textualMarkerRefs']))
+    origins=runner.fusion._slot_origins({'markerObservations':[{'source':'strong'},{'source':'complementary_ocr'}]})
+    check('complementary.U.same_family',len(origins)==1 and runner.fusion._slot_agreement(origins,True)=='partial')
+    f,d=run('ABC',rebuilt=True,failure=True); check('complementary.V.failure_primary_preserved',not d['promoted'] and f['optionCountHypothesis'] is None and bool(d['complementaryErrors']))
+    f,d=run(missing=True); check('complementary.W.missing_image',not calls and not d['promoted'])
+    f,d=run(limits={}); check('complementary.W.missing_scope',not calls and not d['promoted'])
+    native=bundle(); native.source='native_pdf'
+    primary=runner._run_from_bundle(native,boundary,None,[1]); primary.update(optionCountHypothesis=5,optionLabelsHypothesis='unknown')
+    f=runner._complementary_fallback(native,boundary,primary,rendered,root/'output',ocr_adapter=lambda *a: (_ for _ in ()).throw(AssertionError('native raster incompatible')))
+    check('complementary.X.visual_partial_preserved',f['optionCountHypothesis']==5 and f['optionLabelsHypothesis']=='unknown' and not f['complementaryDiagnostics']['complementaryObservationTriggered'])
+    f,d=run('ABCD','CDE',rebuilt=True); check('complementary.Y.rebuilt_closure_preserved',f['optionCountHypothesis'] is None and 'reconstructed_terminal_closure_unproven' in f['primaryStructure']['responseSetCompleteness']['evidence'])
+    f,d=run('CDE','CDE'); check('complementary.Z.applicability_preserved',f['optionCountHypothesis'] is None and f['primaryStructure']['responseSetCompleteness']['requiredForOptionEmission'])
+
+
 def main() -> None:
+  test_scoped_complementary_marker_ocr()
   test_selected_set_completeness_applicability()
   test_reconstructed_terminal_closure()
   test_visual_response_set_fallback()

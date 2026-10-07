@@ -22,9 +22,10 @@ class ObservedWord:
   bbox: tuple[float, float, float, float]
   word_index: int = 0
   source: str = "unknown"
+  provenance: dict[str, Any] = field(default_factory=dict)
 
   def to_dict(self) -> dict[str, Any]:
-    return {"page": self.page, "text": self.text, "bbox": list(self.bbox), "wordIndex": self.word_index, "source": self.source}
+    return {"page": self.page, "text": self.text, "bbox": list(self.bbox), "wordIndex": self.word_index, "source": self.source, **self.provenance}
 
 
 @dataclass
@@ -36,12 +37,13 @@ class ObservedLine:
   line_index: int = 0
   source: str = "unknown"
   order_ambiguous: bool = False
+  provenance: dict[str, Any] = field(default_factory=dict)
 
   def to_dict(self) -> dict[str, Any]:
     return {
       "page": self.page, "text": self.text, "bbox": list(self.bbox),
       "wordIndexes": self.word_indexes, "lineIndex": self.line_index,
-      "source": self.source, "orderAmbiguous": self.order_ambiguous,
+      "source": self.source, "orderAmbiguous": self.order_ambiguous, **self.provenance,
     }
 
 
@@ -75,14 +77,15 @@ class ObservationBundle:
       {
         "text": line.text, "page": line.page,
         "x0": line.bbox[0], "top": line.bbox[1], "x1": line.bbox[2], "bottom": line.bbox[3],
-        "lineIndex": line.line_index, "role": "stem", "source": line.source,
+        "lineIndex": line.line_index, "role": "stem", "source": line.source, **line.provenance,
       }
       for line in self.lines
     ]
 
   def words_as_region_input(self) -> list[dict[str, Any]]:
     return [
-      {"page": word.page, "bbox": list(word.bbox), "wordIndex": word.word_index, "text": word.text}
+      {"page": word.page, "bbox": list(word.bbox), "wordIndex": word.word_index, "text": word.text,
+       **({'source': word.source, **word.provenance} if word.provenance else {})}
       for word in self.words
     ]
 
@@ -116,8 +119,123 @@ def extract_text_markers(lines: list[dict[str, Any]]) -> list[dict[str, Any]]:
       "page": int(line.get("page") or 0),
       "bbox": [line.get("x0"), line.get("top"), line.get("x1"), line.get("bottom")],
       "lineIndex": line.get("lineIndex"),
+      **({key: line.get(key) for key in ('source', 'observationSource', 'complementaryPass',
+         'isComplementary', 'observationFamily', 'ocrConfidence')}
+         if line.get('source') == 'complementary_ocr' else {}),
     })
   return markers
+
+
+def scoped_complementary_ocr(boundary: dict[str, Any], bundle: ObservationBundle,
+                             rendered_dir: Path, output_dir: Path,
+                             ocr_adapter: Any = None) -> tuple[ObservationBundle, dict[str, Any]]:
+  """Observe the same cached raster, cropped inward before a fixed local OCR pass.
+
+  The adapter seam accepts (crop_path, page); unit tests need no OCR executable.
+  Geometry must match the primary raster exactly; native render coordinates are
+  deliberately not presumed compatible. No PDF is rendered by this adapter.
+  """
+  import math
+  from PIL import Image
+  import ocr_pdf_layer
+
+  diagnostics: dict[str, Any] = {
+    'complementaryObservationTriggered': False, 'complementaryOcrExecutions': 0,
+    'complementaryOcrEngine': 'tesseract', 'complementaryOcrLang': 'por+eng',
+    'complementaryOcrPsm': 6, 'complementaryRasterScale': 2.0,
+    'complementaryPages': [], 'complementaryCrop': [], 'complementaryErrors': [],
+  }
+  words: list[ObservedWord] = []
+  lines: list[ObservedLine] = []
+  geometry: dict[int, dict[str, Any]] = {}
+  empty = ObservationBundle([], [], [], {}, 'complementary_ocr')
+  if not boundary.get('reliable') or bundle.source != 'ocr_cache':
+    return empty, diagnostics
+  limits_by_page = boundary.get('pageLimits') or {}
+  if not limits_by_page:
+    return empty, diagnostics
+
+  def execute(path: Path, page: int) -> Any:
+    return ocr_pdf_layer.tesseract_page(path, page, ocr_pdf_layer.DEFAULT_TESSERACT,
+                                      ocr_pdf_layer.DEFAULT_TESSDATA, 'por+eng', 6)
+
+  # Validate ALL page scopes before any OCR; a missing page cannot certify closure.
+  crops = []
+  for page_key, limit in sorted(limits_by_page.items(), key=lambda item: int(item[0])):
+    page = int(page_key)
+    image_path = rendered_dir / f'page-{page:02d}.png'
+    try:
+      if not image_path.is_file():
+        raise ValueError('cached_raster_missing')
+      with Image.open(image_path) as image:
+        width, height = image.size
+      geom = bundle.page_geometry.get(page) or {}
+      if geom.get('imageWidth') != width or geom.get('imageHeight') != height:
+        raise ValueError('incompatible_raster_geometry')
+      if limit.get('top') is None or limit.get('bottom') is None:
+        raise ValueError('concrete_page_limits_missing')
+      values = [float(limit.get('x0') if limit.get('x0') is not None else 0), float(limit['top']),
+                float(limit.get('x1') if limit.get('x1') is not None else width), float(limit['bottom'])]
+      if not all(math.isfinite(value) for value in values):
+        raise ValueError('nonfinite_crop')
+      crop = [max(0, math.ceil(values[0])), max(0, math.ceil(values[1])),
+              min(width, math.floor(values[2])), min(height, math.floor(values[3]))]
+      if crop[0] >= crop[2] or crop[1] >= crop[3]:
+        raise ValueError('empty_crop')
+      crops.append((page, image_path, crop, geom))
+    except (OSError, ValueError, TypeError) as exc:
+      diagnostics['complementaryErrors'].append({'page': page, 'error': str(exc)})
+  if diagnostics['complementaryErrors']:
+    return empty, diagnostics
+  output_dir.mkdir(parents=True, exist_ok=True)
+  for page, image_path, crop, geom in crops:
+    try:
+      crop_path = output_dir / f'page-{page:02d}-crop.png'
+      scaled_path = output_dir / f'page-{page:02d}-crop-2x.png'
+      with Image.open(image_path) as image:
+        cropped = image.crop(tuple(crop))
+        cropped.save(crop_path)
+        cropped.resize((cropped.width * 2, cropped.height * 2), Image.Resampling.LANCZOS).save(scaled_path)
+      diagnostics['complementaryCrop'].append({'page': page, 'cropPixels': crop,
+        'cropPath': str(crop_path), 'ocrImagePath': str(scaled_path)})
+      diagnostics['complementaryObservationTriggered'] = True
+      diagnostics['complementaryOcrExecutions'] += 1
+      observed = (ocr_adapter or execute)(scaled_path, page)
+      diagnostics['complementaryPages'].append(page)
+      raw = {'page': page, 'width': observed.width, 'height': observed.height,
+             'words': observed.words, 'confidence': observed.confidence}
+      (output_dir / f'page-{page:02d}-ocr.json').write_text(
+        json.dumps(raw, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+      page_words = []
+      for item in observed.words:
+        local = [float(value) for value in item['bbox']]
+        bbox = (crop[0]+local[0]/2, crop[1]+local[1]/2,
+                crop[0]+local[2]/2, crop[1]+local[3]/2)
+        if not (crop[0] <= bbox[0] < bbox[2] <= crop[2]
+                and crop[1] <= bbox[1] < bbox[3] <= crop[3]):
+          raise ValueError('ocr_word_outside_crop')
+        page_words.append(ObservedWord(page, str(item['text']), bbox, len(words)+len(page_words),
+          'complementary_ocr', {'observationSource': 'scoped_tesseract',
+           'complementaryPass': 'boundary_crop', 'isComplementary': True,
+           'observationFamily': 'ocr_text', 'ocrConfidence': item.get('confidence')}))
+      page_lines = group_words_into_lines(page_words, float(geom['imageWidth']))
+      for line in page_lines:
+        line.line_index = len(lines)
+        confidence = [w.provenance['ocrConfidence'] for w in page_words
+                      if w.word_index in line.word_indexes and w.provenance['ocrConfidence'] is not None]
+        line.provenance = {'observationSource': 'scoped_tesseract', 'complementaryPass': 'boundary_crop',
+          'isComplementary': True, 'observationFamily': 'ocr_text',
+          'ocrConfidence': sum(confidence)/len(confidence) if confidence else None}
+        lines.append(line)
+      words.extend(page_words)
+      geometry[page] = geom
+    except Exception as exc:
+      # Failure is diagnostic, never permission to guess or fall back to full-page OCR.
+      diagnostics['complementaryErrors'].append({'page': page, 'error': str(exc)})
+  complementary = ObservationBundle(words, lines, [], geometry, 'complementary_ocr')
+  diagnostics['complementaryWords'] = [word.to_dict() for word in words]
+  diagnostics['complementaryLines'] = [line.to_dict() for line in lines]
+  return complementary, diagnostics
 
 
 def _parent_child_markers(lines: list[dict[str, Any]]) -> list[dict[str, Any]]:

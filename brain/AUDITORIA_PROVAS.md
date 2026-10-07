@@ -193,3 +193,7 @@ Absence-of-observation não prova terminal closure quando o conjunto depende de 
 ## Applicability de completude independente de mode resolvido
 
 Selected set autoritativo com pelo menos três answer markers aceitos A-E exige closure válida antes de option emission, inclusive mode unknown. Contrato ausente ou applicability false obsoleta não contorna o gate consumidor. C-D-E não prova início do conjunto; recovery interna não prova count global. C/E contextual, controles, parent-child e visual-only sem selected set textual conservam seus contratos. Ver [05B2](../audit/postmortem/V4_PATCH_05B2_COMPLETENESS_APPLICABILITY.md); decisão derivada do contrato observado, sem GT.
+
+## Observação complementar conservadora após boundary confiável
+
+Observação primária degradada pode acionar uma segunda leitura local somente após boundary reliable, com raster cacheado compatível e crop comprovado. Pipeline complementar separado exige markers explícitos, completude e compatibilidade primária; a mesma imagem/passagens não certifica fontes independentes. A capacidade não precisa recuperar toda questão para ser válida: ausência continua ausência, nunca preenchida por sequência esperada. q13 limita reconhecimento e conserva abstenção; gutter foi somente diagnóstico, sem parameter search nem produção. Ver [05C1](../audit/postmortem/V4_PATCH_05C1_SCOPED_COMPLEMENTARY_MARKER_OCR.md); próximo 05C2 separado, V5 blind obrigatório e resultado oficial preservado.

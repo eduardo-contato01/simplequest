@@ -6,6 +6,8 @@ import audit_response_structure as response_structure
 
 
 ORIGIN_BY_SOURCE = {
+  # Same raster/text family: two OCR passes cannot create independent agreement.
+  "complementary_ocr": "textual_marker",
   "strong": "textual_marker",
   "single_letter": "textual_marker",
   "internal": "textual_marker",
