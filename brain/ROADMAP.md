@@ -17,15 +17,15 @@ Trabalho vigente em 2026-10-06. Estado factual em [[ESTADO_ATUAL]]; visão detal
 11. [x] Patch05B2 `authoritative_selected_set_requires_completeness`: loophole mode unknown fechado; TDD/14 suítes e replay final dos 30 após publicar os dois subpatches PASS, duas regressões reveladas neutralizadas sem nova unsafe. Ver [05B2](../audit/postmortem/V4_PATCH_05B2_COMPLETENESS_APPLICABILITY.md).
     Ambos surgiram da ampliação do regression sample aos 30 no Patch05A; [bisseção](../audit/postmortem/V4_PATCH_05B_SAFETY_BISECT.md) confirmou causas distintas, não um único patch planejado no postmortem original. Observation complementary permaneceu posterior à segurança 05B.
 12. [x] Patch05C1 `scoped_complementary_marker_ocr`: fallback conservador reliable/crop/markers explícitos; TDD/14 suítes/compile e replay30 sem nova unsafe. Dois revealed targets obtiveram conjuntos completos; q13 abstém por A não reconhecido. Gutter diagnóstico confirmou recognition limit e não entrou em produção; nenhum parameter search. Ver [05C1](../audit/postmortem/V4_PATCH_05C1_SCOPED_COMPLEMENTARY_MARKER_OCR.md). Isso não é métrica de coverage.
-13. [ ] Próxima prioridade separada: 05C2 `visual_header_and_layout_observation`, NÃO iniciado; sem regras por casos individuais.
-14. Criar novo Holdout V5 cego após as mudanças funcionais; preservar o primeiro resultado V4.
+13. [~] Patch05C2 `visual_header_and_layout_observation`: experimento diagnóstico encerrado/estacionado, capability NÃO promovida; 0/2 targets revelados recuperaram boundary, sem métrica de coverage. Produção/testes revertidos para 05C1; revisitar somente se evidência futura/blind justificar. Ver [05C2](../audit/postmortem/V4_PATCH_05C2_VISUAL_HEADER_LAYOUT.md).
+14. Próxima prioridade: criar novo Holdout V5 blind sobre baseline funcional 05C1, com protocolo separado; preservar o primeiro resultado V4. NÃO iniciado neste fechamento documental.
 15. Avaliar novamente precision + coverage em V5 blind, buscando recuperar cobertura sem perder precisão.
 
 Futuro condicionado à recorrência do padrão q13: possible marker-glyph recognition / alternate observation strategy. Nenhuma tarefa ou Patch05C3 criado agora.
 
 Meta operacional: precision >= 99,5%; coverage >= 80%; unsafe_error <= 0,5%; direção ideal de precision 99,8–99,9%. São metas futuras, não o desempenho atual.
 
-Ver [[AUDITORIA_PROVAS]]. Postmortem e Patches 01/02/03A/03B/03C/04/05A/05B1/05B2/05C1 concluídos; 05C2 e avaliação V5 blind permanecem futuros.
+Ver [[AUDITORIA_PROVAS]]. Postmortem e Patches 01/02/03A/03B/03C/04/05A/05B1/05B2/05C1 concluídos; experimento 05C2 estacionado/não promovido; construção e avaliação V5 blind permanecem futuras.
 
 ## Depois — Ingestão/transcrição
 

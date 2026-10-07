@@ -41,3 +41,12 @@ Fonte principal: scripts em `scripts/`, especialmente `extract_question_media.py
 - Em auditoria de fidelidade, comparar contra o PDF original como fonte canônica. O DOCX ajuda na estrutura, mas não decide conflitos de conteúdo ou formatação.
 
 Ver tambem: [[AUDITORIA_PROVAS]], [[MODELO_DE_QUESTAO]].
+
+## Proveniência interna — ingestão futura
+
+Provas Pódion digitalizadas de cópia física são material interno de auditoria/
+treinamento e não devem entrar automaticamente no catálogo público. Metadata
+proposta para a futura ingestão: `catalogEligible=false`,
+`usageScope=internal_audit_training`, `sourceProvenance=scanned_physical_copy`.
+Não implementado no site/importador/Auditor; manifest e fontes V4 não mudam.
+Ver [diagnóstico 05C2](../audit/postmortem/V4_PATCH_05C2_VISUAL_HEADER_LAYOUT.md).

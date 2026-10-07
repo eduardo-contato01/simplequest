@@ -197,3 +197,15 @@ Selected set autoritativo com pelo menos três answer markers aceitos A-E exige 
 ## Observação complementar conservadora após boundary confiável
 
 Observação primária degradada pode acionar uma segunda leitura local somente após boundary reliable, com raster cacheado compatível e crop comprovado. Pipeline complementar separado exige markers explícitos, completude e compatibilidade primária; a mesma imagem/passagens não certifica fontes independentes. A capacidade não precisa recuperar toda questão para ser válida: ausência continua ausência, nunca preenchida por sequência esperada. q13 limita reconhecimento e conserva abstenção; gutter foi somente diagnóstico, sem parameter search nem produção. Ver [05C1](../audit/postmortem/V4_PATCH_05C1_SCOPED_COMPLEMENTARY_MARKER_OCR.md); próximo 05C2 separado, V5 blind obrigatório e resultado oficial preservado.
+
+## Gate empírico para novas capacidades observacionais
+
+Passar testes sintéticos não basta para promover uma nova capacidade: exige evidência
+empírica suficiente de melhoria observacional sem abrir caminho inseguro. 05C2 foi
+estacionado por decisão externa: propostas visuais detectáveis, porém nenhum dos dois
+targets revelou boundary confiável; sem busca de parâmetros ou GT para layout/header.
+Produção e testes exclusivos foram revertidos para 05C1; diagnóstico preservado,
+sem claim unsafe pós-patch ou métrica V4. Visual region proposal pode ser reutilizada
+futuramente com justificativa empírica/blind, mas não integra o Auditor ativo atual.
+Ver [05C2](../audit/postmortem/V4_PATCH_05C2_VISUAL_HEADER_LAYOUT.md).
+Próxima prioridade=Holdout V5 blind, protocolo separado; não iniciado neste fechamento.
