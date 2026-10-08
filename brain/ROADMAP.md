@@ -92,3 +92,8 @@ Beta real para professor/aluno, não produto definitivo. Objetivo mínimo:
 - Preservar impressão e exemplos baseline nas reorganizações futuras.
 
 Etapas concluídas do Holdout V4 não são tarefas pendentes deste roadmap; consultar [[HISTORICO]], [[AUDITORIA_PROVAS]] e o log cronológico quando necessário.
+
+## Próxima prioridade V5 — decisão de integridade do Batch02, 2026-10-08
+
+- [ ] V5 B2b Tier A Batch02: retomar revisão visual neutra em execução separada, começando pela comprovação de identidades/boundaries do documento 3 sob a [decisão congelada](../audit/holdout/V5_SOURCE_INTEGRITY_INCONCLUSIVE_DOC03.md), especialmente quanto à página7, antes de documentos4–11. PDF retido; integridade do exame original inconclusiva, sem substituição nem aplicação da exceção anterior. 21 identidades ainda candidatas; ambiguidade exige STOP e impede elegibilidade/adjudicação integral.
+- Batch02/Tier A/Phase B NÃO concluídos. Checkpoint/diagnóstico e documentos1/2 preservados; documentos4–11 não iniciados. Ressalva/escopo=`frozen_available_pdf_content` e timing pós-freeze devem acompanhar a metodologia final V5. Nenhuma adjudicação nesta decisão; final index/selection/GT/Auditor/metrics/merge=false.

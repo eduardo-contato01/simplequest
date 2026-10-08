@@ -1,0 +1,201 @@
+{
+  "artifactType": "holdout-v5-source-integrity-inconclusive-decision",
+  "protocolVersion": "holdout-v5",
+  "decisionDate": "2026-10-08",
+  "decisionTimestamp": "2026-10-08T10:04:29-03:00",
+  "branch": "audit/holdout-v5-blind",
+  "sourceCommit": "dbd2c3d23cc8e87b7a32001d22e28d09211e5c19",
+  "decisionAuthority": "explicit_external_user_decision",
+  "decisionTiming": "post_document_freeze_pre_question_selection_pre_gt_pre_auditor",
+  "postFreezeDecision": true,
+  "preRegisteredBeforeSourceInspection": false,
+  "performanceBlind": true,
+  "blindnessDisclosure": "Decisão metodológica explícita pós-freeze, cega ao desempenho; não originalmente pré-registrada e não autoriza mudanças da população com base em métricas futuras.",
+  "formalFreeze": "commit introducing this decision JSON and V5_SOURCE_INTEGRITY_INCONCLUSIVE_DOC03.md",
+  "documentId": "v5-doc-815b83630e3d8c98",
+  "contentFingerprint": "815b83630e3d8c9899695cdcc4a30f96ee4a5f411d541d954c534cd5a8f9ef1a",
+  "tier": "A",
+  "batch": 2,
+  "batchPosition": 3,
+  "globalTierAOrder": 14,
+  "sourceDiagnostic": "outputs/audit/holdout/v5-tier-a-batch-02-review/source-integrity-doc03.json",
+  "sourceDiagnosticSha256": "0bcce1a253502f96a78516e4f7a7bdea1c3617ddde379da58a0086dba1226f46",
+  "sourceAdjudicationCheckpoint": "outputs/audit/holdout/v5-tier-a-batch-02-review/adjudication-notes.json",
+  "sourceAdjudicationCheckpointSha256": "b9c79b68cc0544dc9f070de336ab9f9ccb18414eb58267f5100feef5ac3b70d6",
+  "evidence": {
+    "basis": "Diagnóstico técnico e checkpoint já existentes, conferidos por SHA256; nenhuma nova inspeção visual, renderização, extração PDF ou adjudicação nesta execução.",
+    "physicalPages": 9,
+    "coverDeclaredFolhas": 12,
+    "printedFolha10Referenced": true,
+    "observedPrintedPagination": [
+      "Fl.02",
+      "Fl.03",
+      "Fl.04",
+      "Fl.05",
+      "Fl.06",
+      "Fl.07",
+      "Fl.08"
+    ],
+    "lastPhysicalPage": 9,
+    "lastPageUnnumberedAndBlank": true,
+    "page7ContentPartiallyOutsideMediaBox": true,
+    "page7RightOverflowPoints": 9.785175947424932,
+    "mediaAndCropBoxesEqual": true,
+    "clippedImageStripStillEncoded": true,
+    "readablePageTree": true,
+    "orphanPageObjectsFound": 0,
+    "effectiveByteLossConfirmed": false,
+    "originalExamCompletenessProven": false,
+    "diagnosticClassification": "C"
+  },
+  "sourceIntegrityInconclusive": true,
+  "objectiveSourceCorruptionConfirmed": null,
+  "objectiveSourceCorruptionConfirmedMeaning": "Não determinado; a decisão não afirma true nem false.",
+  "originalExamCompletenessCertified": false,
+  "resolution": "retain_frozen_pdf_pending_available_content_boundary_validation",
+  "frozenPdfRetained": true,
+  "replacementAuthorized": false,
+  "replacementPerformed": false,
+  "replacementCandidate": {
+    "documentId": "v5-doc-3d252b7c947f51ff",
+    "contentFingerprint": "3d252b7c947f51ff803de3219165f5f2011bd2315d073f0377eca34f56fb1299",
+    "sameStratumReplacementAvailable": true,
+    "stratum": [
+      "text_native",
+      "CMF",
+      "2004-2009",
+      "6º Ano"
+    ],
+    "evidenceBasis": "Metadados congelados já verificados e registrados no diagnóstico; nenhuma abertura do PDF substituto.",
+    "candidatePdfOpened": false
+  },
+  "replacementRationale": "O protocolo original permite substituir por ausência, drift de fingerprint, corrupção objetiva ou duplicata. O diagnóstico não estabeleceu tais condições para este documento. Existência de candidato elegível não é, isoladamente, justificativa para substituir.",
+  "sourceIncompleteExceptionApplied": false,
+  "sourceIncompleteExceptionRationale": "Os seis critérios do adendo anterior não foram integralmente satisfeitos; há substituto no mesmo estrato e a integridade permanece inconclusiva. Esta decisão é separada e não aplica a exceção de source incompleteness do Batch01.",
+  "adjudicationScope": "frozen_available_pdf_content",
+  "futureAdjudication": {
+    "authorizedInThisExecution": false,
+    "requiresSeparateResumption": true,
+    "sourcePageCount": 9,
+    "scopeMeaning": "Indexar somente questões diretamente observáveis nas nove páginas da representação digital congelada, sem certificar a integridade do caderno original.",
+    "previouslyObservedCandidateCount": 21,
+    "candidatesAutomaticallyApproved": false,
+    "eachCandidateRequires": [
+      "directly_observed_identity",
+      "justifiable_canonical_question_number",
+      "proven_pageStart",
+      "proven_pageEnd",
+      "no_relevant_structural_ambiguity"
+    ],
+    "page7AffectedQuestionsRequireSpecificBoundaryVerification": true,
+    "historicalAffectedCandidateIds": [
+      "v5-doc-815b83630e3d8c98:q17",
+      "v5-doc-815b83630e3d8c98:q18",
+      "v5-doc-815b83630e3d8c98:q19",
+      "v5-doc-815b83630e3d8c98:q20",
+      "v5-doc-815b83630e3d8c98:q21"
+    ],
+    "affectedIdsProvenance": "Identidades sinalizadas no checkpoint histórico; não são nova classificação nem boundaries aprovados nesta execução.",
+    "onBoundaryAmbiguity": {
+      "keepQuestionStructurallyUnresolved": true,
+      "inventBoundary": false,
+      "eligibleForSelection": false,
+      "declareDocumentFullyAdjudicated": false,
+      "stopForNewExternalDecision": true
+    },
+    "documentAcceptanceCondition": "Todas as questões efetivamente observáveis precisam de identidade e boundaries comprovados, sem ambiguidade relevante e com validações PASS. Ressalva de integridade inconclusiva do exame original deve permanecer.",
+    "forbidden": [
+      "fabricate_question_objects_to_reconcile_9_and_12",
+      "invent_absent_question_numbers",
+      "reconstruct_missing_pages",
+      "infer_missing_boundaries",
+      "approve_candidates_from_count_alone"
+    ],
+    "documentAdjudicatedNow": false
+  },
+  "documentSelectionImmutable": true,
+  "manualSwaps": 0,
+  "populationChanged": false,
+  "methodologicalCaveatMustPropagateToFinalV5Documentation": true,
+  "caveat": "Não certificar completude da prova original. Transportar sourceIntegrityInconclusive=true, originalExamCompletenessCertified=false e adjudicationScope=frozen_available_pdf_content para a futura adjudicação e documentação metodológica final do V5.",
+  "frozenInputs": [
+    {
+      "path": "audit/holdout/PROTOCOL_V5.md",
+      "sha256": "77f8bb06d7c8eadba79c7ef70a580eebeff2d74f324017ae8e220f11bea9bb95"
+    },
+    {
+      "path": "audit/holdout/V5_OBJECTIVE_SOURCE_INCOMPLETENESS_RULE.md",
+      "sha256": "6e53620188ef104d5880ee04e84ef382675a64a8fcc927f69543e6ca273e3541"
+    },
+    {
+      "path": "audit/holdout/manifest-v5-documents-frozen.json",
+      "sha256": "c124fe77bae292cdeebb0045b489a0676784a8dac39400d748fe3c978eb3ca62"
+    },
+    {
+      "path": "audit/holdout/question-index-v5-raw.json",
+      "sha256": "68aa187e1e33cc38c92634b2fe362a0e260666e22c8cf58427651b0a6e33ef84"
+    },
+    {
+      "path": "audit/holdout/question-index-v5-raw-report.json",
+      "sha256": "62b44980b921da7545a2aa0dd4d65f24c7e595d319b4294b8f8fcc93988a4d9f"
+    },
+    {
+      "path": "audit/holdout/question-index-v5-review-queue.json",
+      "sha256": "027eac06938f3520ff6c7ca8b4281608d5e31281ac9e16cc3b0d5b418ba9f00b"
+    },
+    {
+      "path": "audit/holdout/question-index-v5-tier-a-batch-01-adjudication.json",
+      "sha256": "e7b089ff28946824eb480498b457124ac20aeefc62a2e8cce547a1d7cd09e770"
+    },
+    {
+      "path": "audit/holdout/question-index-v5-tier-a-batch-02-review-package.json",
+      "sha256": "33e9ba54c4ff51801a2fad094d0cf6613728494bd085697c4c8f53f42a166f01"
+    },
+    {
+      "path": "outputs/audit/holdout/v5-tier-a-batch-02-review/review-context.json",
+      "sha256": "54fc39261467f1e169917a3e1c3895630ee0b6aaf8979389122f3c4ddd3aa148"
+    },
+    {
+      "path": "outputs/audit/holdout/v5-tier-a-batch-02-review/FILES_TO_REVIEW.txt",
+      "sha256": "b8253b2ce544192e70a0af39e40831907a7d8906f93c84c63bdfb2d98b17b00c"
+    }
+  ],
+  "preservation": {
+    "checkpointRewritten": false,
+    "diagnosticRewritten": false,
+    "originalProtocolRewritten": false,
+    "priorAddendumRewritten": false,
+    "sourcePdfModified": false,
+    "functionalCodeChanged": false,
+    "document1AdjudicatedQuestionCountPreserved": 40,
+    "document2AdjudicatedQuestionCountPreserved": 21,
+    "document3CandidateQuestionCountPreserved": 21,
+    "document3CheckpointStatus": "unresolved",
+    "preflightProtectedFilesChecked": 4943,
+    "verificationScope": "Todos os caminhos do snapshot anterior e arquivos adicionais em outputs/audit/holdout; 11 fontes/copias rechecadas por hash binário, sem parsing/visualização."
+  },
+  "GTConsulted": false,
+  "AuditorConsulted": false,
+  "responseSemanticsConsulted": false,
+  "answerKeysConsulted": false,
+  "questionSelectionStarted": false,
+  "questionSelectionExecuted": false,
+  "groundTruthStarted": false,
+  "groundTruthCreated": false,
+  "auditorExecuted": false,
+  "metricsSeen": false,
+  "newOcrExecuted": false,
+  "newVisualInspectionPerformed": false,
+  "newAdjudicationPerformed": false,
+  "finalQuestionIndexCreated": false,
+  "tierBStarted": false,
+  "merge": false,
+  "tierABatch01Adjudicated": true,
+  "tierABatch02Adjudicated": false,
+  "Batch02Incomplete": true,
+  "tierAComplete": false,
+  "phaseBComplete": false,
+  "documents4To11Started": false,
+  "next": "Separately authorized Batch02 neutral visual resumption: verify document3 identities and boundaries under this frozen decision before documents4-11.",
+  "stopAfterCommitAndPush": true
+}

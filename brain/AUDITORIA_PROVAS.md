@@ -261,3 +261,20 @@ multipágina. Contagens não são métricas do Auditor; response semantics/GT/Au
 não consultados. Código funcional e freezes anteriores byte-idênticos.
 Somente Batch01 concluído; Tier A/Phase B incompletos. Próximo separado=Batch02
 review package freeze; Batch02 intocado, final index/selection/GT/Auditor/metrics=false.
+
+## Holdout V5 — Batch02, decisão sobre integridade inconclusiva do doc3, 2026-10-08
+
+[Decisão externa registrada](../audit/holdout/V5_SOURCE_INTEGRITY_INCONCLUSIVE_DOC03.md)
+e [bindings estruturados](../audit/holdout/v5-source-integrity-decision-doc03.json):
+PDF congelado retido sem substituição; integridade do exame original inconclusiva,
+não certificada. Decisão pós-freeze, performance-blind, não pré-registrada; adendo
+anterior de source incompleteness não aplicado. Nenhuma nova revisão visual/OCR/adjudicação.
+
+Escopo futuro=`frozen_available_pdf_content`; 21 identidades continuam candidatas.
+Doc3 permanece unresolved e precisa de identidade/boundaries comprovados, especialmente
+nas questões afetadas pela página7; ambiguidade exige STOP, sem elegibilidade nem
+adjudicação integral. Transportar ressalva/escopo/timing à metodologia final V5.
+Documentos1/2 preservados (40/21 adjudicadas), 4–11 não iniciados; Batch02/Tier A/Phase B
+incompletos. Próximo separado=retomar revisão neutra Batch02 pelo doc3, antes de4–11.
+Protocolo/adendo/manifest/raw/queue/Batch01/package/checkpoint/diagnóstico/PDFs/caches
+e Auditor funcionais preservados; final index/selection/GT/Auditor/metrics/merge=false.
