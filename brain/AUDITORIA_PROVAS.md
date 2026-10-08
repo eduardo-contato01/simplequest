@@ -278,3 +278,23 @@ Documentos1/2 preservados (40/21 adjudicadas), 4–11 não iniciados; Batch02/Ti
 incompletos. Próximo separado=retomar revisão neutra Batch02 pelo doc3, antes de4–11.
 Protocolo/adendo/manifest/raw/queue/Batch01/package/checkpoint/diagnóstico/PDFs/caches
 e Auditor funcionais preservados; final index/selection/GT/Auditor/metrics/merge=false.
+
+## Holdout V5 — errata objetiva de paginação do Batch02 doc10, 2026-10-08
+
+[Errata aditiva e contrato futuro](../audit/holdout/V5_OBJECTIVE_PAGECOUNT_ERRATUM_DOC10.md),
+[bindings](../audit/holdout/v5-objective-pagecount-erratum-doc10.json) e
+[censo estrutural48](../audit/holdout/V5_PAGE_COUNT_CENSUS.md): única diferença de pageCount,
+`v5-doc-74e153f9c146d887`1→21, fingerprints48/48 e leitores pypdf/pdfinfo concordantes.
+Metadado herdado do inventário pré-V5; não comprova corrupção e não muda seleção
+(inspeção estática, sem rerun). Manifest/universo/raw/report/queue/package/context
+permanecem históricos e byte-idênticos; derivados futuros exigem referência/hash
+explícitos à errata e validação de ranges contra effectivePageCount21, nunca bypass.
+Raw não certifica inventário completo das21páginas; não regenerar após freeze.
+
+Checkpoint retomado preservado:1–9 adjudicados,115páginas/194questões; doc3 adjudicado
+no PDF disponível mantendo integridade original inconclusiva, doc8 sourceIncomplete
+sob regra documentada;10 interrompido,11 visualmente não iniciado. Batch02 histórico120,
+efetivo140, restam25páginas(21+4). Sem estimar questões adicionais ou retomar review aqui.
+Batch02/TierA/PhaseB incompletos; próximo separado=retomada visual neutra sob errata.
+Somente leitura estrutural de páginas nesta etapa, sem render/text extraction/OCR,
+GT/Auditor/métricas/selection/finalIndex/merge ou mudança funcional05C1/validator.
