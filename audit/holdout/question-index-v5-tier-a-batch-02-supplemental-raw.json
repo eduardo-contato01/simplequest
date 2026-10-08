@@ -1,0 +1,183 @@
+{
+  "artifactType": "holdout-v5-tier-a-batch-02-supplemental-raw-neutral-index",
+  "protocolVersion": "holdout-v5",
+  "phase": "B2b-supplemental",
+  "tier": "A",
+  "batch": 2,
+  "manifestOrder": 47,
+  "batchOrder": 11,
+  "globalTierAOrder": 22,
+  "sourceCommit": "70b84aac7ff63a7ed033074beb5dbabcaabbce1d",
+  "createdFromManifest": "audit/holdout/manifest-v5-documents-effective-r1.json",
+  "manifestFileSha256": "a142ed34e5f13baaf566a22f14d1be86d2489c83445778b3a6b5f8d641c8ec32",
+  "sourceReplacementErratum": "audit/holdout/v5-objective-replacement-doc11.json",
+  "sourceRawReport": "outputs/audit/holdout/v5-tier-a-batch-02-replacement-r1/neutral-index-report.json",
+  "sourceRawReportSha256": "0325f19cddf358d348ebc95a965c6549d7c084ce070def22a5219d0aa4db409f",
+  "sourceExecutionLog": "outputs/audit/holdout/v5-tier-a-batch-02-replacement-r1/logs/neutral-index-execution.json",
+  "sourceExecutionLogSha256": "3af2ca4b095700591aaa16c98e972a319c419901d71ae1e33e77dabe5cd69f30",
+  "indexer": "scripts/audit_holdout_question_index.py",
+  "indexerGitBlob": "25ca4665708ba0ad8850f889f5ea0d71e3ff4025",
+  "indexerFileSha256": "04262953d3949651bd8cf4c236cbd5e7b4e85b64c34db77033c19717824b5d3c",
+  "indexMethodVersion": "neutral-question-index-v1",
+  "ocrConfig": {
+    "engine": "tesseract",
+    "dpi": 160,
+    "psm": 11,
+    "lang": "por+eng"
+  },
+  "actualIndexMethod": "native",
+  "indexerExecutionCount": 1,
+  "indexerRerun": false,
+  "documentCount": 1,
+  "rawQuestionCount": 18,
+  "rawAnomalyCount": 2,
+  "pageCountSource": "12 independently verified physical pages; report pageCount12 agrees with pypdf and pdfinfo",
+  "rawDataPolicy": "documents array copied exactly from the single unmodified indexer report; raw questions/anomalies are not adjudicated or normalized.",
+  "documents": [
+    {
+      "documentId": "v5-doc-e1c73fb849ef80a6",
+      "contentFingerprint": "e1c73fb849ef80a6f94a2ecf09718a963bd7c65008f930526605489ac25f8fe3",
+      "method": "native",
+      "pageCount": 12,
+      "questions": [
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q1",
+          "questionNumber": 1,
+          "pageStart": 1,
+          "pageEnd": 1
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q2",
+          "questionNumber": 2,
+          "pageStart": 1,
+          "pageEnd": 1
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q3",
+          "questionNumber": 3,
+          "pageStart": 2,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q5",
+          "questionNumber": 5,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q6",
+          "questionNumber": 6,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q7",
+          "questionNumber": 7,
+          "pageStart": 5,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q9",
+          "questionNumber": 9,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q10",
+          "questionNumber": 10,
+          "pageStart": 6,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q11",
+          "questionNumber": 11,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q12",
+          "questionNumber": 12,
+          "pageStart": 7,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q13",
+          "questionNumber": 13,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q14",
+          "questionNumber": 14,
+          "pageStart": 8,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q15",
+          "questionNumber": 15,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q16",
+          "questionNumber": 16,
+          "pageStart": 9,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q17",
+          "questionNumber": 17,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q18",
+          "questionNumber": 18,
+          "pageStart": 10,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q19",
+          "questionNumber": 19,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q20",
+          "questionNumber": 20,
+          "pageStart": 11,
+          "pageEnd": 12
+        }
+      ],
+      "anomalies": [
+        {
+          "type": "missing_question_number",
+          "number": 4
+        },
+        {
+          "type": "missing_question_number",
+          "number": 8
+        }
+      ]
+    }
+  ],
+  "manualVisualAdjudicationPerformed": false,
+  "candidateCanonicalQuestionCountKnown": false,
+  "candidateMinimumThreeCertified": false,
+  "finalQuestionIndexCreated": false,
+  "questionSelectionStarted": false,
+  "questionSelectionExecuted": false,
+  "groundTruthStarted": false,
+  "groundTruthCreated": false,
+  "auditorExecuted": false,
+  "metricsSeen": false,
+  "GTConsulted": false,
+  "AuditorConsulted": false,
+  "responseSemanticsConsulted": false,
+  "answerKeysConsulted": false,
+  "Batch02Incomplete": true,
+  "batch02Complete": false,
+  "tierAComplete": false,
+  "phaseBComplete": false,
+  "merge": false
+}

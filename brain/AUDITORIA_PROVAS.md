@@ -321,3 +321,25 @@ doc11 unresolved; Batch02/TierA/PhaseB incompletos. Sem nova revisão visual,
 raw regeneration, OCR, código funcional, selection/GT/Auditor/métricas/finalIndex/merge.
 Próximo separado=`V5 objective replacement materialization and supplemental review package`;
 congelar package suplementar antes da adjudicação do candidato. STOP após commit/push.
+
+## Holdout V5 — substituição doc11 e package suplementar, 2026-10-08
+
+[Errata objetiva r1](../audit/holdout/V5_OBJECTIVE_REPLACEMENT_DOC11.md):
+manifest efetivo48/uma substituição/47linhas intactas, mesmo estrato/ranking2,
+posição47+Batch02/11+TierA/22; original permanece no manifest/checkpoints históricos.
+Adendo pós-freeze não pré-registrado/performance-blind, com mudança explícita de
+população efetiva e provenance própria. Nenhuma resseleção ou reescrita do raw/queue.
+
+Fingerprint correto/12páginas por pypdf+pdfinfo/size182017; pdfinfoReportedFileSize0
+preservado como ressalva externa não bloqueante, causa não determinada, não corrupção.
+Indexador congelado: uma execução --only/native/raw18/anomalias2, propostas intactas
+e não canônicas; extração automática neutra não é revisão visual. Configuração intacta.
+[Package suplementar](../audit/holdout/V5_TIER_A_BATCH_02_SUPPLEMENTAL_REVIEW_PACKAGE.md)
+validado para freeze pelo commit de introdução/publicação, antes da revisão visual.
+Docs1–10/214questões preservados; original140páginas revisadas, efetivo136retidas
++12pendentes=148sob errata doc10. Batch02/TierA/PhaseB incompletos; canonicalCountKnown
+e minimumThreeCertified=false, selection/GT/Auditor/metrics/finalIndex/merge=false.
+Legado schema somente V1–V4 permanece intocado; gates desta preparação conferidos
+independentemente, sem spoofing e sem afirmar compatibilidade de execução oficial V5.
+Próximo separado=`V5 Tier A Batch02 supplemental neutral visual adjudication`; STOP
+após publicar, sem revisar o candidato nem iniciar TierB nesta preparação.

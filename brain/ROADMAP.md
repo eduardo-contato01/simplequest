@@ -113,3 +113,21 @@ Batch02/Tier A/Phase B NÃO concluídos.
 - Candidato determinado somente pelo ranking original; PDF não aberto e contagem
   mínima não presumida. Nenhuma substituição/manifest efetivo nesta decisão;
   final index/selection/GT/Auditor/metrics/merge=false. Não retomar adjudicação agora.
+
+## Próxima prioridade V5 — package suplementar doc11, 2026-10-08
+
+Este checkpoint prevalece sobre as prioridades históricas acima.
+
+- [x] Substituição objetiva pós-freeze materializada: manifest efetivo r1 com48documentos,
+  uma substituição no mesmo estrato/ranking2 e47linhas preservadas; histórico intacto.
+  Ver [errata](../audit/holdout/V5_OBJECTIVE_REPLACEMENT_DOC11.md).
+- [x] Package suplementar validado: freeze formal pelo commit de introdução e publicação
+  desta etapa, antes da adjudicação visual. Uma cópia byte-idêntica/12páginas; índice
+  neutro suplementar em execução única/native/raw18/anomalias2, sem contagem canônica
+  ou mínimo3 certificados. [Package](../audit/holdout/V5_TIER_A_BATCH_02_SUPPLEMENTAL_REVIEW_PACKAGE.md).
+- [ ] **V5 Tier A Batch02 supplemental neutral visual adjudication**: execução separada
+  após publicação, somente o substituto `v5-doc-e1c73fb849ef80a6`; preservar docs1–10
+  e checkpoints. Adjudicação suplementar pendente; Batch02/TierA/PhaseB incompletos.
+- Nenhuma revisão visual/selection/GT/Auditor/métricas/finalIndex/merge nesta preparação;
+  não iniciar TierB. Ressalva técnica pdfinfoFileSize0 não bloqueante por decisão externa,
+  causa não determinada; tamanho binário182017/fingerprint/páginas12 confirmados.
