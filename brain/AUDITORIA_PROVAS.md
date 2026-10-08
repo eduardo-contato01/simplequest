@@ -236,3 +236,15 @@ manual/adjudicação ou tuning. Ver [raw freeze B1](../audit/holdout/V5_QUESTION
 V1–V4/caches anteriores, Phase A e Auditor05C1/schema intocados; 05C2 estacionado.
 Somente B1 concluída, não Phase B inteira. Próximo separado=B2 neutral question-index
 adjudication/final freeze; final index/selection/GT/Auditor/metrics=false, sem merge.
+
+## Holdout V5 — adendo de source incompleto, 2026-10-08
+
+Decisão externa neutra: [adendo pós-freeze, performance-blind](../audit/holdout/V5_OBJECTIVE_SOURCE_INCOMPLETENESS_RULE.md)
+retém source objetivamente incompleto somente sob seis condições gerais, sem
+substituto elegível no mesmo estrato e com questões observáveis suficientes.
+No documento 8 do Tier A Batch01, 26 inícios observados (1–17, 22–30);
+18–21 são metadata de source gap, não objetos fabricados nem humanExclusions.
+Protocolo original preservado; notas locais mantêm a parada/unresolved histórica.
+Aplicação futura após freeze do adendo: adjudicated_source_incomplete significa
+revisão de todo conteúdo disponível, não reconstrução da prova original inteira.
+Batch01 permanece pausado/incompleto; selection/GT/Auditor/metrics=false.

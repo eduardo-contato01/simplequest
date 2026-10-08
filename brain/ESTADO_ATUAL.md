@@ -168,3 +168,9 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 
 - Fila de triagem neutra congelada dos 48 documentos, política V4 sem retuning: A=22/B=4/C=14/D=8. Derivação somente de raw/report/manifest congelados; nenhuma inspeção PDF/visual ou adjudicação/correção. Todos os 48 permanecem obrigados à revisão neutra futura, inclusive controles D. Ver [triagem B2a](../audit/holdout/V5_QUESTION_INDEX_TRIAGE.md).
 - Phase A/B1/raw/caches e código funcional05C1 preservados; 05C2 estacionado. Somente B2a concluída, não índice final/Phase B inteira; próximo separado=B2b neutral review/adjudication. Final index/selection/GT/Auditor/metrics=false; sem merge.
+
+## Checkpoint corrente — V5 Tier A Batch01 pausado, 2026-10-08
+
+- Revisão neutra local pausada no documento 8 com source incompleto: 14/14 páginas disponíveis revisadas, 26 inícios observados, q18–q21 indisponíveis; documentos 9–11 não retomados. Batch01/Tier A/Phase B NÃO concluídos.
+- [Adendo metodológico pós-freeze, performance-blind](../audit/holdout/V5_OBJECTIVE_SOURCE_INCOMPLETENESS_RULE.md): sem substituto elegível no mesmo estrato, manter o documento e registrar source gap separado, sem fabricar questões/boundaries. Resolução será aplicada somente na retomada autorizada; notas históricas/unresolved preservadas.
+- Original protocol/Phase A/raw/queue/package e código funcional05C1 intactos; nenhum final index, question selection, GT, Auditor ou métricas V5. Próximo separado=retomar Tier A Batch01 neutral adjudication após freeze do adendo; Batch02 intocado, sem merge.
