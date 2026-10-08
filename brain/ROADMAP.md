@@ -97,3 +97,19 @@ Etapas concluídas do Holdout V4 não são tarefas pendentes deste roadmap; cons
 
 - [ ] V5 B2b Tier A Batch02: retomar revisão visual neutra em execução separada, começando pela comprovação de identidades/boundaries do documento 3 sob a [decisão congelada](../audit/holdout/V5_SOURCE_INTEGRITY_INCONCLUSIVE_DOC03.md), especialmente quanto à página7, antes de documentos4–11. PDF retido; integridade do exame original inconclusiva, sem substituição nem aplicação da exceção anterior. 21 identidades ainda candidatas; ambiguidade exige STOP e impede elegibilidade/adjudicação integral.
 - Batch02/Tier A/Phase B NÃO concluídos. Checkpoint/diagnóstico e documentos1/2 preservados; documentos4–11 não iniciados. Ressalva/escopo=`frozen_available_pdf_content` e timing pós-freeze devem acompanhar a metodologia final V5. Nenhuma adjudicação nesta decisão; final index/selection/GT/Auditor/metrics/merge=false.
+
+## Próxima prioridade V5 — insuficiência de questões do Batch02 doc11, 2026-10-08
+
+Este checkpoint prevalece sobre as prioridades históricas acima. Documentos1–10
+adjudicados/214questões e140páginas do Batch02 original revisadas; doc11 permanece
+unresolved com menos de três identidades independentes comprovadas nas4páginas.
+Batch02/Tier A/Phase B NÃO concluídos.
+
+- [ ] **V5 objective replacement materialization and supplemental review package**:
+  execução separadamente autorizada sob o [adendo geral pós-freeze](../audit/holdout/V5_INSUFFICIENT_QUESTIONS_REPLACEMENT_RULE.md);
+  errata/provenance histórica e efetiva, confirmação objetiva do candidato
+  `v5-doc-e1c73fb849ef80a6`, artefatos neutros suplementares sob configuração congelada
+  sem reexecutar raw original e freeze do package específico antes da adjudicação visual.
+- Candidato determinado somente pelo ranking original; PDF não aberto e contagem
+  mínima não presumida. Nenhuma substituição/manifest efetivo nesta decisão;
+  final index/selection/GT/Auditor/metrics/merge=false. Não retomar adjudicação agora.

@@ -298,3 +298,26 @@ efetivo140, restam25páginas(21+4). Sem estimar questões adicionais ou retomar 
 Batch02/TierA/PhaseB incompletos; próximo separado=retomada visual neutra sob errata.
 Somente leitura estrutural de páginas nesta etapa, sem render/text extraction/OCR,
 GT/Auditor/métricas/selection/finalIndex/merge ou mudança funcional05C1/validator.
+
+## Holdout V5 — insuficiência de questões do Batch02 doc11, 2026-10-08
+
+[Adendo geral pós-freeze](../audit/holdout/V5_INSUFFICIENT_QUESTIONS_REPLACEMENT_RULE.md)
+e [decisão com hashes](../audit/holdout/v5-insufficient-questions-decision-doc11.json):
+`insufficient_independent_adjudicable_questions`, mínimo3 não satisfeito após4/4
+páginas do doc11. Evidência neutra já registrada: bloco não numerado nas1–2,
+RASCUNHO na3 e corpo em branco na4; menos de três identidades comprovadas,
+sem fixar contagem canônica zero/um, fabricar IDs/boundaries ou inferir corrupção.
+Regra genérica de oito critérios cumulativos, inclusive futuros B/C/D; não depende
+de redação/CMSM, OCR, tipo de resposta ou desempenho. Pós-freeze/não pré-registrada
+antes da inspeção; performance-blind e obrigatória na avaliação metodológica final.
+
+Ranking read-only dos quatro candidatos elegíveis do estrato original confirma
+próximo=`v5-doc-e1c73fb849ef80a6`; identidade exclusivamente por metadados,
+PDF/conteúdo não consultados e mínimo3 não certificado. Substituição NÃO realizada,
+nenhum manifest efetivo; futura alteração da população exige errata/provenance
+própria, mantendo o manifest histórico. Checkpoints históricos e pós-errata intactos.
+Progresso atual preservado:1–10 adjudicados/214questões,140páginas revisadas,
+doc11 unresolved; Batch02/TierA/PhaseB incompletos. Sem nova revisão visual,
+raw regeneration, OCR, código funcional, selection/GT/Auditor/métricas/finalIndex/merge.
+Próximo separado=`V5 objective replacement materialization and supplemental review package`;
+congelar package suplementar antes da adjudicação do candidato. STOP após commit/push.
