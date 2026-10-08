@@ -248,3 +248,16 @@ Protocolo original preservado; notas locais mantêm a parada/unresolved históri
 Aplicação futura após freeze do adendo: adjudicated_source_incomplete significa
 revisão de todo conteúdo disponível, não reconstrução da prova original inteira.
 Batch01 permanece pausado/incompleto; selection/GT/Auditor/metrics=false.
+
+## Holdout V5 — Tier A Batch01 adjudicado, 2026-10-08
+
+[Adjudicação neutra Batch01](../audit/holdout/V5_TIER_A_BATCH_01_ADJUDICATION.md):
+11/11 documentos, 182/182 páginas disponíveis, 1136 objetos canônicos, unresolved=0.
+Adendo congelado aplicado ao doc8: 26 objetos, q18–q21 somente sourceMissing,
+sem fabricar questões/boundaries nem apagar o unresolved histórico. Revisão 1–7
+preservada; retomada visual somente 9–11, notas incrementais por documento.
+Zero normalizações/reinícios/humanExclusions; seis grupos paralelos e duas questões
+multipágina. Contagens não são métricas do Auditor; response semantics/GT/Auditor
+não consultados. Código funcional e freezes anteriores byte-idênticos.
+Somente Batch01 concluído; Tier A/Phase B incompletos. Próximo separado=Batch02
+review package freeze; Batch02 intocado, final index/selection/GT/Auditor/metrics=false.
