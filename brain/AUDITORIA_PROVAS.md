@@ -372,3 +372,15 @@ preservados. TierBAdjudicated=false/PhaseBComplete=false; finalIndex/selection/G
 Auditor/metrics/merge=false. Nenhum PDF aberto, render/OCR/extração nova/indexador
 ou adjudicação nesta preparação. Próximo separado=V5 Tier B neutral visual adjudication;
 STOP após push, sem TierC/D.
+
+## Holdout V5 — adjudicação neutra Tier B, 2026-10-09
+
+[Adjudicação Tier B](../audit/holdout/V5_TIER_B_ADJUDICATION.md) concluída após o
+package publicado:4 documentos/92 páginas/220 canônicas/raw156/delta+64,
+unresolved0/mínimo3 PASS; quatro questões multipágina no B04. Revisão estrutural
+assistida pelo agente, não adjudicação humana independente;156 eventos raw
+interpretados, não métricas do Auditor. TierAComplete=true/22/330/1370 intacto;
+TierBAdjudicated=true/PhaseBComplete=false. Preservados freezes/PDFs/código e
+ressalvas anteriores; finalIndex/selection/GT/Auditor/metrics/merge=false.
+Próximo separado=V5 Tier C neutral review package freeze, não iniciado.
+STOP após commit/push, sem preparar TierC/D.
