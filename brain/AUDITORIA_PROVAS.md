@@ -384,3 +384,18 @@ TierBAdjudicated=true/PhaseBComplete=false. Preservados freezes/PDFs/código e
 ressalvas anteriores; finalIndex/selection/GT/Auditor/metrics/merge=false.
 Próximo separado=V5 Tier C neutral review package freeze, não iniciado.
 STOP após commit/push, sem preparar TierC/D.
+
+## Holdout V5 — package neutro Tier C, 2026-10-09
+
+[Package Tier C](../audit/holdout/V5_TIER_C_REVIEW_PACKAGE.md):14documentos/185páginas,
+279raw/73eventos automáticos (31duplicate/42missing), native9/ocr5, global27–40.
+Dois batches determinísticos7+7 por posição congelada antes de visual:
+Batch01=89páginas/103raw/60eventos; Batch02=96/176/13. Eventos não interpretados,
+não defeitos confirmados nem métricas; nenhuma certificação canônica/minimum3.
+Fontes/cópias14/14 byte-idênticas; censo existente reconciliado sem nova leitura PDF.
+TiersA/B, freezes, ressalvas pós-freeze/PDFs/caches/código/configuração preservados;
+nenhum PDF visual, render, OCR novo, indexador ou adjudicação C nesta preparação.
+TierAComplete=true/TierBAdjudicated=true/TierCPrepared=true/TierCAdjudicated=false;
+PhaseBComplete=false e finalIndex/selection/GT/Auditor/metrics/merge=false.
+Freeze pelo commit de introdução/publicação; próximo separado=V5 Tier C Batch01
+neutral visual adjudication, não iniciado. STOP após push, sem Batch01/02 ou TierD.

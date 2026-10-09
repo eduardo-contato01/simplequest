@@ -223,3 +223,10 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - [Adjudicação neutra Tier B](../audit/holdout/V5_TIER_B_ADJUDICATION.md): quatro documentos em ordem23–26,92/92 páginas,220 canônicas/raw156/delta+64, unresolved0; B01/B02/B03/B04=120/20/40/40. Revisão assistida pelo agente após publicação do package, sem alegação humana independente. Quatro multipágina somente no B04;156 diagnósticos raw resolvidos estruturalmente, não métricas.
 - TierAComplete=true/22 documentos/330 páginas/1370 canônicas preservados sem reabrir seus PDFs; TierBAdjudicated=true/PhaseBComplete=false. Decisões/erratas/checkpoints/manifestR1 e ressalvas metodológicas anteriores continuam obrigatórios para futuros derivados.
 - Final index/selection/GT/Auditor/metrics/merge=false; sem novo OCR/extração/indexador/censo ou mudança funcional. Próximo SEPARADO=V5 Tier C neutral review package freeze, não iniciado; STOP após commit/push, sem TierC/D.
+
+## Checkpoint Holdout V5 — Tier C package neutro (2026-10-09)
+
+- [Package Tier C](../audit/holdout/V5_TIER_C_REVIEW_PACKAGE.md) preparado e validado:14documentos/185páginas/279raw/73eventos automáticos, global27–40 literal, native9/ocr5; duas unidades operacionais7+7 antes de visual, sem nova seleção/redistribuição.
+- Batch01=7documentos/89páginas/103raw/60eventos; Batch02=7/96/176/13. Fontes/cópias14/14 byte-idênticas, raw/contexto/listas íntegros, sem parser/censo/render/OCR/indexador ou interpretação/adjudicação nesta etapa.
+- Tiers publicados A22/330/1370 eB4/92/220/unresolved0 intactos, sem reabrir PDFs; ressalvas/source incompleto/integridade inconclusiva/errata/substituição pós-freeze e manifestR1 transportados.
+- TierAComplete=true/TierBAdjudicated=true/TierCPrepared=true/TierCAdjudicated=false/PhaseBComplete=false; finalIndex/selection/GT/Auditor/metrics/merge=false. Próximo SEPARADO=V5 Tier C Batch01 neutral visual adjudication, não iniciado; publicação pelo commit/push e STOP, sem Batch01/02 ou TierD.

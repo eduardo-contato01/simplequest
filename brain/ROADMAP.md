@@ -157,3 +157,9 @@ Este checkpoint prevalece sobre as prioridades históricas acima.
 - [x] V5 Tier B neutral adjudication: 4 documentos/92 páginas/220 canônicas, raw156/delta+64/unresolved0; revisão integral assistida pelo agente, 156 eventos raw resolvidos por evidência estrutural neutra e quatro questões multipágina. [Adjudicação Tier B](../audit/holdout/V5_TIER_B_ADJUDICATION.md).
 - TierBAdjudicated=true; TierAComplete=true/22 documentos/330 páginas/1370 canônicas intactos; PhaseBComplete=false. Ressalvas e provenance pós-freeze preservadas.
 - [ ] **V5 Tier C neutral review package freeze**: próxima tarefa SEPARADA, não iniciada; TierD pendente. Final index/selection/GT/Auditor/metrics/merge=false; STOP após commit/push, sem preparar TierC/D.
+
+## Holdout V5 — Tier C package neutro preparado (2026-10-09)
+
+- [x] [Package Tier C](../audit/holdout/V5_TIER_C_REVIEW_PACKAGE.md): 14documentos/185páginas/279raw/73eventos automáticos, ordem global27–40, native9/ocr5. Batches operacionais congelados por posição7+7: Batch01=89páginas/103raw/60eventos; Batch02=96/176/13.
+- [x] Gates neutros/integridade/preservação PASS; contexto/listas/cópias ignorados vinculados por SHA256. TiersA/B e todas ressalvas históricas intactos; nenhuma revisão visual/OCR novo/indexador/adjudicação C nesta preparação.
+- [ ] Próximo SEPARADO: **V5 Tier C Batch01 neutral visual adjudication**, não iniciado; Batch02 e TierD pendentes. TierCPrepared=true/TierCAdjudicated=false/PhaseBComplete=false; finalIndex/selection/GT/Auditor/metrics/merge=false. Freeze pelo commit/publicação; STOP após push.
