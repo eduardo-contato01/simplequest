@@ -230,3 +230,10 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - Batch01=7documentos/89páginas/103raw/60eventos; Batch02=7/96/176/13. Fontes/cópias14/14 byte-idênticas, raw/contexto/listas íntegros, sem parser/censo/render/OCR/indexador ou interpretação/adjudicação nesta etapa.
 - Tiers publicados A22/330/1370 eB4/92/220/unresolved0 intactos, sem reabrir PDFs; ressalvas/source incompleto/integridade inconclusiva/errata/substituição pós-freeze e manifestR1 transportados.
 - TierAComplete=true/TierBAdjudicated=true/TierCPrepared=true/TierCAdjudicated=false/PhaseBComplete=false; finalIndex/selection/GT/Auditor/metrics/merge=false. Próximo SEPARADO=V5 Tier C Batch01 neutral visual adjudication, não iniciado; publicação pelo commit/push e STOP, sem Batch01/02 ou TierD.
+
+## Checkpoint corrente — V5 Tier C Batch01 adjudicado, 2026-10-09
+
+- [Batch01 neutro](../audit/holdout/V5_TIER_C_BATCH_01_ADJUDICATION.md):7documentos global27–33/89páginas/174canônicas (40/30/20/20/20/24/20), raw103/delta+71/9multipágina/17correções de ranges/unresolved0. Revisão assistida pelo agente, sem alegação humana independente.
+- Retomada exatamente doc3p5; docs1–2/31páginas/70questões e evidência doc3p1–4 importados do checkpoint original byte-intacto. Checkpoint retomado separado, salvamento atômico; nenhuma reinspeção dos documentos concluídos.
+- TierAComplete=true/22documentos/330páginas/1370canônicas eTierBAdjudicated=true/4/92/220 intactos; provenance pós-freeze/manifestR1/ressalvas preservados. TierCBatch01Adjudicated=true/TierCBatch02Adjudicated=false/TierCAdjudicated=false/PhaseBComplete=false.
+- FinalIndex/selection/GT/Auditor/metrics/merge=false; código funcional05C1/fontes/freezes/configGit intactos, sem novo OCR/extração/indexador/censo. Próximo SEPARADO=V5 Tier C Batch02 neutral visual adjudication, não iniciado; STOP após publicação, sem TierD.

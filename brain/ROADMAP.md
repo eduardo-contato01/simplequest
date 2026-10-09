@@ -163,3 +163,11 @@ Este checkpoint prevalece sobre as prioridades históricas acima.
 - [x] [Package Tier C](../audit/holdout/V5_TIER_C_REVIEW_PACKAGE.md): 14documentos/185páginas/279raw/73eventos automáticos, ordem global27–40, native9/ocr5. Batches operacionais congelados por posição7+7: Batch01=89páginas/103raw/60eventos; Batch02=96/176/13.
 - [x] Gates neutros/integridade/preservação PASS; contexto/listas/cópias ignorados vinculados por SHA256. TiersA/B e todas ressalvas históricas intactos; nenhuma revisão visual/OCR novo/indexador/adjudicação C nesta preparação.
 - [ ] Próximo SEPARADO: **V5 Tier C Batch01 neutral visual adjudication**, não iniciado; Batch02 e TierD pendentes. TierCPrepared=true/TierCAdjudicated=false/PhaseBComplete=false; finalIndex/selection/GT/Auditor/metrics/merge=false. Freeze pelo commit/publicação; STOP após push.
+
+## Próxima prioridade V5 — Tier C Batch01 adjudicado, 2026-10-09
+
+Este checkpoint prevalece sobre as prioridades históricas acima.
+
+- [x] [Adjudicação Tier C Batch01](../audit/holdout/V5_TIER_C_BATCH_01_ADJUDICATION.md):7documentos globais27–33/89páginas/174canônicas, raw103/delta+71/9multipágina/zero unresolved. Retomada doc3p5; docs1–2 e evidência doc3p1–4 preservados exatamente, checkpoint original intacto e retomado separado.
+- TierCBatch01Adjudicated=true/TierCBatch02Adjudicated=false/TierCAdjudicated=false/PhaseBComplete=false; TiersA/B e ressalvas pós-freeze intactos.
+- [ ] Próximo SEPARADO: **V5 Tier C Batch02 neutral visual adjudication**, não iniciado; TierD pendente. FinalIndex/selection/GT/Auditor/metrics/merge=false; sem novo OCR/indexador; STOP após publicação, sem iniciar Batch02 ou TierD.

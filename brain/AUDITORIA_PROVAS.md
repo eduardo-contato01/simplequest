@@ -399,3 +399,22 @@ TierAComplete=true/TierBAdjudicated=true/TierCPrepared=true/TierCAdjudicated=fal
 PhaseBComplete=false e finalIndex/selection/GT/Auditor/metrics/merge=false.
 Freeze pelo commit de introdução/publicação; próximo separado=V5 Tier C Batch01
 neutral visual adjudication, não iniciado. STOP após push, sem Batch01/02 ou TierD.
+
+## Holdout V5 — Tier C Batch01 neutro adjudicado, 2026-10-09
+
+[Adjudicação Batch01](../audit/holdout/V5_TIER_C_BATCH_01_ADJUDICATION.md):7documentos
+na ordem global27–33/89páginas/174canônicas/raw103/delta+71/9multipágina/17ranges
+corrigidos somente no derivado/71identidades comprovadas adicionadas/60diagnósticos
+raw resolvidos estruturalmente/zero unresolved/mínimo3por documento PASS.
+Retomada doc3p5; docs1–2 completos e evidência doc3p1–4 importados exclusivamente
+do checkpoint original byte-intacto, sem reabrir PDFs. Novo checkpoint retomado
+separado/atômico; revisão assistant-assisted-neutral-visual-review, não humana independente.
+Reinícios legítimos C01/C03 explicitados; repetição física6doC04 representa itens
+já observados4, não novas identidades; causa não determinada. C05q20termina13,
+não material separado14–17; convenções neutras publicadas preservadas.
+TiersA22/330/1370 eB4/92/220, packageC, raw/manifests/queue, ressalvas/source
+incompleto/integridade inconclusiva/errata/substituição pós-freeze/manifestR1 intactos.
+TierCBatch01Adjudicated=true/TierCBatch02Adjudicated=false/TierCAdjudicated=false/
+PhaseBComplete=false; finalIndex/selection/GT/Auditor/metrics/merge=false.
+Próximo SEPARADO=V5 Tier C Batch02 neutral visual adjudication, não iniciado;
+STOP após publicação, sem TierD/novo OCR/indexador/censo ou mudança funcional.
