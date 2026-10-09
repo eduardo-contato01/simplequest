@@ -245,3 +245,10 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - Tier C completo:Batch01 byte-idêntico7/89/174 eBatch02 7/96/190; total14documentos/185páginas/364canônicas/279raw/73eventos/11multipágina/unresolved0, ordem27–40 sem sobreposição/omissão. TierCBatch01Adjudicated=true/TierCBatch02Adjudicated=true/TierCAdjudicated=true/PhaseBComplete=false.
 - Tiers A22/330/1370 eB4/92/220, provenance pós-freeze/manifestR1/ressalvas/source incompleto/integridade inconclusiva/errata/substituição e fontes/código05C1/configGit intactos. FinalIndex/selection/GT/Auditor/metrics/merge=false; sem novo OCR/extração/indexador/censo.
 - Próximo SEPARADO=V5 Tier D neutral review package freeze, não iniciado/TierDPrepared=false. STOP após publicação; nenhum índice global48documentos ou seleção144questões nesta etapa.
+
+## Checkpoint corrente — V5 package neutro Tier D, 2026-10-09
+
+- [Package Tier D](../audit/holdout/V5_TIER_D_REVIEW_PACKAGE.md):8documentos em ordem global41–48/134páginas/174raw/zero eventos automáticos/native8/text_native8; fontes/fingerprints/cópias integrais8/8 verificados, censo congelado reconciliado sem novo parser ou inspeção de páginas.
+- Batches operacionais por posição congelada5+3:Batch01=5documentos/73páginas/100raw/0eventos;Batch02=3/61/74/0. Contexto/listas ignorados preservam identidades/ranges/eventos raw; nenhuma adjudicação ou correção. Zero anomalias não certifica índice correto; contagem canônica desconhecida/mínimo3 não certificado.
+- Tiers A22/330/1370,B4/92/220,C14/185/364, freezes/provenance pós-freeze/manifestR1/decisões/erratas/checkpoints/fontes/código05C1/configGit preservados. TierDPrepared=true somente após publicação confirmada;TierDAdjudicated=false/PhaseBComplete=false. VisualReview/adjudication/finalIndex/selection/GT/Auditor/metrics/merge=false, sem novo render/OCR/indexador/censo.
+- Próximo SEPARADO=V5 Tier D Batch01 neutral visual adjudication, não iniciado; STOP após publicação, sem revisar nenhum batch ou criar índice global48documentos.

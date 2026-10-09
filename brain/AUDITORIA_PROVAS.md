@@ -439,3 +439,23 @@ PhaseBComplete=false/TierDPrepared=false; finalIndex/selection/GT/Auditor/metric
 merge=false; sem novo OCR/extração/indexador/censo ou revisão humana independente.
 Próximo SEPARADO=V5 Tier D neutral review package freeze, não iniciado.
 STOP após publicação, sem preparar TierD ou executar etapas posteriores.
+
+## Holdout V5 — package neutro Tier D, 2026-10-09
+
+[Package Tier D](../audit/holdout/V5_TIER_D_REVIEW_PACKAGE.md):8documentos
+na ordem global41–48/134páginas/174raw/zero diagnósticos automáticos/native8.
+Fontes/fingerprints/cópias integrais8/8 verificados por SHA256 e igualdade binária;
+censo congelado reconciliado, sem parser novo ou página visual. Batches operacionais
+5+3 fixados por posição antes de visual:Batch01=5/73páginas/100raw/0eventos;
+Batch02=3/61/74/0. Contexto/listas ignorados com raw original intacto.
+Zero eventos não certifica índice correto; revisão futura deverá inspecionar cada
+página física, numeração/seções/continuidade/inícios/finais/anexos e números
+administrativos, inclusive grandes boundaries finais brutos; contagem canônica
+desconhecida e mínimo3 não certificado agora. Nenhuma adjudicação nesta preparação.
+Tiers A22/330/1370,B4/92/220,C14/185/364 e respectivas ressalvas/provenance
+pós-freeze/manifestR1/decisões/erratas/checkpoints/fontes/caches/código/configGit
+preservados. TierDPrepared=true somente após publicação confirmada;
+TierDAdjudicated=false/PhaseBComplete=false; visualReview/adjudication/finalIndex/
+selection/GT/Auditor/metrics/merge=false, sem render/OCR/indexador/censo novo.
+Próximo SEPARADO=V5 Tier D Batch01 neutral visual adjudication, não iniciado.
+STOP após publicação, sem abrir/revisar Batch01 ou Batch02 nesta execução.

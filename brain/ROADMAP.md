@@ -180,3 +180,11 @@ Este checkpoint prevalece sobre as prioridades históricas acima.
 - [x] Tier C completo:14documentos em ordem27–40/185páginas/364canônicas/279raw/73eventos estruturais/11multipágina/zero unresolved; Batch01 byte-preservado, batches completos e disjuntos. TierCBatch01Adjudicated=true/TierCBatch02Adjudicated=true/TierCAdjudicated=true/PhaseBComplete=false.
 - Tiers A22/330/1370 eB4/92/220, freezes/código05C1/PDFs/configuração e ressalvas pós-freeze preservados. FinalIndex/selection/GT/Auditor/metrics/merge=false.
 - [ ] Próximo SEPARADO: **V5 Tier D neutral review package freeze**, não iniciado; TierDPrepared=false. STOP após publicação do Batch02, sem índice global ou etapas posteriores.
+
+## Próxima prioridade V5 — package Tier D, 2026-10-09
+
+Este checkpoint prevalece sobre as prioridades históricas acima.
+
+- [x] [Package neutro Tier D](../audit/holdout/V5_TIER_D_REVIEW_PACKAGE.md):8documentos globais41–48/134páginas/174raw/zero eventos/native8; batches posicionais5+3 (Batch01=73páginas/100raw;Batch02=61/74), fontes/cópias byte-idênticas8/8 e contexto/listas vinculados por SHA256. Freeze pelo commit de introdução/publicação.
+- Tiers A/B/C adjudicados e preservados; TierDPrepared=true somente após publicação/TierDAdjudicated=false/PhaseBComplete=false. Zero eventos não certifica índice correto; contagem canônica/mínimo3 pendentes de revisão integral. Nenhuma inspeção visual/adjudicação/OCR/indexador/finalIndex/selection/GT/Auditor/metrics/merge.
+- [ ] Próximo SEPARADO: **V5 Tier D Batch01 neutral visual adjudication**, não iniciado; Batch02 também não iniciado. STOP após publicação do package.
