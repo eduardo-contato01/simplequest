@@ -237,3 +237,11 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - Retomada exatamente doc3p5; docs1–2/31páginas/70questões e evidência doc3p1–4 importados do checkpoint original byte-intacto. Checkpoint retomado separado, salvamento atômico; nenhuma reinspeção dos documentos concluídos.
 - TierAComplete=true/22documentos/330páginas/1370canônicas eTierBAdjudicated=true/4/92/220 intactos; provenance pós-freeze/manifestR1/ressalvas preservados. TierCBatch01Adjudicated=true/TierCBatch02Adjudicated=false/TierCAdjudicated=false/PhaseBComplete=false.
 - FinalIndex/selection/GT/Auditor/metrics/merge=false; código funcional05C1/fontes/freezes/configGit intactos, sem novo OCR/extração/indexador/censo. Próximo SEPARADO=V5 Tier C Batch02 neutral visual adjudication, não iniciado; STOP após publicação, sem TierD.
+
+## Checkpoint corrente — V5 Tier C completo, 2026-10-09
+
+- [Batch02 neutro](../audit/holdout/V5_TIER_C_BATCH_02_ADJUDICATION.md):7documentos global34–40/96páginas/190canônicas (30/20/20/20/20/40/40), raw176/delta+14/2multipágina/46ranges corrigidos/14identidades observadas adicionadas/13eventos estruturais/zero unresolved/mínimo3por documento PASS.
+- Finalização importa os sete objetos exatamente do checkpoint definitivo SHA56f83a70727464d32f20be40e681194cd98ef20c8c90af62c783da78ec00de34, preservado; revisão assistida já concluída em duas execuções,64+32páginas/110+80questões, sem nova inspeção PDF/render ou alegação humana independente. SHA incremental anterior é histórico, não comparado aos bytes atuais.
+- Tier C completo:Batch01 byte-idêntico7/89/174 eBatch02 7/96/190; total14documentos/185páginas/364canônicas/279raw/73eventos/11multipágina/unresolved0, ordem27–40 sem sobreposição/omissão. TierCBatch01Adjudicated=true/TierCBatch02Adjudicated=true/TierCAdjudicated=true/PhaseBComplete=false.
+- Tiers A22/330/1370 eB4/92/220, provenance pós-freeze/manifestR1/ressalvas/source incompleto/integridade inconclusiva/errata/substituição e fontes/código05C1/configGit intactos. FinalIndex/selection/GT/Auditor/metrics/merge=false; sem novo OCR/extração/indexador/censo.
+- Próximo SEPARADO=V5 Tier D neutral review package freeze, não iniciado/TierDPrepared=false. STOP após publicação; nenhum índice global48documentos ou seleção144questões nesta etapa.

@@ -418,3 +418,24 @@ TierCBatch01Adjudicated=true/TierCBatch02Adjudicated=false/TierCAdjudicated=fals
 PhaseBComplete=false; finalIndex/selection/GT/Auditor/metrics/merge=false.
 Próximo SEPARADO=V5 Tier C Batch02 neutral visual adjudication, não iniciado;
 STOP após publicação, sem TierD/novo OCR/indexador/censo ou mudança funcional.
+
+## Holdout V5 — Tier C completo após Batch02, 2026-10-09
+
+[Adjudicação Batch02](../audit/holdout/V5_TIER_C_BATCH_02_ADJUDICATION.md):7documentos
+na ordem global34–40/96páginas/190canônicas/raw176/delta+14/2multipágina,
+46ranges corrigidos/14identidades comprovadas adicionadas/13eventos raw resolvidos
+estruturalmente, não métricas; zero unresolved/mínimo3por documento PASS.
+Finalização exclusivamente documental do checkpoint definitivo validado e preservado
+SHA56f83a70727464d32f20be40e681194cd98ef20c8c90af62c783da78ec00de34;
+nenhum PDF/render reaberto ou adjudicação refeita. Revisão assistida anterior em
+64+32páginas/110+80questões; SHA incremental antigo histórico, sem alegação de
+igualdade byte com arquivo imutável anterior inexistente.
+Tier C combinado PASS:14documentos globais27–40/185páginas/364canônicas/279raw/
+73eventos/11multipágina/unresolved0; batches completos/disjuntos, Batch01 byte-intacto.
+Tiers A22/330/1370 eB4/92/220, fontes/código05C1/Auditor/indexador/configGit,
+freezes/checkpoints/ressalvas pós-freeze/manifestR1 preservados; não reabertos.
+TierCBatch01Adjudicated=true/TierCBatch02Adjudicated=true/TierCAdjudicated=true;
+PhaseBComplete=false/TierDPrepared=false; finalIndex/selection/GT/Auditor/metrics/
+merge=false; sem novo OCR/extração/indexador/censo ou revisão humana independente.
+Próximo SEPARADO=V5 Tier D neutral review package freeze, não iniciado.
+STOP após publicação, sem preparar TierD ou executar etapas posteriores.

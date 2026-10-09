@@ -171,3 +171,12 @@ Este checkpoint prevalece sobre as prioridades históricas acima.
 - [x] [Adjudicação Tier C Batch01](../audit/holdout/V5_TIER_C_BATCH_01_ADJUDICATION.md):7documentos globais27–33/89páginas/174canônicas, raw103/delta+71/9multipágina/zero unresolved. Retomada doc3p5; docs1–2 e evidência doc3p1–4 preservados exatamente, checkpoint original intacto e retomado separado.
 - TierCBatch01Adjudicated=true/TierCBatch02Adjudicated=false/TierCAdjudicated=false/PhaseBComplete=false; TiersA/B e ressalvas pós-freeze intactos.
 - [ ] Próximo SEPARADO: **V5 Tier C Batch02 neutral visual adjudication**, não iniciado; TierD pendente. FinalIndex/selection/GT/Auditor/metrics/merge=false; sem novo OCR/indexador; STOP após publicação, sem iniciar Batch02 ou TierD.
+
+## Próxima prioridade V5 — Tier C completo, 2026-10-09
+
+Este checkpoint prevalece sobre as prioridades históricas acima.
+
+- [x] [Tier C Batch02 adjudicado](../audit/holdout/V5_TIER_C_BATCH_02_ADJUDICATION.md):7documentos globais34–40/96páginas/190canônicas/raw176/delta+14/2multipágina/zero unresolved; materialização exclusiva do checkpoint definitivo validado, sem repetir revisão visual.
+- [x] Tier C completo:14documentos em ordem27–40/185páginas/364canônicas/279raw/73eventos estruturais/11multipágina/zero unresolved; Batch01 byte-preservado, batches completos e disjuntos. TierCBatch01Adjudicated=true/TierCBatch02Adjudicated=true/TierCAdjudicated=true/PhaseBComplete=false.
+- Tiers A22/330/1370 eB4/92/220, freezes/código05C1/PDFs/configuração e ressalvas pós-freeze preservados. FinalIndex/selection/GT/Auditor/metrics/merge=false.
+- [ ] Próximo SEPARADO: **V5 Tier D neutral review package freeze**, não iniciado; TierDPrepared=false. STOP após publicação do Batch02, sem índice global ou etapas posteriores.

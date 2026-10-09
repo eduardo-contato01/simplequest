@@ -1,0 +1,4939 @@
+{
+  "artifactType": "holdout-v5-tier-c-batch-02-neutral-question-adjudication",
+  "protocolVersion": "holdout-v5",
+  "phase": "B2b",
+  "tier": "C",
+  "batch": 2,
+  "sourceCommit": "52d69ba7475b623431dadc35a0d5a93b0169e234",
+  "branch": "audit/holdout-v5-blind",
+  "sourceReviewPackage": "audit/holdout/question-index-v5-tier-c-review-package.json",
+  "sourceReviewPackageSha256": "e5b51ac600e65564aecd7c9f4178212c108354817ad95805a97dace1883e1ced",
+  "sourceReviewPackagePublishedCommit": "9aa754048f68d8aacca8c2b6df41fe6534525591",
+  "sourceReviewContext": "outputs/audit/holdout/v5-tier-c-review/review-context.json",
+  "sourceReviewContextSha256": "540420ff89308f7bd9d22c28cd24e8dc4f1c43e1f59f42d59074d4ba45aa64c4",
+  "sourceIncrementalNotes": "outputs/audit/holdout/v5-tier-c-review/adjudication-notes-batch-02.json",
+  "sourceIncrementalNotesSha256": "56f83a70727464d32f20be40e681194cd98ef20c8c90af62c783da78ec00de34",
+  "sourceProtocol": "audit/holdout/PROTOCOL_V5.md",
+  "sourceProtocolSha256": "77f8bb06d7c8eadba79c7ef70a580eebeff2d74f324017ae8e220f11bea9bb95",
+  "sourceQueue": "audit/holdout/question-index-v5-review-queue.json",
+  "sourceQueueSha256": "027eac06938f3520ff6c7ca8b4281608d5e31281ac9e16cc3b0d5b418ba9f00b",
+  "sourceRawIndex": "audit/holdout/question-index-v5-raw.json",
+  "sourceRawIndexSha256": "68aa187e1e33cc38c92634b2fe362a0e260666e22c8cf58427651b0a6e33ef84",
+  "sourceRawReport": "audit/holdout/question-index-v5-raw-report.json",
+  "sourceRawReportSha256": "62b44980b921da7545a2aa0dd4d65f24c7e595d319b4294b8f8fcc93988a4d9f",
+  "sourceManifest": "audit/holdout/manifest-v5-documents-frozen.json",
+  "sourceManifestSha256": "c124fe77bae292cdeebb0045b489a0676784a8dac39400d748fe3c978eb3ca62",
+  "sourceEffectiveManifest": "audit/holdout/manifest-v5-documents-effective-r1.json",
+  "sourceEffectiveManifestSha256": "a142ed34e5f13baaf566a22f14d1be86d2489c83445778b3a6b5f8d641c8ec32",
+  "sourceUniverse": "audit/holdout/v5-eligible-document-universe.json",
+  "sourceUniverseSha256": "dd64269956de6c7210fe0e8cc4cbb23dc799925adefa4c5e6dd603ff997c5933",
+  "sourcePageCountCensus": "outputs/audit/holdout/v5-page-count-census.json",
+  "sourcePageCountCensusSha256": "f27ac3cd5e0c3b1f80667ed0ae9b8565794b16cddaccee010c7d9a6b283acc7f",
+  "sourceTierABatch01Adjudication": "audit/holdout/question-index-v5-tier-a-batch-01-adjudication.json",
+  "sourceTierABatch01AdjudicationSha256": "e7b089ff28946824eb480498b457124ac20aeefc62a2e8cce547a1d7cd09e770",
+  "sourceTierABatch02Adjudication": "audit/holdout/question-index-v5-tier-a-batch-02-adjudication.json",
+  "sourceTierABatch02AdjudicationSha256": "b2447bf2a0d86e231480902ae26ddd6dcc21ecb58d84648e432ccd5355df0bf3",
+  "sourceTierBAdjudication": "audit/holdout/question-index-v5-tier-b-adjudication.json",
+  "sourceTierBAdjudicationSha256": "74e70b49127776451369b16d7642e188cb42182c67c27644b03c3aad37d57e66",
+  "sourceTierBReviewPackage": "audit/holdout/question-index-v5-tier-b-review-package.json",
+  "sourceTierBReviewPackageSha256": "e3936b66d71a31652d811e26854073d2b6fcf60cfc0e8d6188d1090223bfc4c0",
+  "sourceRawIndexProvenance": "audit/holdout/question-index-v5-raw.provenance.json",
+  "sourceRawIndexProvenanceSha256": "7a69f89b29143c1887a6ad104cf01aa0f187b9aec73f7dfdd3b2bd749903c3b2",
+  "sourceHistoricalManifest": "audit/holdout/manifest-v5-documents-frozen.json",
+  "sourceHistoricalManifestSha256": "c124fe77bae292cdeebb0045b489a0676784a8dac39400d748fe3c978eb3ca62",
+  "preservedPostFreezeProvenance": {
+    "sourceArtifacts": [
+      {
+        "path": "audit/holdout/V5_OBJECTIVE_SOURCE_INCOMPLETENESS_RULE.md",
+        "sha256": "6e53620188ef104d5880ee04e84ef382675a64a8fcc927f69543e6ca273e3541"
+      },
+      {
+        "path": "audit/holdout/v5-objective-source-incompleteness-01.json",
+        "sha256": "9389c0a0908f7788ef937d6d46ead9f8d1bb97a829ab99c23fff16df493b0e88"
+      },
+      {
+        "path": "audit/holdout/v5-source-integrity-decision-doc03.json",
+        "sha256": "d532deef877a016d4715227395d80f402e3ec49659eea4409dd280ad364be7a4"
+      },
+      {
+        "path": "audit/holdout/v5-objective-pagecount-erratum-doc10.json",
+        "sha256": "80beb7c1f43e2266e20d7554196e852c80f84738ca27c5dd4a7a7b52abb28d6b"
+      },
+      {
+        "path": "audit/holdout/V5_INSUFFICIENT_QUESTIONS_REPLACEMENT_RULE.md",
+        "sha256": "7254aca0ff21e7cb415723fe4d91d4148ad86cabea745b99b0b840b04885c4a9"
+      },
+      {
+        "path": "audit/holdout/v5-insufficient-questions-decision-doc11.json",
+        "sha256": "e8f9ef644c5f6ac5e6dd44ddcdee4fc5d4c1ace5aadc27b9d2f6932ff5513ad8"
+      },
+      {
+        "path": "audit/holdout/v5-objective-replacement-doc11.json",
+        "sha256": "d68c681e089bda68cf091046700c9be88bcf09eb147cb824728e83a82cccd9a4"
+      },
+      {
+        "path": "audit/holdout/question-index-v5-tier-a-batch-02-supplemental-review-package.json",
+        "sha256": "350c0edadf4ed0f6f10b85ac00ef9dcc8b61bbb1a2c780ae887bdec0276d8f0f"
+      },
+      {
+        "path": "audit/holdout/question-index-v5-tier-a-batch-02-supplemental-adjudication.json",
+        "sha256": "cebf725d79702ce5bad17049e7f5090bf74f61d050f3da71f1cb64d03f3a486b"
+      },
+      {
+        "path": "outputs/audit/holdout/v5-tier-a-batch-02-review/adjudication-notes-post-pagecount-erratum.json",
+        "sha256": "5ca2d24c6ade38b3d7edebd98eb6b761b9ca0f368fefe0524d17427e8f094599"
+      },
+      {
+        "path": "outputs/audit/holdout/v5-tier-a-batch-02-review/adjudication-notes-resumed.json",
+        "sha256": "9cc670b02a5105078328b6cd1b03acc77215c7db825ee07e08c5fa78ae04b305"
+      },
+      {
+        "path": "outputs/audit/holdout/v5-tier-a-batch-02-review/adjudication-notes.json",
+        "sha256": "b9c79b68cc0544dc9f070de336ab9f9ccb18414eb58267f5100feef5ac3b70d6"
+      },
+      {
+        "path": "outputs/audit/holdout/v5-tier-a-batch-02-replacement-r1/supplemental-adjudication-notes.json",
+        "sha256": "d96192505fd51a627305bb11fa6ff28370371cbaf64fc9a793cde278f6e92b98"
+      }
+    ],
+    "postFreezePerformanceBlindExceptions": true,
+    "retroactivePreregistrationClaimed": false,
+    "caveats": [
+      "Batch02 doc3 source integrity inconclusive; frozen_available_pdf_content only; original examination completeness not certified",
+      "Source-incomplete decisions retained; no absent identity/boundary fabricated",
+      "Batch02 doc10 frozen pageCount1/effective21 under frozen erratum",
+      "Batch02 doc11 post-freeze effective replacement at original ranking2; historical unresolved source and checkpoints retained",
+      "Replacement sizeBytes182017 authoritative; pdfinfoReportedFileSize0 remains a nonblocking technical divergence; cause not determined; no automatic PDF-corruption inference"
+    ],
+    "transportToFutureDerivativesRequired": true,
+    "tierCManifestRowsUnchanged": true,
+    "tierCReplacementPerformed": false
+  },
+  "priorTiersPreservedSummary": {
+    "tierA": {
+      "documents": 22,
+      "effectivePages": 330,
+      "canonicalQuestions": 1370,
+      "unresolvedDocuments": 0
+    },
+    "tierB": {
+      "documents": 4,
+      "pages": 92,
+      "canonicalQuestions": 220,
+      "unresolvedDocuments": 0
+    },
+    "total": {
+      "documents": 26,
+      "pages": 422,
+      "canonicalQuestions": 1590,
+      "unresolvedDocuments": 0
+    },
+    "priorVisualReviewReperformed": false,
+    "priorCanonicalQuestionsRecomputed": false
+  },
+  "adjudicationMode": "assistant-assisted-neutral-visual-review",
+  "manualAdjudicationPerformed": false,
+  "independentHumanAdjudicationClaimed": false,
+  "adjudicationPerformed": true,
+  "reviewPolicy": {
+    "allowedEvidence": [
+      "visible question number",
+      "visible question start",
+      "continuation/end page",
+      "physical page position",
+      "visible section transition",
+      "visible numbering restart",
+      "structural organization",
+      "document-declared neutral item count",
+      "previously available neutral native/OCR text"
+    ],
+    "forbiddenEvidence": [
+      "response semantics",
+      "responseMode",
+      "optionCount",
+      "optionLabels",
+      "markerStyle classification",
+      "response markers",
+      "answer key",
+      "correct answer",
+      "Ground Truth",
+      "Auditor predictions/output",
+      "Auditor metrics",
+      "convenience-based document choice",
+      "OCR/indexer tuning"
+    ]
+  },
+  "evidenceScope": "All96physical pages of frozen Batch02 copies were visually reviewed in two prior executions: documents1-5/64pages/110canonical, then documents6-7/32pages/80canonical. This finalization imports all seven document objects exactly from the verified definitive checkpoint, without reopening any PDF/render, revising adjudication, extracting text, OCR or indexer execution. Ownheaders, printednumbers, linkedcontinuations/ends, sectiontransitions and physicalpositions only; no response-bearing classification.",
+  "documentsAdjudicated": 7,
+  "questionsAdjudicated": 190,
+  "rawQuestionsInBatch": 176,
+  "canonicalQuestionsInBatch": 190,
+  "delta": 14,
+  "rawAnomaliesInBatch": 13,
+  "rawAnomalyTypeCounts": {
+    "missing_question_number": 12,
+    "duplicate_question_number": 1
+  },
+  "rawAnomaliesHumanReviewed": false,
+  "rawAnomaliesNeutralVisualReviewed": 13,
+  "rawAnomaliesResolvedStructurally": 13,
+  "rawAnomaliesMeaning": "Frozen automatic diagnostics resolved using recorded neutral physical evidence; not confirmed source defects or Auditor performance. The page16number17 event is an internal reference in q38, not a duplicate ownquestion header.",
+  "identityBoundaryCorrections": 46,
+  "addedCanonicalIdentitiesAbsentFromRaw": 14,
+  "removedIncidentalRawCaptures": 0,
+  "numberingRestarts": 0,
+  "numberingNormalizations": 0,
+  "parallelSectionGroups": 0,
+  "multiPageQuestions": 2,
+  "humanExclusions": 0,
+  "totalPhysicalPagesReviewed": 96,
+  "allPhysicalPagesReviewed": 96,
+  "physicalPagesReviewed": 96,
+  "allAvailablePagesReviewed": true,
+  "unresolvedDocuments": 0,
+  "unresolvedIssues": 0,
+  "minimumThreeCertified": true,
+  "minimumThreeCertifiedForAllDocuments": true,
+  "duplicateCanonicalIds": 0,
+  "invalidPageRanges": 0,
+  "fabricatedQuestions": 0,
+  "batchLeakage": 0,
+  "sourceIncompleteDocuments": 0,
+  "sourceMissingQuestionObjectCount": 0,
+  "originalExaminationCompletenessCertified": false,
+  "tierAReopened": false,
+  "tierBReopened": false,
+  "tierAQuestionChanges": 0,
+  "tierBQuestionChanges": 0,
+  "methodologicalCaveatsMustPropagateToFinalIndexAndV5Evaluation": true,
+  "resumptionProvenance": {
+    "definitiveCheckpointPath": "outputs/audit/holdout/v5-tier-c-review/adjudication-notes-batch-02.json",
+    "definitiveCheckpointSha256": "56f83a70727464d32f20be40e681194cd98ef20c8c90af62c783da78ec00de34",
+    "firstExecution": {
+      "documentOrders": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "physicalPagesReviewed": 64,
+      "canonicalQuestions": 110,
+      "multiPageQuestions": 1,
+      "unresolvedIssues": 0,
+      "incrementalCheckpointHistoricalSha256": "d3c1541565a3fd5080567f4ca30ea6db26bcbae490dfe1c0ae4c4a665b87679f",
+      "immutableCopyOfHistoricalCheckpointAvailable": false,
+      "historicalHashExpectedToMatchCurrentFile": false,
+      "byteEqualityWithHistoricalCheckpointClaimed": false
+    },
+    "controlledResumption": {
+      "sourceCheckpoint": "outputs/audit/holdout/v5-tier-c-review/adjudication-notes-batch-02.json",
+      "sourceCheckpointSha256": "d3c1541565a3fd5080567f4ca30ea6db26bcbae490dfe1c0ae4c4a665b87679f",
+      "priorCompletedDocumentCount": 5,
+      "priorCompletedPhysicalPages": 64,
+      "priorCompletedCanonicalQuestions": 110,
+      "priorFiveSemanticSha256": "acf234c3bb9c52533bfd8defd0c31ae9c0fa03639a0e6d4757932365210522e8",
+      "priorFiveDigestSerialization": "Python json.dumps(documents[:5], sort_keys=True, ensure_ascii=False, separators=(',',':')), UTF-8",
+      "resumedAt": {
+        "batchOrder": 6,
+        "documentId": "v5-doc-78d5d0d89420b8d3",
+        "physicalPage": 1
+      },
+      "documentsCompletedThisSession": [
+        {
+          "batchOrder": 6,
+          "documentId": "v5-doc-78d5d0d89420b8d3",
+          "physicalPagesReviewed": 15,
+          "canonicalQuestions": 40,
+          "multiPageQuestions": 0
+        },
+        {
+          "batchOrder": 7,
+          "documentId": "v5-doc-9e5595dac9eb75e3",
+          "physicalPagesReviewed": 17,
+          "canonicalQuestions": 40,
+          "multiPageQuestions": 1
+        }
+      ],
+      "physicalPagesReviewedThisSession": 32,
+      "canonicalQuestionsAdjudicatedThisSession": 80,
+      "previousAdjudicationsReopened": false,
+      "publicationAuthorizedThisSession": false,
+      "commitExecuted": false,
+      "pushExecuted": false
+    },
+    "priorFivePreservationVerification": "Current first-five objects match the semantic SHA256 recorded during controlled resumption. No immutable file with the earlier whole-checkpoint SHA exists; no byte-for-byte equality with that superseded incremental file is claimed.",
+    "finalization": {
+      "sourceHead": "52d69ba7475b623431dadc35a0d5a93b0169e234",
+      "documentsImportedExactlyFromDefinitiveCheckpoint": true,
+      "checkpointBytePreserved": true,
+      "physicalPagesNewlyReviewed": 0,
+      "pdfsReopened": false,
+      "rendersReopened": false,
+      "adjudicationReperformed": false,
+      "exceptionalReinspection": []
+    }
+  },
+  "preservationProtectedFileCount": 5277,
+  "preservationAppendOnlyDocumentCount": 4,
+  "allPreexistingProtectedHashesChecked": true,
+  "persistentGitConfigChanged": false,
+  "gitattributesChanged": false,
+  "codeFunctionalChanged": false,
+  "originalPdfsModified": false,
+  "reviewCopiesModified": false,
+  "frozenArtifactsModified": false,
+  "rawQuestionIndexModified": false,
+  "finalQuestionIndexCreated": false,
+  "questionSelectionStarted": false,
+  "questionSelectionExecuted": false,
+  "groundTruthStarted": false,
+  "groundTruthCreated": false,
+  "auditorExecuted": false,
+  "metricsSeen": false,
+  "responseSemanticsConsulted": false,
+  "answerKeysConsulted": false,
+  "GTConsulted": false,
+  "AuditorConsulted": false,
+  "ocrExecuted": false,
+  "newTextExtractionPerformed": false,
+  "indexerExecuted": false,
+  "indexerExecutionCountDuringThisAdjudication": 0,
+  "newPdfCensusCreated": false,
+  "TierAComplete": true,
+  "TierBAdjudicated": true,
+  "TierCPrepared": true,
+  "TierCBatch01Adjudicated": true,
+  "TierCBatch02Adjudicated": true,
+  "TierCAdjudicated": true,
+  "TierDPrepared": false,
+  "PhaseBComplete": false,
+  "merge": false,
+  "nextStep": "V5 Tier D neutral review package freeze (separate authorization; not started)",
+  "sourceFilesToReviewBatch02": "outputs/audit/holdout/v5-tier-c-review/FILES_TO_REVIEW_BATCH_02.txt",
+  "sourceFilesToReviewBatch02Sha256": "67d56df97fae275bcf42b409a6348918ebebe6adafe83d1eae4f63eef8ccf044",
+  "sourceTierCBatch01Adjudication": "audit/holdout/question-index-v5-tier-c-batch-01-adjudication.json",
+  "sourceTierCBatch01AdjudicationSha256": "2d39dfe43f0b96c11336e6fce0b29aa34cba65f4691f555310676b27329720ce",
+  "sourceTierCBatch01PublishedCommit": "52d69ba7475b623431dadc35a0d5a93b0169e234",
+  "tierCBatch01Reopened": false,
+  "tierCBatch01QuestionChanges": 0,
+  "tierCCombinedSummary": {
+    "sourceBatch01": "audit/holdout/question-index-v5-tier-c-batch-01-adjudication.json",
+    "sourceBatch01Sha256": "2d39dfe43f0b96c11336e6fce0b29aa34cba65f4691f555310676b27329720ce",
+    "batch01Documents": 7,
+    "batch01PhysicalPages": 89,
+    "batch01RawQuestions": 103,
+    "batch01CanonicalQuestions": 174,
+    "batch01RawAnomalies": 60,
+    "batch01MultiPageQuestions": 9,
+    "batch02Documents": 7,
+    "batch02PhysicalPages": 96,
+    "batch02RawQuestions": 176,
+    "batch02CanonicalQuestions": 190,
+    "batch02RawAnomalies": 13,
+    "batch02MultiPageQuestions": 2,
+    "documentsAdjudicated": 14,
+    "physicalPagesReviewed": 185,
+    "rawQuestions": 279,
+    "canonicalQuestions": 364,
+    "rawAnomalies": 73,
+    "multiPageQuestions": 11,
+    "unresolvedDocuments": 0,
+    "duplicateDocumentIds": 0,
+    "duplicateCanonicalIds": 0,
+    "batchOverlap": 0,
+    "missingDocuments": 0,
+    "globalOrder": [
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "batch01BytePreserved": true,
+    "allGatesPassed": true
+  },
+  "preservationPreflightFileCount": 5281,
+  "sourceIncrementalNotesModifiedDuringFinalization": false,
+  "visualReviewReperformedDuringFinalization": false,
+  "physicalPagesNewlyReviewedDuringFinalization": 0,
+  "documents": [
+    {
+      "tier": "C",
+      "tierOrder": 8,
+      "globalOrder": 34,
+      "manifestOrder": 18,
+      "reviewBatch": "02",
+      "batchOrder": 1,
+      "documentId": "v5-doc-cb4e2c7c9e714d00",
+      "contentFingerprint": "cb4e2c7c9e714d00249004ccfa6d5a29b461ccb978c1535c27f88122c0d4cca8",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBel\\1º Ano\\CMBel - 1ANO - 2022_2023.pdf",
+      "family": "CMBel",
+      "year": 2022,
+      "series": "1º Ano",
+      "sourceType": "raster",
+      "indexMethod": "ocr",
+      "pageCount": 19,
+      "rawQuestionCount": 26,
+      "rawAnomalyCount": 3,
+      "anomalyTypeCounts": {
+        "missing_question_number": 3
+      },
+      "relativePath": "CMBel\\1º Ano\\CMBel - 1ANO - 2022_2023.pdf",
+      "reviewCopyPath": "C:\\Users\\trans\\Documents\\SimpleQuest\\outputs\\audit\\holdout\\v5-tier-c-review\\copies\\08__v5-doc-cb4e2c7c9e714d00.pdf",
+      "reviewCopySha256": "cb4e2c7c9e714d00249004ccfa6d5a29b461ccb978c1535c27f88122c0d4cca8",
+      "sourcePdfSha256": "cb4e2c7c9e714d00249004ccfa6d5a29b461ccb978c1535c27f88122c0d4cca8",
+      "byteIdenticalToSource": true,
+      "status": "adjudicated",
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "pagesReviewedCount": 19,
+      "allPagesReviewed": true,
+      "questions": [
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q1",
+          "questionNumber": 1,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "printedQuestionNumber": 1,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q2",
+          "questionNumber": 2,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "printedQuestionNumber": 2,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q3",
+          "questionNumber": 3,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "printedQuestionNumber": 3,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q4",
+          "questionNumber": 4,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "printedQuestionNumber": 4,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q5",
+          "questionNumber": 5,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "printedQuestionNumber": 5,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q6",
+          "questionNumber": 6,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "printedQuestionNumber": 6,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q7",
+          "questionNumber": 7,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 7,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q8",
+          "questionNumber": 8,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 8,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q9",
+          "questionNumber": 9,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 9,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q10",
+          "questionNumber": 10,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 10,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q11",
+          "questionNumber": 11,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 11,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q12",
+          "questionNumber": 12,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 12,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q13",
+          "questionNumber": 13,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 13,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q14",
+          "questionNumber": 14,
+          "pageStart": 7,
+          "pageEnd": 7,
+          "printedQuestionNumber": 14,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q15",
+          "questionNumber": 15,
+          "pageStart": 7,
+          "pageEnd": 7,
+          "printedQuestionNumber": 15,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q16",
+          "questionNumber": 16,
+          "pageStart": 9,
+          "pageEnd": 9,
+          "printedQuestionNumber": 16,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q17",
+          "questionNumber": 17,
+          "pageStart": 10,
+          "pageEnd": 10,
+          "printedQuestionNumber": 17,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q18",
+          "questionNumber": 18,
+          "pageStart": 10,
+          "pageEnd": 10,
+          "printedQuestionNumber": 18,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q19",
+          "questionNumber": 19,
+          "pageStart": 11,
+          "pageEnd": 11,
+          "printedQuestionNumber": 19,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q20",
+          "questionNumber": 20,
+          "pageStart": 13,
+          "pageEnd": 13,
+          "printedQuestionNumber": 20,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q21",
+          "questionNumber": 21,
+          "pageStart": 13,
+          "pageEnd": 13,
+          "printedQuestionNumber": 21,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q22",
+          "questionNumber": 22,
+          "pageStart": 14,
+          "pageEnd": 14,
+          "printedQuestionNumber": 22,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q23",
+          "questionNumber": 23,
+          "pageStart": 15,
+          "pageEnd": 15,
+          "printedQuestionNumber": 23,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q24",
+          "questionNumber": 24,
+          "pageStart": 16,
+          "pageEnd": 16,
+          "printedQuestionNumber": 24,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q25",
+          "questionNumber": 25,
+          "pageStart": 16,
+          "pageEnd": 16,
+          "printedQuestionNumber": 25,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q26",
+          "questionNumber": 26,
+          "pageStart": 16,
+          "pageEnd": 17,
+          "printedQuestionNumber": 26,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q27",
+          "questionNumber": 27,
+          "pageStart": 17,
+          "pageEnd": 17,
+          "printedQuestionNumber": 27,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q28",
+          "questionNumber": 28,
+          "pageStart": 18,
+          "pageEnd": 18,
+          "printedQuestionNumber": 28,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q29",
+          "questionNumber": 29,
+          "pageStart": 18,
+          "pageEnd": 18,
+          "printedQuestionNumber": 29,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q30",
+          "questionNumber": 30,
+          "pageStart": 19,
+          "pageEnd": 19,
+          "printedQuestionNumber": 30,
+          "section": "portuguese",
+          "sequenceRun": 1
+        }
+      ],
+      "pageEvidence": [
+        {
+          "physicalPage": 1,
+          "reviewed": true,
+          "canonicalStarts": [],
+          "neutralEvidence": "cover/instructions; declared30/19pages is metadata, no ownquestionstart"
+        },
+        {
+          "physicalPage": 2,
+          "reviewed": true,
+          "canonicalStarts": [
+            1,
+            2,
+            3
+          ],
+          "neutralEvidence": "Mathematics heading/sharedintro then own1,2,3; three bodies close onphysical2"
+        },
+        {
+          "physicalPage": 3,
+          "reviewed": true,
+          "canonicalStarts": [
+            4,
+            5,
+            6
+          ],
+          "neutralEvidence": "own4,5,6 with closed bodies; q4absentraw directly observed; q3doesnotcontinue3"
+        },
+        {
+          "physicalPage": 4,
+          "reviewed": true,
+          "canonicalStarts": [
+            7,
+            8
+          ],
+          "neutralEvidence": "own7/8withclosedbodies; q7absentraw directly observed; q6doesnotcontinue4"
+        },
+        {
+          "physicalPage": 5,
+          "reviewed": true,
+          "canonicalStarts": [
+            9,
+            10,
+            11
+          ],
+          "neutralEvidence": "own9/10/11closed onphysical5"
+        },
+        {
+          "physicalPage": 6,
+          "reviewed": true,
+          "canonicalStarts": [
+            12,
+            13
+          ],
+          "neutralEvidence": "own12/13closed onphysical6"
+        },
+        {
+          "physicalPage": 7,
+          "reviewed": true,
+          "canonicalStarts": [
+            14,
+            15
+          ],
+          "neutralEvidence": "own14/15closed onphysical7; q15doesnotextend8/9"
+        },
+        {
+          "physicalPage": 8,
+          "reviewed": true,
+          "canonicalStarts": [],
+          "neutralEvidence": "distinctPortugueseheading/sharedTextoI introduction, no ownnumberedstart; notq15continuation"
+        },
+        {
+          "physicalPage": 9,
+          "reviewed": true,
+          "canonicalStarts": [
+            16
+          ],
+          "neutralEvidence": "sharedTextoIends then own16closed on9; notcontinuation15"
+        },
+        {
+          "physicalPage": 10,
+          "reviewed": true,
+          "canonicalStarts": [
+            17,
+            18
+          ],
+          "neutralEvidence": "own17/18closed on10"
+        },
+        {
+          "physicalPage": 11,
+          "reviewed": true,
+          "canonicalStarts": [
+            19
+          ],
+          "neutralEvidence": "own19closed on11 before distinctsharedTextoIIintroduction"
+        },
+        {
+          "physicalPage": 12,
+          "reviewed": true,
+          "canonicalStarts": [],
+          "neutralEvidence": "sharedTextoIIcontinuation/closure; no ownquestionstart, notq19continuation"
+        },
+        {
+          "physicalPage": 13,
+          "reviewed": true,
+          "canonicalStarts": [
+            20,
+            21
+          ],
+          "neutralEvidence": "own20/21closed on13"
+        },
+        {
+          "physicalPage": 14,
+          "reviewed": true,
+          "canonicalStarts": [
+            22
+          ],
+          "neutralEvidence": "own22closed on14 before separately headedsharedTextoIII; notcontinuation15"
+        },
+        {
+          "physicalPage": 15,
+          "reviewed": true,
+          "canonicalStarts": [
+            23
+          ],
+          "neutralEvidence": "sharedTextoIIIends then own23closed on15"
+        },
+        {
+          "physicalPage": 16,
+          "reviewed": true,
+          "canonicalStarts": [
+            24,
+            25,
+            26
+          ],
+          "neutralEvidence": "own24/25closed16; own26start16 and bodycontinues beyondbottom, endpending"
+        },
+        {
+          "physicalPage": 17,
+          "reviewed": true,
+          "canonicalStarts": [
+            27
+          ],
+          "neutralEvidence": "linkedq26body closes17 beforeown27closed17; sharedTextoIV follows andisnotq27continuation"
+        },
+        {
+          "physicalPage": 18,
+          "reviewed": true,
+          "canonicalStarts": [
+            28,
+            29
+          ],
+          "neutralEvidence": "own28/29closed18; q28absentraw provedbyownheader; separateTextoVfollows notq29continuation"
+        },
+        {
+          "physicalPage": 19,
+          "reviewed": true,
+          "canonicalStarts": [
+            30
+          ],
+          "neutralEvidence": "sharedTextoVends thenown30withclosedbody19; own30absentrawmax29 directlyobserved"
+        }
+      ],
+      "pendingBoundaryQuestions": [],
+      "nextPhysicalPage": null,
+      "renderMethod": "Poppler pdftoppm 120 DPI, PNG, visual inspection only",
+      "renderDirectory": "outputs/audit/holdout/v5-tier-c-review/renders-batch-02/01",
+      "renderWarnings": [],
+      "neutralNotes": [
+        "All identities depend on directly observed own headers and closed bodies, not raw gaps or the cover-declared total.",
+        "All30ownheadersobserved; q30on19 beyondrawmaximum29. Onlyq26genuinelycontinues16-17; sharedTextsI/II/III/IV/Vdonotextendpreviousquestion. No genuine numberingrestart orparallelblock."
+      ],
+      "visibleSections": [
+        {
+          "section": "mathematics",
+          "printedQuestionNumbers": "1-15",
+          "physicalPages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sequenceRun": 1
+        },
+        {
+          "section": "portuguese",
+          "printedQuestionNumbers": "16-30",
+          "physicalPages": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "sequenceRun": 1
+        }
+      ],
+      "canonicalQuestionCount": 30,
+      "adjudicatedQuestionCount": 30,
+      "delta": 4,
+      "observedNumberingPattern": "own numbered bodies in physical documentary order; canonical ordinal preserves printed number unless explicit documented restart",
+      "numberingRestarts": 0,
+      "numberingNormalizations": 0,
+      "sectionNumberingPolicy": "Printed numbers and section transitions retained; shared introductions do not extend closed question bodies.",
+      "canonicalizationPolicy": "documentId:qN; one canonical object per directly observed independent numbered body; no gap-based fabrication",
+      "parallelSections": [],
+      "humanExclusions": [],
+      "exclusions": [],
+      "sourceIncomplete": false,
+      "originalExaminationCompletenessCertified": false,
+      "unresolvedIssues": [],
+      "minimumThreeCertified": true,
+      "fabricatedQuestions": 0,
+      "rawAnomaliesStructurallyReviewed": true,
+      "multiPageQuestions": [
+        {
+          "questionId": "v5-doc-cb4e2c7c9e714d00:q26",
+          "questionNumber": 26,
+          "pageStart": 16,
+          "pageEnd": 17,
+          "neutralEvidence": "own24/25closed16; own26start16 and bodycontinues beyondbottom, endpending; linkedq26body closes17 beforeown27closed17; sharedTextoIV follows andisnotq27continuation"
+        }
+      ],
+      "corrections": [
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q3",
+            "questionNumber": 3,
+            "pageStart": 2,
+            "pageEnd": 3
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q3",
+            "questionNumber": 3,
+            "pageStart": 2,
+            "pageEnd": 2,
+            "printedQuestionNumber": 3,
+            "section": "mathematics",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: Mathematics heading/sharedintro then own1,2,3; three bodies close onphysical2; physical3: own4,5,6 with closed bodies; q4absentraw directly observed; q3doesnotcontinue3"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q6",
+            "questionNumber": 6,
+            "pageStart": 3,
+            "pageEnd": 4
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q6",
+            "questionNumber": 6,
+            "pageStart": 3,
+            "pageEnd": 3,
+            "printedQuestionNumber": 6,
+            "section": "mathematics",
+            "sequenceRun": 1
+          },
+          "reason": "physical3: own4,5,6 with closed bodies; q4absentraw directly observed; q3doesnotcontinue3; physical4: own7/8withclosedbodies; q7absentraw directly observed; q6doesnotcontinue4"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q15",
+            "questionNumber": 15,
+            "pageStart": 7,
+            "pageEnd": 9
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q15",
+            "questionNumber": 15,
+            "pageStart": 7,
+            "pageEnd": 7,
+            "printedQuestionNumber": 15,
+            "section": "mathematics",
+            "sequenceRun": 1
+          },
+          "reason": "physical7: own14/15closed onphysical7; q15doesnotextend8/9; physical8: distinctPortugueseheading/sharedTextoI introduction, no ownnumberedstart; notq15continuation; physical9: sharedTextoIends then own16closed on9; notcontinuation15"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q19",
+            "questionNumber": 19,
+            "pageStart": 11,
+            "pageEnd": 12
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q19",
+            "questionNumber": 19,
+            "pageStart": 11,
+            "pageEnd": 11,
+            "printedQuestionNumber": 19,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical11: own19closed on11 before distinctsharedTextoIIintroduction; physical12: sharedTextoIIcontinuation/closure; no ownquestionstart, notq19continuation"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q22",
+            "questionNumber": 22,
+            "pageStart": 14,
+            "pageEnd": 15
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q22",
+            "questionNumber": 22,
+            "pageStart": 14,
+            "pageEnd": 14,
+            "printedQuestionNumber": 22,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical14: own22closed on14 before separately headedsharedTextoIII; notcontinuation15; physical15: sharedTextoIIIends then own23closed on15"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q27",
+            "questionNumber": 27,
+            "pageStart": 17,
+            "pageEnd": 18
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q27",
+            "questionNumber": 27,
+            "pageStart": 17,
+            "pageEnd": 17,
+            "printedQuestionNumber": 27,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical17: linkedq26body closes17 beforeown27closed17; sharedTextoIV follows andisnotq27continuation; physical18: own28/29closed18; q28absentraw provedbyownheader; separateTextoVfollows notq29continuation"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q29",
+            "questionNumber": 29,
+            "pageStart": 18,
+            "pageEnd": 19
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q29",
+            "questionNumber": 29,
+            "pageStart": 18,
+            "pageEnd": 18,
+            "printedQuestionNumber": 29,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical18: own28/29closed18; q28absentraw provedbyownheader; separateTextoVfollows notq29continuation; physical19: sharedTextoVends thenown30withclosedbody19; own30absentrawmax29 directlyobserved"
+        }
+      ],
+      "addedCanonicalQuestions": [
+        {
+          "question": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q4",
+            "questionNumber": 4,
+            "pageStart": 3,
+            "pageEnd": 3,
+            "printedQuestionNumber": 4,
+            "section": "mathematics",
+            "sequenceRun": 1
+          },
+          "evidencePages": [
+            3
+          ],
+          "reason": "physical3: own4,5,6 with closed bodies; q4absentraw directly observed; q3doesnotcontinue3"
+        },
+        {
+          "question": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q7",
+            "questionNumber": 7,
+            "pageStart": 4,
+            "pageEnd": 4,
+            "printedQuestionNumber": 7,
+            "section": "mathematics",
+            "sequenceRun": 1
+          },
+          "evidencePages": [
+            4
+          ],
+          "reason": "physical4: own7/8withclosedbodies; q7absentraw directly observed; q6doesnotcontinue4"
+        },
+        {
+          "question": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q28",
+            "questionNumber": 28,
+            "pageStart": 18,
+            "pageEnd": 18,
+            "printedQuestionNumber": 28,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "evidencePages": [
+            18
+          ],
+          "reason": "physical18: own28/29closed18; q28absentraw provedbyownheader; separateTextoVfollows notq29continuation"
+        },
+        {
+          "question": {
+            "questionId": "v5-doc-cb4e2c7c9e714d00:q30",
+            "questionNumber": 30,
+            "pageStart": 19,
+            "pageEnd": 19,
+            "printedQuestionNumber": 30,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "evidencePages": [
+            19
+          ],
+          "reason": "physical19: sharedTextoVends thenown30withclosedbody19; own30absentrawmax29 directlyobserved"
+        }
+      ],
+      "removedRawCaptures": [],
+      "identityBoundaryCorrections": 7,
+      "rawAnomalyResolutions": [
+        {
+          "eventIndex": 1,
+          "rawAnomaly": {
+            "documentId": "v5-doc-cb4e2c7c9e714d00",
+            "type": "missing_question_number",
+            "number": 4
+          },
+          "status": "resolved_structurally",
+          "neutralResolution": "direct own question header/body proved; automatic raw diagnostic is not a source defect or Auditor metric",
+          "canonicalQuestionIds": [
+            "v5-doc-cb4e2c7c9e714d00:q4"
+          ],
+          "evidencePages": [
+            3
+          ],
+          "neutralEvidence": "own4,5,6 with closed bodies; q4absentraw directly observed; q3doesnotcontinue3"
+        },
+        {
+          "eventIndex": 2,
+          "rawAnomaly": {
+            "documentId": "v5-doc-cb4e2c7c9e714d00",
+            "type": "missing_question_number",
+            "number": 7
+          },
+          "status": "resolved_structurally",
+          "neutralResolution": "direct own question header/body proved; automatic raw diagnostic is not a source defect or Auditor metric",
+          "canonicalQuestionIds": [
+            "v5-doc-cb4e2c7c9e714d00:q7"
+          ],
+          "evidencePages": [
+            4
+          ],
+          "neutralEvidence": "own7/8withclosedbodies; q7absentraw directly observed; q6doesnotcontinue4"
+        },
+        {
+          "eventIndex": 3,
+          "rawAnomaly": {
+            "documentId": "v5-doc-cb4e2c7c9e714d00",
+            "type": "missing_question_number",
+            "number": 28
+          },
+          "status": "resolved_structurally",
+          "neutralResolution": "direct own question header/body proved; automatic raw diagnostic is not a source defect or Auditor metric",
+          "canonicalQuestionIds": [
+            "v5-doc-cb4e2c7c9e714d00:q28"
+          ],
+          "evidencePages": [
+            18
+          ],
+          "neutralEvidence": "own28/29closed18; q28absentraw provedbyownheader; separateTextoVfollows notq29continuation"
+        }
+      ]
+    },
+    {
+      "tier": "C",
+      "tierOrder": 9,
+      "globalOrder": 35,
+      "manifestOrder": 20,
+      "reviewBatch": "02",
+      "batchOrder": 2,
+      "documentId": "v5-doc-2300b505b11855a2",
+      "contentFingerprint": "2300b505b11855a2b555ea8b24e792948072340d5ceb4e4e7efce1b326784970",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMS\\6º Ano\\CMS - 6ANO - 2019_2020 (port).pdf",
+      "family": "CMS",
+      "year": 2019,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "indexMethod": "native",
+      "pageCount": 7,
+      "rawQuestionCount": 18,
+      "rawAnomalyCount": 2,
+      "anomalyTypeCounts": {
+        "missing_question_number": 2
+      },
+      "relativePath": "CMS\\6º Ano\\CMS - 6ANO - 2019_2020 (port).pdf",
+      "reviewCopyPath": "C:\\Users\\trans\\Documents\\SimpleQuest\\outputs\\audit\\holdout\\v5-tier-c-review\\copies\\09__v5-doc-2300b505b11855a2.pdf",
+      "reviewCopySha256": "2300b505b11855a2b555ea8b24e792948072340d5ceb4e4e7efce1b326784970",
+      "sourcePdfSha256": "2300b505b11855a2b555ea8b24e792948072340d5ceb4e4e7efce1b326784970",
+      "byteIdenticalToSource": true,
+      "status": "adjudicated",
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "pagesReviewedCount": 7,
+      "allPagesReviewed": true,
+      "questions": [
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q1",
+          "questionNumber": 1,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "printedQuestionNumber": 1,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q2",
+          "questionNumber": 2,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "printedQuestionNumber": 2,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q3",
+          "questionNumber": 3,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "printedQuestionNumber": 3,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q4",
+          "questionNumber": 4,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "printedQuestionNumber": 4,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q5",
+          "questionNumber": 5,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "printedQuestionNumber": 5,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q6",
+          "questionNumber": 6,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "printedQuestionNumber": 6,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q7",
+          "questionNumber": 7,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 7,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q8",
+          "questionNumber": 8,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 8,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q9",
+          "questionNumber": 9,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 9,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q10",
+          "questionNumber": 10,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 10,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q11",
+          "questionNumber": 11,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 11,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q12",
+          "questionNumber": 12,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 12,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q13",
+          "questionNumber": 13,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 13,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q14",
+          "questionNumber": 14,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 14,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q15",
+          "questionNumber": 15,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 15,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q16",
+          "questionNumber": 16,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 16,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q17",
+          "questionNumber": 17,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 17,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q18",
+          "questionNumber": 18,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 18,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q19",
+          "questionNumber": 19,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 19,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-2300b505b11855a2:q20",
+          "questionNumber": 20,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 20,
+          "section": "portuguese",
+          "sequenceRun": 1
+        }
+      ],
+      "pageEvidence": [
+        {
+          "physicalPage": 1,
+          "reviewed": true,
+          "canonicalStarts": [],
+          "neutralEvidence": "cover/instructions no genuine own numberedbody"
+        },
+        {
+          "physicalPage": 2,
+          "reviewed": true,
+          "canonicalStarts": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "neutralEvidence": "Portuguese heading/sharedTexto1 then own1-4closed2"
+        },
+        {
+          "physicalPage": 3,
+          "reviewed": true,
+          "canonicalStarts": [
+            5,
+            6
+          ],
+          "neutralEvidence": "sharedTexto2 then own5/6closed3"
+        },
+        {
+          "physicalPage": 4,
+          "reviewed": true,
+          "canonicalStarts": [
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "neutralEvidence": "own7/8closed4; separateTexto3 then own9/10/11closed4; marginlinenumbersnotidentities"
+        },
+        {
+          "physicalPage": 5,
+          "reviewed": true,
+          "canonicalStarts": [
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "neutralEvidence": "own12-16closed5; own12absentraw; separateTexto4doesnotextend15"
+        },
+        {
+          "physicalPage": 6,
+          "reviewed": true,
+          "canonicalStarts": [
+            17,
+            18,
+            19,
+            20
+          ],
+          "neutralEvidence": "own17/18closed6; own18absentraw; separateTexto5thenown19/20closed6; independently headedunnumberedmaterial followsnotq20continuation"
+        },
+        {
+          "physicalPage": 7,
+          "reviewed": true,
+          "canonicalStarts": [],
+          "neutralEvidence": "RASCUNHO ruledscratchpage; incidental linenumbersnotquestions; no q20continuation"
+        }
+      ],
+      "pendingBoundaryQuestions": [],
+      "nextPhysicalPage": null,
+      "renderMethod": "Poppler pdftoppm 120DPI visual only",
+      "renderDirectory": "outputs/audit/holdout/v5-tier-c-review/renders-batch-02/02",
+      "renderWarnings": [],
+      "neutralNotes": [
+        "Twentyownnumberedbodies1-20; own12p5and18p6added. q20ends6 before distinctunnumberedheading; scratch7notcontinuation. No syntheticnumberedunit for independentlyheadedunnumberedmaterial, applying existingTierB/CBatch01 convention, not response-layout exclusion."
+      ],
+      "visibleSections": [
+        {
+          "section": "portuguese",
+          "physicalPages": [
+            2,
+            6
+          ],
+          "printedNumbers": [
+            1,
+            20
+          ]
+        }
+      ],
+      "canonicalQuestionCount": 20,
+      "adjudicatedQuestionCount": 20,
+      "delta": 2,
+      "observedNumberingPattern": "own numbered bodies in physical documentary order; canonical ordinal preserves printed number unless explicit documented restart",
+      "numberingRestarts": 0,
+      "numberingNormalizations": 0,
+      "sectionNumberingPolicy": "Printed numbers and section transitions retained; shared introductions do not extend closed question bodies.",
+      "canonicalizationPolicy": "documentId:qN; one canonical object per directly observed independent numbered body; no gap-based fabrication",
+      "parallelSections": [],
+      "humanExclusions": [],
+      "exclusions": [],
+      "sourceIncomplete": false,
+      "originalExaminationCompletenessCertified": false,
+      "unresolvedIssues": [],
+      "minimumThreeCertified": true,
+      "fabricatedQuestions": 0,
+      "rawAnomaliesStructurallyReviewed": true,
+      "multiPageQuestions": [],
+      "corrections": [
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-2300b505b11855a2:q4",
+            "questionNumber": 4,
+            "pageStart": 2,
+            "pageEnd": 3
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-2300b505b11855a2:q4",
+            "questionNumber": 4,
+            "pageStart": 2,
+            "pageEnd": 2,
+            "printedQuestionNumber": 4,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: Portuguese heading/sharedTexto1 then own1-4closed2; physical3: sharedTexto2 then own5/6closed3"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-2300b505b11855a2:q11",
+            "questionNumber": 11,
+            "pageStart": 4,
+            "pageEnd": 5
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-2300b505b11855a2:q11",
+            "questionNumber": 11,
+            "pageStart": 4,
+            "pageEnd": 4,
+            "printedQuestionNumber": 11,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical4: own7/8closed4; separateTexto3 then own9/10/11closed4; marginlinenumbersnotidentities; physical5: own12-16closed5; own12absentraw; separateTexto4doesnotextend15"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-2300b505b11855a2:q20",
+            "questionNumber": 20,
+            "pageStart": 6,
+            "pageEnd": 7
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-2300b505b11855a2:q20",
+            "questionNumber": 20,
+            "pageStart": 6,
+            "pageEnd": 6,
+            "printedQuestionNumber": 20,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical6: own17/18closed6; own18absentraw; separateTexto5thenown19/20closed6; independently headedunnumberedmaterial followsnotq20continuation; physical7: RASCUNHO ruledscratchpage; incidental linenumbersnotquestions; no q20continuation"
+        }
+      ],
+      "addedCanonicalQuestions": [
+        {
+          "question": {
+            "questionId": "v5-doc-2300b505b11855a2:q12",
+            "questionNumber": 12,
+            "pageStart": 5,
+            "pageEnd": 5,
+            "printedQuestionNumber": 12,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "evidencePages": [
+            5
+          ],
+          "reason": "physical5: own12-16closed5; own12absentraw; separateTexto4doesnotextend15"
+        },
+        {
+          "question": {
+            "questionId": "v5-doc-2300b505b11855a2:q18",
+            "questionNumber": 18,
+            "pageStart": 6,
+            "pageEnd": 6,
+            "printedQuestionNumber": 18,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "evidencePages": [
+            6
+          ],
+          "reason": "physical6: own17/18closed6; own18absentraw; separateTexto5thenown19/20closed6; independently headedunnumberedmaterial followsnotq20continuation"
+        }
+      ],
+      "removedRawCaptures": [],
+      "identityBoundaryCorrections": 3,
+      "rawAnomalyResolutions": [
+        {
+          "eventIndex": 1,
+          "rawAnomaly": {
+            "documentId": "v5-doc-2300b505b11855a2",
+            "type": "missing_question_number",
+            "number": 12
+          },
+          "status": "resolved_structurally",
+          "neutralResolution": "direct own question header/body proved; automatic raw diagnostic is not a source defect or Auditor metric",
+          "canonicalQuestionIds": [
+            "v5-doc-2300b505b11855a2:q12"
+          ],
+          "evidencePages": [
+            5
+          ],
+          "neutralEvidence": "own12-16closed5; own12absentraw; separateTexto4doesnotextend15"
+        },
+        {
+          "eventIndex": 2,
+          "rawAnomaly": {
+            "documentId": "v5-doc-2300b505b11855a2",
+            "type": "missing_question_number",
+            "number": 18
+          },
+          "status": "resolved_structurally",
+          "neutralResolution": "direct own question header/body proved; automatic raw diagnostic is not a source defect or Auditor metric",
+          "canonicalQuestionIds": [
+            "v5-doc-2300b505b11855a2:q18"
+          ],
+          "evidencePages": [
+            6
+          ],
+          "neutralEvidence": "own17/18closed6; own18absentraw; separateTexto5thenown19/20closed6; independently headedunnumberedmaterial followsnotq20continuation"
+        }
+      ]
+    },
+    {
+      "tier": "C",
+      "tierOrder": 10,
+      "globalOrder": 36,
+      "manifestOrder": 1,
+      "reviewBatch": "02",
+      "batchOrder": 3,
+      "documentId": "v5-doc-429b811d62a29a28",
+      "contentFingerprint": "429b811d62a29a28c9e2dfb8f89afc95fb0afa0d0529fe9e67a205dd1aa00605",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMB\\1º Ano\\CMB - 1ANO - 2017_2018 (port).pdf",
+      "family": "CMB",
+      "year": 2017,
+      "series": "1º Ano",
+      "sourceType": "raster",
+      "indexMethod": "ocr",
+      "pageCount": 17,
+      "rawQuestionCount": 18,
+      "rawAnomalyCount": 2,
+      "anomalyTypeCounts": {
+        "missing_question_number": 2
+      },
+      "relativePath": "CMB\\1º Ano\\CMB - 1ANO - 2017_2018 (port).pdf",
+      "reviewCopyPath": "C:\\Users\\trans\\Documents\\SimpleQuest\\outputs\\audit\\holdout\\v5-tier-c-review\\copies\\10__v5-doc-429b811d62a29a28.pdf",
+      "reviewCopySha256": "429b811d62a29a28c9e2dfb8f89afc95fb0afa0d0529fe9e67a205dd1aa00605",
+      "sourcePdfSha256": "429b811d62a29a28c9e2dfb8f89afc95fb0afa0d0529fe9e67a205dd1aa00605",
+      "byteIdenticalToSource": true,
+      "status": "adjudicated",
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "pagesReviewedCount": 17,
+      "allPagesReviewed": true,
+      "questions": [
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q1",
+          "questionNumber": 1,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "printedQuestionNumber": 1,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q2",
+          "questionNumber": 2,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "printedQuestionNumber": 2,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q3",
+          "questionNumber": 3,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 3,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q4",
+          "questionNumber": 4,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 4,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q5",
+          "questionNumber": 5,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 5,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q6",
+          "questionNumber": 6,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 6,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q7",
+          "questionNumber": 7,
+          "pageStart": 7,
+          "pageEnd": 7,
+          "printedQuestionNumber": 7,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q8",
+          "questionNumber": 8,
+          "pageStart": 7,
+          "pageEnd": 7,
+          "printedQuestionNumber": 8,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q9",
+          "questionNumber": 9,
+          "pageStart": 9,
+          "pageEnd": 9,
+          "printedQuestionNumber": 9,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q10",
+          "questionNumber": 10,
+          "pageStart": 9,
+          "pageEnd": 9,
+          "printedQuestionNumber": 10,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q11",
+          "questionNumber": 11,
+          "pageStart": 10,
+          "pageEnd": 10,
+          "printedQuestionNumber": 11,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q12",
+          "questionNumber": 12,
+          "pageStart": 10,
+          "pageEnd": 10,
+          "printedQuestionNumber": 12,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q13",
+          "questionNumber": 13,
+          "pageStart": 12,
+          "pageEnd": 12,
+          "printedQuestionNumber": 13,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q14",
+          "questionNumber": 14,
+          "pageStart": 12,
+          "pageEnd": 12,
+          "printedQuestionNumber": 14,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q15",
+          "questionNumber": 15,
+          "pageStart": 13,
+          "pageEnd": 13,
+          "printedQuestionNumber": 15,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q16",
+          "questionNumber": 16,
+          "pageStart": 13,
+          "pageEnd": 13,
+          "printedQuestionNumber": 16,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q17",
+          "questionNumber": 17,
+          "pageStart": 14,
+          "pageEnd": 14,
+          "printedQuestionNumber": 17,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q18",
+          "questionNumber": 18,
+          "pageStart": 14,
+          "pageEnd": 14,
+          "printedQuestionNumber": 18,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q19",
+          "questionNumber": 19,
+          "pageStart": 15,
+          "pageEnd": 15,
+          "printedQuestionNumber": 19,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-429b811d62a29a28:q20",
+          "questionNumber": 20,
+          "pageStart": 15,
+          "pageEnd": 15,
+          "printedQuestionNumber": 20,
+          "section": "portuguese",
+          "sequenceRun": 1
+        }
+      ],
+      "pageEvidence": [
+        {
+          "physicalPage": 1,
+          "reviewed": true,
+          "canonicalStarts": [],
+          "neutralEvidence": "cover/instructions; declared20/17 ismetadata; no ownnumberedstart"
+        },
+        {
+          "physicalPage": 2,
+          "reviewed": true,
+          "canonicalStarts": [],
+          "neutralEvidence": "Part1sharedTexto1 only; no ownnumberedstart"
+        },
+        {
+          "physicalPage": 3,
+          "reviewed": true,
+          "canonicalStarts": [
+            1,
+            2
+          ],
+          "neutralEvidence": "own01/02withclosedbodies3"
+        },
+        {
+          "physicalPage": 4,
+          "reviewed": true,
+          "canonicalStarts": [
+            3,
+            4
+          ],
+          "neutralEvidence": "own03/04withclosedbodies4"
+        },
+        {
+          "physicalPage": 5,
+          "reviewed": true,
+          "canonicalStarts": [],
+          "neutralEvidence": "distinct sharedTexto2 only; notq4continuation"
+        },
+        {
+          "physicalPage": 6,
+          "reviewed": true,
+          "canonicalStarts": [
+            5,
+            6
+          ],
+          "neutralEvidence": "own05/06withclosedbodies6"
+        },
+        {
+          "physicalPage": 7,
+          "reviewed": true,
+          "canonicalStarts": [
+            7,
+            8
+          ],
+          "neutralEvidence": "own07/08withclosedbodies7; q8doesnotcontinue sharedTexto3"
+        },
+        {
+          "physicalPage": 8,
+          "reviewed": true,
+          "canonicalStarts": [],
+          "neutralEvidence": "distinct sharedTexto3introduction; no ownstart andnotq8continuation"
+        },
+        {
+          "physicalPage": 9,
+          "reviewed": true,
+          "canonicalStarts": [
+            9,
+            10
+          ],
+          "neutralEvidence": "sharedTexto3closes then own09/10withclosedbodies9"
+        },
+        {
+          "physicalPage": 10,
+          "reviewed": true,
+          "canonicalStarts": [
+            11,
+            12
+          ],
+          "neutralEvidence": "own11/12closed10; notnextsharedTexto4"
+        },
+        {
+          "physicalPage": 11,
+          "reviewed": true,
+          "canonicalStarts": [],
+          "neutralEvidence": "separately headedTexto4 infographic; internalenumeration1-13/1-10notownquestionheaders; notq12continuation"
+        },
+        {
+          "physicalPage": 12,
+          "reviewed": true,
+          "canonicalStarts": [
+            13,
+            14
+          ],
+          "neutralEvidence": "own13/14closed12"
+        },
+        {
+          "physicalPage": 13,
+          "reviewed": true,
+          "canonicalStarts": [
+            15,
+            16
+          ],
+          "neutralEvidence": "own15/16closed13"
+        },
+        {
+          "physicalPage": 14,
+          "reviewed": true,
+          "canonicalStarts": [
+            17,
+            18
+          ],
+          "neutralEvidence": "distinctTexto5thenown17/18closed14; both absentraw directly observed"
+        },
+        {
+          "physicalPage": 15,
+          "reviewed": true,
+          "canonicalStarts": [
+            19,
+            20
+          ],
+          "neutralEvidence": "own19/20closed15, before distinctPart2on16"
+        },
+        {
+          "physicalPage": 16,
+          "reviewed": true,
+          "canonicalStarts": [],
+          "neutralEvidence": "separately headedPart2unnumberedmaterial, no numberedstart; notq20continuation"
+        },
+        {
+          "physicalPage": 17,
+          "reviewed": true,
+          "canonicalStarts": [],
+          "neutralEvidence": "Part2requirements and FIM DA PROVA; no ownnumberedstart, notq20continuation"
+        }
+      ],
+      "pendingBoundaryQuestions": [],
+      "renderMethod": "Poppler pdftoppm 120 DPI PNG visual inspection only; no new OCR",
+      "renderDirectory": "outputs/audit/holdout/v5-tier-c-review/renders-batch-02/03",
+      "renderWarnings": [],
+      "neutralNotes": [
+        "All20ownnumberedheadersobserved, eachclosedonstartpage. Own17/18p14added; q20ends15before distinct unnumberedPart2physical16-17. SharedTexts2/3/4notpreviousquestioncontinuations; no syntheticnumberedunits."
+      ],
+      "nextPhysicalPage": null,
+      "visibleSections": [
+        {
+          "section": "portuguese",
+          "physicalPages": [
+            3,
+            15
+          ],
+          "printedNumbers": [
+            1,
+            20
+          ]
+        }
+      ],
+      "canonicalQuestionCount": 20,
+      "adjudicatedQuestionCount": 20,
+      "delta": 2,
+      "observedNumberingPattern": "own numbered bodies in physical documentary order; canonical ordinal preserves printed number unless explicit documented restart",
+      "numberingRestarts": 0,
+      "numberingNormalizations": 0,
+      "sectionNumberingPolicy": "Printed numbers and section transitions retained; shared introductions do not extend closed question bodies.",
+      "canonicalizationPolicy": "documentId:qN; one canonical object per directly observed independent numbered body; no gap-based fabrication",
+      "parallelSections": [],
+      "humanExclusions": [],
+      "exclusions": [],
+      "sourceIncomplete": false,
+      "originalExaminationCompletenessCertified": false,
+      "unresolvedIssues": [],
+      "minimumThreeCertified": true,
+      "fabricatedQuestions": 0,
+      "rawAnomaliesStructurallyReviewed": true,
+      "multiPageQuestions": [],
+      "corrections": [
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-429b811d62a29a28:q4",
+            "questionNumber": 4,
+            "pageStart": 4,
+            "pageEnd": 5
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-429b811d62a29a28:q4",
+            "questionNumber": 4,
+            "pageStart": 4,
+            "pageEnd": 4,
+            "printedQuestionNumber": 4,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical4: own03/04withclosedbodies4; physical5: distinct sharedTexto2 only; notq4continuation"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-429b811d62a29a28:q8",
+            "questionNumber": 8,
+            "pageStart": 7,
+            "pageEnd": 9
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-429b811d62a29a28:q8",
+            "questionNumber": 8,
+            "pageStart": 7,
+            "pageEnd": 7,
+            "printedQuestionNumber": 8,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical7: own07/08withclosedbodies7; q8doesnotcontinue sharedTexto3; physical8: distinct sharedTexto3introduction; no ownstart andnotq8continuation; physical9: sharedTexto3closes then own09/10withclosedbodies9"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-429b811d62a29a28:q12",
+            "questionNumber": 12,
+            "pageStart": 10,
+            "pageEnd": 11
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-429b811d62a29a28:q12",
+            "questionNumber": 12,
+            "pageStart": 10,
+            "pageEnd": 10,
+            "printedQuestionNumber": 12,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical10: own11/12closed10; notnextsharedTexto4; physical11: separately headedTexto4 infographic; internalenumeration1-13/1-10notownquestionheaders; notq12continuation"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-429b811d62a29a28:q16",
+            "questionNumber": 16,
+            "pageStart": 13,
+            "pageEnd": 14
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-429b811d62a29a28:q16",
+            "questionNumber": 16,
+            "pageStart": 13,
+            "pageEnd": 13,
+            "printedQuestionNumber": 16,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical13: own15/16closed13; physical14: distinctTexto5thenown17/18closed14; both absentraw directly observed"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-429b811d62a29a28:q20",
+            "questionNumber": 20,
+            "pageStart": 15,
+            "pageEnd": 17
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-429b811d62a29a28:q20",
+            "questionNumber": 20,
+            "pageStart": 15,
+            "pageEnd": 15,
+            "printedQuestionNumber": 20,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical15: own19/20closed15, before distinctPart2on16; physical16: separately headedPart2unnumberedmaterial, no numberedstart; notq20continuation; physical17: Part2requirements and FIM DA PROVA; no ownnumberedstart, notq20continuation"
+        }
+      ],
+      "addedCanonicalQuestions": [
+        {
+          "question": {
+            "questionId": "v5-doc-429b811d62a29a28:q17",
+            "questionNumber": 17,
+            "pageStart": 14,
+            "pageEnd": 14,
+            "printedQuestionNumber": 17,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "evidencePages": [
+            14
+          ],
+          "reason": "physical14: distinctTexto5thenown17/18closed14; both absentraw directly observed"
+        },
+        {
+          "question": {
+            "questionId": "v5-doc-429b811d62a29a28:q18",
+            "questionNumber": 18,
+            "pageStart": 14,
+            "pageEnd": 14,
+            "printedQuestionNumber": 18,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "evidencePages": [
+            14
+          ],
+          "reason": "physical14: distinctTexto5thenown17/18closed14; both absentraw directly observed"
+        }
+      ],
+      "removedRawCaptures": [],
+      "identityBoundaryCorrections": 5,
+      "rawAnomalyResolutions": [
+        {
+          "eventIndex": 1,
+          "rawAnomaly": {
+            "documentId": "v5-doc-429b811d62a29a28",
+            "type": "missing_question_number",
+            "number": 17
+          },
+          "status": "resolved_structurally",
+          "neutralResolution": "direct own question header/body proved; automatic raw diagnostic is not a source defect or Auditor metric",
+          "canonicalQuestionIds": [
+            "v5-doc-429b811d62a29a28:q17"
+          ],
+          "evidencePages": [
+            14
+          ],
+          "neutralEvidence": "distinctTexto5thenown17/18closed14; both absentraw directly observed"
+        },
+        {
+          "eventIndex": 2,
+          "rawAnomaly": {
+            "documentId": "v5-doc-429b811d62a29a28",
+            "type": "missing_question_number",
+            "number": 18
+          },
+          "status": "resolved_structurally",
+          "neutralResolution": "direct own question header/body proved; automatic raw diagnostic is not a source defect or Auditor metric",
+          "canonicalQuestionIds": [
+            "v5-doc-429b811d62a29a28:q18"
+          ],
+          "evidencePages": [
+            14
+          ],
+          "neutralEvidence": "distinctTexto5thenown17/18closed14; both absentraw directly observed"
+        }
+      ]
+    },
+    {
+      "tier": "C",
+      "tierOrder": 11,
+      "globalOrder": 37,
+      "manifestOrder": 44,
+      "reviewBatch": "02",
+      "batchOrder": 4,
+      "documentId": "v5-doc-bc5d90aa69fa3416",
+      "contentFingerprint": "bc5d90aa69fa3416e2af5364542d5d6bbb4ba3b8550eca81aeeab2251aa7dd4d",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMM\\1º Ano\\CMM - 1ANO - 2014_2015 (port).pdf",
+      "family": "CMM",
+      "year": 2014,
+      "series": "1º Ano",
+      "sourceType": "text_native",
+      "indexMethod": "native",
+      "pageCount": 12,
+      "rawQuestionCount": 17,
+      "rawAnomalyCount": 2,
+      "anomalyTypeCounts": {
+        "missing_question_number": 2
+      },
+      "relativePath": "CMM\\1º Ano\\CMM - 1ANO - 2014_2015 (port).pdf",
+      "reviewCopyPath": "C:\\Users\\trans\\Documents\\SimpleQuest\\outputs\\audit\\holdout\\v5-tier-c-review\\copies\\11__v5-doc-bc5d90aa69fa3416.pdf",
+      "reviewCopySha256": "bc5d90aa69fa3416e2af5364542d5d6bbb4ba3b8550eca81aeeab2251aa7dd4d",
+      "sourcePdfSha256": "bc5d90aa69fa3416e2af5364542d5d6bbb4ba3b8550eca81aeeab2251aa7dd4d",
+      "byteIdenticalToSource": true,
+      "status": "adjudicated",
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "pagesReviewedCount": 12,
+      "allPagesReviewed": true,
+      "questions": [
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q1",
+          "questionNumber": 1,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 1,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q2",
+          "questionNumber": 2,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 2,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q3",
+          "questionNumber": 3,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 3,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q4",
+          "questionNumber": 4,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 4,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q5",
+          "questionNumber": 5,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 5,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q6",
+          "questionNumber": 6,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 6,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q7",
+          "questionNumber": 7,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 7,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q8",
+          "questionNumber": 8,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 8,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q9",
+          "questionNumber": 9,
+          "pageStart": 7,
+          "pageEnd": 7,
+          "printedQuestionNumber": 9,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q10",
+          "questionNumber": 10,
+          "pageStart": 7,
+          "pageEnd": 7,
+          "printedQuestionNumber": 10,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q11",
+          "questionNumber": 11,
+          "pageStart": 8,
+          "pageEnd": 8,
+          "printedQuestionNumber": 11,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q12",
+          "questionNumber": 12,
+          "pageStart": 8,
+          "pageEnd": 8,
+          "printedQuestionNumber": 12,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q13",
+          "questionNumber": 13,
+          "pageStart": 9,
+          "pageEnd": 9,
+          "printedQuestionNumber": 13,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q14",
+          "questionNumber": 14,
+          "pageStart": 10,
+          "pageEnd": 10,
+          "printedQuestionNumber": 14,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q15",
+          "questionNumber": 15,
+          "pageStart": 10,
+          "pageEnd": 10,
+          "printedQuestionNumber": 15,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q16",
+          "questionNumber": 16,
+          "pageStart": 10,
+          "pageEnd": 10,
+          "printedQuestionNumber": 16,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q17",
+          "questionNumber": 17,
+          "pageStart": 10,
+          "pageEnd": 10,
+          "printedQuestionNumber": 17,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q18",
+          "questionNumber": 18,
+          "pageStart": 11,
+          "pageEnd": 11,
+          "printedQuestionNumber": 18,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q19",
+          "questionNumber": 19,
+          "pageStart": 11,
+          "pageEnd": 11,
+          "printedQuestionNumber": 19,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-bc5d90aa69fa3416:q20",
+          "questionNumber": 20,
+          "pageStart": 12,
+          "pageEnd": 12,
+          "printedQuestionNumber": 20,
+          "section": "portuguese",
+          "sequenceRun": 1
+        }
+      ],
+      "pageEvidence": [
+        {
+          "physicalPage": 1,
+          "reviewed": true,
+          "canonicalStarts": [],
+          "neutralEvidence": "cover/administrative material; no ownquestionstart; scoresnotidentitycount"
+        },
+        {
+          "physicalPage": 2,
+          "reviewed": true,
+          "canonicalStarts": [],
+          "neutralEvidence": "INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere"
+        },
+        {
+          "physicalPage": 3,
+          "reviewed": true,
+          "canonicalStarts": [],
+          "neutralEvidence": "Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1"
+        },
+        {
+          "physicalPage": 4,
+          "reviewed": true,
+          "canonicalStarts": [
+            1,
+            2
+          ],
+          "neutralEvidence": "sharedTextoIends; independent own1stItem/2ndItemclosed4"
+        },
+        {
+          "physicalPage": 5,
+          "reviewed": true,
+          "canonicalStarts": [
+            3,
+            4,
+            5
+          ],
+          "neutralEvidence": "own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader"
+        },
+        {
+          "physicalPage": 6,
+          "reviewed": true,
+          "canonicalStarts": [
+            6,
+            7,
+            8
+          ],
+          "neutralEvidence": "own6th/7th/8thItemclosed6; 7absentrawprovedbyownordinalItemheader"
+        },
+        {
+          "physicalPage": 7,
+          "reviewed": true,
+          "canonicalStarts": [
+            9,
+            10
+          ],
+          "neutralEvidence": "own9th/10thItemclosed7; notnextsharedTextoII"
+        },
+        {
+          "physicalPage": 8,
+          "reviewed": true,
+          "canonicalStarts": [
+            11,
+            12
+          ],
+          "neutralEvidence": "distinctsharedTextoII then own11th/12thItemclosed8"
+        },
+        {
+          "physicalPage": 9,
+          "reviewed": true,
+          "canonicalStarts": [
+            13
+          ],
+          "neutralEvidence": "own13thItemclosed9before distinctsharedTextoIII"
+        },
+        {
+          "physicalPage": 10,
+          "reviewed": true,
+          "canonicalStarts": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "neutralEvidence": "own14th-17thItemclosed10"
+        },
+        {
+          "physicalPage": 11,
+          "reviewed": true,
+          "canonicalStarts": [
+            18,
+            19
+          ],
+          "neutralEvidence": "own18th/19thItemclosed11; q19not2-12, notsharedTextoIV"
+        },
+        {
+          "physicalPage": 12,
+          "reviewed": true,
+          "canonicalStarts": [
+            20
+          ],
+          "neutralEvidence": "distinctsharedTextoIVthen own20thItemclosed12; FIM DO CADERNO; genuine20absentrawmaximum19"
+        }
+      ],
+      "pendingBoundaryQuestions": [],
+      "renderMethod": "Poppler pdftoppm 120 DPI PNG visual inspection only; no new OCR",
+      "renderDirectory": "outputs/audit/holdout/v5-tier-c-review/renders-batch-02/04",
+      "renderWarnings": [
+        "Syntax Error: No display font for 'Symbol'",
+        "Syntax Error: No display font for 'ArialUnicode'"
+      ],
+      "neutralNotes": [
+        "All20ownordinalItemheaders observed on4-12; rawp2captures are instructionalenumeration notstarts. Existing1-4/6/8-19 moved torealownheaders; added5p5,7p6,20p12. q19closes11 notraw2-12. Parentheading1aQUESTAOdefinessection notextraidentity. CopyendsFIMDO CADERNO12; separatebookletmentionedbyinstructionsnotreconstructed, originalexamcompletenessnotcertified. Fontwarningsnonblocking; headers/boundsreadable, causeundetermined."
+      ],
+      "nextPhysicalPage": null,
+      "visibleSections": [
+        {
+          "section": "portuguese",
+          "physicalPages": [
+            4,
+            12
+          ],
+          "printedNumbers": [
+            1,
+            20
+          ]
+        }
+      ],
+      "canonicalQuestionCount": 20,
+      "adjudicatedQuestionCount": 20,
+      "delta": 3,
+      "observedNumberingPattern": "own numbered bodies in physical documentary order; canonical ordinal preserves printed number unless explicit documented restart",
+      "numberingRestarts": 0,
+      "numberingNormalizations": 0,
+      "sectionNumberingPolicy": "Printed numbers and section transitions retained; shared introductions do not extend closed question bodies.",
+      "canonicalizationPolicy": "documentId:qN; one canonical object per directly observed independent numbered body; no gap-based fabrication",
+      "parallelSections": [],
+      "humanExclusions": [],
+      "exclusions": [],
+      "sourceIncomplete": false,
+      "originalExaminationCompletenessCertified": false,
+      "unresolvedIssues": [],
+      "minimumThreeCertified": true,
+      "fabricatedQuestions": 0,
+      "rawAnomaliesStructurallyReviewed": true,
+      "multiPageQuestions": [],
+      "corrections": [
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q1",
+            "questionNumber": 1,
+            "pageStart": 2,
+            "pageEnd": 2
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q1",
+            "questionNumber": 1,
+            "pageStart": 4,
+            "pageEnd": 4,
+            "printedQuestionNumber": 1,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere; physical3: Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1; physical4: sharedTextoIends; independent own1stItem/2ndItemclosed4"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q2",
+            "questionNumber": 2,
+            "pageStart": 2,
+            "pageEnd": 2
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q2",
+            "questionNumber": 2,
+            "pageStart": 4,
+            "pageEnd": 4,
+            "printedQuestionNumber": 2,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere; physical3: Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1; physical4: sharedTextoIends; independent own1stItem/2ndItemclosed4"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q3",
+            "questionNumber": 3,
+            "pageStart": 2,
+            "pageEnd": 2
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q3",
+            "questionNumber": 3,
+            "pageStart": 5,
+            "pageEnd": 5,
+            "printedQuestionNumber": 3,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere; physical3: Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1; physical4: sharedTextoIends; independent own1stItem/2ndItemclosed4; physical5: own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q4",
+            "questionNumber": 4,
+            "pageStart": 2,
+            "pageEnd": 2
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q4",
+            "questionNumber": 4,
+            "pageStart": 5,
+            "pageEnd": 5,
+            "printedQuestionNumber": 4,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere; physical3: Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1; physical4: sharedTextoIends; independent own1stItem/2ndItemclosed4; physical5: own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q6",
+            "questionNumber": 6,
+            "pageStart": 2,
+            "pageEnd": 2
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q6",
+            "questionNumber": 6,
+            "pageStart": 6,
+            "pageEnd": 6,
+            "printedQuestionNumber": 6,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere; physical3: Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1; physical4: sharedTextoIends; independent own1stItem/2ndItemclosed4; physical5: own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader; physical6: own6th/7th/8thItemclosed6; 7absentrawprovedbyownordinalItemheader"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q8",
+            "questionNumber": 8,
+            "pageStart": 2,
+            "pageEnd": 2
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q8",
+            "questionNumber": 8,
+            "pageStart": 6,
+            "pageEnd": 6,
+            "printedQuestionNumber": 8,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere; physical3: Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1; physical4: sharedTextoIends; independent own1stItem/2ndItemclosed4; physical5: own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader; physical6: own6th/7th/8thItemclosed6; 7absentrawprovedbyownordinalItemheader"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q9",
+            "questionNumber": 9,
+            "pageStart": 2,
+            "pageEnd": 2
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q9",
+            "questionNumber": 9,
+            "pageStart": 7,
+            "pageEnd": 7,
+            "printedQuestionNumber": 9,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere; physical3: Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1; physical4: sharedTextoIends; independent own1stItem/2ndItemclosed4; physical5: own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader; physical6: own6th/7th/8thItemclosed6; 7absentrawprovedbyownordinalItemheader; physical7: own9th/10thItemclosed7; notnextsharedTextoII"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q10",
+            "questionNumber": 10,
+            "pageStart": 2,
+            "pageEnd": 2
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q10",
+            "questionNumber": 10,
+            "pageStart": 7,
+            "pageEnd": 7,
+            "printedQuestionNumber": 10,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere; physical3: Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1; physical4: sharedTextoIends; independent own1stItem/2ndItemclosed4; physical5: own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader; physical6: own6th/7th/8thItemclosed6; 7absentrawprovedbyownordinalItemheader; physical7: own9th/10thItemclosed7; notnextsharedTextoII"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q11",
+            "questionNumber": 11,
+            "pageStart": 2,
+            "pageEnd": 2
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q11",
+            "questionNumber": 11,
+            "pageStart": 8,
+            "pageEnd": 8,
+            "printedQuestionNumber": 11,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere; physical3: Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1; physical4: sharedTextoIends; independent own1stItem/2ndItemclosed4; physical5: own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader; physical6: own6th/7th/8thItemclosed6; 7absentrawprovedbyownordinalItemheader; physical7: own9th/10thItemclosed7; notnextsharedTextoII; physical8: distinctsharedTextoII then own11th/12thItemclosed8"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q12",
+            "questionNumber": 12,
+            "pageStart": 2,
+            "pageEnd": 2
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q12",
+            "questionNumber": 12,
+            "pageStart": 8,
+            "pageEnd": 8,
+            "printedQuestionNumber": 12,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere; physical3: Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1; physical4: sharedTextoIends; independent own1stItem/2ndItemclosed4; physical5: own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader; physical6: own6th/7th/8thItemclosed6; 7absentrawprovedbyownordinalItemheader; physical7: own9th/10thItemclosed7; notnextsharedTextoII; physical8: distinctsharedTextoII then own11th/12thItemclosed8"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q13",
+            "questionNumber": 13,
+            "pageStart": 2,
+            "pageEnd": 2
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q13",
+            "questionNumber": 13,
+            "pageStart": 9,
+            "pageEnd": 9,
+            "printedQuestionNumber": 13,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere; physical3: Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1; physical4: sharedTextoIends; independent own1stItem/2ndItemclosed4; physical5: own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader; physical6: own6th/7th/8thItemclosed6; 7absentrawprovedbyownordinalItemheader; physical7: own9th/10thItemclosed7; notnextsharedTextoII; physical8: distinctsharedTextoII then own11th/12thItemclosed8; physical9: own13thItemclosed9before distinctsharedTextoIII"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q14",
+            "questionNumber": 14,
+            "pageStart": 2,
+            "pageEnd": 2
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q14",
+            "questionNumber": 14,
+            "pageStart": 10,
+            "pageEnd": 10,
+            "printedQuestionNumber": 14,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere; physical3: Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1; physical4: sharedTextoIends; independent own1stItem/2ndItemclosed4; physical5: own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader; physical6: own6th/7th/8thItemclosed6; 7absentrawprovedbyownordinalItemheader; physical7: own9th/10thItemclosed7; notnextsharedTextoII; physical8: distinctsharedTextoII then own11th/12thItemclosed8; physical9: own13thItemclosed9before distinctsharedTextoIII; physical10: own14th-17thItemclosed10"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q15",
+            "questionNumber": 15,
+            "pageStart": 2,
+            "pageEnd": 2
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q15",
+            "questionNumber": 15,
+            "pageStart": 10,
+            "pageEnd": 10,
+            "printedQuestionNumber": 15,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere; physical3: Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1; physical4: sharedTextoIends; independent own1stItem/2ndItemclosed4; physical5: own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader; physical6: own6th/7th/8thItemclosed6; 7absentrawprovedbyownordinalItemheader; physical7: own9th/10thItemclosed7; notnextsharedTextoII; physical8: distinctsharedTextoII then own11th/12thItemclosed8; physical9: own13thItemclosed9before distinctsharedTextoIII; physical10: own14th-17thItemclosed10"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q16",
+            "questionNumber": 16,
+            "pageStart": 2,
+            "pageEnd": 2
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q16",
+            "questionNumber": 16,
+            "pageStart": 10,
+            "pageEnd": 10,
+            "printedQuestionNumber": 16,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere; physical3: Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1; physical4: sharedTextoIends; independent own1stItem/2ndItemclosed4; physical5: own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader; physical6: own6th/7th/8thItemclosed6; 7absentrawprovedbyownordinalItemheader; physical7: own9th/10thItemclosed7; notnextsharedTextoII; physical8: distinctsharedTextoII then own11th/12thItemclosed8; physical9: own13thItemclosed9before distinctsharedTextoIII; physical10: own14th-17thItemclosed10"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q17",
+            "questionNumber": 17,
+            "pageStart": 2,
+            "pageEnd": 2
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q17",
+            "questionNumber": 17,
+            "pageStart": 10,
+            "pageEnd": 10,
+            "printedQuestionNumber": 17,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere; physical3: Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1; physical4: sharedTextoIends; independent own1stItem/2ndItemclosed4; physical5: own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader; physical6: own6th/7th/8thItemclosed6; 7absentrawprovedbyownordinalItemheader; physical7: own9th/10thItemclosed7; notnextsharedTextoII; physical8: distinctsharedTextoII then own11th/12thItemclosed8; physical9: own13thItemclosed9before distinctsharedTextoIII; physical10: own14th-17thItemclosed10"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q18",
+            "questionNumber": 18,
+            "pageStart": 2,
+            "pageEnd": 2
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q18",
+            "questionNumber": 18,
+            "pageStart": 11,
+            "pageEnd": 11,
+            "printedQuestionNumber": 18,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere; physical3: Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1; physical4: sharedTextoIends; independent own1stItem/2ndItemclosed4; physical5: own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader; physical6: own6th/7th/8thItemclosed6; 7absentrawprovedbyownordinalItemheader; physical7: own9th/10thItemclosed7; notnextsharedTextoII; physical8: distinctsharedTextoII then own11th/12thItemclosed8; physical9: own13thItemclosed9before distinctsharedTextoIII; physical10: own14th-17thItemclosed10; physical11: own18th/19thItemclosed11; q19not2-12, notsharedTextoIV"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q19",
+            "questionNumber": 19,
+            "pageStart": 2,
+            "pageEnd": 12
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q19",
+            "questionNumber": 19,
+            "pageStart": 11,
+            "pageEnd": 11,
+            "printedQuestionNumber": 19,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical2: INSTRUCOES19enumeratedadministrativeitems, notquestionbodies; everyrawstart2needsneutralcorroboration elsewhere; physical3: Part1heading/sharedTextoIintroduction; chapterordinalnotseparatecanonicalq1; physical4: sharedTextoIends; independent own1stItem/2ndItemclosed4; physical5: own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader; physical6: own6th/7th/8thItemclosed6; 7absentrawprovedbyownordinalItemheader; physical7: own9th/10thItemclosed7; notnextsharedTextoII; physical8: distinctsharedTextoII then own11th/12thItemclosed8; physical9: own13thItemclosed9before distinctsharedTextoIII; physical10: own14th-17thItemclosed10; physical11: own18th/19thItemclosed11; q19not2-12, notsharedTextoIV; physical12: distinctsharedTextoIVthen own20thItemclosed12; FIM DO CADERNO; genuine20absentrawmaximum19"
+        }
+      ],
+      "addedCanonicalQuestions": [
+        {
+          "question": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q5",
+            "questionNumber": 5,
+            "pageStart": 5,
+            "pageEnd": 5,
+            "printedQuestionNumber": 5,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "evidencePages": [
+            5
+          ],
+          "reason": "physical5: own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader"
+        },
+        {
+          "question": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q7",
+            "questionNumber": 7,
+            "pageStart": 6,
+            "pageEnd": 6,
+            "printedQuestionNumber": 7,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "evidencePages": [
+            6
+          ],
+          "reason": "physical6: own6th/7th/8thItemclosed6; 7absentrawprovedbyownordinalItemheader"
+        },
+        {
+          "question": {
+            "questionId": "v5-doc-bc5d90aa69fa3416:q20",
+            "questionNumber": 20,
+            "pageStart": 12,
+            "pageEnd": 12,
+            "printedQuestionNumber": 20,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "evidencePages": [
+            12
+          ],
+          "reason": "physical12: distinctsharedTextoIVthen own20thItemclosed12; FIM DO CADERNO; genuine20absentrawmaximum19"
+        }
+      ],
+      "removedRawCaptures": [],
+      "identityBoundaryCorrections": 17,
+      "rawAnomalyResolutions": [
+        {
+          "eventIndex": 1,
+          "rawAnomaly": {
+            "documentId": "v5-doc-bc5d90aa69fa3416",
+            "type": "missing_question_number",
+            "number": 5
+          },
+          "status": "resolved_structurally",
+          "neutralResolution": "direct own question header/body proved; automatic raw diagnostic is not a source defect or Auditor metric",
+          "canonicalQuestionIds": [
+            "v5-doc-bc5d90aa69fa3416:q5"
+          ],
+          "evidencePages": [
+            5
+          ],
+          "neutralEvidence": "own3rd/4th/5thItemclosed5; 5absentrawprovedbyownordinalItemheader"
+        },
+        {
+          "eventIndex": 2,
+          "rawAnomaly": {
+            "documentId": "v5-doc-bc5d90aa69fa3416",
+            "type": "missing_question_number",
+            "number": 7
+          },
+          "status": "resolved_structurally",
+          "neutralResolution": "direct own question header/body proved; automatic raw diagnostic is not a source defect or Auditor metric",
+          "canonicalQuestionIds": [
+            "v5-doc-bc5d90aa69fa3416:q7"
+          ],
+          "evidencePages": [
+            6
+          ],
+          "neutralEvidence": "own6th/7th/8thItemclosed6; 7absentrawprovedbyownordinalItemheader"
+        }
+      ]
+    },
+    {
+      "tier": "C",
+      "tierOrder": 12,
+      "globalOrder": 38,
+      "manifestOrder": 8,
+      "reviewBatch": "02",
+      "batchOrder": 5,
+      "documentId": "v5-doc-c6d6158a42ac379f",
+      "contentFingerprint": "c6d6158a42ac379fcd8ce8f39cc93b402da5441ad551c671d47d1c976991488b",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSM\\6º Ano\\CMSM - 6ANO - 2009_2010 (mat).pdf",
+      "family": "CMSM",
+      "year": 2009,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "indexMethod": "native",
+      "pageCount": 9,
+      "rawQuestionCount": 18,
+      "rawAnomalyCount": 2,
+      "anomalyTypeCounts": {
+        "missing_question_number": 2
+      },
+      "relativePath": "CMSM\\6º Ano\\CMSM - 6ANO - 2009_2010 (mat).pdf",
+      "reviewCopyPath": "C:\\Users\\trans\\Documents\\SimpleQuest\\outputs\\audit\\holdout\\v5-tier-c-review\\copies\\12__v5-doc-c6d6158a42ac379f.pdf",
+      "reviewCopySha256": "c6d6158a42ac379fcd8ce8f39cc93b402da5441ad551c671d47d1c976991488b",
+      "sourcePdfSha256": "c6d6158a42ac379fcd8ce8f39cc93b402da5441ad551c671d47d1c976991488b",
+      "byteIdenticalToSource": true,
+      "status": "adjudicated",
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "pagesReviewedCount": 9,
+      "allPagesReviewed": true,
+      "questions": [
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q1",
+          "questionNumber": 1,
+          "pageStart": 1,
+          "pageEnd": 1,
+          "printedQuestionNumber": 1,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q2",
+          "questionNumber": 2,
+          "pageStart": 1,
+          "pageEnd": 1,
+          "printedQuestionNumber": 2,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q3",
+          "questionNumber": 3,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "printedQuestionNumber": 3,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q4",
+          "questionNumber": 4,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "printedQuestionNumber": 4,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q5",
+          "questionNumber": 5,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "printedQuestionNumber": 5,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q6",
+          "questionNumber": 6,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "printedQuestionNumber": 6,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q7",
+          "questionNumber": 7,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 7,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q8",
+          "questionNumber": 8,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 8,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q9",
+          "questionNumber": 9,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 9,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q10",
+          "questionNumber": 10,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 10,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q11",
+          "questionNumber": 11,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 11,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q12",
+          "questionNumber": 12,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 12,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q13",
+          "questionNumber": 13,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 13,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q14",
+          "questionNumber": 14,
+          "pageStart": 7,
+          "pageEnd": 7,
+          "printedQuestionNumber": 14,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q15",
+          "questionNumber": 15,
+          "pageStart": 7,
+          "pageEnd": 7,
+          "printedQuestionNumber": 15,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q16",
+          "questionNumber": 16,
+          "pageStart": 8,
+          "pageEnd": 8,
+          "printedQuestionNumber": 16,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q17",
+          "questionNumber": 17,
+          "pageStart": 8,
+          "pageEnd": 8,
+          "printedQuestionNumber": 17,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q18",
+          "questionNumber": 18,
+          "pageStart": 8,
+          "pageEnd": 8,
+          "printedQuestionNumber": 18,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q19",
+          "questionNumber": 19,
+          "pageStart": 9,
+          "pageEnd": 9,
+          "printedQuestionNumber": 19,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-c6d6158a42ac379f:q20",
+          "questionNumber": 20,
+          "pageStart": 9,
+          "pageEnd": 9,
+          "printedQuestionNumber": 20,
+          "section": "mathematics",
+          "sequenceRun": 1
+        }
+      ],
+      "pageEvidence": [
+        {
+          "physicalPage": 1,
+          "reviewed": true,
+          "canonicalStarts": [
+            1,
+            2
+          ],
+          "neutralEvidence": "Mathematicssection/own01/02closed1; parentQUESTAOUNICAheadingnotextraidentity"
+        },
+        {
+          "physicalPage": 2,
+          "reviewed": true,
+          "canonicalStarts": [
+            3,
+            4
+          ],
+          "neutralEvidence": "own03/04closed2; missingraw3directownheader; noquestioncontinuation"
+        },
+        {
+          "physicalPage": 3,
+          "reviewed": true,
+          "canonicalStarts": [
+            5,
+            6
+          ],
+          "neutralEvidence": "own05/06closed3"
+        },
+        {
+          "physicalPage": 4,
+          "reviewed": true,
+          "canonicalStarts": [
+            7,
+            8,
+            9
+          ],
+          "neutralEvidence": "own07/08/09closed4"
+        },
+        {
+          "physicalPage": 5,
+          "reviewed": true,
+          "canonicalStarts": [
+            10,
+            11
+          ],
+          "neutralEvidence": "Questões 10 e 11 com cabeçalhos próprios e encerradas na página física 5. Entre elas há introdução compartilhada explicitamente independente para 11–13, que não prolonga a questão 10."
+        },
+        {
+          "physicalPage": 6,
+          "reviewed": true,
+          "canonicalStarts": [
+            12,
+            13
+          ],
+          "neutralEvidence": "Questões 12 e 13 com cabeçalhos próprios, corpos independentes e encerramento na página física 6; a identidade 12 ausente do raw foi comprovada visualmente, não inferida pela lacuna."
+        },
+        {
+          "physicalPage": 7,
+          "reviewed": true,
+          "canonicalStarts": [
+            14,
+            15
+          ],
+          "neutralEvidence": "Questões 14 e 15 com cabeçalhos próprios e corpos independentes, inteiramente encerradas na página física 7."
+        },
+        {
+          "physicalPage": 8,
+          "reviewed": true,
+          "canonicalStarts": [
+            16,
+            17,
+            18
+          ],
+          "neutralEvidence": "Questões 16, 17 e 18 com cabeçalhos próprios e corpos independentes, inteiramente encerradas na página física 8."
+        },
+        {
+          "physicalPage": 9,
+          "reviewed": true,
+          "canonicalStarts": [
+            19,
+            20
+          ],
+          "neutralEvidence": "Questões 19 e 20 com cabeçalhos próprios e corpos independentes, encerradas na página física 9, seguida de FIM DE PROVA; nenhuma continuidade posterior."
+        }
+      ],
+      "pendingBoundaryQuestions": [],
+      "renderMethod": "Poppler pdftoppm 120 DPI PNG visual inspection only; no new OCR",
+      "renderDirectory": "outputs/audit/holdout/v5-tier-c-review/renders-batch-02/05",
+      "renderWarnings": [
+        "Syntax Error: No display font for 'Symbol'",
+        "Syntax Error: No display font for 'ArialUnicode'"
+      ],
+      "neutralNotes": [
+        "As 20 questões foram comprovadas por cabeçalhos e corpos próprios; cada questão termina na mesma página em que começa. Questões 3 na página física 2 e 12 na página física 6 não constam do raw. O cabeçalho pai QUESTÃO ÚNICA não cria identidade adicional. A introdução compartilhada na página 5 não prolonga a questão 10. Warnings recuperáveis de fontes registrados sem impedir a identificação dos cabeçalhos e boundaries, inclusive da questão 3. Sem avaliação de semântica de resposta; causa específica dos warnings não determinada e nenhuma classificação automática como corrupção."
+      ],
+      "nextPhysicalPage": null,
+      "visibleSections": [
+        {
+          "section": "mathematics",
+          "physicalPages": [
+            1,
+            9
+          ],
+          "printedNumbers": [
+            1,
+            20
+          ]
+        }
+      ],
+      "canonicalQuestionCount": 20,
+      "adjudicatedQuestionCount": 20,
+      "delta": 2,
+      "observedNumberingPattern": "own numbered bodies in physical documentary order; canonical ordinal preserves printed number unless explicit documented restart",
+      "numberingRestarts": 0,
+      "numberingNormalizations": 0,
+      "sectionNumberingPolicy": "Printed numbers and section transitions retained; shared introductions do not extend closed question bodies.",
+      "canonicalizationPolicy": "documentId:qN; one canonical object per directly observed independent numbered body; no gap-based fabrication",
+      "parallelSections": [],
+      "humanExclusions": [],
+      "exclusions": [],
+      "sourceIncomplete": false,
+      "originalExaminationCompletenessCertified": false,
+      "unresolvedIssues": [],
+      "minimumThreeCertified": true,
+      "fabricatedQuestions": 0,
+      "rawAnomaliesStructurallyReviewed": true,
+      "multiPageQuestions": [],
+      "corrections": [
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-c6d6158a42ac379f:q2",
+            "questionNumber": 2,
+            "pageStart": 1,
+            "pageEnd": 2
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-c6d6158a42ac379f:q2",
+            "questionNumber": 2,
+            "pageStart": 1,
+            "pageEnd": 1,
+            "printedQuestionNumber": 2,
+            "section": "mathematics",
+            "sequenceRun": 1
+          },
+          "reason": "physical1: Mathematicssection/own01/02closed1; parentQUESTAOUNICAheadingnotextraidentity; physical2: own03/04closed2; missingraw3directownheader; noquestioncontinuation"
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-c6d6158a42ac379f:q11",
+            "questionNumber": 11,
+            "pageStart": 5,
+            "pageEnd": 6
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-c6d6158a42ac379f:q11",
+            "questionNumber": 11,
+            "pageStart": 5,
+            "pageEnd": 5,
+            "printedQuestionNumber": 11,
+            "section": "mathematics",
+            "sequenceRun": 1
+          },
+          "reason": "physical5: Questões 10 e 11 com cabeçalhos próprios e encerradas na página física 5. Entre elas há introdução compartilhada explicitamente independente para 11–13, que não prolonga a questão 10.; physical6: Questões 12 e 13 com cabeçalhos próprios, corpos independentes e encerramento na página física 6; a identidade 12 ausente do raw foi comprovada visualmente, não inferida pela lacuna."
+        }
+      ],
+      "addedCanonicalQuestions": [
+        {
+          "question": {
+            "questionId": "v5-doc-c6d6158a42ac379f:q3",
+            "questionNumber": 3,
+            "pageStart": 2,
+            "pageEnd": 2,
+            "printedQuestionNumber": 3,
+            "section": "mathematics",
+            "sequenceRun": 1
+          },
+          "evidencePages": [
+            2
+          ],
+          "reason": "physical2: own03/04closed2; missingraw3directownheader; noquestioncontinuation"
+        },
+        {
+          "question": {
+            "questionId": "v5-doc-c6d6158a42ac379f:q12",
+            "questionNumber": 12,
+            "pageStart": 6,
+            "pageEnd": 6,
+            "printedQuestionNumber": 12,
+            "section": "mathematics",
+            "sequenceRun": 1
+          },
+          "evidencePages": [
+            6
+          ],
+          "reason": "physical6: Questões 12 e 13 com cabeçalhos próprios, corpos independentes e encerramento na página física 6; a identidade 12 ausente do raw foi comprovada visualmente, não inferida pela lacuna."
+        }
+      ],
+      "removedRawCaptures": [],
+      "identityBoundaryCorrections": 2,
+      "rawAnomalyResolutions": [
+        {
+          "eventIndex": 1,
+          "rawAnomaly": {
+            "documentId": "v5-doc-c6d6158a42ac379f",
+            "type": "missing_question_number",
+            "number": 3
+          },
+          "status": "resolved_structurally",
+          "neutralResolution": "direct own question header/body proved; automatic raw diagnostic is not a source defect or Auditor metric",
+          "canonicalQuestionIds": [
+            "v5-doc-c6d6158a42ac379f:q3"
+          ],
+          "evidencePages": [
+            2
+          ],
+          "neutralEvidence": "own03/04closed2; missingraw3directownheader; noquestioncontinuation"
+        },
+        {
+          "eventIndex": 2,
+          "rawAnomaly": {
+            "documentId": "v5-doc-c6d6158a42ac379f",
+            "type": "missing_question_number",
+            "number": 12
+          },
+          "status": "resolved_structurally",
+          "neutralResolution": "direct own question header/body proved; automatic raw diagnostic is not a source defect or Auditor metric",
+          "canonicalQuestionIds": [
+            "v5-doc-c6d6158a42ac379f:q12"
+          ],
+          "evidencePages": [
+            6
+          ],
+          "neutralEvidence": "Questões 12 e 13 com cabeçalhos próprios, corpos independentes e encerramento na página física 6; a identidade 12 ausente do raw foi comprovada visualmente, não inferida pela lacuna."
+        }
+      ]
+    },
+    {
+      "tier": "C",
+      "tierOrder": 13,
+      "globalOrder": 39,
+      "manifestOrder": 4,
+      "reviewBatch": "02",
+      "batchOrder": 6,
+      "documentId": "v5-doc-78d5d0d89420b8d3",
+      "contentFingerprint": "78d5d0d89420b8d3936b823099c7ad00044b008f5cab15b0ec19e28cd88ddf6e",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\COLÉGIO SÓLIDO\\8º Ano\\SÓLIDO - 8ANO - 2018_2019 - PROVA DE BOLSAS.pdf",
+      "family": "COLÉGIO SÓLIDO",
+      "year": 2018,
+      "series": "8º Ano",
+      "sourceType": "text_native",
+      "indexMethod": "native",
+      "pageCount": 15,
+      "rawQuestionCount": 39,
+      "rawAnomalyCount": 1,
+      "anomalyTypeCounts": {
+        "missing_question_number": 1
+      },
+      "relativePath": "COLÉGIO SÓLIDO\\8º Ano\\SÓLIDO - 8ANO - 2018_2019 - PROVA DE BOLSAS.pdf",
+      "reviewCopyPath": "C:\\Users\\trans\\Documents\\SimpleQuest\\outputs\\audit\\holdout\\v5-tier-c-review\\copies\\13__v5-doc-78d5d0d89420b8d3.pdf",
+      "reviewCopySha256": "78d5d0d89420b8d3936b823099c7ad00044b008f5cab15b0ec19e28cd88ddf6e",
+      "sourcePdfSha256": "78d5d0d89420b8d3936b823099c7ad00044b008f5cab15b0ec19e28cd88ddf6e",
+      "byteIdenticalToSource": true,
+      "status": "adjudicated",
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "pagesReviewedCount": 15,
+      "allPagesReviewed": true,
+      "questions": [
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q1",
+          "questionNumber": 1,
+          "pageStart": 1,
+          "pageEnd": 1,
+          "printedQuestionNumber": 1,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q2",
+          "questionNumber": 2,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "printedQuestionNumber": 2,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q3",
+          "questionNumber": 3,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "printedQuestionNumber": 3,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q4",
+          "questionNumber": 4,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "printedQuestionNumber": 4,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q5",
+          "questionNumber": 5,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "printedQuestionNumber": 5,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q6",
+          "questionNumber": 6,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "printedQuestionNumber": 6,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q7",
+          "questionNumber": 7,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "printedQuestionNumber": 7,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q8",
+          "questionNumber": 8,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 8,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q9",
+          "questionNumber": 9,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 9,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q10",
+          "questionNumber": 10,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 10,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q11",
+          "questionNumber": 11,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 11,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q12",
+          "questionNumber": 12,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 12,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q13",
+          "questionNumber": 13,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 13,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q14",
+          "questionNumber": 14,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 14,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q15",
+          "questionNumber": 15,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 15,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q16",
+          "questionNumber": 16,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 16,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q17",
+          "questionNumber": 17,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 17,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q18",
+          "questionNumber": 18,
+          "pageStart": 7,
+          "pageEnd": 7,
+          "printedQuestionNumber": 18,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q19",
+          "questionNumber": 19,
+          "pageStart": 7,
+          "pageEnd": 7,
+          "printedQuestionNumber": 19,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q20",
+          "questionNumber": 20,
+          "pageStart": 8,
+          "pageEnd": 8,
+          "printedQuestionNumber": 20,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q21",
+          "questionNumber": 21,
+          "pageStart": 9,
+          "pageEnd": 9,
+          "printedQuestionNumber": 21,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q22",
+          "questionNumber": 22,
+          "pageStart": 9,
+          "pageEnd": 9,
+          "printedQuestionNumber": 22,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q23",
+          "questionNumber": 23,
+          "pageStart": 9,
+          "pageEnd": 9,
+          "printedQuestionNumber": 23,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q24",
+          "questionNumber": 24,
+          "pageStart": 10,
+          "pageEnd": 10,
+          "printedQuestionNumber": 24,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q25",
+          "questionNumber": 25,
+          "pageStart": 10,
+          "pageEnd": 10,
+          "printedQuestionNumber": 25,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q26",
+          "questionNumber": 26,
+          "pageStart": 11,
+          "pageEnd": 11,
+          "printedQuestionNumber": 26,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q27",
+          "questionNumber": 27,
+          "pageStart": 11,
+          "pageEnd": 11,
+          "printedQuestionNumber": 27,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q28",
+          "questionNumber": 28,
+          "pageStart": 11,
+          "pageEnd": 11,
+          "printedQuestionNumber": 28,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q29",
+          "questionNumber": 29,
+          "pageStart": 12,
+          "pageEnd": 12,
+          "printedQuestionNumber": 29,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q30",
+          "questionNumber": 30,
+          "pageStart": 12,
+          "pageEnd": 12,
+          "printedQuestionNumber": 30,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q31",
+          "questionNumber": 31,
+          "pageStart": 12,
+          "pageEnd": 12,
+          "printedQuestionNumber": 31,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q32",
+          "questionNumber": 32,
+          "pageStart": 13,
+          "pageEnd": 13,
+          "printedQuestionNumber": 32,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q33",
+          "questionNumber": 33,
+          "pageStart": 13,
+          "pageEnd": 13,
+          "printedQuestionNumber": 33,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q34",
+          "questionNumber": 34,
+          "pageStart": 13,
+          "pageEnd": 13,
+          "printedQuestionNumber": 34,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q35",
+          "questionNumber": 35,
+          "pageStart": 13,
+          "pageEnd": 13,
+          "printedQuestionNumber": 35,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q36",
+          "questionNumber": 36,
+          "pageStart": 14,
+          "pageEnd": 14,
+          "printedQuestionNumber": 36,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q37",
+          "questionNumber": 37,
+          "pageStart": 14,
+          "pageEnd": 14,
+          "printedQuestionNumber": 37,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q38",
+          "questionNumber": 38,
+          "pageStart": 14,
+          "pageEnd": 14,
+          "printedQuestionNumber": 38,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q39",
+          "questionNumber": 39,
+          "pageStart": 14,
+          "pageEnd": 14,
+          "printedQuestionNumber": 39,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-78d5d0d89420b8d3:q40",
+          "questionNumber": 40,
+          "pageStart": 15,
+          "pageEnd": 15,
+          "printedQuestionNumber": 40,
+          "section": "mathematics",
+          "sequenceRun": 1
+        }
+      ],
+      "pageEvidence": [
+        {
+          "physicalPage": 1,
+          "reviewed": true,
+          "canonicalStarts": [
+            1
+          ],
+          "neutralEvidence": "Cabeçalho LÍNGUA PORTUGUESA declara questões 01–20; texto compartilhado I seguido de cabeçalho próprio QUESTÃO 01 e corpo encerrado na página física 1. A declaração de total não substitui prova individual."
+        },
+        {
+          "physicalPage": 2,
+          "reviewed": true,
+          "canonicalStarts": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "neutralEvidence": "Cabeçalhos próprios QUESTÃO 02, 03, 04 e 05; cada corpo encerrado nesta página. Texto II separado depois da questão 5 não a prolonga."
+        },
+        {
+          "physicalPage": 3,
+          "reviewed": true,
+          "canonicalStarts": [
+            6,
+            7
+          ],
+          "neutralEvidence": "Cabeçalhos próprios QUESTÃO 06 e 07 com corpos encerrados nesta página. Introdução compartilhada para 08–10 depois da 7 é distinta, sem continuidade de 7."
+        },
+        {
+          "physicalPage": 4,
+          "reviewed": true,
+          "canonicalStarts": [
+            8,
+            9,
+            10
+          ],
+          "neutralEvidence": "Cabeçalhos próprios QUESTÃO 08, 09 e 10 com corpos encerrados nesta página. Novo texto compartilhado para 11–13 após 10 não prolonga seu boundary."
+        },
+        {
+          "physicalPage": 5,
+          "reviewed": true,
+          "canonicalStarts": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "neutralEvidence": "Continuação e encerramento do texto compartilhado para 11–13, seguido dos cabeçalhos próprios QUESTÃO 11, 12 e 13. Introdução específica separada para 14 seguida de seu cabeçalho próprio. Todos os quatro corpos encerrados na página física 5; 14 não continua na página 6."
+        },
+        {
+          "physicalPage": 6,
+          "reviewed": true,
+          "canonicalStarts": [
+            15,
+            16,
+            17
+          ],
+          "neutralEvidence": "Introdução compartilhada explicitamente identificada antes dos cabeçalhos próprios QUESTÃO 15, 16 e 17; os três corpos encerram nesta página. Novo texto compartilhado para 18–19 começa depois de 17 e não a prolonga."
+        },
+        {
+          "physicalPage": 7,
+          "reviewed": true,
+          "canonicalStarts": [
+            18,
+            19
+          ],
+          "neutralEvidence": "Continuação do texto compartilhado iniciado na 6, seguida dos cabeçalhos próprios QUESTÃO 18 e 19, ambos encerrados na 7. Introdução separada para 20 depois de 19 não a prolonga."
+        },
+        {
+          "physicalPage": 8,
+          "reviewed": true,
+          "canonicalStarts": [
+            20
+          ],
+          "neutralEvidence": "Cabeçalho próprio QUESTÃO 20 e corpo inteiro encerrado na página física 8; área posterior sem nova questão nesta página, não há continuação do corpo."
+        },
+        {
+          "physicalPage": 9,
+          "reviewed": true,
+          "canonicalStarts": [
+            21,
+            22,
+            23
+          ],
+          "neutralEvidence": "Novo cabeçalho MATEMÁTICA declara 21–40 sem reinício; introdução compartilhada e cabeçalhos próprios QUESTÃO 21, 22 e 23, com corpos independentes encerrados nesta página. Referências internas a 21 não são novas identidades."
+        },
+        {
+          "physicalPage": 10,
+          "reviewed": true,
+          "canonicalStarts": [
+            24,
+            25
+          ],
+          "neutralEvidence": "Cabeçalhos próprios QUESTÃO 24 e 25; figuras/tópicos subordinados pertencem aos respectivos corpos. Ambos encerrados na página física 10."
+        },
+        {
+          "physicalPage": 11,
+          "reviewed": true,
+          "canonicalStarts": [
+            26,
+            27,
+            28
+          ],
+          "neutralEvidence": "Cabeçalhos próprios QUESTÃO 26, 27 e 28 e corpos encerrados nesta página; referência de 28 a 27 não implica novo cabeçalho nem prolonga 27."
+        },
+        {
+          "physicalPage": 12,
+          "reviewed": true,
+          "canonicalStarts": [
+            29,
+            30,
+            31
+          ],
+          "neutralEvidence": "Cabeçalhos próprios QUESTÃO 29, 30 e 31; texto compartilhado para 30–35 aparece entre 29 e 30 e não prolonga 29. Os três corpos encerram nesta página."
+        },
+        {
+          "physicalPage": 13,
+          "reviewed": true,
+          "canonicalStarts": [
+            32,
+            33,
+            34,
+            35
+          ],
+          "neutralEvidence": "Cabeçalhos próprios QUESTÃO 32, 33, 34 e 35, todos com corpos encerrados na página física 13. A questão 35, ausente no raw, foi comprovada por cabeçalho próprio e corpo independente; não foi acrescentada apenas para preencher a sequência."
+        },
+        {
+          "physicalPage": 14,
+          "reviewed": true,
+          "canonicalStarts": [
+            36,
+            37,
+            38,
+            39
+          ],
+          "neutralEvidence": "Cabeçalhos próprios QUESTÃO 36, 37, 38 e 39; introdução compartilhada para 38–40 é separada após a 37. Os quatro corpos encerrados nesta página. Números internos de tabela/figura não são cabeçalhos de questões."
+        },
+        {
+          "physicalPage": 15,
+          "reviewed": true,
+          "canonicalStarts": [
+            40
+          ],
+          "neutralEvidence": "Cabeçalho próprio QUESTÃO 40 e corpo encerrado na página física 15. Números internos da figura são incidentais; área posterior sem novo cabeçalho nem continuidade. Última página disponível examinada integralmente."
+        }
+      ],
+      "pendingBoundaryQuestions": [],
+      "renderMethod": "Poppler pdftoppm 120 DPI PNG visual inspection only; no new OCR",
+      "renderDirectory": "outputs/audit/holdout/v5-tier-c-review/renders-batch-02/06",
+      "renderWarnings": [
+        "Syntax Error: No display font for 'Symbol'",
+        "Syntax Error: No display font for 'ArialUnicode'"
+      ],
+      "neutralNotes": [
+        "40 cabeçalhos próprios comprovados em ordem física, sem reinício da numeração na transição Português 1–20 para Matemática 21–40. Todos os corpos encerram na mesma página em que começam. Textos compartilhados posteriores não prolongam questões já encerradas: q10=4–4, q14=5–5, q17=6–6, q20=8–8. q35=13–13 adicionada por prova direta de cabeçalho/corpo próprios. Warnings recuperáveis de fontes Symbol/ArialUnicode não impedem os cabeçalhos/boundaries; causa não determinada, sem alegação de corrupção ou certificação independente da completude do exame original."
+      ],
+      "nextPhysicalPage": null,
+      "visibleSections": [
+        {
+          "section": "portuguese",
+          "physicalPages": [
+            1,
+            8
+          ],
+          "printedNumbers": [
+            1,
+            20
+          ]
+        },
+        {
+          "section": "mathematics",
+          "physicalPages": [
+            9,
+            15
+          ],
+          "printedNumbers": [
+            21,
+            40
+          ]
+        }
+      ],
+      "physicalRepetitions": [],
+      "canonicalQuestionCount": 40,
+      "adjudicatedQuestionCount": 40,
+      "delta": 1,
+      "observedNumberingPattern": "own numbered bodies in physical documentary order; canonical ordinal preserves printed number unless explicit documented restart",
+      "numberingRestarts": 0,
+      "numberingNormalizations": 0,
+      "sectionNumberingPolicy": "Printed numbers and section transitions retained; shared introductions do not extend closed question bodies.",
+      "canonicalizationPolicy": "documentId:qN; one canonical object per directly observed independent numbered body; no gap-based fabrication",
+      "parallelSections": [],
+      "humanExclusions": [],
+      "exclusions": [],
+      "sourceIncomplete": false,
+      "originalExaminationCompletenessCertified": false,
+      "unresolvedIssues": [],
+      "minimumThreeCertified": true,
+      "fabricatedQuestions": 0,
+      "rawAnomaliesStructurallyReviewed": true,
+      "multiPageQuestions": [],
+      "corrections": [
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-78d5d0d89420b8d3:q10",
+            "questionNumber": 10,
+            "pageStart": 4,
+            "pageEnd": 5
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-78d5d0d89420b8d3:q10",
+            "questionNumber": 10,
+            "pageStart": 4,
+            "pageEnd": 4,
+            "printedQuestionNumber": 10,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical4: Cabeçalhos próprios QUESTÃO 08, 09 e 10 com corpos encerrados nesta página. Novo texto compartilhado para 11–13 após 10 não prolonga seu boundary.; physical5: Continuação e encerramento do texto compartilhado para 11–13, seguido dos cabeçalhos próprios QUESTÃO 11, 12 e 13. Introdução específica separada para 14 seguida de seu cabeçalho próprio. Todos os quatro corpos encerrados na página física 5; 14 não continua na página 6."
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-78d5d0d89420b8d3:q14",
+            "questionNumber": 14,
+            "pageStart": 5,
+            "pageEnd": 6
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-78d5d0d89420b8d3:q14",
+            "questionNumber": 14,
+            "pageStart": 5,
+            "pageEnd": 5,
+            "printedQuestionNumber": 14,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical5: Continuação e encerramento do texto compartilhado para 11–13, seguido dos cabeçalhos próprios QUESTÃO 11, 12 e 13. Introdução específica separada para 14 seguida de seu cabeçalho próprio. Todos os quatro corpos encerrados na página física 5; 14 não continua na página 6.; physical6: Introdução compartilhada explicitamente identificada antes dos cabeçalhos próprios QUESTÃO 15, 16 e 17; os três corpos encerram nesta página. Novo texto compartilhado para 18–19 começa depois de 17 e não a prolonga."
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-78d5d0d89420b8d3:q17",
+            "questionNumber": 17,
+            "pageStart": 6,
+            "pageEnd": 7
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-78d5d0d89420b8d3:q17",
+            "questionNumber": 17,
+            "pageStart": 6,
+            "pageEnd": 6,
+            "printedQuestionNumber": 17,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical6: Introdução compartilhada explicitamente identificada antes dos cabeçalhos próprios QUESTÃO 15, 16 e 17; os três corpos encerram nesta página. Novo texto compartilhado para 18–19 começa depois de 17 e não a prolonga.; physical7: Continuação do texto compartilhado iniciado na 6, seguida dos cabeçalhos próprios QUESTÃO 18 e 19, ambos encerrados na 7. Introdução separada para 20 depois de 19 não a prolonga."
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-78d5d0d89420b8d3:q20",
+            "questionNumber": 20,
+            "pageStart": 8,
+            "pageEnd": 9
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-78d5d0d89420b8d3:q20",
+            "questionNumber": 20,
+            "pageStart": 8,
+            "pageEnd": 8,
+            "printedQuestionNumber": 20,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical8: Cabeçalho próprio QUESTÃO 20 e corpo inteiro encerrado na página física 8; área posterior sem nova questão nesta página, não há continuação do corpo.; physical9: Novo cabeçalho MATEMÁTICA declara 21–40 sem reinício; introdução compartilhada e cabeçalhos próprios QUESTÃO 21, 22 e 23, com corpos independentes encerrados nesta página. Referências internas a 21 não são novas identidades."
+        }
+      ],
+      "addedCanonicalQuestions": [
+        {
+          "question": {
+            "questionId": "v5-doc-78d5d0d89420b8d3:q35",
+            "questionNumber": 35,
+            "pageStart": 13,
+            "pageEnd": 13,
+            "printedQuestionNumber": 35,
+            "section": "mathematics",
+            "sequenceRun": 1
+          },
+          "evidencePages": [
+            13
+          ],
+          "reason": "physical13: Cabeçalhos próprios QUESTÃO 32, 33, 34 e 35, todos com corpos encerrados na página física 13. A questão 35, ausente no raw, foi comprovada por cabeçalho próprio e corpo independente; não foi acrescentada apenas para preencher a sequência."
+        }
+      ],
+      "removedRawCaptures": [],
+      "identityBoundaryCorrections": 4,
+      "rawAnomalyResolutions": [
+        {
+          "eventIndex": 1,
+          "rawAnomaly": {
+            "documentId": "v5-doc-78d5d0d89420b8d3",
+            "type": "missing_question_number",
+            "number": 35
+          },
+          "status": "resolved_structurally",
+          "neutralResolution": "direct own question header/body proved; automatic raw diagnostic is not a source defect or Auditor metric",
+          "canonicalQuestionIds": [
+            "v5-doc-78d5d0d89420b8d3:q35"
+          ],
+          "evidencePages": [
+            13
+          ],
+          "neutralEvidence": "Cabeçalhos próprios QUESTÃO 32, 33, 34 e 35, todos com corpos encerrados na página física 13. A questão 35, ausente no raw, foi comprovada por cabeçalho próprio e corpo independente; não foi acrescentada apenas para preencher a sequência."
+        }
+      ]
+    },
+    {
+      "tier": "C",
+      "tierOrder": 14,
+      "globalOrder": 40,
+      "manifestOrder": 7,
+      "reviewBatch": "02",
+      "batchOrder": 7,
+      "documentId": "v5-doc-9e5595dac9eb75e3",
+      "contentFingerprint": "9e5595dac9eb75e3dffb955e2a39f1268c330fc4ecabe8250f3c89e17604eb32",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\COLÉGIO SÓLIDO\\9º Ano\\SÓLIDO - 9ANO - 2016_2017 - PROVA DE BOLSAS.pdf",
+      "family": "COLÉGIO SÓLIDO",
+      "year": 2016,
+      "series": "9º Ano",
+      "sourceType": "text_native",
+      "indexMethod": "native",
+      "pageCount": 17,
+      "rawQuestionCount": 40,
+      "rawAnomalyCount": 1,
+      "anomalyTypeCounts": {
+        "duplicate_question_number": 1
+      },
+      "relativePath": "COLÉGIO SÓLIDO\\9º Ano\\SÓLIDO - 9ANO - 2016_2017 - PROVA DE BOLSAS.pdf",
+      "reviewCopyPath": "C:\\Users\\trans\\Documents\\SimpleQuest\\outputs\\audit\\holdout\\v5-tier-c-review\\copies\\14__v5-doc-9e5595dac9eb75e3.pdf",
+      "reviewCopySha256": "9e5595dac9eb75e3dffb955e2a39f1268c330fc4ecabe8250f3c89e17604eb32",
+      "sourcePdfSha256": "9e5595dac9eb75e3dffb955e2a39f1268c330fc4ecabe8250f3c89e17604eb32",
+      "byteIdenticalToSource": true,
+      "status": "adjudicated",
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "pagesReviewedCount": 17,
+      "allPagesReviewed": true,
+      "questions": [
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q1",
+          "questionNumber": 1,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "printedQuestionNumber": 1,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q2",
+          "questionNumber": 2,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "printedQuestionNumber": 2,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q3",
+          "questionNumber": 3,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "printedQuestionNumber": 3,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q4",
+          "questionNumber": 4,
+          "pageStart": 2,
+          "pageEnd": 2,
+          "printedQuestionNumber": 4,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q5",
+          "questionNumber": 5,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "printedQuestionNumber": 5,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q6",
+          "questionNumber": 6,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "printedQuestionNumber": 6,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q7",
+          "questionNumber": 7,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "printedQuestionNumber": 7,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q8",
+          "questionNumber": 8,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "printedQuestionNumber": 8,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q9",
+          "questionNumber": 9,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "printedQuestionNumber": 9,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q10",
+          "questionNumber": 10,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "printedQuestionNumber": 10,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q11",
+          "questionNumber": 11,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 11,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q12",
+          "questionNumber": 12,
+          "pageStart": 4,
+          "pageEnd": 4,
+          "printedQuestionNumber": 12,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q13",
+          "questionNumber": 13,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 13,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q14",
+          "questionNumber": 14,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 14,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q15",
+          "questionNumber": 15,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "printedQuestionNumber": 15,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q16",
+          "questionNumber": 16,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 16,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q17",
+          "questionNumber": 17,
+          "pageStart": 6,
+          "pageEnd": 6,
+          "printedQuestionNumber": 17,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q18",
+          "questionNumber": 18,
+          "pageStart": 7,
+          "pageEnd": 7,
+          "printedQuestionNumber": 18,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q19",
+          "questionNumber": 19,
+          "pageStart": 8,
+          "pageEnd": 8,
+          "printedQuestionNumber": 19,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q20",
+          "questionNumber": 20,
+          "pageStart": 8,
+          "pageEnd": 8,
+          "printedQuestionNumber": 20,
+          "section": "portuguese",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q21",
+          "questionNumber": 21,
+          "pageStart": 9,
+          "pageEnd": 9,
+          "printedQuestionNumber": 21,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q22",
+          "questionNumber": 22,
+          "pageStart": 10,
+          "pageEnd": 10,
+          "printedQuestionNumber": 22,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q23",
+          "questionNumber": 23,
+          "pageStart": 10,
+          "pageEnd": 10,
+          "printedQuestionNumber": 23,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q24",
+          "questionNumber": 24,
+          "pageStart": 10,
+          "pageEnd": 11,
+          "printedQuestionNumber": 24,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q25",
+          "questionNumber": 25,
+          "pageStart": 11,
+          "pageEnd": 11,
+          "printedQuestionNumber": 25,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q26",
+          "questionNumber": 26,
+          "pageStart": 11,
+          "pageEnd": 11,
+          "printedQuestionNumber": 26,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q27",
+          "questionNumber": 27,
+          "pageStart": 12,
+          "pageEnd": 12,
+          "printedQuestionNumber": 27,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q28",
+          "questionNumber": 28,
+          "pageStart": 12,
+          "pageEnd": 12,
+          "printedQuestionNumber": 28,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q29",
+          "questionNumber": 29,
+          "pageStart": 12,
+          "pageEnd": 12,
+          "printedQuestionNumber": 29,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q30",
+          "questionNumber": 30,
+          "pageStart": 13,
+          "pageEnd": 13,
+          "printedQuestionNumber": 30,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q31",
+          "questionNumber": 31,
+          "pageStart": 13,
+          "pageEnd": 13,
+          "printedQuestionNumber": 31,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q32",
+          "questionNumber": 32,
+          "pageStart": 14,
+          "pageEnd": 14,
+          "printedQuestionNumber": 32,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q33",
+          "questionNumber": 33,
+          "pageStart": 14,
+          "pageEnd": 14,
+          "printedQuestionNumber": 33,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q34",
+          "questionNumber": 34,
+          "pageStart": 15,
+          "pageEnd": 15,
+          "printedQuestionNumber": 34,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q35",
+          "questionNumber": 35,
+          "pageStart": 15,
+          "pageEnd": 15,
+          "printedQuestionNumber": 35,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q36",
+          "questionNumber": 36,
+          "pageStart": 16,
+          "pageEnd": 16,
+          "printedQuestionNumber": 36,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q37",
+          "questionNumber": 37,
+          "pageStart": 16,
+          "pageEnd": 16,
+          "printedQuestionNumber": 37,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q38",
+          "questionNumber": 38,
+          "pageStart": 16,
+          "pageEnd": 16,
+          "printedQuestionNumber": 38,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q39",
+          "questionNumber": 39,
+          "pageStart": 17,
+          "pageEnd": 17,
+          "printedQuestionNumber": 39,
+          "section": "mathematics",
+          "sequenceRun": 1
+        },
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q40",
+          "questionNumber": 40,
+          "pageStart": 17,
+          "pageEnd": 17,
+          "printedQuestionNumber": 40,
+          "section": "mathematics",
+          "sequenceRun": 1
+        }
+      ],
+      "pageEvidence": [
+        {
+          "physicalPage": 1,
+          "reviewed": true,
+          "canonicalStarts": [],
+          "neutralEvidence": "Cabeçalho LÍNGUA PORTUGUESA com declaração 01–20 e TEXTO I compartilhado; nenhum cabeçalho próprio de questão nesta página. Números do cabeçalho/rodapé/texto não criam identidades."
+        },
+        {
+          "physicalPage": 2,
+          "reviewed": true,
+          "canonicalStarts": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "neutralEvidence": "Glossário do texto compartilhado seguido dos cabeçalhos próprios QUESTÃO 01, 02, 03 e 04; corpos encerrados nesta página. TEXTO II separado após 4 não prolonga seu boundary."
+        },
+        {
+          "physicalPage": 3,
+          "reviewed": true,
+          "canonicalStarts": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "neutralEvidence": "Cabeçalhos próprios QUESTÃO 05, 06, 07, 08, 09 e 10; corpos encerrados nesta página. TEXTO III e TEXTO IV são introduções compartilhadas separadas, não continuidade das questões anteriores. Questões 09 e 10 têm cabeçalhos próprios à direita da figura do TEXTO IV, sem novas identidades inferidas de sua disposição."
+        },
+        {
+          "physicalPage": 4,
+          "reviewed": true,
+          "canonicalStarts": [
+            11,
+            12
+          ],
+          "neutralEvidence": "TEXTO V compartilhado independente, seguido de cabeçalhos próprios QUESTÃO 11 e 12; ambos os corpos encerrados na página física 4. O texto independente no início não prolonga q10 da página 3."
+        },
+        {
+          "physicalPage": 5,
+          "reviewed": true,
+          "canonicalStarts": [
+            13,
+            14,
+            15
+          ],
+          "neutralEvidence": "TEXTO VI e glossário compartilhados seguidos dos cabeçalhos próprios QUESTÃO 13, 14 e 15; os três corpos encerrados nesta página."
+        },
+        {
+          "physicalPage": 6,
+          "reviewed": true,
+          "canonicalStarts": [
+            16,
+            17
+          ],
+          "neutralEvidence": "TEXTO VII compartilhado independente seguido dos cabeçalhos próprios QUESTÃO 16 e 17; ambos os corpos encerrados na página física 6, sem continuidade de 17 na 7."
+        },
+        {
+          "physicalPage": 7,
+          "reviewed": true,
+          "canonicalStarts": [
+            18
+          ],
+          "neutralEvidence": "TEXTO VIII compartilhado, seguido de QUESTÃO 18 com cabeçalho próprio e corpo encerrado na 7. TEXTO X começa depois como material compartilhado distinto para questões posteriores; não prolonga 18 nem cria questão pela sua numeração romana."
+        },
+        {
+          "physicalPage": 8,
+          "reviewed": true,
+          "canonicalStarts": [
+            19,
+            20
+          ],
+          "neutralEvidence": "Continuação e encerramento do TEXTO X compartilhado, seguido de cabeçalhos próprios QUESTÃO 19 e 20; ambos os corpos encerrados na página física 8, sem continuação de 20 na 9."
+        },
+        {
+          "physicalPage": 9,
+          "reviewed": true,
+          "canonicalStarts": [
+            21
+          ],
+          "neutralEvidence": "Cabeçalho MATEMÁTICA declara questões 21–40 sem reinício. Introdução temática independente e cabeçalho próprio QUESTÃO 21; corpo encerrado na página física 9, sem continuação na 10."
+        },
+        {
+          "physicalPage": 10,
+          "reviewed": true,
+          "canonicalStarts": [
+            22,
+            23,
+            24
+          ],
+          "neutralEvidence": "Introdução compartilhada independente, seguida dos cabeçalhos próprios QUESTÃO 22 e 23, com corpos encerrados na 10. Nova introdução distinta antes de QUESTÃO 24, cujo cabeçalho, tabela e figura começam no final da 10; seu corpo continua na 11."
+        },
+        {
+          "physicalPage": 11,
+          "reviewed": true,
+          "canonicalStarts": [
+            25,
+            26
+          ],
+          "neutralEvidence": "Continuação vinculada de QUESTÃO 24 no topo da página física 11, encerrada antes de nova introdução temática. QUESTÃO 25 e 26 possuem cabeçalhos próprios e corpos encerrados na 11. Introdução compartilhada final é distinta e não prolonga q26."
+        },
+        {
+          "physicalPage": 12,
+          "reviewed": true,
+          "canonicalStarts": [
+            27,
+            28,
+            29
+          ],
+          "neutralEvidence": "Cabeçalhos próprios QUESTÃO 27, 28 e 29; introdução temática entre 27 e 28 e outra após 29 não prolongam os corpos anteriores. Os três corpos encerrados na página física 12."
+        },
+        {
+          "physicalPage": 13,
+          "reviewed": true,
+          "canonicalStarts": [
+            30,
+            31
+          ],
+          "neutralEvidence": "Cabeçalhos próprios QUESTÃO 30 e 31 e corpos encerrados na página física 13. Introdução temática entre os dois é independente; q31 não continua na 14."
+        },
+        {
+          "physicalPage": 14,
+          "reviewed": true,
+          "canonicalStarts": [
+            32,
+            33
+          ],
+          "neutralEvidence": "Introduções temáticas independentes e cabeçalhos próprios QUESTÃO 32 e 33; ambos os corpos encerrados na página física 14. Figuras e seus números internos não criam cabeçalhos adicionais."
+        },
+        {
+          "physicalPage": 15,
+          "reviewed": true,
+          "canonicalStarts": [
+            34,
+            35
+          ],
+          "neutralEvidence": "Cabeçalhos próprios QUESTÃO 34 e 35 com corpos encerrados nesta página. Texto compartilhado explicitamente anunciado para 36–38 após 35 não prolonga q35."
+        },
+        {
+          "physicalPage": 16,
+          "reviewed": true,
+          "canonicalStarts": [
+            36,
+            37,
+            38
+          ],
+          "neutralEvidence": "Cabeçalhos próprios QUESTÃO 36, 37 e 38, com corpos encerrados na página física 16. O número 17 aparece duas vezes como referência dentro do enunciado de q38, não como cabeçalho próprio, corpo independente ou repetição física de q17 da página 6. Evento raw duplicate_question_number=17/page16 não comprova segunda identidade. Introdução temática após q38 não a prolonga."
+        },
+        {
+          "physicalPage": 17,
+          "reviewed": true,
+          "canonicalStarts": [
+            39,
+            40
+          ],
+          "neutralEvidence": "Cabeçalhos próprios QUESTÃO 39 e 40 e corpos inteiramente encerrados na página física 17. Introdução temática independente entre eles não prolonga q39. Última página disponível examinada integralmente; nenhuma continuidade posterior nem novo cabeçalho próprio."
+        }
+      ],
+      "pendingBoundaryQuestions": [],
+      "renderMethod": "Poppler pdftoppm 120 DPI PNG visual inspection only; no new OCR",
+      "renderDirectory": "outputs/audit/holdout/v5-tier-c-review/renders-batch-02/07",
+      "renderWarnings": [
+        "Syntax Error: No display font for 'Symbol'",
+        "Syntax Error: No display font for 'ArialUnicode'"
+      ],
+      "neutralNotes": [
+        "40 cabeçalhos próprios e corpos independentes comprovados em ordem física, Português 1–20/Matemática 21–40, sem reinício. Somente q24 é multipágina: cabeçalho/tabela/figura na 10, continuação vinculada e encerramento no topo da 11 antes de nova introdução independente. Demais questões terminam na página de início. Raw q10=3–3, q12=4–4, q15=5–5, q17=6–6, q18=7–7, q20=8–8, q21=9–9 e q31=13–13 corrigidos por limites visualmente comprovados. Na página 16, QUESTÃO 38 é cabeçalho próprio e contém duas referências internas a questão 17, que não são um novo cabeçalho de 17 nem repetição física de seu corpo da página 6; redação original mantida sem correção editorial. Warnings recuperáveis de fontes Symbol/ArialUnicode não impedem a prova de identidade/boundary; causa não determinada, sem alegação de corrupção ou certificação independente da completude do exame original."
+      ],
+      "nextPhysicalPage": null,
+      "visibleSections": [
+        {
+          "section": "portuguese",
+          "physicalPages": [
+            1,
+            8
+          ],
+          "printedNumbers": [
+            1,
+            20
+          ]
+        },
+        {
+          "section": "mathematics",
+          "physicalPages": [
+            9,
+            17
+          ],
+          "printedNumbers": [
+            21,
+            40
+          ]
+        }
+      ],
+      "physicalRepetitions": [],
+      "canonicalQuestionCount": 40,
+      "adjudicatedQuestionCount": 40,
+      "delta": 0,
+      "observedNumberingPattern": "own numbered bodies in physical documentary order; canonical ordinal preserves printed number unless explicit documented restart",
+      "numberingRestarts": 0,
+      "numberingNormalizations": 0,
+      "sectionNumberingPolicy": "Printed numbers and section transitions retained; shared introductions do not extend closed question bodies.",
+      "canonicalizationPolicy": "documentId:qN; one canonical object per directly observed independent numbered body; no gap-based fabrication",
+      "parallelSections": [],
+      "humanExclusions": [],
+      "exclusions": [],
+      "sourceIncomplete": false,
+      "originalExaminationCompletenessCertified": false,
+      "unresolvedIssues": [],
+      "minimumThreeCertified": true,
+      "fabricatedQuestions": 0,
+      "rawAnomaliesStructurallyReviewed": true,
+      "multiPageQuestions": [
+        {
+          "questionId": "v5-doc-9e5595dac9eb75e3:q24",
+          "questionNumber": 24,
+          "pageStart": 10,
+          "pageEnd": 11,
+          "neutralEvidence": "Introdução compartilhada independente, seguida dos cabeçalhos próprios QUESTÃO 22 e 23, com corpos encerrados na 10. Nova introdução distinta antes de QUESTÃO 24, cujo cabeçalho, tabela e figura começam no final da 10; seu corpo continua na 11.; Continuação vinculada de QUESTÃO 24 no topo da página física 11, encerrada antes de nova introdução temática. QUESTÃO 25 e 26 possuem cabeçalhos próprios e corpos encerrados na 11. Introdução compartilhada final é distinta e não prolonga q26."
+        }
+      ],
+      "corrections": [
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-9e5595dac9eb75e3:q10",
+            "questionNumber": 10,
+            "pageStart": 3,
+            "pageEnd": 4
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-9e5595dac9eb75e3:q10",
+            "questionNumber": 10,
+            "pageStart": 3,
+            "pageEnd": 3,
+            "printedQuestionNumber": 10,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical3: Cabeçalhos próprios QUESTÃO 05, 06, 07, 08, 09 e 10; corpos encerrados nesta página. TEXTO III e TEXTO IV são introduções compartilhadas separadas, não continuidade das questões anteriores. Questões 09 e 10 têm cabeçalhos próprios à direita da figura do TEXTO IV, sem novas identidades inferidas de sua disposição.; physical4: TEXTO V compartilhado independente, seguido de cabeçalhos próprios QUESTÃO 11 e 12; ambos os corpos encerrados na página física 4. O texto independente no início não prolonga q10 da página 3."
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-9e5595dac9eb75e3:q12",
+            "questionNumber": 12,
+            "pageStart": 4,
+            "pageEnd": 5
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-9e5595dac9eb75e3:q12",
+            "questionNumber": 12,
+            "pageStart": 4,
+            "pageEnd": 4,
+            "printedQuestionNumber": 12,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical4: TEXTO V compartilhado independente, seguido de cabeçalhos próprios QUESTÃO 11 e 12; ambos os corpos encerrados na página física 4. O texto independente no início não prolonga q10 da página 3.; physical5: TEXTO VI e glossário compartilhados seguidos dos cabeçalhos próprios QUESTÃO 13, 14 e 15; os três corpos encerrados nesta página."
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-9e5595dac9eb75e3:q15",
+            "questionNumber": 15,
+            "pageStart": 5,
+            "pageEnd": 6
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-9e5595dac9eb75e3:q15",
+            "questionNumber": 15,
+            "pageStart": 5,
+            "pageEnd": 5,
+            "printedQuestionNumber": 15,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical5: TEXTO VI e glossário compartilhados seguidos dos cabeçalhos próprios QUESTÃO 13, 14 e 15; os três corpos encerrados nesta página.; physical6: TEXTO VII compartilhado independente seguido dos cabeçalhos próprios QUESTÃO 16 e 17; ambos os corpos encerrados na página física 6, sem continuidade de 17 na 7."
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-9e5595dac9eb75e3:q17",
+            "questionNumber": 17,
+            "pageStart": 6,
+            "pageEnd": 7
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-9e5595dac9eb75e3:q17",
+            "questionNumber": 17,
+            "pageStart": 6,
+            "pageEnd": 6,
+            "printedQuestionNumber": 17,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical6: TEXTO VII compartilhado independente seguido dos cabeçalhos próprios QUESTÃO 16 e 17; ambos os corpos encerrados na página física 6, sem continuidade de 17 na 7.; physical7: TEXTO VIII compartilhado, seguido de QUESTÃO 18 com cabeçalho próprio e corpo encerrado na 7. TEXTO X começa depois como material compartilhado distinto para questões posteriores; não prolonga 18 nem cria questão pela sua numeração romana."
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-9e5595dac9eb75e3:q18",
+            "questionNumber": 18,
+            "pageStart": 7,
+            "pageEnd": 8
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-9e5595dac9eb75e3:q18",
+            "questionNumber": 18,
+            "pageStart": 7,
+            "pageEnd": 7,
+            "printedQuestionNumber": 18,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical7: TEXTO VIII compartilhado, seguido de QUESTÃO 18 com cabeçalho próprio e corpo encerrado na 7. TEXTO X começa depois como material compartilhado distinto para questões posteriores; não prolonga 18 nem cria questão pela sua numeração romana.; physical8: Continuação e encerramento do TEXTO X compartilhado, seguido de cabeçalhos próprios QUESTÃO 19 e 20; ambos os corpos encerrados na página física 8, sem continuação de 20 na 9."
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-9e5595dac9eb75e3:q20",
+            "questionNumber": 20,
+            "pageStart": 8,
+            "pageEnd": 9
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-9e5595dac9eb75e3:q20",
+            "questionNumber": 20,
+            "pageStart": 8,
+            "pageEnd": 8,
+            "printedQuestionNumber": 20,
+            "section": "portuguese",
+            "sequenceRun": 1
+          },
+          "reason": "physical8: Continuação e encerramento do TEXTO X compartilhado, seguido de cabeçalhos próprios QUESTÃO 19 e 20; ambos os corpos encerrados na página física 8, sem continuação de 20 na 9.; physical9: Cabeçalho MATEMÁTICA declara questões 21–40 sem reinício. Introdução temática independente e cabeçalho próprio QUESTÃO 21; corpo encerrado na página física 9, sem continuação na 10."
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-9e5595dac9eb75e3:q21",
+            "questionNumber": 21,
+            "pageStart": 9,
+            "pageEnd": 10
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-9e5595dac9eb75e3:q21",
+            "questionNumber": 21,
+            "pageStart": 9,
+            "pageEnd": 9,
+            "printedQuestionNumber": 21,
+            "section": "mathematics",
+            "sequenceRun": 1
+          },
+          "reason": "physical9: Cabeçalho MATEMÁTICA declara questões 21–40 sem reinício. Introdução temática independente e cabeçalho próprio QUESTÃO 21; corpo encerrado na página física 9, sem continuação na 10.; physical10: Introdução compartilhada independente, seguida dos cabeçalhos próprios QUESTÃO 22 e 23, com corpos encerrados na 10. Nova introdução distinta antes de QUESTÃO 24, cujo cabeçalho, tabela e figura começam no final da 10; seu corpo continua na 11."
+        },
+        {
+          "rawQuestion": {
+            "questionId": "v5-doc-9e5595dac9eb75e3:q31",
+            "questionNumber": 31,
+            "pageStart": 13,
+            "pageEnd": 14
+          },
+          "canonicalQuestion": {
+            "questionId": "v5-doc-9e5595dac9eb75e3:q31",
+            "questionNumber": 31,
+            "pageStart": 13,
+            "pageEnd": 13,
+            "printedQuestionNumber": 31,
+            "section": "mathematics",
+            "sequenceRun": 1
+          },
+          "reason": "physical13: Cabeçalhos próprios QUESTÃO 30 e 31 e corpos encerrados na página física 13. Introdução temática entre os dois é independente; q31 não continua na 14.; physical14: Introduções temáticas independentes e cabeçalhos próprios QUESTÃO 32 e 33; ambos os corpos encerrados na página física 14. Figuras e seus números internos não criam cabeçalhos adicionais."
+        }
+      ],
+      "addedCanonicalQuestions": [],
+      "removedRawCaptures": [],
+      "identityBoundaryCorrections": 8,
+      "rawAnomalyResolutions": [
+        {
+          "eventIndex": 1,
+          "rawAnomaly": {
+            "documentId": "v5-doc-9e5595dac9eb75e3",
+            "type": "duplicate_question_number",
+            "number": 17,
+            "page": 16
+          },
+          "status": "resolved_structurally",
+          "neutralResolution": "O evento automático duplicate_question_number=17/page16 não estabelece duplicação canônica. Único cabeçalho próprio de QUESTÃO 17 e seu corpo na página física 6. Na página física 16 há cabeçalhos próprios 36, 37 e 38; duas ocorrências internas de questão 17 no enunciado de q38 são referências textuais incidentais, não um novo cabeçalho ou corpo independente. A causa interna exata do indexador não foi investigada nem corrigida.",
+          "canonicalQuestionIds": [
+            "v5-doc-9e5595dac9eb75e3:q17",
+            "v5-doc-9e5595dac9eb75e3:q38"
+          ],
+          "evidencePages": [
+            6,
+            16
+          ],
+          "neutralEvidence": "physical6: TEXTO VII compartilhado independente seguido dos cabeçalhos próprios QUESTÃO 16 e 17; ambos os corpos encerrados na página física 6, sem continuidade de 17 na 7.; physical16: Cabeçalhos próprios QUESTÃO 36, 37 e 38, com corpos encerrados na página física 16. O número 17 aparece duas vezes como referência dentro do enunciado de q38, não como cabeçalho próprio, corpo independente ou repetição física de q17 da página 6. Evento raw duplicate_question_number=17/page16 não comprova segunda identidade. Introdução temática após q38 não a prolonga."
+        }
+      ]
+    }
+  ]
+}
