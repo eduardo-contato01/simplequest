@@ -343,3 +343,20 @@ Legado schema somente V1–V4 permanece intocado; gates desta preparação confe
 independentemente, sem spoofing e sem afirmar compatibilidade de execução oficial V5.
 Próximo separado=`V5 Tier A Batch02 supplemental neutral visual adjudication`; STOP
 após publicar, sem revisar o candidato nem iniciar TierB nesta preparação.
+
+## Holdout V5 - Tier A completo, 2026-10-09
+
+[Batch02 efetivo](../audit/holdout/V5_TIER_A_BATCH_02_ADJUDICATION.md) validado:
+11documentos/148páginas/234canônicas/rawefetivo127/delta+107/unresolved0.
+214objetos e decisões1–10 importados do checkpoint intacto, sem re-adjudicação;
+[substituto](../audit/holdout/V5_TIER_A_BATCH_02_SUPPLEMENTAL_ADJUDICATION.md)
+revisado12/12páginas após freeze/publicação:20canônicas/raw18, q4/q8 comprovadas,
+só q12 multipágina7–8, mínimo3 PASS. Original doc11 unresolved continua histórico.
+
+Batch01 validado11/182/1136; TierAComplete=true/22documentos, PhaseBComplete=false.
+Manifest efetivoR1, ranking2 e alteração populacional pós-freeze/performance-blind
+explícitos; transportar ressalvas doc3 integridade inconclusiva/doc8 source incompleto/
+doc10 frozen1-efetivo21 à metodologia final. Nenhum freeze/byte histórico alterado.
+Contagens estruturais não são métricas; finalIndex/selection/GT/Auditor/metrics/merge=false.
+Próximo SEPARADO=V5 Tier B neutral review package freeze, ainda não iniciado.
+STOP após commit/push.

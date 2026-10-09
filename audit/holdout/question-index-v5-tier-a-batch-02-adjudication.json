@@ -1,0 +1,3552 @@
+{
+  "artifactType": "holdout-v5-tier-a-neutral-adjudication",
+  "protocolVersion": "holdout-v5",
+  "phase": "B2b-2",
+  "tier": "A",
+  "batch": 2,
+  "revision": "effective-r1",
+  "sourceCommit": "43ba7cd04340ea633d73761263a4f973a7d06e57",
+  "sourceReviewPackage": "audit/holdout/question-index-v5-tier-a-batch-02-review-package.json",
+  "sourceReviewPackageSha256": "33e9ba54c4ff51801a2fad094d0cf6613728494bd085697c4c8f53f42a166f01",
+  "sourceReviewContext": "outputs/audit/holdout/v5-tier-a-batch-02-review/review-context.json",
+  "sourceReviewContextSha256": "54fc39261467f1e169917a3e1c3895630ee0b6aaf8979389122f3c4ddd3aa148",
+  "sourceHistoricalManifest": "audit/holdout/manifest-v5-documents-frozen.json",
+  "sourceHistoricalManifestSha256": "c124fe77bae292cdeebb0045b489a0676784a8dac39400d748fe3c978eb3ca62",
+  "sourceEffectiveManifest": "audit/holdout/manifest-v5-documents-effective-r1.json",
+  "sourceEffectiveManifestSha256": "a142ed34e5f13baaf566a22f14d1be86d2489c83445778b3a6b5f8d641c8ec32",
+  "sourceReplacementErratum": "audit/holdout/v5-objective-replacement-doc11.json",
+  "sourceReplacementErratumSha256": "d68c681e089bda68cf091046700c9be88bcf09eb147cb824728e83a82cccd9a4",
+  "sourceSupplementalRawIndex": "audit/holdout/question-index-v5-tier-a-batch-02-supplemental-raw.json",
+  "sourceSupplementalRawIndexSha256": "acac51b72a64fd8b327f647cfcde209dea1fff41f567600f456104ab0bff479b",
+  "sourceRawIndex": "audit/holdout/question-index-v5-raw.json",
+  "sourceRawIndexSha256": "68aa187e1e33cc38c92634b2fe362a0e260666e22c8cf58427651b0a6e33ef84",
+  "sourceQueue": "audit/holdout/question-index-v5-review-queue.json",
+  "sourceQueueSha256": "027eac06938f3520ff6c7ca8b4281608d5e31281ac9e16cc3b0d5b418ba9f00b",
+  "sourceIncrementalNotes": "outputs/audit/holdout/v5-tier-a-batch-02-replacement-r1/supplemental-adjudication-notes.json",
+  "sourceIncrementalNotesSha256": "d96192505fd51a627305bb11fa6ff28370371cbaf64fc9a793cde278f6e92b98",
+  "sourceProtocolAddenda": [
+    {
+      "path": "audit/holdout/V5_OBJECTIVE_SOURCE_INCOMPLETENESS_RULE.md",
+      "sha256": "6e53620188ef104d5880ee04e84ef382675a64a8fcc927f69543e6ca273e3541"
+    },
+    {
+      "path": "audit/holdout/V5_INSUFFICIENT_QUESTIONS_REPLACEMENT_RULE.md",
+      "sha256": "7254aca0ff21e7cb415723fe4d91d4148ad86cabea745b99b0b840b04885c4a9"
+    }
+  ],
+  "preservedHistoricalCheckpoints": [
+    {
+      "path": "outputs/audit/holdout/v5-tier-a-batch-02-review/adjudication-notes-post-pagecount-erratum.json",
+      "sha256": "5ca2d24c6ade38b3d7edebd98eb6b761b9ca0f368fefe0524d17427e8f094599"
+    },
+    {
+      "path": "outputs/audit/holdout/v5-tier-a-batch-02-review/adjudication-notes-resumed.json",
+      "sha256": "9cc670b02a5105078328b6cd1b03acc77215c7db825ee07e08c5fa78ae04b305"
+    },
+    {
+      "path": "outputs/audit/holdout/v5-tier-a-batch-02-review/adjudication-notes.json",
+      "sha256": "b9c79b68cc0544dc9f070de336ab9f9ccb18414eb58267f5100feef5ac3b70d6"
+    }
+  ],
+  "adjudicationMode": "assistant-assisted-neutral-visual-review",
+  "manualAdjudicationPerformed": true,
+  "documentsAdjudicated": 11,
+  "questionsAdjudicated": 234,
+  "rawQuestionsInBatch": 127,
+  "canonicalQuestionsInBatch": 234,
+  "delta": 107,
+  "unresolvedDocuments": 0,
+  "totalPhysicalPagesReviewed": 148,
+  "allAvailablePagesReviewed": true,
+  "minimumThreeCertified": true,
+  "fabricatedQuestions": 0,
+  "rawAnomaliesHumanReviewed": true,
+  "indexerExecutionCountDuringThisAdjudication": 0,
+  "ocrExecuted": false,
+  "originalDocs1To10ReopenedForAdjudication": false,
+  "rawQuestionIndexModified": false,
+  "finalQuestionIndexCreated": false,
+  "questionSelectionExecuted": false,
+  "questionSelectionStarted": false,
+  "groundTruthCreated": false,
+  "groundTruthStarted": false,
+  "auditorExecuted": false,
+  "metricsSeen": false,
+  "responseSemanticsConsulted": false,
+  "answerKeysConsulted": false,
+  "GTConsulted": false,
+  "AuditorConsulted": false,
+  "merge": false,
+  "documents": [
+    {
+      "batchOrder": 1,
+      "documentId": "v5-doc-84179ac96b058ffb",
+      "contentFingerprint": "84179ac96b058ffb43a18ffbbaea9b573e43759b6c5942fa3b1d09266ac2afe6",
+      "pageCount": 25,
+      "rawQuestionCount": 24,
+      "status": "adjudicated",
+      "pagesReviewedCount": 25,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "allPagesReviewed": true,
+      "canonicalQuestionCount": 40,
+      "observedNumberingPattern": "unique continuous 1..40; mathematics 1..20, portuguese 21..40; no restart",
+      "visibleSections": [
+        {
+          "section": "mathematics",
+          "pageStart": 3,
+          "pageEnd": 15,
+          "questionNumbers": [
+            1,
+            20
+          ]
+        },
+        {
+          "section": "portuguese",
+          "pageStart": 16,
+          "pageEnd": 25,
+          "questionNumbers": [
+            21,
+            40
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q1",
+          "questionNumber": 1,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q2",
+          "questionNumber": 2,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q3",
+          "questionNumber": 3,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q4",
+          "questionNumber": 4,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q5",
+          "questionNumber": 5,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q6",
+          "questionNumber": 6,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q7",
+          "questionNumber": 7,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q8",
+          "questionNumber": 8,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q9",
+          "questionNumber": 9,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q10",
+          "questionNumber": 10,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q11",
+          "questionNumber": 11,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q12",
+          "questionNumber": 12,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q13",
+          "questionNumber": 13,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q14",
+          "questionNumber": 14,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q15",
+          "questionNumber": 15,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q16",
+          "questionNumber": 16,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q17",
+          "questionNumber": 17,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q18",
+          "questionNumber": 18,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q19",
+          "questionNumber": 19,
+          "pageStart": 14,
+          "pageEnd": 14
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q20",
+          "questionNumber": 20,
+          "pageStart": 15,
+          "pageEnd": 15
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q21",
+          "questionNumber": 21,
+          "pageStart": 17,
+          "pageEnd": 17
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q22",
+          "questionNumber": 22,
+          "pageStart": 17,
+          "pageEnd": 17
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q23",
+          "questionNumber": 23,
+          "pageStart": 18,
+          "pageEnd": 18
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q24",
+          "questionNumber": 24,
+          "pageStart": 18,
+          "pageEnd": 18
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q25",
+          "questionNumber": 25,
+          "pageStart": 18,
+          "pageEnd": 18
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q26",
+          "questionNumber": 26,
+          "pageStart": 19,
+          "pageEnd": 19
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q27",
+          "questionNumber": 27,
+          "pageStart": 19,
+          "pageEnd": 19
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q28",
+          "questionNumber": 28,
+          "pageStart": 19,
+          "pageEnd": 19
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q29",
+          "questionNumber": 29,
+          "pageStart": 20,
+          "pageEnd": 20
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q30",
+          "questionNumber": 30,
+          "pageStart": 20,
+          "pageEnd": 20
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q31",
+          "questionNumber": 31,
+          "pageStart": 21,
+          "pageEnd": 21
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q32",
+          "questionNumber": 32,
+          "pageStart": 22,
+          "pageEnd": 22
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q33",
+          "questionNumber": 33,
+          "pageStart": 22,
+          "pageEnd": 22
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q34",
+          "questionNumber": 34,
+          "pageStart": 23,
+          "pageEnd": 23
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q35",
+          "questionNumber": 35,
+          "pageStart": 23,
+          "pageEnd": 23
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q36",
+          "questionNumber": 36,
+          "pageStart": 23,
+          "pageEnd": 23
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q37",
+          "questionNumber": 37,
+          "pageStart": 24,
+          "pageEnd": 24
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q38",
+          "questionNumber": 38,
+          "pageStart": 25,
+          "pageEnd": 25
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q39",
+          "questionNumber": 39,
+          "pageStart": 25,
+          "pageEnd": 25
+        },
+        {
+          "questionId": "v5-doc-84179ac96b058ffb:q40",
+          "questionNumber": 40,
+          "pageStart": 25,
+          "pageEnd": 25
+        }
+      ],
+      "numberingNormalizations": [],
+      "numberingRestarts": [],
+      "parallelSections": [],
+      "multiPageQuestions": [],
+      "humanExclusions": [],
+      "sourceIncomplete": false,
+      "unresolvedIssues": [],
+      "neutralNotes": [
+        "25/25 páginas físicas inspecionadas em ordem, todas legíveis; 40 inícios e corpos completos diretamente observados, sem inferência a partir da contagem declarada.",
+        "Capa/instruções na p1; p2 em branco; numeração impressa de páginas 1/23–23/23 corresponde às páginas físicas 3–25, sem lacuna.",
+        "Matemática 1–20 nas pp3–15; Português 21–40 nas pp17–25, com título da seção e contexto compartilhado na p16. Nenhum reinício, bloco paralelo, normalização ou exclusão.",
+        "Textos compartilhados anteriores aos respectivos starts não são novas identidades e não estendem pageStart/pageEnd. Todos os corpos encerram na própria página. Referências editoriais a números de texto na p24 não alteram as identidades inequívocas das q37–40.",
+        "Raw=24, canônico=40; enumerações instrucionais, números de tabela e referências no corpo não foram promovidos a starts."
+      ]
+    },
+    {
+      "batchOrder": 2,
+      "documentId": "v5-doc-e123ad77b8edc98f",
+      "contentFingerprint": "e123ad77b8edc98fdb7184c07925a676766bad4cb9d744cb3a22a2355cda0f54",
+      "pageCount": 12,
+      "rawQuestionCount": 9,
+      "status": "adjudicated",
+      "pagesReviewedCount": 12,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "allPagesReviewed": true,
+      "canonicalQuestionCount": 21,
+      "observedNumberingPattern": "unique continuous printed items 01..21; section headings 1ª/2ª QUESTÃO are not additional items",
+      "visibleSections": [
+        {
+          "section": "portuguese",
+          "pageStart": 2,
+          "pageEnd": 9,
+          "questionNumbers": [
+            1,
+            20
+          ]
+        },
+        {
+          "section": "producao_textual",
+          "pageStart": 10,
+          "pageEnd": 10,
+          "questionNumbers": [
+            21
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q1",
+          "questionNumber": 1,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q2",
+          "questionNumber": 2,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q3",
+          "questionNumber": 3,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q4",
+          "questionNumber": 4,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q5",
+          "questionNumber": 5,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q6",
+          "questionNumber": 6,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q7",
+          "questionNumber": 7,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q8",
+          "questionNumber": 8,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q9",
+          "questionNumber": 9,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q10",
+          "questionNumber": 10,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q11",
+          "questionNumber": 11,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q12",
+          "questionNumber": 12,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q13",
+          "questionNumber": 13,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q14",
+          "questionNumber": 14,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q15",
+          "questionNumber": 15,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q16",
+          "questionNumber": 16,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q17",
+          "questionNumber": 17,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q18",
+          "questionNumber": 18,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q19",
+          "questionNumber": 19,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q20",
+          "questionNumber": 20,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-e123ad77b8edc98f:q21",
+          "questionNumber": 21,
+          "pageStart": 10,
+          "pageEnd": 10
+        }
+      ],
+      "numberingNormalizations": [],
+      "numberingRestarts": [],
+      "parallelSections": [],
+      "multiPageQuestions": [],
+      "humanExclusions": [],
+      "sourceIncomplete": false,
+      "unresolvedIssues": [],
+      "neutralNotes": [
+        "12/12 páginas físicas inspecionadas em ordem. Capa/instruções p1, contexto compartilhado p2 e p8, itens reais 01–20 pp3–9; item 21 com início próprio na p10, preservado sem exclusão semântica.",
+        "1ª QUESTÃO (p2) e 2ª QUESTÃO (p10) são cabeçalhos de grupos, distintos dos itens 01–21; não geram duplicatas nem reinício canônico.",
+        "p11/p12 são folhas de rascunho/produção com linhas, sem novos starts ou continuação de corpo do item21. Numeração de linhas e instruções não são questões; pageEnd21=10.",
+        "Todos os corpos observados encerram na própria página. Nenhuma normalização, paralelo, reinício ou lacuna física.",
+        "Poppler avisou ausência de fontes Symbol/ArialUnicode; inspeção de todas as páginas confirmou números e limites legíveis, sem bloqueio observacional. SourceType=text_native/indexMethod=ocr preservados. Raw9/canonical21."
+      ]
+    },
+    {
+      "batchOrder": 3,
+      "documentId": "v5-doc-815b83630e3d8c98",
+      "contentFingerprint": "815b83630e3d8c9899695cdcc4a30f96ee4a5f411d541d954c534cd5a8f9ef1a",
+      "pageCount": 9,
+      "rawQuestionCount": 20,
+      "status": "adjudicated",
+      "pagesReviewedCount": 9,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "allPagesReviewed": true,
+      "canonicalQuestionCount": 21,
+      "observedNumberingPattern": "unique continuous visible 1..21; all candidate identities and page ranges directly confirmed within frozen available PDF",
+      "visibleSections": [
+        {
+          "section": "portuguese",
+          "pageStart": 2,
+          "pageEnd": 8,
+          "questionNumbers": [
+            1,
+            20
+          ]
+        },
+        {
+          "section": "producao_textual",
+          "pageStart": 8,
+          "pageEnd": 8,
+          "questionNumbers": [
+            21
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q1",
+          "questionNumber": 1,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q2",
+          "questionNumber": 2,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q3",
+          "questionNumber": 3,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q4",
+          "questionNumber": 4,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q5",
+          "questionNumber": 5,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q6",
+          "questionNumber": 6,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q7",
+          "questionNumber": 7,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q8",
+          "questionNumber": 8,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q9",
+          "questionNumber": 9,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q10",
+          "questionNumber": 10,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q11",
+          "questionNumber": 11,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q12",
+          "questionNumber": 12,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q13",
+          "questionNumber": 13,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q14",
+          "questionNumber": 14,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q15",
+          "questionNumber": 15,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q16",
+          "questionNumber": 16,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q17",
+          "questionNumber": 17,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q18",
+          "questionNumber": 18,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q19",
+          "questionNumber": 19,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q20",
+          "questionNumber": 20,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q21",
+          "questionNumber": 21,
+          "pageStart": 8,
+          "pageEnd": 8
+        }
+      ],
+      "numberingNormalizations": [],
+      "numberingRestarts": [],
+      "parallelSections": [],
+      "multiPageQuestions": [],
+      "humanExclusions": [],
+      "sourceIncomplete": null,
+      "unresolvedIssues": [],
+      "neutralNotes": [
+        "9/9 páginas físicas visualmente inspecionadas em ordem. Questões1..21 possuem starts próprios; conjuntos candidatos preservados, NÃO adjudicação final do documento/batch.",
+        "p1 capa/instruções; p2 Texto1 com números de linha, não starts. q1–5 p3; q6–9 p4; q10–12 p5; q13–18 p6; Texto03 compartilhado p7; q19–21 p8; p9 em branco.",
+        "Não copiar automaticamente raw20: item21 observado na p8 e mantido sem exclusão semântica. Nenhuma normalização, reinício, paralelo ou humanExclusion aplicada.",
+        "p7 é contexto compartilhado posposto aos starts17/18, recortado na borda direita; não atribuído como continuação exclusiva de uma questão. Não reconstruir texto/área ausente. Fonte completa versus incompleta permanece unresolved.",
+        "A capa declara12folhas, refere folha10 indisponível e folhas de rascunho/redação não presentes; nenhum número de questão ausente foi inventado. Critérios de retenção não passam em conjunto.",
+        "Universo congelado consultado somente por metadados; 4 conteúdos elegíveis no mesmo estrato, documento atual primeiro e próximo não selecionado v5-doc-3d252b7c947f51ff. Nenhum PDF candidato foi aberto ou trocado, seleção não reexecutada.",
+        "Avisos Poppler Symbol/ArialUnicode anotados; starts e limites dos corpos legíveis, mas clipping do contexto p7 e discrepancy documental impedem resolver fonte sem autoridade externa.",
+        "RESUMPTION after formal decision58ed0af: previous unresolved notes are historical. All21 identity/range gates PASS from visible pages3..8; ranges unchanged. Shared Texto03 clipping is retained as source layout caveat, not certified complete and not used to invent boundaries. No response semantics used.",
+        "Adjudicated means frozen available PDF content only; original exam completeness NOT certified. sourceIntegrityInconclusive=true, objectiveSourceCorruptionConfirmed=null, sourceIncompleteExceptionApplied=false, no replacement. Formal decision SHA256 d532deef877a016d4715227395d80f402e3ec49659eea4409dd280ad364be7a4."
+      ],
+      "sourceIncompleteAssessmentStatus": "inconclusive_formal_decision_frozen_available_pdf_content",
+      "sourceIncompleteEvidence": {
+        "declaredPhysicalSheets": 12,
+        "availablePhysicalPages": 9,
+        "blankPhysicalPages": [
+          9
+        ],
+        "printedContentSheets": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "explicitUnavailableSheetReference": 10,
+        "sharedContextRightEdgeClippedPage": 7,
+        "sourceMissingQuestionNumbers": [],
+        "causeEstablished": false,
+        "criterion1SelectedBeforeInspection": true,
+        "criterion2ObjectiveIncompleteness": "unresolved: structural discrepancy and clipped shared context observed; editorial/source explanation not established",
+        "criterion3NoMissingBoundariesFabricated": true,
+        "criterion4NoAutomaticSameStratumReplacement": false,
+        "criterion5PerformanceBlind": true,
+        "criterion6AtLeastThreeCompletelyObservableQuestions": true,
+        "sameStratumReplacementAvailable": true,
+        "stratum": [
+          "text_native",
+          "CMF",
+          "2004-2009",
+          "6º Ano"
+        ],
+        "eligibleUniqueDocumentsInStratum": 4,
+        "nextFrozenRankedEligibleDocumentId": "v5-doc-3d252b7c947f51ff",
+        "nextFrozenRankedEligibleFingerprint": "3d252b7c947f51ff803de3219165f5f2011bd2315d073f0377eca34f56fb1299",
+        "replacementPerformed": false,
+        "metadataEvidenceUniverse": "audit/holdout/v5-eligible-document-universe.json",
+        "metadataEvidenceUniverseSha256": "dd64269956de6c7210fe0e8cc4cbb23dc799925adefa4c5e6dd603ff997c5933"
+      },
+      "sourceIntegrityInconclusive": true,
+      "objectiveSourceCorruptionConfirmed": null,
+      "originalExamCompletenessCertified": false,
+      "frozenPdfRetained": true,
+      "replacementAuthorized": false,
+      "sourceIncompleteExceptionApplied": false,
+      "adjudicationScope": "frozen_available_pdf_content",
+      "sourceIntegrityDecisionSha256": "d532deef877a016d4715227395d80f402e3ec49659eea4409dd280ad364be7a4",
+      "resumptionBoundaryValidationStatus": "PASS",
+      "historicalUnresolvedIssues": [
+        {
+          "pages": [
+            1,
+            7,
+            9
+          ],
+          "affectedIdentities": [
+            "v5-doc-815b83630e3d8c98:q17",
+            "v5-doc-815b83630e3d8c98:q18",
+            "v5-doc-815b83630e3d8c98:q19",
+            "v5-doc-815b83630e3d8c98:q20",
+            "v5-doc-815b83630e3d8c98:q21"
+          ],
+          "observedEvidence": "Capa declara 12 folhas e manda identificar a folha10; PDF tem 9 páginas, p9 em branco, conteúdo impresso Fl02..Fl08 contínuo. Texto03 compartilhado na p7 excede/é cortado na margem direita. Inícios1..21 estão presentes.",
+          "plausibleInterpretations": [
+            "Fonte incompleta com folhas auxiliares ausentes e contexto compartilhado fisicamente recortado.",
+            "Instruções editoriais inconsistentes e/ou folhas auxiliares intencionalmente não incluídas; extensão original do contexto não demonstrada."
+          ],
+          "missingEvidence": "Resolução externa da discrepância documental e da aplicação da política; não reconstruir conteúdo nem inferir boundaries ausentes.",
+          "blockingReason": "Critério4 do adendo falha: há próximo elegível no mesmo ranking/stratum. Retenção como adjudicated_source_incomplete não autorizada; qualquer dúvida sobre critério2 também exige STOP. Não substituir nesta execução."
+        }
+      ],
+      "adjudicatedQuestionCount": 21,
+      "resumptionPagesReexamined": [
+        6,
+        7,
+        8,
+        3,
+        4,
+        5
+      ],
+      "resumptionEvidenceScope": "Prior page1/2/9 visual notes and frozen technical diagnostic retained; targeted full-page renders3..8 inspected, prioritizing6..8. No off-MediaBox extraction used.",
+      "historicalSourceIncompleteAssessmentStatus": "unresolved_retention_not_authorized",
+      "boundaryValidation": [
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q1",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 3,
+          "pageEndProven": 3,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q2",
+          "nextStartPage": 3,
+          "nextBoundaryEvidence": "next explicit numbered question starts after current body on same page",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q2",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 3,
+          "pageEndProven": 3,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q3",
+          "nextStartPage": 3,
+          "nextBoundaryEvidence": "next explicit numbered question starts after current body on same page",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q3",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 3,
+          "pageEndProven": 3,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q4",
+          "nextStartPage": 3,
+          "nextBoundaryEvidence": "next explicit numbered question starts after current body on same page",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q4",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 3,
+          "pageEndProven": 3,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q5",
+          "nextStartPage": 3,
+          "nextBoundaryEvidence": "next explicit numbered question starts after current body on same page",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q5",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 3,
+          "pageEndProven": 3,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q6",
+          "nextStartPage": 4,
+          "nextBoundaryEvidence": "q5 closes on p3; q6 explicit top-of-body p4",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q6",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 4,
+          "pageEndProven": 4,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q7",
+          "nextStartPage": 4,
+          "nextBoundaryEvidence": "next explicit numbered question starts after current body on same page",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q7",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 4,
+          "pageEndProven": 4,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q8",
+          "nextStartPage": 4,
+          "nextBoundaryEvidence": "next explicit numbered question starts after current body on same page",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q8",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 4,
+          "pageEndProven": 4,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q9",
+          "nextStartPage": 4,
+          "nextBoundaryEvidence": "next explicit numbered question starts after current body on same page",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q9",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 4,
+          "pageEndProven": 4,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q10",
+          "nextStartPage": 5,
+          "nextBoundaryEvidence": "q9 closes on p4; q10 explicit p5",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q10",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 5,
+          "pageEndProven": 5,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q11",
+          "nextStartPage": 5,
+          "nextBoundaryEvidence": "next explicit numbered question starts after current body on same page",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q11",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 5,
+          "pageEndProven": 5,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q12",
+          "nextStartPage": 5,
+          "nextBoundaryEvidence": "next explicit numbered question starts after current body on same page",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q12",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 5,
+          "pageEndProven": 5,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q13",
+          "nextStartPage": 6,
+          "nextBoundaryEvidence": "q12 closes before shared Texto2 p5; q13 explicit p6",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q13",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 6,
+          "pageEndProven": 6,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q14",
+          "nextStartPage": 6,
+          "nextBoundaryEvidence": "next explicit numbered question starts after current body on same page",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q14",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 6,
+          "pageEndProven": 6,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q15",
+          "nextStartPage": 6,
+          "nextBoundaryEvidence": "next explicit numbered question starts after current body on same page",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q15",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 6,
+          "pageEndProven": 6,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q16",
+          "nextStartPage": 6,
+          "nextBoundaryEvidence": "next explicit numbered question starts after current body on same page",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q16",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 6,
+          "pageEndProven": 6,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q17",
+          "nextStartPage": 6,
+          "nextBoundaryEvidence": "next explicit numbered question starts after current body on same page",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q17",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 6,
+          "pageEndProven": 6,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q18",
+          "nextStartPage": 6,
+          "nextBoundaryEvidence": "next explicit numbered question starts after current body on same page",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false,
+          "page7SpecificEvidence": "Number and complete local body on p6; q17 followed by q18, q18 terminates before page break. p7 labeled shared Texto03, not continuation of numbered local body.",
+          "sharedContextCompletenessCertified": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q18",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 6,
+          "pageEndProven": 6,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q19",
+          "nextStartPage": 8,
+          "nextBoundaryEvidence": "q18 body closes within p6; p7 headed Texto03 shared context; q19 explicit p8",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false,
+          "page7SpecificEvidence": "Number and complete local body on p6; q17 followed by q18, q18 terminates before page break. p7 labeled shared Texto03, not continuation of numbered local body.",
+          "sharedContextCompletenessCertified": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q19",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 8,
+          "pageEndProven": 8,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q20",
+          "nextStartPage": 8,
+          "nextBoundaryEvidence": "next explicit numbered question starts after current body on same page",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false,
+          "page7SpecificEvidence": "Explicit number and locally closing body on p8; q19/q20 separated by explicit starts, q21 separated by second-part heading. p7 shared Texto03 not needed to infer these boundaries.",
+          "sharedContextCompletenessCertified": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q20",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 8,
+          "pageEndProven": 8,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": "v5-doc-815b83630e3d8c98:q21",
+          "nextStartPage": 8,
+          "nextBoundaryEvidence": "q20 closes before explicit second-part heading and q21 p8",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false,
+          "page7SpecificEvidence": "Explicit number and locally closing body on p8; q19/q20 separated by explicit starts, q21 separated by second-part heading. p7 shared Texto03 not needed to infer these boundaries.",
+          "sharedContextCompletenessCertified": false
+        },
+        {
+          "questionId": "v5-doc-815b83630e3d8c98:q21",
+          "identityDirectlyObserved": true,
+          "canonicalNumberJustified": true,
+          "pageStartProven": 8,
+          "pageEndProven": 8,
+          "bodyClosesOnStartPage": true,
+          "continuationAcrossPages": false,
+          "nextStartQuestionId": null,
+          "nextStartPage": null,
+          "nextBoundaryEvidence": "q21 instructions visibly terminate on p8; historical diagnostic confirms p9 encoded blank",
+          "relevantStructuralAmbiguity": false,
+          "page7ClippingInterferesWithIdentityOrBoundary": false,
+          "page7SpecificEvidence": "Explicit number and locally closing body on p8; q19/q20 separated by explicit starts, q21 separated by second-part heading. p7 shared Texto03 not needed to infer these boundaries.",
+          "sharedContextCompletenessCertified": false
+        }
+      ]
+    },
+    {
+      "batchOrder": 4,
+      "documentId": "v5-doc-e9603e9180e6028b",
+      "contentFingerprint": "e9603e9180e6028ba3c7bb833cffd85d864e7f35233076c5fad1a96e26446207",
+      "pageCount": 12,
+      "rawQuestionCount": 4,
+      "status": "adjudicated",
+      "pagesReviewedCount": 12,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "allPagesReviewed": true,
+      "canonicalQuestionCount": 15,
+      "observedNumberingPattern": "printed01..14 followed by explicitly headed unnumbered second-part proposal; canonical15 identifies that single document-order unit",
+      "visibleSections": [
+        {
+          "section": "portuguese",
+          "pageStart": 2,
+          "pageEnd": 9,
+          "questionNumbers": [
+            1,
+            14
+          ]
+        },
+        {
+          "section": "producao_textual",
+          "pageStart": 10,
+          "pageEnd": 11,
+          "questionNumbers": [
+            15
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "questionId": "v5-doc-e9603e9180e6028b:q1",
+          "questionNumber": 1,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-e9603e9180e6028b:q2",
+          "questionNumber": 2,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-e9603e9180e6028b:q3",
+          "questionNumber": 3,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-e9603e9180e6028b:q4",
+          "questionNumber": 4,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-e9603e9180e6028b:q5",
+          "questionNumber": 5,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-e9603e9180e6028b:q6",
+          "questionNumber": 6,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-e9603e9180e6028b:q7",
+          "questionNumber": 7,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-e9603e9180e6028b:q8",
+          "questionNumber": 8,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-e9603e9180e6028b:q9",
+          "questionNumber": 9,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-e9603e9180e6028b:q10",
+          "questionNumber": 10,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-e9603e9180e6028b:q11",
+          "questionNumber": 11,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-e9603e9180e6028b:q12",
+          "questionNumber": 12,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-e9603e9180e6028b:q13",
+          "questionNumber": 13,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-e9603e9180e6028b:q14",
+          "questionNumber": 14,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-e9603e9180e6028b:q15",
+          "questionNumber": 15,
+          "pageStart": 10,
+          "pageEnd": 11,
+          "printedQuestionNumber": null,
+          "section": "producao_textual",
+          "identityEvidence": "Explicit 2ª PARTE - PRODUÇÃO DE TEXTO / PROPOSTA DE REDAÇÃO heading p10; proposal continues as direct command and instructions p11; canonical15 is next document-order identity after printed14, not an invented printed number."
+        }
+      ],
+      "numberingNormalizations": [
+        {
+          "questionId": "v5-doc-e9603e9180e6028b:q15",
+          "printedQuestionNumber": null,
+          "canonicalQuestionNumber": 15,
+          "reason": "One explicitly headed unnumbered second-part proposal after numbered1..14; canonical document-order ordinal, not number recovery."
+        }
+      ],
+      "numberingRestarts": [],
+      "parallelSections": [],
+      "multiPageQuestions": [
+        {
+          "questionId": "v5-doc-e9603e9180e6028b:q15",
+          "pageStart": 10,
+          "pageEnd": 11,
+          "reason": "Second-part proposal starts under its own heading p10, command/instructions continue p11; p12 blank draft excluded."
+        }
+      ],
+      "humanExclusions": [],
+      "sourceIncomplete": false,
+      "unresolvedIssues": [],
+      "neutralNotes": [
+        "12/12 full pages visually inspected in frozen order; printed footer1..12 continuous, cover explicitly declares12pages/14questions plus proposal.",
+        "Own visible starts01..05p6,06..07p7,08..11p8,12..14p9; every numbered body closes locally before next start or page break. TextIV is shared context before06 onp7, not a question identity.",
+        "Second-part proposal explicitly begins with heading onp10, continues command and instructions onp11; canonical15 is one observed unnumbered unit, printedQuestionNumber=null. No semantic exclusion. p12 is draft only.",
+        "Raw4 not authoritative; canonical15 directly observed units. No restart/parallel/source gap; no response semantics used."
+      ],
+      "adjudicatedQuestionCount": 15,
+      "exclusions": [
+        {
+          "kind": "non_question_page",
+          "pages": [
+            1
+          ],
+          "reason": "Cover/general instructions; example00 is not real identity."
+        },
+        {
+          "kind": "shared_context",
+          "pages": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "reason": "TextI/II/III precede numbered starts; textII crosses3-4 but no question begins there."
+        },
+        {
+          "kind": "non_question_page",
+          "pages": [
+            12
+          ],
+          "reason": "Explicit RASCUNHO lines; no new start or body continuation."
+        }
+      ]
+    },
+    {
+      "batchOrder": 5,
+      "documentId": "v5-doc-1babdc250c302165",
+      "contentFingerprint": "1babdc250c302165ff32a5601fda24c215ab8b17eb0e78ee52d0e241bf132c40",
+      "pageCount": 18,
+      "rawQuestionCount": 11,
+      "status": "adjudicated",
+      "pagesReviewedCount": 18,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "allPagesReviewed": true,
+      "canonicalQuestionCount": 21,
+      "observedNumberingPattern": "printed items1..20 under1ªQUESTÃO group; single2ªQUESTÃO proposal canonical21; group headings not additional item starts or numbering restarts",
+      "visibleSections": [
+        {
+          "section": "portuguese",
+          "pageStart": 3,
+          "pageEnd": 12,
+          "questionNumbers": [
+            1,
+            20
+          ]
+        },
+        {
+          "section": "producao_textual",
+          "pageStart": 13,
+          "pageEnd": 13,
+          "questionNumbers": [
+            21
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "questionId": "v5-doc-1babdc250c302165:q1",
+          "questionNumber": 1,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q2",
+          "questionNumber": 2,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q3",
+          "questionNumber": 3,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q4",
+          "questionNumber": 4,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q5",
+          "questionNumber": 5,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q6",
+          "questionNumber": 6,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q7",
+          "questionNumber": 7,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q8",
+          "questionNumber": 8,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q9",
+          "questionNumber": 9,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q10",
+          "questionNumber": 10,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q11",
+          "questionNumber": 11,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q12",
+          "questionNumber": 12,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q13",
+          "questionNumber": 13,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q14",
+          "questionNumber": 14,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q15",
+          "questionNumber": 15,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q16",
+          "questionNumber": 16,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q17",
+          "questionNumber": 17,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q18",
+          "questionNumber": 18,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q19",
+          "questionNumber": 19,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q20",
+          "questionNumber": 20,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "v5-doc-1babdc250c302165:q21",
+          "questionNumber": 21,
+          "pageStart": 13,
+          "pageEnd": 13,
+          "printedQuestionNumber": null,
+          "section": "producao_textual",
+          "printedSectionHeading": "2ª QUESTÃO - REDAÇÃO",
+          "identityEvidence": "One standalone second-group unit headed2ªQUESTÃO onp13 following visible items1..20; canonical21 document-order ordinal, not printed item21."
+        }
+      ],
+      "numberingNormalizations": [
+        {
+          "questionId": "v5-doc-1babdc250c302165:q21",
+          "printedQuestionNumber": null,
+          "printedSectionHeading": "2ª QUESTÃO",
+          "canonicalQuestionNumber": 21,
+          "reason": "Group-level ordinal does not restart item-level numbering; one directly observed proposal after twenty visible items."
+        }
+      ],
+      "numberingRestarts": [],
+      "parallelSections": [],
+      "multiPageQuestions": [],
+      "humanExclusions": [],
+      "sourceIncomplete": false,
+      "unresolvedIssues": [],
+      "neutralNotes": [
+        "18/18 full pages visually inspected in order; actual numbered content pages1..11 appears on PDF3..13 continuous. Extra cover/instruction/blank/draft pages retained as available representation, no gap.",
+        "Items1..4p4,5..6p5,7p6,8..10p7,11p8,12..15p9,16..18p11,19..20p12. All local bodies close before next start/page break. Shared texts never supply additional identities.",
+        "p13 standalone second-group proposal with own heading, context, command and ended instructions followed by FINAL DA PROVA; canonical21 ordinal after20, no fabricated printed21. No structural semantic exclusion.",
+        "p14 blank verso, four explicit draft sheetsp15..18 not new questions. Raw11 not authority;21 observed units. No restart/parallel/multipage/source gap."
+      ],
+      "adjudicatedQuestionCount": 21,
+      "exclusions": [
+        {
+          "kind": "non_question_page",
+          "pages": [
+            1,
+            2
+          ],
+          "reason": "Cover/instructions and illustrative card, not actual question starts."
+        },
+        {
+          "kind": "shared_context",
+          "pages": [
+            3,
+            10
+          ],
+          "reason": "Shared contexts only; numbers are text-line references."
+        },
+        {
+          "kind": "non_question_page",
+          "pages": [
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "reason": "p14 blank verso with bleed-through; p15..18 explicit draft sheets, duplicated line ranges, not new identities or body continuations."
+        }
+      ]
+    },
+    {
+      "batchOrder": 6,
+      "documentId": "v5-doc-d5099c3057735940",
+      "contentFingerprint": "d5099c30577359406ebc4faf4974434bf10f84fe24a3cc186dc162e7c866c838",
+      "pageCount": 13,
+      "rawQuestionCount": 5,
+      "status": "adjudicated",
+      "pagesReviewedCount": 13,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "allPagesReviewed": true,
+      "canonicalQuestionCount": 15,
+      "observedNumberingPattern": "printed01..14; one unnumbered standalone proposal canonical15 with internal alternative prompts1/2 joined by OU; no item-level restart",
+      "visibleSections": [
+        {
+          "section": "portuguese",
+          "pageStart": 2,
+          "pageEnd": 10,
+          "questionNumbers": [
+            1,
+            14
+          ]
+        },
+        {
+          "section": "producao_textual",
+          "pageStart": 11,
+          "pageEnd": 12,
+          "questionNumbers": [
+            15
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "questionId": "v5-doc-d5099c3057735940:q1",
+          "questionNumber": 1,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-d5099c3057735940:q2",
+          "questionNumber": 2,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-d5099c3057735940:q3",
+          "questionNumber": 3,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-d5099c3057735940:q4",
+          "questionNumber": 4,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-d5099c3057735940:q5",
+          "questionNumber": 5,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-d5099c3057735940:q6",
+          "questionNumber": 6,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-d5099c3057735940:q7",
+          "questionNumber": 7,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-d5099c3057735940:q8",
+          "questionNumber": 8,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-d5099c3057735940:q9",
+          "questionNumber": 9,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-d5099c3057735940:q10",
+          "questionNumber": 10,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-d5099c3057735940:q11",
+          "questionNumber": 11,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-d5099c3057735940:q12",
+          "questionNumber": 12,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-d5099c3057735940:q13",
+          "questionNumber": 13,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "v5-doc-d5099c3057735940:q14",
+          "questionNumber": 14,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "v5-doc-d5099c3057735940:q15",
+          "questionNumber": 15,
+          "pageStart": 11,
+          "pageEnd": 12,
+          "printedQuestionNumber": null,
+          "section": "producao_textual",
+          "identityEvidence": "Explicit own proposal headingp11 continuedp12; internal alternative prompts are subordinate to one command."
+        }
+      ],
+      "numberingNormalizations": [
+        {
+          "questionId": "v5-doc-d5099c3057735940:q15",
+          "printedQuestionNumber": null,
+          "canonicalQuestionNumber": 15,
+          "reason": "One explicit standalone PROPOSTA DE REDAÇÃO after printed01..14; document-order ordinal, not invented printed number."
+        }
+      ],
+      "numberingRestarts": [],
+      "parallelSections": [],
+      "multiPageQuestions": [
+        {
+          "questionId": "v5-doc-d5099c3057735940:q15",
+          "pageStart": 11,
+          "pageEnd": 12,
+          "reason": "Own proposal heading/contextp11 continued by command and ended instructionsp12."
+        }
+      ],
+      "humanExclusions": [],
+      "sourceIncomplete": false,
+      "unresolvedIssues": [],
+      "neutralNotes": [
+        "13/13 full pages visually inspected in order; PDF2..13 printedFL1..12 continuous. Cover quantity blank not certified as a count.",
+        "q1..3p6,4..5p7,6..8p8,9..12p9,13..14p10; each local body ends before next start/page break.",
+        "p11 own PROPOSTA DE REDAÇÃO heading/context continues to p12 command/instructions. Explicit command requests one unit choosing between internal prompts1/2 joined by OU; neither is an independent canonical start or numbering restart. Unit closes before p13draft.",
+        "Raw5 not authority;15 directly observed units, one multipage. No semantic exclusion or objective pagination gap."
+      ],
+      "adjudicatedQuestionCount": 15,
+      "exclusions": [
+        {
+          "kind": "non_question_page",
+          "pages": [
+            1,
+            13
+          ],
+          "reason": "Cover instructions and explicit RASCUNHO lines, not new identities or body continuations."
+        },
+        {
+          "kind": "shared_context",
+          "pages": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "reason": "Shared texts before actual printed item01, not new question starts."
+        }
+      ]
+    },
+    {
+      "batchOrder": 7,
+      "documentId": "v5-doc-0c51e49589f148bc",
+      "contentFingerprint": "0c51e49589f148bc6f66b4b1822b3bf78b9a57f7e78a055f09648703d9230d87",
+      "pageCount": 12,
+      "rawQuestionCount": 13,
+      "status": "adjudicated",
+      "pagesReviewedCount": 12,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "allPagesReviewed": true,
+      "canonicalQuestionCount": 19,
+      "observedNumberingPattern": "printed01..18 within1ªQUESTÃO group, then one2ªQUESTÃO proposal canonical19; group headings not item restarts",
+      "visibleSections": [
+        {
+          "section": "portuguese",
+          "pageStart": 2,
+          "pageEnd": 9,
+          "questionNumbers": [
+            1,
+            18
+          ]
+        },
+        {
+          "section": "producao_textual",
+          "pageStart": 10,
+          "pageEnd": 10,
+          "questionNumbers": [
+            19
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q1",
+          "questionNumber": 1,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q2",
+          "questionNumber": 2,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q3",
+          "questionNumber": 3,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q4",
+          "questionNumber": 4,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q5",
+          "questionNumber": 5,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q6",
+          "questionNumber": 6,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q7",
+          "questionNumber": 7,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q8",
+          "questionNumber": 8,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q9",
+          "questionNumber": 9,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q10",
+          "questionNumber": 10,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q11",
+          "questionNumber": 11,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q12",
+          "questionNumber": 12,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q13",
+          "questionNumber": 13,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q14",
+          "questionNumber": 14,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q15",
+          "questionNumber": 15,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q16",
+          "questionNumber": 16,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q17",
+          "questionNumber": 17,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q18",
+          "questionNumber": 18,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q19",
+          "questionNumber": 19,
+          "pageStart": 10,
+          "pageEnd": 10,
+          "printedQuestionNumber": null,
+          "section": "producao_textual",
+          "printedSectionHeading": "2ª QUESTÃO: PRODUÇÃO TEXTUAL",
+          "identityEvidence": "Own heading/command after eighteen numbered items, with complete local instructions."
+        }
+      ],
+      "numberingNormalizations": [
+        {
+          "questionId": "v5-doc-0c51e49589f148bc:q19",
+          "printedQuestionNumber": null,
+          "printedSectionHeading": "2ª QUESTÃO",
+          "canonicalQuestionNumber": 19,
+          "reason": "One explicit second-group proposal after printed items01..18; canonical document-order ordinal."
+        }
+      ],
+      "numberingRestarts": [],
+      "parallelSections": [],
+      "multiPageQuestions": [],
+      "humanExclusions": [],
+      "sourceIncomplete": false,
+      "unresolvedIssues": [],
+      "neutralNotes": [
+        "12/12 full pages visually inspected in order; cover declares18items plus one proposal. PDF2..11 printed1..10 continuous, PDF12 separate lined sheet.",
+        "q1..2p2,3..4p3,5p4,6..9p5,10..14p6,15p7,16..17p8,18p9; bodies end locally before next start/context/page break. Shared TextII continuesp3..4, not a question body continuation.",
+        "p10 own2ªQUESTÃO proposal heading/command and ended instructions; one canonical19, no invented printed19. Draftp11 and lined sheetp12 not new units.",
+        "Raw13 not authority;19 observed units; no gap, restart, parallel block or multipage question."
+      ],
+      "adjudicatedQuestionCount": 19,
+      "exclusions": [
+        {
+          "kind": "non_question_page",
+          "pages": [
+            1,
+            11,
+            12
+          ],
+          "reason": "Cover instructions, explicit RASCUNHO and separate lined production sheet; no new question starts."
+        }
+      ]
+    },
+    {
+      "batchOrder": 8,
+      "documentId": "v5-doc-02531e2612ade970",
+      "contentFingerprint": "02531e2612ade970720cc0a153080e77869fc9edc6f2a74cfed882f5aeec2138",
+      "pageCount": 6,
+      "rawQuestionCount": 10,
+      "status": "adjudicated_source_incomplete",
+      "pagesReviewedCount": 6,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "allPagesReviewed": true,
+      "canonicalQuestionCount": 20,
+      "observedNumberingPattern": "printed01..20 continuous;1ªQUESTÃO heading is group level, no additional item/reset",
+      "visibleSections": [
+        {
+          "section": "portuguese",
+          "pageStart": 1,
+          "pageEnd": 6,
+          "questionNumbers": [
+            1,
+            20
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "questionId": "v5-doc-02531e2612ade970:q1",
+          "questionNumber": 1,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q2",
+          "questionNumber": 2,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q3",
+          "questionNumber": 3,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q4",
+          "questionNumber": 4,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q5",
+          "questionNumber": 5,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q6",
+          "questionNumber": 6,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q7",
+          "questionNumber": 7,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q8",
+          "questionNumber": 8,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q9",
+          "questionNumber": 9,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q10",
+          "questionNumber": 10,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q11",
+          "questionNumber": 11,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q12",
+          "questionNumber": 12,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q13",
+          "questionNumber": 13,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q14",
+          "questionNumber": 14,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q15",
+          "questionNumber": 15,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q16",
+          "questionNumber": 16,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q17",
+          "questionNumber": 17,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q18",
+          "questionNumber": 18,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q19",
+          "questionNumber": 19,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-02531e2612ade970:q20",
+          "questionNumber": 20,
+          "pageStart": 6,
+          "pageEnd": 6
+        }
+      ],
+      "numberingNormalizations": [],
+      "numberingRestarts": [],
+      "parallelSections": [],
+      "multiPageQuestions": [],
+      "humanExclusions": [],
+      "sourceIncomplete": true,
+      "unresolvedIssues": [],
+      "neutralNotes": [
+        "6/6 available full pages visually inspected in order; printed2of7..7of7. Printedpage1 unavailable, its content unknown and not assumed to be cover-only. Original examination completeness not certified.",
+        "q1..5p2,6..10p3,11..13p4,14..18p5,19..20p6; all identities and local boundaries observed. Shared texts p1/p4 do not create question starts. FIM DE PROVA closesp6.",
+        "Raw10 not authority;20 observed objects only. No identities/ranges fabricated for absentpage1; missing source metadata is not humanExclusions.",
+        "General frozen incompleteness addendum applied explicitly after all six criteria PASS. Metadata-only universe check finds this sole eligible in raster/CMSM/2004-2009/1ºAno; no same-stratum automatic replacement, no substitute opened."
+      ],
+      "adjudicatedQuestionCount": 20,
+      "sourceIncompleteReason": "missing_physical_page_before_available_content",
+      "sourceIncompleteExceptionApplied": true,
+      "originalExamCompletenessCertified": false,
+      "sourceMissingPrintedPages": [
+        1
+      ],
+      "sourceMissingQuestionNumbers": null,
+      "sourceMissingQuestionObjectCount": 0,
+      "missingBoundariesInferred": false,
+      "sourceIncompleteEvidence": {
+        "availablePhysicalPages": 6,
+        "printedPages": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "printedTotalPages": 7,
+        "firstVisiblePrintedPage": 2,
+        "lastVisiblePrintedPage": 7,
+        "lastPageClosure": "FIM DE PROVA",
+        "absentPageContent": "not observed; cannot certify cover-only or absence of further content",
+        "observedItems": "01..20, locally complete"
+      },
+      "sourceIncompleteRetentionGate": {
+        "selectedBeforeInspection": true,
+        "structuralEvidenceOfIncompleteness": true,
+        "absentPartsHaveNoObservedBoundaries": true,
+        "sameStratumReplacementAvailable": false,
+        "performanceBlind": true,
+        "minimumCompletelyObservableQuestions": 3,
+        "completelyObservableQuestions": 20,
+        "allSixConditionsPass": true,
+        "stratum": [
+          "raster",
+          "CMSM",
+          "2004-2009",
+          "1º Ano"
+        ],
+        "eligibleDocumentsInSameStratum": 1,
+        "eligibleDocumentIds": [
+          "v5-doc-02531e2612ade970"
+        ],
+        "universeSha256": "dd64269956de6c7210fe0e8cc4cbb23dc799925adefa4c5e6dd603ff997c5933",
+        "addendum": "audit/holdout/V5_OBJECTIVE_SOURCE_INCOMPLETENESS_RULE.md",
+        "addendumSha256": "6e53620188ef104d5880ee04e84ef382675a64a8fcc927f69543e6ca273e3541",
+        "replacementPerformed": false
+      },
+      "exclusions": [
+        {
+          "kind": "shared_context",
+          "pages": [
+            1
+          ],
+          "reason": "Visible1ªQUESTÃO group heading/TextI before actual item01p2, no independent question start; missing printedpage1 is separate source-gap metadata."
+        }
+      ]
+    },
+    {
+      "batchOrder": 9,
+      "documentId": "v5-doc-87d7a7f5696b5a6a",
+      "contentFingerprint": "87d7a7f5696b5a6afbf9a10842a994b8ca6e759269b3aea0080faef0a2360b4e",
+      "pageCount": 8,
+      "rawQuestionCount": 9,
+      "status": "adjudicated",
+      "pagesReviewedCount": 8,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "allPagesReviewed": true,
+      "canonicalQuestionCount": 22,
+      "observedNumberingPattern": "printed1..21 continuous; one standalone unnumbered Redação canonical22",
+      "visibleSections": [
+        {
+          "section": "portuguese",
+          "pageStart": 2,
+          "pageEnd": 7,
+          "questionNumbers": [
+            1,
+            21
+          ]
+        },
+        {
+          "section": "producao_textual",
+          "pageStart": 7,
+          "pageEnd": 7,
+          "questionNumbers": [
+            22
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q1",
+          "questionNumber": 1,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q2",
+          "questionNumber": 2,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q3",
+          "questionNumber": 3,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q4",
+          "questionNumber": 4,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q5",
+          "questionNumber": 5,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q6",
+          "questionNumber": 6,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q7",
+          "questionNumber": 7,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q8",
+          "questionNumber": 8,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q9",
+          "questionNumber": 9,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q10",
+          "questionNumber": 10,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q11",
+          "questionNumber": 11,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q12",
+          "questionNumber": 12,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q13",
+          "questionNumber": 13,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q14",
+          "questionNumber": 14,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q15",
+          "questionNumber": 15,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q16",
+          "questionNumber": 16,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q17",
+          "questionNumber": 17,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q18",
+          "questionNumber": 18,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q19",
+          "questionNumber": 19,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q20",
+          "questionNumber": 20,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q21",
+          "questionNumber": 21,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q22",
+          "questionNumber": 22,
+          "pageStart": 7,
+          "pageEnd": 7,
+          "printedQuestionNumber": null,
+          "section": "producao_textual",
+          "identityEvidence": "Own Redação heading/command/instructions after numbered21p7, ended locally before draftcardp8."
+        }
+      ],
+      "numberingNormalizations": [
+        {
+          "questionId": "v5-doc-87d7a7f5696b5a6a:q22",
+          "printedQuestionNumber": null,
+          "canonicalQuestionNumber": 22,
+          "reason": "One explicit standalone Redação heading and command after printed21; canonical document-order ordinal."
+        }
+      ],
+      "numberingRestarts": [],
+      "parallelSections": [],
+      "multiPageQuestions": [],
+      "humanExclusions": [],
+      "sourceIncomplete": false,
+      "unresolvedIssues": [],
+      "neutralNotes": [
+        "8/8 full pages visually inspected in order; cover declares8pages and21numbered questions plus proposal. Printedpages2..8 follow cover; no gap.",
+        "q1..3p2,4..7p3,8..12p4,13..14p5,15..17p6,18..21p7, one own Redação unitp7canonical22. All local bodies close before next start/shared context/page break; final proposal instructions closep7.",
+        "Illustrative cover item and p8draft card do not supply actual starts. No answer/semantic classification; raw9 not authority.",
+        "Renderer reported unavailable display fonts Symbol/ArialUnicode; all eight renders produced, visible identity/number/page/heading/boundary evidence readable. No unresolved structural boundary."
+      ],
+      "adjudicatedQuestionCount": 22,
+      "exclusions": [
+        {
+          "kind": "non_question_page",
+          "pages": [
+            1,
+            8
+          ],
+          "reason": "Cover instructions/illustrative item and final explicit draft card; not actual question starts."
+        }
+      ]
+    },
+    {
+      "batchOrder": 10,
+      "documentId": "v5-doc-74e153f9c146d887",
+      "contentFingerprint": "74e153f9c146d8878547d6f5fd0538953c61fcb15f17f27c6d1cfcddfadee53d",
+      "pageCount": 1,
+      "rawQuestionCount": 4,
+      "status": "adjudicated",
+      "pagesReviewedCount": 21,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "allPagesReviewed": true,
+      "canonicalQuestionCount": 20,
+      "observedNumberingPattern": "Directly observed unique continuous 1..20; one question on each physical page2..21; printed pagination1..20, physical page1 is cover/instructions.",
+      "visibleSections": [
+        {
+          "section": "mathematics",
+          "pageStart": 2,
+          "pageEnd": 21,
+          "questionNumbers": [
+            1,
+            20
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q1",
+          "questionNumber": 1,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q2",
+          "questionNumber": 2,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q3",
+          "questionNumber": 3,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q4",
+          "questionNumber": 4,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q5",
+          "questionNumber": 5,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q6",
+          "questionNumber": 6,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q7",
+          "questionNumber": 7,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q8",
+          "questionNumber": 8,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q9",
+          "questionNumber": 9,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q10",
+          "questionNumber": 10,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q11",
+          "questionNumber": 11,
+          "pageStart": 12,
+          "pageEnd": 12
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q12",
+          "questionNumber": 12,
+          "pageStart": 13,
+          "pageEnd": 13
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q13",
+          "questionNumber": 13,
+          "pageStart": 14,
+          "pageEnd": 14
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q14",
+          "questionNumber": 14,
+          "pageStart": 15,
+          "pageEnd": 15
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q15",
+          "questionNumber": 15,
+          "pageStart": 16,
+          "pageEnd": 16
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q16",
+          "questionNumber": 16,
+          "pageStart": 17,
+          "pageEnd": 17
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q17",
+          "questionNumber": 17,
+          "pageStart": 18,
+          "pageEnd": 18
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q18",
+          "questionNumber": 18,
+          "pageStart": 19,
+          "pageEnd": 19
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q19",
+          "questionNumber": 19,
+          "pageStart": 20,
+          "pageEnd": 20
+        },
+        {
+          "questionId": "v5-doc-74e153f9c146d887:q20",
+          "questionNumber": 20,
+          "pageStart": 21,
+          "pageEnd": 21
+        }
+      ],
+      "numberingNormalizations": [],
+      "numberingRestarts": [],
+      "parallelSections": [],
+      "multiPageQuestions": [],
+      "humanExclusions": [],
+      "sourceIncomplete": false,
+      "unresolvedIssues": [],
+      "neutralNotes": [
+        "All21 physicalpages visually inspected in order under frozen additive erratum; cover physical1 followed by printed1..20 on physical2..21.",
+        "Each question number1..20, start and single-page body directly observed; each following page begins a new explicitly numbered question; no continuation/multipage/reset/parallel section/source gap observed.",
+        "Incidental marks are not answer evidence. No response semantics, key, GT or Auditor consulted. Raw4 is historical metadata, not the21page inventory.",
+        "Historical pageCount remains1, sourceFrozenPageCount1/effectivePageCount21 and path/hash provenance applied explicitly to this derived checkpoint; ranges validated against21."
+      ],
+      "sourceIncompleteAssessmentStatus": "available_pdf_fully_reviewed_no_observed_gap",
+      "actualPageCountDiagnosed": 21,
+      "sourceFrozenPageCount": 1,
+      "effectivePageCount": 21,
+      "pageCountDelta": 20,
+      "pageCountErratum": "audit/holdout/v5-objective-pagecount-erratum-doc10.json",
+      "pageCountErratumSha256": "80beb7c1f43e2266e20d7554196e852c80f84738ca27c5dd4a7a7b52abb28d6b",
+      "historicalUnresolvedIssues": [
+        {
+          "kind": "frozen_metadata_page_count_mismatch",
+          "expectedPageCount": 1,
+          "actualPageCount": 21,
+          "questionIdsAffected": "not adjudicated; no visual question inspection started",
+          "evidence": [
+            "pdftoppm produced21page renders",
+            "pypdf independently reports21physicalpages",
+            "source and review copy SHA256 equal frozen contentFingerprint"
+          ],
+          "requiresExternalDecision": true
+        }
+      ],
+      "adjudicatedQuestionCount": 20,
+      "declaredItemCount": 20,
+      "structuralExclusions": [
+        {
+          "pageStart": 1,
+          "pageEnd": 1,
+          "kind": "cover_instructions",
+          "note": "Administrative numbered instructions1..16 are not question starts; cover declares20numbered contentpages and20items."
+        }
+      ],
+      "historicalReviewCheckpoint": {
+        "batchOrder": 10,
+        "documentId": "v5-doc-74e153f9c146d887",
+        "contentFingerprint": "74e153f9c146d8878547d6f5fd0538953c61fcb15f17f27c6d1cfcddfadee53d",
+        "pageCount": 1,
+        "rawQuestionCount": 4,
+        "status": "unresolved",
+        "pagesReviewedCount": 0,
+        "reviewedPages": [],
+        "allPagesReviewed": false,
+        "canonicalQuestionCount": 0,
+        "observedNumberingPattern": null,
+        "visibleSections": [],
+        "questions": [],
+        "numberingNormalizations": [],
+        "numberingRestarts": [],
+        "parallelSections": [],
+        "multiPageQuestions": [],
+        "humanExclusions": [],
+        "sourceIncomplete": null,
+        "unresolvedIssues": [
+          {
+            "kind": "frozen_metadata_page_count_mismatch",
+            "expectedPageCount": 1,
+            "actualPageCount": 21,
+            "questionIdsAffected": "not adjudicated; no visual question inspection started",
+            "evidence": [
+              "pdftoppm produced21page renders",
+              "pypdf independently reports21physicalpages",
+              "source and review copy SHA256 equal frozen contentFingerprint"
+            ],
+            "requiresExternalDecision": true
+          }
+        ],
+        "neutralNotes": [
+          "STOP before visual inspection: frozen review-context/package/manifest pageCount1 disagrees with actual21 physicalpages in byte-identical frozenPDF. No identities/ranges adjudicated or inferred; render files preserved.",
+          "No frozen artifact or page count silently corrected; document11 remains not_started. Batch02 target120 cannot be certified under current metadata."
+        ],
+        "sourceIncompleteAssessmentStatus": "not_assessed_metadata_page_count_mismatch",
+        "actualPageCountDiagnosed": 21
+      },
+      "pageEvidence": [
+        {
+          "physicalPage": 1,
+          "printedPage": null,
+          "role": "cover_instructions",
+          "observedQuestionNumbers": [],
+          "evidence": "Cover declares20numbered pages/20items; no question-body identity on cover."
+        },
+        {
+          "physicalPage": 2,
+          "printedPage": 1,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            1
+          ],
+          "evidence": "Visible start 1; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 3,
+          "printedPage": 2,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            2
+          ],
+          "evidence": "Visible start 2; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 4,
+          "printedPage": 3,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            3
+          ],
+          "evidence": "Visible start 3; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 5,
+          "printedPage": 4,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            4
+          ],
+          "evidence": "Visible start 4; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 6,
+          "printedPage": 5,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            5
+          ],
+          "evidence": "Visible start 5; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 7,
+          "printedPage": 6,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            6
+          ],
+          "evidence": "Visible start 6; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 8,
+          "printedPage": 7,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            7
+          ],
+          "evidence": "Visible start 7; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 9,
+          "printedPage": 8,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            8
+          ],
+          "evidence": "Visible start 8; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 10,
+          "printedPage": 9,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            9
+          ],
+          "evidence": "Visible start 9; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 11,
+          "printedPage": 10,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            10
+          ],
+          "evidence": "Visible start 10; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 12,
+          "printedPage": 11,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            11
+          ],
+          "evidence": "Visible start 11; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 13,
+          "printedPage": 12,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            12
+          ],
+          "evidence": "Visible start 12; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 14,
+          "printedPage": 13,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            13
+          ],
+          "evidence": "Visible start 13; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 15,
+          "printedPage": 14,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            14
+          ],
+          "evidence": "Visible start 14; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 16,
+          "printedPage": 15,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            15
+          ],
+          "evidence": "Visible start 15; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 17,
+          "printedPage": 16,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            16
+          ],
+          "evidence": "Visible start 16; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 18,
+          "printedPage": 17,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            17
+          ],
+          "evidence": "Visible start 17; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 19,
+          "printedPage": 18,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            18
+          ],
+          "evidence": "Visible start 18; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 20,
+          "printedPage": 19,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            19
+          ],
+          "evidence": "Visible start 19; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        },
+        {
+          "physicalPage": 21,
+          "printedPage": 20,
+          "role": "question_content",
+          "observedQuestionNumbers": [
+            20
+          ],
+          "evidence": "Visible start 20; no carried-in question body; body contained on this page; adjacent next-page distinct question start or final PDF boundary."
+        }
+      ],
+      "reviewRenderSource": "existing frozen review renders; no new OCR/render for document10"
+    },
+    {
+      "documentId": "v5-doc-e1c73fb849ef80a6",
+      "contentFingerprint": "e1c73fb849ef80a6f94a2ecf09718a963bd7c65008f930526605489ac25f8fe3",
+      "batchOrder": 11,
+      "globalTierAOrder": 22,
+      "manifestOrder": 47,
+      "pageCount": 12,
+      "effectivePageCount": 12,
+      "rawQuestionCount": 18,
+      "rawAnomalyCount": 2,
+      "adjudicatedQuestionCount": 20,
+      "canonicalQuestionCount": 20,
+      "status": "adjudicated",
+      "allPagesReviewed": true,
+      "pagesReviewedCount": 12,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sourceIncomplete": false,
+      "questions": [
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q1",
+          "questionNumber": 1,
+          "pageStart": 1,
+          "pageEnd": 1
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q2",
+          "questionNumber": 2,
+          "pageStart": 1,
+          "pageEnd": 1
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q3",
+          "questionNumber": 3,
+          "pageStart": 2,
+          "pageEnd": 2
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q4",
+          "questionNumber": 4,
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q5",
+          "questionNumber": 5,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q6",
+          "questionNumber": 6,
+          "pageStart": 4,
+          "pageEnd": 4
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q7",
+          "questionNumber": 7,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q8",
+          "questionNumber": 8,
+          "pageStart": 5,
+          "pageEnd": 5
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q9",
+          "questionNumber": 9,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q10",
+          "questionNumber": 10,
+          "pageStart": 6,
+          "pageEnd": 6
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q11",
+          "questionNumber": 11,
+          "pageStart": 7,
+          "pageEnd": 7
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q12",
+          "questionNumber": 12,
+          "pageStart": 7,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q13",
+          "questionNumber": 13,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q14",
+          "questionNumber": 14,
+          "pageStart": 8,
+          "pageEnd": 8
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q15",
+          "questionNumber": 15,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q16",
+          "questionNumber": 16,
+          "pageStart": 9,
+          "pageEnd": 9
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q17",
+          "questionNumber": 17,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q18",
+          "questionNumber": 18,
+          "pageStart": 10,
+          "pageEnd": 10
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q19",
+          "questionNumber": 19,
+          "pageStart": 11,
+          "pageEnd": 11
+        },
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q20",
+          "questionNumber": 20,
+          "pageStart": 11,
+          "pageEnd": 11
+        }
+      ],
+      "neutralNotes": [
+        "12/12 full physical pages visually inspected in order; printed pagination1of12..12of12 continuous, mathematics only.",
+        "20 independent numbered identities directly observed; raw18 not authority. q4p3 and q8p5 independently proved, not inferred from gaps.",
+        "Only q12 spans7..8. All other bodies close on starting page; page12 explicit end_of_exam is not q20 continuation.",
+        "No response semantics/count/labels/style, answer keys, GT, Auditor or metrics consulted. No OCR or indexer rerun.",
+        "Post-freeze replacement slot11/global22/manifest47 remains explicit; original unresolved source and all historical checkpoints unchanged."
+      ],
+      "humanExclusions": [],
+      "numberingNormalizations": [],
+      "numberingRestarts": [],
+      "parallelSections": [],
+      "multiPageQuestions": [
+        {
+          "questionId": "v5-doc-e1c73fb849ef80a6:q12",
+          "pageStart": 7,
+          "pageEnd": 8,
+          "evidence": "Visible body continuation at top of8 before explicit13; observed on both full pages."
+        }
+      ],
+      "exclusions": [
+        {
+          "pageStart": 12,
+          "pageEnd": 12,
+          "kind": "end_of_exam",
+          "note": "FIM DE PROVA; blank remaining body, no identity or continuation."
+        }
+      ],
+      "visibleSections": [
+        {
+          "section": "mathematics",
+          "pageStart": 1,
+          "pageEnd": 11,
+          "questionNumbers": [
+            1,
+            20
+          ]
+        }
+      ],
+      "observedNumberingPattern": "Directly observed unique continuous01..20 in mathematics; no numbering restart/normalization/parallel block.",
+      "corrections": [
+        {
+          "kind": "page_range",
+          "questionId": "v5-doc-e1c73fb849ef80a6:q3",
+          "rawPageStart": 2,
+          "rawPageEnd": 3,
+          "adjudicatedPageStart": 2,
+          "adjudicatedPageEnd": 2,
+          "reason": "Full adjacent pages directly reviewed; body closes locally before next-page distinct start/end-of-exam."
+        },
+        {
+          "kind": "page_range",
+          "questionId": "v5-doc-e1c73fb849ef80a6:q7",
+          "rawPageStart": 5,
+          "rawPageEnd": 6,
+          "adjudicatedPageStart": 5,
+          "adjudicatedPageEnd": 5,
+          "reason": "Full adjacent pages directly reviewed; body closes locally before next-page distinct start/end-of-exam."
+        },
+        {
+          "kind": "page_range",
+          "questionId": "v5-doc-e1c73fb849ef80a6:q10",
+          "rawPageStart": 6,
+          "rawPageEnd": 7,
+          "adjudicatedPageStart": 6,
+          "adjudicatedPageEnd": 6,
+          "reason": "Full adjacent pages directly reviewed; body closes locally before next-page distinct start/end-of-exam."
+        },
+        {
+          "kind": "page_range",
+          "questionId": "v5-doc-e1c73fb849ef80a6:q14",
+          "rawPageStart": 8,
+          "rawPageEnd": 9,
+          "adjudicatedPageStart": 8,
+          "adjudicatedPageEnd": 8,
+          "reason": "Full adjacent pages directly reviewed; body closes locally before next-page distinct start/end-of-exam."
+        },
+        {
+          "kind": "page_range",
+          "questionId": "v5-doc-e1c73fb849ef80a6:q16",
+          "rawPageStart": 9,
+          "rawPageEnd": 10,
+          "adjudicatedPageStart": 9,
+          "adjudicatedPageEnd": 9,
+          "reason": "Full adjacent pages directly reviewed; body closes locally before next-page distinct start/end-of-exam."
+        },
+        {
+          "kind": "page_range",
+          "questionId": "v5-doc-e1c73fb849ef80a6:q18",
+          "rawPageStart": 10,
+          "rawPageEnd": 11,
+          "adjudicatedPageStart": 10,
+          "adjudicatedPageEnd": 10,
+          "reason": "Full adjacent pages directly reviewed; body closes locally before next-page distinct start/end-of-exam."
+        },
+        {
+          "kind": "page_range",
+          "questionId": "v5-doc-e1c73fb849ef80a6:q20",
+          "rawPageStart": 11,
+          "rawPageEnd": 12,
+          "adjudicatedPageStart": 11,
+          "adjudicatedPageEnd": 11,
+          "reason": "Full adjacent pages directly reviewed; body closes locally before next-page distinct start/end-of-exam."
+        },
+        {
+          "kind": "raw_missing_question_identity",
+          "questionId": "v5-doc-e1c73fb849ef80a6:q4",
+          "questionNumber": 4,
+          "pageStart": 3,
+          "pageEnd": 3,
+          "reason": "Independent explicit numbered start and local complete body directly observed, not inferred from numeric gap."
+        },
+        {
+          "kind": "raw_missing_question_identity",
+          "questionId": "v5-doc-e1c73fb849ef80a6:q8",
+          "questionNumber": 8,
+          "pageStart": 5,
+          "pageEnd": 5,
+          "reason": "Independent explicit numbered start and local complete body directly observed, not inferred from numeric gap."
+        }
+      ],
+      "rawAnomalyResolutions": [
+        {
+          "kind": "missing_question_number",
+          "questionNumber": 4,
+          "conclusion": "observed_independent_question",
+          "pageStart": 3,
+          "pageEnd": 3
+        },
+        {
+          "kind": "missing_question_number",
+          "questionNumber": 8,
+          "conclusion": "observed_independent_question",
+          "pageStart": 5,
+          "pageEnd": 5
+        }
+      ],
+      "pageEvidence": [
+        {
+          "physicalPage": 1,
+          "printedPage": 1,
+          "printedTotalPages": 12,
+          "observedQuestionNumbers": [
+            1,
+            2
+          ],
+          "evidence": "Two explicit starts01/02; each body closes on this page. Mathematics heading, no cover-only page."
+        },
+        {
+          "physicalPage": 2,
+          "printedPage": 2,
+          "printedTotalPages": 12,
+          "observedQuestionNumbers": [
+            3
+          ],
+          "evidence": "Explicit03start at upper body; local closure followed by blank lower body. No continuation of02."
+        },
+        {
+          "physicalPage": 3,
+          "printedPage": 3,
+          "printedTotalPages": 12,
+          "observedQuestionNumbers": [
+            4
+          ],
+          "evidence": "Explicit04start at upper body; local complete block followed by blank lower body. No continuation of03; raw missing4 disproved directly."
+        },
+        {
+          "physicalPage": 4,
+          "printedPage": 4,
+          "printedTotalPages": 12,
+          "observedQuestionNumbers": [
+            5,
+            6
+          ],
+          "evidence": "Two explicit numbered starts, separate local bodies, closure on this page before next-page distinct start; no carried-in body."
+        },
+        {
+          "physicalPage": 5,
+          "printedPage": 5,
+          "printedTotalPages": 12,
+          "observedQuestionNumbers": [
+            7,
+            8
+          ],
+          "evidence": "Two explicit numbered starts, separate local bodies, closure on this page before next-page distinct start; no carried-in body. Raw missing8 disproved by explicit08 start and full local body."
+        },
+        {
+          "physicalPage": 6,
+          "printedPage": 6,
+          "printedTotalPages": 12,
+          "observedQuestionNumbers": [
+            9,
+            10
+          ],
+          "evidence": "Two explicit numbered starts, separate local bodies, closure on this page before next-page distinct start; no carried-in body."
+        },
+        {
+          "physicalPage": 7,
+          "printedPage": 7,
+          "printedTotalPages": 12,
+          "observedQuestionNumbers": [
+            11,
+            12
+          ],
+          "evidence": "11 closes before explicit12. Body12 reaches lower page region and has carried-over body at top of physical8."
+        },
+        {
+          "physicalPage": 8,
+          "printedPage": 8,
+          "printedTotalPages": 12,
+          "observedQuestionNumbers": [
+            13,
+            14
+          ],
+          "continuedQuestionNumbers": [
+            12
+          ],
+          "evidence": "Carried-in12 body closes before explicit13 start;13 and14 close locally, no further continuation."
+        },
+        {
+          "physicalPage": 9,
+          "printedPage": 9,
+          "printedTotalPages": 12,
+          "observedQuestionNumbers": [
+            15,
+            16
+          ],
+          "evidence": "Explicit15/16 starts and complete local bodies; no carried-in14 or unnumbered additional identity."
+        },
+        {
+          "physicalPage": 10,
+          "printedPage": 10,
+          "printedTotalPages": 12,
+          "observedQuestionNumbers": [
+            17,
+            18
+          ],
+          "evidence": "Explicit17/18 starts and complete local bodies; no carried-in16 or continued18 on next page."
+        },
+        {
+          "physicalPage": 11,
+          "printedPage": 11,
+          "printedTotalPages": 12,
+          "observedQuestionNumbers": [
+            19,
+            20
+          ],
+          "evidence": "Explicit19/20 starts;19 closes before20, final20 body closes locally. No continuation on physical12."
+        },
+        {
+          "physicalPage": 12,
+          "printedPage": 12,
+          "printedTotalPages": 12,
+          "observedQuestionNumbers": [],
+          "role": "end_of_exam",
+          "evidence": "FIM DE PROVA, otherwise blank body; no new start or continuation of20."
+        }
+      ],
+      "minimumThreeCertified": true,
+      "unresolvedIssues": [],
+      "replacementProvenance": {
+        "postFreezeProtocolAddendum": true,
+        "preRegisteredBeforeSourceInspection": false,
+        "performanceBlind": true,
+        "effectivePopulationChanged": true,
+        "historicalManifestUnchanged": true,
+        "ranking": 2,
+        "manifestOrder": 47,
+        "batchOrder": 11,
+        "globalTierAOrder": 22,
+        "replacedHistoricalDocumentId": "v5-doc-a08230ae0b1cad7e",
+        "historicalReplacedDocumentStillUnresolved": true,
+        "originalCanonicalCountCertified": false,
+        "globalDocumentSelectionRerun": false,
+        "packagePublishedBeforeVisualReview": true,
+        "packageFreezeCommit": "43ba7cd04340ea633d73761263a4f973a7d06e57",
+        "sourceReplacementErratumSha256": "d68c681e089bda68cf091046700c9be88bcf09eb147cb824728e83a82cccd9a4"
+      },
+      "technicalSizeCaveat": {
+        "sizeBytes": 182017,
+        "pdfinfoReportedFileSize": 0,
+        "nonBlockingByExplicitExternalDecision": true,
+        "cause": "not_determined",
+        "corruptionConclusionDrawn": false
+      },
+      "rendererWarnings": [
+        "No display font for Symbol",
+        "No display font for ArialUnicode"
+      ],
+      "rendererWarningsScope": "Rendering warnings recorded; inspected question identities, page numbers and boundary evidence readable; no response semantics interpreted."
+    }
+  ],
+  "replacementProvenance": {
+    "postFreezeProtocolAddendum": true,
+    "preRegisteredBeforeSourceInspection": false,
+    "performanceBlind": true,
+    "effectivePopulationChanged": true,
+    "historicalManifestUnchanged": true,
+    "ranking": 2,
+    "manifestOrder": 47,
+    "batchOrder": 11,
+    "globalTierAOrder": 22,
+    "replacedHistoricalDocumentId": "v5-doc-a08230ae0b1cad7e",
+    "historicalReplacedDocumentStillUnresolved": true,
+    "originalCanonicalCountCertified": false,
+    "globalDocumentSelectionRerun": false,
+    "packagePublishedBeforeVisualReview": true,
+    "packageFreezeCommit": "43ba7cd04340ea633d73761263a4f973a7d06e57",
+    "sourceReplacementErratumSha256": "d68c681e089bda68cf091046700c9be88bcf09eb147cb824728e83a82cccd9a4"
+  },
+  "sourceSupplementalReviewPackage": "audit/holdout/question-index-v5-tier-a-batch-02-supplemental-review-package.json",
+  "sourceSupplementalReviewPackageSha256": "350c0edadf4ed0f6f10b85ac00ef9dcc8b61bbb1a2c780ae887bdec0276d8f0f",
+  "sourceSupplementalReviewContext": "outputs/audit/holdout/v5-tier-a-batch-02-replacement-r1/review-context.json",
+  "sourceSupplementalReviewContextSha256": "7bf3a04d2c9cacee5093a6e6feb95ec7faea2052a0f73ff22c29cfa62a6ed04a",
+  "sourceSupplementalAdjudication": "audit/holdout/question-index-v5-tier-a-batch-02-supplemental-adjudication.json",
+  "sourceSupplementalAdjudicationSha256": "cebf725d79702ce5bad17049e7f5090bf74f61d050f3da71f1cb64d03f3a486b",
+  "sourcePreservedCheckpoint": "outputs/audit/holdout/v5-tier-a-batch-02-review/adjudication-notes-post-pagecount-erratum.json",
+  "sourcePreservedCheckpointSha256": "5ca2d24c6ade38b3d7edebd98eb6b761b9ca0f368fefe0524d17427e8f094599",
+  "sourceBatch01Adjudication": "audit/holdout/question-index-v5-tier-a-batch-01-adjudication.json",
+  "sourceBatch01AdjudicationSha256": "e7b089ff28946824eb480498b457124ac20aeefc62a2e8cce547a1d7cd09e770",
+  "effectiveDocumentsAdjudicated": 11,
+  "effectiveUnresolvedDocuments": 0,
+  "effectivePhysicalPages": 148,
+  "effectivePagesReviewed": 148,
+  "previouslyReviewedRetainedPages": 136,
+  "newlyReviewedReplacementPages": 12,
+  "preservedCanonicalQuestions": 214,
+  "supplementalCanonicalQuestions": 20,
+  "historicalRawQuestions": 109,
+  "historicalReplacedDocumentRawQuestions": 0,
+  "supplementalRawQuestions": 18,
+  "effectiveRawQuestions": 127,
+  "deltaVsEffectiveRaw": 107,
+  "historicalPackagePhysicalPages": 120,
+  "historicalOriginalSetPhysicalPagesAfterErratum": 140,
+  "historicalReplacedPagesReviewed": 4,
+  "sourceIncompleteDocuments": 1,
+  "sourceIntegrityInconclusiveDocuments": 1,
+  "sourceMissingQuestionObjectCount": 0,
+  "rawAnomaliesReviewedInNewSupplement": 2,
+  "resumptionProvenance": {
+    "priorResolvedDocuments": 10,
+    "preservedCanonicalQuestions": 214,
+    "priorVisualAdjudicationReperformed": false,
+    "priorDocumentObjectsImportedWithoutReinterpretation": true,
+    "newDocumentVisuallyReviewedOnly": "v5-doc-e1c73fb849ef80a6",
+    "newPagesReviewed": 12,
+    "sourcePreservedCheckpointSha256": "5ca2d24c6ade38b3d7edebd98eb6b761b9ca0f368fefe0524d17427e8f094599",
+    "sourceIncrementalNotesSha256": "d96192505fd51a627305bb11fa6ff28370371cbaf64fc9a793cde278f6e92b98",
+    "incrementalNotesPreserved": true
+  },
+  "historicalReplacedDocumentCheckpoint": {
+    "batchOrder": 11,
+    "documentId": "v5-doc-a08230ae0b1cad7e",
+    "contentFingerprint": "a08230ae0b1cad7e06f3e15215d54d0e53526e3e5c6b11008f4295a5fb469d09",
+    "pageCount": 4,
+    "rawQuestionCount": 0,
+    "status": "unresolved",
+    "pagesReviewedCount": 4,
+    "reviewedPages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "allPagesReviewed": true,
+    "canonicalQuestionCount": 0,
+    "observedNumberingPattern": "No visible numbered question start on any of the four physicalpages; one unnumbered task block under PORTUGUÊS - REDAÇÃO across pages1..2.",
+    "visibleSections": [
+      {
+        "section": "PORTUGUÊS - REDAÇÃO",
+        "pageStart": 1,
+        "pageEnd": 4
+      }
+    ],
+    "questions": [],
+    "numberingNormalizations": [],
+    "numberingRestarts": [],
+    "parallelSections": [],
+    "multiPageQuestions": [],
+    "humanExclusions": [],
+    "sourceIncomplete": false,
+    "unresolvedIssues": [
+      {
+        "kind": "fewer_than_three_completely_adjudicable_questions",
+        "pages": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "affectedQuestion": "single unnumbered observed task; no canonical ID fabricated",
+        "evidence": [
+          "Headers explicitly page1/4,2/4,3/4,4/4; all4 inspected.",
+          "One unnumbered structural task block across1..2; no numbered question marker on any page.",
+          "Page3 explicitly RASCUNHO; page4 blank body; neither supplies independent question identity."
+        ],
+        "plausibleInterpretations": [
+          "Represent observed unnumbered task as one canonical identity only under separately authorized numbering treatment.",
+          "Retain no selectable numbered identity under existing numbered-question convention."
+        ],
+        "evidenceMissing": "No evidence of at least three distinct fully adjudicable question identities; external decision required for the frozen document/minimum3 gate.",
+        "requiresExternalDecision": true,
+        "minimumRequired": 3,
+        "maximumDistinctObservedTasks": 1,
+        "questionsFabricated": 0
+      }
+    ],
+    "neutralNotes": [
+      "Four complete physicalpages visually inspected in order only after document10 adjudication was saved.",
+      "Raw0 is not assumed to prove no task; direct inspection observes one unnumbered task, but fewer than minimum3 fully adjudicable distinct identities.",
+      "No synthetic q1/q2/q3, no splitting source text/lines/paragraphs into questions, no responseMode/optionCount/optionLabels/markerStyle, no answer key/GT/Auditor evidence used.",
+      "No source incompleteness exception or replacement applied: all4printed pages present; frozen selection stays unchanged. STOP for external decision; Batch02 remains incomplete."
+    ],
+    "effectivePageCount": 4,
+    "adjudicatedQuestionCount": 0,
+    "observedTaskCount": 1,
+    "observedNumberedQuestionCount": 0,
+    "maximumDistinctObservedTasks": 1,
+    "minimumFullyAdjudicableQuestionsRequired": 3,
+    "minimumQuestionCountGatePassed": false,
+    "sourceIncompleteAssessmentStatus": "all4printed_pages_present_no_objective_source_gap_observed",
+    "observedUnnumberedTasks": [
+      {
+        "canonicalQuestionId": null,
+        "canonicalQuestionNumber": null,
+        "pageStart": 1,
+        "pageEnd": 2,
+        "section": "PORTUGUÊS - REDAÇÃO",
+        "evidence": "Physical1 contains introductory/source material in one continuous section; physical2 begins with an unnumbered proposal referring back to it. No separate numbered starts. Physical3 explicitly RASCUNHO, physical4 blank body. One task block, not three identities.",
+        "normalizationApplied": false,
+        "requiresExternalDecision": true
+      }
+    ],
+    "structuralExclusions": [
+      {
+        "pageStart": 3,
+        "pageEnd": 3,
+        "kind": "scratch_page",
+        "note": "Explicit RASCUNHO heading, no new question identity."
+      },
+      {
+        "pageStart": 4,
+        "pageEnd": 4,
+        "kind": "blank_body",
+        "note": "Repeated administrative header/footer and blank page body; no new question identity."
+      }
+    ],
+    "pageEvidence": [
+      {
+        "physicalPage": 1,
+        "printedPage": 1,
+        "totalPrintedPages": 4,
+        "role": "unnumbered_task_source_material",
+        "observedQuestionNumbers": []
+      },
+      {
+        "physicalPage": 2,
+        "printedPage": 2,
+        "totalPrintedPages": 4,
+        "role": "unnumbered_task_proposal",
+        "observedQuestionNumbers": []
+      },
+      {
+        "physicalPage": 3,
+        "printedPage": 3,
+        "totalPrintedPages": 4,
+        "role": "scratch_page",
+        "observedQuestionNumbers": [],
+        "evidence": "RASCUNHO heading."
+      },
+      {
+        "physicalPage": 4,
+        "printedPage": 4,
+        "totalPrintedPages": 4,
+        "role": "blank_body",
+        "observedQuestionNumbers": []
+      }
+    ],
+    "reviewRenderSource": "Poppler pdftoppm130dpi, frozen copy, visual review only; no OCR."
+  },
+  "historicalReplacedCountScope": "Historical checkpoint canonicalQuestionCount=0 is an unresolved placeholder; this consolidation does not certify original canonical count zero/one.",
+  "methodologicalCaveats": [
+    {
+      "documentId": "v5-doc-815b83630e3d8c98",
+      "adjudicationScope": "frozen_available_pdf_content",
+      "sourceIntegrityInconclusive": true,
+      "originalExamCompletenessCertified": false,
+      "replacementPerformed": false,
+      "decision": "audit/holdout/v5-source-integrity-decision-doc03.json",
+      "decisionSha256": "d532deef877a016d4715227395d80f402e3ec49659eea4409dd280ad364be7a4",
+      "postFreezeDecision": true,
+      "performanceBlind": true
+    },
+    {
+      "documentId": "v5-doc-02531e2612ade970",
+      "status": "adjudicated_source_incomplete",
+      "allSixConditionsPass": true,
+      "sourceMissingQuestionObjectCount": 0,
+      "missingBoundariesInferred": false,
+      "adjudicationScope": "available_pdf_content_only"
+    },
+    {
+      "documentId": "v5-doc-74e153f9c146d887",
+      "sourceFrozenPageCount": 1,
+      "effectivePageCount": 21,
+      "pageCountErratum": "audit/holdout/v5-objective-pagecount-erratum-doc10.json",
+      "pageCountErratumSha256": "80beb7c1f43e2266e20d7554196e852c80f84738ca27c5dd4a7a7b52abb28d6b",
+      "historicalMetadataPreserved": true
+    },
+    {
+      "documentId": "v5-doc-e1c73fb849ef80a6",
+      "postFreezeProtocolAddendum": true,
+      "preRegisteredBeforeSourceInspection": false,
+      "performanceBlind": true,
+      "effectivePopulationChanged": true,
+      "historicalManifestUnchanged": true,
+      "ranking": 2,
+      "manifestOrder": 47,
+      "batchOrder": 11,
+      "globalTierAOrder": 22,
+      "replacedHistoricalDocumentId": "v5-doc-a08230ae0b1cad7e",
+      "historicalReplacedDocumentStillUnresolved": true,
+      "originalCanonicalCountCertified": false,
+      "globalDocumentSelectionRerun": false,
+      "packagePublishedBeforeVisualReview": true,
+      "packageFreezeCommit": "43ba7cd04340ea633d73761263a4f973a7d06e57",
+      "sourceReplacementErratumSha256": "d68c681e089bda68cf091046700c9be88bcf09eb147cb824728e83a82cccd9a4",
+      "sourceEffectiveManifestSha256": "a142ed34e5f13baaf566a22f14d1be86d2489c83445778b3a6b5f8d641c8ec32",
+      "sourceSupplementalReviewPackageSha256": "350c0edadf4ed0f6f10b85ac00ef9dcc8b61bbb1a2c780ae887bdec0276d8f0f",
+      "sourceSupplementalAdjudicationSha256": "cebf725d79702ce5bad17049e7f5090bf74f61d050f3da71f1cb64d03f3a486b"
+    }
+  ],
+  "methodologicalCaveatsMustPropagateToFinalIndexAndV5Evaluation": true,
+  "tierABatch01Adjudicated": true,
+  "tierABatch02Adjudicated": true,
+  "batch02Complete": true,
+  "Batch02Incomplete": false,
+  "tierAComplete": true,
+  "TierAComplete": true,
+  "TierADocumentsAdjudicated": 22,
+  "phaseBComplete": false,
+  "PhaseBComplete": false,
+  "nextStep": "V5 Tier B neutral review package freeze",
+  "numberingRestarts": 0,
+  "numberingNormalizations": 5,
+  "multiPageQuestions": 3,
+  "humanExclusions": 0
+}

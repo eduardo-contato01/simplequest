@@ -131,3 +131,13 @@ Este checkpoint prevalece sobre as prioridades históricas acima.
 - Nenhuma revisão visual/selection/GT/Auditor/métricas/finalIndex/merge nesta preparação;
   não iniciar TierB. Ressalva técnica pdfinfoFileSize0 não bloqueante por decisão externa,
   causa não determinada; tamanho binário182017/fingerprint/páginas12 confirmados.
+
+## Próxima prioridade V5 - Tier A concluído, 2026-10-09
+
+Este checkpoint prevalece sobre as prioridades históricas acima.
+
+- [x] V5 Tier A Batch02 neutral adjudication:11documentos efetivos/148páginas/234questões, unresolved0. [Fechamento](../audit/holdout/V5_TIER_A_BATCH_02_ADJUDICATION.md);214questões anteriores intactas, somente substituto12páginas/20questões revisado após publicação do package.
+- [x] Tier A completo:22documentos, Batch01 validado11/182páginas/1136questões e Batch02 validado11/148páginas/234questões; PhaseBComplete=false.
+- [ ] **V5 Tier B neutral review package freeze**: próxima tarefa SEPARADA, ainda não iniciada. TiersB/C/D continuam pendentes.
+- Manifest efetivoR1 e substituição pós-freeze/performance-blind explícitos; original doc11 unresolved no histórico, checkpoints e decisões1–10 preservados. Ressalvas doc3/doc8/doc10 permanecem obrigatórias na metodologia final.
+- Final index/selection/GT/Auditor/metrics/merge=false; STOP após commit/push, sem preparar TierB nesta execução.
