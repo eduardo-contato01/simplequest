@@ -188,3 +188,12 @@ Este checkpoint prevalece sobre as prioridades históricas acima.
 - [x] [Package neutro Tier D](../audit/holdout/V5_TIER_D_REVIEW_PACKAGE.md):8documentos globais41–48/134páginas/174raw/zero eventos/native8; batches posicionais5+3 (Batch01=73páginas/100raw;Batch02=61/74), fontes/cópias byte-idênticas8/8 e contexto/listas vinculados por SHA256. Freeze pelo commit de introdução/publicação.
 - Tiers A/B/C adjudicados e preservados; TierDPrepared=true somente após publicação/TierDAdjudicated=false/PhaseBComplete=false. Zero eventos não certifica índice correto; contagem canônica/mínimo3 pendentes de revisão integral. Nenhuma inspeção visual/adjudicação/OCR/indexador/finalIndex/selection/GT/Auditor/metrics/merge.
 - [ ] Próximo SEPARADO: **V5 Tier D Batch01 neutral visual adjudication**, não iniciado; Batch02 também não iniciado. STOP após publicação do package.
+
+## Próxima prioridade V5 — Tier D Batch01 adjudicado, 2026-10-09
+
+Este checkpoint prevalece sobre as prioridades históricas acima; estado de publicação condicionado ao commit/push confirmado.
+
+- [x] [Tier D Batch01 neutro](../audit/holdout/V5_TIER_D_BATCH_01_ADJUDICATION.md):5documentos globais41–45/73páginas/108canônicas/raw100/delta+8/27correções de identidade-boundary/4multipágina/zero unresolved/mínimo3por documento PASS. Finalização exclusiva do checkpoint definitivo SHA89cd797ba235bc9e8dcd2887bd8f0663d770d70d4c643db5d5b1849b4f718516 preservado; sem reinspeção de PDFs/renders.
+- Global44:12capturas incidentais de instruções da capa descartadas;20corpos reais de Item comprovados,12strings de ID vinculadas explicitamente aos corpos reais e8strings novas,delta líquido+8. Nenhuma causa do indexador inferida; evidências/decisões herdadas preservadas.
+- TierAComplete=true/TierBAdjudicated=true/TierCAdjudicated=true/TierDPrepared=true;TierDBatch01Adjudicated=true somente após publicação/TierDBatch02Adjudicated=false/TierDAdjudicated=false/PhaseBComplete=false. FinalIndex/selection/GT/Auditor/metrics/merge=false; histórico/ressalvas/código05C1/configuração intactos.
+- [ ] Próximo SEPARADO: **V5 Tier D Batch02 neutral visual adjudication**, não iniciado; STOP após publicação, sem índice global ou etapas posteriores.

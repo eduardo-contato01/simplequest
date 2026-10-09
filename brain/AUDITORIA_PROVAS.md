@@ -459,3 +459,26 @@ TierDAdjudicated=false/PhaseBComplete=false; visualReview/adjudication/finalInde
 selection/GT/Auditor/metrics/merge=false, sem render/OCR/indexador/censo novo.
 Próximo SEPARADO=V5 Tier D Batch01 neutral visual adjudication, não iniciado.
 STOP após publicação, sem abrir/revisar Batch01 ou Batch02 nesta execução.
+
+## Holdout V5 — Tier D Batch01 neutro adjudicado, 2026-10-09
+
+[Adjudicação Batch01](../audit/holdout/V5_TIER_D_BATCH_01_ADJUDICATION.md):
+5documentos globais41–45/73páginas/108canônicas/raw100/delta+8/27correções
+de identidade-boundary/4multipágina/zero unresolved/mínimo3por documento PASS.
+Finalização exclusiva dos cinco objetos do checkpoint definitivo SHA
+89cd797ba235bc9e8dcd2887bd8f0663d770d70d4c643db5d5b1849b4f718516;
+original SHA92e426f4ed6f8039b11395a8dc9520fe305f385968230ad5bd3bbc786476d65b
+e retomado byte-preservados. Evidências herdadas doc1p1–4/8questões/3correções
+intactas; retomada anterior p5,sem nova inspeção PDF/render nesta finalização.
+Global44:12capturas administrativas incidentais rejeitadas,20corpos reais de
+Item comprovados,12strings canônicas re-vinculadas e8strings novas;20–12=+8.
+Não confundir delta com oito-only adições,zero eventos com raw correto ou
+correções estruturais com defeitos de fonte/métricas; causa do indexador não inferida.
+Tiers A/B/C,provenance pós-freeze/manifestR1/ressalvas/fontes/caches/código05C1
+e configuração preservados. Revisão assistida,sem alegação humana independente.
+TierAComplete=true/TierBAdjudicated=true/TierCAdjudicated=true/TierDPrepared=true;
+TierDBatch01Adjudicated=true somente após commit/push confirmado;
+TierDBatch02Adjudicated=false/TierDAdjudicated=false/PhaseBComplete=false.
+FinalIndex/selection/GT/Auditor/metrics/merge=false;sem novo OCR/extração/indexador/
+censo. Próximo SEPARADO=V5 Tier D Batch02 neutral visual adjudication,não iniciado.
+STOP após publicação;sem índice global48documentos ou etapas posteriores.
