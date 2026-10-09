@@ -360,3 +360,15 @@ doc10 frozen1-efetivo21 à metodologia final. Nenhum freeze/byte histórico alte
 Contagens estruturais não são métricas; finalIndex/selection/GT/Auditor/metrics/merge=false.
 Próximo SEPARADO=V5 Tier B neutral review package freeze, ainda não iniciado.
 STOP após commit/push.
+
+## Holdout V5 — package neutro Tier B, 2026-10-09
+
+[Package Tier B](../audit/holdout/V5_TIER_B_REVIEW_PACKAGE.md) preparado e validado:
+4documentos/92páginas/156raw/156eventos automáticos, sem interpretar anomalias;
+ordem congelada23–26, native4/ocr0, fontes/cópias byte-idênticas4/4 e contexto/lista
+ignorados vinculados por SHA256. Freeze formal pelo commit de introdução/publicação.
+TierAComplete=true/22documentos/330páginas/1370canônicas e provenance pós-freeze
+preservados. TierBAdjudicated=false/PhaseBComplete=false; finalIndex/selection/GT/
+Auditor/metrics/merge=false. Nenhum PDF aberto, render/OCR/extração nova/indexador
+ou adjudicação nesta preparação. Próximo separado=V5 Tier B neutral visual adjudication;
+STOP após push, sem TierC/D.

@@ -141,3 +141,11 @@ Este checkpoint prevalece sobre as prioridades históricas acima.
 - [ ] **V5 Tier B neutral review package freeze**: próxima tarefa SEPARADA, ainda não iniciada. TiersB/C/D continuam pendentes.
 - Manifest efetivoR1 e substituição pós-freeze/performance-blind explícitos; original doc11 unresolved no histórico, checkpoints e decisões1–10 preservados. Ressalvas doc3/doc8/doc10 permanecem obrigatórias na metodologia final.
 - Final index/selection/GT/Auditor/metrics/merge=false; STOP após commit/push, sem preparar TierB nesta execução.
+
+## Próxima prioridade V5 — package Tier B, 2026-10-09
+
+Este checkpoint prevalece sobre as prioridades históricas acima.
+
+- [x] V5 Tier B neutral review package:4documentos/92páginas/156raw/156eventos automáticos, ordem congelada23–26, cópias byte-idênticas4/4 e contexto neutro vinculado por hash; freeze formal pelo commit de introdução/publicação. [Package Tier B](../audit/holdout/V5_TIER_B_REVIEW_PACKAGE.md).
+- [ ] **V5 Tier B neutral visual adjudication**: próxima execução separadamente autorizada, após publicação; nenhuma adjudicação ou correção raw nesta preparação. TiersC/D pendentes.
+- TierAComplete=true/22documentos/330páginas/1370canônicas; TierBAdjudicated=false/PhaseBComplete=false. Ressalvas e provenance pós-freeze preservadas; final index/selection/GT/Auditor/metrics/merge=false; STOP após push.

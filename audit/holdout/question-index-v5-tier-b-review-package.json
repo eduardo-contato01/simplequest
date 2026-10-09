@@ -1,0 +1,317 @@
+{
+  "artifactType": "holdout-v5-tier-b-neutral-review-package",
+  "protocolVersion": "holdout-v5",
+  "phase": "B2b",
+  "tier": "B",
+  "tierDocumentCount": 4,
+  "documentCount": 4,
+  "sourceCommit": "9e54809e5c36e330e7a481d4e2e12f0dfb7bfa9a",
+  "branch": "audit/holdout-v5-blind",
+  "sourceProtocol": "audit/holdout/PROTOCOL_V5.md",
+  "sourceProtocolSha256": "77f8bb06d7c8eadba79c7ef70a580eebeff2d74f324017ae8e220f11bea9bb95",
+  "sourceQueue": "audit/holdout/question-index-v5-review-queue.json",
+  "sourceQueueSha256": "027eac06938f3520ff6c7ca8b4281608d5e31281ac9e16cc3b0d5b418ba9f00b",
+  "sourceRawIndex": "audit/holdout/question-index-v5-raw.json",
+  "sourceRawIndexSha256": "68aa187e1e33cc38c92634b2fe362a0e260666e22c8cf58427651b0a6e33ef84",
+  "sourceRawReport": "audit/holdout/question-index-v5-raw-report.json",
+  "sourceRawReportSha256": "62b44980b921da7545a2aa0dd4d65f24c7e595d319b4294b8f8fcc93988a4d9f",
+  "sourceManifest": "audit/holdout/manifest-v5-documents-frozen.json",
+  "sourceManifestSha256": "c124fe77bae292cdeebb0045b489a0676784a8dac39400d748fe3c978eb3ca62",
+  "sourceEffectiveManifest": "audit/holdout/manifest-v5-documents-effective-r1.json",
+  "sourceEffectiveManifestSha256": "a142ed34e5f13baaf566a22f14d1be86d2489c83445778b3a6b5f8d641c8ec32",
+  "sourceUniverse": "audit/holdout/v5-eligible-document-universe.json",
+  "sourceUniverseSha256": "dd64269956de6c7210fe0e8cc4cbb23dc799925adefa4c5e6dd603ff997c5933",
+  "sourcePageCountCensus": "outputs/audit/holdout/v5-page-count-census.json",
+  "sourcePageCountCensusSha256": "f27ac3cd5e0c3b1f80667ed0ae9b8565794b16cddaccee010c7d9a6b283acc7f",
+  "sourceTierABatch01Adjudication": "audit/holdout/question-index-v5-tier-a-batch-01-adjudication.json",
+  "sourceTierABatch01AdjudicationSha256": "e7b089ff28946824eb480498b457124ac20aeefc62a2e8cce547a1d7cd09e770",
+  "sourceTierABatch02Adjudication": "audit/holdout/question-index-v5-tier-a-batch-02-adjudication.json",
+  "sourceTierABatch02AdjudicationSha256": "b2447bf2a0d86e231480902ae26ddd6dcc21ecb58d84648e432ccd5355df0bf3",
+  "queueInstructionTranscriptionCorrection": {
+    "externalDecision": true,
+    "artifactModified": false,
+    "correctedInstructionSha256": "027eac06938f3520ff6c7ca8b4281608d5e31281ac9e16cc3b0d5b418ba9f00b"
+  },
+  "documentAssignmentRule": "reviewQueue entries with reviewTier == \"B\", in unchanged frozen order; global positions 23-26; no reranking, redistribution or substitution",
+  "pageCountSource": "frozen manifest/raw report/review queue, reconciled with frozen two-reader census; no PDF parser or census rerun in preparation",
+  "reviewPolicy": {
+    "allowedEvidence": [
+      "visible question number",
+      "visible question start",
+      "continuation/end page",
+      "physical page position",
+      "visible section transition",
+      "visible numbering restart",
+      "structural organization",
+      "document-declared neutral item count",
+      "previously available neutral native/OCR text"
+    ],
+    "forbiddenEvidence": [
+      "response semantics",
+      "responseMode",
+      "optionCount",
+      "optionLabels",
+      "markerStyle classification",
+      "response markers",
+      "answer key",
+      "correct answer",
+      "Ground Truth",
+      "Auditor predictions/output",
+      "Auditor metrics"
+    ]
+  },
+  "reviewPolicyEvidenceScope": "future separately authorized full-document neutral visual adjudication after package freeze/publication only; no visual evidence exercised or raw anomaly interpretation in this preparation",
+  "totalPhysicalPages": 92,
+  "rawQuestionsInTier": 156,
+  "rawAnomaliesInTier": 156,
+  "rawAnomaliesMeaning": "automatic diagnostic events, not human-confirmed defects or Auditor metrics",
+  "indexMethodDistribution": {
+    "native": 4,
+    "ocr": 0
+  },
+  "tierAComplete": true,
+  "TierAComplete": true,
+  "TierBAdjudicationPerformed": false,
+  "TierBAdjudicated": false,
+  "PhaseBComplete": false,
+  "tierAPreservedSummary": {
+    "batch01": {
+      "documents": 11,
+      "pages": 182,
+      "canonicalQuestions": 1136,
+      "unresolvedDocuments": 0
+    },
+    "batch02Effective": {
+      "documents": 11,
+      "pages": 148,
+      "canonicalQuestions": 234,
+      "unresolvedDocuments": 0
+    },
+    "documents": 22,
+    "effectivePages": 330,
+    "canonicalQuestions": 1370,
+    "priorVisualReviewReperformed": false
+  },
+  "preservedPostFreezeProvenance": {
+    "sourceArtifacts": [
+      {
+        "path": "audit/holdout/V5_OBJECTIVE_SOURCE_INCOMPLETENESS_RULE.md",
+        "sha256": "6e53620188ef104d5880ee04e84ef382675a64a8fcc927f69543e6ca273e3541"
+      },
+      {
+        "path": "audit/holdout/v5-objective-source-incompleteness-01.json",
+        "sha256": "9389c0a0908f7788ef937d6d46ead9f8d1bb97a829ab99c23fff16df493b0e88"
+      },
+      {
+        "path": "audit/holdout/v5-source-integrity-decision-doc03.json",
+        "sha256": "d532deef877a016d4715227395d80f402e3ec49659eea4409dd280ad364be7a4"
+      },
+      {
+        "path": "audit/holdout/v5-objective-pagecount-erratum-doc10.json",
+        "sha256": "80beb7c1f43e2266e20d7554196e852c80f84738ca27c5dd4a7a7b52abb28d6b"
+      },
+      {
+        "path": "audit/holdout/V5_INSUFFICIENT_QUESTIONS_REPLACEMENT_RULE.md",
+        "sha256": "7254aca0ff21e7cb415723fe4d91d4148ad86cabea745b99b0b840b04885c4a9"
+      },
+      {
+        "path": "audit/holdout/v5-insufficient-questions-decision-doc11.json",
+        "sha256": "e8f9ef644c5f6ac5e6dd44ddcdee4fc5d4c1ace5aadc27b9d2f6932ff5513ad8"
+      },
+      {
+        "path": "audit/holdout/v5-objective-replacement-doc11.json",
+        "sha256": "d68c681e089bda68cf091046700c9be88bcf09eb147cb824728e83a82cccd9a4"
+      },
+      {
+        "path": "audit/holdout/question-index-v5-tier-a-batch-02-supplemental-review-package.json",
+        "sha256": "350c0edadf4ed0f6f10b85ac00ef9dcc8b61bbb1a2c780ae887bdec0276d8f0f"
+      },
+      {
+        "path": "audit/holdout/question-index-v5-tier-a-batch-02-supplemental-adjudication.json",
+        "sha256": "cebf725d79702ce5bad17049e7f5090bf74f61d050f3da71f1cb64d03f3a486b"
+      },
+      {
+        "path": "outputs/audit/holdout/v5-tier-a-batch-02-review/adjudication-notes-post-pagecount-erratum.json",
+        "sha256": "5ca2d24c6ade38b3d7edebd98eb6b761b9ca0f368fefe0524d17427e8f094599"
+      },
+      {
+        "path": "outputs/audit/holdout/v5-tier-a-batch-02-review/adjudication-notes-resumed.json",
+        "sha256": "9cc670b02a5105078328b6cd1b03acc77215c7db825ee07e08c5fa78ae04b305"
+      },
+      {
+        "path": "outputs/audit/holdout/v5-tier-a-batch-02-review/adjudication-notes.json",
+        "sha256": "b9c79b68cc0544dc9f070de336ab9f9ccb18414eb58267f5100feef5ac3b70d6"
+      },
+      {
+        "path": "outputs/audit/holdout/v5-tier-a-batch-02-replacement-r1/supplemental-adjudication-notes.json",
+        "sha256": "d96192505fd51a627305bb11fa6ff28370371cbaf64fc9a793cde278f6e92b98"
+      }
+    ],
+    "postFreezePerformanceBlindExceptions": true,
+    "retroactivePreregistrationClaimed": false,
+    "tierBManifestRowsUnchanged": true,
+    "tierBReplacementPerformed": false,
+    "caveats": [
+      "Batch02 doc3 source integrity inconclusive; frozen_available_pdf_content only; original examination completeness not certified",
+      "Source-incomplete decisions retained; no absent identity/boundary fabricated",
+      "Batch02 doc10 frozen pageCount1/effective21 under frozen erratum",
+      "Batch02 doc11 post-freeze effective replacement at original ranking2; historical unresolved source and checkpoints retained",
+      "Replacement sizeBytes182017 authoritative; pdfinfoReportedFileSize0 remains a nonblocking technical divergence; cause not determined; no automatic PDF-corruption inference"
+    ],
+    "transportToFutureDerivativesRequired": true
+  },
+  "manualAdjudicationPerformed": false,
+  "adjudicationPerformed": false,
+  "rawAnomaliesHumanReviewed": false,
+  "rawQuestionIndexModified": false,
+  "finalQuestionIndexCreated": false,
+  "questionSelectionStarted": false,
+  "questionSelectionExecuted": false,
+  "groundTruthStarted": false,
+  "groundTruthCreated": false,
+  "auditorExecuted": false,
+  "metricsSeen": false,
+  "responseSemanticsConsulted": false,
+  "answerKeysConsulted": false,
+  "GTConsulted": false,
+  "AuditorConsulted": false,
+  "PDFsOpened": false,
+  "visualPagesOpened": false,
+  "rendersCreated": false,
+  "ocrExecuted": false,
+  "newTextExtractionPerformed": false,
+  "indexerExecuted": false,
+  "sourceIncompleteAssessmentPerformed": false,
+  "merge": false,
+  "nextStep": "V5 Tier B neutral visual adjudication (separate authorization after package publication)",
+  "documents": [
+    {
+      "tier": "B",
+      "tierOrder": 1,
+      "globalOrder": 23,
+      "manifestOrder": 19,
+      "documentId": "v5-doc-e0b6c6a249033308",
+      "contentFingerprint": "e0b6c6a249033308b2a83a54a73997342f2f5ca9a4ea502e0d5c11bfbdf7ce59",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 1\\PAS 1 - 2010.pdf",
+      "family": "PAS 1",
+      "year": 2010,
+      "series": null,
+      "sourceType": "text_native",
+      "indexMethod": "native",
+      "pageCount": 22,
+      "rawQuestionCount": 60,
+      "rawAnomalyCount": 82,
+      "anomalyTypeCounts": {
+        "duplicate_question_number": 23,
+        "missing_question_number": 55,
+        "non_monotonic_numbering": 4
+      },
+      "relativePath": "PAS 1\\PAS 1 - 2010.pdf",
+      "reviewCopyPath": "C:\\Users\\trans\\Documents\\SimpleQuest\\outputs\\audit\\holdout\\v5-tier-b-review\\copies\\01__v5-doc-e0b6c6a249033308.pdf",
+      "reviewCopySha256": "e0b6c6a249033308b2a83a54a73997342f2f5ca9a4ea502e0d5c11bfbdf7ce59",
+      "sourcePdfSha256": "e0b6c6a249033308b2a83a54a73997342f2f5ca9a4ea502e0d5c11bfbdf7ce59",
+      "byteIdenticalToSource": true,
+      "status": "pending_neutral_visual_review"
+    },
+    {
+      "tier": "B",
+      "tierOrder": 2,
+      "globalOrder": 24,
+      "manifestOrder": 16,
+      "documentId": "v5-doc-dd8461744150ef4b",
+      "contentFingerprint": "dd8461744150ef4bd83208fbadb512a403a915633d0dcfb681df4b56f869dcac",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMRJ\\6º Ano\\CMRJ - 6ANO - 2012_2013 (mat).pdf",
+      "family": "CMRJ",
+      "year": 2012,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "indexMethod": "native",
+      "pageCount": 9,
+      "rawQuestionCount": 19,
+      "rawAnomalyCount": 28,
+      "anomalyTypeCounts": {
+        "duplicate_question_number": 25,
+        "missing_question_number": 2,
+        "non_monotonic_numbering": 1
+      },
+      "relativePath": "CMRJ\\6º Ano\\CMRJ - 6ANO - 2012_2013 (mat).pdf",
+      "reviewCopyPath": "C:\\Users\\trans\\Documents\\SimpleQuest\\outputs\\audit\\holdout\\v5-tier-b-review\\copies\\02__v5-doc-dd8461744150ef4b.pdf",
+      "reviewCopySha256": "dd8461744150ef4bd83208fbadb512a403a915633d0dcfb681df4b56f869dcac",
+      "sourcePdfSha256": "dd8461744150ef4bd83208fbadb512a403a915633d0dcfb681df4b56f869dcac",
+      "byteIdenticalToSource": true,
+      "status": "pending_neutral_visual_review"
+    },
+    {
+      "tier": "B",
+      "tierOrder": 3,
+      "globalOrder": 25,
+      "manifestOrder": 3,
+      "documentId": "v5-doc-a37b092e0e967efc",
+      "contentFingerprint": "a37b092e0e967efc24dd4806830ad446c8d9a10bda7ae83ea1180090a36ac5bf",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMC\\6º Ano\\CMC - 6ANO - 2025_2026.pdf",
+      "family": "CMC",
+      "year": 2025,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "indexMethod": "native",
+      "pageCount": 28,
+      "rawQuestionCount": 39,
+      "rawAnomalyCount": 26,
+      "anomalyTypeCounts": {
+        "duplicate_question_number": 25,
+        "missing_question_number": 1
+      },
+      "relativePath": "CMC\\6º Ano\\CMC - 6ANO - 2025_2026.pdf",
+      "reviewCopyPath": "C:\\Users\\trans\\Documents\\SimpleQuest\\outputs\\audit\\holdout\\v5-tier-b-review\\copies\\03__v5-doc-a37b092e0e967efc.pdf",
+      "reviewCopySha256": "a37b092e0e967efc24dd4806830ad446c8d9a10bda7ae83ea1180090a36ac5bf",
+      "sourcePdfSha256": "a37b092e0e967efc24dd4806830ad446c8d9a10bda7ae83ea1180090a36ac5bf",
+      "byteIdenticalToSource": true,
+      "status": "pending_neutral_visual_review"
+    },
+    {
+      "tier": "B",
+      "tierOrder": 4,
+      "globalOrder": 26,
+      "manifestOrder": 33,
+      "documentId": "v5-doc-143f3f337e22fb52",
+      "contentFingerprint": "143f3f337e22fb529c8e610ca215f16214b425761ec1bd9b47e121a384bf2474",
+      "canonicalPath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMF\\6º Ano\\CMF - 6ANO - 2025_2026.pdf",
+      "family": "CMF",
+      "year": 2025,
+      "series": "6º Ano",
+      "sourceType": "text_native",
+      "indexMethod": "native",
+      "pageCount": 33,
+      "rawQuestionCount": 38,
+      "rawAnomalyCount": 20,
+      "anomalyTypeCounts": {
+        "duplicate_question_number": 12,
+        "missing_question_number": 6,
+        "non_monotonic_numbering": 2
+      },
+      "relativePath": "CMF\\6º Ano\\CMF - 6ANO - 2025_2026.pdf",
+      "reviewCopyPath": "C:\\Users\\trans\\Documents\\SimpleQuest\\outputs\\audit\\holdout\\v5-tier-b-review\\copies\\04__v5-doc-143f3f337e22fb52.pdf",
+      "reviewCopySha256": "143f3f337e22fb529c8e610ca215f16214b425761ec1bd9b47e121a384bf2474",
+      "sourcePdfSha256": "143f3f337e22fb529c8e610ca215f16214b425761ec1bd9b47e121a384bf2474",
+      "byteIdenticalToSource": true,
+      "status": "pending_neutral_visual_review"
+    }
+  ],
+  "reviewContextIgnoredPath": "outputs/audit/holdout/v5-tier-b-review/review-context.json",
+  "reviewContextSha256": "cd54a2f285600deb70db43b03fac4733f514f58e9c78d3f4235632b60a1b4f95",
+  "filesToReviewIgnoredPath": "outputs/audit/holdout/v5-tier-b-review/FILES_TO_REVIEW.txt",
+  "filesToReviewSha256": "eb5d7307da6f04c0fd987c09b71a5a1fa83e11615c4af2068fa328e7c4065fef",
+  "pdfCopiesTracked": false,
+  "reviewContextTracked": false,
+  "filesToReviewTracked": false,
+  "sourceFilesPresent": 4,
+  "fingerprintMismatch": 0,
+  "reviewCopiesByteIdentical": 4,
+  "preservationProtectedFileCount": 5142,
+  "preservationAppendOnlyDocumentCount": 4,
+  "freezeRule": "formal freeze by introducing commit and publication on origin/audit/holdout-v5-blind; this package precedes any separately authorized visual adjudication",
+  "preparationGatesPassed": true,
+  "canonicalQuestionCountKnown": false,
+  "minimumThreeCertified": false,
+  "originalExaminationCompletenessCertified": false
+}

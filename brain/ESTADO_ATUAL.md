@@ -211,3 +211,9 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - [Suplemento doc11](../audit/holdout/V5_TIER_A_BATCH_02_SUPPLEMENTAL_ADJUDICATION.md):12/12páginas/20questões/raw18/delta+2; q4 e q8 observadas, só q12 multipágina7–8; mínimo3 e boundaries PASS. Package publicado antes da revisão; substituição pós-freeze no manifest efetivoR1 explícita, original unresolved preservado no histórico.
 - Batch01 conferido11/182/1136/unresolved0; TierAComplete=true/TierADocumentsAdjudicated=22, PhaseBComplete=false. Doc3 integridade original inconclusiva/doc8 source incompleto/doc10 frozen1/efetivo21 permanecem documentados e devem acompanhar os derivados futuros.
 - Fontes/checkpoints/caches/freezes/código05C1/indexador/configGit preservados; sem OCR/rerun. Final index/selection/GT/Auditor/metrics/merge=false. Próximo SEPARADO=V5 Tier B neutral review package freeze; não preparado aqui, STOP após commit/push.
+
+## Checkpoint corrente — V5 package Tier B, 2026-10-09
+
+- [Package neutro Tier B](../audit/holdout/V5_TIER_B_REVIEW_PACKAGE.md) preparado e validado:4documentos/92páginas/156raw/156eventos automáticos (não defeitos confirmados), ordem global23–26 imutável, native4/ocr0, fingerprints/cópias byte-idênticas4/4. Contexto/lista ignorados vinculados por SHA256; freeze formal pelo commit de introdução/publicação.
+- TierAComplete=true/22documentos/330páginas efetivas/1370canônicas preservados, incluindo manifest efetivoR1 e decisões/erratas/checkpoints pós-freeze. TierBAdjudicated=false/PhaseBComplete=false; sem inspeção PDF/render/OCR/extração nova/indexador/interpretação raw nesta preparação; finalIndex/selection/GT/Auditor/metrics/merge=false.
+- Próximo SEPARADO=V5 Tier B neutral visual adjudication após publicação; STOP após push, sem TierC/D.
