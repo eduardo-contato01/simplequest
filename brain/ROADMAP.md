@@ -217,3 +217,12 @@ Este checkpoint prevalece sobre as prioridades históricas acima; freeze formal 
 - [ ] Próximo SEPARADO: **V5 freeze da seleção de144questões,3por documento**, não iniciado. STOP após publicar o índice; não selecionar/preparar GT/executar Auditor nesta consolidação.
 
 Preservação do índice sob decisão externa delimitada:5588arquivos distintos,5173comparações com referências históricas independentes e415auxiliares prospectivamente preservados, integridade histórica destes=not_independently_verifiable. Nenhuma identidade canônica depende exclusivamente dos quatro checkpoints B intermediários; exceção pós-freeze/pré-selection/Auditor registrada no relatório do índice e obrigatória na metodologia futura. Sem certificação histórica integral de todos os auxiliares; questões, PDFs, sete adjudicações e protocolo imutáveis.
+
+
+## Próxima prioridade V5 — seleção de 144 questões, 2026-10-13
+
+Este checkpoint prevalece após o segundo commit/push e SHA remoto confirmado.
+
+- [x] Regra prospectiva pré-sorteio publicada em `cd6ed90b1989c62b24c93fa1218b698c1021b894`, seguida de uma seleção oficial independente do Auditor, sem seed nova, retry ou troca manual. [Freeze da seleção](../audit/holdout/V5_QUESTION_SELECTION_FREEZE.md):48documentos R1/144objetos exatos/3por documento, replay Python+JavaScript/metadata/ranges/determinismo PASS.
+- Índice neutro e seleção completam os requisitos publicados da FaseB:PhaseBComplete=true/questionSelectionFrozen=true somente após esta publicação; finalQuestionIndexFrozen=true. Os registros anteriores são históricos e não foram reescritos.
+- [ ] Próximo SEPARADO e sujeito a nova autorização: **Ground Truth V5 com adjudicação humana independente**. Nenhum package GT criado, OCR/Auditor/métricas/merge iniciados. Preservar ressalvas pós-freeze, fontes incompletas, versão modificada e exceção415 sem certificação histórica retroativa.

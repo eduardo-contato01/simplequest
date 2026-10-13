@@ -276,3 +276,14 @@ Ver tambem: [[ARQUITETURA]], [[PROBLEMAS_CONHECIDOS]], [[ROADMAP]], [[AUDITORIA_
 - QuestionSelectionStarted=false/questionSelectionExecuted=false/groundTruthStarted=false/groundTruthCreated=false/auditorExecuted=false/metricsSeen=false/merge=false. Próximo SEPARADO=freeze da seleção144questões,3por documento. STOP após publicação do índice; não iniciar seleção/GT/Auditor aqui.
 
 Preservação do índice sob decisão externa delimitada:5588arquivos distintos,5173comparações com referências históricas independentes e415auxiliares prospectivamente preservados, integridade histórica destes=not_independently_verifiable. Nenhuma identidade canônica depende exclusivamente dos quatro checkpoints B intermediários; exceção pós-freeze/pré-selection/Auditor registrada no relatório do índice e obrigatória na metodologia futura. Sem certificação histórica integral de todos os auxiliares; questões, PDFs, sete adjudicações e protocolo imutáveis.
+
+
+## Checkpoint corrente — V5 seleção de 144 questões, 2026-10-13
+
+Este checkpoint prevalece após o segundo commit/push e confirmação do HEAD remoto; antes disso, o resultado local ainda aguarda freeze formal.
+
+- Regra prospectiva v5-qselect-tertile-sha256-v1 publicada antes do sorteio em `cd6ed90b1989c62b24c93fa1218b698c1021b894`, não pré-registro retroativo da FaseA. Seed documental original preservada; seletor stdlib independente do Auditor e oito testes sintéticos PASS.
+- Seleção oficial executada uma vez:48documentos na ordem do manifest efetivoR1, três questões por terço canônico e144IDs/objetos únicos; zero retries/seeds alternativas/trocas manuais. [Freeze da seleção](../audit/holdout/V5_QUESTION_SELECTION_FREEZE.md); replay independente Python+JavaScript e bytes determinísticos PASS.
+- Lista ordenada de IDs SHA256 `11a9db71ca167739dc6ef52c54e12ccd645789f66e05e1039c86c227d3b76e6a`; manifest SHA256 `91cd40933a02542d35f41e889c8754873bf92ea6ff5591f079eb3880b5ca4a46`; provenance SHA256 `f78ef04d6e425e64315dd175386dcdda49b260b5abd2099c90f5558b5a3129ee`. Índice original48/741/2136/sete adjudicações/R1/histórico intactos; ranges efetivos e metadata histórico1/efetivo21 preservados, substituto global22/lacunas global8 e exceção415/ressalvas transportados.
+- Após publicação confirmada:finalQuestionIndexFrozen=true/questionSelectionExecuted=true/questionSelectionFrozen=true/selectedQuestions=144/PhaseBComplete=true, pois índice neutro e freeze da seleção estarão publicados. Snapshots históricos false permanecem inalterados.
+- groundTruthStarted=false/groundTruthCreated=false/ocrExecuted=false/auditorExecuted=false/metricsSeen=false/merge=false. Próximo somente com nova autorização:GT V5 com adjudicação humana independente; não preparar pacotes nesta etapa. STOP após segundo push.
