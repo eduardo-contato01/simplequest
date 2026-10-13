@@ -1,0 +1,1495 @@
+{
+  "artifactType": "neutral_human_gt_review_packages_manifest",
+  "protocolVersion": "holdout-v5",
+  "sourceHead": "1605ff5a07cfcbfd5b11b161422bb7eb27398907",
+  "branch": "audit/holdout-v5-blind",
+  "frozenInputSha256s": {
+    "audit/holdout/manifest-v5-questions-frozen.json": "91cd40933a02542d35f41e889c8754873bf92ea6ff5591f079eb3880b5ca4a46",
+    "audit/holdout/manifest-v5-questions-frozen.provenance.json": "f78ef04d6e425e64315dd175386dcdda49b260b5abd2099c90f5558b5a3129ee",
+    "audit/holdout/question-index-v5-final.json": "a0930fe9c409170a5215042883e2bf1121c98bb530b251ad4eb59e5778ed31a7"
+  },
+  "orderedSelectedIdsSha256": "11a9db71ca167739dc6ef52c54e12ccd645789f66e05e1039c86c227d3b76e6a",
+  "preparerSha256": "3dc3dda752ec33813e0d25f22cdd0e8de9ca261dfb5b52ef112e55d38ad755e8",
+  "selftestSha256": "d9511afd97cd5ae083e8171d75035e904c5dcb1b8e245c4c0144eedc145931fe",
+  "reviewProtocolSha256": "68c0787a0e37b9d72dbe1f4b23cefce3b05a0b060d5b93153a268d1cdbcf6af3",
+  "methodologyCaveats": {
+    "sourceScope": "frozen_available_pdf_content; no certification of original examination completeness",
+    "replacement": "canonical global22 effective replacement; historical original retained only as provenance; post-freeze/performance-blind",
+    "pageCount": "canonical global21 sourceFrozenPageCount=1, effectivePhysicalPageCount=21; physical ranges use21",
+    "numbering": "canonical global8 has26 objects q1-17/q22-30; no q18-21 fabricated",
+    "modifiedSource": "canonical global48 frozen available modified version; no reconstruction of institutional original",
+    "historicalAuxiliaryIntegrity": "415 old auxiliaries prospectively preserved; not_independently_verifiable; historicalByteIdentityVerified=false; exception not reopened",
+    "schemaCompatibility": "own neutral V5 package validator; legacy functional schema supports only V1-V4; future filled GT V5 integration is a separate unresolved gate before official Auditor",
+    "independence": "no human decisions imported or simulated; prior assisted neutral adjudication is not independent human GT"
+  },
+  "publicationStatusAtCreation": "pending_introducing_commit_and_push",
+  "publicationContract": "effective after introducing commit, push and matching remote HEAD; local packages remain ignored and hash-bound",
+  "gates": {
+    "reviewPackagesPrepared": 16,
+    "documentsCovered": 48,
+    "selectedQuestionsCovered": 144,
+    "uniqueQuestionIds": 144,
+    "missingQuestions": 0,
+    "duplicateQuestionIds": 0,
+    "documentFingerprintMismatches": 0,
+    "invalidPageRanges": 0,
+    "labelsAutoFilled": 0,
+    "humanDecisionsImported": 0,
+    "groundTruthBatchesCreated": 0,
+    "groundTruthFinalCreated": false,
+    "auditorExecuted": false,
+    "metricsSeen": false
+  },
+  "formalStateAfterPublication": {
+    "PhaseBComplete": true,
+    "questionSelectionFrozen": true,
+    "groundTruthReviewPackagesPrepared": true,
+    "groundTruthHumanAdjudicationComplete": false,
+    "groundTruthCreated": false,
+    "auditorExecuted": false,
+    "metricsSeen": false,
+    "merge": false
+  },
+  "batches": [
+    {
+      "batch": "01",
+      "r1Positions": [
+        1,
+        2,
+        3
+      ],
+      "directory": "outputs/audit/holdout/v5-ground-truth-batch-01-review",
+      "documentIds": [
+        "v5-doc-429b811d62a29a28",
+        "v5-doc-9341853cd786543a",
+        "v5-doc-a37b092e0e967efc"
+      ],
+      "questionIds": [
+        "v5-doc-429b811d62a29a28:q4",
+        "v5-doc-429b811d62a29a28:q12",
+        "v5-doc-429b811d62a29a28:q18",
+        "v5-doc-9341853cd786543a:q1",
+        "v5-doc-9341853cd786543a:q42",
+        "v5-doc-9341853cd786543a:q98",
+        "v5-doc-a37b092e0e967efc:q3",
+        "v5-doc-a37b092e0e967efc:q21",
+        "v5-doc-a37b092e0e967efc:q38"
+      ],
+      "files": [
+        {
+          "name": "01_v5-doc-429b811d62a29a28.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/01_v5-doc-429b811d62a29a28.pdf",
+          "sizeBytes": 4620965,
+          "sha256": "429b811d62a29a28c9e2dfb8f89afc95fb0afa0d0529fe9e67a205dd1aa00605"
+        },
+        {
+          "name": "02_v5-doc-9341853cd786543a.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/02_v5-doc-9341853cd786543a.pdf",
+          "sizeBytes": 869240,
+          "sha256": "9341853cd786543a175749ae045cde1732f9909dd8706cd17e0a4dcda30a1a6d"
+        },
+        {
+          "name": "03_v5-doc-a37b092e0e967efc.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/03_v5-doc-a37b092e0e967efc.pdf",
+          "sizeBytes": 1742254,
+          "sha256": "a37b092e0e967efc24dd4806830ad446c8d9a10bda7ae83ea1180090a36ac5bf"
+        },
+        {
+          "name": "review-context.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/review-context.json",
+          "sizeBytes": 9446,
+          "sha256": "56b2e8274497951739d2d5b3e4abcc02b5441d734da99798208f49ebee49c528"
+        },
+        {
+          "name": "ANNOTATION_TEMPLATE.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/ANNOTATION_TEMPLATE.json",
+          "sizeBytes": 5314,
+          "sha256": "e4e96d673c21c6b1e4f709be7e8da3959fed8ffb82c46161bc6d104dfc118839"
+        },
+        {
+          "name": "FILES_TO_UPLOAD.txt",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/FILES_TO_UPLOAD.txt",
+          "sizeBytes": 182,
+          "sha256": "db2c6cb87b3143e71ba4294a37ffe6b62becc4d79647c89c8fd3e0f12c108ce8"
+        },
+        {
+          "name": "INTEGRITY_MANIFEST.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/INTEGRITY_MANIFEST.json",
+          "sizeBytes": 3197,
+          "sha256": "7f0f4adae35726d51c32468109cbaf699dddd443a2ebfd3001afc6419542a4bb"
+        }
+      ],
+      "pdfSources": [
+        {
+          "documentId": "v5-doc-429b811d62a29a28",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMB\\1º Ano\\CMB - 1ANO - 2017_2018 (port).pdf",
+          "sourceSha256": "429b811d62a29a28c9e2dfb8f89afc95fb0afa0d0529fe9e67a205dd1aa00605"
+        },
+        {
+          "documentId": "v5-doc-9341853cd786543a",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 2\\PAS 2 - 2014.pdf",
+          "sourceSha256": "9341853cd786543a175749ae045cde1732f9909dd8706cd17e0a4dcda30a1a6d"
+        },
+        {
+          "documentId": "v5-doc-a37b092e0e967efc",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMC\\6º Ano\\CMC - 6ANO - 2025_2026.pdf",
+          "sourceSha256": "a37b092e0e967efc24dd4806830ad446c8d9a10bda7ae83ea1180090a36ac5bf"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "batch": "02",
+      "r1Positions": [
+        4,
+        5,
+        6
+      ],
+      "directory": "outputs/audit/holdout/v5-ground-truth-batch-02-review",
+      "documentIds": [
+        "v5-doc-78d5d0d89420b8d3",
+        "v5-doc-906c5ae29d59a1ff",
+        "v5-doc-7a302456c4a6afbe"
+      ],
+      "questionIds": [
+        "v5-doc-78d5d0d89420b8d3:q8",
+        "v5-doc-78d5d0d89420b8d3:q17",
+        "v5-doc-78d5d0d89420b8d3:q39",
+        "v5-doc-906c5ae29d59a1ff:q5",
+        "v5-doc-906c5ae29d59a1ff:q17",
+        "v5-doc-906c5ae29d59a1ff:q28",
+        "v5-doc-7a302456c4a6afbe:q1",
+        "v5-doc-7a302456c4a6afbe:q14",
+        "v5-doc-7a302456c4a6afbe:q30"
+      ],
+      "files": [
+        {
+          "name": "04_v5-doc-78d5d0d89420b8d3.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-02-review/04_v5-doc-78d5d0d89420b8d3.pdf",
+          "sizeBytes": 1518410,
+          "sha256": "78d5d0d89420b8d3936b823099c7ad00044b008f5cab15b0ec19e28cd88ddf6e"
+        },
+        {
+          "name": "05_v5-doc-906c5ae29d59a1ff.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-02-review/05_v5-doc-906c5ae29d59a1ff.pdf",
+          "sizeBytes": 1405281,
+          "sha256": "906c5ae29d59a1ff734fd548b7ecd5552cdaab69a0c343496fab4b576f50f72b"
+        },
+        {
+          "name": "06_v5-doc-7a302456c4a6afbe.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-02-review/06_v5-doc-7a302456c4a6afbe.pdf",
+          "sizeBytes": 8801051,
+          "sha256": "7a302456c4a6afbe0451df3e4cdf7027dbedee4801f4d24ddc0babaf440e4191"
+        },
+        {
+          "name": "review-context.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-02-review/review-context.json",
+          "sizeBytes": 10411,
+          "sha256": "28b9562f5ece517d83bbf6a96f4433cc24c010ff44fe488cd885d1ca1fabb6ad"
+        },
+        {
+          "name": "ANNOTATION_TEMPLATE.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-02-review/ANNOTATION_TEMPLATE.json",
+          "sizeBytes": 5308,
+          "sha256": "87f97f26b14ba46f213159ae58ee9889c6968f720603dcd3cd043b50eaaa992e"
+        },
+        {
+          "name": "FILES_TO_UPLOAD.txt",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-02-review/FILES_TO_UPLOAD.txt",
+          "sizeBytes": 182,
+          "sha256": "7b847bfeeb6b6f152a1c97674a2c1015b337fb40a40cf83e86fb5f69b908b5f8"
+        },
+        {
+          "name": "INTEGRITY_MANIFEST.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-02-review/INTEGRITY_MANIFEST.json",
+          "sizeBytes": 3284,
+          "sha256": "a66e5f3917ebc8ecd1739927cf2e1cd6bd26c98cb73601020a090b1cdf10fa56"
+        }
+      ],
+      "pdfSources": [
+        {
+          "documentId": "v5-doc-78d5d0d89420b8d3",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\COLÉGIO SÓLIDO\\8º Ano\\SÓLIDO - 8ANO - 2018_2019 - PROVA DE BOLSAS.pdf",
+          "sourceSha256": "78d5d0d89420b8d3936b823099c7ad00044b008f5cab15b0ec19e28cd88ddf6e"
+        },
+        {
+          "documentId": "v5-doc-906c5ae29d59a1ff",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMT\\7º Ano\\CMT - 7ANO - 2016_2017 Remanescentes.pdf",
+          "sourceSha256": "906c5ae29d59a1ff734fd548b7ecd5552cdaab69a0c343496fab4b576f50f72b"
+        },
+        {
+          "documentId": "v5-doc-7a302456c4a6afbe",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\COLÉGIO PÓDION\\PÓDION - 5ANO - 2024_2025 - PROVA DE BOLSAS.pdf",
+          "sourceSha256": "7a302456c4a6afbe0451df3e4cdf7027dbedee4801f4d24ddc0babaf440e4191"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "batch": "03",
+      "r1Positions": [
+        7,
+        8,
+        9
+      ],
+      "directory": "outputs/audit/holdout/v5-ground-truth-batch-03-review",
+      "documentIds": [
+        "v5-doc-9e5595dac9eb75e3",
+        "v5-doc-c6d6158a42ac379f",
+        "v5-doc-0c51e49589f148bc"
+      ],
+      "questionIds": [
+        "v5-doc-9e5595dac9eb75e3:q4",
+        "v5-doc-9e5595dac9eb75e3:q19",
+        "v5-doc-9e5595dac9eb75e3:q29",
+        "v5-doc-c6d6158a42ac379f:q2",
+        "v5-doc-c6d6158a42ac379f:q7",
+        "v5-doc-c6d6158a42ac379f:q15",
+        "v5-doc-0c51e49589f148bc:q4",
+        "v5-doc-0c51e49589f148bc:q7",
+        "v5-doc-0c51e49589f148bc:q13"
+      ],
+      "files": [
+        {
+          "name": "07_v5-doc-9e5595dac9eb75e3.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-03-review/07_v5-doc-9e5595dac9eb75e3.pdf",
+          "sizeBytes": 1473496,
+          "sha256": "9e5595dac9eb75e3dffb955e2a39f1268c330fc4ecabe8250f3c89e17604eb32"
+        },
+        {
+          "name": "08_v5-doc-c6d6158a42ac379f.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-03-review/08_v5-doc-c6d6158a42ac379f.pdf",
+          "sizeBytes": 127848,
+          "sha256": "c6d6158a42ac379fcd8ce8f39cc93b402da5441ad551c671d47d1c976991488b"
+        },
+        {
+          "name": "09_v5-doc-0c51e49589f148bc.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-03-review/09_v5-doc-0c51e49589f148bc.pdf",
+          "sizeBytes": 716640,
+          "sha256": "0c51e49589f148bc6f66b4b1822b3bf78b9a57f7e78a055f09648703d9230d87"
+        },
+        {
+          "name": "review-context.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-03-review/review-context.json",
+          "sizeBytes": 10233,
+          "sha256": "ad3b7cb6010b0401324dad9830dab2e6064f756de2a5df475c9d11223d97e804"
+        },
+        {
+          "name": "ANNOTATION_TEMPLATE.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-03-review/ANNOTATION_TEMPLATE.json",
+          "sizeBytes": 5298,
+          "sha256": "9aafaa359335182cb751aa7e08b076c35ff07dd16da5b4ca657ba337ea0f9dfe"
+        },
+        {
+          "name": "FILES_TO_UPLOAD.txt",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-03-review/FILES_TO_UPLOAD.txt",
+          "sizeBytes": 182,
+          "sha256": "4163e6ba400a6ef37a86d19fd76e1cbd56d20a4e74b0d7f5d0a6df91f2a4b14a"
+        },
+        {
+          "name": "INTEGRITY_MANIFEST.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-03-review/INTEGRITY_MANIFEST.json",
+          "sizeBytes": 3259,
+          "sha256": "a488ca18a03600decb1a6d8bd99bd6784734cd79fee428ea2b71f5aaea082e91"
+        }
+      ],
+      "pdfSources": [
+        {
+          "documentId": "v5-doc-9e5595dac9eb75e3",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\COLÉGIO SÓLIDO\\9º Ano\\SÓLIDO - 9ANO - 2016_2017 - PROVA DE BOLSAS.pdf",
+          "sourceSha256": "9e5595dac9eb75e3dffb955e2a39f1268c330fc4ecabe8250f3c89e17604eb32"
+        },
+        {
+          "documentId": "v5-doc-c6d6158a42ac379f",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSM\\6º Ano\\CMSM - 6ANO - 2009_2010 (mat).pdf",
+          "sourceSha256": "c6d6158a42ac379fcd8ce8f39cc93b402da5441ad551c671d47d1c976991488b"
+        },
+        {
+          "documentId": "v5-doc-0c51e49589f148bc",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMCG\\6º Ano\\CMCG - 6ANO - 2011_2012 (port).pdf",
+          "sourceSha256": "0c51e49589f148bc6f66b4b1822b3bf78b9a57f7e78a055f09648703d9230d87"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "batch": "04",
+      "r1Positions": [
+        10,
+        11,
+        12
+      ],
+      "directory": "outputs/audit/holdout/v5-ground-truth-batch-04-review",
+      "documentIds": [
+        "v5-doc-91b5252bd14b8900",
+        "v5-doc-34e3910f5e106aae",
+        "v5-doc-74e153f9c146d887"
+      ],
+      "questionIds": [
+        "v5-doc-91b5252bd14b8900:q4",
+        "v5-doc-91b5252bd14b8900:q14",
+        "v5-doc-91b5252bd14b8900:q21",
+        "v5-doc-34e3910f5e106aae:q3",
+        "v5-doc-34e3910f5e106aae:q11",
+        "v5-doc-34e3910f5e106aae:q18",
+        "v5-doc-74e153f9c146d887:q5",
+        "v5-doc-74e153f9c146d887:q10",
+        "v5-doc-74e153f9c146d887:q16"
+      ],
+      "files": [
+        {
+          "name": "10_v5-doc-91b5252bd14b8900.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-04-review/10_v5-doc-91b5252bd14b8900.pdf",
+          "sizeBytes": 902702,
+          "sha256": "91b5252bd14b8900e1a6d61519bff82687312d2c7b76e28cb8bb0247f58a97cf"
+        },
+        {
+          "name": "11_v5-doc-34e3910f5e106aae.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-04-review/11_v5-doc-34e3910f5e106aae.pdf",
+          "sizeBytes": 476046,
+          "sha256": "34e3910f5e106aae9ad6f03efcc3456743312f2f7d08c6ded9bfa517c4885e3d"
+        },
+        {
+          "name": "12_v5-doc-74e153f9c146d887.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-04-review/12_v5-doc-74e153f9c146d887.pdf",
+          "sizeBytes": 4797969,
+          "sha256": "74e153f9c146d8878547d6f5fd0538953c61fcb15f17f27c6d1cfcddfadee53d"
+        },
+        {
+          "name": "review-context.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-04-review/review-context.json",
+          "sizeBytes": 10343,
+          "sha256": "f037c11d19faa34c12a6d6d23933955e6d587caabba59151aa4a4f5a22fc1f16"
+        },
+        {
+          "name": "ANNOTATION_TEMPLATE.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-04-review/ANNOTATION_TEMPLATE.json",
+          "sizeBytes": 5308,
+          "sha256": "02052bd4df348972e6980da75e5393f4cd11097549aeec72fe5ac7c5dcb5ee66"
+        },
+        {
+          "name": "FILES_TO_UPLOAD.txt",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-04-review/FILES_TO_UPLOAD.txt",
+          "sizeBytes": 182,
+          "sha256": "03e6e7ec223cb096eb088522d7df097bf0a6a8d32fea4a4dd5637de0f55dc712"
+        },
+        {
+          "name": "INTEGRITY_MANIFEST.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-04-review/INTEGRITY_MANIFEST.json",
+          "sizeBytes": 3227,
+          "sha256": "f84f2071f3c20cf9ad6b010331c19e8aa17f11f610ec2773d9f72dbf2739ed5e"
+        }
+      ],
+      "pdfSources": [
+        {
+          "documentId": "v5-doc-91b5252bd14b8900",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMDPII\\1º Ano\\CMDPII - 1ANO - 2023_2024.pdf",
+          "sourceSha256": "91b5252bd14b8900e1a6d61519bff82687312d2c7b76e28cb8bb0247f58a97cf"
+        },
+        {
+          "documentId": "v5-doc-34e3910f5e106aae",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMM\\6º Ano\\CMM - 6ANO - 2013_2014 (mat).pdf",
+          "sourceSha256": "34e3910f5e106aae9ad6f03efcc3456743312f2f7d08c6ded9bfa517c4885e3d"
+        },
+        {
+          "documentId": "v5-doc-74e153f9c146d887",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSP\\6º Ano\\CMSP - 6ANO - 2019_2020 (mat).pdf",
+          "sourceSha256": "74e153f9c146d8878547d6f5fd0538953c61fcb15f17f27c6d1cfcddfadee53d"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "batch": "05",
+      "r1Positions": [
+        13,
+        14,
+        15
+      ],
+      "directory": "outputs/audit/holdout/v5-ground-truth-batch-05-review",
+      "documentIds": [
+        "v5-doc-ae2f4e91af8a01f9",
+        "v5-doc-815b83630e3d8c98",
+        "v5-doc-e9603e9180e6028b"
+      ],
+      "questionIds": [
+        "v5-doc-ae2f4e91af8a01f9:q24",
+        "v5-doc-ae2f4e91af8a01f9:q99",
+        "v5-doc-ae2f4e91af8a01f9:q107",
+        "v5-doc-815b83630e3d8c98:q5",
+        "v5-doc-815b83630e3d8c98:q13",
+        "v5-doc-815b83630e3d8c98:q20",
+        "v5-doc-e9603e9180e6028b:q2",
+        "v5-doc-e9603e9180e6028b:q8",
+        "v5-doc-e9603e9180e6028b:q12"
+      ],
+      "files": [
+        {
+          "name": "13_v5-doc-ae2f4e91af8a01f9.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-05-review/13_v5-doc-ae2f4e91af8a01f9.pdf",
+          "sizeBytes": 2598599,
+          "sha256": "ae2f4e91af8a01f933ec58bd5ca44449e1b7aba486e324e21a6b3eb08058ed4a"
+        },
+        {
+          "name": "14_v5-doc-815b83630e3d8c98.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-05-review/14_v5-doc-815b83630e3d8c98.pdf",
+          "sizeBytes": 1014177,
+          "sha256": "815b83630e3d8c9899695cdcc4a30f96ee4a5f411d541d954c534cd5a8f9ef1a"
+        },
+        {
+          "name": "15_v5-doc-e9603e9180e6028b.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-05-review/15_v5-doc-e9603e9180e6028b.pdf",
+          "sizeBytes": 8336643,
+          "sha256": "e9603e9180e6028ba3c7bb833cffd85d864e7f35233076c5fad1a96e26446207"
+        },
+        {
+          "name": "review-context.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-05-review/review-context.json",
+          "sizeBytes": 10683,
+          "sha256": "aed42670288da5c610b35df62cf0219e05a931b4856c77ccffdfcdb825248ee7"
+        },
+        {
+          "name": "ANNOTATION_TEMPLATE.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-05-review/ANNOTATION_TEMPLATE.json",
+          "sizeBytes": 5307,
+          "sha256": "65880b4710507b14f0a0baceeb91d3f643de05c141ee0b85a060a4823366ca22"
+        },
+        {
+          "name": "FILES_TO_UPLOAD.txt",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-05-review/FILES_TO_UPLOAD.txt",
+          "sizeBytes": 182,
+          "sha256": "077163065faa66896fe305a6d24d7f168b18de3bef3d69e020daaede3974ce13"
+        },
+        {
+          "name": "INTEGRITY_MANIFEST.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-05-review/INTEGRITY_MANIFEST.json",
+          "sizeBytes": 3228,
+          "sha256": "d062e33d7e541824363f27705b7e76a246ec032a251e89d376cbfb857e0c60f1"
+        }
+      ],
+      "pdfSources": [
+        {
+          "documentId": "v5-doc-ae2f4e91af8a01f9",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\VESTIBULAR_UNB\\VEST UnB 2021.pdf",
+          "sourceSha256": "ae2f4e91af8a01f933ec58bd5ca44449e1b7aba486e324e21a6b3eb08058ed4a"
+        },
+        {
+          "documentId": "v5-doc-815b83630e3d8c98",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMF\\6º Ano\\CMF - 6ANO - 2008_2009 (port).pdf",
+          "sourceSha256": "815b83630e3d8c9899695cdcc4a30f96ee4a5f411d541d954c534cd5a8f9ef1a"
+        },
+        {
+          "documentId": "v5-doc-e9603e9180e6028b",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMJF\\1º Ano\\CMJF - 1ANO - 2015_2016 (port) (Prova 1).pdf",
+          "sourceSha256": "e9603e9180e6028ba3c7bb833cffd85d864e7f35233076c5fad1a96e26446207"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "batch": "06",
+      "r1Positions": [
+        16,
+        17,
+        18
+      ],
+      "directory": "outputs/audit/holdout/v5-ground-truth-batch-06-review",
+      "documentIds": [
+        "v5-doc-dd8461744150ef4b",
+        "v5-doc-a7256b9befdea91b",
+        "v5-doc-cb4e2c7c9e714d00"
+      ],
+      "questionIds": [
+        "v5-doc-dd8461744150ef4b:q6",
+        "v5-doc-dd8461744150ef4b:q8",
+        "v5-doc-dd8461744150ef4b:q18",
+        "v5-doc-a7256b9befdea91b:q2",
+        "v5-doc-a7256b9befdea91b:q12",
+        "v5-doc-a7256b9befdea91b:q17",
+        "v5-doc-cb4e2c7c9e714d00:q4",
+        "v5-doc-cb4e2c7c9e714d00:q15",
+        "v5-doc-cb4e2c7c9e714d00:q22"
+      ],
+      "files": [
+        {
+          "name": "16_v5-doc-dd8461744150ef4b.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-06-review/16_v5-doc-dd8461744150ef4b.pdf",
+          "sizeBytes": 923141,
+          "sha256": "dd8461744150ef4bd83208fbadb512a403a915633d0dcfb681df4b56f869dcac"
+        },
+        {
+          "name": "17_v5-doc-a7256b9befdea91b.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-06-review/17_v5-doc-a7256b9befdea91b.pdf",
+          "sizeBytes": 900526,
+          "sha256": "a7256b9befdea91bb320dce88545d7ddafd85cd3d52e46ce4e27b9ec863c00d2"
+        },
+        {
+          "name": "18_v5-doc-cb4e2c7c9e714d00.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-06-review/18_v5-doc-cb4e2c7c9e714d00.pdf",
+          "sizeBytes": 1234482,
+          "sha256": "cb4e2c7c9e714d00249004ccfa6d5a29b461ccb978c1535c27f88122c0d4cca8"
+        },
+        {
+          "name": "review-context.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-06-review/review-context.json",
+          "sizeBytes": 9773,
+          "sha256": "5a3b06042b0993f7c9b169406b7421d81826c21732e80bbed43d3a559f89c456"
+        },
+        {
+          "name": "ANNOTATION_TEMPLATE.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-06-review/ANNOTATION_TEMPLATE.json",
+          "sizeBytes": 5306,
+          "sha256": "66f4214a694460b43b4af5546273c03b34b6d028a2b8c90b82f9d8bc8af01277"
+        },
+        {
+          "name": "FILES_TO_UPLOAD.txt",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-06-review/FILES_TO_UPLOAD.txt",
+          "sizeBytes": 182,
+          "sha256": "780044b79237842e35faaf3a3c0d93978d8fda4f75b3381e5cbd4c4356b158cf"
+        },
+        {
+          "name": "INTEGRITY_MANIFEST.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-06-review/INTEGRITY_MANIFEST.json",
+          "sizeBytes": 3220,
+          "sha256": "3330c712cdc08f1299a5e703eefc206d7e917bf708e4955f67ab9ad8ae68084e"
+        }
+      ],
+      "pdfSources": [
+        {
+          "documentId": "v5-doc-dd8461744150ef4b",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMRJ\\6º Ano\\CMRJ - 6ANO - 2012_2013 (mat).pdf",
+          "sourceSha256": "dd8461744150ef4bd83208fbadb512a403a915633d0dcfb681df4b56f869dcac"
+        },
+        {
+          "documentId": "v5-doc-a7256b9befdea91b",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBH\\1º Ano\\CMBH - 1ANO - 2020_2021.pdf",
+          "sourceSha256": "a7256b9befdea91bb320dce88545d7ddafd85cd3d52e46ce4e27b9ec863c00d2"
+        },
+        {
+          "documentId": "v5-doc-cb4e2c7c9e714d00",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBel\\1º Ano\\CMBel - 1ANO - 2022_2023.pdf",
+          "sourceSha256": "cb4e2c7c9e714d00249004ccfa6d5a29b461ccb978c1535c27f88122c0d4cca8"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "batch": "07",
+      "r1Positions": [
+        19,
+        20,
+        21
+      ],
+      "directory": "outputs/audit/holdout/v5-ground-truth-batch-07-review",
+      "documentIds": [
+        "v5-doc-e0b6c6a249033308",
+        "v5-doc-2300b505b11855a2",
+        "v5-doc-84179ac96b058ffb"
+      ],
+      "questionIds": [
+        "v5-doc-e0b6c6a249033308:q27",
+        "v5-doc-e0b6c6a249033308:q76",
+        "v5-doc-e0b6c6a249033308:q116",
+        "v5-doc-2300b505b11855a2:q2",
+        "v5-doc-2300b505b11855a2:q13",
+        "v5-doc-2300b505b11855a2:q15",
+        "v5-doc-84179ac96b058ffb:q6",
+        "v5-doc-84179ac96b058ffb:q16",
+        "v5-doc-84179ac96b058ffb:q35"
+      ],
+      "files": [
+        {
+          "name": "19_v5-doc-e0b6c6a249033308.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-07-review/19_v5-doc-e0b6c6a249033308.pdf",
+          "sizeBytes": 511151,
+          "sha256": "e0b6c6a249033308b2a83a54a73997342f2f5ca9a4ea502e0d5c11bfbdf7ce59"
+        },
+        {
+          "name": "20_v5-doc-2300b505b11855a2.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-07-review/20_v5-doc-2300b505b11855a2.pdf",
+          "sizeBytes": 1440171,
+          "sha256": "2300b505b11855a2b555ea8b24e792948072340d5ceb4e4e7efce1b326784970"
+        },
+        {
+          "name": "21_v5-doc-84179ac96b058ffb.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-07-review/21_v5-doc-84179ac96b058ffb.pdf",
+          "sizeBytes": 941336,
+          "sha256": "84179ac96b058ffb43a18ffbbaea9b573e43759b6c5942fa3b1d09266ac2afe6"
+        },
+        {
+          "name": "review-context.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-07-review/review-context.json",
+          "sizeBytes": 9562,
+          "sha256": "0ff19a5fa7f7bb5f28ee8f71fe9dceef4c0da777d9664355590d1eed86855d8c"
+        },
+        {
+          "name": "ANNOTATION_TEMPLATE.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-07-review/ANNOTATION_TEMPLATE.json",
+          "sizeBytes": 5315,
+          "sha256": "e408b5dcda553d06f63be613f5e5bb04e712810cee5e9b0f0c326df2eec90bc3"
+        },
+        {
+          "name": "FILES_TO_UPLOAD.txt",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-07-review/FILES_TO_UPLOAD.txt",
+          "sizeBytes": 182,
+          "sha256": "05b7ef8c46dd378b8cd72a0a46f99b98bd2b9727b2952b9f358a556cb685c4b6"
+        },
+        {
+          "name": "INTEGRITY_MANIFEST.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-07-review/INTEGRITY_MANIFEST.json",
+          "sizeBytes": 3196,
+          "sha256": "ecc02622f8b27e3b0f1ce49f52a56079696bef24b7f8b419c1146509ff52239e"
+        }
+      ],
+      "pdfSources": [
+        {
+          "documentId": "v5-doc-e0b6c6a249033308",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 1\\PAS 1 - 2010.pdf",
+          "sourceSha256": "e0b6c6a249033308b2a83a54a73997342f2f5ca9a4ea502e0d5c11bfbdf7ce59"
+        },
+        {
+          "documentId": "v5-doc-2300b505b11855a2",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMS\\6º Ano\\CMS - 6ANO - 2019_2020 (port).pdf",
+          "sourceSha256": "2300b505b11855a2b555ea8b24e792948072340d5ceb4e4e7efce1b326784970"
+        },
+        {
+          "documentId": "v5-doc-84179ac96b058ffb",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMR\\6º Ano\\CMR - 6ANO - 2023_2024.pdf",
+          "sourceSha256": "84179ac96b058ffb43a18ffbbaea9b573e43759b6c5942fa3b1d09266ac2afe6"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "batch": "08",
+      "r1Positions": [
+        22,
+        23,
+        24
+      ],
+      "directory": "outputs/audit/holdout/v5-ground-truth-batch-08-review",
+      "documentIds": [
+        "v5-doc-05c35f7183da4927",
+        "v5-doc-bd657a7d79e90389",
+        "v5-doc-02531e2612ade970"
+      ],
+      "questionIds": [
+        "v5-doc-05c35f7183da4927:q1",
+        "v5-doc-05c35f7183da4927:q9",
+        "v5-doc-05c35f7183da4927:q20",
+        "v5-doc-bd657a7d79e90389:q33",
+        "v5-doc-bd657a7d79e90389:q43",
+        "v5-doc-bd657a7d79e90389:q93",
+        "v5-doc-02531e2612ade970:q1",
+        "v5-doc-02531e2612ade970:q12",
+        "v5-doc-02531e2612ade970:q14"
+      ],
+      "files": [
+        {
+          "name": "22_v5-doc-05c35f7183da4927.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-08-review/22_v5-doc-05c35f7183da4927.pdf",
+          "sizeBytes": 463283,
+          "sha256": "05c35f7183da4927c12b2ae2845f8c2b5e74df2591dd7eabaf63c48ca666223f"
+        },
+        {
+          "name": "23_v5-doc-bd657a7d79e90389.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-08-review/23_v5-doc-bd657a7d79e90389.pdf",
+          "sizeBytes": 1562102,
+          "sha256": "bd657a7d79e90389ae6bced8a39cb07dd1b2cdc162e368f7cad1093f2083552a"
+        },
+        {
+          "name": "24_v5-doc-02531e2612ade970.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-08-review/24_v5-doc-02531e2612ade970.pdf",
+          "sizeBytes": 2264831,
+          "sha256": "02531e2612ade970720cc0a153080e77869fc9edc6f2a74cfed882f5aeec2138"
+        },
+        {
+          "name": "review-context.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-08-review/review-context.json",
+          "sizeBytes": 9984,
+          "sha256": "246002fd3920efe051686bb1e8cd3fb59278bd2d83e42051931357c89512d978"
+        },
+        {
+          "name": "ANNOTATION_TEMPLATE.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-08-review/ANNOTATION_TEMPLATE.json",
+          "sizeBytes": 5305,
+          "sha256": "88767562a318da35fde068d07125826289dabcac2d03d3ce539b044b5c2c6d7e"
+        },
+        {
+          "name": "FILES_TO_UPLOAD.txt",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-08-review/FILES_TO_UPLOAD.txt",
+          "sizeBytes": 182,
+          "sha256": "cf9c74087030b5795b7558bdc7a29b17eba5f0babd7b761e09f92e12b227130a"
+        },
+        {
+          "name": "INTEGRITY_MANIFEST.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-08-review/INTEGRITY_MANIFEST.json",
+          "sizeBytes": 3208,
+          "sha256": "80abd9956118c7beeddb501fb6a8373e738c04ba7aea3c783c6104b3c9de37a6"
+        }
+      ],
+      "pdfSources": [
+        {
+          "documentId": "v5-doc-05c35f7183da4927",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMPA\\1º Ano\\CMPA - 1ANO - 2018_2019 (port).pdf",
+          "sourceSha256": "05c35f7183da4927c12b2ae2845f8c2b5e74df2591dd7eabaf63c48ca666223f"
+        },
+        {
+          "documentId": "v5-doc-bd657a7d79e90389",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 3\\PAS 3 - 2017.pdf",
+          "sourceSha256": "bd657a7d79e90389ae6bced8a39cb07dd1b2cdc162e368f7cad1093f2083552a"
+        },
+        {
+          "documentId": "v5-doc-02531e2612ade970",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSM\\1º Ano\\CMSM - 1ANO - 2006_2007 (port).pdf",
+          "sourceSha256": "02531e2612ade970720cc0a153080e77869fc9edc6f2a74cfed882f5aeec2138"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "batch": "09",
+      "r1Positions": [
+        25,
+        26,
+        27
+      ],
+      "directory": "outputs/audit/holdout/v5-ground-truth-batch-09-review",
+      "documentIds": [
+        "v5-doc-e223f9e9c5cea0cb",
+        "v5-doc-a8e098aad9a7ece4",
+        "v5-doc-4ec5bc5117bb7440"
+      ],
+      "questionIds": [
+        "v5-doc-e223f9e9c5cea0cb:q6",
+        "v5-doc-e223f9e9c5cea0cb:q24",
+        "v5-doc-e223f9e9c5cea0cb:q28",
+        "v5-doc-a8e098aad9a7ece4:q39",
+        "v5-doc-a8e098aad9a7ece4:q62",
+        "v5-doc-a8e098aad9a7ece4:q85",
+        "v5-doc-4ec5bc5117bb7440:q19",
+        "v5-doc-4ec5bc5117bb7440:q64",
+        "v5-doc-4ec5bc5117bb7440:q143"
+      ],
+      "files": [
+        {
+          "name": "25_v5-doc-e223f9e9c5cea0cb.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-09-review/25_v5-doc-e223f9e9c5cea0cb.pdf",
+          "sizeBytes": 576600,
+          "sha256": "e223f9e9c5cea0cb1bb88a9ea4efbcba7fb6cb997e99ef19aab92fae14e9730e"
+        },
+        {
+          "name": "26_v5-doc-a8e098aad9a7ece4.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-09-review/26_v5-doc-a8e098aad9a7ece4.pdf",
+          "sizeBytes": 532649,
+          "sha256": "a8e098aad9a7ece4f16a549cd1c92f2531903d0f7fff24fe6ed695ff61306ef0"
+        },
+        {
+          "name": "27_v5-doc-4ec5bc5117bb7440.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-09-review/27_v5-doc-4ec5bc5117bb7440.pdf",
+          "sizeBytes": 871064,
+          "sha256": "4ec5bc5117bb7440c96231090f3e99c63596c3d64607ac0c5ef4d4f41db39e3a"
+        },
+        {
+          "name": "review-context.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-09-review/review-context.json",
+          "sizeBytes": 8964,
+          "sha256": "ebc0ae75b9fe94b81ab9a50c529507d1226d594f1e28d139921ffda0fc284684"
+        },
+        {
+          "name": "ANNOTATION_TEMPLATE.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-09-review/ANNOTATION_TEMPLATE.json",
+          "sizeBytes": 5314,
+          "sha256": "a872f7c06a3e920d6f72a6976d0882a88fb3ba308d7340ca01668fa9493affc9"
+        },
+        {
+          "name": "FILES_TO_UPLOAD.txt",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-09-review/FILES_TO_UPLOAD.txt",
+          "sizeBytes": 182,
+          "sha256": "4755aa90a2c64b34112b79ba4a4e7dc247837abb39bbf0030f7e783a7a78c1a3"
+        },
+        {
+          "name": "INTEGRITY_MANIFEST.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-09-review/INTEGRITY_MANIFEST.json",
+          "sizeBytes": 3182,
+          "sha256": "306f4b4221673b9442c900315de8ae407367a527d2415c966dbda01300f27c6c"
+        }
+      ],
+      "pdfSources": [
+        {
+          "documentId": "v5-doc-e223f9e9c5cea0cb",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\OUTRAS\\CMPCE\\CMPCE - 6º ANO - 2023.pdf",
+          "sourceSha256": "e223f9e9c5cea0cb1bb88a9ea4efbcba7fb6cb997e99ef19aab92fae14e9730e"
+        },
+        {
+          "documentId": "v5-doc-a8e098aad9a7ece4",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 1\\PAS 1 - 2007.pdf",
+          "sourceSha256": "a8e098aad9a7ece4f16a549cd1c92f2531903d0f7fff24fe6ed695ff61306ef0"
+        },
+        {
+          "documentId": "v5-doc-4ec5bc5117bb7440",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\VESTIBULAR_UNB\\VEST UnB 2004.pdf",
+          "sourceSha256": "4ec5bc5117bb7440c96231090f3e99c63596c3d64607ac0c5ef4d4f41db39e3a"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "batch": "10",
+      "r1Positions": [
+        28,
+        29,
+        30
+      ],
+      "directory": "outputs/audit/holdout/v5-ground-truth-batch-10-review",
+      "documentIds": [
+        "v5-doc-2442b4ab742e42f2",
+        "v5-doc-e123ad77b8edc98f",
+        "v5-doc-675affeba8d87308"
+      ],
+      "questionIds": [
+        "v5-doc-2442b4ab742e42f2:q5",
+        "v5-doc-2442b4ab742e42f2:q7",
+        "v5-doc-2442b4ab742e42f2:q20",
+        "v5-doc-e123ad77b8edc98f:q4",
+        "v5-doc-e123ad77b8edc98f:q8",
+        "v5-doc-e123ad77b8edc98f:q20",
+        "v5-doc-675affeba8d87308:q5",
+        "v5-doc-675affeba8d87308:q12",
+        "v5-doc-675affeba8d87308:q17"
+      ],
+      "files": [
+        {
+          "name": "28_v5-doc-2442b4ab742e42f2.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-10-review/28_v5-doc-2442b4ab742e42f2.pdf",
+          "sizeBytes": 1723103,
+          "sha256": "2442b4ab742e42f29fccf524f47f841b7bf2592938c0fd528e6b51c99f952134"
+        },
+        {
+          "name": "29_v5-doc-e123ad77b8edc98f.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-10-review/29_v5-doc-e123ad77b8edc98f.pdf",
+          "sizeBytes": 790821,
+          "sha256": "e123ad77b8edc98fdb7184c07925a676766bad4cb9d744cb3a22a2355cda0f54"
+        },
+        {
+          "name": "30_v5-doc-675affeba8d87308.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-10-review/30_v5-doc-675affeba8d87308.pdf",
+          "sizeBytes": 1067935,
+          "sha256": "675affeba8d87308980a7e0d328616a1461538ab1bf4f1c2f556aba549078e12"
+        },
+        {
+          "name": "review-context.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-10-review/review-context.json",
+          "sizeBytes": 9444,
+          "sha256": "a5d077351b1b9fa8684b0feb9b66f608bf6d8b9476e14cf37af353aa93dadeb7"
+        },
+        {
+          "name": "ANNOTATION_TEMPLATE.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-10-review/ANNOTATION_TEMPLATE.json",
+          "sizeBytes": 5312,
+          "sha256": "2d47a1bc76f5dc96decffc07876b4f2a9e43f4dffb05f3a4ab7c06ea523b4d70"
+        },
+        {
+          "name": "FILES_TO_UPLOAD.txt",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-10-review/FILES_TO_UPLOAD.txt",
+          "sizeBytes": 182,
+          "sha256": "96adfc2476400200ac84a64ef0d01d8e3f416d9055d303e1f86d777ccef84381"
+        },
+        {
+          "name": "INTEGRITY_MANIFEST.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-10-review/INTEGRITY_MANIFEST.json",
+          "sizeBytes": 3222,
+          "sha256": "6c92220c46a5145343bfb0c3b54ce25d89002ed3344d34605aa5518f9d85bd7a"
+        }
+      ],
+      "pdfSources": [
+        {
+          "documentId": "v5-doc-2442b4ab742e42f2",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMR\\6º Ano\\CMR - 6ANO - 2013_2014 (mat).pdf",
+          "sourceSha256": "2442b4ab742e42f29fccf524f47f841b7bf2592938c0fd528e6b51c99f952134"
+        },
+        {
+          "documentId": "v5-doc-e123ad77b8edc98f",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMCG\\6º Ano\\CMCG - 6ANO - 2015_2016 (port).pdf",
+          "sourceSha256": "e123ad77b8edc98fdb7184c07925a676766bad4cb9d744cb3a22a2355cda0f54"
+        },
+        {
+          "documentId": "v5-doc-675affeba8d87308",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMT\\6º Ano\\CMT - 6ANO - 2014_2015.pdf",
+          "sourceSha256": "675affeba8d87308980a7e0d328616a1461538ab1bf4f1c2f556aba549078e12"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "batch": "11",
+      "r1Positions": [
+        31,
+        32,
+        33
+      ],
+      "directory": "outputs/audit/holdout/v5-ground-truth-batch-11-review",
+      "documentIds": [
+        "v5-doc-506c709758cb13a9",
+        "v5-doc-3a0c4b28948e4a30",
+        "v5-doc-143f3f337e22fb52"
+      ],
+      "questionIds": [
+        "v5-doc-506c709758cb13a9:q2",
+        "v5-doc-506c709758cb13a9:q19",
+        "v5-doc-506c709758cb13a9:q26",
+        "v5-doc-3a0c4b28948e4a30:q8",
+        "v5-doc-3a0c4b28948e4a30:q16",
+        "v5-doc-3a0c4b28948e4a30:q21",
+        "v5-doc-143f3f337e22fb52:q1",
+        "v5-doc-143f3f337e22fb52:q20",
+        "v5-doc-143f3f337e22fb52:q31"
+      ],
+      "files": [
+        {
+          "name": "31_v5-doc-506c709758cb13a9.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-11-review/31_v5-doc-506c709758cb13a9.pdf",
+          "sizeBytes": 10037793,
+          "sha256": "506c709758cb13a9f8cc5d5454e168e61a96f5a1731f9003bfc2ae94013c3749"
+        },
+        {
+          "name": "32_v5-doc-3a0c4b28948e4a30.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-11-review/32_v5-doc-3a0c4b28948e4a30.pdf",
+          "sizeBytes": 245590,
+          "sha256": "3a0c4b28948e4a30c92778da2ef70afef78740b77295639056ee697e9333c6e2"
+        },
+        {
+          "name": "33_v5-doc-143f3f337e22fb52.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-11-review/33_v5-doc-143f3f337e22fb52.pdf",
+          "sizeBytes": 1955602,
+          "sha256": "143f3f337e22fb529c8e610ca215f16214b425761ec1bd9b47e121a384bf2474"
+        },
+        {
+          "name": "review-context.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-11-review/review-context.json",
+          "sizeBytes": 10586,
+          "sha256": "a7325950e02c3044b1c038d7922137eae944a3cc8889f09d18097b9608cb1f9f"
+        },
+        {
+          "name": "ANNOTATION_TEMPLATE.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-11-review/ANNOTATION_TEMPLATE.json",
+          "sizeBytes": 5320,
+          "sha256": "0cd07f8d4ce1a2bc0d55cac7218209972db56186d2a3098a3844e4e3728766b5"
+        },
+        {
+          "name": "FILES_TO_UPLOAD.txt",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-11-review/FILES_TO_UPLOAD.txt",
+          "sizeBytes": 182,
+          "sha256": "33737eec8ad1e0936e94cd21daabdde9b50acb29e579c819bcd2cc872fa3b480"
+        },
+        {
+          "name": "INTEGRITY_MANIFEST.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-11-review/INTEGRITY_MANIFEST.json",
+          "sizeBytes": 3253,
+          "sha256": "3cfaf564ab2abd996f478c0884302132d8098ddaeca3ca1f6b7407e21f9192f7"
+        }
+      ],
+      "pdfSources": [
+        {
+          "documentId": "v5-doc-506c709758cb13a9",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\COLÉGIO PÓDION\\PÓDION - 6ANO - 2022_2023 - PROVA DE BOLSAS.pdf",
+          "sourceSha256": "506c709758cb13a9f8cc5d5454e168e61a96f5a1731f9003bfc2ae94013c3749"
+        },
+        {
+          "documentId": "v5-doc-3a0c4b28948e4a30",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMPA\\1º Ano\\CMPA - 1ANO - 2012_2013 (mat) (Prova 1).pdf",
+          "sourceSha256": "3a0c4b28948e4a30c92778da2ef70afef78740b77295639056ee697e9333c6e2"
+        },
+        {
+          "documentId": "v5-doc-143f3f337e22fb52",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMF\\6º Ano\\CMF - 6ANO - 2025_2026.pdf",
+          "sourceSha256": "143f3f337e22fb529c8e610ca215f16214b425761ec1bd9b47e121a384bf2474"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "batch": "12",
+      "r1Positions": [
+        34,
+        35,
+        36
+      ],
+      "directory": "outputs/audit/holdout/v5-ground-truth-batch-12-review",
+      "documentIds": [
+        "v5-doc-87d7a7f5696b5a6a",
+        "v5-doc-1b6b371a30f5cd22",
+        "v5-doc-80e01b1d6082d26b"
+      ],
+      "questionIds": [
+        "v5-doc-87d7a7f5696b5a6a:q5",
+        "v5-doc-87d7a7f5696b5a6a:q10",
+        "v5-doc-87d7a7f5696b5a6a:q16",
+        "v5-doc-1b6b371a30f5cd22:q8",
+        "v5-doc-1b6b371a30f5cd22:q15",
+        "v5-doc-1b6b371a30f5cd22:q20",
+        "v5-doc-80e01b1d6082d26b:q2",
+        "v5-doc-80e01b1d6082d26b:q15",
+        "v5-doc-80e01b1d6082d26b:q21"
+      ],
+      "files": [
+        {
+          "name": "34_v5-doc-87d7a7f5696b5a6a.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-12-review/34_v5-doc-87d7a7f5696b5a6a.pdf",
+          "sizeBytes": 639755,
+          "sha256": "87d7a7f5696b5a6afbf9a10842a994b8ca6e759269b3aea0080faef0a2360b4e"
+        },
+        {
+          "name": "35_v5-doc-1b6b371a30f5cd22.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-12-review/35_v5-doc-1b6b371a30f5cd22.pdf",
+          "sizeBytes": 1780727,
+          "sha256": "1b6b371a30f5cd22dfc5ee6e0d24a6cce1f33215aaf0164ebac7d62c9d86628b"
+        },
+        {
+          "name": "36_v5-doc-80e01b1d6082d26b.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-12-review/36_v5-doc-80e01b1d6082d26b.pdf",
+          "sizeBytes": 963145,
+          "sha256": "80e01b1d6082d26b6b022497e81a00b5ebb47e8f0a71c87b9cb17928fb4aa575"
+        },
+        {
+          "name": "review-context.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-12-review/review-context.json",
+          "sizeBytes": 10202,
+          "sha256": "1646b7dc263b1569158c6dd43265f1a71a11183f3a969f73c14d2caf1f4f0dd6"
+        },
+        {
+          "name": "ANNOTATION_TEMPLATE.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-12-review/ANNOTATION_TEMPLATE.json",
+          "sizeBytes": 5311,
+          "sha256": "34d6c30b2d6f27476746a0515b060b36aa235dd37249cca8be94f539d7786447"
+        },
+        {
+          "name": "FILES_TO_UPLOAD.txt",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-12-review/FILES_TO_UPLOAD.txt",
+          "sizeBytes": 182,
+          "sha256": "38d0d5164dac40c147d5b1ea764d49e87c3317062f9376af591de22755053d30"
+        },
+        {
+          "name": "INTEGRITY_MANIFEST.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-12-review/INTEGRITY_MANIFEST.json",
+          "sizeBytes": 3218,
+          "sha256": "97d658fe04b171d04baeb52bf597fc7e5d50283aae4cbaeec28600056b550d18"
+        }
+      ],
+      "pdfSources": [
+        {
+          "documentId": "v5-doc-87d7a7f5696b5a6a",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMC\\6º Ano\\CMC - 6ANO - 2011_2012 (port).pdf",
+          "sourceSha256": "87d7a7f5696b5a6afbf9a10842a994b8ca6e759269b3aea0080faef0a2360b4e"
+        },
+        {
+          "documentId": "v5-doc-1b6b371a30f5cd22",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMRJ\\6º Ano\\CMRJ - 6ANO - 2020_2021.pdf",
+          "sourceSha256": "1b6b371a30f5cd22dfc5ee6e0d24a6cce1f33215aaf0164ebac7d62c9d86628b"
+        },
+        {
+          "documentId": "v5-doc-80e01b1d6082d26b",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBH\\1º Ano\\CMBH - 1ANO - 2021_2022.pdf",
+          "sourceSha256": "80e01b1d6082d26b6b022497e81a00b5ebb47e8f0a71c87b9cb17928fb4aa575"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "batch": "13",
+      "r1Positions": [
+        37,
+        38,
+        39
+      ],
+      "directory": "outputs/audit/holdout/v5-ground-truth-batch-13-review",
+      "documentIds": [
+        "v5-doc-d5099c3057735940",
+        "v5-doc-b1498826d8a54db3",
+        "v5-doc-1fb8c32edfae9126"
+      ],
+      "questionIds": [
+        "v5-doc-d5099c3057735940:q2",
+        "v5-doc-d5099c3057735940:q7",
+        "v5-doc-d5099c3057735940:q11",
+        "v5-doc-b1498826d8a54db3:q10",
+        "v5-doc-b1498826d8a54db3:q56",
+        "v5-doc-b1498826d8a54db3:q86",
+        "v5-doc-1fb8c32edfae9126:q30",
+        "v5-doc-1fb8c32edfae9126:q59",
+        "v5-doc-1fb8c32edfae9126:q96"
+      ],
+      "files": [
+        {
+          "name": "37_v5-doc-d5099c3057735940.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-13-review/37_v5-doc-d5099c3057735940.pdf",
+          "sizeBytes": 7760136,
+          "sha256": "d5099c30577359406ebc4faf4974434bf10f84fe24a3cc186dc162e7c866c838"
+        },
+        {
+          "name": "38_v5-doc-b1498826d8a54db3.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-13-review/38_v5-doc-b1498826d8a54db3.pdf",
+          "sizeBytes": 952121,
+          "sha256": "b1498826d8a54db31c8803cf1daa3aab8d753b0316de12ba84cf49bb42f1e126"
+        },
+        {
+          "name": "39_v5-doc-1fb8c32edfae9126.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-13-review/39_v5-doc-1fb8c32edfae9126.pdf",
+          "sizeBytes": 875694,
+          "sha256": "1fb8c32edfae9126e6faa329a251518338a5728570202e42dfdb918e300b9462"
+        },
+        {
+          "name": "review-context.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-13-review/review-context.json",
+          "sizeBytes": 8844,
+          "sha256": "1a39e6fc482f7ae98600c0888ff1526c374c0f67e0f6bc73b6a978671936def0"
+        },
+        {
+          "name": "ANNOTATION_TEMPLATE.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-13-review/ANNOTATION_TEMPLATE.json",
+          "sizeBytes": 5310,
+          "sha256": "eae58b5746fdd19854c849737f57452165bba0c4f5a496945097d0f708c64c52"
+        },
+        {
+          "name": "FILES_TO_UPLOAD.txt",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-13-review/FILES_TO_UPLOAD.txt",
+          "sizeBytes": 182,
+          "sha256": "4c7920ef765330a39229d2d1d2eb12063992daadb97ba584cf88ed1eab645a8c"
+        },
+        {
+          "name": "INTEGRITY_MANIFEST.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-13-review/INTEGRITY_MANIFEST.json",
+          "sizeBytes": 3191,
+          "sha256": "24fe75b08403691ab9ee66c8731e2f74a0d9edd6b9c162f4ce5341c9e181a65f"
+        }
+      ],
+      "pdfSources": [
+        {
+          "documentId": "v5-doc-d5099c3057735940",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMJF\\1º Ano\\CMJF - 1ANO - 2010_2011 (port) (Prova 1).pdf",
+          "sourceSha256": "d5099c30577359406ebc4faf4974434bf10f84fe24a3cc186dc162e7c866c838"
+        },
+        {
+          "documentId": "v5-doc-b1498826d8a54db3",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 2\\PAS 2 - 2024.pdf",
+          "sourceSha256": "b1498826d8a54db31c8803cf1daa3aab8d753b0316de12ba84cf49bb42f1e126"
+        },
+        {
+          "documentId": "v5-doc-1fb8c32edfae9126",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 3\\PAS 3 - 2009.pdf",
+          "sourceSha256": "1fb8c32edfae9126e6faa329a251518338a5728570202e42dfdb918e300b9462"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "batch": "14",
+      "r1Positions": [
+        40,
+        41,
+        42
+      ],
+      "directory": "outputs/audit/holdout/v5-ground-truth-batch-14-review",
+      "documentIds": [
+        "v5-doc-d12896e095155245",
+        "v5-doc-c3bf2d29c7e1d9e8",
+        "v5-doc-0d7bc5575df13886"
+      ],
+      "questionIds": [
+        "v5-doc-d12896e095155245:q5",
+        "v5-doc-d12896e095155245:q12",
+        "v5-doc-d12896e095155245:q17",
+        "v5-doc-c3bf2d29c7e1d9e8:q1",
+        "v5-doc-c3bf2d29c7e1d9e8:q13",
+        "v5-doc-c3bf2d29c7e1d9e8:q20",
+        "v5-doc-0d7bc5575df13886:q4",
+        "v5-doc-0d7bc5575df13886:q7",
+        "v5-doc-0d7bc5575df13886:q15"
+      ],
+      "files": [
+        {
+          "name": "40_v5-doc-d12896e095155245.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-14-review/40_v5-doc-d12896e095155245.pdf",
+          "sizeBytes": 1830081,
+          "sha256": "d12896e095155245ce24bf2df686b56797c6f9e41e7d5ec27f7e5c2eeaf62a9c"
+        },
+        {
+          "name": "41_v5-doc-c3bf2d29c7e1d9e8.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-14-review/41_v5-doc-c3bf2d29c7e1d9e8.pdf",
+          "sizeBytes": 887135,
+          "sha256": "c3bf2d29c7e1d9e8a8ad05f64f313fa8b92bccebea2e90d5dc1d8a6b363faed2"
+        },
+        {
+          "name": "42_v5-doc-0d7bc5575df13886.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-14-review/42_v5-doc-0d7bc5575df13886.pdf",
+          "sizeBytes": 240018,
+          "sha256": "0d7bc5575df13886e7269106b265133d9f1286fca97b8a035e34890a20b98d6e"
+        },
+        {
+          "name": "review-context.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-14-review/review-context.json",
+          "sizeBytes": 10624,
+          "sha256": "b38f0f66bfb563f492926c4ccbbd82db30905e23813e770c0ca042164369203e"
+        },
+        {
+          "name": "ANNOTATION_TEMPLATE.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-14-review/ANNOTATION_TEMPLATE.json",
+          "sizeBytes": 5306,
+          "sha256": "f929b3797530f8d114f523319c22ea65d4f8b5d349372722539dc295877a717c"
+        },
+        {
+          "name": "FILES_TO_UPLOAD.txt",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-14-review/FILES_TO_UPLOAD.txt",
+          "sizeBytes": 182,
+          "sha256": "fa9293c475782786b107c14321a4227ec6ae89f850a07815fc3e7bb66bab0540"
+        },
+        {
+          "name": "INTEGRITY_MANIFEST.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-14-review/INTEGRITY_MANIFEST.json",
+          "sizeBytes": 3248,
+          "sha256": "3a037ce1da6ced61f3b61066205243c5b890d446119be62f6053938fee9ed514"
+        }
+      ],
+      "pdfSources": [
+        {
+          "documentId": "v5-doc-d12896e095155245",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMBel\\6º Ano\\CMBel - 6ANO - 2019_2020 (port).pdf",
+          "sourceSha256": "d12896e095155245ce24bf2df686b56797c6f9e41e7d5ec27f7e5c2eeaf62a9c"
+        },
+        {
+          "documentId": "v5-doc-c3bf2d29c7e1d9e8",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMDPII\\Modificadas\\CMDPII - 6ANO - 2018_2019 (modificado).pdf",
+          "sourceSha256": "c3bf2d29c7e1d9e8a8ad05f64f313fa8b92bccebea2e90d5dc1d8a6b363faed2"
+        },
+        {
+          "documentId": "v5-doc-0d7bc5575df13886",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMB\\6º Ano\\CMB - 6ANO - 2015_2016 (port).pdf",
+          "sourceSha256": "0d7bc5575df13886e7269106b265133d9f1286fca97b8a035e34890a20b98d6e"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "batch": "15",
+      "r1Positions": [
+        43,
+        44,
+        45
+      ],
+      "directory": "outputs/audit/holdout/v5-ground-truth-batch-15-review",
+      "documentIds": [
+        "v5-doc-1babdc250c302165",
+        "v5-doc-bc5d90aa69fa3416",
+        "v5-doc-9b28d28efbbf0354"
+      ],
+      "questionIds": [
+        "v5-doc-1babdc250c302165:q2",
+        "v5-doc-1babdc250c302165:q8",
+        "v5-doc-1babdc250c302165:q21",
+        "v5-doc-bc5d90aa69fa3416:q6",
+        "v5-doc-bc5d90aa69fa3416:q8",
+        "v5-doc-bc5d90aa69fa3416:q20",
+        "v5-doc-9b28d28efbbf0354:q3",
+        "v5-doc-9b28d28efbbf0354:q13",
+        "v5-doc-9b28d28efbbf0354:q24"
+      ],
+      "files": [
+        {
+          "name": "43_v5-doc-1babdc250c302165.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-15-review/43_v5-doc-1babdc250c302165.pdf",
+          "sizeBytes": 2421808,
+          "sha256": "1babdc250c302165ff32a5601fda24c215ab8b17eb0e78ee52d0e241bf132c40"
+        },
+        {
+          "name": "44_v5-doc-bc5d90aa69fa3416.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-15-review/44_v5-doc-bc5d90aa69fa3416.pdf",
+          "sizeBytes": 514588,
+          "sha256": "bc5d90aa69fa3416e2af5364542d5d6bbb4ba3b8550eca81aeeab2251aa7dd4d"
+        },
+        {
+          "name": "45_v5-doc-9b28d28efbbf0354.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-15-review/45_v5-doc-9b28d28efbbf0354.pdf",
+          "sizeBytes": 1554518,
+          "sha256": "9b28d28efbbf03544b7f805f7b84040c174148e10f132e3ff143161c81ee7b60"
+        },
+        {
+          "name": "review-context.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-15-review/review-context.json",
+          "sizeBytes": 10056,
+          "sha256": "ecc2862642190869f2e001d19a53b4b6d7536622175fb26936ad6c564b26539c"
+        },
+        {
+          "name": "ANNOTATION_TEMPLATE.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-15-review/ANNOTATION_TEMPLATE.json",
+          "sizeBytes": 5317,
+          "sha256": "d61bd9792d08eea0e4838df721a70df401e7a3e19d7b42a75c9194f943db9725"
+        },
+        {
+          "name": "FILES_TO_UPLOAD.txt",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-15-review/FILES_TO_UPLOAD.txt",
+          "sizeBytes": 182,
+          "sha256": "98b4e590e9ddee5d645de7122d98cd7b47097b4fd46627a2780f44b836ffa396"
+        },
+        {
+          "name": "INTEGRITY_MANIFEST.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-15-review/INTEGRITY_MANIFEST.json",
+          "sizeBytes": 3224,
+          "sha256": "89fc1f2cd6c205aba36f94a74cb47d606e79071efb7caf2fbb9c97c498ce3ffb"
+        }
+      ],
+      "pdfSources": [
+        {
+          "documentId": "v5-doc-1babdc250c302165",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMS\\6º Ano\\CMS - 6ANO - 2018_2019 (port).PDF",
+          "sourceSha256": "1babdc250c302165ff32a5601fda24c215ab8b17eb0e78ee52d0e241bf132c40"
+        },
+        {
+          "documentId": "v5-doc-bc5d90aa69fa3416",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMM\\1º Ano\\CMM - 1ANO - 2014_2015 (port).pdf",
+          "sourceSha256": "bc5d90aa69fa3416e2af5364542d5d6bbb4ba3b8550eca81aeeab2251aa7dd4d"
+        },
+        {
+          "documentId": "v5-doc-9b28d28efbbf0354",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSP\\6º Ano\\CMSP - 6ANO - 2022_2023.pdf",
+          "sourceSha256": "9b28d28efbbf03544b7f805f7b84040c174148e10f132e3ff143161c81ee7b60"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "batch": "16",
+      "r1Positions": [
+        46,
+        47,
+        48
+      ],
+      "directory": "outputs/audit/holdout/v5-ground-truth-batch-16-review",
+      "documentIds": [
+        "v5-doc-47ff0591259f48eb",
+        "v5-doc-e1c73fb849ef80a6",
+        "v5-doc-ccc36240e82f271d"
+      ],
+      "questionIds": [
+        "v5-doc-47ff0591259f48eb:q4",
+        "v5-doc-47ff0591259f48eb:q10",
+        "v5-doc-47ff0591259f48eb:q15",
+        "v5-doc-e1c73fb849ef80a6:q5",
+        "v5-doc-e1c73fb849ef80a6:q7",
+        "v5-doc-e1c73fb849ef80a6:q20",
+        "v5-doc-ccc36240e82f271d:q35",
+        "v5-doc-ccc36240e82f271d:q43",
+        "v5-doc-ccc36240e82f271d:q95"
+      ],
+      "files": [
+        {
+          "name": "46_v5-doc-47ff0591259f48eb.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-16-review/46_v5-doc-47ff0591259f48eb.pdf",
+          "sizeBytes": 4938080,
+          "sha256": "47ff0591259f48eb52fcd70701aa87fa57010d632b8fda9d796bb2ce5ef2c9cf"
+        },
+        {
+          "name": "47_v5-doc-e1c73fb849ef80a6.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-16-review/47_v5-doc-e1c73fb849ef80a6.pdf",
+          "sizeBytes": 182017,
+          "sha256": "e1c73fb849ef80a6f94a2ecf09718a963bd7c65008f930526605489ac25f8fe3"
+        },
+        {
+          "name": "48_v5-doc-ccc36240e82f271d.pdf",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-16-review/48_v5-doc-ccc36240e82f271d.pdf",
+          "sizeBytes": 1273130,
+          "sha256": "ccc36240e82f271de6eec6894138b19f6f939c1b461e399738869c48346cacbe"
+        },
+        {
+          "name": "review-context.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-16-review/review-context.json",
+          "sizeBytes": 9861,
+          "sha256": "697892d1ab4638e6aa5cb3f9664afd4aa39a45d77cabb2e36518d4590a04d7f3"
+        },
+        {
+          "name": "ANNOTATION_TEMPLATE.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-16-review/ANNOTATION_TEMPLATE.json",
+          "sizeBytes": 5305,
+          "sha256": "7e309f5a1ddcd49bbc1d0003ce795b05cbbe46d9b9ed4bfa0a9b9d6a1abac24b"
+        },
+        {
+          "name": "FILES_TO_UPLOAD.txt",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-16-review/FILES_TO_UPLOAD.txt",
+          "sizeBytes": 182,
+          "sha256": "8640049b4af6c5d82d0c1bf775dfaf5875b40dd884ce2ce854aeb15f414098f1"
+        },
+        {
+          "name": "INTEGRITY_MANIFEST.json",
+          "path": "outputs/audit/holdout/v5-ground-truth-batch-16-review/INTEGRITY_MANIFEST.json",
+          "sizeBytes": 3204,
+          "sha256": "10cbf5ea8bf0cb4e982749e80bab7ac1ec6ce4e87a9b1e8d6c2771fabbfee403"
+        }
+      ],
+      "pdfSources": [
+        {
+          "documentId": "v5-doc-47ff0591259f48eb",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMR\\6º Ano\\CMR - 6ANO - 2016_2017 (mat).PDF",
+          "sourceSha256": "47ff0591259f48eb52fcd70701aa87fa57010d632b8fda9d796bb2ce5ef2c9cf"
+        },
+        {
+          "documentId": "v5-doc-e1c73fb849ef80a6",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\CMSM\\1º Ano\\CMSM - 1ANO - 2006_2007 (mat).pdf",
+          "sourceSha256": "e1c73fb849ef80a6f94a2ecf09718a963bd7c65008f930526605489ac25f8fe3"
+        },
+        {
+          "documentId": "v5-doc-ccc36240e82f271d",
+          "mode": "original",
+          "sourcePath": "G:\\Drives compartilhados\\Secretaria e Editoração\\PROVAS CMs E OUTRAS PROVAS\\PAS 2\\PAS 2 - 2008.pdf",
+          "sourceSha256": "ccc36240e82f271de6eec6894138b19f6f939c1b461e399738869c48346cacbe"
+        }
+      ],
+      "verified": true
+    }
+  ]
+}

@@ -226,3 +226,12 @@ Este checkpoint prevalece após o segundo commit/push e SHA remoto confirmado.
 - [x] Regra prospectiva pré-sorteio publicada em `cd6ed90b1989c62b24c93fa1218b698c1021b894`, seguida de uma seleção oficial independente do Auditor, sem seed nova, retry ou troca manual. [Freeze da seleção](../audit/holdout/V5_QUESTION_SELECTION_FREEZE.md):48documentos R1/144objetos exatos/3por documento, replay Python+JavaScript/metadata/ranges/determinismo PASS.
 - Índice neutro e seleção completam os requisitos publicados da FaseB:PhaseBComplete=true/questionSelectionFrozen=true somente após esta publicação; finalQuestionIndexFrozen=true. Os registros anteriores são históricos e não foram reescritos.
 - [ ] Próximo SEPARADO e sujeito a nova autorização: **Ground Truth V5 com adjudicação humana independente**. Nenhum package GT criado, OCR/Auditor/métricas/merge iniciados. Preservar ressalvas pós-freeze, fontes incompletas, versão modificada e exceção415 sem certificação histórica retroativa.
+
+## Próxima prioridade V5 — instrumentos de GT humano, 2026-10-13
+
+Este checkpoint prevalece após commit/push e SHA remoto confirmado.
+
+- [x] [Preparação integral16pacotes humanos](../audit/holdout/V5_GROUND_TRUTH_REVIEW_PACKAGES.md):48PDFs integrais/144questões R1/16templates vazios,3docs/9questões por batch; preparador recuperável e gates de integridade/neutralidade PASS, sem adjudicação humana ou GT criado.
+- [ ] Próximo SEPARADO e sujeito a nova autorização:**adjudicação humana independente Ground Truth V5 Batch01**,3documentos/9questões. Codex não preenche rótulos nem simula humano.
+- [ ] Gate técnico futuro separado:compatibilidade/validação do GT V5 preenchido e integração com Auditor antes da execução oficial; schema funcional legado V1–V4 permanece congelado, sem mascarar V5.
+- PhaseBComplete=true/questionSelectionFrozen=true/groundTruthReviewPackagesPrepared=true após publicação;groundTruthHumanAdjudicationComplete=false/groundTruthCreated=false/Auditor/metrics/merge=false. Ressalvas históricas intactas; não iniciar GTfinal/OCR/Auditor automaticamente; STOP após push.
