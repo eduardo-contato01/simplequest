@@ -206,3 +206,14 @@ Este checkpoint prevalece sobre as prioridades históricas acima; publicação c
 - [x] Tier D combinado8documentos/134páginas/182canônicas/raw174/41correções/11multipágina/zero unresolved; batches completos/disjuntos e Batch01 byte-intacto. Com A/B/C:48documentos efetivos/741páginas/2136canônicas revisados estruturalmente, sem índice global congelado.
 - TierDBatch02Adjudicated=true/TierDAdjudicated=true somente após publicação;PhaseBComplete=false. Ressalvas de fonte/versão modificada global48/provenance pós-freeze/manifestR1 preservadas; finalIndex/selection/GT/Auditor/metrics/merge=false, sem mudança funcional/OCR/extração/indexador/censo.
 - [ ] Próximo SEPARADO: **V5 final canonical question index consolidation and freeze**, não iniciado. STOP após publicar Batch02; não selecionar144questões nem iniciar GT/Auditor.
+
+## Próxima prioridade V5 — índice canônico global congelado, 2026-10-13
+
+Este checkpoint prevalece sobre as prioridades históricas acima; freeze formal condicionado ao commit/push e SHA remoto confirmado.
+
+- [x] [Consolidação/freeze do índice canônico V5](../audit/holdout/V5_FINAL_CANONICAL_QUESTION_INDEX.md):sete fontes publicadas,48documentos efetivos/741páginas/2136objetos canônicos únicos e copiados exatamente, ordem1–48/listas originais/determinismo/minimum3/unresolved0 PASS; nenhuma nova adjudicação/revisão PDF ou mudança funcional.
+- Reconciliações preservadas: substituição pós-freeze global22,sourceFrozenPageCount1/effectivePhysicalPageCount21global21 e26objetos não contíguos global8; fonte disponível incompleta/integridade original inconclusiva/versão modificada/global48/exclusões paralelas/reinícios e seed históricos transportados.
+- finalQuestionIndexCreated=true/finalQuestionIndexFrozen=true após publicação;PhaseBComplete=false, pois a definição documental de FaseB inclui também o freeze da seleção144. Selection/GT/Auditor/metrics/merge=false.
+- [ ] Próximo SEPARADO: **V5 freeze da seleção de144questões,3por documento**, não iniciado. STOP após publicar o índice; não selecionar/preparar GT/executar Auditor nesta consolidação.
+
+Preservação do índice sob decisão externa delimitada:5588arquivos distintos,5173comparações com referências históricas independentes e415auxiliares prospectivamente preservados, integridade histórica destes=not_independently_verifiable. Nenhuma identidade canônica depende exclusivamente dos quatro checkpoints B intermediários; exceção pós-freeze/pré-selection/Auditor registrada no relatório do índice e obrigatória na metodologia futura. Sem certificação histórica integral de todos os auxiliares; questões, PDFs, sete adjudicações e protocolo imutáveis.
