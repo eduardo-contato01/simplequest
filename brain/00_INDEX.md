@@ -10,6 +10,10 @@ Normalmente começar por:
 2. [[ROADMAP]] - trabalho em andamento e próximos passos imediatos.
 3. Documento específico da área, conforme os links abaixo.
 
+Para tarefas de PDFs, indexadores, holdouts, Ground Truth ou Auditor, a leitura
+de [Regras permanentes de engenharia de auditoria](../docs/AUDIT_ENGINEERING_RULES.md)
+é obrigatória, além dos protocolos congelados aplicáveis.
+
 Consultar [[IDEIAS_E_PROXIMOS_PASSOS]] para decisões de produto/UX. Consultar [[HISTORICO]] somente quando a origem de uma decisão ou etapa antiga for relevante; não carregá-lo por padrão. CONTEXTO_SIMPLEQUEST.md é log cronológico, não leitura inicial.
 
 ## Áreas específicas

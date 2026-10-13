@@ -2,6 +2,19 @@
 
 Projeto para auditoria em massa das provas importadas. Ainda não há uma ferramenta completa implementada para auditoria visual de todas as questões contra os DOCX/PDF originais.
 
+## Política permanente de engenharia de auditoria — 2026-10-13
+
+Leitura obrigatória: [Regras permanentes de engenharia de auditoria](../docs/AUDIT_ENGINEERING_RULES.md).
+O preflight físico independente com pypdf e Poppler/pdfinfo foi especificado
+como P0/P1; sua integração funcional é futura, não implementada nesta etapa.
+Evidências necessárias devem ser persistidas na origem, com classificação prévia,
+checkpoints atômicos recuperáveis, preservação de bytes/line endings e gates
+proporcionais a bloqueios materiais ou contratuais. Warnings não certificam
+corrupção; comparações prospectivas não certificam identidade histórica.
+O V5 segue congelado:48documentos/741páginas/2136questões, PhaseBComplete=false;
+sem alterações funcionais nem início de seleção144/GT/Auditor/métricas/merge.
+Esta política não reescreve os registros e protocolos históricos abaixo.
+
 ## Holdout V4 — checkpoint apos Tier B
 
 Checkpoint operacional atualizado em 2026-10-05 apos primeira execucao oficial unica do Auditor V4; ancora mantida para preservar os links existentes.
