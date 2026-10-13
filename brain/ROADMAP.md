@@ -197,3 +197,12 @@ Este checkpoint prevalece sobre as prioridades históricas acima; estado de publ
 - Global44:12capturas incidentais de instruções da capa descartadas;20corpos reais de Item comprovados,12strings de ID vinculadas explicitamente aos corpos reais e8strings novas,delta líquido+8. Nenhuma causa do indexador inferida; evidências/decisões herdadas preservadas.
 - TierAComplete=true/TierBAdjudicated=true/TierCAdjudicated=true/TierDPrepared=true;TierDBatch01Adjudicated=true somente após publicação/TierDBatch02Adjudicated=false/TierDAdjudicated=false/PhaseBComplete=false. FinalIndex/selection/GT/Auditor/metrics/merge=false; histórico/ressalvas/código05C1/configuração intactos.
 - [ ] Próximo SEPARADO: **V5 Tier D Batch02 neutral visual adjudication**, não iniciado; STOP após publicação, sem índice global ou etapas posteriores.
+
+## Próxima prioridade V5 — Tier D e revisão estrutural concluídos, 2026-10-13
+
+Este checkpoint prevalece sobre as prioridades históricas acima; publicação condicionada ao commit/push confirmado.
+
+- [x] [Tier D Batch02 neutro](../audit/holdout/V5_TIER_D_BATCH_02_ADJUDICATION.md):3documentos globais46–48/61páginas/74canônicas (30/24/20)/14correções de boundary/7multipágina/zero unresolved/mínimo3 PASS. Retomada global47p9,27páginas/37questões herdadas intactas; checkpoints original e retomado preservados.
+- [x] Tier D combinado8documentos/134páginas/182canônicas/raw174/41correções/11multipágina/zero unresolved; batches completos/disjuntos e Batch01 byte-intacto. Com A/B/C:48documentos efetivos/741páginas/2136canônicas revisados estruturalmente, sem índice global congelado.
+- TierDBatch02Adjudicated=true/TierDAdjudicated=true somente após publicação;PhaseBComplete=false. Ressalvas de fonte/versão modificada global48/provenance pós-freeze/manifestR1 preservadas; finalIndex/selection/GT/Auditor/metrics/merge=false, sem mudança funcional/OCR/extração/indexador/censo.
+- [ ] Próximo SEPARADO: **V5 final canonical question index consolidation and freeze**, não iniciado. STOP após publicar Batch02; não selecionar144questões nem iniciar GT/Auditor.
