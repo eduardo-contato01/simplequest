@@ -235,3 +235,12 @@ Este checkpoint prevalece após commit/push e SHA remoto confirmado.
 - [ ] Próximo SEPARADO e sujeito a nova autorização:**adjudicação humana independente Ground Truth V5 Batch01**,3documentos/9questões. Codex não preenche rótulos nem simula humano.
 - [ ] Gate técnico futuro separado:compatibilidade/validação do GT V5 preenchido e integração com Auditor antes da execução oficial; schema funcional legado V1–V4 permanece congelado, sem mascarar V5.
 - PhaseBComplete=true/questionSelectionFrozen=true/groundTruthReviewPackagesPrepared=true após publicação;groundTruthHumanAdjudicationComplete=false/groundTruthCreated=false/Auditor/metrics/merge=false. Ressalvas históricas intactas; não iniciar GTfinal/OCR/Auditor automaticamente; STOP após push.
+
+## Próxima prioridade V5 — GT Batch01, 2026-10-14
+
+Este checkpoint prevalece após commit/push e SHA remoto confirmado.
+
+- [x] [GT Batch01 materializado/validado](../audit/holdout/V5_GROUND_TRUTH_BATCH_01_ADJUDICATION.md):3docs/9registros confirmados pelo revisor, evidência versionada e zero diferenças humanas; freeze formal por publicação. Progresso9/144,135pendentes.
+- Ressalva obrigatória:Q4doc01assistida/verificada sob exceção explícita, sem independência estrita;8classificações declaradas semIA, batch não integralmente independente. Três⋅Q3doc03internos e dependência de figurasQ98doc02 preservados.
+- [ ] Próximo SEPARADO, somente após nova autorização:**GT V5 Batch02**, sem iniciar automaticamente.
+- [ ] Compatibilidade/validação do futuro GT V5 no runner continua gate técnico separado antes de execução oficial; código funcional congelado. GlobalHumanAdjudicationComplete=false/GTfinal=false/Auditor/metrics/merge=false; STOP após publicação.

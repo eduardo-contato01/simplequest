@@ -1,0 +1,506 @@
+{
+  "artifactType": "reviewer_approved_ground_truth_batch",
+  "protocolVersion": "holdout-v5",
+  "annotationVersion": 1,
+  "freezeVersion": 1,
+  "batchId": "holdout-v5-batch-01",
+  "sourceHead": "df3e7e688a6eae00512515b3696470af378b7a5b",
+  "documentsCount": 3,
+  "questionsCount": 9,
+  "documentFingerprints": {
+    "v5-doc-429b811d62a29a28": "429b811d62a29a28c9e2dfb8f89afc95fb0afa0d0529fe9e67a205dd1aa00605",
+    "v5-doc-9341853cd786543a": "9341853cd786543a175749ae045cde1732f9909dd8706cd17e0a4dcda30a1a6d",
+    "v5-doc-a37b092e0e967efc": "a37b092e0e967efc24dd4806830ad446c8d9a10bda7ae83ea1180090a36ac5bf"
+  },
+  "frozenInputFileSha256s": {
+    "audit/holdout/manifest-v5-questions-frozen.json": "91cd40933a02542d35f41e889c8754873bf92ea6ff5591f079eb3880b5ca4a46",
+    "audit/holdout/question-index-v5-final.json": "a0930fe9c409170a5215042883e2bf1121c98bb530b251ad4eb59e5778ed31a7",
+    "audit/holdout/v5-gt-review-batches-manifest.json": "e505dc206846118c6146fd9808a2ecfee745f8f4b5ba1daeda2232aa5661aff0"
+  },
+  "approvedSummarySha256": "7f685dead1a63f568cf409d3cd90779e4e959845bae7f6777559facabbb1d742",
+  "humanDecisionEvidence": {
+    "path": "audit/holdout/ground-truth-v5-batch-01.human-decisions.json",
+    "sha256": "ff7b94a82aa04534e3354759761d7febf30f5a14bdbc9156bca26dab975ab97c"
+  },
+  "humanAdjudicated": true,
+  "humanAdjudicatedMeaning": "all nine records examined, verified and explicitly approved by the reviewer; NOT a claim of strict independent human classification for all nine",
+  "wholeBatchStrictlyIndependent": false,
+  "independentHumanReviewClaims": 8,
+  "aiAssistedHumanVerifiedQuestions": 1,
+  "methodologicalException": {
+    "questionId": "v5-doc-429b811d62a29a28:q4",
+    "origin": "ai_assisted_human_verified",
+    "strictlyIndependent": false,
+    "authorization": "explicit external authorization before publication; post-observation, not preregistered"
+  },
+  "reviewerConditionBindings": {
+    "doc03Q3Subitems": "three ⋅ internal content elements; not alternatives nor independent responses",
+    "doc02Q98": "text describes question body only; shared text and two figures are necessary and preserved in notes"
+  },
+  "freezeStatusAtCreation": "ready_for_introducing_commit_and_push",
+  "formalFreezeRule": "introducing commit, push, matching remote HEAD and clean worktree/stage",
+  "expectedPostPublicationStates": {
+    "PhaseBComplete": true,
+    "questionSelectionFrozen": true,
+    "groundTruthStarted": true,
+    "groundTruthBatch01Created": true,
+    "groundTruthQuestionsAdjudicated": 9,
+    "groundTruthQuestionsRemaining": 135,
+    "groundTruthHumanAdjudicationComplete": false,
+    "groundTruthFinalCreated": false,
+    "auditorExecuted": false,
+    "metricsSeen": false,
+    "merge": false
+  },
+  "futureRunnerCompatibilityResolved": false,
+  "auditorExecuted": false,
+  "metricsSeen": false,
+  "ocrExecuted": false,
+  "merge": false,
+  "documents": [
+    {
+      "documentId": "v5-doc-429b811d62a29a28",
+      "contentFingerprint": "429b811d62a29a28c9e2dfb8f89afc95fb0afa0d0529fe9e67a205dd1aa00605",
+      "effectivePhysicalPageCount": 17,
+      "selectedQuestionIds": [
+        "v5-doc-429b811d62a29a28:q4",
+        "v5-doc-429b811d62a29a28:q12",
+        "v5-doc-429b811d62a29a28:q18"
+      ]
+    },
+    {
+      "documentId": "v5-doc-9341853cd786543a",
+      "contentFingerprint": "9341853cd786543a175749ae045cde1732f9909dd8706cd17e0a4dcda30a1a6d",
+      "effectivePhysicalPageCount": 24,
+      "selectedQuestionIds": [
+        "v5-doc-9341853cd786543a:q1",
+        "v5-doc-9341853cd786543a:q42",
+        "v5-doc-9341853cd786543a:q98"
+      ]
+    },
+    {
+      "documentId": "v5-doc-a37b092e0e967efc",
+      "contentFingerprint": "a37b092e0e967efc24dd4806830ad446c8d9a10bda7ae83ea1180090a36ac5bf",
+      "effectivePhysicalPageCount": 28,
+      "selectedQuestionIds": [
+        "v5-doc-a37b092e0e967efc:q3",
+        "v5-doc-a37b092e0e967efc:q21",
+        "v5-doc-a37b092e0e967efc:q38"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "documentId": "v5-doc-429b811d62a29a28",
+      "contentFingerprint": "429b811d62a29a28c9e2dfb8f89afc95fb0afa0d0529fe9e67a205dd1aa00605",
+      "questionId": "v5-doc-429b811d62a29a28:q4",
+      "canonicalQuestionNumber": 4,
+      "pageStart": 4,
+      "pageEnd": 4,
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": [],
+      "responseControls": [
+        {
+          "label": "( )",
+          "role": "espaço de marcação",
+          "pages": [
+            4
+          ],
+          "notes": "Sim. Há cinco espaços de marcação `( )`, um ao lado de cada alternativa."
+        },
+        {
+          "label": "( )",
+          "role": "espaço de marcação",
+          "pages": [
+            4
+          ],
+          "notes": "Sim. Há cinco espaços de marcação `( )`, um ao lado de cada alternativa."
+        },
+        {
+          "label": "( )",
+          "role": "espaço de marcação",
+          "pages": [
+            4
+          ],
+          "notes": "Sim. Há cinco espaços de marcação `( )`, um ao lado de cada alternativa."
+        },
+        {
+          "label": "( )",
+          "role": "espaço de marcação",
+          "pages": [
+            4
+          ],
+          "notes": "Sim. Há cinco espaços de marcação `( )`, um ao lado de cada alternativa."
+        },
+        {
+          "label": "( )",
+          "role": "espaço de marcação",
+          "pages": [
+            4
+          ],
+          "notes": "Sim. Há cinco espaços de marcação `( )`, um ao lado de cada alternativa."
+        }
+      ],
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "“Cinco alternativas verticais, identificadas por letras, cada uma acompanhada de um espaço de marcação `( )`. O enunciado remete ao Texto 1, não mostrado no recorte.” Nessa questão eu precisei do auxílio da IA para responder às perguntas, dessa forma, isso deve ser registrado.\nExceção autorizada exclusivamente para Q4: classificação proposta por IA e conferida pelo revisor na página completa; não é adjudicação humana independente.",
+      "annotationOrigin": "ai_assisted_human_verified",
+      "independentHumanAdjudicationClaimed": false
+    },
+    {
+      "documentId": "v5-doc-429b811d62a29a28",
+      "contentFingerprint": "429b811d62a29a28c9e2dfb8f89afc95fb0afa0d0529fe9e67a205dd1aa00605",
+      "questionId": "v5-doc-429b811d62a29a28:q12",
+      "canonicalQuestionNumber": 12,
+      "pageStart": 10,
+      "pageEnd": 10,
+      "pages": [
+        10
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": [
+        {
+          "label": "I",
+          "role": "afirmação interna julgada e referenciada nas alternativas finais",
+          "pages": [
+            10
+          ],
+          "notes": "`[\"I\", \"II\", \"III\"]`. Há subdivisões da questão visíveis, eles são classificatórios, ou seja, certo e errado, mas a questão não termina aqui, ela continua para finalizar nas alternativas já mencionadas."
+        },
+        {
+          "label": "II",
+          "role": "afirmação interna julgada e referenciada nas alternativas finais",
+          "pages": [
+            10
+          ],
+          "notes": "`[\"I\", \"II\", \"III\"]`. Há subdivisões da questão visíveis, eles são classificatórios, ou seja, certo e errado, mas a questão não termina aqui, ela continua para finalizar nas alternativas já mencionadas."
+        },
+        {
+          "label": "III",
+          "role": "afirmação interna julgada e referenciada nas alternativas finais",
+          "pages": [
+            10
+          ],
+          "notes": "`[\"I\", \"II\", \"III\"]`. Há subdivisões da questão visíveis, eles são classificatórios, ou seja, certo e errado, mas a questão não termina aqui, ela continua para finalizar nas alternativas já mencionadas."
+        }
+      ],
+      "responseControls": [
+        {
+          "label": "( )",
+          "role": "espaço de marcação",
+          "pages": [
+            10
+          ],
+          "notes": "Sim. Há cinco espaços de marcação `( )`, um ao lado de cada alternativa."
+        },
+        {
+          "label": "( )",
+          "role": "espaço de marcação",
+          "pages": [
+            10
+          ],
+          "notes": "Sim. Há cinco espaços de marcação `( )`, um ao lado de cada alternativa."
+        },
+        {
+          "label": "( )",
+          "role": "espaço de marcação",
+          "pages": [
+            10
+          ],
+          "notes": "Sim. Há cinco espaços de marcação `( )`, um ao lado de cada alternativa."
+        },
+        {
+          "label": "( )",
+          "role": "espaço de marcação",
+          "pages": [
+            10
+          ],
+          "notes": "Sim. Há cinco espaços de marcação `( )`, um ao lado de cada alternativa."
+        },
+        {
+          "label": "( )",
+          "role": "espaço de marcação",
+          "pages": [
+            10
+          ],
+          "notes": "Sim. Há cinco espaços de marcação `( )`, um ao lado de cada alternativa."
+        }
+      ],
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "“Cinco alternativas verticais, identificadas por letras, cada uma acompanhada de um espaço de marcação `( )`. O enunciado remete ao Texto 3, não mostrado no recorte. A questão tem enunciado, subitens que são julgados conforme enunciado e referenciados nas alternativas que são as respostas finais”&#x20;",
+      "annotationOrigin": "human_reviewer_declared_without_ai",
+      "independentHumanAdjudicationClaimed": true
+    },
+    {
+      "documentId": "v5-doc-429b811d62a29a28",
+      "contentFingerprint": "429b811d62a29a28c9e2dfb8f89afc95fb0afa0d0529fe9e67a205dd1aa00605",
+      "questionId": "v5-doc-429b811d62a29a28:q18",
+      "canonicalQuestionNumber": 18,
+      "pageStart": 14,
+      "pageEnd": 14,
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": [],
+      "responseControls": [
+        {
+          "label": "( )",
+          "role": "espaço de marcação",
+          "pages": [
+            14
+          ],
+          "notes": "Sim. Há cinco espaços de marcação `( )`, um ao lado de cada alternativa."
+        },
+        {
+          "label": "( )",
+          "role": "espaço de marcação",
+          "pages": [
+            14
+          ],
+          "notes": "Sim. Há cinco espaços de marcação `( )`, um ao lado de cada alternativa."
+        },
+        {
+          "label": "( )",
+          "role": "espaço de marcação",
+          "pages": [
+            14
+          ],
+          "notes": "Sim. Há cinco espaços de marcação `( )`, um ao lado de cada alternativa."
+        },
+        {
+          "label": "( )",
+          "role": "espaço de marcação",
+          "pages": [
+            14
+          ],
+          "notes": "Sim. Há cinco espaços de marcação `( )`, um ao lado de cada alternativa."
+        },
+        {
+          "label": "( )",
+          "role": "espaço de marcação",
+          "pages": [
+            14
+          ],
+          "notes": "Sim. Há cinco espaços de marcação `( )`, um ao lado de cada alternativa."
+        }
+      ],
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "“Cinco alternativas verticais, identificadas por letras, cada uma acompanhada de um espaço de marcação `( )`. O enunciado remete ao Texto 5, não mostrado no recorte, mas presente na mesma página 14 do PDF.” Não obtive auxílio da IA e averiguei precisamente a página 14 do PDF.",
+      "annotationOrigin": "human_reviewer_declared_without_ai",
+      "independentHumanAdjudicationClaimed": true
+    },
+    {
+      "documentId": "v5-doc-9341853cd786543a",
+      "contentFingerprint": "9341853cd786543a175749ae045cde1732f9909dd8706cd17e0a4dcda30a1a6d",
+      "questionId": "v5-doc-9341853cd786543a:q1",
+      "canonicalQuestionNumber": 1,
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pages": [
+        3
+      ],
+      "responseMode": "true_false",
+      "optionCount": 0,
+      "optionLabels": [],
+      "subitems": [],
+      "responseControls": [],
+      "layout": "vertical",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "“Questão de certo ou errado, sem espaço de marcação ou qualquer outra informação que não seja a questão. O enunciado faz referência indireta ao texto precedente à questão, ou seja, o texto é necessário para responder a questão. O item é da língua espanhola.\" Não obtive ajuda de IA na análise da questão e analisei exatamente a página e a questão pedida.",
+      "annotationOrigin": "human_reviewer_declared_without_ai",
+      "independentHumanAdjudicationClaimed": true
+    },
+    {
+      "documentId": "v5-doc-9341853cd786543a",
+      "contentFingerprint": "9341853cd786543a175749ae045cde1732f9909dd8706cd17e0a4dcda30a1a6d",
+      "questionId": "v5-doc-9341853cd786543a:q42",
+      "canonicalQuestionNumber": 42,
+      "pageStart": 9,
+      "pageEnd": 9,
+      "pages": [
+        9
+      ],
+      "responseMode": "true_false",
+      "optionCount": 0,
+      "optionLabels": [],
+      "subitems": [],
+      "responseControls": [],
+      "layout": "vertical",
+      "markerStyle": "none",
+      "contentKind": "text",
+      "notes": "“Questão de certo ou errado, sem espaço de marcação ou qualquer outra informação que não seja a questão. O enunciado faz referência indireta ao texto precedente à questão, cujo título é **Canto IV,** ou seja, o texto é necessário para responder a questão. \"Não obtive ajuda da IA na análise da questão e analisei exatamente a página 9 e a questão pedida, a de número 42.\"",
+      "annotationOrigin": "human_reviewer_declared_without_ai",
+      "independentHumanAdjudicationClaimed": true
+    },
+    {
+      "documentId": "v5-doc-9341853cd786543a",
+      "contentFingerprint": "9341853cd786543a175749ae045cde1732f9909dd8706cd17e0a4dcda30a1a6d",
+      "questionId": "v5-doc-9341853cd786543a:q98",
+      "canonicalQuestionNumber": 98,
+      "pageStart": 17,
+      "pageEnd": 17,
+      "pages": [
+        17
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": [],
+      "responseControls": [],
+      "layout": "vertical",
+      "markerStyle": "circled_filled",
+      "contentKind": "text",
+      "notes": "“Quatro alternativas verticais, sem espaço de marcação ou qualquer outra informação que não seja a questão. O enunciado faz referência direta à figura I presente no conjunto de informações precedentes à questão, ou seja, o texto e as figuras são necessárias para responder à questão. \"Não obtive ajuda da IA na análise da questão e analisei exatamente a página 17 e a questão pedida, a de número 98.\"\nEscopo confirmado de contentKind=text: corpo da Q98, enunciado e alternativas. A questão depende de um texto e duas figuras compartilhados, externos ao seu enunciado e às alternativas.",
+      "annotationOrigin": "human_reviewer_declared_without_ai",
+      "independentHumanAdjudicationClaimed": true
+    },
+    {
+      "documentId": "v5-doc-a37b092e0e967efc",
+      "contentFingerprint": "a37b092e0e967efc24dd4806830ad446c8d9a10bda7ae83ea1180090a36ac5bf",
+      "questionId": "v5-doc-a37b092e0e967efc:q3",
+      "canonicalQuestionNumber": 3,
+      "pageStart": 5,
+      "pageEnd": 5,
+      "pages": [
+        5
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": [
+        {
+          "label": "⋅",
+          "role": "parte interna do conteúdo, não classificatória",
+          "pages": [
+            5
+          ],
+          "notes": "`[\"⋅\"]`. Há subdivisões da questão visíveis, eles não são classificatórios, são três marcadores iguais, um embaixo do outro."
+        },
+        {
+          "label": "⋅",
+          "role": "parte interna do conteúdo, não classificatória",
+          "pages": [
+            5
+          ],
+          "notes": "`[\"⋅\"]`. Há subdivisões da questão visíveis, eles não são classificatórios, são três marcadores iguais, um embaixo do outro."
+        },
+        {
+          "label": "⋅",
+          "role": "parte interna do conteúdo, não classificatória",
+          "pages": [
+            5
+          ],
+          "notes": "`[\"⋅\"]`. Há subdivisões da questão visíveis, eles não são classificatórios, são três marcadores iguais, um embaixo do outro."
+        }
+      ],
+      "responseControls": [],
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "mixed",
+      "notes": "“Cinco alternativas verticais, identificadas por letras, cada uma com a letra dentro de um espaço de marcação `( )`. A questão tem enunciado, subitens que compõem o conteúdo construído para responder à questão, os dois primeiros subitens tem uma fração, cada, no corpo do texto, logo após os subitens `⋅` vem outro enunciado dentro da mesma questão e então as cinco alternativas.”&#x20;\nEsclarecimento posterior confirmado: os parênteses com letras são apenas marcadores de alternativas; não há controles de resposta separados. A descrição inicial de espaços de marcação deve ser lida com essa correção.",
+      "annotationOrigin": "human_reviewer_declared_without_ai",
+      "independentHumanAdjudicationClaimed": true
+    },
+    {
+      "documentId": "v5-doc-a37b092e0e967efc",
+      "contentFingerprint": "a37b092e0e967efc24dd4806830ad446c8d9a10bda7ae83ea1180090a36ac5bf",
+      "questionId": "v5-doc-a37b092e0e967efc:q21",
+      "canonicalQuestionNumber": 21,
+      "pageStart": 19,
+      "pageEnd": 19,
+      "pages": [
+        19
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": [],
+      "responseControls": [],
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "“Cinco alternativas verticais, identificadas por letras, cada uma com a letra dentro de um espaço de marcação `( )`. A questão tem enunciado e cinco alternativas. O enunciado faz referência direta ao texto não compreendido no recorte.” Analisei a página 19 e questão 21, especificamente como você pediu sem auxílio da IA em nenhuma análise.\nEsclarecimento posterior confirmado: os parênteses com letras são apenas marcadores de alternativas; não há controles de resposta separados. A descrição inicial de espaços de marcação deve ser lida com essa correção.",
+      "annotationOrigin": "human_reviewer_declared_without_ai",
+      "independentHumanAdjudicationClaimed": true
+    },
+    {
+      "documentId": "v5-doc-a37b092e0e967efc",
+      "contentFingerprint": "a37b092e0e967efc24dd4806830ad446c8d9a10bda7ae83ea1180090a36ac5bf",
+      "questionId": "v5-doc-a37b092e0e967efc:q38",
+      "canonicalQuestionNumber": 38,
+      "pageStart": 26,
+      "pageEnd": 26,
+      "pages": [
+        26
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "subitems": [],
+      "responseControls": [],
+      "layout": "vertical",
+      "markerStyle": "parenthesized",
+      "contentKind": "text",
+      "notes": "“Cinco alternativas verticais, identificadas por letras, cada uma com a letra dentro de um espaço de marcação, exemplo:`(A)`. A questão tem enunciado e cinco alternativas. O enunciado faz referência indireta ao texto não compreendido no recorte.” Analisei a página 26 e questão 38, especificamente como você pediu sem auxílio da IA em nenhuma análise.",
+      "annotationOrigin": "human_reviewer_declared_without_ai",
+      "independentHumanAdjudicationClaimed": true
+    }
+  ]
+}

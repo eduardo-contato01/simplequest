@@ -1,0 +1,123 @@
+{
+  "artifactType": "ground_truth_batch_provenance",
+  "protocolVersion": "holdout-v5",
+  "annotationVersion": 1,
+  "batchId": "holdout-v5-batch-01",
+  "sourceHead": "df3e7e688a6eae00512515b3696470af378b7a5b",
+  "groundTruth": {
+    "path": "audit/holdout/ground-truth-v5-batch-01.json",
+    "sha256": "b61d41a1ca5f6ad23aae5c8c9078c97218009a9e5f05ecbe512dd2ea9fc3aacb",
+    "sizeBytes": 20502
+  },
+  "humanDecisionEvidence": {
+    "path": "audit/holdout/ground-truth-v5-batch-01.human-decisions.json",
+    "sha256": "ff7b94a82aa04534e3354759761d7febf30f5a14bdbc9156bca26dab975ab97c",
+    "sizeBytes": 105713
+  },
+  "approvedSummarySha256": "7f685dead1a63f568cf409d3cd90779e4e959845bae7f6777559facabbb1d742",
+  "finalAuthorizationSha256": "d012108f2496eb140254f54661ecaef661d2715c50e85d6bbd44e0fd43e1a39a",
+  "frozenInputFileSha256s": {
+    "audit/holdout/manifest-v5-questions-frozen.json": "91cd40933a02542d35f41e889c8754873bf92ea6ff5591f079eb3880b5ca4a46",
+    "audit/holdout/question-index-v5-final.json": "a0930fe9c409170a5215042883e2bf1121c98bb530b251ad4eb59e5778ed31a7",
+    "audit/holdout/v5-gt-review-batches-manifest.json": "e505dc206846118c6146fd9808a2ecfee745f8f4b5ba1daeda2232aa5661aff0"
+  },
+  "batchPackageFiles": [
+    {
+      "name": "01_v5-doc-429b811d62a29a28.pdf",
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/01_v5-doc-429b811d62a29a28.pdf",
+      "sizeBytes": 4620965,
+      "sha256": "429b811d62a29a28c9e2dfb8f89afc95fb0afa0d0529fe9e67a205dd1aa00605"
+    },
+    {
+      "name": "02_v5-doc-9341853cd786543a.pdf",
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/02_v5-doc-9341853cd786543a.pdf",
+      "sizeBytes": 869240,
+      "sha256": "9341853cd786543a175749ae045cde1732f9909dd8706cd17e0a4dcda30a1a6d"
+    },
+    {
+      "name": "03_v5-doc-a37b092e0e967efc.pdf",
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/03_v5-doc-a37b092e0e967efc.pdf",
+      "sizeBytes": 1742254,
+      "sha256": "a37b092e0e967efc24dd4806830ad446c8d9a10bda7ae83ea1180090a36ac5bf"
+    },
+    {
+      "name": "review-context.json",
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/review-context.json",
+      "sizeBytes": 9446,
+      "sha256": "56b2e8274497951739d2d5b3e4abcc02b5441d734da99798208f49ebee49c528"
+    },
+    {
+      "name": "ANNOTATION_TEMPLATE.json",
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/ANNOTATION_TEMPLATE.json",
+      "sizeBytes": 5314,
+      "sha256": "e4e96d673c21c6b1e4f709be7e8da3959fed8ffb82c46161bc6d104dfc118839"
+    },
+    {
+      "name": "FILES_TO_UPLOAD.txt",
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/FILES_TO_UPLOAD.txt",
+      "sizeBytes": 182,
+      "sha256": "db2c6cb87b3143e71ba4294a37ffe6b62becc4d79647c89c8fd3e0f12c108ce8"
+    },
+    {
+      "name": "INTEGRITY_MANIFEST.json",
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/INTEGRITY_MANIFEST.json",
+      "sizeBytes": 3197,
+      "sha256": "7f0f4adae35726d51c32468109cbaf699dddd443a2ebfd3001afc6419542a4bb"
+    }
+  ],
+  "materializerAndValidatorSha256": "56413bf03ebb825463e18598d0cc95dfa47097e015cd7128f257dd54723afae2",
+  "syntheticSelftestSha256": "b7ce2ffd693e13712100bc7ca616132e3ce81ff3cb548f9f2338b3ffa35476ba",
+  "gates": {
+    "documents": 3,
+    "questions": 9,
+    "uniqueQuestionIds": 9,
+    "unknownQuestionIds": 0,
+    "crossDocumentBindings": 0,
+    "fingerprintMismatches": 0,
+    "invalidPageRanges": 0,
+    "selectionModified": false,
+    "humanDecisionsReceived": 9,
+    "humanDecisionDifferences": 0,
+    "unconfirmedHumanDecisions": 0,
+    "strictlyIndependentHumanQuestions": 8,
+    "authorizedAiAssistedHumanVerifiedQuestions": 1,
+    "unknownClassificationQuestions": 0,
+    "auditorExecuted": false,
+    "metricsSeen": false
+  },
+  "deterministicSerialization": "UTF8/noBOM/LF/indent2/final newline",
+  "wholeBatchStrictlyIndependent": false,
+  "q4Exception": {
+    "questionId": "v5-doc-429b811d62a29a28:q4",
+    "origin": "ai_assisted_human_verified",
+    "strictlyIndependent": false,
+    "authorization": "explicit external authorization before publication; post-observation, not preregistered"
+  },
+  "sourceSerializationNotes": [
+    {
+      "file": "doc03-q38-received-confirmed-001.json",
+      "sha256": "99134f227198f35238f9ba44869c5a8daeef20e839d6142074b0031dd443fa12",
+      "identicalInternalMetadataDuplicate": [
+        "materializationAuthorized"
+      ],
+      "rawEvidencePreserved": true,
+      "humanValuesAffected": false
+    }
+  ],
+  "futureRunnerCompatibilityResolved": false,
+  "freezeStatusAtCreation": "ready_for_introducing_commit_and_push",
+  "expectedPostPublicationStates": {
+    "PhaseBComplete": true,
+    "questionSelectionFrozen": true,
+    "groundTruthStarted": true,
+    "groundTruthBatch01Created": true,
+    "groundTruthQuestionsAdjudicated": 9,
+    "groundTruthQuestionsRemaining": 135,
+    "groundTruthHumanAdjudicationComplete": false,
+    "groundTruthFinalCreated": false,
+    "auditorExecuted": false,
+    "metricsSeen": false,
+    "merge": false
+  },
+  "nextStep": "STOP; Batch02 requires a new authorization"
+}
