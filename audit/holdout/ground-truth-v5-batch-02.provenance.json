@@ -1,0 +1,233 @@
+{
+  "artifactType": "ground_truth_batch_provenance",
+  "protocolVersion": "holdout-v5",
+  "annotationVersion": 1,
+  "batchId": "holdout-v5-batch-02",
+  "sourceHead": "093ab08cf83237c4ec0fbc9b33be952449eaa318",
+  "groundTruth": {
+    "path": "audit/holdout/ground-truth-v5-batch-02.json",
+    "sha256": "70a78627359414c33b51165d41b6db968a642cb12ef9381dc8be662ccd44b816",
+    "sizeBytes": 17571
+  },
+  "humanDecisionEvidence": {
+    "path": "audit/holdout/ground-truth-v5-batch-02.human-decisions.json",
+    "sha256": "56a8dc38ce5ea53660664008c5746e97791e4bccb06a327c3d9bb2859f37218c",
+    "sizeBytes": 138462
+  },
+  "approvedSummarySha256": "ffc8393f3097375d576b9315c465d16aaf9cfb1eb6db890691ff42ac9ca760f9",
+  "finalAuthorizationSha256": "d7f58198dbefee4b030ce94e4341e52816c05a9e6c424b2f3492f8fc2b755afc",
+  "completedHumanCheckpointSha256": "6b281206a8281e26ce1486d0d508f70cedd4a2f535610b51f0a6707c03a3ce53",
+  "prepublicationProtectionSha256": "0cd84781a208858d8c35c2df7471dba5afd699a43106fc156aa9dcd116ea34c8",
+  "frozenInputFileSha256s": {
+    "audit/holdout/manifest-v5-questions-frozen.json": "91cd40933a02542d35f41e889c8754873bf92ea6ff5591f079eb3880b5ca4a46",
+    "audit/holdout/question-index-v5-final.json": "a0930fe9c409170a5215042883e2bf1121c98bb530b251ad4eb59e5778ed31a7",
+    "audit/holdout/v5-gt-review-batches-manifest.json": "e505dc206846118c6146fd9808a2ecfee745f8f4b5ba1daeda2232aa5661aff0"
+  },
+  "batchPackageFiles": [
+    {
+      "name": "04_v5-doc-78d5d0d89420b8d3.pdf",
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-02-review/04_v5-doc-78d5d0d89420b8d3.pdf",
+      "sizeBytes": 1518410,
+      "sha256": "78d5d0d89420b8d3936b823099c7ad00044b008f5cab15b0ec19e28cd88ddf6e"
+    },
+    {
+      "name": "05_v5-doc-906c5ae29d59a1ff.pdf",
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-02-review/05_v5-doc-906c5ae29d59a1ff.pdf",
+      "sizeBytes": 1405281,
+      "sha256": "906c5ae29d59a1ff734fd548b7ecd5552cdaab69a0c343496fab4b576f50f72b"
+    },
+    {
+      "name": "06_v5-doc-7a302456c4a6afbe.pdf",
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-02-review/06_v5-doc-7a302456c4a6afbe.pdf",
+      "sizeBytes": 8801051,
+      "sha256": "7a302456c4a6afbe0451df3e4cdf7027dbedee4801f4d24ddc0babaf440e4191"
+    },
+    {
+      "name": "review-context.json",
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-02-review/review-context.json",
+      "sizeBytes": 10411,
+      "sha256": "28b9562f5ece517d83bbf6a96f4433cc24c010ff44fe488cd885d1ca1fabb6ad"
+    },
+    {
+      "name": "ANNOTATION_TEMPLATE.json",
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-02-review/ANNOTATION_TEMPLATE.json",
+      "sizeBytes": 5308,
+      "sha256": "87f97f26b14ba46f213159ae58ee9889c6968f720603dcd3cd043b50eaaa992e"
+    },
+    {
+      "name": "FILES_TO_UPLOAD.txt",
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-02-review/FILES_TO_UPLOAD.txt",
+      "sizeBytes": 182,
+      "sha256": "7b847bfeeb6b6f152a1c97674a2c1015b337fb40a40cf83e86fb5f69b908b5f8"
+    },
+    {
+      "name": "INTEGRITY_MANIFEST.json",
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-02-review/INTEGRITY_MANIFEST.json",
+      "sizeBytes": 3284,
+      "sha256": "a66e5f3917ebc8ecd1739927cf2e1cd6bd26c98cb73601020a090b1cdf10fa56"
+    }
+  ],
+  "batch01Preservation": [
+    {
+      "path": "audit/holdout/ground-truth-v5-batch-01.json",
+      "expectedSha256": "b61d41a1ca5f6ad23aae5c8c9078c97218009a9e5f05ecbe512dd2ea9fc3aacb",
+      "actualSha256": "b61d41a1ca5f6ad23aae5c8c9078c97218009a9e5f05ecbe512dd2ea9fc3aacb",
+      "reference": "Git 093ab08cf83237c4ec0fbc9b33be952449eaa318:audit/holdout/ground-truth-v5-batch-01.json",
+      "result": "PASS"
+    },
+    {
+      "path": "audit/holdout/ground-truth-v5-batch-01.provenance.json",
+      "expectedSha256": "cd5017d14dbba1d4ccbb2c7197f4f72d0ec29c46a003820c0f03c7a0d081bfe7",
+      "actualSha256": "cd5017d14dbba1d4ccbb2c7197f4f72d0ec29c46a003820c0f03c7a0d081bfe7",
+      "reference": "Git 093ab08cf83237c4ec0fbc9b33be952449eaa318:audit/holdout/ground-truth-v5-batch-01.provenance.json",
+      "result": "PASS"
+    },
+    {
+      "path": "audit/holdout/ground-truth-v5-batch-01.human-decisions.json",
+      "expectedSha256": "ff7b94a82aa04534e3354759761d7febf30f5a14bdbc9156bca26dab975ab97c",
+      "actualSha256": "ff7b94a82aa04534e3354759761d7febf30f5a14bdbc9156bca26dab975ab97c",
+      "reference": "Git 093ab08cf83237c4ec0fbc9b33be952449eaa318:audit/holdout/ground-truth-v5-batch-01.human-decisions.json",
+      "result": "PASS"
+    },
+    {
+      "path": "audit/holdout/V5_GROUND_TRUTH_BATCH_01_ADJUDICATION.md",
+      "expectedSha256": "bbf1171241eb381d1377214eb47fa8fd71622a5fd87b3589c3df3522ed5c6e42",
+      "actualSha256": "bbf1171241eb381d1377214eb47fa8fd71622a5fd87b3589c3df3522ed5c6e42",
+      "reference": "Git 093ab08cf83237c4ec0fbc9b33be952449eaa318:audit/holdout/V5_GROUND_TRUTH_BATCH_01_ADJUDICATION.md",
+      "result": "PASS"
+    },
+    {
+      "path": "audit/holdout/v5_ground_truth_batch01.py",
+      "expectedSha256": "56413bf03ebb825463e18598d0cc95dfa47097e015cd7128f257dd54723afae2",
+      "actualSha256": "56413bf03ebb825463e18598d0cc95dfa47097e015cd7128f257dd54723afae2",
+      "reference": "Git 093ab08cf83237c4ec0fbc9b33be952449eaa318:audit/holdout/v5_ground_truth_batch01.py",
+      "result": "PASS"
+    },
+    {
+      "path": "audit/holdout/v5_ground_truth_batch01_selftest.py",
+      "expectedSha256": "b7ce2ffd693e13712100bc7ca616132e3ce81ff3cb548f9f2338b3ffa35476ba",
+      "actualSha256": "b7ce2ffd693e13712100bc7ca616132e3ce81ff3cb548f9f2338b3ffa35476ba",
+      "reference": "Git 093ab08cf83237c4ec0fbc9b33be952449eaa318:audit/holdout/v5_ground_truth_batch01_selftest.py",
+      "result": "PASS"
+    },
+    {
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/01_v5-doc-429b811d62a29a28.pdf",
+      "expectedSha256": "429b811d62a29a28c9e2dfb8f89afc95fb0afa0d0529fe9e67a205dd1aa00605",
+      "actualSha256": "429b811d62a29a28c9e2dfb8f89afc95fb0afa0d0529fe9e67a205dd1aa00605",
+      "reference": "published parent batches manifest Batch01",
+      "result": "PASS"
+    },
+    {
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/02_v5-doc-9341853cd786543a.pdf",
+      "expectedSha256": "9341853cd786543a175749ae045cde1732f9909dd8706cd17e0a4dcda30a1a6d",
+      "actualSha256": "9341853cd786543a175749ae045cde1732f9909dd8706cd17e0a4dcda30a1a6d",
+      "reference": "published parent batches manifest Batch01",
+      "result": "PASS"
+    },
+    {
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/03_v5-doc-a37b092e0e967efc.pdf",
+      "expectedSha256": "a37b092e0e967efc24dd4806830ad446c8d9a10bda7ae83ea1180090a36ac5bf",
+      "actualSha256": "a37b092e0e967efc24dd4806830ad446c8d9a10bda7ae83ea1180090a36ac5bf",
+      "reference": "published parent batches manifest Batch01",
+      "result": "PASS"
+    },
+    {
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/review-context.json",
+      "expectedSha256": "56b2e8274497951739d2d5b3e4abcc02b5441d734da99798208f49ebee49c528",
+      "actualSha256": "56b2e8274497951739d2d5b3e4abcc02b5441d734da99798208f49ebee49c528",
+      "reference": "published parent batches manifest Batch01",
+      "result": "PASS"
+    },
+    {
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/ANNOTATION_TEMPLATE.json",
+      "expectedSha256": "e4e96d673c21c6b1e4f709be7e8da3959fed8ffb82c46161bc6d104dfc118839",
+      "actualSha256": "e4e96d673c21c6b1e4f709be7e8da3959fed8ffb82c46161bc6d104dfc118839",
+      "reference": "published parent batches manifest Batch01",
+      "result": "PASS"
+    },
+    {
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/FILES_TO_UPLOAD.txt",
+      "expectedSha256": "db2c6cb87b3143e71ba4294a37ffe6b62becc4d79647c89c8fd3e0f12c108ce8",
+      "actualSha256": "db2c6cb87b3143e71ba4294a37ffe6b62becc4d79647c89c8fd3e0f12c108ce8",
+      "reference": "published parent batches manifest Batch01",
+      "result": "PASS"
+    },
+    {
+      "path": "outputs/audit/holdout/v5-ground-truth-batch-01-review/INTEGRITY_MANIFEST.json",
+      "expectedSha256": "7f0f4adae35726d51c32468109cbaf699dddd443a2ebfd3001afc6419542a4bb",
+      "actualSha256": "7f0f4adae35726d51c32468109cbaf699dddd443a2ebfd3001afc6419542a4bb",
+      "reference": "published parent batches manifest Batch01",
+      "result": "PASS"
+    }
+  ],
+  "materializerAndValidatorSha256": "d2c0a647edb5b13a1c58ebd7518b1cb12002023cf2df1f456682c2fefccb94a8",
+  "syntheticSelftestSha256": "207ac5b4526ba0e6e9b0065cb5abdb0ee865dc793f97a0042a3d652a22911735",
+  "gates": {
+    "batch02Documents": 3,
+    "batch02Questions": 9,
+    "batch02UniqueQuestionIds": 9,
+    "unknownQuestionIds": 0,
+    "crossDocumentBindings": 0,
+    "fingerprintMismatches": 0,
+    "invalidPageRanges": 0,
+    "selectionModified": false,
+    "humanDecisionsReceived": 9,
+    "humanDecisionsConfirmed": 9,
+    "humanDecisionDifferences": 0,
+    "unconfirmedHumanDecisions": 0,
+    "reviewerDeclaredIndependentQuestions": 9,
+    "aiAssistedHumanVerifiedQuestions": 0,
+    "externalIndependenceCertified": false,
+    "unknownClassificationQuestions": 0,
+    "auditorExecuted": false,
+    "metricsSeen": false
+  },
+  "deterministicSerialization": "UTF8/noBOM/LF/indent2/final newline",
+  "reviewerDeclaredIndependentQuestions": 9,
+  "aiAssistedHumanVerifiedQuestions": 0,
+  "externalIndependenceCertified": false,
+  "contextualCaveats": [
+    {
+      "questionId": "v5-doc-7a302456c4a6afbe:q14",
+      "basis": "Literal reviewer note uses pressupõe-se for the possible motivational role of preceding Texto 14; not upgraded to a proven dependency; not an unknown structural label."
+    }
+  ],
+  "reviewerConditionBindings": {
+    "doc05Q5": "original five-control statement retained; human corrected to four",
+    "doc05Q28": "canonical q28 / printed question8, physical page12",
+    "doc06Q14": "possible role of preceding Texto14 remains a reviewer hypothesis, not proven dependency"
+  },
+  "priorBatch01ExceptionPreserved": true,
+  "accumulatedReviewClaimsAfterPublication": {
+    "declaredWithoutAi": 17,
+    "aiAssistedHumanVerified": 1,
+    "externalIndependenceCertified": false
+  },
+  "methodologyCaveats": {
+    "sourceScope": "frozen_available_pdf_content; no certification of original examination completeness",
+    "replacement": "canonical global22 effective replacement; historical original retained only as provenance; post-freeze/performance-blind",
+    "pageCount": "canonical global21 sourceFrozenPageCount=1, effectivePhysicalPageCount=21; physical ranges use21",
+    "numbering": "canonical global8 has26 objects q1-17/q22-30; no q18-21 fabricated",
+    "modifiedSource": "canonical global48 frozen available modified version; no reconstruction of institutional original",
+    "historicalAuxiliaryIntegrity": "415 old auxiliaries prospectively preserved; not_independently_verifiable; historicalByteIdentityVerified=false; exception not reopened",
+    "schemaCompatibility": "own neutral V5 package validator; legacy functional schema supports only V1-V4; future filled GT V5 integration is a separate unresolved gate before official Auditor",
+    "independence": "no human decisions imported or simulated; prior assisted neutral adjudication is not independent human GT"
+  },
+  "futureRunnerCompatibilityResolved": false,
+  "freezeStatusAtCreation": "ready_for_introducing_commit_and_push",
+  "expectedPostPublicationStates": {
+    "PhaseBComplete": true,
+    "questionSelectionFrozen": true,
+    "groundTruthStarted": true,
+    "groundTruthBatch01Created": true,
+    "groundTruthBatch02Created": true,
+    "groundTruthQuestionsAdjudicated": 18,
+    "groundTruthQuestionsRemaining": 126,
+    "groundTruthHumanAdjudicationComplete": false,
+    "groundTruthFinalCreated": false,
+    "auditorExecuted": false,
+    "metricsSeen": false,
+    "merge": false
+  },
+  "nextStep": "STOP; no Batch03/global GT/OCR/Auditor/metrics/merge"
+}

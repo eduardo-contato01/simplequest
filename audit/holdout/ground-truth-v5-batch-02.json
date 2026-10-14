@@ -1,0 +1,474 @@
+{
+  "artifactType": "reviewer_approved_ground_truth_batch",
+  "protocolVersion": "holdout-v5",
+  "annotationVersion": 1,
+  "freezeVersion": 1,
+  "batchId": "holdout-v5-batch-02",
+  "sourceHead": "093ab08cf83237c4ec0fbc9b33be952449eaa318",
+  "documentsCount": 3,
+  "questionsCount": 9,
+  "r1Positions": [
+    4,
+    5,
+    6
+  ],
+  "documentFingerprints": {
+    "v5-doc-78d5d0d89420b8d3": "78d5d0d89420b8d3936b823099c7ad00044b008f5cab15b0ec19e28cd88ddf6e",
+    "v5-doc-906c5ae29d59a1ff": "906c5ae29d59a1ff734fd548b7ecd5552cdaab69a0c343496fab4b576f50f72b",
+    "v5-doc-7a302456c4a6afbe": "7a302456c4a6afbe0451df3e4cdf7027dbedee4801f4d24ddc0babaf440e4191"
+  },
+  "frozenInputFileSha256s": {
+    "audit/holdout/manifest-v5-questions-frozen.json": "91cd40933a02542d35f41e889c8754873bf92ea6ff5591f079eb3880b5ca4a46",
+    "audit/holdout/question-index-v5-final.json": "a0930fe9c409170a5215042883e2bf1121c98bb530b251ad4eb59e5778ed31a7",
+    "audit/holdout/v5-gt-review-batches-manifest.json": "e505dc206846118c6146fd9808a2ecfee745f8f4b5ba1daeda2232aa5661aff0"
+  },
+  "approvedSummarySha256": "ffc8393f3097375d576b9315c465d16aaf9cfb1eb6db890691ff42ac9ca760f9",
+  "humanDecisionEvidence": {
+    "path": "audit/holdout/ground-truth-v5-batch-02.human-decisions.json",
+    "sha256": "56a8dc38ce5ea53660664008c5746e97791e4bccb06a327c3d9bb2859f37218c"
+  },
+  "humanAdjudicated": true,
+  "humanAdjudicatedMeaning": "nine records individually reviewed and explicitly approved in the final summary by the human reviewer",
+  "independentHumanReviewClaims": 9,
+  "aiAssistedHumanVerifiedQuestions": 0,
+  "externalIndependenceCertified": false,
+  "independenceClaimScope": "nine decisions declared without AI assistance; not external certification",
+  "contextualCaveats": [
+    {
+      "questionId": "v5-doc-7a302456c4a6afbe:q14",
+      "basis": "Literal reviewer note uses pressupõe-se for the possible motivational role of preceding Texto 14; not upgraded to a proven dependency; not an unknown structural label."
+    }
+  ],
+  "reviewerConditionBindings": {
+    "doc05Q5": "original five-control statement retained; human corrected to four",
+    "doc05Q28": "canonical q28 / printed question8, physical page12",
+    "doc06Q14": "possible role of preceding Texto14 remains a reviewer hypothesis, not proven dependency"
+  },
+  "freezeStatusAtCreation": "ready_for_introducing_commit_and_push",
+  "formalFreezeRule": "introducing commit, push, matching remote HEAD and clean worktree/stage",
+  "expectedPostPublicationStates": {
+    "PhaseBComplete": true,
+    "questionSelectionFrozen": true,
+    "groundTruthStarted": true,
+    "groundTruthBatch01Created": true,
+    "groundTruthBatch02Created": true,
+    "groundTruthQuestionsAdjudicated": 18,
+    "groundTruthQuestionsRemaining": 126,
+    "groundTruthHumanAdjudicationComplete": false,
+    "groundTruthFinalCreated": false,
+    "auditorExecuted": false,
+    "metricsSeen": false,
+    "merge": false
+  },
+  "futureRunnerCompatibilityResolved": false,
+  "auditorExecuted": false,
+  "metricsSeen": false,
+  "ocrExecuted": false,
+  "merge": false,
+  "documents": [
+    {
+      "documentId": "v5-doc-78d5d0d89420b8d3",
+      "contentFingerprint": "78d5d0d89420b8d3936b823099c7ad00044b008f5cab15b0ec19e28cd88ddf6e",
+      "effectivePhysicalPageCount": 15,
+      "selectedQuestionIds": [
+        "v5-doc-78d5d0d89420b8d3:q8",
+        "v5-doc-78d5d0d89420b8d3:q17",
+        "v5-doc-78d5d0d89420b8d3:q39"
+      ]
+    },
+    {
+      "documentId": "v5-doc-906c5ae29d59a1ff",
+      "contentFingerprint": "906c5ae29d59a1ff734fd548b7ecd5552cdaab69a0c343496fab4b576f50f72b",
+      "effectivePhysicalPageCount": 15,
+      "selectedQuestionIds": [
+        "v5-doc-906c5ae29d59a1ff:q5",
+        "v5-doc-906c5ae29d59a1ff:q17",
+        "v5-doc-906c5ae29d59a1ff:q28"
+      ]
+    },
+    {
+      "documentId": "v5-doc-7a302456c4a6afbe",
+      "contentFingerprint": "7a302456c4a6afbe0451df3e4cdf7027dbedee4801f4d24ddc0babaf440e4191",
+      "effectivePhysicalPageCount": 14,
+      "selectedQuestionIds": [
+        "v5-doc-7a302456c4a6afbe:q1",
+        "v5-doc-7a302456c4a6afbe:q14",
+        "v5-doc-7a302456c4a6afbe:q30"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "documentId": "v5-doc-78d5d0d89420b8d3",
+      "contentFingerprint": "78d5d0d89420b8d3936b823099c7ad00044b008f5cab15b0ec19e28cd88ddf6e",
+      "questionId": "v5-doc-78d5d0d89420b8d3:q8",
+      "canonicalQuestionNumber": 8,
+      "printedQuestionNumber": 8,
+      "pageStart": 4,
+      "pageEnd": 4,
+      "pages": [
+        4
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": [],
+      "responseControls": [],
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "“Quatro alternativas verticais, identificadas por letras, cada uma com a letra seguida de um parêntese, exemplo:`A)`. A questão tem enunciado e quatro alternativas. O enunciado faz referência direta ao texto não compreendido no recorte.” Analisei a página 4 e questão 8, especificamente como você pediu sem auxílio da IA em nenhuma análise.",
+      "annotationOrigin": "human_reviewer_declared_no_ai",
+      "independentHumanAdjudicationClaimed": true,
+      "externalIndependenceCertification": false,
+      "aiClassificationAssistanceDeclared": false
+    },
+    {
+      "documentId": "v5-doc-78d5d0d89420b8d3",
+      "contentFingerprint": "78d5d0d89420b8d3936b823099c7ad00044b008f5cab15b0ec19e28cd88ddf6e",
+      "questionId": "v5-doc-78d5d0d89420b8d3:q17",
+      "canonicalQuestionNumber": 17,
+      "printedQuestionNumber": 17,
+      "pageStart": 6,
+      "pageEnd": 6,
+      "pages": [
+        6
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": [],
+      "responseControls": [],
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "“Quatro alternativas verticais, identificadas por letras, cada uma com a letra seguida de um parêntese, exemplo:`A)`. A questão tem enunciado e quatro alternativas.” Analisei a página 6 e questão 17, especificamente como você pediu sem auxílio da IA em nenhuma análise.",
+      "annotationOrigin": "human_reviewer_declared_no_ai",
+      "independentHumanAdjudicationClaimed": true,
+      "externalIndependenceCertification": false,
+      "aiClassificationAssistanceDeclared": false
+    },
+    {
+      "documentId": "v5-doc-78d5d0d89420b8d3",
+      "contentFingerprint": "78d5d0d89420b8d3936b823099c7ad00044b008f5cab15b0ec19e28cd88ddf6e",
+      "questionId": "v5-doc-78d5d0d89420b8d3:q39",
+      "canonicalQuestionNumber": 39,
+      "printedQuestionNumber": 39,
+      "pageStart": 14,
+      "pageEnd": 14,
+      "pages": [
+        14
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "subitems": [],
+      "responseControls": [],
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "mixed",
+      "notes": "“Quatro alternativas verticais, identificadas por letras, cada uma com a letra seguida de um parêntese, exemplo:`A)`. A questão tem enunciado, imagem, mais uma parte do enunciado e quatro alternativas.” Analisei a página 14 e questão 39, especificamente como você pediu sem auxílio da IA em nenhuma análise.",
+      "annotationOrigin": "human_reviewer_declared_no_ai",
+      "independentHumanAdjudicationClaimed": true,
+      "externalIndependenceCertification": false,
+      "aiClassificationAssistanceDeclared": false
+    },
+    {
+      "documentId": "v5-doc-906c5ae29d59a1ff",
+      "contentFingerprint": "906c5ae29d59a1ff734fd548b7ecd5552cdaab69a0c343496fab4b576f50f72b",
+      "questionId": "v5-doc-906c5ae29d59a1ff:q5",
+      "canonicalQuestionNumber": 5,
+      "printedQuestionNumber": 5,
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "subitems": [],
+      "responseControls": [
+        {
+          "label": "( )",
+          "role": "response_control",
+          "pages": [
+            3
+          ],
+          "notes": "Espaço de marcação ao lado da alternativa a."
+        },
+        {
+          "label": "( )",
+          "role": "response_control",
+          "pages": [
+            3
+          ],
+          "notes": "Espaço de marcação ao lado da alternativa b."
+        },
+        {
+          "label": "( )",
+          "role": "response_control",
+          "pages": [
+            3
+          ],
+          "notes": "Espaço de marcação ao lado da alternativa c."
+        },
+        {
+          "label": "( )",
+          "role": "response_control",
+          "pages": [
+            3
+          ],
+          "notes": "Espaço de marcação ao lado da alternativa d."
+        }
+      ],
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "“Quatro alternativas verticais, identificadas por letras, cada uma com a letra seguida de um parêntese e um espaço de marcação, exemplo:`a)(  )`  . A questão tem enunciado e quatro alternativas.” Analisei a página 3 e questão 5, especificamente como você pediu sem auxílio da IA em nenhuma análise.",
+      "annotationOrigin": "human_reviewer_declared_no_ai",
+      "independentHumanAdjudicationClaimed": true,
+      "externalIndependenceCertification": false,
+      "aiClassificationAssistanceDeclared": false
+    },
+    {
+      "documentId": "v5-doc-906c5ae29d59a1ff",
+      "contentFingerprint": "906c5ae29d59a1ff734fd548b7ecd5552cdaab69a0c343496fab4b576f50f72b",
+      "questionId": "v5-doc-906c5ae29d59a1ff:q17",
+      "canonicalQuestionNumber": 17,
+      "printedQuestionNumber": 17,
+      "pageStart": 7,
+      "pageEnd": 7,
+      "pages": [
+        7
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "subitems": [],
+      "responseControls": [
+        {
+          "label": "( )",
+          "role": "response_control",
+          "pages": [
+            7
+          ],
+          "notes": "Espaço de marcação ao lado da alternativa a."
+        },
+        {
+          "label": "( )",
+          "role": "response_control",
+          "pages": [
+            7
+          ],
+          "notes": "Espaço de marcação ao lado da alternativa b."
+        },
+        {
+          "label": "( )",
+          "role": "response_control",
+          "pages": [
+            7
+          ],
+          "notes": "Espaço de marcação ao lado da alternativa c."
+        },
+        {
+          "label": "( )",
+          "role": "response_control",
+          "pages": [
+            7
+          ],
+          "notes": "Espaço de marcação ao lado da alternativa d."
+        }
+      ],
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "“Quatro alternativas verticais, identificadas por letras, cada uma com a letra seguida de um parêntese e um espaço de marcação, exemplo: `a)(  )`. A questão tem enunciado e quatro alternativas. No enunciado faz referência à leitura de uma anedota, que é um texto presente na mesma página.” Analisei a página 7 e questão 17, especificamente como você pediu sem auxílio da IA em nenhuma análise.",
+      "annotationOrigin": "human_reviewer_declared_no_ai",
+      "independentHumanAdjudicationClaimed": true,
+      "externalIndependenceCertification": false,
+      "aiClassificationAssistanceDeclared": false
+    },
+    {
+      "documentId": "v5-doc-906c5ae29d59a1ff",
+      "contentFingerprint": "906c5ae29d59a1ff734fd548b7ecd5552cdaab69a0c343496fab4b576f50f72b",
+      "questionId": "v5-doc-906c5ae29d59a1ff:q28",
+      "canonicalQuestionNumber": 28,
+      "printedQuestionNumber": 8,
+      "pageStart": 12,
+      "pageEnd": 12,
+      "pages": [
+        12
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 4,
+      "optionLabels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "subitems": [],
+      "responseControls": [
+        {
+          "label": "( )",
+          "role": "response_control",
+          "pages": [
+            12
+          ],
+          "notes": "Espaço de marcação ao lado da alternativa a."
+        },
+        {
+          "label": "( )",
+          "role": "response_control",
+          "pages": [
+            12
+          ],
+          "notes": "Espaço de marcação ao lado da alternativa b."
+        },
+        {
+          "label": "( )",
+          "role": "response_control",
+          "pages": [
+            12
+          ],
+          "notes": "Espaço de marcação ao lado da alternativa c."
+        },
+        {
+          "label": "( )",
+          "role": "response_control",
+          "pages": [
+            12
+          ],
+          "notes": "Espaço de marcação ao lado da alternativa d."
+        }
+      ],
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "“Quatro alternativas verticais, identificadas por letras, cada uma com a letra seguida de um parêntese e um espaço de marcação, exemplo: `a)(  )`. A questão tem enunciado e quatro alternativas.” Analisei a página 12 e questão 8, especificamente como você pediu sem auxílio da IA em nenhuma análise.",
+      "annotationOrigin": "human_reviewer_declared_no_ai",
+      "independentHumanAdjudicationClaimed": true,
+      "externalIndependenceCertification": false,
+      "aiClassificationAssistanceDeclared": false
+    },
+    {
+      "documentId": "v5-doc-7a302456c4a6afbe",
+      "contentFingerprint": "7a302456c4a6afbe0451df3e4cdf7027dbedee4801f4d24ddc0babaf440e4191",
+      "questionId": "v5-doc-7a302456c4a6afbe:q1",
+      "canonicalQuestionNumber": 1,
+      "printedQuestionNumber": 1,
+      "pageStart": 3,
+      "pageEnd": 3,
+      "pages": [
+        3
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "subitems": [],
+      "responseControls": [],
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "“Cinco alternativas verticais, identificadas por letras, cada uma com a letra seguida de um parêntese, exemplo: `a)`. A questão tem enunciado e cinco alternativas. A questão faz referência a um poema, presente na mesma página.” Analisei a página 3 e questão 1, especificamente como você pediu sem auxílio da IA em nenhuma análise.",
+      "annotationOrigin": "human_reviewer_declared_no_ai",
+      "independentHumanAdjudicationClaimed": true,
+      "externalIndependenceCertification": false,
+      "aiClassificationAssistanceDeclared": false
+    },
+    {
+      "documentId": "v5-doc-7a302456c4a6afbe",
+      "contentFingerprint": "7a302456c4a6afbe0451df3e4cdf7027dbedee4801f4d24ddc0babaf440e4191",
+      "questionId": "v5-doc-7a302456c4a6afbe:q14",
+      "canonicalQuestionNumber": 14,
+      "printedQuestionNumber": 14,
+      "pageStart": 8,
+      "pageEnd": 8,
+      "pages": [
+        8
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "subitems": [],
+      "responseControls": [],
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "“Cinco alternativas verticais, identificadas por letras, cada uma com a letra seguida de um parêntese, exemplo: `a)`. A questão tem enunciado e cinco alternativas. O Texto 14 fica antes da questão 14, pressupõe-se que ele seja usado como texto-motivador da questão, porém ele não faz parte da questão.” Analisei a página 8 e questão 14, especificamente como você pediu sem auxílio da IA em nenhuma análise.",
+      "annotationOrigin": "human_reviewer_declared_no_ai",
+      "independentHumanAdjudicationClaimed": true,
+      "externalIndependenceCertification": false,
+      "aiClassificationAssistanceDeclared": false
+    },
+    {
+      "documentId": "v5-doc-7a302456c4a6afbe",
+      "contentFingerprint": "7a302456c4a6afbe0451df3e4cdf7027dbedee4801f4d24ddc0babaf440e4191",
+      "questionId": "v5-doc-7a302456c4a6afbe:q30",
+      "canonicalQuestionNumber": 30,
+      "printedQuestionNumber": 30,
+      "pageStart": 13,
+      "pageEnd": 13,
+      "pages": [
+        13
+      ],
+      "responseMode": "single_choice",
+      "optionCount": 5,
+      "optionLabels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "subitems": [],
+      "responseControls": [],
+      "layout": "vertical",
+      "markerStyle": "textual",
+      "contentKind": "text",
+      "notes": "“Cinco alternativas verticais, identificadas por letras, cada uma com a letra seguida de um parêntese, exemplo: `a)`. A questão tem enunciado e cinco alternativas..” Analisei a página 13 e questão 30, especificamente como você pediu sem auxílio da IA em nenhuma análise.",
+      "annotationOrigin": "human_reviewer_declared_no_ai",
+      "independentHumanAdjudicationClaimed": true,
+      "externalIndependenceCertification": false,
+      "aiClassificationAssistanceDeclared": false
+    }
+  ]
+}
