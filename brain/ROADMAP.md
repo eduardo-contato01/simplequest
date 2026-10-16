@@ -262,3 +262,11 @@ Este checkpoint prevalece após commit/push e HEAD remoto confirmado.
 - Nove declarações semIA neste lote, sem certificação externa;Batches01/02 intactos/exceção Q4assistida preservada. Correção de pontuação e descrição rastreadas, dependência contextual doc09q7 mantida;três alterações preexistentes do usuário autorizadas fora do commit.
 - [ ] Próximo SEPARADO, somente após nova autorização:**GT V5 Batch04**, não iniciado.
 - [ ] Integração/compatibilidade do GT V5 com runner permanece gate técnico separado antes de execução oficial, sem mudança funcional. GlobalHumanAdjudicationComplete=false/GTfinal=false/Auditor/metrics/merge=false;STOP após publicação, sem OCR ou consolidação global.
+
+## Próxima prioridade V5 — GT Batch04, 2026-10-16
+
+Este checkpoint prevalece após commit/push e HEAD remoto confirmado.
+
+- [x] [GT Batch04 materializado/validado](../audit/holdout/V5_GROUND_TRUTH_BATCH_04_ADJUDICATION.md):3docs/9fichas individualmente confirmadas, aprovação final hash-vinculada/21eventos preservados;zero diferenças humanas. Após publicação36/144(25%),108pendentes,4/16batches.
+- Errata doc12frozen1/efetivo21 e três subitens internos I/II/III daq16 preservados;Batches01–03/exceção Q4assistida intactos. Nove declarações semIA, sem certificação externa. Três alterações preexistentes permanecem fora do commit.
+- [ ] Próximo SEPARADO, somente com nova autorização:**GT V5 Batch05**, não iniciado. Compatibilidade GT V5/runner continua gate futuro separado;GTfinal=false/GlobalHumanAdjudicationComplete=false/Auditor/metrics/merge=false. STOP após publicação, sem OCR, consultas a resultados ou consolidação global.
